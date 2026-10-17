@@ -244,6 +244,13 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .acc-lang{display:flex;gap:6px}.acc-lang button{border:1px solid var(--line);background:none;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer}
 .acc-lang button[aria-pressed="true"]{background:var(--blue);color:var(--surface);border-color:var(--blue)}
 .acc-note{font-size:12.5px;color:var(--muted);line-height:1.35;margin:0}
+.acc-warn{background:#FFF4D4;border:1.5px solid #E7B23A;color:#5a3d00;border-radius:12px;padding:10px 12px;font-size:14px;font-weight:700;line-height:1.35}
+.acc-forgot{align-self:center;font-size:13.5px;color:var(--muted)}
+#acc-f a.btn{text-decoration:none;color:var(--ink)}#acc-f .btn:disabled{opacity:.4;cursor:default}#acc-f .ch-btns .btn{flex:1;text-align:center;padding:9px 10px}
+.acc-cred{display:flex;flex-direction:column;gap:8px;background:var(--bg);border:2px dashed #E7B23A;border-radius:14px;padding:12px 14px}
+.acc-cred div{display:flex;flex-direction:column}.acc-cred small{font-size:12px;color:var(--muted);font-weight:600}.acc-cred b{font-size:20px;word-break:break-all}.acc-cred .mono{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:.06em}
+.acc-chk{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;cursor:pointer}.acc-chk input{width:20px;height:20px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .acc-warn{background:#3a3110;color:#F5D98A}}:root[data-theme="dark"] .acc-warn{background:#3a3110;color:#F5D98A}
 .acc-st{font-size:13.5px;min-height:1px}.acc-st.err{color:#C62828}
 .acc-who{font-size:16px;margin:0}.acc-who b{color:var(--blue)}
 /* challenge */
@@ -3602,11 +3609,23 @@ const ACCT={
   uz:{title:"Ro‘yxatdan o‘tish", lead:"Ma’lumotlar saqlanishi uchun ismingiz va parolingizni kiriting.", name:"Ism va familiya", pw:"Parol", namePh:"Masalan: Jamila Jamilova", pwPh:"Kamida 4 ta belgi", go:"Kirish",
       note:"Natijalaringiz (Yodlash, varaqlardagi javoblar) shu telefonda sizning ismingiz bilan saqlanadi va ustozga yuboriladi. Parolni eslab qoling.",
       eName:"Ism va familiyangizni to‘liq yozing", ePw:"Parol kamida 4 ta belgidan iborat bo‘lsin", eWrong:"Parol noto‘g‘ri. Qaytadan urinib ko‘ring.",
-      you:"Siz:", out:"Chiqish", close:"Yopish", other:"Boshqa o‘quvchi bo‘lib kirish uchun «Chiqish»ni bosing."},
+      you:"Siz:", out:"Chiqish", close:"Yopish", other:"Boshqa o‘quvchi bo‘lib kirish uchun «Chiqish»ni bosing.",
+      warn:"⚠️ Ism va parolingizni albatta yozib oling! Parolni unutsangiz, uni faqat ustoz tiklay oladi.", forgot:"Parolni unutdim",
+      saveT:"⚠️ Login va parolingizni yozib oling!", saveL:"Bu ma’lumotlarni daftaringizga yozing yoki saqlab qo‘ying. Parolni unutsangiz — faqat ustoz orqali tiklanadi, natijalaringizga kira olmay qolasiz.",
+      login:"Login (ism)", copy:"📋 Nusxalash", copied:"✓ Nusxalandi", tg:"📤 Telegram’ga saqlash", shot:"📸 Yoki ekranni rasmga oling (skrinshot).", chk:"Yozib oldim / saqladim", cont:"Davom etish →",
+      tgText:(n,p)=>`Deutsch sayti\nLogin: ${n}\nParol: ${p}`,
+      rT:"🔑 Parolni tiklash", rL:"Parolni faqat ustoz tiklaydi. Ustozga ayting — u shu telefonda o‘z kodini kiritadi.", rCode:"Ustoz kodi", rNew:"Yangi parol", rGo:"Parolni tiklash",
+      rNoUser:"Bu telefonda bunday ism bilan ro‘yxatdan o‘tilmagan.", rBadCode:"Ustoz kodi noto‘g‘ri.", back:"← Orqaga"},
   ru:{title:"Регистрация", lead:"Чтобы данные сохранялись, введите имя и пароль.", name:"Имя и фамилия", pw:"Пароль", namePh:"Например: Jamila Jamilova", pwPh:"Минимум 4 символа", go:"Войти",
       note:"Ваши результаты (заучивание, ответы в листах) сохраняются на этом телефоне под вашим именем и отправляются учителю. Запомните пароль.",
       eName:"Напишите имя и фамилию полностью", ePw:"Пароль — минимум 4 символа", eWrong:"Неверный пароль. Попробуйте ещё раз.",
-      you:"Вы:", out:"Выйти", close:"Закрыть", other:"Чтобы войти как другой ученик, нажмите «Выйти»."}
+      you:"Вы:", out:"Выйти", close:"Закрыть", other:"Чтобы войти как другой ученик, нажмите «Выйти».",
+      warn:"⚠️ Обязательно запишите имя и пароль! Если забудете пароль, восстановить его сможет только учитель.", forgot:"Забыл(а) пароль",
+      saveT:"⚠️ Запишите логин и пароль!", saveL:"Запишите эти данные в тетрадь или сохраните. Если забудете пароль — восстановить можно только через учителя, иначе вы не войдёте к своим результатам.",
+      login:"Логин (имя)", copy:"📋 Копировать", copied:"✓ Скопировано", tg:"📤 Сохранить в Telegram", shot:"📸 Или сделайте скриншот экрана.", chk:"Я записал(а) / сохранил(а)", cont:"Продолжить →",
+      tgText:(n,p)=>`Сайт Deutsch\nЛогин: ${n}\nПароль: ${p}`,
+      rT:"🔑 Восстановление пароля", rL:"Пароль восстанавливает только учитель. Скажите учителю — он введёт свой код на этом телефоне.", rCode:"Код учителя", rNew:"Новый пароль", rGo:"Восстановить пароль",
+      rNoUser:"На этом телефоне нет ученика с таким именем.", rBadCode:"Неверный код учителя.", back:"← Назад"}
 };
 const at=k=>ACCT[state.lang][k];
 function accUsers(){ try{ return JSON.parse(localStorage.getItem("acc:users")||"{}")||{}; }catch(e){ return {}; } }
@@ -3623,8 +3642,10 @@ function accLogin(){
     <p class="acc-lead">${esc(at("lead"))}</p>
     <label class="acc-lb">${esc(at("name"))}<input id="acc-name" maxlength="40" autocomplete="name" placeholder="${esc(at("namePh"))}"></label>
     <label class="acc-lb">${esc(at("pw"))}<span class="acc-pw"><input id="acc-pw" type="password" maxlength="40" autocomplete="current-password" placeholder="${esc(at("pwPh"))}"><button type="button" class="acc-eye" data-acc="eye" aria-label="👁">👁</button></span></label>
+    <div class="acc-warn">${esc(at("warn"))}</div>
     <div class="acc-st" id="acc-st"></div>
     <button type="submit" class="btn primary">${esc(at("go"))}</button>
+    <button type="button" class="lrn-link acc-forgot" data-acc="forgot">🔑 ${esc(at("forgot"))}</button>
     <p class="acc-note">${esc(at("note"))}</p>`;
   accEl().hidden=false; document.body.style.overflow="hidden";
   setTimeout(()=>{ const i=document.getElementById("acc-name"); if(i) i.focus(); },50);
@@ -3641,6 +3662,7 @@ function accMigrate(key){
   try{ const ks=[]; for(let i=0;i<localStorage.length;i++){ const k=localStorage.key(i); if(k && !ACC_GLOBAL.test(k)) ks.push(k); }
     ks.forEach(k=>{ const nk="u:"+key+":"+k; if(localStorage.getItem(nk)==null) localStorage.setItem(nk,localStorage.getItem(k)); }); }catch(e){}
 }
+document.addEventListener("change",e=>{ if(e.target.id==="acc-ok"){ const b=document.getElementById("acc-cont"); if(b) b.disabled=!e.target.checked; } });
 document.addEventListener("submit",async e=>{
   if(e.target.id!=="acc-f") return; e.preventDefault();
   const st=document.getElementById("acc-st"); if(!st) return;
@@ -3649,17 +3671,49 @@ document.addEventListener("submit",async e=>{
   if(name.length<3||!/\s/.test(name)){ st.textContent=at("eName"); document.getElementById("acc-name").focus(); return; }
   if(pw.length<4){ st.textContent=at("ePw"); document.getElementById("acc-pw").focus(); return; }
   const U=accUsers(), key=accKeyOf(name), first=!Object.keys(U).length;
-  if(U[key]){ const hh=await accHash(U[key].s+":"+pw); if(hh!==U[key].h){ st.textContent=at("eWrong"); document.getElementById("acc-pw").select(); return; } }
-  else { const s=Math.random().toString(36).slice(2,10); U[key]={name, s, h:await accHash(s+":"+pw), d:new Date().toISOString().slice(0,10)}; }
-  try{ localStorage.setItem("acc:users",JSON.stringify(U)); localStorage.setItem("acc:cur",key); }catch(err){}
-  if(first) accMigrate(key);
-  location.reload();
+  if(U[key]){ const hh=await accHash(U[key].s+":"+pw); if(hh!==U[key].h){ st.textContent=at("eWrong"); document.getElementById("acc-pw").select(); return; }
+    try{ localStorage.setItem("acc:cur",key); }catch(err){} location.reload(); return; }
+  /* yangi akkaunt: avval login/parolni yozib olishni qattiq eslatamiz */
+  accSaveScreen(name,pw,async()=>{ const U2=accUsers(), s=Math.random().toString(36).slice(2,10); U2[key]={name, s, h:await accHash(s+":"+pw), d:new Date().toISOString().slice(0,10)};
+    try{ localStorage.setItem("acc:users",JSON.stringify(U2)); localStorage.setItem("acc:cur",key); }catch(err){}
+    if(first) accMigrate(key); location.reload(); });
 });
+/* Login/parolni yozib olish eslatmasi (yangi akkaunt va parol tiklanganda) — 2026-10-18 */
+let ACC_SAVE=null;
+function accSaveScreen(name,pw,done){ ACC_SAVE=done; const f=document.getElementById("acc-f");
+  f.innerHTML=`<div class="snd-h"><h2>${esc(at("saveT"))}</h2></div>
+    <p class="acc-lead">${esc(at("saveL"))}</p>
+    <div class="acc-cred"><div><small>${esc(at("login"))}</small><b>${esc(name)}</b></div><div><small>${esc(at("pw"))}</small><b class="mono">${esc(pw)}</b></div></div>
+    <div class="ch-btns"><button type="button" class="btn" data-acc="ccopy" data-t="${esc(at("tgText")(name,pw))}">${esc(at("copy"))}</button>
+      <a class="btn" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(CH_SITE)}&text=${encodeURIComponent(at("tgText")(name,pw))}">${esc(at("tg"))}</a></div>
+    <p class="acc-note">${esc(at("shot"))}</p>
+    <label class="acc-chk"><input type="checkbox" id="acc-ok"> ${esc(at("chk"))}</label>
+    <button type="button" class="btn primary" data-acc="saved" id="acc-cont" disabled>${esc(at("cont"))}</button>`;
+  accEl().hidden=false; document.body.style.overflow="hidden"; }
+function accForgot(){ const f=document.getElementById("acc-f"), nm=(document.getElementById("acc-name")||{}).value||"";
+  f.innerHTML=`<div class="snd-h"><h2>${esc(at("rT"))}</h2></div><p class="acc-lead">${esc(at("rL"))}</p>
+    <label class="acc-lb">${esc(at("name"))}<input id="acc-rname" maxlength="40" value="${esc(nm)}" placeholder="${esc(at("namePh"))}"></label>
+    <label class="acc-lb">${esc(at("rCode"))}<input id="acc-rcode" type="password" autocomplete="off"></label>
+    <label class="acc-lb">${esc(at("rNew"))}<input id="acc-rpw" maxlength="40" autocomplete="off" placeholder="${esc(at("pwPh"))}"></label>
+    <div class="acc-st err" id="acc-rst"></div>
+    <button type="button" class="btn primary" data-acc="rgo">${esc(at("rGo"))}</button>
+    <button type="button" class="lrn-link" data-acc="rback">${esc(at("back"))}</button>`; }
+async function accReset(){ const st=document.getElementById("acc-rst"), name=(document.getElementById("acc-rname").value||"").replace(/\s+/g," ").trim(),
+    code=document.getElementById("acc-rcode").value.trim(), pw=document.getElementById("acc-rpw").value||"";
+  const U=accUsers(), key=accKeyOf(name);
+  if(!U[key]){ st.textContent=at("rNoUser"); return; }
+  if(await accHash(code)!=="33dfc2422f82ed5675d6be3862f58c0de5cb4b6b9a122d95119274c87b7f8d2c"){ st.textContent=at("rBadCode"); return; }
+  if(pw.length<4){ st.textContent=at("ePw"); return; }
+  const nm=U[key].name; accSaveScreen(nm,pw,async()=>{ const U2=accUsers(), s=Math.random().toString(36).slice(2,10); U2[key].s=s; U2[key].h=await accHash(s+":"+pw);
+    try{ localStorage.setItem("acc:users",JSON.stringify(U2)); localStorage.setItem("acc:cur",key); }catch(err){} location.reload(); }); }
 document.addEventListener("click",e=>{
   const lg=e.target.closest("[data-acclang]"); if(lg){ const b=document.getElementById("lang-"+lg.dataset.acclang); if(b) b.click(); const nm=document.getElementById("acc-name"), v=nm?nm.value:""; accLogin(); const n2=document.getElementById("acc-name"); if(n2) n2.value=v; return; }
   const a=e.target.closest("[data-acc]"); if(a){ const k=a.dataset.acc;
     if(k==="eye"){ const p=document.getElementById("acc-pw"); p.type=p.type==="password"?"text":"password"; }
     else if(k==="close"){ accEl().hidden=true; }
+    else if(k==="forgot") accForgot(); else if(k==="rback") accLogin(); else if(k==="rgo") accReset();
+    else if(k==="saved"){ if(document.getElementById("acc-ok").checked && ACC_SAVE) ACC_SAVE(); }
+    else if(k==="ccopy"){ const t=a.dataset.t; (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{ a.textContent=at("copied"); }).catch(()=>{ prompt("",t); }); }
     else if(k==="out"){ try{ localStorage.removeItem("acc:cur"); }catch(err){} location.reload(); }
     return; }
   if(e.target.closest("#acc-chip")) accMenu();
