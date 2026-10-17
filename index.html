@@ -2671,7 +2671,7 @@ function lrnCard(){
   lrnEl().innerHTML=`${lrnHead(`<span class="lrn-left">${esc(lt("left")(LR.cards.length))}</span>`)}<div class="lrn-body">
     <button type="button" class="lrn-flash${LR.flip?" flip":""}" data-l="flip" aria-live="polite">
       <span class="lrn-meta">L${x.l} · ${esc(x.s)}</span>
-      ${LR.flip?`<span class="lrn-q de">${esc(x.full)}</span>${x.ex?`<span class="lrn-ex">${esc(x.ex)}</span>`:""}`:`<span class="lrn-q">${esc(x.ru)}</span><span class="lrn-tap">${esc(lt("tap"))}</span>`}
+      ${LR.flip?`<span class="lrn-q de">${esc(x.full)}</span>${x.ex?`<span class="lrn-ex">${esc(x.ex)}</span>`:""}`:`<span class="lrn-q">${esc(x.ru)}</span>`}
     </button>
     ${LR.flip?`<div class="lrn-say-row"><button type="button" class="lrn-say" data-say="${esc(x.de)}">🔊</button></div>`:""}
     <div class="lrn-kn"><button type="button" class="btn lrn-no" data-l="no">${esc(lt("dontknow"))}</button><button type="button" class="btn lrn-yes" data-l="yes">${esc(lt("know"))}</button></div>
