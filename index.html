@@ -240,6 +240,33 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .acc-st{font-size:13.5px;min-height:1px}.acc-st.err{color:#C62828}
 .acc-who{font-size:16px;margin:0}.acc-who b{color:var(--blue)}
 /* challenge */
+/* Umumiy progress + darajalar — 2026-10-18 */
+.prog{margin:18px 0 4px;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:16px 18px;display:grid;grid-template-columns:auto 1fr auto;gap:6px 16px;align-items:center}
+.prog[hidden]{display:none}
+.prog-badge{grid-row:1/span 3;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:34px;background:var(--pg-soft);border:2px solid var(--pg)}
+.prog-k{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.prog-name{font-family:var(--hand);font-size:30px;line-height:1;color:var(--pg-ink)}
+.prog-name small{font-family:var(--sans);font-size:13px;color:var(--muted);margin-left:6px;font-weight:500}
+.prog-n{text-align:right;grid-row:1/span 2;grid-column:3}
+.prog-n b{display:block;font-size:30px;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.prog-n span{font-size:12px;color:var(--muted)}
+.prog-bar{grid-column:2/span 2;height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.prog-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--pg),#F2B632);transition:width .6s}
+.prog-next{grid-column:2/span 2;font-size:13px;color:var(--muted);margin-top:-2px}
+.prog-next b{color:var(--ink)}
+.prog-msg{grid-column:1/-1;font-family:var(--hand);font-size:21px;line-height:1.25;color:var(--ink);margin:6px 0 0;border-top:1px dashed var(--line);padding-top:12px}
+.prog-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;justify-content:space-between}
+.prog-ladder{display:flex;gap:4px}
+.prog-ladder span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:16px;background:var(--surface-2);filter:grayscale(1);opacity:.45}
+.prog-ladder span.on{filter:none;opacity:1;background:var(--pg-soft)}
+.prog-ladder span.cur{box-shadow:0 0 0 2px var(--pg)}
+.prog-go{padding:9px 16px;font-size:14px;cursor:pointer}
+:root{--pg:#D99A06;--pg-soft:#FFF4D4;--pg-ink:#8A5A00}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--pg:#F2B632;--pg-soft:#3a3110;--pg-ink:#F5C542}}
+:root[data-theme="dark"]{--pg:#F2B632;--pg-soft:#3a3110;--pg-ink:#F5C542}
+@media (max-width:560px){.prog{grid-template-columns:auto 1fr;padding:14px}.prog-badge{width:52px;height:52px;font-size:28px;grid-row:1/span 2}.prog-n{grid-column:1/-1;grid-row:auto;text-align:left;display:flex;align-items:baseline;gap:6px}.prog-n b{display:inline;font-size:24px}.prog-bar,.prog-next{grid-column:1/-1}.prog-name{font-size:26px}}
+.lrn-rank{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);padding:2px 2px 0}.lrn-rank b{color:var(--pg-ink)}
+.lrn-up{background:var(--pg-soft);border:1.5px solid var(--pg);border-radius:14px;padding:10px 14px;text-align:center}.lrn-up b{display:block;font-family:var(--hand);font-size:24px;color:var(--pg-ink)}
 .lrn-mode.kchk{grid-column:1/-1;border-color:var(--green);background:#ECF8F0}.lrn-mode.kchk b{color:var(--green)}.lrn-kc{margin:0;font-size:13px;color:var(--muted)}
 .lrn-mode.chal{grid-column:1/-1;border-color:#C2410C;background:#FFF1E8}.lrn-mode.chal b{color:#C2410C}
 .ch-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
@@ -400,6 +427,7 @@ mark.trm.bad sup{color:#C62828}
     <h1>Deutsch A1 · A2</h1>
     <p class="lead" data-i="lead"></p>
   </header>
+  <section class="prog" id="prog" hidden aria-live="polite"></section>
 
   <div class="controls">
     <label class="search">
@@ -2301,7 +2329,66 @@ const flat = v => v&&typeof v==="object" ? [v.text||"",v.uz||"",v.ru||""] : [v||
 function lekText(L,tab){ const mats=MATS.filter(m=>m.tab===tab && m.key===String(L[0])); return norm([TABS[tab].lbl, "lektion "+L[0], "l"+L[0], ...L.slice(1).map(String), ...mats.map(m=>m.title), ...HW.filter(h=>h.tab===tab && h.lektion===L[0]).flatMap(h=>[h.title,...h.items].flatMap(flat))].join(" ")); }
 const allLessons = () => Object.keys(TABS).flatMap(tab=>LEKS[TABS[tab].lvl].filter(L=>L[0]>=TABS[tab].lo && L[0]<=TABS[tab].hi).map(L=>[L,tab]));
 
+
+/* ===== Umumiy progress va darajalar (Yodlash'dagi barcha ro'yxatlar bo'yicha, takrorsiz nemischa so'zlar) — 2026-10-18 ===== */
+const PROG_LV=[
+  {n:0,e:"🐣",de:"Neuling",uz:"yangi boshlovchi",ru:"новичок",
+   mu:"Har bir katta yo‘l bitta so‘zdan boshlanadi. Birinchi 25 tasini yig‘amizmi?",mr:"Большой путь начинается с одного слова. Соберём первые 25?"},
+  {n:25,e:"🙂",de:"Schon ok",uz:"yomon emas",ru:"уже неплохо",
+   mu:"Yaxshi start! «Cool» bo‘lishga ozgina qoldi 😎",mr:"Хорошее начало! До «крутого» совсем немного 😎"},
+  {n:100,e:"😎",de:"Der/Die Coole",uz:"zo‘r",ru:"крутой / крутая",
+   mu:"Zo‘r ketyapsiz! Kuniga 10 ta so‘z — va siz asalaridek mehnatkashsiz 🐝",mr:"Отлично идёте! По 10 слов в день — и вы трудолюбивая пчёлка 🐝"},
+  {n:250,e:"🐝",de:"Fleißiges Bienchen",uz:"mehnatkash asalari",ru:"трудолюбивая пчёлка",
+   mu:"Sizni to‘xtatib bo‘lmaydi! Ustozning sevimli o‘quvchisi bo‘lishga oz qoldi ⭐",mr:"Вас не остановить! Скоро станете любимым учеником ⭐"},
+  {n:500,e:"⭐",de:"Lieblingsstudent/in",uz:"sevimli o‘quvchi",ru:"любимый ученик / ученица",
+   mu:"Ustoz sizdan faxrlanadi! Endi haqiqiy Streber bo‘lamizmi? 🤓",mr:"Учитель гордится вами! Станем настоящим Streber? 🤓"},
+  {n:900,e:"🤓",de:"Streber/in",uz:"a’lochi",ru:"отличник / отличница",
+   mu:"Ajoyib! So‘z boyligingiz guruhda eng zo‘rlaridan. Tojgacha bir qadam 👑",mr:"Потрясающе! Ваш словарный запас — один из лучших в группе. До короны один шаг 👑"},
+  {n:1400,e:"👑",de:"Wortschatz-König/in",uz:"so‘zlar qiroli",ru:"король / королева слов",
+   mu:"Siz so‘zlar qirolisiz! 👑 Endi ularni gaplarda ishlating.",mr:"Вы король слов! 👑 Теперь используйте их в предложениях."}
+];
+function progCount(){
+  const D=lernData(), L=new Set(), K=new Set();
+  Object.keys(D).forEach(id=>{ let st={}, kk=[]; try{ st=JSON.parse(store.get("lern:"+id)||"{}")||{}; }catch(e){} try{ kk=JSON.parse(store.get("lern:"+id+":kk")||"[]")||[]; }catch(e){}
+    const kn=new Set(kk);
+    D[id].it.forEach((r,i)=>{ if(!r[4]||r[6]) return; if(st[i]===2) L.add(r[3]); else if(kn.has(i)) K.add(r[3]); }); });
+  return {n:L.size, k:[...K].filter(w=>!L.has(w)).length};
+}
+function progLv(n){ let i=0; PROG_LV.forEach((l,k)=>{ if(n>=l.n) i=k; }); return i; }
+function progLvName(l){ return `${l.e} ${l.de}`; }
+/* Daraja oshdimi? (Yodlash raundi tugaganda ko'rsatiladi) */
+function progLevelUp(){ const n=progCount().n, i=progLv(n); let was=-1; try{ was=+(store.get("prog:lv")??-1); }catch(e){}
+  store.set("prog:lv",String(i)); return (was>=0 && i>was) ? PROG_LV[i] : null; }
+function progUpHtml(){ const l=progLevelUp(); if(!l) return "";
+  const uz=state.lang!=="ru"; return `<div class="lrn-up">${uz?"🎉 Yangi daraja!":"🎉 Новый уровень!"}<b>${esc(progLvName(l))}</b><small>${esc(uz?l.uz:l.ru)}</small></div>`; }
+function progRank(){ const n=progCount().n, l=PROG_LV[progLv(n)], uz=state.lang!=="ru";
+  return `<div class="lrn-rank">${l.e} <b>${esc(l.de)}</b> · ${uz?`jami ${n} ta so‘z o‘rganildi`:`всего выучено: ${n}`}</div>`; }
+function progRender(){
+  const el=document.getElementById("prog"); if(!el) return;
+  let c; try{ c=progCount(); }catch(e){ el.hidden=true; return; }
+  const uz=state.lang!=="ru", i=progLv(c.n), l=PROG_LV[i], nx=PROG_LV[i+1];
+  if(store.get("prog:lv")==null) store.set("prog:lv",String(i));
+  const pc=nx? Math.round((c.n-l.n)/(nx.n-l.n)*100) : 100;
+  el.innerHTML=`<div class="prog-badge" aria-hidden="true">${l.e}</div>
+    <div class="prog-k">${uz?"Mening darajam":"Мой уровень"}</div>
+    <div class="prog-name">${esc(l.de)}<small>${esc(uz?l.uz:l.ru)}</small></div>
+    <div class="prog-n"><b>${c.n}</b><span>${uz?"ta so‘z o‘rganildi":"слов выучено"}</span></div>
+    <div class="prog-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pc}"><i style="width:${Math.max(3,pc)}%"></i></div>
+    <div class="prog-next">${nx? (uz?`Keyingi daraja <b>${esc(progLvName(nx))}</b> — yana <b>${nx.n-c.n}</b> ta so‘z`:`Следующий уровень <b>${esc(progLvName(nx))}</b> — ещё <b>${nx.n-c.n}</b> слов`) : (uz?"Eng yuqori daraja! 🏆":"Высший уровень! 🏆")}${c.k? ` · 🃏 ${uz?`${c.k} ta «Bilaman» so‘zni tekshirsangiz — hisobga qo‘shiladi`:`проверьте ${c.k} слов с «Знаю» — они засчитаются`}`:""}</div>
+    <div class="prog-msg">${esc(uz?l.mu:l.mr)}</div>
+    <div class="prog-foot"><span class="prog-ladder" aria-hidden="true">${PROG_LV.map((x,k)=>`<span class="${k<=i?"on":""}${k===i?" cur":""}" title="${esc(x.de)} · ${x.n}+">${x.e}</span>`).join("")}</span>
+    <button type="button" class="btn primary prog-go" data-proggo>🧠 ${uz?"Yodlashga":"Учить слова"}</button></div>`;
+  el.hidden=false;
+}
+function progGo(){
+  const D=lernData(), sfx=state.lang==="ru"?"-r-":"-u-";
+  let id=store.get("lern:last"); if(!id||!D[id]){ const ids=Object.keys(D);
+    id=ids.find(k=>byId[k]&&byId[k].tab===state.tab&&k.includes(sfx)) || ids.find(k=>byId[k]&&byId[k].tab===state.tab) || ids.find(k=>k.includes(sfx)) || ids[0]; }
+  if(id) lrnOpen(id);
+}
+document.addEventListener("click",e=>{ if(e.target.closest("[data-proggo]")) progGo(); });
 function render(){
+  try{ progRender(); }catch(e){}
   document.documentElement.lang = state.lang==="uz"?"uz":"ru";
   document.querySelectorAll("[data-i]").forEach(el=>el.innerHTML=t(el.dataset.i));
   document.getElementById("q").placeholder = t("search");
@@ -2698,14 +2785,14 @@ function lrnShuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.r
 function lrnEl(){ return document.getElementById("lrn"); }
 function lrnOpen(id){
   const D=lernData()[id]; if(!D) return;
-  LR.id=id; LR.st=lrnLoad(id); LR.chk=false; LR.mode=null; LR.redem=false;
+  LR.id=id; store.set("lern:last",id); LR.st=lrnLoad(id); LR.chk=false; LR.mode=null; LR.redem=false;
   let saved=null; try{ saved=JSON.parse(store.get(lrnKey(id)+":sel")||"null"); }catch(e){}
   const les=Object.keys(D.les).map(Number);
   const m=byId[id]; const cur=m&&CURS[m.tab];
   LR.sel=new Set(saved&&saved.length? saved : (D.lab? les : (cur&&les.includes(cur)? [cur] : [les[0]])));
   lrnEl().hidden=false; document.body.style.overflow="hidden"; lrnSetup();
 }
-function lrnClose(){ lrnEl().hidden=true; if(V.el.hidden) document.body.style.overflow=""; try{ speechSynthesis.cancel(); }catch(e){} }
+function lrnClose(){ try{ progRender(); }catch(e){} lrnEl().hidden=true; if(V.el.hidden) document.body.style.overflow=""; try{ speechSynthesis.cancel(); }catch(e){} }
 function lrnItems(){ const D=lernData()[LR.id]; return D.it.map((r,i)=>({i,l:r[0],s:D.sec[r[1]],full:r[2],de:r[3],ru:r[4],ex:r[5],red:r[6],dis:r[7],say:r[8]})).filter(x=>x.ru && LR.sel.has(x.l) && (LR.redem||!x.red)); }
 function lrnLab(n){ const D=lernData()[LR.id]; return (D&&D.lab&&D.lab[n])||("L"+n); }
 function lrnHead(sub){
@@ -2716,7 +2803,7 @@ function lrnSetup(){
   LR.chk=false; LR.mode=null;
   const D=lernData()[LR.id], les=Object.keys(D.les).map(Number);
   const its=lrnItems(), done=its.filter(x=>LR.st[x.i]===2).length, KN=lrnKnown(), kn=its.filter(x=>KN.has(x.i)).length, kq=its.filter(x=>KN.has(x.i)&&LR.st[x.i]!==2).length;
-  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body"><div class="lrn-card lrn-setup">
+  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${progRank()}<div class="lrn-card lrn-setup">
     <h3>${esc(lt("pick"))}</h3>
     <div class="lrn-les">${les.map(n=>`<button type="button" class="lrn-chip" aria-pressed="${LR.sel.has(n)}" data-les="${n}"><b>${esc(lrnLab(n))}</b><span>${esc(D.les[n])}</span></button>`).join("")}</div>
     <div class="lrn-row"><button type="button" class="lrn-link" data-l="all">${esc(lt("all"))}</button><button type="button" class="lrn-link" data-l="none">${esc(lt("none"))}</button>
@@ -2826,7 +2913,7 @@ function lrnRoundEnd(){
   accLern();
   const left=LR.pool.filter(x=>LR.st[x.i]!==2).length;
   if(!left){ lrnFinish(true); return; }
-  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card lrn-end"><div class="big">💪</div><h3>${esc(lt("roundDone"))}</h3><p>${esc(lt("roundRes")(LR.okN,LR.qN))}</p>
+  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card lrn-end"><div class="big">💪</div><h3>${esc(lt("roundDone"))}</h3><p>${esc(lt("roundRes")(LR.okN,LR.qN))}</p>${progUpHtml()}
     <button type="button" class="btn primary" data-l="cont">${esc(lt("cont"))} →</button><button type="button" class="lrn-link" data-l="back">${esc(lt("back"))}</button></div></div>`;
   setTimeout(()=>{ const b=lrnEl().querySelector('[data-l="cont"]'); if(b) b.focus(); },20);
 }
@@ -2837,7 +2924,7 @@ function lrnFinish(){
       ${kn?`<button type="button" class="btn primary" data-l="kchk">${esc(lt("chk"))} (${kn})</button>`:""}
       <button type="button" class="btn" data-l="back">${esc(lt("back"))}</button><button type="button" class="lrn-link" data-l="kreset">${esc(lt("cardsReset"))}</button></div></div>`;
     return; }
-  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card lrn-end"><div class="big">🏆</div><h3>${esc(LR.chk?lt("chkDone"):lt("allDone"))}</h3>
+  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card lrn-end"><div class="big">🏆</div><h3>${esc(LR.chk?lt("chkDone"):lt("allDone"))}</h3>${progUpHtml()}
     <button type="button" class="btn primary" data-l="back">${esc(lt("back"))}</button><button type="button" class="lrn-link" data-l="restart">${esc(lt("restart"))}</button></div></div>`;
 }
 /* ---------- Karteikarten ---------- */
