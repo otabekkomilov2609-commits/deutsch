@@ -238,6 +238,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .acc-st{font-size:13.5px;min-height:1px}.acc-st.err{color:#C62828}
 .acc-who{font-size:16px;margin:0}.acc-who b{color:var(--blue)}
 /* challenge */
+.lrn-mode.kchk{grid-column:1/-1;border-color:var(--green);background:#ECF8F0}.lrn-mode.kchk b{color:var(--green)}.lrn-kc{margin:0;font-size:13px;color:var(--muted)}
 .lrn-mode.chal{grid-column:1/-1;border-color:#C2410C;background:#FFF1E8}.lrn-mode.chal b{color:#C2410C}
 .ch-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .ch-time{font:700 26px/1 var(--hand,inherit);min-width:56px;text-align:center;color:#C2410C}
@@ -2606,20 +2607,25 @@ const LT={
       right:["Zo‘r!","To‘g‘ri!","Barakalla!","Ajoyib!","Super!"], wrong:"Xato", correct:"To‘g‘ri javob:", yours:"Sizning javobingiz:", next:"Davom etish", override:"Men to‘g‘ri yozganman",
       caseNote:"Katta-kichik harfga e’tibor bering.", artNote:"Artikl (der/die/das) ham kerak!", almost:"Deyarli! Bitta harf xato.",
       roundDone:"Raund tugadi!", roundRes:(a,b)=>`${b} savoldan ${a} tasiga to‘g‘ri javob berdingiz.`, cont:"Keyingi raund", allDone:"Hamma so‘zlar o‘rganildi! 🎉", restart:"Qaytadan boshlash", back:"Lektion tanlash",
-      know:"Bilaman ✓", dontknow:"Bilmayman ✗", tap:"Bosing — aylanadi", cardsDone:"Hammasini bilasiz! 🎉", left:n=>`${n} ta qoldi`, reset:"Natijani o‘chirish", sel0:"Kamida bitta Lektion tanlang", example:"Misol"},
+      know:"Bilaman ✓", dontknow:"Bilmayman ✗", tap:"Bosing — aylanadi", cardsDone:"Hammasini bilasiz! 🎉", left:n=>`${n} ta qoldi`, reset:"Natijani o‘chirish", sel0:"Kamida bitta Lektion tanlang", example:"Misol",
+      knownN:n=>`🃏 Kartalarda ${n} ta so‘zni «Bilaman» degansiz`, chk:"✅ Bilganlarimni tekshirish", chkD:"Kartada «Bilaman» degan so‘zlar — test + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", cardsAll:"Bu Lektionlardagi hamma kartalarni «Bilaman» degansiz.", cardsReset:"Kartalarni boshidan boshlash", chkDone:"Bilgan so‘zlaringizni tekshirib bo‘ldingiz! 🎉"},
   ru:{lern:"Учить", title:"Учить слова", pick:"Какие уроки?", all:"Все", none:"Очистить", redem:"Включая Redemittel (фразы)", words:n=>`${n} слов`,
       learn:"🧠 Заучивание", learnD:"Тест + письмо. Слово выучено после 2 верных ответов.", cards:"🃏 Карточки", cardsD:"Нажмите на карточку — появится перевод.",
       learned:(a,b)=>`${a} / ${b} выучено`, choose:"Выберите правильный перевод", chooseP:"Выберите правильную форму Perfekt", writeP:"Напишите форму Perfekt", write:"Напишите по-немецки", ph:"По-немецки…", check:"Проверить", dunno:"Не знаю",
       right:["Отлично!","Верно!","Молодец!","Супер!","Здорово!"], wrong:"Неверно", correct:"Правильный ответ:", yours:"Ваш ответ:", next:"Дальше", override:"Я ответил(а) правильно",
       caseNote:"Обратите внимание на большие и маленькие буквы.", artNote:"Нужен ещё артикль (der/die/das)!", almost:"Почти! Ошибка в одной букве.",
       roundDone:"Раунд окончен!", roundRes:(a,b)=>`Верно: ${a} из ${b}.`, cont:"Следующий раунд", allDone:"Все слова выучены! 🎉", restart:"Начать заново", back:"Выбрать уроки",
-      know:"Знаю ✓", dontknow:"Не знаю ✗", tap:"Нажмите — перевернётся", cardsDone:"Вы знаете все! 🎉", left:n=>`Осталось: ${n}`, reset:"Сбросить прогресс", sel0:"Выберите хотя бы один урок", example:"Пример"}
+      know:"Знаю ✓", dontknow:"Не знаю ✗", tap:"Нажмите — перевернётся", cardsDone:"Вы знаете все! 🎉", left:n=>`Осталось: ${n}`, reset:"Сбросить прогресс", sel0:"Выберите хотя бы один урок", example:"Пример",
+      knownN:n=>`🃏 На карточках вы отметили «Знаю»: ${n}`, chk:"✅ Проверить, что я знаю", chkD:"Слова с отметкой «Знаю» — тест + письмо. Ошибся — слово вернётся в карточки.", cardsAll:"Все карточки этих уроков отмечены «Знаю».", cardsReset:"Начать карточки заново", chkDone:"Вы проверили все знакомые слова! 🎉"}
 };
 const lt = k => LT[state.lang][k];
 const LR={id:null, sel:new Set(), redem:false, mode:null, pool:[], st:{}, round:[], qi:0, okN:0, qN:0, cur:null, answered:false, cards:[], flip:false};
 function lrnKey(id){ return "lern:"+id; }
 function lrnLoad(id){ try{ return JSON.parse(store.get(lrnKey(id))||"{}")||{}; }catch(e){ return {}; } }
-function lrnSave(){ store.set(lrnKey(LR.id), JSON.stringify(LR.st)); }
+function lrnSave(){ store.set(lrnKey(LR.id)+(LR.chk?":kchk":""), JSON.stringify(LR.st)); }
+/* Karteikarten: «Bilaman» degan so'zlar saqlanadi — qayta kirganda so'ralmaydi. 2026-10-18 */
+function lrnKnown(){ try{ return new Set(JSON.parse(store.get(lrnKey(LR.id)+":kk")||"[]")); }catch(e){ return new Set(); } }
+function lrnKnownSet(s){ store.set(lrnKey(LR.id)+":kk", JSON.stringify([...s])); }
 /* Talaffuz uchun matnni tozalash: belgilar (/ ↔ · … + Akk.) o'qilmasin, pauza bo'lsin. 2026-10-17 */
 function lrnSayText(text){
   return String(text).replace(/\(.*?\)/g," ").replace(/\+\s*(Akk|Dat|Gen|Nom)\b\.?/g," ")
@@ -2690,7 +2696,7 @@ function lrnShuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.r
 function lrnEl(){ return document.getElementById("lrn"); }
 function lrnOpen(id){
   const D=lernData()[id]; if(!D) return;
-  LR.id=id; LR.st=lrnLoad(id); LR.redem=false;
+  LR.id=id; LR.st=lrnLoad(id); LR.chk=false; LR.mode=null; LR.redem=false;
   let saved=null; try{ saved=JSON.parse(store.get(lrnKey(id)+":sel")||"null"); }catch(e){}
   const les=Object.keys(D.les).map(Number);
   const m=byId[id]; const cur=m&&CURS[m.tab];
@@ -2702,27 +2708,35 @@ function lrnItems(){ const D=lernData()[LR.id]; return D.it.map((r,i)=>({i,l:r[0
 function lrnLab(n){ const D=lernData()[LR.id]; return (D&&D.lab&&D.lab[n])||("L"+n); }
 function lrnHead(sub){
   const m=byId[LR.id];
-  return `<div class="lrn-bar"><button class="btn" data-l="close" aria-label="✕">✕</button><div class="lrn-tt"><b>${esc(lt("title"))}</b><small>${esc(m?m.title:"")}</small></div>${sub||""}</div>`;
+  return `<div class="lrn-bar"><button class="btn" data-l="close" aria-label="${LR.mode?"←":"✕"}">${LR.mode?"←":"✕"}</button><div class="lrn-tt"><b>${esc(lt("title"))}</b><small>${esc(m?m.title:"")}</small></div>${sub||""}</div>`;
 }
 function lrnSetup(){
+  if(LR.chk){ LR.chk=false; LR.st=lrnLoad(LR.id); }
+  LR.mode=null;
   const D=lernData()[LR.id], les=Object.keys(D.les).map(Number);
-  const its=lrnItems(), done=its.filter(x=>LR.st[x.i]===2).length;
+  const its=lrnItems(), done=its.filter(x=>LR.st[x.i]===2).length, KN=lrnKnown(), kn=its.filter(x=>KN.has(x.i)).length;
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body"><div class="lrn-card lrn-setup">
     <h3>${esc(lt("pick"))}</h3>
     <div class="lrn-les">${les.map(n=>`<button type="button" class="lrn-chip" aria-pressed="${LR.sel.has(n)}" data-les="${n}"><b>${esc(lrnLab(n))}</b><span>${esc(D.les[n])}</span></button>`).join("")}</div>
     <div class="lrn-row"><button type="button" class="lrn-link" data-l="all">${esc(lt("all"))}</button><button type="button" class="lrn-link" data-l="none">${esc(lt("none"))}</button>
       ${D.it.some(r=>r[6])?`<label class="lrn-tog"><input type="checkbox" data-l="redem"${LR.redem?" checked":""}> ${esc(lt("redem"))}</label>`:""}</div>
     <p class="lrn-count">${its.length? esc(lt("words")(its.length))+" · "+esc(lt("learned")(done,its.length)) : esc(lt("sel0"))}</p>
+    ${kn?`<p class="lrn-kc">${esc(lt("knownN")(kn))}</p>`:""}
     <div class="lrn-modes">
       <button type="button" class="lrn-mode" data-l="learn"${its.length?"":" disabled"}><b>${esc(lt("learn"))}</b><span>${esc(lt("learnD"))}</span></button>
       <button type="button" class="lrn-mode" data-l="cards"${its.length?"":" disabled"}><b>${esc(lt("cards"))}</b><span>${esc(lt("cardsD"))}</span></button>
+      ${kn?`<button type="button" class="lrn-mode kchk" data-l="kchk"><b>${esc(lt("chk"))} (${kn})</b><span>${esc(lt("chkD"))}</span></button>`:""}
       <button type="button" class="lrn-mode chal" data-l="chal"${its.filter(x=>!x.red).length>=4?"":" disabled"}><b>${esc(ct("mode"))}</b><span>${esc(ct("modeD"))}</span></button>
     </div>
-    ${done?`<button type="button" class="lrn-link lrn-reset" data-l="reset">${esc(lt("reset"))}</button>`:""}
+    ${done||kn?`<button type="button" class="lrn-link lrn-reset" data-l="reset">${esc(lt("reset"))}</button>`:""}
   </div></div>`;
 }
 /* ---------- Lernen ---------- */
-function lrnStartLearn(){ LR.mode="learn"; LR.pool=lrnItems(); lrnNewRound(); }
+function lrnStartLearn(){ if(LR.chk){ LR.chk=false; LR.st=lrnLoad(LR.id); } LR.mode="learn"; LR.pool=lrnItems(); lrnNewRound(); }
+/* Kartada «Bilaman» degan so'zlarni Lernen'da tekshirish (alohida natija, asosiy natijaga tegmaydi) */
+function lrnStartCheck(){ const KN=lrnKnown(); LR.chk=true; LR.mode="learn"; LR.st=lrnLoad(LR.id+":kchk");
+  LR.pool=lrnItems().filter(x=>KN.has(x.i)); LR.pool.forEach(x=>{ if(LR.st[x.i]===2) delete LR.st[x.i]; }); lrnSave();
+  if(!LR.pool.length){ lrnSetup(); return; } lrnNewRound(); }
 function lrnNewRound(){
   const left=LR.pool.filter(x=>LR.st[x.i]!==2);
   if(!left.length){ lrnFinish(true); return; }
@@ -2798,7 +2812,8 @@ function lrnFeedback(ok, x, extra){
 function lrnMark(ok){
   const x=LR.cur; LR.qN++;
   if(ok){ LR.okN++; LR.st[x.i]= (LR.kind==="mc" && lrnTypable(x)) ? 1 : (LR.kind==="mc" ? Math.min(2,(LR.st[x.i]||0)+1) : 2); }
-  else { if(LR.kind==="wr" && LR.st[x.i]===1) LR.st[x.i]=1; LR.round.push(x); if(LR.round.length>14) LR.round.length=14; }
+  else { if(LR.chk){ const KN=lrnKnown(); if(KN.delete(x.i)) lrnKnownSet(KN); }
+    if(LR.kind==="wr" && LR.st[x.i]===1) LR.st[x.i]=1; LR.round.push(x); if(LR.round.length>14) LR.round.length=14; }
   lrnSave();
 }
 function lrnRoundEnd(){
@@ -2811,11 +2826,16 @@ function lrnRoundEnd(){
 }
 function lrnFinish(){
   if(LR.mode==="learn") accLern();
-  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${LR.mode==="learn"?lrnProgress():""}<div class="lrn-card lrn-end"><div class="big">🏆</div><h3>${esc(LR.mode==="learn"?lt("allDone"):lt("cardsDone"))}</h3>
-    <button type="button" class="btn primary" data-l="back">${esc(lt("back"))}</button>${LR.mode==="learn"?`<button type="button" class="lrn-link" data-l="restart">${esc(lt("restart"))}</button>`:""}</div></div>`;
+  if(LR.mode==="cards"){ const kn=lrnItems().filter(x=>lrnKnown().has(x.i)).length;
+    lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">🏆</div><h3>${esc(lt("cardsDone"))}</h3>${LR.allKnown?`<p>${esc(lt("cardsAll"))}</p>`:""}
+      ${kn?`<button type="button" class="btn primary" data-l="kchk">${esc(lt("chk"))} (${kn})</button>`:""}
+      <button type="button" class="btn" data-l="back">${esc(lt("back"))}</button><button type="button" class="lrn-link" data-l="kreset">${esc(lt("cardsReset"))}</button></div></div>`;
+    return; }
+  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card lrn-end"><div class="big">🏆</div><h3>${esc(LR.chk?lt("chkDone"):lt("allDone"))}</h3>
+    <button type="button" class="btn primary" data-l="back">${esc(lt("back"))}</button><button type="button" class="lrn-link" data-l="restart">${esc(lt("restart"))}</button></div></div>`;
 }
 /* ---------- Karteikarten ---------- */
-function lrnStartCards(){ LR.mode="cards"; LR.cards=lrnShuffle(lrnItems()); LR.flip=false; lrnCard(); }
+function lrnStartCards(){ LR.mode="cards"; const KN=lrnKnown(), all=lrnItems(); LR.cards=lrnShuffle(all.filter(x=>!KN.has(x.i))); LR.allKnown=!LR.cards.length&&all.length>0; LR.flip=false; lrnCard(); }
 function lrnCard(){
   if(!LR.cards.length){ lrnFinish(); return; }
   const x=LR.cards[0];
@@ -2839,20 +2859,22 @@ document.addEventListener("click",e=>{
     root.querySelectorAll(".lrn-opt").forEach((b,k)=>{ b.disabled=true; if(LR.opts[k].de===LR.cur.de) b.classList.add("ok"); }); if(!ok) op.classList.add("bad");
     lrnMark(ok); lrnFeedback(ok, LR.cur); return; }
   const b=e.target.closest("[data-l]"); if(!b) return; const a=b.dataset.l;
-  if(a==="close") lrnClose();
+  if(a==="close"){ if(LR.mode){ try{ speechSynthesis.cancel(); }catch(e){} wkStop(); lrnSetup(); } else lrnClose(); }
   else if(a==="all"){ Object.keys(lernData()[LR.id].les).forEach(n=>LR.sel.add(+n)); store.set(lrnKey(LR.id)+":sel",JSON.stringify([...LR.sel])); lrnSetup(); }
   else if(a==="none"){ LR.sel.clear(); store.set(lrnKey(LR.id)+":sel","[]"); lrnSetup(); }
   else if(a==="learn") lrnStartLearn();
   else if(a==="cards") lrnStartCards();
-  else if(a==="reset"){ lrnItems().forEach(x=>delete LR.st[x.i]); lrnSave(); lrnSetup(); }
+  else if(a==="reset"){ lrnItems().forEach(x=>delete LR.st[x.i]); lrnSave(); const KN=lrnKnown(); lrnItems().forEach(x=>KN.delete(x.i)); lrnKnownSet(KN); lrnSetup(); }
   else if(a==="next"){ LR.qi++; lrnAsk(); }
   else if(a==="cont") lrnNewRound();
   else if(a==="back") lrnSetup();
-  else if(a==="restart"){ LR.pool.forEach(x=>delete LR.st[x.i]); lrnSave(); lrnStartLearn(); }
+  else if(a==="restart"){ LR.pool.forEach(x=>delete LR.st[x.i]); lrnSave(); if(LR.chk) lrnStartCheck(); else lrnStartLearn(); }
   else if(a==="dunno"){ if(LR.answered) return; const i=document.getElementById("lrn-in"); if(i) i.disabled=true; lrnMark(false); lrnFeedback(false, LR.cur, {yours:i?i.value:""}); }
   else if(a==="override"){ const x=LR.cur; LR.round.pop(); LR.qN; LR.okN++; LR.st[x.i]=2; lrnSave(); LR.qi++; lrnAsk(); }
-  else if(a==="flip"){ LR.flip=!LR.flip; lrnCard(); }
-  else if(a==="yes"){ LR.cards.shift(); LR.flip=false; lrnCard(); }
+  else if(a==="flip"){ LR.flip=!LR.flip; lrnCard(); if(LR.flip&&LR.cards[0]) lrnSay(LR.cards[0].say||LR.cards[0].de); }
+  else if(a==="yes"){ const x=LR.cards.shift(); if(x){ const KN=lrnKnown(); KN.add(x.i); lrnKnownSet(KN); } LR.flip=false; lrnCard(); }
+  else if(a==="kchk") lrnStartCheck();
+  else if(a==="kreset"){ const KN=lrnKnown(); lrnItems().forEach(x=>KN.delete(x.i)); lrnKnownSet(KN); lrnStartCards(); }
   else if(a==="no"){ const x=LR.cards.shift(); LR.cards.splice(Math.min(LR.cards.length,3+Math.floor(Math.random()*4)),0,x); LR.flip=false; lrnCard(); }
 });
 document.addEventListener("change",e=>{ if(e.target.matches('#lrn [data-l="redem"]')){ LR.redem=e.target.checked; lrnSetup(); } });
@@ -2863,7 +2885,7 @@ document.addEventListener("submit",e=>{
 });
 document.addEventListener("keydown",e=>{
   const root=lrnEl(); if(!root||root.hidden) return;
-  if(e.key==="Escape"){ lrnClose(); return; }
+  if(e.key==="Escape"){ const c=root.querySelector('[data-l="close"]'); if(c) c.click(); else lrnClose(); return; }
   if(LR.mode==="learn" && LR.kind==="mc" && !LR.answered && /^[1-4]$/.test(e.key)){ const b=root.querySelector(`[data-opt="${+e.key-1}"]`); if(b) b.click(); }
   else if(LR.answered && e.key==="Enter" && document.activeElement && document.activeElement.tagName!=="BUTTON"){ const n=root.querySelector('[data-l="next"]'); if(n){ e.preventDefault(); n.click(); } }
   else if(LR.mode==="cards" && root.querySelector(".lrn-flash")){ if(e.key===" "){ e.preventDefault(); root.querySelector('[data-l="flip"]').click(); } else if(e.key==="ArrowRight") root.querySelector('[data-l="yes"]').click(); else if(e.key==="ArrowLeft") root.querySelector('[data-l="no"]').click(); }
@@ -2872,7 +2894,7 @@ document.getElementById("v-lern").addEventListener("click",()=>{ if(V.cur) lrnOp
 
 function closeViewer(){ try{ document.getElementById("v-aud").pause(); }catch(e){} V.token++; V.el.hidden=true; V.body.innerHTML=""; document.body.style.overflow=""; if(V.lastFocus&&V.lastFocus.focus) V.lastFocus.focus(); }
 document.getElementById("v-close").addEventListener("click", closeViewer);
-document.addEventListener("keydown", e=>{ if(e.key==="Escape" && !V.el.hidden) closeViewer(); });
+document.addEventListener("keydown", e=>{ if(e.key==="Escape" && !V.el.hidden && lrnEl().hidden) closeViewer(); });
 function plainDownload(m){
   const a=document.createElement("a"); a.href=new URL(m.file, location.href).href; a.download=m.name; a.target="_blank"; a.rel="noopener";
   document.body.appendChild(a); a.click(); a.remove();
@@ -3202,7 +3224,7 @@ function accAuto(key,lvl,ttl,ok,n,delay){
   ACC_T[key]=setTimeout(()=>{ const best=+(store.get("sent:"+key)||0); if(ok>best){ store.set("sent:"+key,String(ok)); accPost(lvl,ttl,ok,n); } }, delay||0);
 }
 function accLern(){
-  const D=lernData()[LR.id], m=byId[LR.id]; if(!D||!m) return;
+  const D=lernData()[LR.id], m=byId[LR.id]; if(!D||!m||LR.chk) return;
   let ok=0,n=0; D.it.forEach((r,i)=>{ if(!r[4]||r[6]) return; n++; if(LR.st[i]===2) ok++; });
   accAuto("lern:"+LR.id, accLvl(m), "🧠 Yodlash · "+m.title, ok, n, 0);
 }
