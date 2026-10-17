@@ -3600,7 +3600,7 @@ function iamW(it){ const n=String(it.a||"").length; return Math.min(26,Math.max(
 function iamInp(i){ const it=iaItems()[i]; if(!it) return "";
   return `<input type="text" class="ia-in iam-in${it.long?" long":""}" data-i="${i}" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="next" style="${it.long?"":`width:${iamW(it)}em`}" value="${esc(IA.vals[i]||"")}" aria-label="${i+1}">`; }
 function iamRenderHTML(id){
-  const B=IAM[id]||[], uz=state.lang!=="ru"; let h=`<div class="iam"><div class="iam-top"><button type="button" class="iam-sw" data-iam="page">📄 ${uz?"To‘liq varaqni ko‘rish":"Показать весь лист"}</button></div>`;
+  const B=IAM[id]||[], uz=state.lang!=="ru"; let h=`<div class="iam"><div class="iam-top"><button type="button" class="iam-sw" data-iam="page">📄 Ganzes Arbeitsblatt</button></div>`;
   B.forEach((b,bi)=>{
     if(b.h!=null){ h+=`<h3 class="iam-h">${esc(b.h).replace(/^(\d{1,2}|[A-H])\s*([—–-]\s*)?/,(m,n)=>`<span class="iam-n">${n}</span>`)}</h3>`; return; }
     if(b.p!=null){ h+=`<p class="iam-p">${esc(b.p)}</p>`; return; }
@@ -3651,9 +3651,9 @@ function iasRender(m){
     <div class="ias-in" id="ias-inw"><textarea rows="1" class="ia-in ias-input" id="ias-in" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="done"></textarea><button type="button" class="ias-go" id="ias-go" aria-label="✓">✓</button></div>
     <div class="ias-opts" id="ias-opts"></div>
     <div class="ias-fb" id="ias-fb"></div>
-    <div class="ias-nav"><button type="button" data-ias="prev">← ${state.lang==="ru"?"Назад":"Oldingi"}</button><button type="button" data-ias="skip">${state.lang==="ru"?"Пропустить":"O‘tkazib yuborish"} →</button></div>
+    <div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" data-ias="skip">Überspringen →</button></div>
     <div class="ias-dots" id="ias-dots"></div>
-    <div class="ias-sw"><button type="button" class="iam-sw" data-iam="page">📄 ${state.lang==="ru"?"Показать весь лист":"To‘liq varaqni ko‘rish"}</button></div></div>`;
+    <div class="ias-sw"><button type="button" class="iam-sw" data-iam="page">📄 Ganzes Arbeitsblatt</button></div></div>`;
   const inp=document.getElementById("ias-in");
   inp.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); e.stopPropagation(); iasCheck(); } });
   inp.addEventListener("input",()=>{ const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) s.innerHTML=inp.value.trim()?esc(inp.value):"&nbsp;?&nbsp;"; inp.classList.remove("bad");
@@ -3670,7 +3670,7 @@ function iasShow(focus){
   const st=IAS.steps[IAS.k]; if(!st){ iasEnd(); return; } const n=IAS.steps.length, it=iaItems()[st.i], uz=state.lang!=="ru";
   const okN=IAS.steps.filter(s=>iasState(s.i)==="ok").length;
   document.getElementById("ias-pb").style.width=(okN/n*100)+"%"; document.getElementById("ias-cnt").textContent=`${IAS.k+1} / ${n}`;
-  document.getElementById("ias-task").innerHTML=st.h?esc(st.h).replace(/^(\d{1,2}|[A-H])\s*([—–-]\s*)?/,(m,x)=>`<span>${uz?"Mashq":"Задание"} ${x}</span>`):"";
+  document.getElementById("ias-task").innerHTML=st.h?esc(st.h).replace(/^(\d{1,2}|[A-H])\s*([—–-]\s*)?/,(m,x)=>`<span>Aufgabe ${x}</span>`):"";
   const pe=document.getElementById("ias-p"); const nw= st.kind==="o" || !st.b.s.some(x=>typeof x==="string"&&/[A-Za-zÄÖÜäöüß]{2}/.test(x)); pe.textContent=nw?"":(st.p||""); pe.hidden=nw||!st.p;
   let html="";
   const noWords= st.kind!=="o" && !st.b.s.some(x=>typeof x==="string"&&/[A-Za-zÄÖÜäöüß]{2}/.test(x));
@@ -3686,13 +3686,13 @@ function iasShow(focus){
   if(bw.length&&document.activeElement&&document.activeElement.blur) document.activeElement.blur();
   bankEl.innerHTML=bw.map(w=>`<button type="button" class="ias-bw" data-iasw="${esc(w)}">${esc(w)}</button>`).join(""); bankEl.hidden=!bw.length;
   if(st.kind==="g"){ inw.hidden=bw.length>0; opts.innerHTML=""; inp.dataset.i=st.i; inp.value=IA.vals[st.i]||""; inp.classList.remove("ok","bad","shake"); inp.rows=it.long?3:1; inp.classList.toggle("long",!!it.long);
-    if(it.long) inp.placeholder=uz?"Butun gapni yozing…":"Напишите всё предложение…"; else inp.placeholder="";
+    if(it.long) inp.placeholder="Schreiben Sie den ganzen Satz …"; else inp.placeholder="";
     if(focus&&!bw.length) setTimeout(()=>{ inp.focus({preventScroll:true}); try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(e){} },30); }
   else { inw.hidden=true;
     const list= st.kind==="o"? st.b.opts : st.b.s.filter(x=>typeof x!=="string"&&x.c===st.i).map(x=>[x.k,x.t]);
     opts.innerHTML=list.map(([k,t])=>`<button type="button" class="ias-opt ${IA.vals[st.i]===k?(iasState(st.i)==="ok"?"ok":IAS.tried[st.i]?"bad":"sel"):""}" data-iaso="${k}">${esc(t||"abcdefgh"[k])}</button>`).join(""); }
   const fb=document.getElementById("ias-fb"); const s=iasState(st.i);
-  fb.className="ias-fb "+(s==="ok"?"ok":""); fb.innerHTML= s==="ok"? `✓ ${uz?"To‘g‘ri!":"Верно!"}` : "";
+  fb.className="ias-fb "+(s==="ok"?"ok":""); fb.innerHTML= s==="ok"? `✓ Richtig!` : "";
   iasDots();
 }
 function iasDots(){ const st=IAS.steps[IAS.k]; const el=document.getElementById("ias-dots"); if(!el||!st) return;
@@ -3701,21 +3701,21 @@ function iasCheck(){ const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g") return; c
   if(!inp.value.trim()){ inp.focus(); return; }
   IA.vals[st.i]=inp.value; iaSave(); IAS.tried[st.i]=true; iasAfter(st); }
 function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document.getElementById("ias-fb");
-  if(s==="ok"){ iasShow(false); fb.className="ias-fb ok"; fb.innerHTML=`✓ ${uz?"To‘g‘ri!":"Верно!"}`; setTimeout(()=>{ if(IAS.steps[IAS.k]===st) iasNext(true); },750); return; }
+  if(s==="ok"){ iasShow(false); fb.className="ias-fb ok"; fb.innerHTML=`✓ Richtig!`; setTimeout(()=>{ if(IAS.steps[IAS.k]===st) iasNext(true); },750); return; }
   const why=iaWhyText(st.i);
-  fb.className="ias-fb bad"; fb.innerHTML=`✗ ${uz?"Yana urinib ko‘ring":"Попробуйте ещё раз"}${why?`<div class="ias-why">${why}</div>`:""}`;
+  fb.className="ias-fb bad"; fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`;
   const inp=document.getElementById("ias-in"); if(st.kind==="g"){ inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); inp.select(); }
-  else iasShow(false), (fb.className="ias-fb bad", fb.innerHTML=`✗ ${uz?"Yana urinib ko‘ring":"Попробуйте ещё раз"}${why?`<div class="ias-why">${why}</div>`:""}`);
+  else iasShow(false), (fb.className="ias-fb bad", fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`);
   iasDots(); }
 function iasNext(auto){ const n=IAS.steps.length; for(let d=1; d<=n; d++){ const k=(IAS.k+d)%n; if(iasState(IAS.steps[k].i)!=="ok"||!auto){ if(auto&&k<=IAS.k&&IAS.steps.slice(IAS.k+1).every(s=>iasState(s.i)==="ok")&&IAS.steps.every(s=>iasState(s.i)==="ok")) break; IAS.k=k; iasShow(true); return; } }
   iasEnd(); }
 function iasEnd(){ const n=IAS.steps.length, ok=IAS.steps.filter(s=>iasState(s.i)==="ok").length, uz=state.lang!=="ru";
   IA.checked=true; iaScore();
   const left=IAS.steps.map((s,k)=>({s,k})).filter(o=>iasState(o.s.i)!=="ok");
-  V.body.querySelector(".ias").innerHTML=`<div class="ias-end"><div class="big">${ok===n?"🏆":"💪"}</div><h3>${ok} / ${n}</h3><p>${ok===n?(uz?"Hammasi to‘g‘ri! Zo‘r!":"Всё верно! Отлично!"):(uz?"Qolganlarini yana urinib ko‘ring:":"Попробуйте остальные ещё раз:")}</p>
+  V.body.querySelector(".ias").innerHTML=`<div class="ias-end"><div class="big">${ok===n?"🏆":"💪"}</div><h3>${ok} / ${n}</h3><p>${ok===n?"Alles richtig! Super!":"Versuchen Sie die anderen noch einmal:"}</p>
     ${left.length?`<div class="ias-dots">${left.map(o=>`<button type="button" class="${iasState(o.s.i)}" data-iasd="${o.k}">${o.k+1}</button>`).join("")}</div>`:""}
-    <button type="button" class="btn primary" data-ias="again">${uz?"Qaytadan boshlash":"Начать заново"}</button>
-    <button type="button" class="iam-sw" data-iam="page">📄 ${uz?"To‘liq varaqni ko‘rish":"Показать весь лист"}</button></div>`; }
+    <button type="button" class="btn primary" data-ias="again">Noch einmal von vorn</button>
+    <button type="button" class="iam-sw" data-iam="page">📄 Ganzes Arbeitsblatt</button></div>`; }
 document.addEventListener("click",e=>{ if(!V.body.querySelector(".ias")) return;
   const w=e.target.closest("[data-iasw]"); if(w){ const inp=document.getElementById("ias-in"); inp.value=w.dataset.iasw; inp.dispatchEvent(new Event("input",{bubbles:true})); iasCheck(); return; }
   const o=e.target.closest("[data-iaso]"); if(o){ const st=IAS.steps[IAS.k]; IA.vals[st.i]=+o.dataset.iaso; iaSave(); IAS.tried[st.i]=true; iasAfter(st); return; }
