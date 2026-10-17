@@ -751,7 +751,8 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .iam-opts .ia-o{display:block;width:100%;text-align:left;border-radius:12px;padding:10px 14px;margin:0}
 .iam .ia-q{position:static!important;display:inline-grid;place-items:center;vertical-align:middle;width:24px;height:24px;margin:0 2px;font-size:13px}
 .iam .ia-why{position:static!important;display:block;max-width:none;min-width:0;margin-top:6px;pointer-events:auto}
-@media (max-width:760px){.iam{margin-right:64px!important;margin-left:0!important}}
+@media (max-width:760px){.v-body>.iam{align-self:stretch;width:auto;margin:0!important;padding-right:var(--iam-pr,8px)!important}}
+.iam-on #ia-keys{display:none!important}
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
 .ia-in{position:absolute;box-sizing:border-box;border:0;border-bottom:1.5px solid transparent;background:rgba(31,79,160,.06);color:#1F4FA0;font-family:var(--hand),"Patrick Hand",sans-serif;font-size:calc(var(--s) * 13px);line-height:1;padding:0 2px;margin:0;text-align:center;border-radius:3px 3px 0 0;outline:none;min-width:0}
@@ -2988,6 +2989,7 @@ async function renderPages(m, my){
   const doc=V.doc; if(!doc) return;
   const trp=document.getElementById("tr-panel"); if(trp) trp.remove();
   V.body.innerHTML=""; V.body.classList.toggle("zoomed", V.zoom>1); zoomLabel();
+  V.el.classList.toggle("iam-on", iamUse(m));
   if(iamUse(m)){ await iamRender(m,my); if(trp && my===V.token) V.body.appendChild(trp); return; }
   if(IA.on && IA.id===m.id && IAM[m.id] && window.innerWidth<760) V.body.insertAdjacentHTML("afterbegin",`<div class="iam-bar"><button type="button" class="iam-sw" data-iam="mob">📱 ${state.lang==="ru"?"Вид для телефона":"Telefon ko‘rinishi"}</button></div>`);
   const base = Math.min(V.body.clientWidth-24, 900), w = Math.round(base*V.zoom);
