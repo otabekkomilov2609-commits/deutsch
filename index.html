@@ -802,6 +802,9 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-end .ias-brag:active{transform:scale(.97)}
 .iam-lbl{color:var(--blue);font-weight:800;margin-right:.15em}
 .ias-card .iam-lbl{opacity:.85}
+.ias-fb.sol{background:#FFF4D1;color:#7A5600;padding:12px 14px}.ias-fb.sol b{font-size:1.15em;color:#5A3B00}
+.ias-nav .ias-solb{color:#9A6A00}
+.ias-opt.sol,.ias-bw.sol{box-shadow:0 0 0 3px #F2B705!important}
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
 .ia-in{position:absolute;box-sizing:border-box;border:0;border-bottom:1.5px solid transparent;background:rgba(31,79,160,.06);color:#1F4FA0;font-family:var(--hand),"Patrick Hand",sans-serif;font-size:calc(var(--s) * 13px);line-height:1;padding:0 2px;margin:0;text-align:center;border-radius:3px 3px 0 0;outline:none;min-width:0}
@@ -3427,7 +3430,9 @@ function lrnJudge(inp, x){
   const u=lrnNorm(inp); if(!u) return {ok:false};
   const vs=lrnVariants(x.de);
   if(vs.includes(u)) return {ok:true};
-  if(vs.some(v=>v.toLowerCase()===u.toLowerCase())) return {ok:true, note:lt("caseNote")};
+  const nsp=x=>x.replace(/\s+/g,""); /* probel xato hisoblanmaydi */
+  if(vs.some(v=>nsp(v)===nsp(u))) return {ok:true};
+  if(vs.some(v=>nsp(v).toLowerCase()===nsp(u).toLowerCase())) return {ok:true, note:lt("caseNote")};
   if(vs.some(v=>/^(der|die|das) /.test(v) && v.replace(/^(der|die|das) /,"").toLowerCase()===u.toLowerCase())) return {ok:false, note:lt("artNote"), close:true};
   const fold=s=>s.toLowerCase().replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss").replace(/ae/g,"a").replace(/oe/g,"o").replace(/ue/g,"u");
   if(vs.some(v=>fold(v)===fold(u))) return {ok:false, note:lt("umlNote"), close:true};
@@ -3563,7 +3568,8 @@ function iaState(i){
   if(it.t==="c") return IA.vals[i]===it.ans ? "ok" : "bad";
   const v=(IA.vals[i]||"").trim();
   if(it.free) return v?"chk":"bad";
-  if(it.ok.includes(iaNorm(v)) || (v==="" && it.ok.includes(""))) return "ok";
+  const nv=iaNorm(v).replace(/ /g,""); /* probel xato hisoblanmaydi */
+  if(it.ok.some(o=>o.replace(/ /g,"")===nv) || (v==="" && it.ok.includes(""))) return "ok";
   return it.long && v ? "chk" : "bad";
 }
 function iaOpen(id){
@@ -3657,7 +3663,7 @@ function iasRender(m){
     <div class="ias-in" id="ias-inw"><textarea rows="1" class="ia-in ias-input" id="ias-in" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="done"></textarea><button type="button" class="ias-go" id="ias-go" aria-label="✓">✓</button></div>
     <div class="ias-opts" id="ias-opts"></div>
     <div class="ias-fb" id="ias-fb"></div>
-    <div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" data-ias="skip">Überspringen →</button></div>
+    <div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" class="ias-solb" data-ias="sol">💡 Lösung</button><button type="button" data-ias="skip">Überspringen →</button></div>
     <div class="ias-dots" id="ias-dots"></div>
     <div class="ias-sw"><button type="button" class="iam-sw" data-iam="page">📄 Ganzes Arbeitsblatt</button></div></div>`;
   const inp=document.getElementById("ias-in");
@@ -3701,6 +3707,11 @@ function iasShow(focus){
   fb.className="ias-fb "+(s==="ok"?"ok":""); fb.innerHTML= s==="ok"? `✓ Richtig!` : "";
   iasDots();
 }
+function iasSol(){ const st=IAS.steps[IAS.k]; if(!st) return; const it=iaItems()[st.i]; let ans="";
+  if(it.t==="c"){ const list= st.kind==="o"? st.b.opts : st.b.s.filter(x=>typeof x!=="string"&&x.c===st.i).map(x=>[x.k,x.t]); const o=list.find(([k])=>k===it.ans); ans=o?(o[1]||"abcdefgh"[o[0]]):"";
+    V.body.querySelectorAll(".ias-opt").forEach(b=>b.classList.toggle("sol",+b.dataset.iaso===it.ans)); }
+  else { ans=String(it.a||""); V.body.querySelectorAll(".ias-bw").forEach(b=>b.classList.toggle("sol",iaNorm(b.dataset.iasw)===iaNorm(ans))); }
+  const fb=document.getElementById("ias-fb"); fb.className="ias-fb sol"; fb.innerHTML=`💡 Lösung: <b>${esc(ans)}</b>`; }
 function iasDots(){ const st=IAS.steps[IAS.k]; const el=document.getElementById("ias-dots"); if(!el||!st) return;
   el.innerHTML=IAS.steps.map((x,k)=>({x,k})).filter(o=>o.x.h===st.h).map(({x,k})=>`<button type="button" class="${iasState(x.i)} ${k===IAS.k?"cur":""}" data-iasd="${k}" aria-label="${k+1}"></button>`).join(""); }
 function iasCheck(){ const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g") return; const inp=document.getElementById("ias-in");
@@ -3731,6 +3742,7 @@ document.addEventListener("click",e=>{ if(!V.body.querySelector(".ias")) return;
   if(e.target.closest("#ias-go")){ iasCheck(); return; }
   const a=e.target.closest("[data-ias]"); if(!a) return; const k=a.dataset.ias;
   if(k==="prev"){ IAS.k=(IAS.k-1+IAS.steps.length)%IAS.steps.length; iasShow(true); }
+  else if(k==="sol"){ iasSol(); }
   else if(k==="skip"){ IAS.k=(IAS.k+1)%IAS.steps.length; iasShow(true); }
   else if(k==="again"){ IAS.steps.forEach(s=>{ delete IA.vals[s.i]; }); IAS.tried={}; iaSave(); IA.checked=false; iasRender(V.cur); }
 });
