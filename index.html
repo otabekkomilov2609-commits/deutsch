@@ -267,6 +267,24 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 @media (max-width:560px){.prog{grid-template-columns:auto 1fr;padding:14px}.prog-badge{width:52px;height:52px;font-size:28px;grid-row:1/span 2}.prog-n{grid-column:1/-1;grid-row:auto;text-align:left;display:flex;align-items:baseline;gap:6px}.prog-n b{display:inline;font-size:24px}.prog-bar,.prog-next{grid-column:1/-1}.prog-name{font-size:26px}}
 .lrn-rank{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);padding:2px 2px 0}.lrn-rank b{color:var(--pg-ink)}
 .lrn-up{background:var(--pg-soft);border:1.5px solid var(--pg);border-radius:14px;padding:10px 14px;text-align:center}.lrn-up b{display:block;font-family:var(--hand);font-size:24px;color:var(--pg-ink)}
+/* Umumiy reyting — 2026-10-18 */
+.prog-btns{display:flex;gap:8px;flex-wrap:wrap}
+.prog-rk{padding:9px 14px;font-size:14px;cursor:pointer}
+.rk-wrap{max-width:640px;width:100%;margin:0 auto;padding:16px max(14px,env(safe-area-inset-left,0px)) 40px;display:flex;flex-direction:column;gap:12px}
+.rk-head h2{margin:0;font-family:var(--hand);font-weight:400;font-size:34px;color:var(--blue);line-height:1.05}
+.rk-head p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+.rk-me{background:var(--pg-soft);border:1.5px solid var(--pg);border-radius:14px;padding:10px 14px;font-size:15px}
+.rk-me b{color:var(--pg-ink)}
+.rk-list{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.rk-list li{display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:10px;padding:11px 14px;border-top:1px solid var(--line)}
+.rk-list li:first-child{border-top:0}
+.rk-list li.me{background:var(--pg-soft)}
+.rk-pos{font-weight:800;font-size:16px;text-align:center;color:var(--muted);font-variant-numeric:tabular-nums}
+.rk-pos.m{font-size:22px}
+.rk-nm{min-width:0}.rk-nm b{display:block;font-size:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rk-nm span{font-size:12.5px;color:var(--muted)}
+.rk-n{text-align:right}.rk-n b{font-size:20px;font-variant-numeric:tabular-nums;color:var(--ink)}.rk-n span{display:block;font-size:11px;color:var(--muted)}
+.rk-empty{padding:22px;text-align:center;color:var(--muted)}
+.rk-net{font-size:12.5px;color:var(--muted)}
 .lrn-mode.kchk{grid-column:1/-1;border-color:var(--green);background:#ECF8F0}.lrn-mode.kchk b{color:var(--green)}.lrn-kc{margin:0;font-size:13px;color:var(--muted)}
 .lrn-mode.chal{grid-column:1/-1;border-color:#C2410C;background:#FFF1E8}.lrn-mode.chal b{color:#C2410C}
 .ch-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
@@ -2377,7 +2395,7 @@ function progRender(){
     <div class="prog-next">${nx? (uz?`Keyingi daraja <b>${esc(progLvName(nx))}</b> — yana <b>${nx.n-c.n}</b> ta so‘z`:`Следующий уровень <b>${esc(progLvName(nx))}</b> — ещё <b>${nx.n-c.n}</b> слов`) : (uz?"Eng yuqori daraja! 🏆":"Высший уровень! 🏆")}${c.k? ` · 🃏 ${uz?`${c.k} ta «Bilaman» so‘zni tekshirsangiz — hisobga qo‘shiladi`:`проверьте ${c.k} слов с «Знаю» — они засчитаются`}`:""}</div>
     <div class="prog-msg">${esc(uz?l.mu:l.mr)}</div>
     <div class="prog-foot"><span class="prog-ladder" aria-hidden="true">${PROG_LV.map((x,k)=>`<span class="${k<=i?"on":""}${k===i?" cur":""}" title="${esc(x.de)} · ${x.n}+">${x.e}</span>`).join("")}</span>
-    <button type="button" class="btn primary prog-go" data-proggo>🧠 ${uz?"Yodlashga":"Учить слова"}</button></div>`;
+    <span class="prog-btns"><button type="button" class="btn prog-rk" data-rank>🏆 ${uz?"Reyting":"Рейтинг"}</button><button type="button" class="btn primary prog-go" data-proggo>🧠 ${uz?"Yodlashga":"Учить слова"}</button></span></div>`;
   el.hidden=false;
 }
 function progGo(){
@@ -2792,7 +2810,7 @@ function lrnOpen(id){
   LR.sel=new Set(saved&&saved.length? saved : (D.lab? les : (cur&&les.includes(cur)? [cur] : [les[0]])));
   lrnEl().hidden=false; document.body.style.overflow="hidden"; lrnSetup();
 }
-function lrnClose(){ try{ progRender(); }catch(e){} lrnEl().hidden=true; if(V.el.hidden) document.body.style.overflow=""; try{ speechSynthesis.cancel(); }catch(e){} }
+function lrnClose(){ try{ progRender(); rankSync(); }catch(e){} lrnEl().hidden=true; if(V.el.hidden) document.body.style.overflow=""; try{ speechSynthesis.cancel(); }catch(e){} }
 function lrnItems(){ const D=lernData()[LR.id]; return D.it.map((r,i)=>({i,l:r[0],s:D.sec[r[1]],full:r[2],de:r[3],ru:r[4],ex:r[5],red:r[6],dis:r[7],say:r[8]})).filter(x=>x.ru && LR.sel.has(x.l) && (LR.redem||!x.red)); }
 function lrnLab(n){ const D=lernData()[LR.id]; return (D&&D.lab&&D.lab[n])||("L"+n); }
 function lrnHead(sub){
@@ -3354,6 +3372,61 @@ function chB64d(s){ s=s.replace(/-/g,"+").replace(/_/g,"/"); while(s.length%4) s
 function chHash(s){ let h=0x811c9dc5; for(const ch of s){ h=Math.imul(h^ch.codePointAt(0),16777619)>>>0; } return h.toString(36); }
 function chRng(seed){ let a=seed>>>0; return ()=>{ a=(a+0x6D2B79F5)>>>0; let t=a; t=Math.imul(t^(t>>>15),t|1); t^=t+Math.imul(t^(t>>>7),t|61); return ((t^(t>>>14))>>>0)/4294967296; }; }
 function chShuf(a,r){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(r()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+/* ===== Umumiy reyting (ro'yxatdan o'tganlar orasida) — 2026-10-18 =====
+   Har o'quvchi o'z natijasini ochiq MQTT brokerga "retained" xabar qilib yuboradi (ikkala brokerga ham).
+   Faqat ism + familiyaning bosh harfi, so'zlar soni va daraja yuboriladi. Ro'yxat jonli yangilanadi. */
+const RK_NS="otabek-deutsch/rank/v1/";
+const RK={cli:[], list:{}, open:false};
+function rkName(){ const p=(ACC.name||"").trim().split(/\s+/); return (p[0]||"?")+(p[1]?" "+p[1][0].toUpperCase()+".":""); }
+function rkId(){ return ACC.cur? audId("rk:"+ACC.cur) : null; }
+function rankSync(force){
+  if(!ACC.cur||IN_ARTIFACT) return;
+  let c; try{ c=progCount(); }catch(e){ return; }
+  const msg={nm:rkName(), n:c.n, lv:progLv(c.n), t:Date.now()};
+  let last={}; try{ last=JSON.parse(store.get("rank:pub")||"{}")||{}; }catch(e){}
+  if(!force && last.n===msg.n && last.nm===msg.nm && Date.now()-(last.t||0)<864e5) return;
+  chLib(()=>{ if(!window.mqtt) return;
+    CH_BROKERS.forEach(u=>{ try{ const cli=window.mqtt.connect(u,{clientId:"rk_"+Math.random().toString(36).slice(2,9),clean:true,connectTimeout:8000,reconnectPeriod:0});
+      cli.on("connect",()=>{ cli.publish(RK_NS+rkId(), JSON.stringify(msg), {qos:1,retain:true}, ()=>{ store.set("rank:pub",JSON.stringify(msg)); setTimeout(()=>{ try{ cli.end(); }catch(e){} },500); }); });
+      cli.on("error",()=>{}); setTimeout(()=>{ try{ cli.end(true); }catch(e){} },15000);
+    }catch(e){} }); });
+}
+function rkEl(){ let e=document.getElementById("rank"); if(!e){ e=document.createElement("div"); e.id="rank"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
+function rankOpen(){
+  const uz=state.lang!=="ru"; RK.open=true; RK.list={}; RK.net="wait";
+  const el=rkEl(); el.hidden=false; document.body.style.overflow="hidden";
+  el.innerHTML=`<div class="lrn-bar"><button class="btn" data-rk="close" aria-label="✕">✕</button><div class="lrn-tt"><b>🏆 ${uz?"Umumiy reyting":"Общий рейтинг"}</b><small>${uz?"o‘rganilgan so‘zlar bo‘yicha":"по выученным словам"}</small></div></div>
+    <div class="rk-wrap"><div class="rk-head"><h2>${uz?"Kim ko‘proq so‘z biladi?":"Кто знает больше слов?"}</h2><p>${uz?"Saytda ro‘yxatdan o‘tgan o‘quvchilar. Yodlash’da so‘z o‘rgansangiz — o‘rningiz ko‘tariladi.":"Ученики, зарегистрированные на сайте. Учите слова в «Учить» — и поднимайтесь выше."}</p></div>
+    <div id="rk-me"></div><ol class="rk-list" id="rk-list"><li class="rk-empty">${uz?"Yuklanmoqda…":"Загрузка…"}</li></ol><div class="rk-net" id="rk-net"></div></div>`;
+  rankSync(true);
+  chLib(()=>{ if(!window.mqtt||!RK.open){ rkNet("bad"); return; } let okN=0, done=0;
+    CH_BROKERS.forEach(u=>{ try{ const cli=window.mqtt.connect(u,{clientId:"rkv_"+Math.random().toString(36).slice(2,9),clean:true,connectTimeout:8000,reconnectPeriod:4000});
+      RK.cli.push(cli);
+      cli.on("connect",()=>{ okN++; rkNet("ok"); cli.subscribe(RK_NS+"+",{qos:1}); setTimeout(rankDraw,1500); });
+      cli.on("message",(tp,buf)=>{ const id=tp.split("/").pop(); try{ const d=JSON.parse(buf.toString());
+        if(d && typeof d.n==="number" && d.n>=0 && d.n<5000 && typeof d.nm==="string"){ const o=RK.list[id]; if(!o||(d.t||0)>=(o.t||0)) RK.list[id]={nm:d.nm.slice(0,30), n:d.n|0, t:d.t||0}; } }catch(e){} rankDrawSoon(); });
+      cli.on("error",()=>{});
+      setTimeout(()=>{ done++; if(!okN && done>=1 && RK.open) rkNet("bad"); },9000);
+    }catch(e){} }); });
+}
+function rkNet(s){ RK.net=s; const e=document.getElementById("rk-net"), uz=state.lang!=="ru"; if(e) e.textContent= s==="ok"?(uz?"🟢 Jonli — natijalar o‘zi yangilanadi":"🟢 Онлайн — обновляется само"): s==="bad"?(uz?"🔴 Internetga ulanib bo‘lmadi. Keyinroq urinib ko‘ring.":"🔴 Нет соединения. Попробуйте позже."):(uz?"⏳ Ulanmoqda…":"⏳ Подключение…");
+  if(s==="bad"){ const l=document.getElementById("rk-list"); if(l&&!Object.keys(RK.list).length) l.innerHTML=`<li class="rk-empty">—</li>`; } }
+let rkT=null; function rankDrawSoon(){ clearTimeout(rkT); rkT=setTimeout(rankDraw,250); }
+function rankDraw(){
+  const l=document.getElementById("rk-list"); if(!l) return; const uz=state.lang!=="ru", me=rkId();
+  const rows=Object.entries(RK.list).filter(([id,x])=>Date.now()-x.t<180*864e5).sort((a,b)=>b[1].n-a[1].n||a[1].t-b[1].t);
+  if(!rows.length){ l.innerHTML=`<li class="rk-empty">${RK.net==="ok"?(uz?"Hali hech kim yo‘q. Birinchi bo‘ling! 🚀":"Пока никого нет. Будьте первым! 🚀"):(uz?"Yuklanmoqda…":"Загрузка…")}</li>`; return; }
+  let pos=0, prev=-1, myPos=0;
+  l.innerHTML=rows.map(([id,x],k)=>{ if(x.n!==prev){ pos=k+1; prev=x.n; } if(id===me) myPos=pos; const lv=PROG_LV[progLv(x.n)];
+    return `<li class="${id===me?"me":""}"><span class="rk-pos${pos<=3?" m":""}">${pos===1?"🥇":pos===2?"🥈":pos===3?"🥉":pos}</span><span class="rk-nm"><b>${esc(x.nm)}${id===me?(uz?" (siz)":" (вы)"):""}</b><span>${lv.e} ${esc(lv.de)}</span></span><span class="rk-n"><b>${x.n}</b><span>${uz?"so‘z":"слов"}</span></span></li>`; }).join("");
+  const m=document.getElementById("rk-me");
+  if(m) m.innerHTML= !ACC.cur? `<div class="rk-me">${uz?"Reytingga kirish uchun ro‘yxatdan o‘ting (👤 ism + parol).":"Чтобы попасть в рейтинг, зарегистрируйтесь (👤 имя + пароль)."}</div>`
+    : myPos? `<div class="rk-me">${uz?`Siz <b>${myPos}-o‘rindasiz</b> (${rows.length} kishidan).`:`Вы на <b>${myPos}-м месте</b> из ${rows.length}.`}${myPos>1?" "+(uz?`Oldingizdagigacha <b>${Math.max(1,rows[myPos-2][1].n-(RK.list[me]||{n:0}).n+1)}</b> ta so‘z.`:`До следующего места — <b>${Math.max(1,rows[myPos-2][1].n-(RK.list[me]||{n:0}).n+1)}</b> слов.`):" 👑"}</div>` : "";
+}
+function rankClose(){ RK.open=false; RK.cli.forEach(c=>{ try{ c.end(true); }catch(e){} }); RK.cli=[]; rkEl().hidden=true; document.body.style.overflow=""; }
+document.addEventListener("click",e=>{ if(e.target.closest("[data-rank]")){ rankOpen(); return; } if(e.target.closest('[data-rk="close"]')) rankClose(); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && RK.open) rankClose(); });
+setTimeout(()=>{ try{ rankSync(); }catch(e){} },2500);
 function chEl(){ let e=document.getElementById("chal"); if(!e){ e=document.createElement("div"); e.id="chal"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
 function chPool(c){ const D=lernData()[c.l]; if(!D) return []; return D.it.map((r,i)=>({i,l:r[0],de:r[3],ru:r[4],red:r[6],dis:r[7]})).filter(x=>x.ru && !x.red && c.s.includes(x.l)); }
 function chTitle(c){ const m=byId[c.l]; const D=lernData()[c.l]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:"")+" · "+c.s.map(lab).join(", "); }
