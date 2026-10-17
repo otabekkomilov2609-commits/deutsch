@@ -754,6 +754,39 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 @media (max-width:760px){.v-body>.iam{align-self:stretch;width:auto;margin:0!important;padding-right:var(--iam-pr,8px)!important}}
 .iam-on #ia-keys{display:none!important}
 @media (hover:none) and (pointer:coarse){#ia-keys{display:none!important}}
+/* 📱 A variant (bittadan) */
+.ias-on #ia-side{display:none!important}
+.v-body>.ias{align-self:stretch}
+.ias{max-width:560px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:12px;padding:2px 2px 40px}
+.ias-top{display:flex;align-items:center;gap:10px}.ias-top span{font-weight:800;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ias-pb{flex:1;height:10px;border-radius:99px;background:var(--line);overflow:hidden}.ias-pb i{display:block;height:100%;width:0;background:var(--green);border-radius:99px;transition:width .4s}
+.ias-task{font-size:17px;font-weight:700;line-height:1.3}.ias-task span{display:block;font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--blue);margin-bottom:2px}
+.ias-p{margin:0;font-size:16px;color:var(--muted);line-height:1.4}
+.ias-card{background:var(--surface);border-radius:20px;padding:22px 18px;box-shadow:0 2px 6px rgba(23,36,60,.06),0 10px 30px rgba(23,36,60,.08);font-size:24px;line-height:1.55;font-weight:600;color:var(--ink);word-break:break-word}
+.ias-q{font-size:20px}
+.ias-slot{display:inline-block;min-width:60px;text-transform:none;border-top:0!important;text-align:center;padding:0 8px;border-bottom:3px solid var(--line);border-radius:8px 8px 0 0;color:var(--muted)}
+.ias-slot.cur{border-color:var(--blue);background:var(--blue-soft);color:var(--blue)}
+.ias-slot.ok{border-color:var(--green);background:var(--green-soft);color:var(--green)}
+.ias-slot.bad:not(.cur){border-color:#C62828;color:#C62828}
+.ias-chip{display:inline-block;padding:0 10px;border-radius:999px;border:1.5px solid var(--line);font-size:18px}.ias-chip.sel{border-color:var(--blue);background:var(--blue-soft)}
+.ias-in{display:flex;gap:8px}.ias-in[hidden]{display:none}
+.ias .ias-input{position:static!important;flex:1;height:56px!important;width:auto!important;border-radius:16px;border:2px solid var(--blue)!important;background:var(--surface)!important;padding:0 16px;font:700 22px/1 var(--hand),"Patrick Hand",sans-serif!important;color:var(--blue)!important;text-align:left;text-decoration:none!important;box-shadow:none}
+.ias .ias-input:focus{outline:none;box-shadow:0 0 0 3px rgba(31,79,160,.18)}
+.ias .ias-input.bad{border-color:#C62828!important;color:#C62828!important}
+.ias .ias-input.shake{animation:ltshake .45s}
+.ias-go{width:56px;height:56px;border-radius:16px;border:0;background:var(--blue);color:#fff;font-size:24px;font-weight:800;cursor:pointer}
+.ias-opts{display:flex;flex-direction:column;gap:8px}.ias-opts:empty{display:none}
+.ias-opt{border:2px solid var(--line);background:var(--surface);color:var(--ink);border-radius:16px;padding:14px 16px;font:inherit;font-size:18px;text-align:left;cursor:pointer}
+.ias-opt.sel{border-color:var(--blue);background:var(--blue-soft)}.ias-opt.ok{border-color:var(--green);background:var(--green-soft);color:var(--green)}.ias-opt.bad{border-color:#C62828;background:#FDECEC;color:#C62828}
+.ias-fb{min-height:0;border-radius:14px;font-weight:800;font-size:17px}.ias-fb:empty{display:none}
+.ias-fb.ok{background:var(--green-soft);color:var(--green);padding:12px 14px}.ias-fb.bad{background:#FDECEC;color:#C62828;padding:12px 14px}
+.ias-why{font-weight:500;font-size:14px;color:var(--ink);margin-top:6px;display:flex;flex-direction:column;gap:4px}
+.ias-nav{display:flex;justify-content:space-between}.ias-nav button{border:0;background:none;color:var(--muted);font:inherit;font-size:15px;font-weight:700;cursor:pointer;padding:6px 0}
+.ias-dots{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.ias-dots button{display:block;flex:none;margin:0;width:22px;height:22px;border-radius:50%;border:0;background:var(--line);cursor:pointer;padding:0;font-size:11px;font-weight:800;color:#fff}
+.ias-dots button.ok{background:var(--green)}.ias-dots button.bad{background:#C62828}.ias-dots button.cur{box-shadow:0 0 0 2px var(--blue);background:var(--surface)}
+.ias-end .ias-dots button{width:30px;height:30px}
+.ias-sw{display:flex;justify-content:center;margin-top:8px}
+.ias-end{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;background:var(--surface);border-radius:20px;padding:26px 18px;box-shadow:var(--shadow)}.ias-end .big{font-size:52px}.ias-end h3{margin:0;font-size:30px}.ias-end p{margin:0;color:var(--muted)}
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
 .ia-in{position:absolute;box-sizing:border-box;border:0;border-bottom:1.5px solid transparent;background:rgba(31,79,160,.06);color:#1F4FA0;font-family:var(--hand),"Patrick Hand",sans-serif;font-size:calc(var(--s) * 13px);line-height:1;padding:0 2px;margin:0;text-align:center;border-radius:3px 3px 0 0;outline:none;min-width:0}
@@ -2990,7 +3023,7 @@ async function renderPages(m, my){
   const doc=V.doc; if(!doc) return;
   const trp=document.getElementById("tr-panel"); if(trp) trp.remove();
   V.body.innerHTML=""; V.body.classList.toggle("zoomed", V.zoom>1); zoomLabel();
-  V.el.classList.toggle("iam-on", iamUse(m));
+  V.el.classList.toggle("iam-on", iamUse(m)); if(!iamUse(m)) V.el.classList.remove("ias-on");
   if(iamUse(m)){ await iamRender(m,my); if(trp && my===V.token) V.body.appendChild(trp); return; }
   if(IA.on && IA.id===m.id && IAM[m.id] && window.innerWidth<760) V.body.insertAdjacentHTML("afterbegin",`<div class="iam-bar"><button type="button" class="iam-sw" data-iam="mob">📱 ${state.lang==="ru"?"Вид для телефона":"Telefon ko‘rinishi"}</button></div>`);
   const base = Math.min(V.body.clientWidth-24, 900), w = Math.round(base*V.zoom);
@@ -3568,18 +3601,113 @@ function iamRenderHTML(id){
   return h+`</div>`;
 }
 async function iamRender(m,my){
-  V.body.innerHTML=iamRenderHTML(m.id); iaPaint();
-  const cv=[...V.body.querySelectorAll(".iam-img")]; if(!cv.length||!V.doc) return;
-  const cache={}, d=IADATA[m.id], dpr=Math.min(window.devicePixelRatio||1,2), cw=Math.min(V.body.clientWidth-28,700);
+  if(IAS_SHEETS.has(m.id)){ IAS.my=my; iasRender(m); return; }
+  V.el.classList.remove("ias-on");
+  V.body.innerHTML=iamRenderHTML(m.id); iaPaint(); await iamStrips(my);
+}
+const IAM_PG={};
+async function iamStrips(my){
+  const m=V.cur; if(!m) return;
+  const cv=[...V.body.querySelectorAll(".iam-img")].filter(c=>!c.dataset.done); if(!cv.length||!V.doc) return;
+  const cache=IAM_PG[m.id]||(IAM_PG[m.id]={}), d=IADATA[m.id], dpr=Math.min(window.devicePixelRatio||1,2), cw=Math.min(V.body.clientWidth-28,700);
   for(const c of cv){ const p=+c.dataset.p, y0=+c.dataset.y0, y1=+c.dataset.y1;
     const pw=(d&&d.pages&&d.pages[p])?d.pages[p][0]:595, x0=+c.dataset.x0||0, x1=Math.min(pw,+c.dataset.x1||pw), zw=Math.max(120,x1-x0), zoom=pw/zw;
     if(!cache[p]){ const page=await V.doc.getPage(p+1); if(my!==V.token) return; const vp0=page.getViewport({scale:1}), sc=Math.min(4,cw*dpr*2.2/vp0.width), vp=page.getViewport({scale:sc});
       const off=document.createElement("canvas"); off.width=Math.floor(vp.width); off.height=Math.floor(vp.height); await page.render({canvasContext:off.getContext("2d"),viewport:vp}).promise; if(my!==V.token) return; cache[p]={off,sc}; }
     const {off,sc}=cache[p], sx=Math.round(x0*sc), sw=Math.round(Math.min(zw,pw-x0)*sc), hh=Math.max(10,Math.round((y1-y0)*sc));
     c.width=sw; c.height=hh; c.style.width=Math.min(cw,Math.round(cw*Math.min(1,zoom/1.2)))+"px"; c.style.maxWidth="100%";
-    c.getContext("2d").drawImage(off,sx,Math.round(y0*sc),sw,hh,0,0,sw,hh); }
+    c.getContext("2d").drawImage(off,sx,Math.round(y0*sc),sw,hh,0,0,sw,hh); c.dataset.done="1"; }
 }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-iam]"); if(!b||!V.cur) return; store.set("iam:mode",b.dataset.iam); renderPages(V.cur,++V.token); });
+/* 📱 A variant — «bittadan» (Duolingo uslubi): har bir katak alohida ekranda. Sinov: bitta varaqda — 2026-10-18 */
+const IAS_SHEETS=new Set(["A1-a11-1-Arbeitsblatt-Konjugation-W-Fragen-aus"]);
+const IAS={};
+function iasSteps(id){ const B=IAM[id]||[], S=[]; let h="", p="";
+  B.forEach((b,bi)=>{ if(b.h!=null){ h=b.h; p=""; return; } if(b.p!=null){ p=b.p; return; }
+    if(b.o!=null){ S.push({i:b.o,b,h,p,kind:"o"}); p=""; return; }
+    const seen=new Set(); b.s.forEach(x=>{ if(typeof x!=="string"){ const i=x.g!=null?x.g:x.c; if(!seen.has(i)){ seen.add(i); S.push({i,b,h,p,kind:x.g!=null?"g":"c"}); } } }); p=""; });
+  return S; }
+function iasState(i){ const it=iaItems()[i]; if(!it) return "none"; const v=IA.vals[i];
+  if(it.t==="c"){ if(v==null) return IAS.tried[i]?"bad":"none"; return v===it.ans?"ok":(IAS.tried[i]?"bad":"none"); }
+  if(!String(v||"").trim()) return IAS.tried[i]?"bad":"none"; const s=iaState(i); return s==="ok"||s==="chk"?"ok":(IAS.tried[i]?"bad":"none"); }
+function iasRender(m){
+  Object.assign(IAS,{id:m.id,steps:iasSteps(m.id),k:0,tried:IAS.id===m.id?IAS.tried:{}}); if(IAS.id!==m.id) IAS.tried={};
+  const first=IAS.steps.findIndex(s=>iasState(s.i)!=="ok"); IAS.k=first<0?0:first;
+  V.el.classList.add("ias-on");
+  V.body.innerHTML=`<div class="ias"><div class="ias-top"><div class="ias-pb"><i id="ias-pb"></i></div><span id="ias-cnt"></span></div>
+    <div class="ias-task" id="ias-task"></div><p class="ias-p" id="ias-p"></p>
+    <div class="ias-card" id="ias-card"></div>
+    <div class="ias-in" id="ias-inw"><input type="text" class="ia-in ias-input" id="ias-in" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="done"><button type="button" class="ias-go" id="ias-go" aria-label="✓">✓</button></div>
+    <div class="ias-opts" id="ias-opts"></div>
+    <div class="ias-fb" id="ias-fb"></div>
+    <div class="ias-nav"><button type="button" data-ias="prev">← ${state.lang==="ru"?"Назад":"Oldingi"}</button><button type="button" data-ias="skip">${state.lang==="ru"?"Пропустить":"O‘tkazib yuborish"} →</button></div>
+    <div class="ias-dots" id="ias-dots"></div>
+    <div class="ias-sw"><button type="button" class="iam-sw" data-iam="page">📄 ${state.lang==="ru"?"Показать весь лист":"To‘liq varaqni ko‘rish"}</button></div></div>`;
+  const inp=document.getElementById("ias-in");
+  inp.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); e.stopPropagation(); iasCheck(); } });
+  inp.addEventListener("input",()=>{ const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) s.innerHTML=inp.value.trim()?esc(inp.value):"&nbsp;?&nbsp;"; inp.classList.remove("bad"); });
+  iasShow(true);
+}
+function iasSlot(st,cur){ const it=iaItems()[st.i], v=IA.vals[st.i];
+  if(st.kind==="c"){ return null; }
+  const s=iasState(st.i), txt=String(v||"").trim();
+  return `<span class="ias-slot ${cur?"cur":""} ${s}">${cur&&s!=="ok"?"&nbsp;?&nbsp;":esc(txt||"…")}</span>`; }
+function iasShow(focus){
+  const st=IAS.steps[IAS.k]; if(!st){ iasEnd(); return; } const n=IAS.steps.length, it=iaItems()[st.i], uz=state.lang!=="ru";
+  const okN=IAS.steps.filter(s=>iasState(s.i)==="ok").length;
+  document.getElementById("ias-pb").style.width=(okN/n*100)+"%"; document.getElementById("ias-cnt").textContent=`${IAS.k+1} / ${n}`;
+  document.getElementById("ias-task").innerHTML=st.h?esc(st.h).replace(/^(\d{1,2}|[A-H])\s*([—–-]\s*)?/,(m,x)=>`<span>${uz?"Mashq":"Задание"} ${x}</span>`):"";
+  const pe=document.getElementById("ias-p"); const nw= st.kind==="o" || !st.b.s.some(x=>typeof x==="string"&&/[A-Za-zÄÖÜäöüß]{2}/.test(x)); pe.textContent=nw?"":(st.p||""); pe.hidden=nw||!st.p;
+  let html="";
+  const noWords= st.kind!=="o" && !st.b.s.some(x=>typeof x==="string"&&/[A-Za-zÄÖÜäöüß]{2}/.test(x));
+  if(st.kind==="o"){ html=`<div class="ias-q">${esc(st.p||"")}</div>`; }
+  else if(noWords){ html=`<div class="ias-q">${esc(st.p||"")}</div>`+(iaItems()[st.i].long?"":`<div style="margin-top:10px">${iasSlot({i:st.i,kind:"g"},true)}</div>`); }
+  else html=st.b.s.map(x=>{ if(typeof x==="string") return esc(x); const i=x.g!=null?x.g:x.c;
+    if(x.g!=null) return iasSlot({i,kind:"g"}, i===st.i);
+    return `<span class="ias-chip ${IA.vals[i]===x.k?"sel":""}">${esc(x.t)}</span>`; }).join("");
+  document.getElementById("ias-card").innerHTML=(st.b.img?`<canvas class="iam-img" data-p="${st.b.img[0]}" data-y0="${st.b.img[1]}" data-y1="${st.b.img[2]}" data-x0="${st.b.img[3]||0}" data-x1="${st.b.img[4]||0}"></canvas>`:"")+`<div>${html}</div>`;
+  if(st.b.img) iamStrips(IAS.my||V.token);
+  const inw=document.getElementById("ias-inw"), opts=document.getElementById("ias-opts"), inp=document.getElementById("ias-in");
+  if(st.kind==="g"){ inw.hidden=false; opts.innerHTML=""; inp.dataset.i=st.i; inp.value=IA.vals[st.i]||""; inp.classList.remove("ok","bad","shake");
+    if(it.long) inp.placeholder=uz?"Butun gapni yozing…":"Напишите всё предложение…"; else inp.placeholder="";
+    if(focus) setTimeout(()=>{ inp.focus({preventScroll:true}); try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(e){} },30); }
+  else { inw.hidden=true;
+    const list= st.kind==="o"? st.b.opts : st.b.s.filter(x=>typeof x!=="string"&&x.c===st.i).map(x=>[x.k,x.t]);
+    opts.innerHTML=list.map(([k,t])=>`<button type="button" class="ias-opt ${IA.vals[st.i]===k?(iasState(st.i)==="ok"?"ok":IAS.tried[st.i]?"bad":"sel"):""}" data-iaso="${k}">${esc(t||"abcdefgh"[k])}</button>`).join(""); }
+  const fb=document.getElementById("ias-fb"); const s=iasState(st.i);
+  fb.className="ias-fb "+(s==="ok"?"ok":""); fb.innerHTML= s==="ok"? `✓ ${uz?"To‘g‘ri!":"Верно!"}` : "";
+  iasDots();
+}
+function iasDots(){ const st=IAS.steps[IAS.k]; const el=document.getElementById("ias-dots"); if(!el||!st) return;
+  el.innerHTML=IAS.steps.map((x,k)=>({x,k})).filter(o=>o.x.h===st.h).map(({x,k})=>`<button type="button" class="${iasState(x.i)} ${k===IAS.k?"cur":""}" data-iasd="${k}" aria-label="${k+1}"></button>`).join(""); }
+function iasCheck(){ const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g") return; const inp=document.getElementById("ias-in");
+  if(!inp.value.trim()){ inp.focus(); return; }
+  IA.vals[st.i]=inp.value; iaSave(); IAS.tried[st.i]=true; iasAfter(st); }
+function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document.getElementById("ias-fb");
+  if(s==="ok"){ iasShow(false); fb.className="ias-fb ok"; fb.innerHTML=`✓ ${uz?"To‘g‘ri!":"Верно!"}`; setTimeout(()=>{ if(IAS.steps[IAS.k]===st) iasNext(true); },750); return; }
+  const why=iaWhyText(st.i);
+  fb.className="ias-fb bad"; fb.innerHTML=`✗ ${uz?"Yana urinib ko‘ring":"Попробуйте ещё раз"}${why?`<div class="ias-why">${why}</div>`:""}`;
+  const inp=document.getElementById("ias-in"); if(st.kind==="g"){ inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); inp.select(); }
+  else iasShow(false), (fb.className="ias-fb bad", fb.innerHTML=`✗ ${uz?"Yana urinib ko‘ring":"Попробуйте ещё раз"}${why?`<div class="ias-why">${why}</div>`:""}`);
+  iasDots(); }
+function iasNext(auto){ const n=IAS.steps.length; for(let d=1; d<=n; d++){ const k=(IAS.k+d)%n; if(iasState(IAS.steps[k].i)!=="ok"||!auto){ if(auto&&k<=IAS.k&&IAS.steps.slice(IAS.k+1).every(s=>iasState(s.i)==="ok")&&IAS.steps.every(s=>iasState(s.i)==="ok")) break; IAS.k=k; iasShow(true); return; } }
+  iasEnd(); }
+function iasEnd(){ const n=IAS.steps.length, ok=IAS.steps.filter(s=>iasState(s.i)==="ok").length, uz=state.lang!=="ru";
+  IA.checked=true; iaScore();
+  const left=IAS.steps.map((s,k)=>({s,k})).filter(o=>iasState(o.s.i)!=="ok");
+  V.body.querySelector(".ias").innerHTML=`<div class="ias-end"><div class="big">${ok===n?"🏆":"💪"}</div><h3>${ok} / ${n}</h3><p>${ok===n?(uz?"Hammasi to‘g‘ri! Zo‘r!":"Всё верно! Отлично!"):(uz?"Qolganlarini yana urinib ko‘ring:":"Попробуйте остальные ещё раз:")}</p>
+    ${left.length?`<div class="ias-dots">${left.map(o=>`<button type="button" class="${iasState(o.s.i)}" data-iasd="${o.k}">${o.k+1}</button>`).join("")}</div>`:""}
+    <button type="button" class="btn primary" data-ias="again">${uz?"Qaytadan boshlash":"Начать заново"}</button>
+    <button type="button" class="iam-sw" data-iam="page">📄 ${uz?"To‘liq varaqni ko‘rish":"Показать весь лист"}</button></div>`; }
+document.addEventListener("click",e=>{ if(!V.body.querySelector(".ias")) return;
+  const o=e.target.closest("[data-iaso]"); if(o){ const st=IAS.steps[IAS.k]; IA.vals[st.i]=+o.dataset.iaso; iaSave(); IAS.tried[st.i]=true; iasAfter(st); return; }
+  const d=e.target.closest("[data-iasd]"); if(d){ if(!document.getElementById("ias-card")){ iasRender(V.cur); } IAS.k=+d.dataset.iasd; iasShow(true); return; }
+  if(e.target.closest("#ias-go")){ iasCheck(); return; }
+  const a=e.target.closest("[data-ias]"); if(!a) return; const k=a.dataset.ias;
+  if(k==="prev"){ IAS.k=(IAS.k-1+IAS.steps.length)%IAS.steps.length; iasShow(true); }
+  else if(k==="skip"){ IAS.k=(IAS.k+1)%IAS.steps.length; iasShow(true); }
+  else if(k==="again"){ IAS.steps.forEach(s=>{ delete IA.vals[s.i]; }); IAS.tried={}; iaSave(); IA.checked=false; iasRender(V.cur); }
+});
 function iaFit(inp){
   if(inp.classList.contains("iam-in")){ if(!inp.classList.contains("long")) inp.style.width=Math.max(iamW(iaItems()[+inp.dataset.i]||{}),Math.min(26,inp.value.length*0.62+1.6))+"em"; return; }
   inp.style.fontSize=""; if(!inp.value) return;
