@@ -3653,7 +3653,7 @@ function iasSteps(id){ const B=IAM[id]||[], S=[]; let h="", p="", bank="";
   return S; }
 function iasState(i){ const it=iaItems()[i]; if(!it) return "none"; const v=IA.vals[i];
   if(it.t==="c"){ if(v==null) return IAS.tried[i]?"bad":"none"; return v===it.ans?"ok":(IAS.tried[i]?"bad":"none"); }
-  if(!String(v||"").trim()) return IAS.tried[i]?"bad":"none"; const s=iaState(i); return s==="ok"||s==="chk"?"ok":(IAS.tried[i]?"bad":"none"); }
+  if(!String(v||"").trim()) return IAS.tried[i]?"bad":"none"; const s=iaState(i); return s==="ok"||(s==="chk"&&it.free)?"ok":(IAS.tried[i]?"bad":"none"); } /* uzun gap ham faqat to'g'ri bo'lsa "ok" */
 function iasRender(m){
   Object.assign(IAS,{id:m.id,steps:iasSteps(m.id),k:0,tried:IAS.id===m.id?IAS.tried:{},fails:IAS.id===m.id?(IAS.fails||{}):{}}); if(IAS.id!==m.id){ IAS.tried={}; IAS.fails={}; }
   const first=IAS.steps.findIndex(s=>iasState(s.i)!=="ok"); IAS.k=first<0?0:first;
