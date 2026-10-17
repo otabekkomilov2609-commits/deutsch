@@ -237,6 +237,30 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .acc-note{font-size:12.5px;color:var(--muted);line-height:1.35;margin:0}
 .acc-st{font-size:13.5px;min-height:1px}.acc-st.err{color:#C62828}
 .acc-who{font-size:16px;margin:0}.acc-who b{color:var(--blue)}
+/* challenge */
+.lrn-mode.chal{grid-column:1/-1;border-color:#C2410C;background:#FFF1E8}.lrn-mode.chal b{color:#C2410C}
+.ch-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ch-time{font:700 26px/1 var(--hand,inherit);min-width:56px;text-align:center;color:#C2410C}
+.ch-score{font-size:15px;font-weight:700}
+.ch-rank{margin-left:auto;font-size:14px;font-weight:700;background:var(--blue-soft);color:var(--blue);border-radius:99px;padding:5px 12px}
+.ch-bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden}.ch-bar i{display:block;height:100%;background:#C2410C;transition:width .25s linear}
+.ch-q{font-size:24px;font-weight:700;line-height:1.25;margin:4px 0}
+.ch-lb{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none}
+.ch-lb li{display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-size:15px}
+.ch-lb li.me{border-color:var(--blue);background:var(--blue-soft)}
+.ch-lb .pl{width:26px;text-align:center;font-weight:700;color:var(--muted)}
+.ch-lb .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ch-lb .sc{font-weight:700}.ch-lb .lv{font-size:11px;color:#C2410C;font-weight:700;margin-left:4px}
+.ch-mini li{padding:5px 10px;font-size:13.5px}
+.ch-net{font-size:12.5px;color:var(--muted)}
+.ch-cd{font-size:84px;font-weight:800;text-align:center;color:#C2410C;padding:30px 0}
+.ch-link{font-size:13px;word-break:break-all;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:8px 10px;color:var(--muted)}
+.ch-btns{display:flex;flex-wrap:wrap;gap:8px}
+.ch-in{font:inherit;font-size:16px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+.ch-big{font-size:15px;line-height:1.45;margin:0}
+.ch-flash-ok{animation:chok .35s}.ch-flash-bad{animation:chbad .35s}
+@keyframes chok{0%{box-shadow:0 0 0 0 rgba(22,163,74,.6)}100%{box-shadow:0 0 0 14px rgba(22,163,74,0)}}
+@keyframes chbad{0%,100%{transform:none}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
 /* viewer */
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
@@ -2652,6 +2676,7 @@ function lrnSetup(){
     <div class="lrn-modes">
       <button type="button" class="lrn-mode" data-l="learn"${its.length?"":" disabled"}><b>${esc(lt("learn"))}</b><span>${esc(lt("learnD"))}</span></button>
       <button type="button" class="lrn-mode" data-l="cards"${its.length?"":" disabled"}><b>${esc(lt("cards"))}</b><span>${esc(lt("cardsD"))}</span></button>
+      <button type="button" class="lrn-mode chal" data-l="chal"${its.filter(x=>!x.red).length>=4?"":" disabled"}><b>${esc(ct("mode"))}</b><span>${esc(ct("modeD"))}</span></button>
     </div>
     ${done?`<button type="button" class="lrn-link lrn-reset" data-l="reset">${esc(lt("reset"))}</button>`:""}
   </div></div>`;
@@ -3135,7 +3160,196 @@ function accLern(){
 }
 const ACC_OK=(()=>{ try{ localStorage.setItem("acc:t","1"); localStorage.removeItem("acc:t"); return true; }catch(e){ return false; } })();
 accChip();
-if(!ACC.cur && ACC_OK) accLogin();
+if(!ACC.cur && ACC_OK && !new URLSearchParams(location.search).get("ch")) accLogin();
+/* ===== ⚡ Challenge (Kahoot challenge'ga o'xshash) — 2026-10-17 =====
+   Havola ?ch=<kod>: ro'yxat + Lektionlar + seed. Hamma bir xil savollarni oladi.
+   Natijalar jonli: ochiq MQTT broker (WebSocket), har o'yinchi o'z natijasini "retained" xabar qilib yuboradi. */
+const CH_BROKERS=(()=>{ try{ const b=localStorage.getItem("chBroker"); if(b) return [b]; }catch(e){} return ["wss://broker.hivemq.com:8884/mqtt","wss://broker.emqx.io:8084/mqtt"]; })();
+const CH_SITE="https://otabekkomilov2609-commits.github.io/deutsch/";
+const CH_NS="otabek-deutsch/ch1/";
+const CH_SEC=(()=>{ try{ return +localStorage.getItem("chSec")||60; }catch(e){ return 60; } })();
+const CHT={
+ uz:{mode:"⚡ Challenge", modeD:"Do‘stlaringizni chaqiring: 1 daqiqada kim ko‘p so‘z topadi?", title:"⚡ Challenge", made:"Challenge tayyor!", share:"Havolani guruhga tashlang — kim ko‘p topsa, o‘sha yutadi.",
+  tg:"📤 Telegramga yuborish", copy:"📋 Nusxalash", copied:"✓ Nusxalandi", playToo:"▶ O‘zim ham o‘ynayman", from:n=>`${n} sizni chaqirdi!`, rules:"1 daqiqa · har to‘g‘ri javob = 1 ball · eng ko‘p topgan yutadi",
+  name:"Ismingiz", namePh:"Ism va familiya", start:"Boshlash", errName:"Ismingizni yozing", board:"Natijalar", empty:"Hali hech kim o‘ynamadi — birinchi bo‘ling!",
+  you:"siz", live:"o‘ynayapti", place:(a,b)=>`${a}-o‘rin / ${b}`, score:n=>`${n} ball`, done:"Vaqt tugadi!", yourRes:(s,p,n)=>`Natijangiz: ${s} ball · ${p}-o‘rin (${n} kishidan)`,
+  played:"Siz bu challenge’da o‘ynab bo‘lgansiz.", invite:"📤 Boshqalarni chaqirish", newCh:"Yangi challenge", close:"Yopish",
+  netOk:"🟢 Jonli natijalar ulandi", netWait:"⏳ Ulanmoqda…", netBad:"🔴 Internetga ulanib bo‘lmadi — natijangiz boshqalarga ko‘rinmaydi",
+  tgText:(n,t)=>`⚡ ${n} sizni Deutsch challenge’ga chaqiryapti: ${t}. 1 daqiqada kim ko‘p so‘z topadi?`, choose:"To‘g‘ri tarjimani tanlang", bad:"Havola noto‘g‘ri yoki eskirgan.", words:n=>`${n} ta so‘z`},
+ ru:{mode:"⚡ Челлендж", modeD:"Вызовите друзей: кто за 1 минуту найдёт больше слов?", title:"⚡ Челлендж", made:"Челлендж готов!", share:"Отправьте ссылку в группу — кто наберёт больше, тот победит.",
+  tg:"📤 Отправить в Telegram", copy:"📋 Копировать", copied:"✓ Скопировано", playToo:"▶ Сыграть самому", from:n=>`${n} бросает вам вызов!`, rules:"1 минута · каждый верный ответ = 1 балл · побеждает тот, кто наберёт больше",
+  name:"Ваше имя", namePh:"Имя и фамилия", start:"Начать", errName:"Напишите имя", board:"Результаты", empty:"Пока никто не играл — будьте первым!",
+  you:"вы", live:"играет", place:(a,b)=>`${a}-е место / ${b}`, score:n=>`${n} б.`, done:"Время вышло!", yourRes:(s,p,n)=>`Ваш результат: ${s} б. · ${p}-е место (из ${n})`,
+  played:"Вы уже сыграли в этот челлендж.", invite:"📤 Позвать других", newCh:"Новый челлендж", close:"Закрыть",
+  netOk:"🟢 Живые результаты подключены", netWait:"⏳ Подключение…", netBad:"🔴 Нет связи — ваш результат не увидят другие",
+  tgText:(n,t)=>`⚡ ${n} бросает вызов по немецкому: ${t}. Кто за 1 минуту найдёт больше слов?`, choose:"Выберите правильный вариант", bad:"Ссылка неверная или устарела.", words:n=>`${n} слов`}
+};
+const ct=k=>CHT[state.lang][k];
+const CHS={c:null,id:"",me:"",name:"",players:{},cli:null,net:"wait",phase:"",qs:[],qi:0,score:0,ans:0,t0:0,tm:null,pubT:0};
+function chB64e(s){ return btoa(unescape(encodeURIComponent(s))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,""); }
+function chB64d(s){ s=s.replace(/-/g,"+").replace(/_/g,"/"); while(s.length%4) s+="="; return decodeURIComponent(escape(atob(s))); }
+function chHash(s){ let h=0x811c9dc5; for(const ch of s){ h=Math.imul(h^ch.codePointAt(0),16777619)>>>0; } return h.toString(36); }
+function chRng(seed){ let a=seed>>>0; return ()=>{ a=(a+0x6D2B79F5)>>>0; let t=a; t=Math.imul(t^(t>>>15),t|1); t^=t+Math.imul(t^(t>>>7),t|61); return ((t^(t>>>14))>>>0)/4294967296; }; }
+function chShuf(a,r){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(r()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function chEl(){ let e=document.getElementById("chal"); if(!e){ e=document.createElement("div"); e.id="chal"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
+function chPool(c){ const D=lernData()[c.l]; if(!D) return []; return D.it.map((r,i)=>({i,l:r[0],de:r[3],ru:r[4],red:r[6],dis:r[7]})).filter(x=>x.ru && !x.red && c.s.includes(x.l)); }
+function chTitle(c){ const m=byId[c.l]; const D=lernData()[c.l]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:"")+" · "+c.s.map(lab).join(", "); }
+function chQuestions(c){
+  const pool=chPool(c); if(pool.length<4) return []; const r=chRng(c.r); const qs=[];
+  while(qs.length<160){ for(const x of chShuf(pool.slice(),r)){
+    let opts;
+    if(x.dis&&x.dis.length>=3) opts=[x.de,...x.dis.slice(0,3)];
+    else { const art=/^(der|die|das) /.test(x.de); let cand=pool.filter(y=>y.de!==x.de && /^(der|die|das) /.test(y.de)===art); if(cand.length<3) cand=pool.filter(y=>y.de!==x.de);
+      const seen=new Set([x.de]); opts=[x.de]; for(const y of chShuf(cand.slice(),r)){ if(!seen.has(y.de)){ seen.add(y.de); opts.push(y.de); } if(opts.length===4) break; } }
+    qs.push({q:x.ru, a:x.de, o:chShuf(opts,r)}); if(qs.length>=160) break; } }
+  return qs;
+}
+function chLink(code){ return (/github\.io$/.test(location.hostname)||!/claude/.test(location.hostname)&&location.protocol!=="file:" ? location.origin+location.pathname : CH_SITE)+"?ch="+code; }
+function chLib(cb){ if(window.mqtt) return cb(); let s=document.getElementById("mqtt-js"); if(!s){ s=document.createElement("script"); s.id="mqtt-js"; s.src="files/js/mqtt.min.js"; s.async=true; document.head.appendChild(s); } s.addEventListener("load",()=>cb()); s.addEventListener("error",()=>chSetNet("bad")); }
+/* --- yaratish (Yodlash oynasidan) --- */
+function chCreate(){
+  if(!LR.id||!LR.sel.size) return;
+  const c={v:1,l:LR.id,s:[...LR.sel].sort((a,b)=>a-b),r:Math.floor(Math.random()*2147483647),c:(ACC.name||"").split(" ")[0]||"",t:Date.now()};
+  const code=chB64e(JSON.stringify(c)), url=chLink(code), title=chTitle(c);
+  const txt=ct("tgText")(c.c||"⚡",title);
+  lrnEl().querySelector(".lrn-body").innerHTML=`<div class="lrn-card"><h3>${esc(ct("made"))}</h3><p class="ch-big">${esc(ct("share"))}</p>
+    <div class="ch-link">${esc(url)}</div><p class="ch-net">${esc(title)}</p>
+    <div class="ch-btns"><a class="btn primary" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(txt)}">${esc(ct("tg"))}</a>
+    <button type="button" class="btn" data-ch="copy" data-url="${esc(url)}">${esc(ct("copy"))}</button>
+    <button type="button" class="btn" data-ch="play" data-code="${esc(code)}">${esc(ct("playToo"))}</button></div>
+    <button type="button" class="lrn-link" data-l="back">← ${esc(lt("back"))}</button></div>`;
+}
+/* --- jonli natijalar --- */
+function chConnect(){
+  if(CHS.cli) return; if(!window.mqtt){ chLib(()=>{ if(window.mqtt) chConnect(); }); return; }
+  let bi=0;
+  const go=()=>{ const cli=window.mqtt.connect(CH_BROKERS[bi],{clientId:"od_"+CHS.me+"_"+Math.random().toString(36).slice(2,7),clean:true,connectTimeout:8000,reconnectPeriod:3000,keepalive:30});
+    CHS.cli=cli; let ok=false;
+    cli.on("connect",()=>{ ok=true; chSetNet("ok"); cli.subscribe(CH_NS+CHS.id+"/p/+",{qos:1}); chPublish(true); });
+    cli.on("message",(tp,buf)=>{ const pid=tp.split("/").pop(); try{ const d=JSON.parse(buf.toString()); if(d&&typeof d.s==="number") CHS.players[pid]={n:String(d.n||"?").slice(0,40),s:d.s|0,st:d.st,t:d.t||0}; }catch(e){} chRenderBoard(); });
+    cli.on("offline",()=>chSetNet("wait"));
+    cli.on("error",()=>{});
+    setTimeout(()=>{ if(!ok && bi+1<CH_BROKERS.length){ try{ cli.end(true); }catch(e){} bi++; CHS.cli=null; go(); } else if(!ok) chSetNet("bad"); },9000);
+  };
+  go();
+}
+function chPublish(force){
+  const cli=CHS.cli; if(!cli||!cli.connected||!CHS.name||!(CHS.phase==="play"||CHS.phase==="end")) return;
+  const now=Date.now(); if(!force && now-CHS.pubT<700){ clearTimeout(CHS.pubTm); CHS.pubTm=setTimeout(()=>chPublish(true),700); return; }
+  CHS.pubT=now;
+  const d={n:CHS.name,s:CHS.score,a:CHS.ans,st:CHS.phase==="end"?"done":"live",t:CHS.phase==="end"?CHS.tEnd:now};
+  cli.publish(CH_NS+CHS.id+"/p/"+CHS.me,JSON.stringify(d),{qos:1,retain:true});
+}
+function chSetNet(s){ CHS.net=s; const e=document.getElementById("ch-net"); if(e) e.textContent=ct(s==="ok"?"netOk":s==="bad"?"netBad":"netWait"); }
+function chRanked(){
+  const P=Object.assign({},CHS.players);
+  if(CHS.name&&(CHS.phase==="play"||CHS.phase==="end")) P[CHS.me]={n:CHS.name,s:CHS.score,st:CHS.phase==="end"?"done":"live",t:CHS.phase==="end"?CHS.tEnd:Date.now()};
+  return Object.entries(P).map(([id,p])=>({id,...p})).sort((a,b)=>b.s-a.s||(a.t||0)-(b.t||0));
+}
+function chBoardHTML(mini){
+  const L=chRanked(); if(!L.length) return `<p class="ch-net">${esc(ct("empty"))}</p>`;
+  const lim=mini?5:50; let rows=L.slice(0,lim); const mi=L.findIndex(p=>p.id===CHS.me); if(mi>=lim) rows=[...rows.slice(0,lim-1),L[mi]];
+  const medal=k=>k===0?"🥇":k===1?"🥈":k===2?"🥉":String(k+1);
+  return `<ol class="ch-lb${mini?" ch-mini":""}">`+rows.map(p=>{ const k=L.indexOf(p);
+    return `<li class="${p.id===CHS.me?"me":""}"><span class="pl">${medal(k)}</span><span class="nm">${esc(p.n)}${p.id===CHS.me?` (${esc(ct("you"))})`:""}${p.st==="live"&&p.id!==CHS.me?`<span class="lv">● ${esc(ct("live"))}</span>`:""}</span><span class="sc">${p.s}</span></li>`; }).join("")+`</ol>`;
+}
+function chRenderBoard(){
+  const b=document.getElementById("ch-board"); if(b) b.innerHTML=chBoardHTML(CHS.phase==="play");
+  const r=document.getElementById("ch-rank"); if(r){ const L=chRanked(); const k=L.findIndex(p=>p.id===CHS.me); r.textContent="🏅 "+ct("place")(k+1,L.length); }
+}
+/* --- o'yin --- */
+function chHead(sub){ return `<div class="lrn-bar"><button class="btn" data-ch="close" aria-label="✕">✕</button><div class="lrn-tt"><b>${esc(ct("title"))}</b><small>${esc(chTitle(CHS.c))}</small></div>${sub||""}</div>`; }
+function chOpen(code){
+  let c=null; try{ c=JSON.parse(chB64d(code)); }catch(e){}
+  const el=chEl(); el.hidden=false; document.body.style.overflow="hidden";
+  if(!c||!lernData()[c.l]||chQuestions(c).length===0){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-ch="close">✕</button><div class="lrn-tt"><b>${esc(ct("title"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(ct("bad"))}</p></div></div>`; return; }
+  Object.assign(CHS,{c,id:chHash(code),qs:chQuestions(c),players:{},phase:"lobby",score:0,ans:0,qi:0});
+  let me=store.get("chme"); if(!me){ me=Math.random().toString(36).slice(2,10); store.set("chme",me); } CHS.me=me;
+  const prev=store.get("chdone:"+CHS.id); if(prev){ try{ const p=JSON.parse(prev); Object.assign(CHS,{name:p.n,score:p.s,ans:p.a||0,tEnd:p.t,phase:"end"}); }catch(e){} }
+  CHS.name=CHS.name||store.get("chname")||ACC.name||"";
+  chConnect(); CHS.phase==="end"? chEnd(true) : chLobby();
+}
+function chLobby(){
+  const c=CHS.c, n=chPool(c).length;
+  chEl().innerHTML=chHead()+`<div class="lrn-body"><div class="lrn-card">
+    ${c.c?`<h3>${esc(ct("from")(c.c))}</h3>`:""}<p class="ch-big"><b>${esc(chTitle(c))}</b> · ${esc(ct("words")(n))}</p><p class="ch-big">⏱ ${esc(ct("rules"))}</p>
+    <label class="acc-lb">${esc(ct("name"))}<input class="ch-in" id="ch-name" maxlength="30" placeholder="${esc(ct("namePh"))}" value="${esc(CHS.name)}"></label>
+    <div class="acc-st err" id="ch-err"></div>
+    <button type="button" class="btn primary" data-ch="start">${esc(ct("start"))} →</button>
+    <p class="ch-net" id="ch-net"></p></div>
+    <div class="lrn-card"><h3>${esc(ct("board"))}</h3><div id="ch-board"></div></div></div>`;
+  chSetNet(CHS.net); chRenderBoard();
+}
+function chStart(){
+  const inp=document.getElementById("ch-name"), nm=(inp.value||"").replace(/\s+/g," ").trim();
+  if(nm.length<2){ document.getElementById("ch-err").textContent=ct("errName"); inp.focus(); return; }
+  CHS.name=nm; store.set("chname",nm); CHS.phase="count"; let k=3;
+  const tick=()=>{ if(k===0){ chPlay(); return; } chEl().innerHTML=chHead()+`<div class="lrn-body"><div class="ch-cd">${k}</div></div>`; k--; setTimeout(tick,800); };
+  tick();
+}
+function chPlay(){
+  Object.assign(CHS,{phase:"play",score:0,ans:0,qi:0,t0:performance.now()});
+  chEl().innerHTML=chHead(`<span class="ch-time" id="ch-time">${CH_SEC}</span>`)+`<div class="lrn-body">
+    <div class="ch-bar"><i id="ch-tb" style="width:100%"></i></div>
+    <div class="ch-top"><span class="ch-score" id="ch-score">${esc(ct("score")(0))}</span><span class="ch-rank" id="ch-rank"></span></div>
+    <div class="lrn-card" id="ch-card"></div><div id="ch-board"></div><p class="ch-net" id="ch-net"></p></div>`;
+  chSetNet(CHS.net); chQ(); chPublish(true); chRenderBoard();
+  CHS.tm=setInterval(()=>{ const left=Math.max(0,CH_SEC-(performance.now()-CHS.t0)/1000);
+    const t=document.getElementById("ch-time"); if(t) t.textContent=Math.ceil(left); const b=document.getElementById("ch-tb"); if(b) b.style.width=(left/CH_SEC*100)+"%";
+    if(left<=0){ clearInterval(CHS.tm); chFinish(); } }, 200);
+}
+function chQ(){
+  const q=CHS.qs[CHS.qi%CHS.qs.length]; CHS.cur=q; CHS.lock=false;
+  const card=document.getElementById("ch-card"); if(!card) return;
+  card.innerHTML=`<div class="ch-q">${esc(q.q)}</div><div class="lrn-ask">${esc(ct("choose"))}</div><div class="lrn-opts">${q.o.map((o,k)=>`<button type="button" class="lrn-opt" data-cho="${k}"><span class="k">${k+1}</span>${esc(o)}</button>`).join("")}</div>`;
+}
+function chAnswer(k){
+  if(CHS.phase!=="play"||CHS.lock) return; CHS.lock=true;
+  const q=CHS.cur, ok=q.o[k]===q.a, card=document.getElementById("ch-card");
+  CHS.ans++; if(ok) CHS.score++;
+  card.querySelectorAll(".lrn-opt").forEach((b,j)=>{ b.disabled=true; if(q.o[j]===q.a) b.classList.add("ok"); else if(j===k) b.classList.add("bad"); });
+  card.classList.remove("ch-flash-ok","ch-flash-bad"); void card.offsetWidth; card.classList.add(ok?"ch-flash-ok":"ch-flash-bad");
+  document.getElementById("ch-score").textContent=ct("score")(CHS.score);
+  chPublish(false); chRenderBoard();
+  setTimeout(()=>{ if(CHS.phase!=="play") return; CHS.qi++; chQ(); }, ok?250:750);
+}
+function chFinish(){
+  CHS.phase="end"; CHS.tEnd=Date.now();
+  store.set("chdone:"+CHS.id,JSON.stringify({n:CHS.name,s:CHS.score,a:CHS.ans,t:CHS.tEnd}));
+  chPublish(true); chEnd(false);
+}
+function chEnd(again){
+  const L=chRanked(), k=L.findIndex(p=>p.id===CHS.me);
+  const url=chLink(new URLSearchParams(location.search).get("ch")||"");
+  const txt=ct("tgText")(CHS.name.split(" ")[0],chTitle(CHS.c));
+  chEl().innerHTML=chHead()+`<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">🏆</div>
+    <h3>${esc(again?ct("played"):ct("done"))}</h3><p class="ch-big" id="ch-res">${esc(ct("yourRes")(CHS.score,k+1,L.length))}</p>
+    <div class="ch-btns" style="justify-content:center"><a class="btn primary" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(txt)}">${esc(ct("invite"))}</a>
+    <button type="button" class="btn" data-ch="close">${esc(ct("close"))}</button></div><p class="ch-net" id="ch-net"></p></div>
+    <div class="lrn-card"><h3>${esc(ct("board"))}</h3><div id="ch-board"></div></div></div>`;
+  chSetNet(CHS.net); chRenderBoard();
+  const upd=()=>{ const r=document.getElementById("ch-res"); if(!r){ return; } const L2=chRanked(), k2=L2.findIndex(p=>p.id===CHS.me); r.textContent=ct("yourRes")(CHS.score,k2+1,L2.length); };
+  clearInterval(CHS.endT); CHS.endT=setInterval(upd,1500);
+}
+function chClose(){
+  clearInterval(CHS.tm); clearInterval(CHS.endT); if(CHS.phase==="play") chFinish();
+  chEl().hidden=true; document.body.style.overflow=""; try{ if(CHS.cli) CHS.cli.end(); }catch(e){} CHS.cli=null; CHS.phase="";
+  if(new URLSearchParams(location.search).get("ch")){ history.replaceState(null,"",location.pathname); if(!ACC.cur && ACC_OK) accLogin(); }
+}
+document.addEventListener("click",e=>{
+  const m=e.target.closest('#lrn [data-l="chal"]'); if(m){ chCreate(); return; }
+  const b=e.target.closest("[data-ch]"); if(b){ const a=b.dataset.ch;
+    if(a==="copy"){ const u=b.dataset.url; (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>{ b.textContent=ct("copied"); }).catch(()=>{ prompt("",u); }); }
+    else if(a==="play"){ lrnClose(); history.replaceState(null,"","?ch="+b.dataset.code); chOpen(b.dataset.code); }
+    else if(a==="start") chStart();
+    else if(a==="close") chClose();
+    return; }
+  const o=e.target.closest("[data-cho]"); if(o) chAnswer(+o.dataset.cho);
+});
+document.addEventListener("keydown",e=>{ const el=document.getElementById("chal"); if(!el||el.hidden) return;
+  if(CHS.phase==="play" && /^[1-4]$/.test(e.key)){ chAnswer(+e.key-1); }
+  else if(CHS.phase==="lobby" && e.key==="Enter" && e.target.id==="ch-name"){ e.preventDefault(); chStart(); } });
+(function(){ const code=new URLSearchParams(location.search).get("ch"); if(code) setTimeout(()=>chOpen(code),50); })();
 </script>
 
 </body>
