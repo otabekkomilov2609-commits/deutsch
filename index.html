@@ -2640,11 +2640,14 @@ function lrnSay(text){
   if(WKAUD[id]){ try{
     try{ const ss=window.speechSynthesis; if(ss&&(ss.speaking||ss.pending)) ss.cancel(); }catch(e){}
     if(lrnAud&&lrnAud.pause){ lrnAud.pause(); }
-    const L=[].concat(WKAUD[id]).map(p=>"https://upload.wikimedia.org/wikipedia/commons/transcoded/"+p+"/"+p.split("/").pop()+".mp3");
+    const ART={der:"5/53/De-der.ogg",die:"9/9b/De-die.ogg",das:"e/e6/De-das.ogg"};
+    const W=[].concat(WKAUD[id]), P=t.split(/,\s*/), Q=[];
+    W.forEach((p,i)=>{ const s=(W.length===1?t:(P[i]||"")), m=s.match(/^(der|die|das)\s/i); if(m) Q.push([ART[m[1].toLowerCase()],1]); Q.push([p,0]); });
+    const L=Q.map(([p,art])=>({u:"https://upload.wikimedia.org/wikipedia/commons/transcoded/"+p+"/"+p.split("/").pop()+".mp3",gap:art?60:250}));
     const tok={}; lrnAud=tok; let k=0;
     const fb=()=>{ if(lrnAud!==tok&&lrnAud!==tok.a) return; lrnAud=null; if(SAYAUD.has(id)){ const b=new Audio(AUD_BASE+id+".mp3?v=2"); lrnAud=b; b.play().catch(()=>ttsSay(t)); } else ttsSay(t); };
-    const next=()=>{ if(lrnAud!==tok&&lrnAud!==tok.a) return; if(k>=L.length){ return; } const a=new Audio(L[k++]); tok.a=a; lrnAud=a;
-      a.addEventListener("error",fb); a.addEventListener("ended",()=>{ if(lrnAud===a){ lrnAud=tok; setTimeout(next,250); } }); a.play().catch(fb); };
+    const next=()=>{ if(lrnAud!==tok&&lrnAud!==tok.a) return; if(k>=L.length){ return; } const it=L[k++], a=new Audio(it.u); tok.a=a; lrnAud=a;
+      a.addEventListener("error",fb); a.addEventListener("ended",()=>{ if(lrnAud===a){ lrnAud=tok; setTimeout(next,it.gap); } }); a.play().catch(fb); };
     next(); return;
   }catch(e){} }
   if(SAYAUD.has(id)){ try{
