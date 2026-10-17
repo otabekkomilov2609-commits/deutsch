@@ -164,7 +164,7 @@ main{padding-block:6px 40px}
 .lrn-say{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:2px 8px;font-size:15px;cursor:pointer}
 .lrn-end{align-items:center;text-align:center}.lrn-end .big{font-size:52px}.lrn-end p{margin:0;color:var(--muted)}.lrn-end .btn{padding:11px 22px;font-size:15px;cursor:pointer}
 .lrn-flash{min-height:300px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;font:inherit;cursor:pointer}
-.lrn-flash.flip{background:var(--blue-soft)}.lrn-flash .lrn-q.de{color:var(--blue)}.lrn-tap{font-size:13px;color:var(--muted)}
+.lrn-flash.flip{background:var(--blue-soft)}.lrn-fm{display:inline-block;font-size:15px;font-weight:600;color:var(--muted);letter-spacing:.01em}.lrn-flash .lrn-fm{font-size:17px;margin-top:-6px}.lrn-flash .lrn-q.de{color:var(--blue)}.lrn-tap{font-size:13px;color:var(--muted)}
 .lrn-say-row{display:flex;justify-content:center}
 .lrn-kn{display:grid;grid-template-columns:1fr 1fr;gap:10px}.lrn-kn .btn{padding:14px;font-size:16px;cursor:pointer}
 .lrn-no{border-color:#E3B6B6;color:#C62828}.lrn-yes{border-color:var(--green);color:var(--green)}
@@ -3227,7 +3227,36 @@ function lrnOpen(id){
   lrnEl().hidden=false; document.body.style.overflow="hidden"; lrnSetup();
 }
 function lrnClose(){ try{ progRender(); rankSync(); stSync(); }catch(e){} lrnEl().hidden=true; if(V.el.hidden) document.body.style.overflow=""; try{ speechSynthesis.cancel(); }catch(e){} }
-function lrnItems(){ const D=lernData()[LR.id]; return D.it.map((r,i)=>({i,l:r[0],s:D.sec[r[1]],full:r[2],de:r[3],ru:r[4],ex:r[5],red:r[6],dis:r[7],say:r[8]})).filter(x=>x.ru && LR.sel.has(x.l) && (LR.redem||!x.red)); }
+/* Fe'l shakllari kartada: o'zgaradigan fe'llarda er/sie shakli + Perfekt («Verben mit Perfekt» ro'yxatlaridan) — 2026-10-18 */
+const LRN_IRR={fahren:"fährt",schlafen:"schläft",tragen:"trägt",waschen:"wäscht",fallen:"fällt",halten:"hält",lassen:"lässt",laufen:"läuft",fangen:"fängt",raten:"rät",braten:"brät",
+  schlagen:"schlägt",laden:"lädt",wachsen:"wächst",stoßen:"stößt",geben:"gibt",helfen:"hilft",nehmen:"nimmt",sprechen:"spricht",treffen:"trifft",essen:"isst",vergessen:"vergisst",
+  messen:"misst",werfen:"wirft",sterben:"stirbt",brechen:"bricht",gelten:"gilt",treten:"tritt",lesen:"liest",sehen:"sieht",empfehlen:"empfiehlt",stehlen:"stiehlt",geschehen:"geschieht",
+  werden:"wird",wissen:"weiß",haben:"hat",sein:"ist",können:"kann",müssen:"muss",dürfen:"darf",wollen:"will",mögen:"mag"};
+const LRN_INSEP=["be","ge","er","ver","zer","ent","emp","miss","über","unter","hinter","wider"];
+const LRN_SEP=["zurück","zusammen","weiter","statt","teil","fern","frei","weg","nach","auf","aus","ein","mit","vor","los","ab","an","bei","zu","hin","her","um","durch"];
+/* ro'yxatlarda Perfekt'i yo'q fe'llar (qo'lda tekshirilgan) */
+const LRN_PERF_ADD={starten:"ist gestartet",landen:"ist gelandet",versuchen:"hat versucht","weiter|fahren":"ist weitergefahren",enden:"hat geendet",nerven:"hat genervt",tauschen:"hat getauscht",
+  hassen:"hat gehasst",umarmen:"hat umarmt",faulenzen:"hat gefaulenzt","zurück|rufen":"hat zurückgerufen",grillen:"hat gegrillt","aus|ziehen":"ist ausgezogen",fürchten:"hat gefürchtet",
+  meinen:"hat gemeint",untersuchen:"hat untersucht",zählen:"hat gezählt","aus|lachen":"hat ausgelacht","ein|packen":"hat eingepackt",betreuen:"hat betreut",leihen:"hat geliehen",
+  zocken:"hat gezockt",glotzen:"hat geglotzt",liken:"hat geliked","frei|nehmen":"hat freigenommen",duzen:"hat geduzt",siezen:"hat gesiezt","ein|schalten":"hat eingeschaltet"};
+let LRN_PERF=null;
+function lrnPerf(){ if(LRN_PERF) return LRN_PERF; LRN_PERF={}; const D=lernData();
+  Object.values(D).forEach(L=>{ if(L.kind!=="perfekt") return; L.it.forEach(r=>{ const m=String(r[2]).split(" – "); if(m.length<2) return; const inf=m[0].trim().replace(/^sich /,"");
+    LRN_PERF[inf.replace(/\|/g,"")]={inf, p:m[1].trim()}; }); });
+  Object.entries(LRN_PERF_ADD).forEach(([inf,pp])=>{ const k=inf.replace(/\|/g,""); if(!LRN_PERF[k]) LRN_PERF[k]={inf,p:pp}; }); return LRN_PERF; }
+function lrnForms(de){
+  let w=String(de).replace(/\(.*?\)/g," ").replace(/\s+/g," ").trim().replace(/^sich /,"");
+  if(!w||/[\s,\/;·…]/.test(w)||/^[A-ZÄÖÜ]/.test(w)||!/(en|ln|rn|sein|tun)$/.test(w)) return "";
+  const P=lrnPerf()[w]; let pre="", stem=w;
+  if(P&&P.inf.includes("|")){ const s=P.inf.split("|"); pre=s[0]; stem=s[1]; }
+  let er="";
+  if(LRN_IRR[stem]) er=LRN_IRR[stem]+(pre?" "+pre:"");
+  else if(!pre){ const ip=LRN_INSEP.find(x=>stem.startsWith(x)&&LRN_IRR[stem.slice(x.length)]); if(ip) er=ip+LRN_IRR[stem.slice(ip.length)];
+    else { const sp=LRN_SEP.find(x=>stem.startsWith(x)&&LRN_IRR[stem.slice(x.length)]); if(sp) er=LRN_IRR[stem.slice(sp.length)]+" "+sp; } }
+  return [er?"er/sie "+er:"", P?P.p:""].filter(Boolean).join(" · ");
+}
+function lrnFm(de,full){ const f=String(full||""); return lrnForms(de).split(" · ").filter(x=>x&&!f.includes(x.replace(/^er\/sie /,""))).join(" · "); }
+function lrnItems(){ const D=lernData()[LR.id]; return D.it.map((r,i)=>({i,l:r[0],s:D.sec[r[1]],full:r[2],de:r[3],ru:r[4],ex:r[5],red:r[6],dis:r[7],say:r[8],fm:D.kind==="perfekt"?"":lrnFm(r[3],r[2])})).filter(x=>x.ru && LR.sel.has(x.l) && (LR.redem||!x.red)); }
 function lrnLab(n){ const D=lernData()[LR.id]; return (D&&D.lab&&D.lab[n])||("L"+n); }
 function lrnHead(sub){
   const m=byId[LR.id];
@@ -3335,7 +3364,7 @@ function lrnFeedback(ok, x, extra){
   fb.innerHTML=`<div class="lrn-v">${ok?"✓ "+esc(praise):near?"≈ "+esc(lt("near")):"✗ "+esc(lt("wrong"))}</div>
     ${extra&&extra.note?`<div class="lrn-note">${esc(extra.note)}</div>`:""}
     ${extra&&extra.yours!=null&&!ok?`<div class="lrn-yours">${esc(lt("yours"))} <s>${esc(extra.yours||"—")}</s></div>`:""}
-    <div class="lrn-ans">${ok?"":`<small>${esc(lt("correct"))}</small>`}<b>${esc(x.full)}</b> <button type="button" class="lrn-say" data-say="${esc(x.say||x.de)}" aria-label="🔊">🔊</button></div>
+    <div class="lrn-ans">${ok?"":`<small>${esc(lt("correct"))}</small>`}<b>${esc(x.full)}</b>${x.fm?` <span class="lrn-fm">${esc(x.fm)}</span>`:""} <button type="button" class="lrn-say" data-say="${esc(x.say||x.de)}" aria-label="🔊">🔊</button></div>
     ${x.ex?`<div class="lrn-ex"><small>${esc(lt("example"))}:</small> ${esc(x.ex)}</div>`:""}
     <div class="lrn-row2">${!ok&&LR.kind==="wr"?`<button type="button" class="lrn-link" data-l="override">${esc(lt("override"))}</button>`:"<span></span>"}<button type="button" class="btn primary" data-l="next">${esc(lt("next"))} →</button></div>`;
   const nb=fb.querySelector('[data-l="next"]'); if(nb) setTimeout(()=>nb.focus(),20);
@@ -3375,7 +3404,7 @@ function lrnCard(){
   lrnEl().innerHTML=`${lrnHead(`<span class="lrn-left">${esc(lt("left")(LR.cards.length))}</span>`)}<div class="lrn-body">
     <button type="button" class="lrn-flash${LR.flip?" flip":""}" data-l="flip" aria-live="polite">
       <span class="lrn-meta">${esc(lrnLab(x.l))} · ${esc(x.s)}</span>
-      ${LR.flip?`<span class="lrn-q de">${esc(x.full)}</span>${x.ex?`<span class="lrn-ex">${esc(x.ex)}</span>`:""}`:`<span class="lrn-q">${esc(x.ru)}</span>`}
+      ${LR.flip?`<span class="lrn-q de">${esc(x.full)}</span>${x.fm?`<span class="lrn-fm">${esc(x.fm)}</span>`:""}${x.ex?`<span class="lrn-ex">${esc(x.ex)}</span>`:""}`:`<span class="lrn-q">${esc(x.ru)}</span>`}
     </button>
     ${LR.flip?`<div class="lrn-say-row"><button type="button" class="lrn-say" data-say="${esc(x.say||x.de)}">🔊</button></div>`:""}
     <div class="lrn-kn"><button type="button" class="btn lrn-no" data-l="no">${esc(lt("dontknow"))}</button><button type="button" class="btn lrn-yes" data-l="yes">${esc(lt("know"))}</button></div>
