@@ -797,6 +797,9 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-hint{display:block;font-size:17px;font-weight:500;color:var(--muted);margin-top:6px}
 
 .ias-card .ias-slot{font-size:1em!important;letter-spacing:0!important;margin:0!important;line-height:1.25;padding:0 10px;min-width:2.6em;font-weight:700}
+
+.ias-end .ias-brag{appearance:none;border:0;border-radius:16px;padding:14px 22px;font:inherit;font-size:18px;font-weight:800;color:#5A3B00;background:linear-gradient(135deg,#FFE08A,#FFC233);box-shadow:0 4px 14px rgba(255,170,0,.35);cursor:pointer;width:100%;max-width:320px}
+.ias-end .ias-brag:active{transform:scale(.97)}
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
 .ia-in{position:absolute;box-sizing:border-box;border:0;border-bottom:1.5px solid transparent;background:rgba(31,79,160,.06);color:#1F4FA0;font-family:var(--hand),"Patrick Hand",sans-serif;font-size:calc(var(--s) * 13px);line-height:1;padding:0 2px;margin:0;text-align:center;border-radius:3px 3px 0 0;outline:none;min-width:0}
@@ -3714,11 +3717,13 @@ function iasEnd(){ const n=IAS.steps.length, ok=IAS.steps.filter(s=>iasState(s.i
   const left=IAS.steps.map((s,k)=>({s,k})).filter(o=>iasState(o.s.i)!=="ok");
   V.body.querySelector(".ias").innerHTML=`<div class="ias-end"><div class="big">${ok===n?"🏆":"💪"}</div><h3>${ok} / ${n}</h3><p>${ok===n?"Alles richtig! Super!":"Versuchen Sie die anderen noch einmal:"}</p>
     ${left.length?`<div class="ias-dots">${left.map(o=>`<button type="button" class="${iasState(o.s.i)}" data-iasd="${o.k}">${o.k+1}</button>`).join("")}</div>`:""}
-    <button type="button" class="btn primary" data-ias="again">Noch einmal von vorn</button>
+    ${SEND_ON?`<button type="button" class="ias-brag" data-iasx="send">🏆 Dem Lehrer zeigen</button>`:""}
+    <button type="button" class="btn ${SEND_ON?"":"primary"}" data-ias="again">Noch einmal von vorn</button>
     <button type="button" class="iam-sw" data-iam="page">📄 Ganzes Arbeitsblatt</button></div>`; }
 document.addEventListener("click",e=>{ if(!V.body.querySelector(".ias")) return;
   const w=e.target.closest("[data-iasw]"); if(w){ const inp=document.getElementById("ias-in"); inp.value=w.dataset.iasw; inp.dispatchEvent(new Event("input",{bubbles:true})); iasCheck(); return; }
   const o=e.target.closest("[data-iaso]"); if(o){ const st=IAS.steps[IAS.k]; IA.vals[st.i]=+o.dataset.iaso; iaSave(); IAS.tried[st.i]=true; iasAfter(st); return; }
+  if(e.target.closest("[data-iasx]")){ sndOpen(); return; }
   const d=e.target.closest("[data-iasd]"); if(d){ if(!document.getElementById("ias-card")){ iasRender(V.cur); } IAS.k=+d.dataset.iasd; iasShow(true); return; }
   if(e.target.closest("#ias-go")){ iasCheck(); return; }
   const a=e.target.closest("[data-ias]"); if(!a) return; const k=a.dataset.ias;
