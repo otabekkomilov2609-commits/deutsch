@@ -2634,23 +2634,44 @@ let lrnAud=null;
 /* Talaffuz: 1) Wiktionary (Wikimedia Commons, odam ovozi) 2) Thorsten MP3 3) telefon ovozi — 2026-10-18 */
 const WKAUD=(()=>{ try{ return JSON.parse(document.getElementById("wk-data").textContent); }catch(e){ return {}; } })();
 const AUD_BASE="files/audio/";
+/* Wiktionary yozuvlari: Web Audio bilan bir-biriga ulanadi, boshi/oxiridagi jimlik kesiladi (pauza qisqa) */
+let WKAC=null, WKSRC=null; const WKBUF={};
+function wkCtx(){ try{ if(!WKAC){ const C=window.AudioContext||window.webkitAudioContext; if(!C) return null; WKAC=new C(); } if(WKAC.state==="suspended") WKAC.resume(); return WKAC; }catch(e){ return null; } }
+function wkStop(){ try{ if(WKSRC){ WKSRC.stop(); WKSRC=null; } }catch(e){} }
+function wkBuf(u){
+  if(!WKBUF[u]) WKBUF[u]=fetch(u).then(r=>{ if(!r.ok) throw new Error("http"); return r.arrayBuffer(); })
+    .then(b=>new Promise((ok,bad)=>{ const p=WKAC.decodeAudioData(b,ok,bad); if(p&&p.then) p.then(ok,bad); }))
+    .then(buf=>{ const d=buf.getChannelData(0); let mx=0; for(let i=0;i<d.length;i++){ const v=Math.abs(d[i]); if(v>mx) mx=v; }
+      const th=Math.max(0.01,mx*0.06); let s=0,e=d.length-1; while(s<e&&Math.abs(d[s])<th) s++; while(e>s&&Math.abs(d[e])<th) e--;
+      const sr=buf.sampleRate; s=Math.max(0,s-Math.round(sr*0.03)); e=Math.min(d.length,e+Math.round(sr*0.08));
+      const g=mx>0?Math.min(3,0.9/mx):1; const c=new Float32Array(e-s); for(let i=s;i<e;i++) c[i-s]=d[i]*g; return {d:c,s:0,e:c.length}; })
+    .catch(err=>{ delete WKBUF[u]; throw err; });
+  return WKBUF[u];
+}
 function lrnSay(text){
   const t=lrnSayText(text); if(!t) return;
   const id=audId(t);
   if(WKAUD[id]){ try{
     try{ const ss=window.speechSynthesis; if(ss&&(ss.speaking||ss.pending)) ss.cancel(); }catch(e){}
     if(lrnAud&&lrnAud.pause){ lrnAud.pause(); }
+    wkStop();
     const ART={der:"5/53/De-der.ogg",die:"9/9b/De-die.ogg",das:"e/e6/De-das.ogg"};
     const W=[].concat(WKAUD[id]), P=t.split(/,\s*/), Q=[];
     W.forEach((p,i)=>{ const s=(W.length===1?t:(P[i]||"")), m=s.match(/^(der|die|das)\s/i); if(m) Q.push([ART[m[1].toLowerCase()],1]); Q.push([p,0]); });
-    const L=Q.map(([p,art])=>({u:"https://upload.wikimedia.org/wikipedia/commons/transcoded/"+p+"/"+p.split("/").pop()+".mp3",gap:art?60:250}));
-    const tok={}; lrnAud=tok; let k=0;
-    const fb=()=>{ if(lrnAud!==tok&&lrnAud!==tok.a) return; lrnAud=null; if(SAYAUD.has(id)){ const b=new Audio(AUD_BASE+id+".mp3?v=2"); lrnAud=b; b.play().catch(()=>ttsSay(t)); } else ttsSay(t); };
-    const next=()=>{ if(lrnAud!==tok&&lrnAud!==tok.a) return; if(k>=L.length){ return; } const it=L[k++], a=new Audio(it.u); tok.a=a; lrnAud=a;
-      a.addEventListener("error",fb); a.addEventListener("ended",()=>{ if(lrnAud===a){ lrnAud=tok; setTimeout(next,it.gap); } }); a.play().catch(fb); };
-    next(); return;
+    const L=Q.map(([p,art])=>({u:"https://upload.wikimedia.org/wikipedia/commons/transcoded/"+p+"/"+p.split("/").pop()+".mp3",gap:art?25:180}));
+    const tok={}; lrnAud=tok; wkStop();
+    const fb=()=>{ if(lrnAud!==tok) return; lrnAud=null; if(SAYAUD.has(id)){ const b=new Audio(AUD_BASE+id+".mp3?v=2"); lrnAud=b; b.play().catch(()=>ttsSay(t)); } else ttsSay(t); };
+    const ac=wkCtx(); if(!ac){ fb(); return; }
+    Promise.all(L.map(x=>wkBuf(x.u))).then(bs=>{ if(lrnAud!==tok) return;
+      const sr=ac.sampleRate; let n=0; bs.forEach((b,i)=>{ n+=b.e-b.s+(i<bs.length-1?Math.round(sr*(L[i].gap/1000)):0); });
+      const out=ac.createBuffer(1,Math.max(1,n),sr), o=out.getChannelData(0); let pos=0;
+      bs.forEach((b,i)=>{ o.set(b.d.subarray(b.s,b.e),pos); pos+=b.e-b.s+(i<bs.length-1?Math.round(sr*(L[i].gap/1000)):0); });
+      const src=ac.createBufferSource(); src.buffer=out; src.connect(ac.destination); WKSRC=src; src.start();
+    }).catch(fb);
+    return;
   }catch(e){} }
   if(SAYAUD.has(id)){ try{
+    wkStop();
     try{ const ss=window.speechSynthesis; if(ss&&(ss.speaking||ss.pending)) ss.cancel(); }catch(e){}
     if(lrnAud&&lrnAud.pause){ lrnAud.pause(); }
     const a=new Audio("files/audio/"+id+".mp3?v=2"); lrnAud=a;
