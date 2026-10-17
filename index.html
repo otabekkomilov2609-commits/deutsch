@@ -557,6 +557,14 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ch-score{font-size:15px;font-weight:700}
 .ch-rank{margin-left:auto;font-size:14px;font-weight:700;background:var(--blue-soft);color:var(--blue);border-radius:99px;padding:5px 12px}
 .ch-bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden}.ch-bar i{display:block;height:100%;background:#C2410C;transition:width .25s linear}
+.ch-ghost{display:flex;flex-direction:column;gap:5px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.gh-lane{display:grid;grid-template-columns:92px 1fr 30px;gap:8px;align-items:center;font-size:14px;font-weight:700}
+.gh-l{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.gh-lane b{text-align:right;font-variant-numeric:tabular-nums}
+.gh-t{height:10px;border-radius:99px;background:var(--line);overflow:hidden}.gh-t i{display:block;height:100%;border-radius:99px;transition:width .3s}
+.gh-g{color:var(--muted)}.gh-g .gh-t i{background:repeating-linear-gradient(45deg,#A9B4C6 0 6px,#C7CFDC 6px 12px)}
+.gh-me .gh-t i{background:linear-gradient(90deg,#C2410C,#F2B632)}
+.gh-msg{font-size:13.5px;font-weight:700;color:var(--muted)}.gh-msg.up{color:var(--green)}.gh-msg.down{color:#C2410C}.gh-msg small{font-weight:500;margin-left:6px;white-space:nowrap}
+.gh-solo{font-size:14px;font-weight:600;color:var(--muted)}
 .ch-q{font-size:24px;font-weight:700;line-height:1.25;margin:4px 0}
 .ch-lb{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none}
 .ch-lb li{display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-size:15px}
@@ -4069,7 +4077,7 @@ function chConnect(){
   const go=()=>{ const cli=window.mqtt.connect(CH_BROKERS[bi],{clientId:"od_"+CHS.me+"_"+Math.random().toString(36).slice(2,7),clean:true,connectTimeout:8000,reconnectPeriod:3000,keepalive:30});
     CHS.cli=cli; let ok=false;
     cli.on("connect",()=>{ ok=true; chSetNet("ok"); cli.subscribe(CH_NS+CHS.id+"/p/+",{qos:1}); chPublish(true); });
-    cli.on("message",(tp,buf)=>{ const pid=tp.split("/").pop(); try{ const d=JSON.parse(buf.toString()); if(d&&typeof d.s==="number") CHS.players[pid]={n:String(d.n||"?").slice(0,40),s:d.s|0,st:d.st,t:d.t||0}; }catch(e){} chRenderBoard(); });
+    cli.on("message",(tp,buf)=>{ const pid=tp.split("/").pop(); try{ const d=JSON.parse(buf.toString()); if(d&&typeof d.s==="number") CHS.players[pid]={n:String(d.n||"?").slice(0,40),s:d.s|0,st:d.st,t:d.t||0,g:Array.isArray(d.g)?d.g.slice(0,300).map(Number).filter(x=>x>=0&&x<=CH_SEC+1):null}; }catch(e){} chRenderBoard(); });
     cli.on("offline",()=>chSetNet("wait"));
     cli.on("error",()=>{});
     setTimeout(()=>{ if(!ok && bi+1<CH_BROKERS.length){ try{ cli.end(true); }catch(e){} bi++; CHS.cli=null; go(); } else if(!ok) chSetNet("bad"); },9000);
@@ -4081,6 +4089,7 @@ function chPublish(force){
   const now=Date.now(); if(!force && now-CHS.pubT<700){ clearTimeout(CHS.pubTm); CHS.pubTm=setTimeout(()=>chPublish(true),700); return; }
   CHS.pubT=now;
   const d={n:CHS.name,s:CHS.score,a:CHS.ans,st:CHS.phase==="end"?"done":"live",t:CHS.phase==="end"?CHS.tEnd:now};
+  if(CHS.phase==="end"&&CHS.gt&&CHS.gt.length) d.g=CHS.gt;
   cli.publish(CH_NS+CHS.id+"/p/"+CHS.me,JSON.stringify(d),{qos:1,retain:true});
 }
 function chSetNet(s){ CHS.net=s; const e=document.getElementById("ch-net"); if(e) e.textContent=ct(s==="ok"?"netOk":s==="bad"?"netBad":"netWait"); }
@@ -4130,14 +4139,26 @@ function chStart(){
   const tick=()=>{ if(k===0){ chPlay(); return; } chEl().innerHTML=chHead()+`<div class="lrn-body"><div class="ch-cd">${k}</div></div>`; k--; setTimeout(tick,800); };
   tick();
 }
+/* 👻 Arvoh-raqib: rekordchining o'yini soniyama-soniya qayta ko'rsatiladi (faqat ko'rsatadi, ballga ta'sir qilmaydi) — 2026-10-18 */
+function chGhostPick(){ const G=Object.entries(CHS.players).filter(([id,p])=>id!==CHS.me&&p.st==="done"&&p.g&&p.g.length===p.s&&p.s>0).sort((a,b)=>b[1].s-a[1].s||(a[1].t||0)-(b[1].t||0))[0];
+  return G?{n:G[1].n,s:G[1].s,g:G[1].g.slice().sort((a,b)=>a-b)}:null; }
+function chGhostDraw(){ const el=document.getElementById("ch-ghost"); if(!el) return; const uz=state.lang!=="ru", G=CHS.ghost;
+  if(!G){ el.innerHTML=`<div class="gh-solo">👻 ${uz?"Hali rekord yo‘q — siz birinchisiz! Rekord o‘rnating.":"Рекорда пока нет — установите его первым!"}</div>`; return; }
+  const e=(performance.now()-CHS.t0)/1000, gs=G.g.filter(x=>x<=e).length, me=CHS.score, mx=Math.max(G.s,me,1), d=me-gs;
+  const first=G.n.split(" ")[0];
+  el.innerHTML=`<div class="gh-lane gh-g"><span class="gh-l">👻 ${esc(first)}</span><span class="gh-t"><i style="width:${gs/mx*100}%"></i></span><b>${gs}</b></div>
+    <div class="gh-lane gh-me"><span class="gh-l">🏃 ${uz?"Siz":"Вы"}</span><span class="gh-t"><i style="width:${me/mx*100}%"></i></span><b>${me}</b></div>
+    <div class="gh-msg ${d>0?"up":d<0?"down":""}">${d>0?(uz?`💪 Arvohdan ${d} ta oldindasiz!`:`💪 Вы впереди призрака на ${d}!`):d<0?(uz?`👻 Arvoh ${-d} ta oldinda — tezlashing!`:`👻 Призрак впереди на ${-d} — быстрее!`):(uz?"⚖️ Teng ketyapsiz!":"⚖️ Идёте вровень!")}${G.s?` <small>${uz?`rekord: ${G.s}`:`рекорд: ${G.s}`}</small>`:""}</div>`; }
 function chPlay(){
-  Object.assign(CHS,{phase:"play",score:0,ans:0,qi:0,t0:performance.now()});
+  Object.assign(CHS,{phase:"play",score:0,ans:0,qi:0,t0:performance.now(),gt:[],ghost:chGhostPick()});
   chEl().innerHTML=chHead(`<span class="ch-time" id="ch-time">${CH_SEC}</span>`)+`<div class="lrn-body">
     <div class="ch-bar"><i id="ch-tb" style="width:100%"></i></div>
+    <div class="ch-ghost" id="ch-ghost"></div>
     <div class="ch-top"><span class="ch-score" id="ch-score">${esc(ct("score")(0))}</span><span class="ch-rank" id="ch-rank"></span></div>
     <div class="lrn-card" id="ch-card"></div><div id="ch-board"></div><p class="ch-net" id="ch-net"></p></div>`;
   chSetNet(CHS.net); chQ(); chPublish(true); chRenderBoard();
-  CHS.tm=setInterval(()=>{ const left=Math.max(0,CH_SEC-(performance.now()-CHS.t0)/1000);
+  chGhostDraw();
+  CHS.tm=setInterval(()=>{ const left=Math.max(0,CH_SEC-(performance.now()-CHS.t0)/1000); chGhostDraw();
     const t=document.getElementById("ch-time"); if(t) t.textContent=Math.ceil(left); const b=document.getElementById("ch-tb"); if(b) b.style.width=(left/CH_SEC*100)+"%";
     if(left<=0){ clearInterval(CHS.tm); chFinish(); } }, 200);
 }
@@ -4149,7 +4170,7 @@ function chQ(){
 function chAnswer(k){
   if(CHS.phase!=="play"||CHS.lock) return; CHS.lock=true;
   const q=CHS.cur, ok=q.o[k]===q.a, card=document.getElementById("ch-card");
-  CHS.ans++; if(ok) CHS.score++;
+  CHS.ans++; if(ok){ CHS.score++; CHS.gt.push(Math.round((performance.now()-CHS.t0)/100)/10); }
   card.querySelectorAll(".lrn-opt").forEach((b,j)=>{ b.disabled=true; if(q.o[j]===q.a) b.classList.add("ok"); else if(j===k) b.classList.add("bad"); });
   card.classList.remove("ch-flash-ok","ch-flash-bad"); void card.offsetWidth; card.classList.add(ok?"ch-flash-ok":"ch-flash-bad");
   document.getElementById("ch-score").textContent=ct("score")(CHS.score);
