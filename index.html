@@ -612,7 +612,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .lt-fin{align-self:center;color:var(--muted)}
 .lt-mis em{font-style:normal;color:var(--pg-ink);font-weight:700}
 /* ⚔️ Duel — 2026-10-18 */
-.lrn-mode.chal,.lrn-mode.duel{grid-column:auto}
+.lrn-mode.chal,.lrn-mode.duel{grid-column:auto}.lrn-games h3{margin:0;font-size:18px}.lrn-games .lrn-count{margin-top:-6px}
 .lrn-mode.duel{border-color:#7C3AED;background:#F3EEFF}.lrn-mode.duel b{color:#7C3AED}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lrn-mode.duel{background:#2a1f45}}:root[data-theme="dark"] .lrn-mode.duel{background:#2a1f45}
 .du-vsbig{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center;padding:6px 0}
@@ -629,7 +629,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .du-ask{color:#7C3AED;font-weight:700}
 .du-big .du-p span{font-size:64px}.du-big .du-p b{font-size:20px}.du-big .du-tug{height:24px}
 .lrn-mode.kchk{grid-column:1/-1;border-color:var(--green);background:#ECF8F0}.lrn-mode.kchk b{color:var(--green)}.lrn-kc{margin:0;font-size:13px;color:var(--muted)}
-.lrn-mode.chal{grid-column:1/-1;border-color:#C2410C;background:#FFF1E8}.lrn-mode.chal b{color:#C2410C}
+.lrn-mode.chal{border-color:#C2410C;background:#FFF1E8}.lrn-mode.chal b{color:#C2410C}
 .ch-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .ch-time{font:700 26px/1 var(--hand,inherit);min-width:56px;text-align:center;color:#C2410C}
 .ch-score{font-size:15px;font-weight:700}
@@ -3186,11 +3186,14 @@ function lrnSetup(){
       <button type="button" class="lrn-mode" data-l="learn"${its.length?"":" disabled"}><b>${esc(lt("learn"))}</b><span>${esc(lt("learnD"))}</span></button>
       <button type="button" class="lrn-mode" data-l="cards"${its.length?"":" disabled"}><b>${esc(lt("cards"))}</b><span>${esc(lt("cardsD"))}</span></button>
       ${kq?`<button type="button" class="lrn-mode kchk" data-l="kchk"><b>${esc(lt("chk"))} (${kq})</b><span>${esc(lt("chkD"))}</span></button>`:""}
-      <button type="button" class="lrn-mode chal" data-l="chal"${its.filter(x=>!x.red).length>=4?"":" disabled"}><b>${esc(ct("mode"))}</b><span>${esc(ct("modeD"))}</span></button>
-      <button type="button" class="lrn-mode duel" data-l="duel"${its.filter(x=>!x.red).length>=4?"":" disabled"}><b>${esc(dt("mode"))}</b><span>${esc(dt("modeD"))}</span></button>
     </div>
     ${done||kn?`<button type="button" class="lrn-link lrn-reset" data-l="reset">${esc(lt("reset"))}</button>`:""}
-  </div></div>`;
+  </div>
+  <div class="lrn-card lrn-games"><h3>🎮 ${state.lang==="ru"?"Играть с друзьями":"Do‘stlar bilan o‘ynash"}</h3><p class="lrn-count">${esc(state.lang==="ru"?"Слова выбранных уроков":"Tanlangan Lektionlar so‘zlari bilan")}</p>
+    <div class="lrn-modes">
+      <button type="button" class="lrn-mode chal" data-l="chal"${its.filter(x=>!x.red).length>=4?"":" disabled"}><b>${esc(ct("mode"))}</b><span>${esc(ct("modeD"))}</span></button>
+      <button type="button" class="lrn-mode duel" data-l="duel"${its.filter(x=>!x.red).length>=4?"":" disabled"}><b>${esc(dt("mode"))}</b><span>${esc(dt("modeD"))}</span></button>
+    </div></div></div>`;
 }
 /* ---------- Lernen ---------- */
 function lrnStartLearn(){ LR.chk=false; LR.mode="learn"; LR.pool=lrnItems(); lrnNewRound(); }
