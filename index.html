@@ -261,6 +261,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ch-flash-ok{animation:chok .35s}.ch-flash-bad{animation:chbad .35s}
 @keyframes chok{0%{box-shadow:0 0 0 0 rgba(22,163,74,.6)}100%{box-shadow:0 0 0 14px rgba(22,163,74,0)}}
 @keyframes chbad{0%,100%{transform:none}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.lrn-hint{font-size:13px;color:var(--muted);line-height:1.35;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:7px 10px}
 /* viewer */
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
@@ -2693,6 +2694,14 @@ function lrnNewRound(){
 function lrnTypable(x){ return x.de.length<=40 && !/[…·]/.test(x.de) && !x.red; }
 function lrnProgress(){ const tot=LR.pool.length, d=LR.pool.filter(x=>LR.st[x.i]===2).length, h=LR.pool.filter(x=>LR.st[x.i]===1).length;
   return `<div class="lrn-prog" role="img" aria-label="${esc(lt("learned")(d,tot))}"><i class="d" style="width:${d/tot*100}%"></i><i class="h" style="width:${h/tot*100}%"></i></div><div class="lrn-pt">${esc(lt("learned")(d,tot))}</div>`; }
+function lrnHint(x){
+  const uz=state.lang!=="ru", D=lernData()[LR.id]||{}, de=x.de, h=[];
+  if(D.kind==="perfekt") h.push(uz?"hat / ist bilan yozing: hat gemacht, ist gefahren":"Пишите с hat / ist: hat gemacht, ist gefahren");
+  else if(/^(der|die|das) /.test(de)||/\/ (der|die|das) /.test(de)) h.push(uz?"Otni artikl bilan yozing: der / die / das + so‘z (ko‘plik shart emas)":"Существительное пишите с артиклем: der / die / das + слово (мн. ч. не нужно)");
+  if(/\s\/\s/.test(de)) h.push(uz?"« / » bo‘lsa — bittasini yozish yetadi":"Если есть « / » — достаточно одного варианта");
+  if(/\(|\+\s*(Akk|Dat)/.test(de)) h.push(uz?"Qavsdagi qism va + Akk./Dat. shart emas":"Часть в скобках и + Akk./Dat. писать не нужно");
+  return h.length?`<div class="lrn-hint">💡 ${h.map(esc).join(" · ")}</div>`:"";
+}
 function lrnAsk(){
   if(LR.qi>=LR.round.length){ lrnRoundEnd(); return; }
   const x=LR.round[LR.qi]; LR.cur=x; LR.answered=false;
@@ -2711,7 +2720,7 @@ function lrnAsk(){
   } else {
     lrnEl().innerHTML=top+`<div class="lrn-ask">${esc(lt(lernData()[LR.id].kind==="perfekt"?"writeP":"write"))}</div>
       <form class="lrn-wr" id="lrn-wr" autocomplete="off"><input id="lrn-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(lt("ph"))}">
-      <div class="lrn-keys">${["ä","ö","ü","ß"].map(c=>`<button type="button" class="lrn-key" data-ch="${c}">${c}</button>`).join("")}</div>
+      <div class="lrn-keys">${["ä","ö","ü","ß"].map(c=>`<button type="button" class="lrn-key" data-ch="${c}">${c}</button>`).join("")}</div>${lrnHint(x)}
       <div class="lrn-row2"><button type="button" class="lrn-link" data-l="dunno">${esc(lt("dunno"))}</button><button type="submit" class="btn primary">${esc(lt("check"))}</button></div></form>
       <div class="lrn-fb" id="lrn-fb"></div></div></div>`;
     LR.kind="wr"; setTimeout(()=>{ const i=document.getElementById("lrn-in"); if(i) i.focus(); },30);
