@@ -227,6 +227,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .snd-err{color:#C62828;font-size:13px}.snd-err:empty{display:none}.snd-hint{font-size:13px;color:var(--muted);line-height:1.35}
 .snd .btn.primary{padding:11px;font-size:15px;cursor:pointer}
 .snd-img{width:100%;max-height:46vh;object-fit:contain;border-radius:12px;background:var(--bg);-webkit-touch-callout:default;user-select:auto}
+.snd-send{width:100%;padding:12px;font-size:16px;cursor:pointer}.snd-send[hidden]{display:none}.snd-st{font-size:14px;text-align:center}.snd-st:empty{display:none}.snd-st.ok{color:var(--green);font-weight:700}.snd-st.err{color:#C62828}
 .snd-btns{display:flex;gap:8px}.snd-btns .btn{flex:1;min-width:0;white-space:normal;padding:11px 6px;font-size:15px;cursor:pointer}.snd-btns .btn[hidden]{display:none}
 .snd-box{max-height:calc(100vh - 32px);overflow:auto}
 .snd-ok{text-align:center;padding:6px 0 2px}.snd-ok div{font-size:46px}.snd-ok p{margin:6px 0 0;font-size:16px;font-weight:700}
@@ -2042,7 +2043,7 @@ const T = {
    g:"Grammatika", k:"Muloqot", w:"So‘zlar", none:"Bu Lektion uchun varaq hali yo‘q. Kitobdan o‘qing:",
    pages:"bet", newb:"yangi", sol:"Javoblar", open:"Ochish", download:"Yuklab olish", close:"Yopish",
    listsH:"Butun kurs uchun ·", whole:"Butun bo‘lim uchun", listsSub:"fe’llar va so‘z ro‘yxatlari",
-   noRes:"Hech narsa topilmadi. Boshqa so‘z bilan qidirib ko‘ring.", loading:"Yuklanmoqda…", iaCheck:"Tekshirish", send:"Natija bilan ustozga maqtanish", sendT:"Natija bilan ustozga maqtanish", sndT:"Ustozga maqtanish 🏆", sndPh:"Ism va familiya (rasmga yoziladi)", sndGo:"Yuborish", sndErr:"Ism va familiyangizni yozing", sndHint:"«Nusxalash»ni bosing va Telegram guruhga qo‘yib yuboring. Yoki «Saqlash» — rasm galereyaga tushadi.", sndCopy:"Nusxalash", sndSave:"Saqlash", sndCopied:"Nusxalandi", sndNoCopy:"Bo‘lmadi", sndCopiedHint:"Rasm nusxalandi — Telegram guruhda xabar maydonini bosib turing → «Вставить».", sndRes:"Natija", iaShow:"Javoblar", iaReset:"Qaytadan", iaHint:"Bo‘sh joyni bosing va yozing. Enter — keyingisi.", iaOk:"to‘g‘ri", iaBad:"xato", iaChk:"namuna bilan solishtiring", iaOf:"bo‘sh joy", iaYour:"Sizniki", iaRight:"To‘g‘ri javob",
+   noRes:"Hech narsa topilmadi. Boshqa so‘z bilan qidirib ko‘ring.", loading:"Yuklanmoqda…", iaCheck:"Tekshirish", send:"Natija bilan ustozga maqtanish", sendT:"Natija bilan ustozga maqtanish", sndT:"Ustozga maqtanish 🏆", sndPh:"Ism va familiya (rasmga yoziladi)", sndGo:"Yuborish", sndErr:"Ism va familiyangizni yozing", sndHint:"«Nusxalash»ni bosing va Telegram guruhga qo‘yib yuboring. Yoki «Saqlash» — rasm galereyaga tushadi.", sndSend:"Ustozga yuborish", sndSent:"Yuborildi", sndShare:"Ulashish", sndOk:"Natijangiz ustozga yetib bordi!", sndFail:"Yuborilmadi — internetni tekshirib, qayta bosing", sndErr:"Ism va familiyangizni yozing", sndHint2:"Ism-familiyangizni yozing va «Ustozga yuborish»ni bosing. Rasmni guruhga ham tashlashingiz mumkin.", sndCopy:"Nusxalash", sndSave:"Saqlash", sndCopied:"Nusxalandi", sndNoCopy:"Bo‘lmadi", sndCopiedHint:"Rasm nusxalandi — Telegram guruhda xabar maydonini bosib turing → «Вставить».", sndRes:"Natija", iaShow:"Javoblar", iaReset:"Qaytadan", iaHint:"Bo‘sh joyni bosing va yozing. Enter — keyingisi.", iaOk:"to‘g‘ri", iaBad:"xato", iaChk:"namuna bilan solishtiring", iaOf:"bo‘sh joy", iaYour:"Sizniki", iaRight:"To‘g‘ri javob",
    err:"Faylni ochib bo‘lmadi. Sahifani yangilab, qayta urinib ko‘ring.", lek:"Lektion",
    saved:"Saqlandi", foot:"Nemis tili kursi · Toshkent", results:"Qidiruv natijalari",
    openLink:"ochish", audLoad:"Audioni yuklash", audWait:"Audio yuklanmoqda…", audErr:"Audio yuklanmadi — qayta bosing", whyBtn:"Nega xato?", wU:"Umlautni tekshiring: ä ö ü yoki ß.", wO:"So‘zlar to‘g‘ri, faqat tartibi xato.", wA:"Artikl xato — kelishikni o‘ylang: Nominativ, Akkusativ yoki Dativ?", wE:"So‘z to‘g‘ri, oxiri (qo‘shimchasi) xato.", wT:"Deyarli to‘g‘ri — bitta harfni tekshiring.", wM:"Bitta so‘z tushib qolgan.", wX:"Ortiqcha so‘z bor.", wP:"Gap belgisi yoki bo‘sh joyni tekshiring.", wEmpty:"Bu joy bo‘sh qoldi.", wRule:"Qoida", trH:"Audio transkripti", trSub:"Belgilangan joyda javob eshitiladi. Qizil — siz xato qilgan joy.", trYour:"Sizning javobingiz", trRight:"to‘g‘ri javob", trNone:"javob yo‘q", later:"Keyingi mavzular", cur:"Oxirgi o‘tilgan mavzu", hw:"Topshiriqlar", hwEmpty:"Hozircha ochiq topshiriq yo‘q. Yangi topshiriq va uning muddati shu yerda paydo bo‘ladi.", hwOld:"Muddati tugaganlar", today:"bugun", yest:"kecha", given:"Berildi", dueL:"Muddat", hwLekShort:"Topshiriq", group:"Guruh",
@@ -2055,7 +2056,7 @@ const T = {
    g:"Грамматика", k:"Общение", w:"Лексика", none:"Листов к этому уроку пока нет. Читайте в учебнике:",
    pages:"стр.", newb:"новое", sol:"Ответы", open:"Открыть", download:"Скачать", close:"Закрыть",
    listsH:"Для всего курса ·", whole:"Для всего уровня", listsSub:"глаголы и словари",
-   noRes:"Ничего не найдено. Попробуйте другое слово.", loading:"Загрузка…", iaCheck:"Проверить", send:"Похва\u00ADстаться учителю", sendT:"Похвастаться результатом учителю", sndT:"Похвастаться учителю 🏆", sndPh:"Имя и фамилия (на картинке)", sndGo:"Отправить", sndErr:"Напишите имя и фамилию", sndHint:"Нажмите «Копировать» и вставьте в группу Telegram. Или «Сохранить» — картинка попадёт в галерею.", sndCopy:"Копировать", sndSave:"Сохранить", sndCopied:"Скопировано", sndNoCopy:"Не вышло", sndCopiedHint:"Картинка скопирована — в группе Telegram нажмите и удерживайте поле сообщения → «Вставить».", sndRes:"Результат", iaShow:"Ответы", iaReset:"Заново", iaHint:"Нажмите на пропуск и пишите. Enter — дальше.", iaOk:"верно", iaBad:"ошибка", iaChk:"сравните с образцом", iaOf:"пропуск", iaYour:"Ваш ответ", iaRight:"Правильно",
+   noRes:"Ничего не найдено. Попробуйте другое слово.", loading:"Загрузка…", iaCheck:"Проверить", send:"Похва\u00ADстаться учителю", sendT:"Похвастаться результатом учителю", sndT:"Похвастаться учителю 🏆", sndPh:"Имя и фамилия (на картинке)", sndGo:"Отправить", sndErr:"Напишите имя и фамилию", sndHint:"Нажмите «Копировать» и вставьте в группу Telegram. Или «Сохранить» — картинка попадёт в галерею.", sndSend:"Отправить учителю", sndSent:"Отправлено", sndShare:"Поделиться", sndOk:"Ваш результат отправлен учителю!", sndFail:"Не отправилось — проверьте интернет и нажмите ещё раз", sndErr:"Напишите имя и фамилию", sndHint2:"Напишите имя и фамилию и нажмите «Отправить учителю». Картинку можно также отправить в группу.", sndCopy:"Копировать", sndSave:"Сохранить", sndCopied:"Скопировано", sndNoCopy:"Не вышло", sndCopiedHint:"Картинка скопирована — в группе Telegram нажмите и удерживайте поле сообщения → «Вставить».", sndRes:"Результат", iaShow:"Ответы", iaReset:"Заново", iaHint:"Нажмите на пропуск и пишите. Enter — дальше.", iaOk:"верно", iaBad:"ошибка", iaChk:"сравните с образцом", iaOf:"пропуск", iaYour:"Ваш ответ", iaRight:"Правильно",
    err:"Не удалось открыть файл. Обновите страницу и попробуйте снова.", lek:"Lektion",
    saved:"Сохранено", foot:"Курс немецкого языка · Ташкент", results:"Результаты поиска",
    openLink:"открыть", audLoad:"Загрузить аудио", audWait:"Аудио загружается…", audErr:"Не загрузилось — нажмите ещё раз", whyBtn:"Почему ошибка?", wU:"Проверьте умлаут: ä ö ü или ß.", wO:"Слова верные, но порядок неправильный.", wA:"Ошибка в артикле — подумайте о падеже: Nominativ, Akkusativ или Dativ?", wE:"Слово верное, окончание неправильное.", wT:"Почти верно — проверьте одну букву.", wM:"Пропущено одно слово.", wX:"Есть лишнее слово.", wP:"Проверьте знаки препинания или пробелы.", wEmpty:"Здесь ничего не написано.", wRule:"Правило", trH:"Транскрипт аудио", trSub:"В выделенном месте звучит ответ. Красное — где вы ошиблись.", trYour:"Ваш ответ", trRight:"правильный ответ", trNone:"нет ответа", later:"Следующие темы", cur:"Последняя пройденная тема", hw:"Задания", hwEmpty:"Сейчас открытых заданий нет. Новое задание и его срок появятся здесь.", hwOld:"Срок истёк", today:"сегодня", yest:"вчера", given:"Выдано", dueL:"Срок", hwLekShort:"Задание", group:"Группа",
@@ -2374,15 +2375,26 @@ async function cardRender(){
   const cv=cardDraw(name); img.src=cv.toDataURL("image/png");
   cardBlob=null; cv.toBlob(b=>{ if(my===cardSeq) cardBlob=b; },"image/png");
 }
+/* GitHub Pages'da (Claude artifact'dan tashqarida) natija fonda Google Forma → "Deutsch" jadvaliga yuboriladi. Artifact CSP buni bloklaydi. */
+const IN_ARTIFACT=/claudeusercontent\.com$|claude\.ai$/.test(location.hostname);
+const CAN_POST=!IN_ARTIFACT;
+const CAN_SHARE=!IN_ARTIFACT && !!(navigator.canShare && window.File && (()=>{ try{ return navigator.canShare({files:[new File([new Blob(["x"],{type:"image/png"})],"x.png",{type:"image/png"})]}); }catch(e){ return false; } })());
+const GFORM="https://docs.google.com/forms/d/e/1FAIpQLSftfEmZ9emgq-z6dQakEquDNgojoUHE1ODV7Jdj8XdR9c8efg/formResponse";
+async function sndPost(name){
+  const q=new URLSearchParams(); q.set("entry.333560556",name); q.set("entry.533107657",SND.lvl); q.set("entry.1278451255",SND.ttl); q.set("entry.1453781659",`${SND.ok}/${SND.n}`);
+  await fetch(GFORM,{method:"POST",mode:"no-cors",body:q});
+}
 function sndOpen(){
   const f=document.getElementById("snd-f");
-  f.innerHTML=`<div class="snd-h"><h2></h2><button type="button" class="snd-x" aria-label="✕">✕</button></div><input id="snd-name" maxlength="40" autocomplete="name"><img class="snd-img" alt=""><div class="snd-hint"></div><div class="snd-btns"><button type="button" class="btn primary" data-a="copy"></button><button type="button" class="btn" data-a="save"></button></div>`;
+  f.innerHTML=`<div class="snd-h"><h2></h2><button type="button" class="snd-x" aria-label="✕">✕</button></div><input id="snd-name" maxlength="40" autocomplete="name"><img class="snd-img" alt=""><div class="snd-hint"></div><button type="button" class="btn primary snd-send" data-a="send" hidden></button><div class="snd-st"></div><div class="snd-btns"><button type="button" class="btn" data-a="share" hidden></button><button type="button" class="btn" data-a="copy"></button><button type="button" class="btn" data-a="save"></button></div>`;
   f.querySelector("h2").textContent=t("sndT");
   const inp=f.querySelector("#snd-name"); inp.placeholder=t("sndPh"); inp.value=store.get("sndName")||"";
   f.querySelector(".snd-hint").textContent=t("sndHint");
   f.querySelector('[data-a="copy"]').textContent="📋 "+t("sndCopy");
   if(!(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write)) f.querySelector('[data-a="copy"]').hidden=true; f.querySelector('[data-a="save"]').textContent="⬇ "+t("sndSave");
   f.querySelector(".snd-img").alt=SND.ttl+" — "+SND.ok+"/"+SND.n;
+  if(CAN_POST){ const sb=f.querySelector('[data-a="send"]'); sb.hidden=false; sb.textContent="📨 "+t("sndSend"); f.querySelector(".snd-hint").textContent=t("sndHint2"); }
+  if(CAN_SHARE){ const sh=f.querySelector('[data-a="share"]'); sh.hidden=false; sh.textContent="📤 "+t("sndShare"); f.querySelector('[data-a="copy"]').hidden=true; }
   f.querySelector(".snd-x").addEventListener("click",sndClose);
   inp.addEventListener("input",()=>{ clearTimeout(cardTimer); cardTimer=setTimeout(()=>{ store.set("sndName",inp.value.trim()); cardRender(); },250); });
   document.getElementById("snd").hidden=false; cardRender();
@@ -2393,6 +2405,19 @@ function cardGetBlob(){ return cardBlob?Promise.resolve(cardBlob):new Promise(re
 function cardFlash(b,txt){ const old=b.textContent; b.textContent=txt; setTimeout(()=>{ b.textContent=old; },1800); }
 document.getElementById("snd-f").addEventListener("click",async e=>{
   const b=e.target.closest("button[data-a]"); if(!b) return;
+  if(b.dataset.a==="send"){
+    const f=document.getElementById("snd-f"), inp=f.querySelector("#snd-name"), st=f.querySelector(".snd-st");
+    const name=inp.value.replace(/\s+/g," ").trim().slice(0,40);
+    if(name.length<3||!/\s/.test(name)){ st.className="snd-st err"; st.textContent=t("sndErr"); inp.focus(); return; }
+    store.set("sndName",name); b.disabled=true; st.className="snd-st"; st.textContent="…";
+    try{ await sndPost(name); st.className="snd-st ok"; st.textContent="✅ "+t("sndOk"); b.textContent="✓ "+t("sndSent"); }
+    catch(err){ b.disabled=false; st.className="snd-st err"; st.textContent=t("sndFail"); }
+    return;
+  }
+  if(b.dataset.a==="share"){
+    try{ const blob=await cardGetBlob(); await navigator.share({files:[new File([blob],cardName(),{type:"image/png"})]}); }catch(err){}
+    return;
+  }
   if(b.dataset.a==="copy"){
     try{ await navigator.clipboard.write([new ClipboardItem({"image/png":cardGetBlob()})]); cardFlash(b,"✓ "+t("sndCopied")); const h=document.querySelector("#snd-f .snd-hint"); if(h) h.textContent=t("sndCopiedHint"); }
     catch(err){ cardFlash(b,t("sndNoCopy")); }
