@@ -800,6 +800,8 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 
 .ias-end .ias-brag{appearance:none;border:0;border-radius:16px;padding:14px 22px;font:inherit;font-size:18px;font-weight:800;color:#5A3B00;background:linear-gradient(135deg,#FFE08A,#FFC233);box-shadow:0 4px 14px rgba(255,170,0,.35);cursor:pointer;width:100%;max-width:320px}
 .ias-end .ias-brag:active{transform:scale(.97)}
+.iam-lbl{color:var(--blue);font-weight:800;margin-right:.15em}
+.ias-card .iam-lbl{opacity:.85}
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
 .ia-in{position:absolute;box-sizing:border-box;border:0;border-bottom:1.5px solid transparent;background:rgba(31,79,160,.06);color:#1F4FA0;font-family:var(--hand),"Patrick Hand",sans-serif;font-size:calc(var(--s) * 13px);line-height:1;padding:0 2px;margin:0;text-align:center;border-radius:3px 3px 0 0;outline:none;min-width:0}
@@ -3602,6 +3604,7 @@ function iamUse(m){ return IA.on && IA.id===m.id && !!IAM[m.id] && iamMode()==="
 function iamW(it){ const n=String(it.a||"").length; return Math.min(26,Math.max(3,Math.round(n*0.62+1.6))); }
 function iamInp(i){ const it=iaItems()[i]; if(!it) return "";
   return `<input type="text" class="ia-in iam-in${it.long?" long":""}" data-i="${i}" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="next" style="${it.long?"":`width:${iamW(it)}em`}" value="${esc(IA.vals[i]||"")}" aria-label="${i+1}">`; }
+function iamLbl(html){ return html.replace(/^(\s*)([a-hA-H]|\d{1,2})[.)]?(?=\s|$)\s*/,(m,sp,x)=>`${sp}<b class="iam-lbl">${x}.</b> `); }
 function iamRenderHTML(id){
   const B=IAM[id]||[], uz=state.lang!=="ru"; let h=`<div class="iam"><div class="iam-top"><button type="button" class="iam-sw" data-iam="page">📄 Ganzes Arbeitsblatt</button></div>`;
   B.forEach((b,bi)=>{
@@ -3609,7 +3612,7 @@ function iamRenderHTML(id){
     if(b.p!=null){ h+=`<p class="iam-p">${esc(b.p)}</p>`; return; }
     const img=b.img?`<canvas class="iam-img" data-p="${b.img[0]}" data-y0="${b.img[1]}" data-y1="${b.img[2]}" data-x0="${b.img[3]||0}" data-x1="${b.img[4]||0}"></canvas>`:"";
     if(b.o!=null){ h+=`<div class="iam-opts">${b.opts.map(([k,t])=>`<button type="button" class="ia-o iam-o row" data-i="${b.o}" data-k="${k}">${esc(t)}</button>`).join("")}</div>`; return; }
-    h+=`<div class="iam-s">${img}<div class="iam-t">${b.s.map(x=>typeof x==="string"? esc(x) : x.g!=null? iamInp(x.g) : `<button type="button" class="ia-o iam-o" data-i="${x.c}" data-k="${x.k}">${esc(x.t||"abcdefgh"[x.k])}</button>`).join("")}</div></div>`;
+    h+=`<div class="iam-s">${img}<div class="iam-t">${b.s.map((x,xi)=>typeof x==="string"? (xi===0?iamLbl(esc(x)):esc(x)) : x.g!=null? iamInp(x.g) : `<button type="button" class="ia-o iam-o" data-i="${x.c}" data-k="${x.k}">${esc(x.t||"abcdefgh"[x.k])}</button>`).join("")}</div></div>`;
   });
   return h+`</div>`;
 }
@@ -3679,7 +3682,7 @@ function iasShow(focus){
   const noWords= st.kind!=="o" && !st.b.s.some(x=>typeof x==="string"&&/[A-Za-zÄÖÜäöüß]{2}/.test(x));
   if(st.kind==="o"){ html=`<div class="ias-q">${esc(st.p||"")}</div>`; }
   else if(noWords){ html=`<div class="ias-q">${esc(st.p||"")}</div>`+(iaItems()[st.i].long?"":`<div style="margin-top:10px">${iasSlot({i:st.i,kind:"g"},true)}</div>`); }
-  else html=st.b.s.map(x=>{ if(typeof x==="string") return esc(x).replace(/\(([^)]*)\)/g,'<small class="ias-hint">($1)</small>'); const i=x.g!=null?x.g:x.c;
+  else html=st.b.s.map((x,xi)=>{ if(typeof x==="string"){ const h=esc(x).replace(/\(([^)]*)\)/g,'<small class="ias-hint">($1)</small>'); return xi===0?iamLbl(h):h; } const i=x.g!=null?x.g:x.c;
     if(x.g!=null) return iasSlot({i,kind:"g"}, i===st.i);
     return `<span class="ias-chip ${IA.vals[i]===x.k?"sel":""}">${esc(x.t)}</span>`; }).join("");
   document.getElementById("ias-card").innerHTML=(st.b.img?`<canvas class="iam-img" data-p="${st.b.img[0]}" data-y0="${st.b.img[1]}" data-y1="${st.b.img[2]}" data-x0="${st.b.img[3]||0}" data-x1="${st.b.img[4]||0}"></canvas>`:"")+`<div>${html}</div>`;
