@@ -310,7 +310,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .tp-board{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:18px;padding:18px;max-width:1400px;width:100%;margin:0 auto}
 @media (max-width:820px){.tp-board{grid-template-columns:1fr}}
 .tp-join{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow);align-self:start}
-.tp-qr{background:#fff;border-radius:12px;padding:6px;aspect-ratio:1;width:100%;max-width:300px;margin:0 auto}.tp-qr svg{width:100%;height:100%;display:block}
+.tp-qr{display:block;border:0;cursor:zoom-in;background:#fff;border-radius:12px;padding:6px;aspect-ratio:1;width:100%;max-width:300px;margin:0 auto;transition:transform .2s}.tp-qr:hover{transform:scale(1.02)}.tp-qr svg{width:100%;height:100%;display:block}
 .tp-url{font-size:13px;color:var(--muted);text-align:center;word-break:break-all}
 .tp-ctl{display:flex;flex-direction:column;gap:10px;align-items:stretch;border-top:1px dashed var(--line);padding-top:12px}
 .tp-st{font-weight:700;font-size:15px}.tp-st.run{color:var(--green)}.tp-st.end{color:var(--orange)}
@@ -322,11 +322,12 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .tp-lb h2{margin:0 0 10px;font-family:var(--hand);font-weight:400;font-size:38px;color:var(--blue)}
 .tp-lbh span{color:var(--muted);font-weight:600}
 .tp-rows{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-.tp-rows li{display:grid;grid-template-columns:48px 1fr auto 92px;gap:12px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--bg);font-size:20px}
+.tp-rows li{position:relative;display:grid;grid-template-columns:52px 1fr auto 92px;gap:12px;align-items:center;padding:12px 14px;border-radius:14px;background:var(--bg);font-size:20px;border:2px solid transparent}
 .tp-rows li.fin{background:var(--green-soft)}
 .tp-pos{font-weight:800;text-align:center;font-size:22px;color:var(--muted)}
 .tp-nm{min-width:0;display:flex;flex-direction:column;gap:6px}.tp-nm b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tp-pb{height:8px;border-radius:99px;background:var(--line);overflow:hidden}.tp-pb i{display:block;height:100%;background:var(--blue);border-radius:99px;transition:width .5s}
+.tp-track{position:relative;height:12px;border-radius:99px;background:var(--line);overflow:visible;margin-right:18px}.tp-track i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#1F4FA0,#3E8BFF);transition:width .8s cubic-bezier(.2,.8,.2,1)}
+.tp-track em{position:absolute;top:50%;transform:translate(-50%,-55%);font-style:normal;font-size:20px;transition:left .8s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
 .tp-ok{font-weight:800;font-variant-numeric:tabular-nums;color:var(--green)}.tp-ok small{font-size:14px;color:var(--muted);font-weight:600}
 .tp-tm{font-variant-numeric:tabular-nums;color:var(--muted);font-size:17px;text-align:right}
 .tp-live{color:#E5484D;font-style:normal;font-size:12px;animation:tpb 1.2s infinite}@keyframes tpb{50%{opacity:.25}}
@@ -340,6 +341,51 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .lt-dots{display:flex;gap:6px}.lt-dots i{width:10px;height:10px;border-radius:50%;background:var(--blue);animation:ltd 1s infinite}.lt-dots i:nth-child(2){animation-delay:.15s}.lt-dots i:nth-child(3){animation-delay:.3s}@keyframes ltd{50%{opacity:.2;transform:translateY(-4px)}}
 .lt-mis{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}.lt-mis li{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;font-size:15px;border-bottom:1px dashed var(--line);padding-bottom:6px}
 .lt-mis span{color:var(--muted)}.lt-mis b{color:var(--green)}.lt-mis s{color:#C62828}
+.lt-mask{font:600 22px/1.3 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.04em;color:var(--blue);background:var(--blue-soft);border-radius:10px;padding:8px 12px;white-space:pre-wrap;word-break:break-word}
+.lt-help{margin-left:auto;white-space:nowrap;border:1px solid #E7B23A;background:var(--pg-soft);color:var(--pg-ink);border-radius:9px;font:inherit;font-size:14px;font-weight:700;padding:0 12px;cursor:pointer}
+.lt-help:disabled{opacity:.5;cursor:default}
+.lt-half{color:var(--pg-ink);font-weight:700}
+.lt-fin{align-self:center;color:var(--muted)}
+.lt-mis em{font-style:normal;color:var(--pg-ink);font-weight:700}
+
+/* musobaqa kayfiyati */
+.tp-rows li.top1{background:linear-gradient(90deg,#FFF3C4,#FFFBEA);border-color:#F2B632;font-size:24px;box-shadow:0 4px 18px rgba(242,182,50,.35)}
+.tp-rows li.top2{background:linear-gradient(90deg,#EEF1F5,#F8F9FB);border-color:#B8C0CC}
+.tp-rows li.top3{background:linear-gradient(90deg,#FBE7D8,#FDF4EC);border-color:#D9965B}
+.tp-rows li.top1 .tp-track i{background:linear-gradient(90deg,#F2B632,#FF8A00)}
+.tp-rows li.gain{animation:tpgain .9s}
+@keyframes tpgain{0%{box-shadow:0 0 0 0 rgba(43,118,83,.6)}40%{box-shadow:0 0 0 8px rgba(43,118,83,.15);transform:scale(1.015)}100%{box-shadow:0 0 0 0 rgba(43,118,83,0)}}
+.tp-ok{position:relative}
+.tp-plus{position:absolute;right:-6px;top:-14px;font-style:normal;font-size:18px;font-weight:800;color:var(--green);animation:tpplus 1.2s forwards}
+@keyframes tpplus{0%{opacity:0;transform:translateY(8px) scale(.6)}20%{opacity:1;transform:translateY(0) scale(1.15)}100%{opacity:0;transform:translateY(-22px)}}
+.tp-up{display:block;font-style:normal;font-size:12px;color:var(--green);font-weight:800;animation:tpplus 2s forwards}
+.tp-pos{line-height:1}
+.tp-clock.hurry{color:#E5484D;animation:tpb .8s infinite}
+.tp-run .tp-lb{border-color:#F2B632;box-shadow:0 0 0 3px rgba(242,182,50,.18),var(--shadow)}
+.tp-toast{position:sticky;top:8px;z-index:3;text-align:center;font-size:24px;font-weight:700;height:0;opacity:0;pointer-events:none}
+.tp-toast.show{animation:tptoast 2.6s}
+@keyframes tptoast{0%{opacity:0;transform:translateY(-10px) scale(.9)}12%{opacity:1;transform:none}80%{opacity:1}100%{opacity:0}}
+.tp-toast b{color:#B7791F}
+.tp-toast:not(:empty){background:none}
+.tp-toast.show{height:auto;padding:10px 14px;margin:0 0 10px;border-radius:14px;background:#FFF3C4;border:2px solid #F2B632}
+.tp-feed{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}.tp-feed:empty{display:none}
+.tp-feed div.new{color:var(--ink);animation:tpfeed .5s}.tp-feed b{color:var(--ink)}
+@keyframes tpfeed{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+.tp-podium{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:end;margin:4px 0 16px}
+.tp-podium .pd{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.tp-podium .pn{font-weight:800;font-size:22px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tp-podium .ps{font-size:14px;color:var(--muted)}
+.tp-podium .pb{width:100%;border-radius:14px 14px 4px 4px;display:grid;place-items:center;font-size:44px;animation:tprise .9s cubic-bezier(.2,.8,.2,1) both}
+.tp-podium .pd1 .pb{height:150px;background:linear-gradient(#FFD45C,#F2B632)}.tp-podium .pd2 .pb{height:110px;background:linear-gradient(#E3E7ED,#B8C0CC);animation-delay:.25s}.tp-podium .pd3 .pb{height:80px;background:linear-gradient(#F3C49B,#D9965B);animation-delay:.45s}
+.tp-podium .pd1 .pn{font-size:28px}
+@keyframes tprise{from{transform:scaleY(0);transform-origin:bottom}to{transform:scaleY(1);transform-origin:bottom}}
+.tp-confetti{position:fixed;inset:0;z-index:200;pointer-events:none}
+.tp-qrbig{position:fixed;inset:0;z-index:150;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px}
+.tp-qrbox{width:min(86vh,92vw);aspect-ratio:1}.tp-qrbox svg{width:100%;height:100%;display:block}
+.tp-qrcap{font-size:22px;font-weight:700;color:#17243C}
+.tp-qrx{position:absolute;top:16px;right:16px;width:56px;height:56px;border-radius:50%;border:1px solid #D3DCE9;background:#fff;color:#17243C;font-size:26px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tp-rows li.top1{background:linear-gradient(90deg,#4a3a0c,#2a2410)}:root:not([data-theme="light"]) .tp-rows li.top2{background:linear-gradient(90deg,#2b3240,#1d2230)}:root:not([data-theme="light"]) .tp-rows li.top3{background:linear-gradient(90deg,#43291a,#2a1d14)}:root:not([data-theme="light"]) .tp-toast.show{background:#3a3110}}
+:root[data-theme="dark"] .tp-rows li.top1{background:linear-gradient(90deg,#4a3a0c,#2a2410)}:root[data-theme="dark"] .tp-rows li.top2{background:linear-gradient(90deg,#2b3240,#1d2230)}:root[data-theme="dark"] .tp-rows li.top3{background:linear-gradient(90deg,#43291a,#2a1d14)}:root[data-theme="dark"] .tp-toast.show{background:#3a3110}
 .lt-mask{font:600 22px/1.3 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.04em;color:var(--blue);background:var(--blue-soft);border-radius:10px;padding:8px 12px;white-space:pre-wrap;word-break:break-word}
 .lt-help{margin-left:auto;white-space:nowrap;border:1px solid #E7B23A;background:var(--pg-soft);color:var(--pg-ink);border-radius:9px;font:inherit;font-size:14px;font-weight:700;padding:0 12px;cursor:pointer}
 .lt-help:disabled{opacity:.5;cursor:default}
@@ -3704,30 +3750,72 @@ function tpBoardOpen(code,fresh){
 function tpCtl(st){ const B=TP.b; if(!B) return; B.ctl={st,t:Date.now(),t0:st==="run"?Date.now():(B.ctl&&B.ctl.t0)||0}; B.mq.pub(LT_NS+B.id+"/ctl",JSON.stringify(B.ctl),true); tpBoard(); }
 function tpBoard(){
   const B=TP.b, el=tpEl(), url=ltLink(B.code), st=(B.ctl&&B.ctl.st)||"lobby";
-  el.innerHTML=tpHead()+`<div class="tp-board">
-    <aside class="tp-join"><div class="tp-qr" id="tp-qr"></div><div class="tp-url">${esc(url.replace(/^https?:\/\//,"").replace(/\?lt=.*/,"?lt=…"))}</div>
+  el.innerHTML=tpHead()+`<div class="tp-board tp-${st}">
+    <aside class="tp-join"><button type="button" class="tp-qr" id="tp-qr" data-tp="qrbig" title="Kattalashtirish"></button><div class="tp-url">🔍 QR-kodni bosing — kattalashadi</div>
       <div class="ch-btns"><button type="button" class="btn" data-tp="copy">📋 Havolani nusxalash</button><a class="btn" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent("🎯 Live test: "+ltTitle(B.c))}">📤 Telegram</a></div>
-      <div class="tp-ctl"><div class="tp-st ${st}">${st==="lobby"?"⏳ Kutish — o‘quvchilar qo‘shilmoqda":st==="run"?"▶ Test ketmoqda":"🏁 Test tugadi"}</div>
+      <div class="tp-ctl"><div class="tp-st ${st}">${st==="lobby"?"⏳ Kutish — o‘quvchilar qo‘shilmoqda":st==="run"?"🔥 Musobaqa ketmoqda!":"🏁 Musobaqa tugadi"}</div>
         <div class="tp-clock" id="tp-clock"></div>
         ${st==="lobby"?`<button type="button" class="btn primary tp-big" data-tp="start">▶ Boshlash</button>`:st==="run"?`<button type="button" class="btn tp-big tp-stop" data-tp="stop">⏹ Tugatish</button>`:`<button type="button" class="btn primary" data-tp="again">🎯 Yangi test</button>`}</div>
-      <p class="ch-net">${esc(B.n+" ta so‘z")}${B.c.tm?` · ${B.c.tm} daqiqa`:" · vaqt cheklanmagan"}</p></aside>
-    <section class="tp-lb"><div class="tp-lbh"><h2>${st==="end"?"🏆 Natijalar":"Jonli reyting"}</h2><span id="tp-cnt"></span></div><ol id="tp-rows" class="tp-rows"></ol></section></div>`;
-  ltQr(url); tpBoardDraw(); tpBoardTick();
+      <p class="ch-net">${esc(B.n+" ta so‘z")}${B.c.tm?` · ${B.c.tm} daqiqa`:" · vaqt cheklanmagan"}</p>
+      <div class="tp-feed" id="tp-feed"></div></aside>
+    <section class="tp-lb"><div class="tp-lbh"><h2>${st==="end"?"🏆 G‘oliblar":st==="run"?"🔥 Jonli reyting":"👋 Qo‘shilganlar"}</h2><span id="tp-cnt"></span></div>
+      <div id="tp-pod"></div><div class="tp-toast" id="tp-toast"></div><ol id="tp-rows" class="tp-rows"></ol></section></div>`;
+  B.prevPos=null; ltQr(url,"tp-qr"); tpBoardDraw(); tpBoardTick();
+  if(st==="end" && !B.confetti){ B.confetti=1; setTimeout(ltConfetti,400); }
 }
+function tpFeed(txt){ const f=document.getElementById("tp-feed"), B=TP.b; if(!B) return; B.feed=[txt,...(B.feed||[])].slice(0,6);
+  if(f) f.innerHTML=B.feed.map((t,i)=>`<div class="${i===0?"new":""}">${t}</div>`).join(""); }
+function tpToast(html){ const t=document.getElementById("tp-toast"); if(!t) return; t.innerHTML=html; t.classList.remove("show"); void t.offsetWidth; t.classList.add("show"); }
 function tpBoardDraw(){ const B=TP.b, ol=document.getElementById("tp-rows"); if(!B||!ol) return;
   const L=ltRank(B.players), n=B.n, done=L.filter(p=>p.st==="done").length, st=(B.ctl&&B.ctl.st)||"lobby";
   const cnt=document.getElementById("tp-cnt"); if(cnt) cnt.textContent=`${L.length} o‘quvchi · ${done} tugatdi`;
   if(!L.length){ ol.innerHTML=`<li class="tp-empty">Hali hech kim qo‘shilmadi. QR-kodni skanerlang yoki havolani guruhga tashlang.</li>`; return; }
-  ol.innerHTML=L.map((p,k)=>`<li class="${p.st==="done"?"fin":""}"><span class="tp-pos">${st!=="lobby"&&k<3&&p.ok?["🥇","🥈","🥉"][k]:k+1}</span><span class="tp-nm"><b>${esc(p.n)}</b>
-    <span class="tp-pb"><i style="width:${n?Math.min(100,p.ok/n*100):0}%"></i></span></span>
-    <span class="tp-ok">${st==="lobby"&&p.st==="wait"?"<small>tayyor</small>":`✓ ${ltSc(p.ok)}<small>/${n}</small>`}</span><span class="tp-tm">${p.st==="wait"?"—":ltFmt(p.ms)}${p.st==="done"?" 🏁":p.st==="play"?' <i class="tp-live">●</i>':""}</span></li>`).join(""); }
+  /* o'zgarishlar: ball oshdi, o'rin o'zgardi, yangi lider */
+  const prev=B.prev||{}, now={}, gain={}, move={};
+  L.forEach((p,k)=>{ now[p.id]={ok:p.ok,k}; const o=prev[p.id];
+    if(o){ if(p.ok>o.ok){ gain[p.id]=p.ok-o.ok; } if(st==="run"&&k<o.k) move[p.id]=o.k-k; }
+    else if(st!=="end") tpFeed(`👋 <b>${esc(p.n)}</b> qo‘shildi`); });
+  if(st==="run"){ Object.keys(gain).forEach(id=>{ const p=L.find(x=>x.id===id); if(gain[id]>=1&&p) tpFeed(`⚡ <b>${esc(p.n)}</b> +${ltSc(gain[id])}`); });
+    Object.keys(move).forEach(id=>{ const p=L.find(x=>x.id===id); if(p) tpFeed(`🚀 <b>${esc(p.n)}</b> ${now[id].k+1}-o‘ringa chiqdi`); });
+    const lead=L[0]; if(lead&&lead.ok>0&&B.leader&&B.leader!==lead.id) tpToast(`👑 Yangi lider: <b>${esc(lead.n)}</b>!`); if(lead&&lead.ok>0) B.leader=lead.id;
+    L.forEach(p=>{ if(p.st==="done"&&prev[p.id]&&prev[p.id].st!=="done") tpFeed(`🏁 <b>${esc(p.n)}</b> marraga yetdi!`); }); }
+  L.forEach(p=>{ now[p.id].st=p.st; }); B.prev=now;
+  /* FLIP: eski joylashuv */
+  const first={}; ol.querySelectorAll("li[data-id]").forEach(li=>{ first[li.dataset.id]=li.getBoundingClientRect().top; });
+  const top=Math.max(1,L[0].ok), medal=["🥇","🥈","🥉"];
+  ol.innerHTML=L.map((p,k)=>{ const pct=n?Math.min(100,p.ok/n*100):0, ld=st!=="lobby"&&p.ok>0;
+    return `<li data-id="${esc(p.id)}" class="${p.st==="done"?"fin ":""}${ld&&k<3?"top"+(k+1):""}${gain[p.id]?" gain":""}">
+    <span class="tp-pos">${ld&&k<3?medal[k]:k+1}${move[p.id]?`<i class="tp-up">▲${move[p.id]}</i>`:""}</span>
+    <span class="tp-nm"><b>${ld&&k===0?"👑 ":""}${esc(p.n)}</b>
+      <span class="tp-track"><i style="width:${pct}%"></i><em style="left:${pct}%">${p.st==="done"?"🏁":"🏃"}</em></span></span>
+    <span class="tp-ok">${st==="lobby"&&p.st==="wait"?"<small>tayyor ✋</small>":`${ltSc(p.ok)}<small>/${n}</small>`}${gain[p.id]?`<i class="tp-plus">+${ltSc(gain[p.id])}</i>`:""}</span>
+    <span class="tp-tm">${p.st==="wait"?"—":ltFmt(p.ms)}${p.st==="play"?' <i class="tp-live">●</i>':""}</span></li>`; }).join("");
+  ol.querySelectorAll("li[data-id]").forEach(li=>{ const f=first[li.dataset.id]; if(f==null) return; const d=f-li.getBoundingClientRect().top; if(!d) return;
+    li.style.transform=`translateY(${d}px)`; li.style.transition="none"; requestAnimationFrame(()=>{ li.style.transition="transform .6s cubic-bezier(.2,.8,.2,1)"; li.style.transform=""; }); });
+  /* yakunda shohsupa */
+  const pod=document.getElementById("tp-pod");
+  if(pod){ if(st==="end"&&L[0]&&L[0].ok>0){ const P=[L[1],L[0],L[2]];
+    pod.innerHTML=`<div class="tp-podium">${P.map((p,i)=>p?`<div class="pd pd${[2,1,3][i]}"><div class="pn">${esc(p.n)}</div><div class="ps">${ltSc(p.ok)} ball · ${ltFmt(p.ms)}</div><div class="pb">${medal[[1,0,2][i]]}</div></div>`:`<div class="pd pd${[2,1,3][i]} empty"></div>`).join("")}</div>`; }
+    else pod.innerHTML=""; }
+}
 function tpBoardTick(){ const B=TP.b; if(!B) return; const c=document.getElementById("tp-clock"), ctl=B.ctl;
-  if(ctl&&ctl.st==="run"&&ctl.t0){ const dl=B.c.tm?ctl.t0+B.c.tm*60000:0; if(c) c.textContent= dl? ltFmt(dl-Date.now()) : ltFmt(Date.now()-ctl.t0);
+  if(ctl&&ctl.st==="run"&&ctl.t0){ const dl=B.c.tm?ctl.t0+B.c.tm*60000:0, left=dl-Date.now(); if(c){ c.textContent= dl? ltFmt(left) : ltFmt(Date.now()-ctl.t0); c.classList.toggle("hurry",!!dl&&left<30000); }
     if(dl&&Date.now()>=dl+1500) tpCtl("end"); }
   else if(c) c.textContent=""; }
-function ltQr(url){ const box=document.getElementById("tp-qr"); if(!box) return;
+function ltQr(url,boxId){ const box=document.getElementById(boxId); if(!box) return;
   const draw=()=>{ try{ const q=qrcode(0,"M"); q.addData(url); q.make(); box.innerHTML=q.createSvgTag({cellSize:5,margin:2,scalable:true}); }catch(e){ box.textContent=""; } };
   if(window.qrcode) return draw(); let s=document.getElementById("qr-js"); if(!s){ s=document.createElement("script"); s.id="qr-js"; s.src="files/js/qrcode.js"; document.head.appendChild(s); } s.addEventListener("load",draw); }
+function tpQrBig(on){ let o=document.getElementById("tp-qrbig");
+  if(!on){ if(o) o.remove(); return; } if(!TP.b) return; const url=ltLink(TP.b.code);
+  o=document.createElement("div"); o.id="tp-qrbig"; o.className="tp-qrbig"; o.setAttribute("role","dialog"); o.setAttribute("aria-modal","true");
+  o.innerHTML=`<button type="button" class="tp-qrx" data-tp="qrclose" aria-label="Yopish">✕</button><div class="tp-qrbox" id="tp-qrbox"></div><div class="tp-qrcap">📱 Telefon kamerasi bilan skanerlang</div>`;
+  document.body.appendChild(o); ltQr(url,"tp-qrbox"); }
+/* yakunda konfetti */
+function ltConfetti(){ const cv=document.createElement("canvas"); cv.className="tp-confetti"; document.body.appendChild(cv); const x=cv.getContext("2d");
+  const W=cv.width=innerWidth, H=cv.height=innerHeight, C=["#F2B632","#2B7653","#1F4FA0","#C95F17","#E5484D","#8B5CF6"];
+  const P=Array.from({length:160},()=>({x:Math.random()*W,y:-20-Math.random()*H*.5,r:4+Math.random()*6,c:C[Math.random()*C.length|0],vy:2+Math.random()*3,vx:-1.5+Math.random()*3,a:Math.random()*6,va:-.2+Math.random()*.4}));
+  let t=0; const step=()=>{ x.clearRect(0,0,W,H); P.forEach(p=>{ p.x+=p.vx; p.y+=p.vy; p.a+=p.va; x.save(); x.translate(p.x,p.y); x.rotate(p.a); x.fillStyle=p.c; x.fillRect(-p.r/2,-p.r/4,p.r,p.r/2); x.restore(); });
+    if(++t<260) requestAnimationFrame(step); else cv.remove(); }; step(); }
 /* --- Saytda kim bor --- */
 function tpOnStart(){ if(TP.mqOn) return; TP.on={};
   TP.mqOn=mqMulti(cl=>cl.subscribe(ON_NS+"+",{qos:1}),(t,m)=>{ const pid=t.split("/").pop(); if(!m){ delete TP.on[pid]; } else { try{ const d=JSON.parse(m); if(d&&d.t){ const o=TP.on[pid]; if(!o||d.t>=o.t) TP.on[pid]=d; } }catch(e){} }
@@ -3772,12 +3860,13 @@ document.addEventListener("click",e=>{
   const tg=e.target.closest("[data-tpgame]"); if(tg){ tpBoardOpen(tg.dataset.tpgame,false); return; }
   const t=e.target.closest("[data-tp]"); if(t){ const a=t.dataset.tp;
     if(a==="close") tpClose();
-    else if(a==="back"){ if(TP.b&&TP.b.mq) TP.b.mq.end(); TP.b=null; clearInterval(TP.bT); tpRender(); }
+    else if(a==="back"){ tpQrBig(false); if(TP.b&&TP.b.mq) TP.b.mq.end(); TP.b=null; clearInterval(TP.bT); tpRender(); }
     else if(a==="logout"){ try{ localStorage.removeItem("tch"); }catch(err){} tpClose(); presStart(); }
     else if(a==="tab-lt"){ TP.tab="lt"; tpRender(); } else if(a==="tab-on"){ TP.tab="on"; tpRender(); }
     else if(a==="create") tpCreate();
     else if(a==="start") tpCtl("run"); else if(a==="stop") tpCtl("end");
     else if(a==="again"){ if(TP.b&&TP.b.mq) TP.b.mq.end(); TP.b=null; clearInterval(TP.bT); TP.tab="lt"; tpRender(); }
+    else if(a==="qrbig") tpQrBig(true); else if(a==="qrclose") tpQrBig(false);
     else if(a==="copy"){ const u=ltLink(TP.b.code); (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>{ t.textContent="✓ Nusxalandi"; }).catch(()=>{ prompt("",u); }); }
     return; }
 });
@@ -3789,6 +3878,7 @@ document.addEventListener("submit",e=>{
       else { document.getElementById("tp-err").textContent="Kod noto‘g‘ri"; document.getElementById("tp-code").select(); } }); }
 });
 document.addEventListener("keydown",e=>{
+  if(e.key==="Escape" && document.getElementById("tp-qrbig")){ tpQrBig(false); return; }
   if(e.key==="Escape"){ const t=document.getElementById("tch"); if(t&&!t.hidden){ const b=t.querySelector('[data-tp="back"],[data-tp="close"]'); if(b) b.click(); return; } }
   if(e.key==="Enter" && e.target.id==="lt-name"){ e.preventDefault(); ltpJoin(); }
 });
