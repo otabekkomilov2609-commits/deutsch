@@ -2633,7 +2633,7 @@ function lrnSay(text){
   if(SAYAUD.has(id)){ try{
     try{ const ss=window.speechSynthesis; if(ss&&(ss.speaking||ss.pending)) ss.cancel(); }catch(e){}
     if(lrnAud){ lrnAud.pause(); }
-    const a=new Audio("files/audio/"+id+".mp3"); lrnAud=a;
+    const a=new Audio("files/audio/"+id+".mp3?v=2"); lrnAud=a;
     a.play().catch(()=>{ if(lrnAud===a) ttsSay(t); }); return;
   }catch(e){} }
   ttsSay(t);
