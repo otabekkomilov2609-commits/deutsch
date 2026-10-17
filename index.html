@@ -3683,10 +3683,11 @@ function iasShow(focus){
   if(st.b.img) iamStrips(IAS.my||V.token);
   const inw=document.getElementById("ias-inw"), opts=document.getElementById("ias-opts"), inp=document.getElementById("ias-in");
   const bankEl=document.getElementById("ias-bank"); const bw=st.kind==="g"&&st.bank? st.bank.replace(/\(\d+×\)/g,"").split("·").map(x=>x.trim()).filter(Boolean):[];
+  if(bw.length&&document.activeElement&&document.activeElement.blur) document.activeElement.blur();
   bankEl.innerHTML=bw.map(w=>`<button type="button" class="ias-bw" data-iasw="${esc(w)}">${esc(w)}</button>`).join(""); bankEl.hidden=!bw.length;
-  if(st.kind==="g"){ inw.hidden=false; opts.innerHTML=""; inp.dataset.i=st.i; inp.value=IA.vals[st.i]||""; inp.classList.remove("ok","bad","shake"); inp.rows=it.long?3:1; inp.classList.toggle("long",!!it.long);
+  if(st.kind==="g"){ inw.hidden=bw.length>0; opts.innerHTML=""; inp.dataset.i=st.i; inp.value=IA.vals[st.i]||""; inp.classList.remove("ok","bad","shake"); inp.rows=it.long?3:1; inp.classList.toggle("long",!!it.long);
     if(it.long) inp.placeholder=uz?"Butun gapni yozing…":"Напишите всё предложение…"; else inp.placeholder="";
-    if(focus) setTimeout(()=>{ inp.focus({preventScroll:true}); try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(e){} },30); }
+    if(focus&&!bw.length) setTimeout(()=>{ inp.focus({preventScroll:true}); try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(e){} },30); }
   else { inw.hidden=true;
     const list= st.kind==="o"? st.b.opts : st.b.s.filter(x=>typeof x!=="string"&&x.c===st.i).map(x=>[x.k,x.t]);
     opts.innerHTML=list.map(([k,t])=>`<button type="button" class="ias-opt ${IA.vals[st.i]===k?(iasState(st.i)==="ok"?"ok":IAS.tried[st.i]?"bad":"sel"):""}" data-iaso="${k}">${esc(t||"abcdefgh"[k])}</button>`).join(""); }
