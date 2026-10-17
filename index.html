@@ -235,7 +235,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 /* akkaunt (ism + parol) */
 .acc-chip{border:1px solid var(--line);background:var(--surface);color:var(--blue);border-radius:999px;padding:5px 10px;font-size:13px;font-weight:600;cursor:pointer;max-width:34vw;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-left:auto;margin-right:6px}
 .acc-chip[hidden]{display:none}
-#acc .snd-box{max-width:380px}
+#acc .snd-box{max-width:380px;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow-y:auto}#acc .snd-box>*{flex-shrink:0}
 .acc-lead{margin:0;font-size:15px;line-height:1.4;color:var(--ink)}
 .acc-lb{display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--muted);font-weight:600}
 .acc-pw{position:relative;display:flex}
@@ -246,7 +246,11 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .acc-note{font-size:12.5px;color:var(--muted);line-height:1.35;margin:0}
 .acc-warn{background:#FFF4D4;border:1.5px solid #E7B23A;color:#5a3d00;border-radius:12px;padding:10px 12px;font-size:14px;font-weight:700;line-height:1.35}
 .acc-forgot{align-self:center;font-size:13.5px;color:var(--muted)}
-#acc-f a.btn{text-decoration:none;color:var(--ink)}#acc-f .btn:disabled{opacity:.4;cursor:default}#acc-f .ch-btns .btn{flex:1;text-align:center;padding:9px 10px}
+#acc-f a.btn{text-decoration:none;color:var(--ink)}
+.acc-here{display:flex;flex-direction:column;gap:6px}.acc-here small{font-size:12.5px;color:var(--muted);font-weight:600}.acc-here div{display:flex;flex-wrap:wrap;gap:6px}
+.acc-nm{border:1px solid var(--blue);background:var(--blue-soft);color:var(--blue);border-radius:99px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.acc-hint{font-weight:500;font-size:12px}
+.acc-sim{background:var(--blue-soft);border:1.5px solid var(--blue);border-radius:12px;padding:10px 12px;font-size:14px;font-weight:700;color:var(--ink);display:flex;flex-direction:column;gap:8px}#acc-f .btn:disabled{opacity:.4;cursor:default}#acc-f .ch-btns .btn{flex:1;text-align:center;padding:9px 10px}
 .acc-cred{display:flex;flex-direction:column;gap:8px;background:var(--bg);border:2px dashed #E7B23A;border-radius:14px;padding:12px 14px}
 .acc-cred div{display:flex;flex-direction:column}.acc-cred small{font-size:12px;color:var(--muted);font-weight:600}.acc-cred b{font-size:20px;word-break:break-all}.acc-cred .mono{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:.06em}
 .acc-chk{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;cursor:pointer}.acc-chk input{width:20px;height:20px}
@@ -3615,7 +3619,9 @@ const ACCT={
       login:"Login (ism)", copy:"📋 Nusxalash", copied:"✓ Nusxalandi", tg:"📤 Telegram’ga saqlash", shot:"📸 Yoki ekranni rasmga oling (skrinshot).", chk:"Yozib oldim / saqladim", cont:"Davom etish →",
       tgText:(n,p)=>`Deutsch sayti\nLogin: ${n}\nParol: ${p}`,
       rT:"🔑 Parolni tiklash", rL:"Parolni faqat ustoz tiklaydi. Ustozga ayting — u shu telefonda o‘z kodini kiritadi.", rCode:"Ustoz kodi", rNew:"Yangi parol", rGo:"Parolni tiklash",
-      rNoUser:"Bu telefonda bunday ism bilan ro‘yxatdan o‘tilmagan.", rBadCode:"Ustoz kodi noto‘g‘ri.", back:"← Orqaga"},
+      rNoUser:"Bu telefonda bunday ism bilan ro‘yxatdan o‘tilmagan.", rBadCode:"Ustoz kodi noto‘g‘ri.", back:"← Orqaga",
+      here:"Bu telefonda ro‘yxatdan o‘tganlar — ismingizni bosing:", loginIs:"Login — bu ism va familiyangiz (katta-kichik harf farqi yo‘q).",
+      sim:n=>`Siz avval «${n}» deb ro‘yxatdan o‘tgansiz shekilli. Bu sizmisiz?`, simYes:"Ha, bu men", simNo:"Yo‘q, men yangi o‘quvchiman"},
   ru:{title:"Регистрация", lead:"Чтобы данные сохранялись, введите имя и пароль.", name:"Имя и фамилия", pw:"Пароль", namePh:"Например: Jamila Jamilova", pwPh:"Минимум 4 символа", go:"Войти",
       note:"Ваши результаты (заучивание, ответы в листах) сохраняются на этом телефоне под вашим именем и отправляются учителю. Запомните пароль.",
       eName:"Напишите имя и фамилию полностью", ePw:"Пароль — минимум 4 символа", eWrong:"Неверный пароль. Попробуйте ещё раз.",
@@ -3625,7 +3631,9 @@ const ACCT={
       login:"Логин (имя)", copy:"📋 Копировать", copied:"✓ Скопировано", tg:"📤 Сохранить в Telegram", shot:"📸 Или сделайте скриншот экрана.", chk:"Я записал(а) / сохранил(а)", cont:"Продолжить →",
       tgText:(n,p)=>`Сайт Deutsch\nЛогин: ${n}\nПароль: ${p}`,
       rT:"🔑 Восстановление пароля", rL:"Пароль восстанавливает только учитель. Скажите учителю — он введёт свой код на этом телефоне.", rCode:"Код учителя", rNew:"Новый пароль", rGo:"Восстановить пароль",
-      rNoUser:"На этом телефоне нет ученика с таким именем.", rBadCode:"Неверный код учителя.", back:"← Назад"}
+      rNoUser:"На этом телефоне нет ученика с таким именем.", rBadCode:"Неверный код учителя.", back:"← Назад",
+      here:"Уже зарегистрированы на этом телефоне — нажмите на своё имя:", loginIs:"Логин — это ваши имя и фамилия (регистр не важен).",
+      sim:n=>`Похоже, вы уже зарегистрированы как «${n}». Это вы?`, simYes:"Да, это я", simNo:"Нет, я новый ученик"}
 };
 const at=k=>ACCT[state.lang][k];
 function accUsers(){ try{ return JSON.parse(localStorage.getItem("acc:users")||"{}")||{}; }catch(e){ return {}; } }
@@ -3640,7 +3648,8 @@ function accLogin(){
   const f=document.getElementById("acc-f");
   f.innerHTML=`<div class="snd-h"><h2>${esc(at("title"))}</h2>${accLangRow()}</div>
     <p class="acc-lead">${esc(at("lead"))}</p>
-    <label class="acc-lb">${esc(at("name"))}<input id="acc-name" maxlength="40" autocomplete="name" placeholder="${esc(at("namePh"))}"></label>
+    ${(()=>{ const U=accUsers(), ns=Object.values(U).map(u=>u.name).filter(Boolean).sort((a,b)=>a.localeCompare(b)); return ns.length?`<div class="acc-here"><small>${esc(at("here"))}</small><div>${ns.map(n=>`<button type="button" class="acc-nm" data-accnm="${esc(n)}">👤 ${esc(n)}</button>`).join("")}</div></div>`:""; })()}
+    <label class="acc-lb">${esc(at("name"))}<input id="acc-name" maxlength="40" autocomplete="name" placeholder="${esc(at("namePh"))}"><span class="acc-hint">${esc(at("loginIs"))}</span></label>
     <label class="acc-lb">${esc(at("pw"))}<span class="acc-pw"><input id="acc-pw" type="password" maxlength="40" autocomplete="current-password" placeholder="${esc(at("pwPh"))}"><button type="button" class="acc-eye" data-acc="eye" aria-label="👁">👁</button></span></label>
     <div class="acc-warn">${esc(at("warn"))}</div>
     <div class="acc-st" id="acc-st"></div>
@@ -3673,13 +3682,19 @@ document.addEventListener("submit",async e=>{
   const U=accUsers(), key=accKeyOf(name), first=!Object.keys(U).length;
   if(U[key]){ const hh=await accHash(U[key].s+":"+pw); if(hh!==U[key].h){ st.textContent=at("eWrong"); document.getElementById("acc-pw").select(); return; }
     try{ localStorage.setItem("acc:cur",key); }catch(err){} location.reload(); return; }
+  /* o'xshash ism bormi? (familiya-ism o'rni almashgan yoki 1-2 harf farq) */
+  if(!ACC_NEWOK){ const words=k=>k.split("_").filter(Boolean).sort().join("_");
+    const sim=Object.entries(U).find(([k,u])=>words(k)===words(key)||(Math.abs(k.length-key.length)<=2&&accLev(k,key)<=2));
+    if(sim){ st.className="acc-st"; st.innerHTML=`<div class="acc-sim">${esc(at("sim")(sim[1].name))}<div class="ch-btns"><button type="button" class="btn primary" data-accnm="${esc(sim[1].name)}">${esc(at("simYes"))}</button><button type="button" class="btn" data-acc="newok">${esc(at("simNo"))}</button></div></div>`; return; } }
   /* yangi akkaunt: avval login/parolni yozib olishni qattiq eslatamiz */
   accSaveScreen(name,pw,async()=>{ const U2=accUsers(), s=Math.random().toString(36).slice(2,10); U2[key]={name, s, h:await accHash(s+":"+pw), d:new Date().toISOString().slice(0,10)};
     try{ localStorage.setItem("acc:users",JSON.stringify(U2)); localStorage.setItem("acc:cur",key); }catch(err){}
     if(first) accMigrate(key); location.reload(); });
 });
 /* Login/parolni yozib olish eslatmasi (yangi akkaunt va parol tiklanganda) — 2026-10-18 */
-let ACC_SAVE=null;
+let ACC_SAVE=null, ACC_NEWOK=false;
+function accLev(a,b){ const d=Array.from({length:a.length+1},(_,i)=>[i]); for(let j=1;j<=b.length;j++) d[0][j]=j;
+  for(let i=1;i<=a.length;i++) for(let j=1;j<=b.length;j++) d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1)); return d[a.length][b.length]; }
 function accSaveScreen(name,pw,done){ ACC_SAVE=done; const f=document.getElementById("acc-f");
   f.innerHTML=`<div class="snd-h"><h2>${esc(at("saveT"))}</h2></div>
     <p class="acc-lead">${esc(at("saveL"))}</p>
@@ -3708,9 +3723,11 @@ async function accReset(){ const st=document.getElementById("acc-rst"), name=(do
     try{ localStorage.setItem("acc:users",JSON.stringify(U2)); localStorage.setItem("acc:cur",key); }catch(err){} location.reload(); }); }
 document.addEventListener("click",e=>{
   const lg=e.target.closest("[data-acclang]"); if(lg){ const b=document.getElementById("lang-"+lg.dataset.acclang); if(b) b.click(); const nm=document.getElementById("acc-name"), v=nm?nm.value:""; accLogin(); const n2=document.getElementById("acc-name"); if(n2) n2.value=v; return; }
+  const an=e.target.closest("[data-accnm]"); if(an){ const i=document.getElementById("acc-name"); if(i){ i.value=an.dataset.accnm; const st=document.getElementById("acc-st"); if(st){ st.textContent=""; } const pw=document.getElementById("acc-pw"); if(pw) pw.focus(); } return; }
   const a=e.target.closest("[data-acc]"); if(a){ const k=a.dataset.acc;
     if(k==="eye"){ const p=document.getElementById("acc-pw"); p.type=p.type==="password"?"text":"password"; }
     else if(k==="close"){ accEl().hidden=true; }
+    else if(k==="newok"){ ACC_NEWOK=true; document.getElementById("acc-f").requestSubmit(); }
     else if(k==="forgot") accForgot(); else if(k==="rback") accLogin(); else if(k==="rgo") accReset();
     else if(k==="saved"){ if(document.getElementById("acc-ok").checked && ACC_SAVE) ACC_SAVE(); }
     else if(k==="ccopy"){ const t=a.dataset.t; (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{ a.textContent=at("copied"); }).catch(()=>{ prompt("",t); }); }
