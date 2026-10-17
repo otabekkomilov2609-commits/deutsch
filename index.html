@@ -148,8 +148,8 @@ main{padding-block:6px 40px}
 .lrn-keys{display:flex;gap:6px}.lrn-key{width:42px;height:38px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font:inherit;font-size:17px;cursor:pointer}
 .lrn-row2{display:flex;justify-content:space-between;align-items:center;gap:10px}.lrn-row2 .btn{padding:10px 18px;font-size:15px;cursor:pointer}
 .lrn-fb:empty{display:none}.lrn-fb{border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}
-.lrn-fb.ok{background:var(--green-soft)}.lrn-fb.bad{background:#FDECEC;color:#3a1515}
-.lrn-v{font-weight:800;font-size:17px}.lrn-fb.ok .lrn-v{color:var(--green)}.lrn-fb.bad .lrn-v{color:#C62828}
+.lrn-fb.ok{background:var(--green-soft)}.lrn-fb.bad{background:#FDECEC;color:#3a1515}.lrn-fb.near{background:#FFF6D6;color:#3a2e05}
+.lrn-v{font-weight:800;font-size:17px}.lrn-fb.ok .lrn-v{color:var(--green)}.lrn-fb.bad .lrn-v{color:#C62828}.lrn-fb.near .lrn-v{color:#A16207}
 .lrn-note{font-size:14px}.lrn-yours{font-size:14px}.lrn-ans{font-size:18px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}.lrn-ans small{width:100%;font-size:12.5px;opacity:.8}
 .lrn-ex{font-size:14.5px;font-style:italic;opacity:.9}
 .lrn-say{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:2px 8px;font-size:15px;cursor:pointer}
@@ -161,6 +161,8 @@ main{padding-block:6px 40px}
 .lrn-no{border-color:#E3B6B6;color:#C62828}.lrn-yes{border-color:var(--green);color:var(--green)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lrn-fb.bad,:root:not([data-theme="light"]) .lrn-opt.bad{background:#3a1d1d;color:inherit}}
 :root[data-theme="dark"] .lrn-fb.bad,:root[data-theme="dark"] .lrn-opt.bad{background:#3a1d1d;color:inherit}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lrn-fb.near{background:#3a3110;color:inherit}:root:not([data-theme="light"]) .lrn-fb.near .lrn-v{color:#F5C542}}
+:root[data-theme="dark"] .lrn-fb.near{background:#3a3110;color:inherit}:root[data-theme="dark"] .lrn-fb.near .lrn-v{color:#F5C542}
 .sol{border:1px dashed var(--line);background:none;border-radius:8px;font-size:12px;font-weight:600;padding:4px 8px;color:var(--muted);white-space:nowrap}
 .sol:hover{color:var(--ink);border-color:var(--ink)}
 .recent .mat{flex-direction:column}
@@ -2605,7 +2607,7 @@ const LT={
       learn:"🧠 Lernen", learnD:"Test + yozish. Har so‘z 2 marta to‘g‘ri topilsa — o‘rganildi.", cards:"🃏 Karteikarten", cardsD:"Kartani bosing — tarjimasi chiqadi.",
       learned:(a,b)=>`${a} / ${b} o‘rganildi`, choose:"To‘g‘ri tarjimani tanlang", chooseP:"To‘g‘ri Perfekt shaklini tanlang", writeP:"Perfekt shaklini yozing", write:"Nemischa yozing", ph:"Nemischa…", check:"Tekshirish", dunno:"Bilmayman",
       right:["Zo‘r!","To‘g‘ri!","Barakalla!","Ajoyib!","Super!"], wrong:"Xato", correct:"To‘g‘ri javob:", yours:"Sizning javobingiz:", next:"Davom etish", override:"Men to‘g‘ri yozganman",
-      caseNote:"Katta-kichik harfga e’tibor bering.", artNote:"Artikl (der/die/das) ham kerak!", almost:"Deyarli! Bitta harf xato.",
+      caseNote:"Katta-kichik harfga e’tibor bering.", artNote:"Artikl (der/die/das) ham kerak!", almost:"Bitta harf xato.", near:"Deyarli!", umlNote:"ä / ö / ü / ß ga e’tibor bering.", artWrong:"Artikl xato (der / die / das).",
       roundDone:"Raund tugadi!", roundRes:(a,b)=>`${b} savoldan ${a} tasiga to‘g‘ri javob berdingiz.`, cont:"Keyingi raund", allDone:"Hamma so‘zlar o‘rganildi! 🎉", restart:"Qaytadan boshlash", back:"Lektion tanlash",
       know:"Bilaman ✓", dontknow:"Bilmayman ✗", tap:"Bosing — aylanadi", cardsDone:"Hammasini bilasiz! 🎉", left:n=>`${n} ta qoldi`, reset:"Natijani o‘chirish", sel0:"Kamida bitta Lektion tanlang", example:"Misol",
       knownN:n=>`🃏 Kartalarda ${n} ta so‘zni «Bilaman» degansiz`, chk:"✅ Bilganlarimni tekshirish", chkD:"Kartada «Bilaman» degan so‘zlar — test + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", cardsAll:"Bu Lektionlardagi hamma kartalarni «Bilaman» degansiz.", cardsReset:"Kartalarni boshidan boshlash", chkDone:"Bilgan so‘zlaringizni tekshirib bo‘ldingiz! 🎉"},
@@ -2613,7 +2615,7 @@ const LT={
       learn:"🧠 Заучивание", learnD:"Тест + письмо. Слово выучено после 2 верных ответов.", cards:"🃏 Карточки", cardsD:"Нажмите на карточку — появится перевод.",
       learned:(a,b)=>`${a} / ${b} выучено`, choose:"Выберите правильный перевод", chooseP:"Выберите правильную форму Perfekt", writeP:"Напишите форму Perfekt", write:"Напишите по-немецки", ph:"По-немецки…", check:"Проверить", dunno:"Не знаю",
       right:["Отлично!","Верно!","Молодец!","Супер!","Здорово!"], wrong:"Неверно", correct:"Правильный ответ:", yours:"Ваш ответ:", next:"Дальше", override:"Я ответил(а) правильно",
-      caseNote:"Обратите внимание на большие и маленькие буквы.", artNote:"Нужен ещё артикль (der/die/das)!", almost:"Почти! Ошибка в одной букве.",
+      caseNote:"Обратите внимание на большие и маленькие буквы.", artNote:"Нужен ещё артикль (der/die/das)!", almost:"Ошибка в одной букве.", near:"Почти!", umlNote:"Обратите внимание на ä / ö / ü / ß.", artWrong:"Неверный артикль (der / die / das).",
       roundDone:"Раунд окончен!", roundRes:(a,b)=>`Верно: ${a} из ${b}.`, cont:"Следующий раунд", allDone:"Все слова выучены! 🎉", restart:"Начать заново", back:"Выбрать уроки",
       know:"Знаю ✓", dontknow:"Не знаю ✗", tap:"Нажмите — перевернётся", cardsDone:"Вы знаете все! 🎉", left:n=>`Осталось: ${n}`, reset:"Сбросить прогресс", sel0:"Выберите хотя бы один урок", example:"Пример",
       knownN:n=>`🃏 На карточках вы отметили «Знаю»: ${n}`, chk:"✅ Проверить, что я знаю", chkD:"Слова с отметкой «Знаю» — тест + письмо. Ошибся — слово вернётся в карточки.", cardsAll:"Все карточки этих уроков отмечены «Знаю».", cardsReset:"Начать карточки заново", chkDone:"Вы проверили все знакомые слова! 🎉"}
@@ -2786,21 +2788,25 @@ function lrnVariants(de){
   out.delete(""); return [...out];
 }
 function lrnLev(a,b){ if(Math.abs(a.length-b.length)>1) return 9; const d=Array.from({length:a.length+1},(_,i)=>[i]); for(let j=1;j<=b.length;j++) d[0][j]=j;
-  for(let i=1;i<=a.length;i++) for(let j=1;j<=b.length;j++) d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1)); return d[a.length][b.length]; }
+  for(let i=1;i<=a.length;i++) for(let j=1;j<=b.length;j++) { d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1)); if(i>1&&j>1&&a[i-1]===b[j-2]&&a[i-2]===b[j-1]) d[i][j]=Math.min(d[i][j],d[i-2][j-2]+1); } return d[a.length][b.length]; }
 function lrnJudge(inp, x){
   const u=lrnNorm(inp); if(!u) return {ok:false};
   const vs=lrnVariants(x.de);
   if(vs.includes(u)) return {ok:true};
   if(vs.some(v=>v.toLowerCase()===u.toLowerCase())) return {ok:true, note:lt("caseNote")};
-  if(vs.some(v=>/^(der|die|das) /.test(v) && v.replace(/^(der|die|das) /,"").toLowerCase()===u.toLowerCase())) return {ok:false, note:lt("artNote")};
-  if(vs.some(v=>v.length>5 && lrnLev(v.toLowerCase(),u.toLowerCase())===1)) return {ok:false, note:lt("almost"), close:true};
+  if(vs.some(v=>/^(der|die|das) /.test(v) && v.replace(/^(der|die|das) /,"").toLowerCase()===u.toLowerCase())) return {ok:false, note:lt("artNote"), close:true};
+  const fold=s=>s.toLowerCase().replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss").replace(/ae/g,"a").replace(/oe/g,"o").replace(/ue/g,"u");
+  if(vs.some(v=>fold(v)===fold(u))) return {ok:false, note:lt("umlNote"), close:true};
+  if(vs.some(v=>v.length>3 && lrnLev(v.toLowerCase(),u.toLowerCase())===1)) return {ok:false, note:lt("almost"), close:true};
+  if(vs.some(v=>/^(der|die|das) /.test(v) && /^(der|die|das) /.test(u) && v.slice(4).toLowerCase()===u.slice(4).toLowerCase())) return {ok:false, note:lt("artWrong"), close:true};
   return {ok:false};
 }
 function lrnFeedback(ok, x, extra){
   const fb=document.getElementById("lrn-fb"); LR.answered=true;
   const praise=lt("right")[Math.floor(Math.random()*lt("right").length)];
-  fb.className="lrn-fb "+(ok?"ok":"bad");
-  fb.innerHTML=`<div class="lrn-v">${ok?"✓ "+esc(praise):"✗ "+esc(lt("wrong"))}</div>
+  const near=!ok&&extra&&extra.close;
+  fb.className="lrn-fb "+(ok?"ok":near?"near":"bad");
+  fb.innerHTML=`<div class="lrn-v">${ok?"✓ "+esc(praise):near?"≈ "+esc(lt("near")):"✗ "+esc(lt("wrong"))}</div>
     ${extra&&extra.note?`<div class="lrn-note">${esc(extra.note)}</div>`:""}
     ${extra&&extra.yours!=null&&!ok?`<div class="lrn-yours">${esc(lt("yours"))} <s>${esc(extra.yours||"—")}</s></div>`:""}
     <div class="lrn-ans">${ok?"":`<small>${esc(lt("correct"))}</small>`}<b>${esc(x.full)}</b> <button type="button" class="lrn-say" data-say="${esc(x.say||x.de)}" aria-label="🔊">🔊</button></div>
@@ -2881,7 +2887,7 @@ document.addEventListener("change",e=>{ if(e.target.matches('#lrn [data-l="redem
 document.addEventListener("submit",e=>{
   if(e.target.id!=="lrn-wr") return; e.preventDefault(); if(LR.answered) return;
   const i=document.getElementById("lrn-in"), v=i.value; if(!lrnNorm(v)){ i.focus(); return; }
-  const j=lrnJudge(v, LR.cur); i.disabled=true; lrnMark(j.ok); lrnFeedback(j.ok, LR.cur, {note:j.note, yours:v});
+  const j=lrnJudge(v, LR.cur); i.disabled=true; lrnMark(j.ok); lrnFeedback(j.ok, LR.cur, {note:j.note, yours:v, close:j.close});
 });
 document.addEventListener("keydown",e=>{
   const root=lrnEl(); if(!root||root.hidden) return;
