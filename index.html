@@ -292,6 +292,54 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .rk-n{text-align:right}.rk-n b{font-size:20px;font-variant-numeric:tabular-nums;color:var(--ink)}.rk-n span{display:block;font-size:11px;color:var(--muted)}
 .rk-empty{padding:22px;text-align:center;color:var(--muted)}
 .rk-net{font-size:12.5px;color:var(--muted)}
+/* 🎓 Ustoz paneli + 🎯 Live test — 2026-10-18 */
+.tch-btn{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:5px 10px;font-size:13px;font-weight:600;cursor:pointer;flex-shrink:0;margin-right:6px;white-space:nowrap}
+.acc-chip[hidden]+.tch-btn{margin-left:auto}
+@media (max-width:480px){.tch-btn .tl{display:none}}
+.tp-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:14px 16px 0;max-width:760px;width:100%;margin:0 auto}
+.tp-join a.btn,.tp-join .btn{text-decoration:none;color:var(--ink);flex:1;text-align:center;justify-content:center}.tp-join .btn.primary{color:var(--surface)}
+.tp-tabs button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.tp-tabs button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:var(--surface)}
+.tp-badge{display:inline-block;min-width:20px;padding:0 6px;border-radius:99px;background:var(--green);color:#fff;font-size:12px;text-align:center;margin-left:4px}
+.tp-body{max-width:760px}
+.tp-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14px;font-weight:600}
+.tp-seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tp-seg button{border:0;border-left:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:14px;padding:8px 12px;cursor:pointer}
+.tp-seg button:first-child{border-left:0}.tp-seg button[aria-pressed="true"]{background:var(--blue);color:var(--surface)}
+.tp-games{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}.tp-games li{display:flex;justify-content:space-between;gap:10px;align-items:baseline}.tp-games small{color:var(--muted);white-space:nowrap}
+.tp-board{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:18px;padding:18px;max-width:1400px;width:100%;margin:0 auto}
+@media (max-width:820px){.tp-board{grid-template-columns:1fr}}
+.tp-join{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow);align-self:start}
+.tp-qr{background:#fff;border-radius:12px;padding:6px;aspect-ratio:1;width:100%;max-width:300px;margin:0 auto}.tp-qr svg{width:100%;height:100%;display:block}
+.tp-url{font-size:13px;color:var(--muted);text-align:center;word-break:break-all}
+.tp-ctl{display:flex;flex-direction:column;gap:10px;align-items:stretch;border-top:1px dashed var(--line);padding-top:12px}
+.tp-st{font-weight:700;font-size:15px}.tp-st.run{color:var(--green)}.tp-st.end{color:var(--orange)}
+.tp-clock{font:700 46px/1 var(--sans);text-align:center;font-variant-numeric:tabular-nums;color:var(--ink)}.tp-clock:empty{display:none}
+.tp-big{font-size:20px!important;padding:14px!important}
+.tp-stop{border-color:#C62828;color:#C62828}
+.tp-lb{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px;box-shadow:var(--shadow);min-width:0}
+.tp-lbh{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.tp-lb h2{margin:0 0 10px;font-family:var(--hand);font-weight:400;font-size:38px;color:var(--blue)}
+.tp-lbh span{color:var(--muted);font-weight:600}
+.tp-rows{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.tp-rows li{display:grid;grid-template-columns:48px 1fr auto 92px;gap:12px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--bg);font-size:20px}
+.tp-rows li.fin{background:var(--green-soft)}
+.tp-pos{font-weight:800;text-align:center;font-size:22px;color:var(--muted)}
+.tp-nm{min-width:0;display:flex;flex-direction:column;gap:6px}.tp-nm b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tp-pb{height:8px;border-radius:99px;background:var(--line);overflow:hidden}.tp-pb i{display:block;height:100%;background:var(--blue);border-radius:99px;transition:width .5s}
+.tp-ok{font-weight:800;font-variant-numeric:tabular-nums;color:var(--green)}.tp-ok small{font-size:14px;color:var(--muted);font-weight:600}
+.tp-tm{font-variant-numeric:tabular-nums;color:var(--muted);font-size:17px;text-align:right}
+.tp-live{color:#E5484D;font-style:normal;font-size:12px;animation:tpb 1.2s infinite}@keyframes tpb{50%{opacity:.25}}
+.tp-empty{color:var(--muted);padding:18px;text-align:center;font-size:16px!important;display:block!important;background:none!important}
+@media (max-width:560px){.tp-rows li{grid-template-columns:34px 1fr auto;font-size:16px}.tp-tm{grid-column:2/-1;text-align:left;font-size:13px;margin-top:-4px}}
+.tp-on{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.tp-on li{display:grid;grid-template-columns:32px 1fr auto;gap:10px;align-items:center;padding:10px 2px;border-top:1px solid var(--line)}.tp-on li:first-child{border-top:0}
+.tp-av{font-size:20px;text-align:center}.tp-on .tp-nm{gap:2px}.tp-on .tp-nm span{font-size:13px;color:var(--muted)}
+.tp-meta{display:flex;flex-direction:column;align-items:flex-end;font-size:13px;font-weight:700}.tp-meta small{font-weight:500;color:var(--muted)}
+.lt-wait{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:14px 0}.lt-wait span{color:var(--muted);font-size:14px}
+.lt-dots{display:flex;gap:6px}.lt-dots i{width:10px;height:10px;border-radius:50%;background:var(--blue);animation:ltd 1s infinite}.lt-dots i:nth-child(2){animation-delay:.15s}.lt-dots i:nth-child(3){animation-delay:.3s}@keyframes ltd{50%{opacity:.2;transform:translateY(-4px)}}
+.lt-mis{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}.lt-mis li{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;font-size:15px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+.lt-mis span{color:var(--muted)}.lt-mis b{color:var(--green)}.lt-mis s{color:#C62828}
 .lrn-mode.kchk{grid-column:1/-1;border-color:var(--green);background:#ECF8F0}.lrn-mode.kchk b{color:var(--green)}.lrn-kc{margin:0;font-size:13px;color:var(--muted)}
 .lrn-mode.chal{grid-column:1/-1;border-color:#C2410C;background:#FFF1E8}.lrn-mode.chal b{color:#C2410C}
 .ch-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
@@ -444,6 +492,7 @@ mark.trm.bad sup{color:#C62828}
     <div class="top">
       <span class="eyebrow">Momente A1 · A2</span>
       <button type="button" class="acc-chip" id="acc-chip" hidden></button>
+      <button type="button" class="tch-btn" id="tch-btn" title="Ustoz">🎓<span class="tl"> Ustoz</span></button>
       <div class="lang" role="group" aria-label="Til">
         <button id="lang-uz" data-lang="uz" aria-pressed="true">UZ</button>
         <button id="lang-ru" data-lang="ru" aria-pressed="false">RU</button>
@@ -3350,7 +3399,7 @@ function accLern(){
 }
 const ACC_OK=(()=>{ try{ localStorage.setItem("acc:t","1"); localStorage.removeItem("acc:t"); return true; }catch(e){ return false; } })();
 accChip();
-if(!ACC.cur && ACC_OK && !new URLSearchParams(location.search).get("ch")) accLogin();
+if(!ACC.cur && ACC_OK && !new URLSearchParams(location.search).get("ch") && !new URLSearchParams(location.search).get("lt") && !tchOk()) accLogin();
 /* ===== ⚡ Challenge (Kahoot challenge'ga o'xshash) — 2026-10-17 =====
    Havola ?ch=<kod>: ro'yxat + Lektionlar + seed. Hamma bir xil savollarni oladi.
    Natijalar jonli: ochiq MQTT broker (WebSocket), har o'yinchi o'z natijasini "retained" xabar qilib yuboradi. */
@@ -3436,6 +3485,283 @@ function rankClose(){ RK.open=false; RK.cli.forEach(c=>{ try{ c.end(true); }catc
 document.addEventListener("click",e=>{ if(e.target.closest("[data-rank]")){ rankOpen(); return; } if(e.target.closest('[data-rk="close"]')) rankClose(); });
 document.addEventListener("keydown",e=>{ if(e.key==="Escape" && RK.open) rankClose(); });
 setTimeout(()=>{ try{ rankSync(); }catch(e){} },2500);
+/* ===== 🎓 Ustoz paneli: 🎯 Live test + 👀 Saytda kim bor — 2026-10-18 =====
+   Live test: ustoz test yaratadi (ro'yxat + Lektionlar + so'zlar soni + vaqt), doskada jonli natijalar,
+   o'quvchilar ?lt=<kod> havolasi orqali kiradi va faqat nemischa yozadi. Reyting: to'g'ri javoblar, keyin vaqt.
+   Saytda kim bor: har tashrifchi (ustozdan tashqari) ochiq MQTT brokerga "retained" holat yuboradi; chiqib ketganda o'chadi.
+   Hammasi ochiq MQTT broker orqali (serversiz). Kod tekshiruvi brauzerda — jiddiy himoya emas. */
+const LT_NS="otabek-deutsch/lt1/", ON_NS="otabek-deutsch/on1/";
+const TCH_H="33dfc2422f82ed5675d6be3862f58c0de5cb4b6b9a122d95119274c87b7f8d2c";
+function tchOk(){ try{ return localStorage.getItem("tch")===TCH_H; }catch(e){ return false; } }
+/* bir nechta brokerga bir vaqtda ulanish */
+function mqMulti(onConn, onMsg, optsFor){
+  const C=[]; let alive=true;
+  chLib(()=>{ if(!window.mqtt||!alive) return; CH_BROKERS.forEach(u=>{ try{
+    const c=window.mqtt.connect(u,Object.assign({clientId:"ot_"+Math.random().toString(36).slice(2,10),clean:true,connectTimeout:8000,reconnectPeriod:4000,keepalive:30},optsFor?optsFor(u):{}));
+    C.push(c); c.on("connect",()=>{ if(onConn) onConn(c); }); c.on("message",(t,b)=>{ if(onMsg) onMsg(t,b.toString()); }); c.on("error",()=>{});
+  }catch(e){} }); });
+  return { pub(t,m,r){ C.forEach(c=>{ try{ if(c.connected) c.publish(t,m,{qos:1,retain:!!r}); }catch(e){} }); },
+           end(){ alive=false; C.forEach(c=>{ try{ c.end(true); }catch(e){} }); }, ok(){ return C.some(c=>c.connected); } };
+}
+function ltFmt(ms){ ms=Math.max(0,ms|0); const s=Math.round(ms/1000); return Math.floor(s/60)+":"+String(s%60).padStart(2,"0"); }
+function ltListId(h){ return Object.keys(lernData()).find(k=>chHash(k)===h); }
+function ltPool(c){ const id=ltListId(c.l), D=id&&lernData()[id]; if(!D) return [];
+  const seen=new Set(); return D.it.map((r,i)=>({i,l:r[0],de:r[3],q:r[4],red:r[6]})).filter(x=>{ if(!x.q||x.red||!c.s.includes(x.l)||x.de.length>40||/[…·]/.test(x.de)||seen.has(x.de)) return false; seen.add(x.de); return true; }); }
+function ltQs(c){ return chShuf(ltPool(c),chRng(c.r)).slice(0,c.n); }
+function ltTitle(c){ const id=ltListId(c.l), m=byId[id], D=lernData()[id]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:"")+" · "+c.s.map(lab).join(", "); }
+function ltLink(code){ return (/github\.io$/.test(location.hostname)||!/claude/.test(location.hostname)&&location.protocol!=="file:" ? location.origin+location.pathname : CH_SITE)+"?lt="+code; }
+function ltRank(P){ return Object.entries(P).map(([id,p])=>({id,...p})).sort((a,b)=>(b.ok-a.ok)||((a.ms||0)-(b.ms||0))); }
+const LTUZ={uz:{t:"🎯 Live test", nm:"Ismingiz", nmPh:"Ism va familiya", join:"Qo‘shilish", wait:"Ustoz testni boshlashini kuting…", joined:n=>`${n} kishi qo‘shildi`,
+    write:"Nemischa yozing", ph:"Nemischa…", check:"Tekshirish", skip:"O‘tkazib yuborish →", ok:"To‘g‘ri!", near:"Deyarli!", bad:"Xato", corr:"To‘g‘ri javob:",
+    done:"Test tugadi!", res:(o,n)=>`✓ ${o} / ${n} to‘g‘ri`, place:(a,b)=>`${a}-o‘rin (${b} kishidan)`, mist:"Xatolaringiz", board:"Natijalar", ended:"Bu test tugagan.",
+    bad1:"Havola noto‘g‘ri yoki eskirgan.", art:"Otni artikl bilan yozing: der / die / das", net0:"⏳ Ulanmoqda…", net1:"🟢 Ulandi", netBad:"🔴 Ulanib bo‘lmadi", force:"Baribir boshlash", you:"siz", rules:(n,m)=>`${n} ta so‘z · faqat nemischa yozasiz${m?` · ${m} daqiqa`:""}`, errNm:"Ismingizni yozing"},
+  ru:{t:"🎯 Live-тест", nm:"Ваше имя", nmPh:"Имя и фамилия", join:"Присоединиться", wait:"Ждите, пока учитель начнёт тест…", joined:n=>`Присоединились: ${n}`,
+    write:"Напишите по-немецки", ph:"По-немецки…", check:"Проверить", skip:"Пропустить →", ok:"Верно!", near:"Почти!", bad:"Неверно", corr:"Правильный ответ:",
+    done:"Тест окончен!", res:(o,n)=>`✓ ${o} / ${n} верно`, place:(a,b)=>`${a}-е место (из ${b})`, mist:"Ваши ошибки", board:"Результаты", ended:"Этот тест уже окончен.",
+    bad1:"Ссылка неверная или устарела.", art:"Существительное пишите с артиклем: der / die / das", net0:"⏳ Подключение…", net1:"🟢 Подключено", netBad:"🔴 Нет связи", force:"Всё равно начать", you:"вы", rules:(n,m)=>`${n} слов · пишете только по-немецки${m?` · ${m} мин`:""}`, errNm:"Напишите имя"}};
+const lz=k=>LTUZ[state.lang==="ru"?"ru":"uz"][k];
+
+/* ---------- O'quvchi tomoni (?lt=) ---------- */
+const LTP={};
+function ltpEl(){ let e=document.getElementById("ltp"); if(!e){ e=document.createElement("div"); e.id="ltp"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
+function ltpHead(sub){ return `<div class="lrn-bar"><button class="btn" data-lt="close" aria-label="✕">✕</button><div class="lrn-tt"><b>${esc(lz("t"))}</b><small>${esc(ltTitle(LTP.c))}</small></div>${sub||""}</div>`; }
+function ltpSave(){ store.set("lt:"+LTP.id,JSON.stringify({n:LTP.name,ok:LTP.ok,a:LTP.a,sk:LTP.sk,ms:LTP.ms,st:LTP.st,t0:LTP.t0,wr:LTP.wr})); }
+function ltpPub(force){ if(!LTP.mq||!LTP.name) return; const now=Date.now();
+  if(!force && now-(LTP.pubT||0)<500){ clearTimeout(LTP.pubTm); LTP.pubTm=setTimeout(()=>ltpPub(true),500); return; } LTP.pubT=now;
+  if(LTP.st==="play") LTP.ms=now-LTP.t0;
+  LTP.mq.pub(LT_NS+LTP.id+"/p/"+LTP.me, JSON.stringify({n:LTP.name,ok:LTP.ok,a:LTP.a,sk:LTP.sk,ms:LTP.ms||0,st:LTP.st,t:now}), true); }
+function ltOpen(code){
+  let c=null; try{ c=JSON.parse(chB64d(code)); }catch(e){}
+  const el=ltpEl(); el.hidden=false; document.body.style.overflow="hidden";
+  if(!c||!ltListId(c.l)||!ltQs(c).length){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-lt="close">✕</button><div class="lrn-tt"><b>${esc(lz("t"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(lz("bad1"))}</p></div></div>`; return; }
+  let me=store.get("chme"); if(!me){ me=Math.random().toString(36).slice(2,10); store.set("chme",me); }
+  Object.assign(LTP,{c,code,id:chHash(code),qs:ltQs(c),me,players:{},ctl:null,st:"join",ok:0,a:0,sk:0,ms:0,t0:0,wr:[],name:store.get("chname")||ACC.name||""});
+  try{ const s=JSON.parse(store.get("lt:"+LTP.id)||"null"); if(s){ Object.assign(LTP,{name:s.n,ok:s.ok,a:s.a,sk:s.sk,ms:s.ms,st:s.st,t0:s.t0,wr:s.wr||[]}); } }catch(e){}
+  if(LTP.mq) LTP.mq.end();
+  LTP.mq=mqMulti(cl=>{ cl.subscribe(LT_NS+LTP.id+"/ctl",{qos:1}); cl.subscribe(LT_NS+LTP.id+"/p/+",{qos:1}); ltpNet(); ltpPub(true); },(t,m)=>ltpMsg(t,m));
+  clearInterval(LTP.tick); LTP.tick=setInterval(ltpTick,500);
+  LTP.openT=Date.now(); ltpRender();
+}
+function ltpNet(){ const e=document.getElementById("lt-net"); if(e) e.textContent= LTP.mq&&LTP.mq.ok()? lz("net1") : (Date.now()-LTP.openT>10000? lz("netBad") : lz("net0")); }
+function ltpMsg(t,m){
+  if(t.endsWith("/ctl")){ try{ LTP.ctl=m?JSON.parse(m):null; }catch(e){ return; }
+    if(LTP.ctl&&LTP.ctl.st==="run"&&LTP.st==="wait") ltpStart();
+    else if(LTP.ctl&&LTP.ctl.st==="end"&&LTP.st==="play") ltpFinish();
+    else if(LTP.st==="join"||LTP.st==="wait") ltpRender();
+    return; }
+  const pid=t.split("/").pop(); if(!m){ delete LTP.players[pid]; } else { try{ const d=JSON.parse(m); if(d&&typeof d.ok==="number") LTP.players[pid]={n:String(d.n||"?").slice(0,40),ok:d.ok|0,a:d.a|0,ms:d.ms|0,st:d.st}; }catch(e){} }
+  clearTimeout(LTP.bT); LTP.bT=setTimeout(ltpBoard,200);
+}
+function ltpBoardHTML(lim){ const P=Object.assign({},LTP.players); if(LTP.name&&LTP.st!=="join") P[LTP.me]={n:LTP.name,ok:LTP.ok,a:LTP.a,ms:LTP.ms,st:LTP.st};
+  const L=ltRank(P).filter(p=>p.st!=="wait"||LTP.st==="wait"); if(!L.length) return "";
+  let rows=L.slice(0,lim); const mi=L.findIndex(p=>p.id===LTP.me); if(mi>=lim) rows=[...rows.slice(0,lim-1),L[mi]];
+  const medal=k=>k===0?"🥇":k===1?"🥈":k===2?"🥉":String(k+1);
+  return `<ol class="ch-lb">`+rows.map(p=>{ const k=L.indexOf(p); return `<li class="${p.id===LTP.me?"me":""}"><span class="pl">${medal(k)}</span><span class="nm">${esc(p.n)}${p.id===LTP.me?` (${esc(lz("you"))})`:""}</span><span class="sc">${p.ok}</span></li>`; }).join("")+`</ol>`; }
+function ltpBoard(){ const b=document.getElementById("lt-board"); if(b) b.innerHTML=ltpBoardHTML(LTP.st==="done"?40:5);
+  const j=document.getElementById("lt-joined"); if(j) j.textContent=lz("joined")(Object.keys(LTP.players).length+(LTP.st==="wait"&&!LTP.players[LTP.me]?1:0));
+  const r=document.getElementById("lt-place"); if(r){ const P=Object.assign({},LTP.players); P[LTP.me]={n:LTP.name,ok:LTP.ok,ms:LTP.ms,st:LTP.st}; const L=ltRank(P); r.textContent="🏅 "+lz("place")(L.findIndex(p=>p.id===LTP.me)+1,L.length); } }
+function ltpDeadline(){ const c=LTP.c; if(!c.tm) return 0; const t0=(LTP.ctl&&LTP.ctl.t0)||LTP.t0; return t0? t0+c.tm*60000 : 0; }
+function ltpTick(){ ltpNet();
+  if(LTP.st==="play"){ const dl=ltpDeadline(), t=document.getElementById("lt-time");
+    if(t) t.textContent= dl? ltFmt(dl-Date.now()) : ltFmt(Date.now()-LTP.t0);
+    if(dl && Date.now()>=dl) ltpFinish(); }
+  if(LTP.st==="wait" && !(LTP.mq&&LTP.mq.ok()) && Date.now()-LTP.openT>12000){ const f=document.getElementById("lt-force"); if(f) f.hidden=false; }
+}
+function ltpRender(){
+  const el=ltpEl(), c=LTP.c;
+  if(LTP.st==="join"||LTP.st==="wait"){
+    if(LTP.ctl&&LTP.ctl.st==="end"&&LTP.st==="join"){ el.innerHTML=ltpHead()+`<div class="lrn-body"><div class="lrn-card"><h3>${esc(lz("ended"))}</h3></div><div class="lrn-card"><h3>${esc(lz("board"))}</h3><div id="lt-board"></div></div></div>`; ltpBoard(); return; }
+    el.innerHTML=ltpHead()+`<div class="lrn-body"><div class="lrn-card"><h3>${esc(ltTitle(c))}</h3><p class="ch-big">${esc(lz("rules")(LTP.qs.length,c.tm))}</p>
+      ${LTP.st==="join"?`<label class="acc-lb">${esc(lz("nm"))}<input class="ch-in" id="lt-name" maxlength="30" placeholder="${esc(lz("nmPh"))}" value="${esc(LTP.name)}"></label><div class="acc-st err" id="lt-err"></div>
+      <button type="button" class="btn primary" data-lt="join">${esc(lz("join"))} →</button>`
+      :`<div class="lt-wait"><div class="lt-dots"><i></i><i></i><i></i></div><b>${esc(lz("wait"))}</b><span id="lt-joined"></span></div><button type="button" class="btn" data-lt="force" id="lt-force" hidden>${esc(lz("force"))}</button>`}
+      <p class="ch-net" id="lt-net"></p></div></div>`;
+    ltpNet(); ltpBoard(); if(LTP.st==="join") setTimeout(()=>{ const i=document.getElementById("lt-name"); if(i&&!i.value) i.focus(); },50); return; }
+  if(LTP.st==="play"){ ltpQ(); return; }
+  ltpDone();
+}
+function ltpJoin(){ const i=document.getElementById("lt-name"), nm=(i.value||"").replace(/\s+/g," ").trim();
+  if(nm.length<2){ document.getElementById("lt-err").textContent=lz("errNm"); i.focus(); return; }
+  LTP.name=nm; store.set("chname",nm); LTP.st="wait"; ltpSave(); ltpPub(true);
+  if(LTP.ctl&&LTP.ctl.st==="run") ltpStart(); else if(LTP.ctl&&LTP.ctl.st==="end") ltpFinish(); else ltpRender(); }
+function ltpStart(){ LTP.st="play"; LTP.t0=Date.now(); LTP.a=0; LTP.ok=0; LTP.sk=0; LTP.wr=[]; ltpSave(); ltpPub(true); presTick(); ltpRender(); }
+function ltpQ(){
+  if(LTP.a>=LTP.qs.length){ ltpFinish(); return; }
+  const x=LTP.qs[LTP.a], n=LTP.qs.length, noun=/^(der|die|das) /.test(x.de)||/\/ (der|die|das) /.test(x.de); LTP.lock=false;
+  ltpEl().innerHTML=ltpHead(`<span class="ch-time" id="lt-time"></span>`)+`<div class="lrn-body">
+    <div class="ch-bar"><i style="width:${LTP.a/n*100}%;background:var(--blue)"></i></div>
+    <div class="ch-top"><span class="ch-score">${LTP.a+1} / ${n} · ✓ ${LTP.ok}</span><span class="ch-rank" id="lt-place"></span></div>
+    <div class="lrn-card"><div class="ch-q">${esc(x.q)}</div><div class="lrn-ask">${esc(lz("write"))}</div>
+      <form class="lrn-wr" id="lt-wr" autocomplete="off"><input id="lt-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(lz("ph"))}">
+      <div class="lrn-keys">${["ä","ö","ü","ß"].map(ch=>`<button type="button" class="lrn-key" data-ltk="${ch}">${ch}</button>`).join("")}</div>
+      ${noun?`<div class="lrn-hint">💡 ${esc(lz("art"))}</div>`:""}
+      <div class="lrn-row2"><button type="button" class="lrn-link" data-lt="skip">${esc(lz("skip"))}</button><button type="submit" class="btn primary">${esc(lz("check"))}</button></div></form>
+      <div class="lrn-fb" id="lt-fb"></div></div>
+    <div id="lt-board"></div></div>`;
+  ltpTick(); ltpBoard(); setTimeout(()=>{ const i=document.getElementById("lt-in"); if(i) i.focus(); },30);
+}
+function ltpAnswer(skip){
+  if(LTP.st!=="play"||LTP.lock) return; const x=LTP.qs[LTP.a], i=document.getElementById("lt-in"), v=i?i.value:"";
+  if(!skip && !lrnNorm(v)){ if(i) i.focus(); return; }
+  LTP.lock=true; if(i) i.disabled=true;
+  const j=skip?{ok:false}:lrnJudge(v,x); LTP.a++; if(j.ok) LTP.ok++; else { if(skip) LTP.sk++; LTP.wr.push([x.q,x.de,skip?"":v]); }
+  ltpSave(); ltpPub(false);
+  const fb=document.getElementById("lt-fb"), near=!j.ok&&j.close;
+  if(fb){ fb.className="lrn-fb "+(j.ok?"ok":near?"near":"bad");
+    fb.innerHTML=`<div class="lrn-v">${j.ok?"✓ "+esc(lz("ok")):near?"≈ "+esc(lz("near")):"✗ "+esc(lz("bad"))}</div>${j.note?`<div class="lrn-note">${esc(j.note)}</div>`:""}${j.ok?"":`<div class="lrn-ans"><small>${esc(lz("corr"))}</small><b>${esc(x.de)}</b></div>`}`; }
+  setTimeout(()=>{ if(LTP.st==="play") ltpQ(); }, j.ok?550:1700);
+}
+function ltpFinish(){ if(LTP.st==="done") return; if(LTP.st==="play") LTP.ms=Date.now()-LTP.t0; LTP.st="done"; ltpSave(); ltpPub(true); ltpDone(); }
+function ltpDone(){
+  const n=LTP.qs.length;
+  ltpEl().innerHTML=ltpHead()+`<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">🏁</div><h3>${esc(lz("done"))}</h3>
+    <p class="ch-big"><b>${esc(lz("res")(LTP.ok,n))}</b> · ⏱ ${ltFmt(LTP.ms)}</p><p class="ch-big" id="lt-place"></p></div>
+    ${LTP.wr.length?`<div class="lrn-card"><h3>${esc(lz("mist"))} (${LTP.wr.length})</h3><ul class="lt-mis">${LTP.wr.map(w=>`<li><span>${esc(w[0])}</span><b>${esc(w[1])}</b>${w[2]?`<s>${esc(w[2])}</s>`:""}</li>`).join("")}</ul></div>`:""}
+    <div class="lrn-card"><h3>${esc(lz("board"))}</h3><div id="lt-board"></div></div></div>`;
+  ltpBoard();
+}
+function ltpClose(){ clearInterval(LTP.tick); if(LTP.mq) LTP.mq.end(); LTP.mq=null; ltpEl().hidden=true; document.body.style.overflow="";
+  if(new URLSearchParams(location.search).get("lt")){ history.replaceState(null,"",location.pathname); } presTick(); }
+
+/* ---------- Ustoz paneli ---------- */
+const TP={tab:"lt", lid:null, sel:new Set(), n:30, tm:10, on:{}, mqOn:null, b:null};
+function tpEl(){ let e=document.getElementById("tch"); if(!e){ e=document.createElement("div"); e.id="tch"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
+function tpOpen(){ const el=tpEl(); el.hidden=false; document.body.style.overflow="hidden";
+  if(!tchOk()){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-tp="close" aria-label="✕">✕</button><div class="lrn-tt"><b>🎓 Ustoz</b><small>Faqat o‘qituvchi uchun</small></div></div>
+    <div class="lrn-body"><form class="lrn-card" id="tp-login" autocomplete="off"><h3>Ustoz kodi</h3><input class="ch-in" id="tp-code" type="password" autocomplete="off" placeholder="Kod"><div class="acc-st err" id="tp-err"></div><button type="submit" class="btn primary">Kirish →</button></form></div>`;
+    setTimeout(()=>{ const i=document.getElementById("tp-code"); if(i) i.focus(); },50); return; }
+  tpOnStart(); tpRender(); }
+function tpClose(){ tpEl().hidden=true; document.body.style.overflow=""; if(TP.b&&TP.b.mq){ TP.b.mq.end(); } TP.b=null; if(TP.mqOn){ TP.mqOn.end(); TP.mqOn=null; } clearInterval(TP.onT); clearInterval(TP.bT); }
+function tpHead(){ const nOn=tpOnList().length;
+  return `<div class="lrn-bar"><button class="btn" data-tp="${TP.b?"back":"close"}" aria-label="${TP.b?"←":"✕"}">${TP.b?"←":"✕"}</button><div class="lrn-tt"><b>🎓 Ustoz paneli</b><small>${TP.b?esc(ltTitle(TP.b.c)):"O‘yin tashkil qilish va kuzatish"}</small></div>
+    ${TP.b?"":`<button type="button" class="lrn-link" data-tp="logout">Chiqish</button>`}</div>
+    ${TP.b?"":`<div class="tp-tabs"><button type="button" data-tp="tab-lt" aria-pressed="${TP.tab==="lt"}">🎯 Live test</button><button type="button" data-tp="tab-on" aria-pressed="${TP.tab==="on"}">👀 Saytda kim bor <span class="tp-badge" id="tp-onn">${nOn}</span></button></div>`}`; }
+function tpRender(){ if(TP.b){ tpBoard(); return; } const el=tpEl(); el.innerHTML=tpHead()+`<div class="lrn-body tp-body" id="tp-body"></div>`; TP.tab==="lt"? tpLt() : tpOn(); }
+/* --- Live test yaratish --- */
+function tpLt(){
+  const D=lernData(), ids=Object.keys(D);
+  if(!TP.lid||!D[TP.lid]){ TP.lid=store.get("lern:last"); if(!TP.lid||!D[TP.lid]) TP.lid=ids.find(k=>byId[k]&&byId[k].tab===state.tab)||ids[0]; TP.sel=new Set(); }
+  const L=D[TP.lid], les=Object.keys(L.les).map(Number); if(!TP.sel.size) TP.sel.add(les[0]);
+  const lab=n=>(L.lab&&L.lab[n])||("L"+n), c={l:chHash(TP.lid),s:[...TP.sel],n:TP.n,r:1}, avail=ltPool(c).length;
+  const games=(()=>{ try{ return JSON.parse(localStorage.getItem("tch:games")||"[]"); }catch(e){ return []; } })();
+  document.getElementById("tp-body").innerHTML=`<div class="lrn-card"><h3>Yangi live test</h3>
+    <label class="acc-lb">Ro‘yxat<select class="ch-in" id="tp-list">${ids.map(k=>{ const m=byId[k]; return `<option value="${esc(k)}"${k===TP.lid?" selected":""}>${esc((m&&m.tab&&TABS[m.tab]?TABS[m.tab].lbl+" · ":"")+(m?m.title:k))}</option>`; }).join("")}</select></label>
+    <div class="lrn-les">${les.map(n=>`<button type="button" class="lrn-chip" aria-pressed="${TP.sel.has(n)}" data-tples="${n}"><b>${esc(lab(n))}</b><span>${esc(L.les[n])}</span></button>`).join("")}</div>
+    <div class="tp-row"><span>So‘zlar soni</span><div class="tp-seg">${[10,20,30,40].map(v=>`<button type="button" data-tpn="${v}" aria-pressed="${TP.n===v}">${v}</button>`).join("")}</div></div>
+    <div class="tp-row"><span>Vaqt</span><div class="tp-seg">${[[0,"Cheksiz"],[5,"5 daq"],[10,"10 daq"],[15,"15 daq"]].map(([v,t])=>`<button type="button" data-tptm="${v}" aria-pressed="${TP.tm===v}">${t}</button>`).join("")}</div></div>
+    <p class="lrn-count">${avail} ta so‘z mavjud · testda ${Math.min(avail,TP.n)} ta · o‘quvchi faqat nemischa yozadi</p>
+    <button type="button" class="btn primary" data-tp="create"${avail?"":" disabled"}>🎯 Testni yaratish va doskaga chiqarish</button></div>
+    ${games.length?`<div class="lrn-card"><h3>Oldingi testlar</h3><ul class="tp-games">${games.slice(0,6).map(g=>`<li><button type="button" class="lrn-link" data-tpgame="${esc(g.code)}">${esc(g.title)}</button><small>${new Date(g.t).toLocaleString()}</small></li>`).join("")}</ul></div>`:""}`;
+}
+function tpCreate(){
+  const c={v:1,l:chHash(TP.lid),s:[...TP.sel].sort((a,b)=>a-b),n:TP.n,tm:TP.tm,r:Math.floor(Math.random()*2147483647),t:Date.now()};
+  const code=chB64e(JSON.stringify(c));
+  let g=[]; try{ g=JSON.parse(localStorage.getItem("tch:games")||"[]"); }catch(e){}
+  g.unshift({code,title:ltTitle(c)+" · "+Math.min(c.n,ltPool(c).length)+" so‘z",t:Date.now()}); try{ localStorage.setItem("tch:games",JSON.stringify(g.slice(0,20))); }catch(e){}
+  tpBoardOpen(code,true);
+}
+/* --- Doska (proyektor uchun) --- */
+function tpBoardOpen(code,fresh){
+  let c; try{ c=JSON.parse(chB64d(code)); }catch(e){ return; }
+  const id=chHash(code); TP.b={c,code,id,ctl:fresh?{st:"lobby",t:Date.now()}:null,players:{},n:ltQs(c).length};
+  TP.b.mq=mqMulti(cl=>{ cl.subscribe(LT_NS+id+"/ctl",{qos:1}); cl.subscribe(LT_NS+id+"/p/+",{qos:1}); if(fresh&&TP.b&&TP.b.ctl) cl.publish(LT_NS+id+"/ctl",JSON.stringify(TP.b.ctl),{qos:1,retain:true}); tpBoardDraw(); },
+    (t,m)=>{ const B=TP.b; if(!B) return; if(t.endsWith("/ctl")){ try{ const d=m?JSON.parse(m):null; if(d&&(!B.ctl||(d.t||0)>=(B.ctl.t||0))) B.ctl=d; }catch(e){} tpBoard(); return; }
+      const pid=t.split("/").pop(); if(!m) delete B.players[pid]; else { try{ const d=JSON.parse(m); if(d&&typeof d.ok==="number") B.players[pid]={n:String(d.n||"?").slice(0,40),ok:d.ok|0,a:d.a|0,sk:d.sk|0,ms:d.ms|0,st:d.st,t:d.t||0}; }catch(e){} }
+      clearTimeout(B.dT); B.dT=setTimeout(tpBoardDraw,150); });
+  clearInterval(TP.bT); TP.bT=setInterval(tpBoardTick,500); tpBoard();
+}
+function tpCtl(st){ const B=TP.b; if(!B) return; B.ctl={st,t:Date.now(),t0:st==="run"?Date.now():(B.ctl&&B.ctl.t0)||0}; B.mq.pub(LT_NS+B.id+"/ctl",JSON.stringify(B.ctl),true); tpBoard(); }
+function tpBoard(){
+  const B=TP.b, el=tpEl(), url=ltLink(B.code), st=(B.ctl&&B.ctl.st)||"lobby";
+  el.innerHTML=tpHead()+`<div class="tp-board">
+    <aside class="tp-join"><div class="tp-qr" id="tp-qr"></div><div class="tp-url">${esc(url.replace(/^https?:\/\//,"").replace(/\?lt=.*/,"?lt=…"))}</div>
+      <div class="ch-btns"><button type="button" class="btn" data-tp="copy">📋 Havolani nusxalash</button><a class="btn" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent("🎯 Live test: "+ltTitle(B.c))}">📤 Telegram</a></div>
+      <div class="tp-ctl"><div class="tp-st ${st}">${st==="lobby"?"⏳ Kutish — o‘quvchilar qo‘shilmoqda":st==="run"?"▶ Test ketmoqda":"🏁 Test tugadi"}</div>
+        <div class="tp-clock" id="tp-clock"></div>
+        ${st==="lobby"?`<button type="button" class="btn primary tp-big" data-tp="start">▶ Boshlash</button>`:st==="run"?`<button type="button" class="btn tp-big tp-stop" data-tp="stop">⏹ Tugatish</button>`:`<button type="button" class="btn primary" data-tp="again">🎯 Yangi test</button>`}</div>
+      <p class="ch-net">${esc(B.n+" ta so‘z")}${B.c.tm?` · ${B.c.tm} daqiqa`:" · vaqt cheklanmagan"}</p></aside>
+    <section class="tp-lb"><div class="tp-lbh"><h2>${st==="end"?"🏆 Natijalar":"Jonli reyting"}</h2><span id="tp-cnt"></span></div><ol id="tp-rows" class="tp-rows"></ol></section></div>`;
+  ltQr(url); tpBoardDraw(); tpBoardTick();
+}
+function tpBoardDraw(){ const B=TP.b, ol=document.getElementById("tp-rows"); if(!B||!ol) return;
+  const L=ltRank(B.players), n=B.n, done=L.filter(p=>p.st==="done").length, st=(B.ctl&&B.ctl.st)||"lobby";
+  const cnt=document.getElementById("tp-cnt"); if(cnt) cnt.textContent=`${L.length} o‘quvchi · ${done} tugatdi`;
+  if(!L.length){ ol.innerHTML=`<li class="tp-empty">Hali hech kim qo‘shilmadi. QR-kodni skanerlang yoki havolani guruhga tashlang.</li>`; return; }
+  ol.innerHTML=L.map((p,k)=>`<li class="${p.st==="done"?"fin":""}"><span class="tp-pos">${st!=="lobby"&&k<3&&p.a?["🥇","🥈","🥉"][k]:k+1}</span><span class="tp-nm"><b>${esc(p.n)}</b>
+    <span class="tp-pb"><i style="width:${n?Math.min(100,p.a/n*100):0}%"></i></span></span>
+    <span class="tp-ok">${st==="lobby"&&p.st==="wait"?"<small>tayyor</small>":`✓ ${p.ok}<small>/${n}</small>`}</span><span class="tp-tm">${p.st==="wait"?"—":ltFmt(p.ms)}${p.st==="done"?" 🏁":p.st==="play"?' <i class="tp-live">●</i>':""}</span></li>`).join(""); }
+function tpBoardTick(){ const B=TP.b; if(!B) return; const c=document.getElementById("tp-clock"), ctl=B.ctl;
+  if(ctl&&ctl.st==="run"&&ctl.t0){ const dl=B.c.tm?ctl.t0+B.c.tm*60000:0; if(c) c.textContent= dl? ltFmt(dl-Date.now()) : ltFmt(Date.now()-ctl.t0);
+    if(dl&&Date.now()>=dl+1500) tpCtl("end"); }
+  else if(c) c.textContent=""; }
+function ltQr(url){ const box=document.getElementById("tp-qr"); if(!box) return;
+  const draw=()=>{ try{ const q=qrcode(0,"M"); q.addData(url); q.make(); box.innerHTML=q.createSvgTag({cellSize:5,margin:2,scalable:true}); }catch(e){ box.textContent=""; } };
+  if(window.qrcode) return draw(); let s=document.getElementById("qr-js"); if(!s){ s=document.createElement("script"); s.id="qr-js"; s.src="files/js/qrcode.js"; document.head.appendChild(s); } s.addEventListener("load",draw); }
+/* --- Saytda kim bor --- */
+function tpOnStart(){ if(TP.mqOn) return; TP.on={};
+  TP.mqOn=mqMulti(cl=>cl.subscribe(ON_NS+"+",{qos:1}),(t,m)=>{ const pid=t.split("/").pop(); if(!m){ delete TP.on[pid]; } else { try{ const d=JSON.parse(m); if(d&&d.t){ const o=TP.on[pid]; if(!o||d.t>=o.t) TP.on[pid]=d; } }catch(e){} }
+    clearTimeout(TP.onD); TP.onD=setTimeout(tpOnDraw,200); });
+  clearInterval(TP.onT); TP.onT=setInterval(tpOnDraw,15000); }
+function tpOnList(){ return Object.entries(TP.on||{}).filter(([k,d])=>Date.now()-d.t<6*60000).sort((a,b)=>b[1].t-a[1].t); }
+function tpOn(){ document.getElementById("tp-body").innerHTML=`<div class="lrn-card"><div class="tp-lbh"><h3>👀 Hozir saytda</h3><span class="ch-net">jonli · har 2 daqiqada yangilanadi</span></div><ul class="tp-on" id="tp-on"></ul></div>`; tpOnDraw(); }
+function tpOnDraw(){ const L=tpOnList(), b=document.getElementById("tp-onn"); if(b) b.textContent=L.length;
+  const ul=document.getElementById("tp-on"); if(!ul) return;
+  if(!L.length){ ul.innerHTML=`<li class="tp-empty">Hozircha saytda hech kim yo‘q.</li>`; return; }
+  const ago=t=>{ const s=Math.round((Date.now()-t)/1000); return s<60?"hozir":Math.round(s/60)+" daq oldin"; };
+  ul.innerHTML=L.map(([k,d])=>`<li><span class="tp-av">${d.r?"👤":"👻"}</span><span class="tp-nm"><b>${esc(String(d.n||"?").slice(0,40))}</b><span>${esc(String(d.w||"").slice(0,120))}</span></span><span class="tp-meta">${typeof d.c==="number"?`🧠 ${d.c}`:""}<small>${ago(d.t)}</small></span></li>`).join(""); }
+/* --- Har bir tashrifchi: "saytda kim bor" holati --- */
+const ON={pid:null,mq:null,w:"",t:0};
+function presAct(){
+  const vis=id=>{ const e=document.getElementById(id); return e&&!e.hidden; };
+  if(vis("ltp")) return "🎯 Live test"+(LTP.st==="play"?` · ${LTP.a}/${LTP.qs.length} · ✓ ${LTP.ok}`:LTP.st==="done"?` · tugatdi ✓ ${LTP.ok}`:" · kutmoqda");
+  if(vis("chal")) return "⚡ Challenge";
+  if(vis("rank")) return "🏆 Reytingni ko‘ryapti";
+  if(vis("lrn")){ const m=byId[LR.id]; return "🧠 Yodlash · "+(m?m.title:"")+(LR.mode==="learn"?(LR.chk?" · bilganlarini tekshiryapti":" · Lernen"):LR.mode==="cards"?" · Karteikarten":""); }
+  if(V.el&&!V.el.hidden&&V.cur) return "📄 "+V.cur.title;
+  return "🏠 Bosh sahifa"+(TABS[state.tab]?" · "+TABS[state.tab].lbl:"");
+}
+function presPub(){ if(!ON.mq) return; let c=null; try{ c=progCount().n; }catch(e){}
+  ON.mq.pub(ON_NS+ON.pid, JSON.stringify({n:ACC.name?rkName():"Mehmon",r:!!ACC.cur,w:ON.w,c,t:Date.now()}), true); ON.t=Date.now(); }
+function presTick(){ if(!ON.mq) return; const w=presAct(); if(w!==ON.w||Date.now()-ON.t>110000){ ON.w=w; presPub(); } }
+function presStart(){ if(IN_ARTIFACT||tchOk()||ON.mq) return;
+  try{ ON.pid=localStorage.getItem("onpid"); if(!ON.pid){ ON.pid=Math.random().toString(36).slice(2,10); localStorage.setItem("onpid",ON.pid); } }catch(e){ ON.pid=Math.random().toString(36).slice(2,10); }
+  ON.w=presAct(); ON.mq=mqMulti(()=>presPub(),null,()=>({will:{topic:ON_NS+ON.pid,payload:"",qos:1,retain:true}}));
+  setInterval(presTick,3000);
+  addEventListener("pagehide",()=>{ try{ ON.mq.pub(ON_NS+ON.pid,"",true); }catch(e){} }); }
+setTimeout(()=>{ try{ presStart(); }catch(e){} },3500);
+/* --- hodisalar --- */
+document.addEventListener("click",e=>{
+  if(e.target.closest("#tch-btn")){ tpOpen(); return; }
+  const k=e.target.closest("[data-ltk]"); if(k){ const i=document.getElementById("lt-in"); if(i&&!i.disabled){ const p=i.selectionStart??i.value.length; i.value=i.value.slice(0,p)+k.dataset.ltk+i.value.slice(i.selectionEnd??p); i.focus(); i.setSelectionRange(p+1,p+1); } return; }
+  const l=e.target.closest("[data-lt]"); if(l){ const a=l.dataset.lt;
+    if(a==="close") ltpClose(); else if(a==="join") ltpJoin(); else if(a==="skip") ltpAnswer(true); else if(a==="force"){ ltpStart(); } return; }
+  const ls=e.target.closest("[data-tples]"); if(ls){ const n=+ls.dataset.tples; TP.sel.has(n)?TP.sel.delete(n):TP.sel.add(n); tpLt(); return; }
+  const tn=e.target.closest("[data-tpn]"); if(tn){ TP.n=+tn.dataset.tpn; tpLt(); return; }
+  const tt=e.target.closest("[data-tptm]"); if(tt){ TP.tm=+tt.dataset.tptm; tpLt(); return; }
+  const tg=e.target.closest("[data-tpgame]"); if(tg){ tpBoardOpen(tg.dataset.tpgame,false); return; }
+  const t=e.target.closest("[data-tp]"); if(t){ const a=t.dataset.tp;
+    if(a==="close") tpClose();
+    else if(a==="back"){ if(TP.b&&TP.b.mq) TP.b.mq.end(); TP.b=null; clearInterval(TP.bT); tpRender(); }
+    else if(a==="logout"){ try{ localStorage.removeItem("tch"); }catch(err){} tpClose(); presStart(); }
+    else if(a==="tab-lt"){ TP.tab="lt"; tpRender(); } else if(a==="tab-on"){ TP.tab="on"; tpRender(); }
+    else if(a==="create") tpCreate();
+    else if(a==="start") tpCtl("run"); else if(a==="stop") tpCtl("end");
+    else if(a==="again"){ if(TP.b&&TP.b.mq) TP.b.mq.end(); TP.b=null; clearInterval(TP.bT); TP.tab="lt"; tpRender(); }
+    else if(a==="copy"){ const u=ltLink(TP.b.code); (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>{ t.textContent="✓ Nusxalandi"; }).catch(()=>{ prompt("",u); }); }
+    return; }
+});
+document.addEventListener("change",e=>{ if(e.target.id==="tp-list"){ TP.lid=e.target.value; TP.sel=new Set(); tpLt(); } });
+document.addEventListener("submit",e=>{
+  if(e.target.id==="lt-wr"){ e.preventDefault(); ltpAnswer(false); }
+  else if(e.target.id==="tp-login"){ e.preventDefault(); const v=document.getElementById("tp-code").value.trim();
+    accHash(v).then(h=>{ if(h===TCH_H){ try{ localStorage.setItem("tch",h); }catch(err){} if(ON.mq){ try{ ON.mq.pub(ON_NS+ON.pid,"",true); ON.mq.end(); }catch(err){} ON.mq=null; } tpOpen(); }
+      else { document.getElementById("tp-err").textContent="Kod noto‘g‘ri"; document.getElementById("tp-code").select(); } }); }
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){ const t=document.getElementById("tch"); if(t&&!t.hidden){ const b=t.querySelector('[data-tp="back"],[data-tp="close"]'); if(b) b.click(); return; } }
+  if(e.key==="Enter" && e.target.id==="lt-name"){ e.preventDefault(); ltpJoin(); }
+});
+(function(){ const code=new URLSearchParams(location.search).get("lt"); if(code) setTimeout(()=>ltOpen(code),60); })();
 function chEl(){ let e=document.getElementById("chal"); if(!e){ e=document.createElement("div"); e.id="chal"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
 function chPool(c){ const D=lernData()[c.l]; if(!D) return []; return D.it.map((r,i)=>({i,l:r[0],de:r[3],ru:r[4],red:r[6],dis:r[7]})).filter(x=>x.ru && !x.red && c.s.includes(x.l)); }
 function chTitle(c){ const m=byId[c.l]; const D=lernData()[c.l]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:"")+" · "+c.s.map(lab).join(", "); }
