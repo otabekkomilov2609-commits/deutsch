@@ -2546,7 +2546,16 @@ const LR={id:null, sel:new Set(), redem:false, mode:null, pool:[], st:{}, round:
 function lrnKey(id){ return "lern:"+id; }
 function lrnLoad(id){ try{ return JSON.parse(store.get(lrnKey(id))||"{}")||{}; }catch(e){ return {}; } }
 function lrnSave(){ store.set(lrnKey(LR.id), JSON.stringify(LR.st)); }
-function lrnSay(text){ try{ const u=new SpeechSynthesisUtterance(String(text).replace(/\(.*?\)/g,"").replace(/[,;]\s*(-\w*|¨\w*|[A-ZÄÖÜ]\w+)$/,"")); u.lang="de-DE"; u.rate=.9; speechSynthesis.cancel(); speechSynthesis.speak(u); }catch(e){} }
+let lrnSayT=null;
+function lrnSay(text){ try{
+  const t=String(text).replace(/\(.*?\)/g,"").replace(/[,;]\s*(-\w*|¨\w*|[A-ZÄÖÜ]\w+)$/,"").trim(); if(!t) return;
+  const ss=window.speechSynthesis; if(!ss) return;
+  const busy=ss.speaking||ss.pending; if(busy) ss.cancel();
+  clearTimeout(lrnSayT);
+  /* iOS Safari: cancel()dan keyin darhol speak() boshini kesib yuboradi — biroz kutamiz, oldiga qisqa pauza qo'yamiz */
+  lrnSayT=setTimeout(()=>{ try{ ss.resume(); const u=new SpeechSynthesisUtterance(", "+t); u.lang="de-DE"; u.rate=.9;
+    const v=(ss.getVoices()||[]).find(v=>/^de(-|_|$)/i.test(v.lang)); if(v) u.voice=v; ss.speak(u); }catch(e){} }, busy?250:120);
+}catch(e){} }
 function lrnShuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function lrnEl(){ return document.getElementById("lrn"); }
 function lrnOpen(id){
