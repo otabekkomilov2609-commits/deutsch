@@ -795,6 +795,8 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias textarea.ias-input.long{font-size:19px!important;min-height:96px}
 
 .ias-hint{display:block;font-size:17px;font-weight:500;color:var(--muted);margin-top:6px}
+
+.ias-card .ias-slot{font-size:1em!important;letter-spacing:0!important;margin:0!important;line-height:1.25;padding:0 10px;min-width:2.6em;font-weight:700}
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
 .ia-in{position:absolute;box-sizing:border-box;border:0;border-bottom:1.5px solid transparent;background:rgba(31,79,160,.06);color:#1F4FA0;font-family:var(--hand),"Patrick Hand",sans-serif;font-size:calc(var(--s) * 13px);line-height:1;padding:0 2px;margin:0;text-align:center;border-radius:3px 3px 0 0;outline:none;min-width:0}
@@ -3654,7 +3656,10 @@ function iasRender(m){
     <div class="ias-sw"><button type="button" class="iam-sw" data-iam="page">📄 ${state.lang==="ru"?"Показать весь лист":"To‘liq varaqni ko‘rish"}</button></div></div>`;
   const inp=document.getElementById("ias-in");
   inp.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); e.stopPropagation(); iasCheck(); } });
-  inp.addEventListener("input",()=>{ const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) s.innerHTML=inp.value.trim()?esc(inp.value):"&nbsp;?&nbsp;"; inp.classList.remove("bad"); });
+  inp.addEventListener("input",()=>{ const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) s.innerHTML=inp.value.trim()?esc(inp.value):"&nbsp;?&nbsp;"; inp.classList.remove("bad");
+    /* to'g'ri yozilsa — Enter'siz o'zi o'tadi */
+    clearTimeout(IAS.autoT); const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g"||!inp.value.trim()) return; const i=st.i;
+    IAS.autoT=setTimeout(()=>{ if(IAS.steps[IAS.k]!==st) return; IA.vals[i]=inp.value; const s2=iaState(i); if(s2==="ok"){ iaSave(); IAS.tried[i]=true; iasAfter(st); } },400); });
   iasShow(true);
 }
 function iasSlot(st,cur){ const it=iaItems()[st.i], v=IA.vals[st.i];
