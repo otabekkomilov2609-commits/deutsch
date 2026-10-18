@@ -309,6 +309,76 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .rk-empty{padding:22px;text-align:center;color:var(--muted)}
 .rk-list li:has(.rk-del){grid-template-columns:38px 1fr auto 34px}.rk-del{border:0;background:none;font-size:18px;cursor:pointer;opacity:.6}
 .rk-net{font-size:12.5px;color:var(--muted)}
+/* 🎮 Sinf o'yini — 2026-10-18 */
+.kg-sets{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.kg-sets li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);flex-wrap:wrap}
+.kg-sets li b{display:block}.kg-sets small{color:var(--muted);font-size:12.5px}
+.kg-act{display:flex;gap:6px}.kg-act .btn{padding:8px 12px}
+.kg-tx{width:100%;min-height:280px;box-sizing:border-box;font:15px/1.5 ui-monospace,Menlo,Consolas,monospace;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);resize:vertical}
+.kg-pv{display:flex;flex-direction:column;gap:6px;font-size:14px}.kg-pv .ok{color:var(--green);font-weight:700}.kg-pv .er{color:#C62828}
+.kg-pvl{margin:0;padding:0 0 0 22px;display:flex;flex-direction:column;gap:4px;max-height:300px;overflow:auto}
+.kg-pvl li{padding:6px 10px;border-radius:8px;background:var(--bg);font-size:13.5px}.kg-pvl i{font-style:normal;color:var(--green);font-weight:700}.kg-pvl small{color:var(--muted)}
+.kg-help{font-size:14px;color:var(--muted)}.kg-help summary{cursor:pointer;font-weight:600;color:var(--blue)}.kg-help p{margin:8px 0}.kg-help code{background:var(--bg);padding:1px 5px;border-radius:5px;color:var(--ink)}
+.kg-help pre{background:var(--bg);padding:10px 12px;border-radius:10px;white-space:pre-wrap;color:var(--ink);font-size:13.5px;margin:6px 0 0}
+.kg-wrap{width:100%;max-width:1300px;margin:0 auto;padding:18px;box-sizing:border-box;display:flex;flex-direction:column;gap:16px}
+.kg-lobby{display:grid;grid-template-columns:minmax(260px,360px) 1fr;gap:18px;align-items:start}
+@media (max-width:820px){.kg-lobby{grid-template-columns:1fr}}
+.kg-box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
+.kg-h2{margin:0;font-size:24px}
+.kg-names{display:flex;flex-wrap:wrap;gap:8px;min-height:44px}
+.kg-names span{padding:8px 16px;border-radius:999px;background:var(--blue-soft);color:var(--ink);font-weight:700;font-size:19px;animation:kgpop .35s ease-out}
+@keyframes kgpop{from{transform:scale(.5);opacity:0}}
+.kg-qhead{display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:700;color:var(--muted);font-size:20px;flex-wrap:wrap}
+.kg-qn{min-width:90px}.kg-ansn{min-width:90px;text-align:right}
+.kg-clock{min-width:84px;height:84px;padding:0 10px;box-sizing:border-box;border-radius:42px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:38px;font-weight:800;font-variant-numeric:tabular-nums}
+.kg-clock.wide{font-size:30px}.kg-clock.hurry{background:#E21B3C;animation:kgpulse .5s infinite alternate}
+@keyframes kgpulse{to{transform:scale(1.07)}}
+.kg-sumline{font-size:26px;color:var(--green)}
+.kg-qtext{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 22px;font-size:clamp(24px,3.4vw,46px);font-weight:700;text-align:center;line-height:1.3;color:var(--ink);box-shadow:var(--shadow);overflow-wrap:anywhere}
+.kg-opts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:600px){.kg-opts{grid-template-columns:1fr}}
+.kg-o{position:relative;display:flex;align-items:center;gap:14px;min-height:96px;padding:14px 18px;box-sizing:border-box;border:0;border-radius:14px;background:var(--c);color:#fff;font:inherit;font-size:clamp(20px,2.6vw,34px);font-weight:700;text-align:left;box-shadow:0 4px 0 rgba(0,0,0,.22);transition:opacity .25s,transform .1s}
+.kg-o i{font-style:normal;font-size:1.05em;opacity:.9;flex-shrink:0}.kg-o span{flex:1;min-width:0;overflow-wrap:anywhere}
+.kg-o em{font-style:normal;font-size:.8em;background:rgba(0,0,0,.25);padding:2px 14px;border-radius:999px}
+.kg-o.no{opacity:.3}
+.kg-o.ok::after{content:"✓";position:absolute;right:-8px;top:-10px;width:40px;height:40px;border-radius:50%;background:#fff;color:#26890C;display:grid;place-items:center;font-size:26px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.kg-o.bad{outline:4px solid var(--ink);outline-offset:2px}
+.kg-o.bad::after{content:"✗";position:absolute;right:-8px;top:-10px;width:40px;height:40px;border-radius:50%;background:#fff;color:#E21B3C;display:grid;place-items:center;font-size:24px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.kg-typed{display:flex;flex-direction:column;gap:10px}
+.kg-wbox{padding:26px;border:3px dashed var(--line);border-radius:16px;text-align:center;font-size:clamp(20px,2.4vw,30px);color:var(--muted);font-weight:700}
+.kg-wr{font-size:20px;color:var(--muted)}.kg-wr s{color:#C62828}
+.kg-ctl{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}.kg-ctl .btn{font-size:18px;padding:12px 22px}
+.kg-lobby .tp-qr{max-width:320px}
+/* telefon */
+.kgp-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.kgp-opts.one{grid-template-columns:1fr}
+.kgp-opts .kg-o{min-height:104px;font-size:19px;flex-direction:column;justify-content:center;text-align:center;gap:6px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.kgp-opts.one .kg-o{min-height:64px;flex-direction:row;text-align:left}
+.kgp-opts .kg-o:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,.22)}.kgp-opts .kg-o:disabled{cursor:default}
+.kgp-big{font-size:72px;line-height:1;text-align:center}
+.kgp-wait,.kgp-rev{align-items:center;text-align:center;padding:30px 20px}.kgp-wait h3,.kgp-rev h3{margin:0;font-size:26px}
+.kgp-rev.ok{border-color:#26890C;background:linear-gradient(180deg,rgba(38,137,12,.12),transparent)}.kgp-rev.bad{border-color:#E21B3C;background:linear-gradient(180deg,rgba(226,27,60,.1),transparent)}
+.kgp-res{padding:14px 16px;border-radius:14px;font-size:22px;font-weight:800;text-align:center}.kgp-res div{font-size:18px;font-weight:600;margin-top:4px}
+.kgp-res.ok{background:var(--green-soft);color:var(--green)}.kgp-res.bad{background:rgba(226,27,60,.12);color:#C62828}
+.kgp-fb:empty{display:none}
+.ch-time.hurry{color:#E21B3C}
+/* hisobot */
+.kg-rep{max-width:860px}
+.kg-sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.kg-sum div{background:var(--bg);border-radius:12px;padding:12px;text-align:center}.kg-sum b{display:block;font-size:28px}.kg-sum small{color:var(--muted)}
+.kg-sum .warn{background:rgba(226,27,60,.1)}.kg-sum .warn b{color:#C62828}
+.kg-hard{font-size:15px}.kg-hard span{display:inline-block;margin:2px 4px 2px 0;padding:2px 8px;border-radius:6px;background:rgba(226,27,60,.12);color:#C62828;font-weight:700}
+.kg-st,.kg-qs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.kg-sth{width:100%;display:grid;grid-template-columns:32px 1fr auto;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.kg-sth .p{font-weight:800;text-align:center;color:var(--muted)}.kg-sth .nm{min-width:0}.kg-sth .sc{text-align:right;font-weight:800;font-size:18px}.kg-sth .sc small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.kg-hb{font-style:normal;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:99px;background:rgba(226,27,60,.12);color:#C62828;white-space:nowrap}
+.kg-chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}.kg-chips span{font-size:12px;font-weight:700;padding:0 6px;border-radius:5px;background:rgba(226,27,60,.12);color:#C62828}
+.kg-mis{list-style:none;margin:6px 0 4px 42px;padding:0;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.kg-mis li{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}.kg-mis li>span{color:var(--muted)}.kg-mis s{color:#C62828}.kg-mis b{color:var(--green)}
+.kg-qs li{padding:10px 12px;border-radius:12px;background:var(--bg);display:flex;flex-direction:column;gap:6px}
+.kg-qs .h{display:flex;justify-content:space-between;gap:10px;font-weight:600}.kg-qs .h b{font-size:18px}
+.kg-qs small{color:var(--muted)}.kg-qs small s{color:#C62828}
+.kg-pbar{height:8px;border-radius:99px;background:var(--line);overflow:hidden}.kg-pbar i{display:block;height:100%;background:var(--green)}
+.kg-qs li.hard .kg-pbar i{background:#E21B3C}.kg-qs li.hard .h b{color:#C62828}
 /* 🎓 Ustoz paneli + 🎯 Live test — 2026-10-18 */
 .tch-btn{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:5px 10px;font-size:13px;font-weight:600;cursor:pointer;flex-shrink:0;margin-right:6px;white-space:nowrap}
 .acc-chip[hidden]+.tch-btn{margin-left:auto}
@@ -4204,7 +4274,7 @@ function accLern(){
 }
 const ACC_OK=(()=>{ try{ localStorage.setItem("acc:t","1"); localStorage.removeItem("acc:t"); return true; }catch(e){ return false; } })();
 accChip();
-if(!ACC.cur && ACC_OK && !new URLSearchParams(location.search).get("ch") && !new URLSearchParams(location.search).get("lt") && !new URLSearchParams(location.search).get("du") && !tchOk()) accLogin();
+if(!ACC.cur && ACC_OK && !new URLSearchParams(location.search).get("ch") && !new URLSearchParams(location.search).get("lt") && !new URLSearchParams(location.search).get("kg") && !new URLSearchParams(location.search).get("kgd") && !new URLSearchParams(location.search).get("du") && !tchOk()) accLogin();
 /* ===== ⚡ Challenge (Kahoot challenge'ga o'xshash) — 2026-10-17 =====
    Havola ?ch=<kod>: ro'yxat + Lektionlar + seed. Hamma bir xil savollarni oladi.
    Natijalar jonli: ochiq MQTT broker (WebSocket), har o'yinchi o'z natijasini "retained" xabar qilib yuboradi. */
@@ -4612,19 +4682,19 @@ function ltpClose(){ clearInterval(LTP.tick); if(LTP.mq) LTP.mq.end(); LTP.mq=nu
   if(new URLSearchParams(location.search).get("lt")){ history.replaceState(null,"",location.pathname); } presTick(); }
 
 /* ---------- Ustoz paneli ---------- */
-const TP={tab:"lt", lid:null, sel:new Set(), n:30, tm:10, on:{}, mqOn:null, b:null};
+const TP={tab:"kg", lid:null, sel:new Set(), n:30, tm:10, on:{}, mqOn:null, b:null};
 function tpEl(){ let e=document.getElementById("tch"); if(!e){ e=document.createElement("div"); e.id="tch"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
 function tpOpen(){ const el=tpEl(); el.hidden=false; document.body.style.overflow="hidden";
   if(!tchOk()){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-tp="close" aria-label="✕">✕</button><div class="lrn-tt"><b>🎓 Ustoz</b><small>Faqat o‘qituvchi uchun</small></div></div>
     <div class="lrn-body"><form class="lrn-card" id="tp-login" autocomplete="off"><h3>Ustoz kodi</h3><input class="ch-in" id="tp-code" type="password" autocomplete="off" placeholder="Kod"><div class="acc-st err" id="tp-err"></div><button type="submit" class="btn primary">Kirish →</button></form></div>`;
     setTimeout(()=>{ const i=document.getElementById("tp-code"); if(i) i.focus(); },50); return; }
   tpOnStart(); tpStStart(); tpRender(); }
-function tpClose(){ tpEl().hidden=true; document.body.style.overflow=""; if(TP.b&&TP.b.mq){ TP.b.mq.end(); } TP.b=null; if(TP.mqOn){ TP.mqOn.end(); TP.mqOn=null; } if(TP.mqSt){ TP.mqSt.end(); TP.mqSt=null; } clearInterval(TP.onT); clearInterval(TP.bT); }
+function tpClose(){ kgBEnd(); if(TP.kgR){ if(TP.kgR.mq) TP.kgR.mq.end(); TP.kgR=null; } tpEl().hidden=true; document.body.style.overflow=""; if(TP.b&&TP.b.mq){ TP.b.mq.end(); } TP.b=null; if(TP.mqOn){ TP.mqOn.end(); TP.mqOn=null; } if(TP.mqSt){ TP.mqSt.end(); TP.mqSt=null; } clearInterval(TP.onT); clearInterval(TP.bT); }
 function tpHead(){ const nOn=tpOnList().length;
   return `<div class="lrn-bar"><button class="btn" data-tp="${TP.b?"back":"close"}" aria-label="${TP.b?"←":"✕"}">${TP.b?"←":"✕"}</button><div class="lrn-tt"><b>🎓 Ustoz paneli</b><small>${TP.b?esc(ltTitle(TP.b.c)):"O‘yin tashkil qilish va kuzatish"}</small></div>
     ${TP.b?"":`<button type="button" class="lrn-link" data-tp="logout">Chiqish</button>`}</div>
-    ${TP.b?"":`<div class="tp-tabs"><button type="button" data-tp="tab-lt" aria-pressed="${TP.tab==="lt"}">🎯 Live test</button><button type="button" data-tp="tab-on" aria-pressed="${TP.tab==="on"}">👀 Saytda kim bor <span class="tp-badge" id="tp-onn">${nOn}</span></button><button type="button" data-tp="tab-st" aria-pressed="${TP.tab==="st"}">👥 O‘quvchilar <span class="tp-badge" id="tp-stn">${Object.keys(TP.stu||{}).length}</span></button></div>`}`; }
-function tpRender(){ if(TP.b){ tpBoard(); return; } const el=tpEl(); el.innerHTML=tpHead()+`<div class="lrn-body tp-body" id="tp-body"></div>`; TP.tab==="lt"? tpLt() : TP.tab==="st"? tpSt() : tpOn(); }
+    ${TP.b?"":`<div class="tp-tabs"><button type="button" data-tp="tab-kg" aria-pressed="${TP.tab==="kg"}">🎮 Sinf o‘yini</button><button type="button" data-tp="tab-lt" aria-pressed="${TP.tab==="lt"}">🎯 Live test</button><button type="button" data-tp="tab-on" aria-pressed="${TP.tab==="on"}">👀 Saytda kim bor <span class="tp-badge" id="tp-onn">${nOn}</span></button><button type="button" data-tp="tab-st" aria-pressed="${TP.tab==="st"}">👥 O‘quvchilar <span class="tp-badge" id="tp-stn">${Object.keys(TP.stu||{}).length}</span></button></div>`}`; }
+function tpRender(){ if(TP.kgR){ kgRepDraw(); return; } if(TP.k){ kgBoard(); return; } if(TP.b){ tpBoard(); return; } const el=tpEl(); el.innerHTML=tpHead()+`<div class="lrn-body tp-body" id="tp-body"></div>`; TP.tab==="kg"? kgPanel() : TP.tab==="lt"? tpLt() : TP.tab==="st"? tpSt() : tpOn(); }
 /* --- Live test yaratish --- */
 function tpLt(){
   const D=lernData(), ids=Object.keys(D);
@@ -4717,7 +4787,7 @@ function ltQr(url,boxId){ const box=document.getElementById(boxId); if(!box) ret
   const draw=()=>{ try{ const q=qrcode(0,"M"); q.addData(url); q.make(); box.innerHTML=q.createSvgTag({cellSize:5,margin:2,scalable:true}); }catch(e){ box.textContent=""; } };
   if(window.qrcode) return draw(); let s=document.getElementById("qr-js"); if(!s){ s=document.createElement("script"); s.id="qr-js"; s.src="files/js/qrcode.js"; document.head.appendChild(s); } s.addEventListener("load",draw); }
 function tpQrBig(on){ let o=document.getElementById("tp-qrbig");
-  if(!on){ if(o) o.remove(); return; } if(!TP.b) return; const url=ltLink(TP.b.code);
+  if(!on){ if(o) o.remove(); return; } if(!TP.b&&!TP.k) return; const url=TP.k?kgLink(TP.k.id):ltLink(TP.b.code);
   o=document.createElement("div"); o.id="tp-qrbig"; o.className="tp-qrbig"; o.setAttribute("role","dialog"); o.setAttribute("aria-modal","true");
   o.innerHTML=`<button type="button" class="tp-qrx" data-tp="qrclose" aria-label="Yopish">✕</button><div class="tp-qrbox" id="tp-qrbox"></div><div class="tp-qrcap">📱 Telefon kamerasi bilan skanerlang</div>`;
   document.body.appendChild(o); ltQr(url,"tp-qrbox"); }
@@ -4848,7 +4918,7 @@ document.addEventListener("click",e=>{
     if(a==="close") tpClose();
     else if(a==="back"){ tpQrBig(false); if(TP.b&&TP.b.mq) TP.b.mq.end(); TP.b=null; clearInterval(TP.bT); tpRender(); }
     else if(a==="logout"){ try{ localStorage.removeItem("tch"); localStorage.removeItem("tchk"); }catch(err){} tpClose(); presStart(); }
-    else if(a==="tab-lt"){ TP.tab="lt"; tpRender(); } else if(a==="tab-on"){ TP.tab="on"; tpRender(); } else if(a==="tab-st"){ TP.tab="st"; tpRender(); }
+    else if(a==="tab-kg"){ TP.tab="kg"; tpRender(); } else if(a==="tab-lt"){ TP.tab="lt"; tpRender(); } else if(a==="tab-on"){ TP.tab="on"; tpRender(); } else if(a==="tab-st"){ TP.tab="st"; tpRender(); }
     else if(a==="stcsv") tpStCsv();
     else if(a==="create") tpCreate();
     else if(a==="start") tpCtl("run"); else if(a==="stop") tpCtl("end");
@@ -4873,6 +4943,420 @@ document.addEventListener("keydown",e=>{
   if(e.key==="Enter" && e.target.id==="lt-name"){ e.preventDefault(); ltpJoin(); }
 });
 (function(){ const code=new URLSearchParams(location.search).get("lt"); if(code) setTimeout(()=>ltOpen(code),60); })();
+/* ===== 🎮 Sinf o'yini (Kahoot uslubida) — 2026-10-18 =====
+   Savollarni ustoz o'zi kiritadi (ustoz qurilmasida saqlanadi: localStorage "tch:kgsets"). Ikki rejim:
+   k = Savolma-savol: savol doskada, hamma bir vaqtda. O'rin: to'g'ri javoblar soni; teng bo'lsa — to'g'ri javoblarga ketgan umumiy vaqt. Ball yo'q.
+   s = O'z tempida: har kim to'xtovsiz. O'rin: to'g'ri javoblar soni; teng bo'lsa — o'sha natijaga yetgan vaqt (oxirgi to'g'ri javob).
+   Hisobot: kim qaysi savolda xato qildi, eng qiyin savollar, eng ko'p tanlangan xato, «yordam kerak» (<60%), CSV (Excel), xatolardan uyga mashq havolasi.
+   Tarmoq: MQTT (KG_NS). /qs — savollar (retained; k-rejimda javobsiz), /ctl — boshqaruv (retained), /p/<id> — o'quvchi holati (retained).
+   k-rejimda hakam — ustoz doskasi: javob ochilganda (rev) o'sha savol javoblari muzlatiladi (fz). */
+const KG_NS="otabek-deutsch/kg1/";
+const KG_COL=[["#E21B3C","▲"],["#1368CE","◆"],["#D89E00","●"],["#26890C","■"]];
+function kgId(){ return Math.random().toString(36).slice(2,10); }
+function kgBase(){ return (/github\.io$/.test(location.hostname)||!/claude/.test(location.hostname)&&location.protocol!=="file:") ? location.origin+location.pathname : CH_SITE; }
+function kgLink(id){ return kgBase()+"?kg="+id; }
+function kgSec(ms){ return ((+ms||0)/1000).toFixed(1).replace(".",",")+" s"; }
+function kgLS(k,d){ try{ return JSON.parse(localStorage.getItem(k)||"null")||d; }catch(e){ return d; } }
+function kgLSset(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); return true; }catch(e){ return false; } }
+function kgSets(){ return kgLS("tch:kgsets",[]); }
+function kgReps(){ return kgLS("tch:kgreps",[]); }
+function kgRepPut(R){ const L=kgReps().filter(x=>x&&x.g&&x.g.id!==R.g.id); L.unshift({g:R.g,qs:R.qs,players:R.players||{},fz:R.fz||{},ctl:R.ctl||null});
+  while(L.length>30) L.pop(); if(!kgLSset("tch:kgreps",L)){ L.length=Math.min(L.length,6); kgLSset("tch:kgreps",L); } }
+
+/* --- Savollarni o'qish ---
+   Matn: savol, keyingi qatorlarda 2–4 variant, to'g'risi * bilan; savollar orasida bo'sh qator.
+   «savol = javob» — yozma javob. Savol oxirida (30s) — shu savolga vaqt.
+   Excel/Sheets'dan (tab bilan): A savol · B–E variantlar · F vaqt · G to'g'ri javob raqami (Kahoot shabloni). */
+function kgParse(txt){
+  const qs=[], errs=[], cl=s=>String(s==null?"":s).replace(/\s+/g," ").trim();
+  txt=String(txt||"").replace(/\r/g,"");
+  const mark=s=>{ let m=false; s=cl(s);
+    if(/^[*+✓✔]\s*/.test(s)){ m=true; s=s.replace(/^[*+✓✔]\s*/,""); }
+    if(/\s*[*✓✔]$/.test(s)){ m=true; s=s.replace(/\s*[*✓✔]$/,""); }
+    return [cl(s),m]; };
+  const opt=s=>{ const a=mark(s), t=a[0].replace(/^([a-dA-D][).]|[-–•]|[1-4][).])\s+/,""), b=mark(t); return [b[0],a[1]||b[1]]; };
+  const qline=s=>{ s=cl(s).replace(/^\d{1,3}\s*[.)]\s+/,""); let tm=0;
+    const m=s.match(/\s*(?:\[(\d{1,3})\s*s?\]|\((\d{1,3})\s*(?:s|sek|сек)\.?\))\s*$/i); if(m){ const v=+(m[1]||m[2]); if(v>=5){ tm=Math.min(240,v); s=s.slice(0,m.index); } } return [cl(s),tm]; };
+  const add=(q,tm,items,ref)=>{ items=items.filter(x=>x[0]);
+    if(!q) return errs.push({ref,msg:"savol matni yo‘q"});
+    if(!items.length) return errs.push({ref,msg:"javob yo‘q"});
+    if(q.length>300) q=q.slice(0,300);
+    let o;
+    if(items.length===1) o={q,a:items[0][0].slice(0,120)};
+    else { if(items.length>4) return errs.push({ref,msg:"ko‘pi bilan 4 ta variant bo‘ladi"});
+      const c=items.map((x,k)=>x[1]?k:-1).filter(k=>k>=0); if(!c.length) return errs.push({ref,msg:"to‘g‘ri javob * bilan belgilanmagan"});
+      o={q,o:items.map(x=>x[0].slice(0,120)),c}; }
+    if(tm) o.tm=tm; qs.push(o); };
+  if(/\t/.test(txt)){
+    txt.split("\n").forEach((ln,li)=>{ if(!ln.trim()) return; const c=ln.split("\t").map(cl);
+      if(li<2&&/^(frage|savol|question|вопрос|nr\.?|#)$/i.test(c[0])) return;
+      if(/^\d{1,3}$/.test(c[0])&&c.length>2&&c[1]) c.shift();
+      const [q,tm0]=qline(c[0]); let tm=tm0, cor=null; const raw=c.slice(1,5).map(mark);
+      c.slice(5).forEach(v=>{ if(!v) return; if(cor==null&&/^[1-4](\s*[,;]\s*[1-4])*$/.test(v)) cor=v.split(/\s*[,;]\s*/).map(n=>+n-1);
+        else if(cor==null&&/^[A-Da-d]$/.test(v)) cor=["ABCD".indexOf(v.toUpperCase())]; else if(/^\d{1,3}$/.test(v)&&+v>=5) tm=Math.min(240,+v); });
+      if(cor) raw.forEach((x,k)=>{ if(cor.includes(k)) x[1]=true; });
+      add(q,tm,raw,"Qator "+(li+1)+": "+c[0]); });
+  } else {
+    txt.split(/\n[ \t]*\n/).forEach(b=>{ const L=b.split("\n").map(cl).filter(Boolean); if(!L.length) return;
+      if(L.every(s=>/\s=\s/.test(s))){ L.forEach(s=>{ const m=s.match(/^(.*?)\s+=\s+(.*)$/), [q,tm]=qline(m[1]); add(q,tm,[[cl(m[2]),true]],s); }); return; }
+      const [q,tm]=qline(L[0]); add(q,tm,L.slice(1).map(opt),L[0]); });
+  }
+  return {qs,errs};
+}
+function kgJudge(q,v){ if(!q||v==null||v==="") return false; if(q.o) return Array.isArray(q.c)&&q.c.includes(+v); return !!lrnJudge(String(v),{de:String(q.a||"")}).ok; }
+function kgVal(q,v){ if(v==null||v==="") return "—"; if(q.o){ const o=q.o[+v]; return o==null?"—":o; } return String(v); }
+function kgCor(q){ return q.o? (q.c||[]).map(k=>q.o[k]).join(" / ") : String(q.a||""); }
+function kgQT(K,q){ return ((q&&q.tm)||K.g.tm||20)*1000; }
+function kgPl(P,t,m){ const pid=t.split("/").pop(); if(!m){ delete P[pid]; return; }
+  try{ const d=JSON.parse(m); if(d&&d.n) P[pid]={n:String(d.n).slice(0,40),st:String(d.st||""),a:(d.a&&typeof d.a==="object"&&!Array.isArray(d.a))?d.a:{},t:+d.t||0}; }catch(e){} }
+/* o'quvchining i-savolga javobi: [qiymat, ms] */
+function kgGet(K,pid,i){ if(K.g.m==="k"){ const f=K.fz&&K.fz[i]; return f&&f[pid]? f[pid] : null; }
+  const p=K.players[pid], x=p&&p.a&&p.a[i]; return Array.isArray(x)? [x[0],Math.max(0,+x[1]||0)] : null; }
+function kgStat(K,pid){ let ok=0,tie=0,cnt=0; const res=K.qs.map((q,i)=>{ const a=kgGet(K,pid,i); if(!a) return null; cnt++; const g=kgJudge(q,a[0]);
+    if(g){ ok++; tie= K.g.m==="k"? tie+Math.min(a[1],kgQT(K,q)) : Math.max(tie,a[1]); } return g; }); return {ok,tie,cnt,res}; }
+function kgRank(K){ return Object.entries(K.players||{}).filter(([id,p])=>p&&p.n).map(([id,p])=>Object.assign({id,n:p.n,st:p.st},kgStat(K,id))).sort((a,b)=>(b.ok-a.ok)||(a.tie-b.tie)); }
+function kgTie(K,p){ return K.g.m==="s"? ltFmt(p.tie) : kgSec(p.tie); }
+
+/* ---------- Ustoz paneli: to'plamlar, muharrir, sozlash ---------- */
+const KG_EX=`Ich ___ jeden Tag um 7 Uhr auf.
+*stehe
+steht
+stehen
+aufstehen
+
+Wie spät ist es? (30s)
+*Es ist halb acht.
+Es ist sehr spät.
+Ich habe keine Zeit.
+Um acht Uhr.
+
+квартира = die Wohnung
+работать = arbeiten`;
+function kgPanel(){ const b=document.getElementById("tp-body"); if(!b) return;
+  if(TP.kgEd) return kgEditor(b);
+  if(TP.kgGo) return kgSetup(b);
+  const S=kgSets(), R=kgReps();
+  b.innerHTML=`<div class="lrn-card"><h3>🎮 Sinf o‘yini</h3>
+    <p class="ch-net">Savollarni o‘zingiz kiritasiz → doskaga chiqarasiz → o‘quvchilar telefondan QR-kod orqali qo‘shiladi. Oxirida hisobot: kim qaysi savolda xato qildi.</p>
+    ${S.length?`<ul class="kg-sets">${S.map(s=>`<li><div><b>${esc(s.name)}</b><small>${kgParse(s.txt).qs.length} ta savol · ${esc(new Date(s.t).toLocaleDateString())}</small></div>
+      <div class="kg-act"><button type="button" class="btn primary" data-kg="go" data-k="${esc(s.id)}">▶ O‘ynash</button><button type="button" class="btn" data-kg="ed" data-k="${esc(s.id)}" aria-label="Tahrirlash" title="Tahrirlash">✏️</button><button type="button" class="btn" data-kg="del" data-k="${esc(s.id)}" aria-label="O‘chirish" title="O‘chirish">🗑</button></div></li>`).join("")}</ul>`
+      :`<p class="lrn-count">Hali savollar yo‘q.</p>`}
+    <button type="button" class="btn primary" data-kg="new">＋ Yangi savollar</button></div>
+    ${R.length?`<div class="lrn-card"><h3>📊 Hisobotlar</h3><ul class="tp-games">${R.map(r=>`<li><button type="button" class="lrn-link" data-kg="rep" data-k="${esc(r.g.id)}">${esc(r.g.nm)} · ${r.g.m==="k"?"⚡":"🏃"} · ${Object.values(r.players||{}).filter(p=>p&&p.n).length} o‘quvchi</button><small>${esc(new Date(r.g.t).toLocaleString())}</small></li>`).join("")}</ul></div>`:""}`; }
+function kgEditor(b){ const E=TP.kgEd;
+  b.innerHTML=`<div class="lrn-card"><h3>${E.id?"✏️ Savollarni tahrirlash":"＋ Yangi savollar"}</h3>
+    <label class="acc-lb">Nomi<input class="ch-in" id="kg-nm" maxlength="60" placeholder="Masalan: A2.1 · Lektion 5" value="${esc(E.name||"")}"></label>
+    <textarea class="kg-tx" id="kg-tx" spellcheck="false" autocapitalize="off" placeholder="${esc(KG_EX)}">${esc(E.txt||"")}</textarea>
+    <div class="kg-pv" id="kg-pv"></div>
+    <details class="kg-help"><summary>Qanday yoziladi?</summary>
+      <p><b>Tanlov savoli:</b> birinchi qator — savol, keyin 2–4 ta variant. To‘g‘ri javob oldiga <b>*</b> qo‘ying. Savollar orasida bitta bo‘sh qator.</p>
+      <p><b>Yozma javob:</b> <code>savol = javob</code> — o‘quvchi javobni o‘zi yozadi. Bir nechta to‘g‘ri variant: <code>javob1 / javob2</code>.</p>
+      <p><b>Vaqt:</b> savol oxiriga <code>(30s)</code> yozsangiz — shu savolga 30 soniya.</p>
+      <p><b>Excel / Google Sheets:</b> jadvalni nusxalab shu yerga qo‘ying: A — savol, B–E — variantlar, F — vaqt, G — to‘g‘ri javob raqami (1–4). Kahoot shabloni ham mos.</p>
+      <p>Variantlar o‘yinda o‘zi aralashtiriladi.</p><pre>${esc(KG_EX)}</pre></details>
+    <div class="ch-btns"><button type="button" class="btn" data-kg="cancel">Bekor qilish</button><button type="button" class="btn primary" data-kg="save">💾 Saqlash</button></div></div>`;
+  kgPreview(); }
+function kgPreview(){ const pv=document.getElementById("kg-pv"), tx=document.getElementById("kg-tx"); if(!pv||!tx) return;
+  if(!tx.value.trim()){ pv.innerHTML=""; return; }
+  const P=kgParse(tx.value), mc=P.qs.filter(q=>q.o).length;
+  pv.innerHTML=`<div class="${P.qs.length?"ok":"er"}">${P.qs.length?`✓ ${P.qs.length} ta savol: ${mc} ta tanlov, ${P.qs.length-mc} ta yozma`:"Savol topilmadi"}</div>
+    ${P.errs.map(e=>`<div class="er">⚠ ${esc(String(e.ref).slice(0,60))} — ${esc(e.msg)}</div>`).join("")}
+    ${P.qs.length?`<ol class="kg-pvl">${P.qs.map(q=>`<li><b lang="de">${esc(q.q)}</b>${q.tm?` <small>⏱ ${q.tm} s</small>`:""}<br><span lang="de">${q.o?q.o.map((o,k)=>q.c.includes(k)?`<i>✓ ${esc(o)}</i>`:esc(o)).join(" · "):`✍️ <i>${esc(q.a)}</i>`}</span></li>`).join("")}</ol>`:""}`; }
+function kgSaveSet(){ const nm=(document.getElementById("kg-nm").value||"").trim(), tx=document.getElementById("kg-tx").value, P=kgParse(tx);
+  if(!P.qs.length){ kgPreview(); document.getElementById("kg-tx").focus(); return; }
+  if(P.errs.length&&!confirm(P.errs.length+" ta savolda xato bor — ular o‘yinga kirmaydi. Baribir saqlansinmi?")) return;
+  const L=kgSets(), id=TP.kgEd.id||kgId(), i=L.findIndex(s=>s.id===id); if(i>=0) L.splice(i,1);
+  L.unshift({id,name:nm||("Savollar "+new Date().toLocaleDateString()),txt:tx,t:Date.now()});
+  if(!kgLSset("tch:kgsets",L)){ alert("Saqlab bo‘lmadi (brauzer xotirasi to‘lgan)."); return; }
+  TP.kgEd=null; kgPanel(); }
+function kgSetup(b){ const s=kgSets().find(x=>x.id===TP.kgGo); if(!s){ TP.kgGo=null; return kgPanel(); }
+  const P=kgParse(s.txt), M=TP.kgM||"k";
+  b.innerHTML=`<div class="lrn-card"><h3>▶ ${esc(s.name)}</h3><p class="lrn-count">${P.qs.length} ta savol</p>
+    <div class="tp-row"><span>Rejim</span><div class="tp-seg"><button type="button" data-kgm="k" aria-pressed="${M==="k"}">⚡ Savolma-savol</button><button type="button" data-kgm="s" aria-pressed="${M==="s"}">🏃 O‘z tempida</button></div></div>
+    <p class="ch-net">${M==="k"?"Savol doskada chiqadi, hamma bir vaqtda javob beradi. Keyingi savolga siz o‘tkazasiz. O‘rin: ko‘p to‘g‘ri javob; teng bo‘lsa — to‘g‘ri javoblarga kam vaqt sarflagan.":"Har kim o‘z tezligida, to‘xtovsiz ishlaydi, boshqalarni kutmaydi. O‘rin: ko‘p to‘g‘ri javob; teng bo‘lsa — o‘sha natijaga tezroq yetgan."}</p>
+    ${M==="k"?`<div class="tp-row"><span>Har savolga</span><div class="tp-seg">${[10,20,30,60].map(v=>`<button type="button" data-kgt="${v}" aria-pressed="${(TP.kgT||20)===v}">${v} s</button>`).join("")}</div></div>`
+      :`<div class="tp-row"><span>Umumiy vaqt</span><div class="tp-seg">${[[0,"Cheksiz"],[5,"5 daq"],[10,"10 daq"],[15,"15 daq"],[20,"20 daq"]].map(([v,t])=>`<button type="button" data-kgtot="${v}" aria-pressed="${(TP.kgTot||0)===v}">${t}</button>`).join("")}</div></div>`}
+    <div class="ch-btns"><button type="button" class="btn" data-kg="cancel">← Orqaga</button><button type="button" class="btn primary" data-kg="launch">🎮 Doskaga chiqarish</button></div></div>`; }
+function kgLaunch(){ const s=kgSets().find(x=>x.id===TP.kgGo); if(!s) return; const P=kgParse(s.txt); if(!P.qs.length) return;
+  const r=chRng(Math.floor(Math.random()*2147483647));
+  const qs=P.qs.map(q=>{ if(!q.o||q.o.length<3) return q; const ix=chShuf(q.o.map((_,i)=>i),r); return Object.assign({},q,{o:ix.map(i=>q.o[i]),c:q.c.map(ci=>ix.indexOf(ci))}); });
+  const M=TP.kgM||"k", g={id:kgId(),m:M,nm:s.name,tm:M==="k"?(TP.kgT||20):(TP.kgTot||0),n:qs.length,t:Date.now()};
+  TP.kgGo=null; kgBoardOpen({g,qs,players:{},fz:{},ctl:{st:"lobby",t:Date.now()}}); }
+
+/* ---------- Doska (proyektor) ---------- */
+function kgPubQs(K){ return JSON.stringify({g:K.g,qs:K.g.m==="k"?K.qs.map(q=>{ const o={q:q.q}; if(q.o) o.o=q.o; else o.w=1; if(q.tm) o.tm=q.tm; return o; }):K.qs}); }
+function kgBoardOpen(R){ kgBEnd(); const K=TP.k={g:R.g,qs:R.qs,players:R.players||{},fz:R.fz||{},ctl:R.ctl||{st:"lobby",t:Date.now()},id:R.g.id}, ns=KG_NS+K.id;
+  K.mq=mqMulti(cl=>{ cl.subscribe(ns+"/p/+",{qos:1}); cl.publish(ns+"/qs",kgPubQs(K),{qos:1,retain:true}); cl.publish(ns+"/ctl",JSON.stringify(K.ctl),{qos:1,retain:true}); kgNet(); },
+    (t,m)=>{ if(TP.k!==K) return; kgPl(K.players,t,m); clearTimeout(K.dT); K.dT=setTimeout(kgBoardUpd,150); kgSaveSoon();
+      if(TP.kgR&&TP.kgR.R===K){ clearTimeout(K.rT); K.rT=setTimeout(kgRepDraw,400); } });
+  clearInterval(TP.kT); TP.kT=setInterval(kgTick,250); kgRepPut(K); TP.kgR=null; kgBoard(); }
+function kgBEnd(){ const K=TP.k; if(!K) return; clearInterval(TP.kT); clearTimeout(K.dT); clearTimeout(K.allT); kgRepPut(K); if(K.mq) K.mq.end(); TP.k=null; }
+let kgSvT=0; function kgSaveSoon(){ clearTimeout(kgSvT); kgSvT=setTimeout(()=>{ if(TP.k) kgRepPut(TP.k); },1500); }
+function kgNet(){ const e=document.getElementById("kg-net"), K=TP.k; if(e&&K) e.textContent=K.mq&&K.mq.ok()?"🟢 Ulandi":"⏳ Ulanmoqda…"; }
+function kgCtl(c){ const K=TP.k; if(!K) return; K.ctl=Object.assign({t:Date.now()},c); K.mq.pub(KG_NS+K.id+"/ctl",JSON.stringify(K.ctl),true); kgRepPut(K); kgBoard(); }
+function kgHead(K){ return `<div class="lrn-bar"><button class="btn" data-kg="bback" aria-label="←">←</button><div class="lrn-tt"><b>🎮 ${esc(K.g.nm)}</b><small>${K.g.m==="k"?"⚡ Savolma-savol":"🏃 O‘z tempida"} · ${K.qs.length} savol</small></div><button type="button" class="lrn-link" data-kg="rboard">📊 Hisobot</button></div>`; }
+function kgBoard(){ const K=TP.k; if(!K||TP.kgR) return; const el=tpEl(), st=K.ctl.st;
+  const body= st==="lobby"? kgLobbyHTML(K) : (K.g.m==="k"&&(st==="q"||st==="rev"))? kgQHTML(K) : (K.g.m==="s"&&st==="run")? kgRunHTML(K) : kgEndHTML(K);
+  el.innerHTML=kgHead(K)+`<div class="kg-wrap kg-${st}">${body}</div>`; el.scrollTop=0;
+  if(st==="lobby") ltQr(kgLink(K.id),"kg-qr");
+  if(st==="end"&&!K.conf){ K.conf=1; setTimeout(ltConfetti,300); }
+  kgBoardUpd(); kgTick(); kgNet(); }
+function kgLobbyHTML(K){ const url=kgLink(K.id);
+  return `<div class="kg-lobby"><div class="kg-box"><button type="button" class="tp-qr" id="kg-qr" data-tp="qrbig" title="Kattalashtirish"></button><div class="tp-url">🔍 QR-kodni bosing — kattalashadi</div>
+      <div class="ch-btns"><button type="button" class="btn" data-kg="copy">📋 Havolani nusxalash</button><a class="btn" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent("🎮 "+K.g.nm)}">📤 Telegram</a></div><p class="ch-net" id="kg-net"></p></div>
+    <div class="kg-box"><h2 class="kg-h2">👋 Qo‘shilganlar: <b id="kg-cnt">0</b></h2><div class="kg-names" id="kg-names"></div>
+      <p class="ch-net">${K.g.m==="k"?`⚡ Savolma-savol · har savolga ${K.g.tm} soniya`:`🏃 O‘z tempida${K.g.tm?` · ${K.g.tm} daqiqa`:" · vaqt cheklanmagan"}`} · ${K.qs.length} ta savol</p>
+      <button type="button" class="btn primary tp-big" data-kg="start">▶ Boshlash</button></div></div>`; }
+function kgQHTML(K){ const i=K.ctl.i, q=K.qs[i], rev=K.ctl.st==="rev", n=K.qs.length, cnt=[0,0,0,0], wr={}; let okN=0, tot=0;
+  if(rev) Object.values(K.fz[i]||{}).forEach(a=>{ tot++; if(q.o){ const v=+a[0]; if(v>=0&&v<4) cnt[v]++; } if(kgJudge(q,a[0])) okN++; else if(!q.o){ const w=lrnNorm(a[0]); if(w) wr[w]=(wr[w]||0)+1; } });
+  const joined=Object.values(K.players).filter(p=>p&&p.n).length;
+  return `<div class="kg-qhead"><span class="kg-qn">${i+1} / ${n}</span>${rev?`<span class="kg-sumline">✓ ${okN} / ${joined} to‘g‘ri</span>`:`<span class="kg-clock" id="kg-clock"></span>`}<span class="kg-ansn" id="kg-ans"></span></div>
+    <div class="kg-qtext" lang="de">${esc(q.q)}</div>
+    ${q.o?`<div class="kg-opts">${q.o.map((o,k)=>`<div class="kg-o${rev?(q.c.includes(k)?" ok":" no"):""}" style="--c:${KG_COL[k][0]}"><i>${KG_COL[k][1]}</i><span lang="de">${esc(o)}</span>${rev?`<em>${cnt[k]}</em>`:""}</div>`).join("")}</div>`
+      :`<div class="kg-typed">${rev?`<div class="kg-o ok" style="--c:#26890C"><i>✓</i><span lang="de">${esc(q.a)}</span></div>${Object.keys(wr).length?`<div class="kg-wr">Xato yozilganlar: ${Object.entries(wr).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([w,c])=>`<s lang="de">${esc(w)}</s> ×${c}`).join(" · ")}</div>`:""}`:`<div class="kg-wbox">✍️ Javobni telefonda nemischa yozing</div>`}</div>`}
+    <div class="kg-ctl">${rev?(i+1<n?`<button type="button" class="btn primary" data-kg="next">Keyingi savol →</button>`:`<button type="button" class="btn primary" data-kg="fin">🏁 Yakuniy natijalar</button>`):`<button type="button" class="btn" data-kg="reveal">⏭ Javobni ko‘rsatish</button>`}</div>
+    ${rev?`<div class="kg-box"><h2 class="kg-h2">🏆 Top 5</h2><ol class="tp-rows" id="kg-rows"></ol></div>`:""}`; }
+function kgRunHTML(K){ return `<div class="kg-qhead"><span class="kg-qn">🏃 O‘z tempida · ${K.qs.length} savol</span><span class="kg-clock wide" id="kg-clock"></span><span class="kg-ansn" id="kg-cnt2"></span></div>
+    <div class="kg-ctl"><button type="button" class="btn" data-tp="qrbig">📱 QR-kod</button><button type="button" class="btn tp-stop" data-kg="fin">⏹ Tugatish</button></div>
+    <ol class="tp-rows" id="kg-rows"></ol>`; }
+function kgEndHTML(K){ const L=kgRank(K), medal=["🥇","🥈","🥉"], P=[L[1],L[0],L[2]];
+  return `${L[0]?`<div class="tp-podium">${P.map((p,i)=>p?`<div class="pd pd${[2,1,3][i]}"><div class="pn">${esc(p.n)}</div><div class="ps">${p.ok} to‘g‘ri · ${kgTie(K,p)}</div><div class="pb">${medal[[1,0,2][i]]}</div></div>`:`<div class="pd pd${[2,1,3][i]} empty"></div>`).join("")}</div>`:""}
+    <div class="kg-ctl"><button type="button" class="btn primary" data-kg="rboard">📊 Hisobot — kim qayerda xato qildi</button><button type="button" class="btn" data-kg="csv">⬇ Excel</button></div>
+    <ol class="tp-rows" id="kg-rows"></ol>`; }
+function kgRowsHTML(K,lim){ const L=kgRank(K), n=K.qs.length, medal=["🥇","🥈","🥉"], s=K.g.m==="s";
+  if(!L.length) return `<li class="tp-empty">Hali hech kim yo‘q.</li>`;
+  return L.slice(0,lim).map((p,k)=>{ const ld=p.ok>0&&k<3, pr=n?Math.min(100,p.cnt/n*100):0;
+    return `<li class="${p.st==="done"?"fin ":""}${ld?"top"+(k+1):""}"><span class="tp-pos">${ld?medal[k]:k+1}</span><span class="tp-nm"><b>${ld&&k===0?"👑 ":""}${esc(p.n)}</b>${s?`<span class="tp-track"><i style="width:${pr}%"></i><em style="left:${pr}%">${p.st==="done"?"🏁":"🏃"}</em></span>`:""}</span>
+      <span class="tp-ok">${p.ok}<small>/${n}</small></span><span class="tp-tm">${kgTie(K,p)}${s&&p.st==="play"?' <i class="tp-live">●</i>':""}</span></li>`; }).join(""); }
+function kgBoardUpd(){ const K=TP.k; if(!K||TP.kgR) return; const st=K.ctl.st, P=Object.entries(K.players).filter(([i,p])=>p&&p.n);
+  const c=document.getElementById("kg-cnt"); if(c) c.textContent=P.length;
+  const nm=document.getElementById("kg-names"); if(nm){ const have=new Set([...nm.querySelectorAll("[data-id]")].map(x=>x.dataset.id));
+    if(!P.length) nm.innerHTML=`<em class="ch-net">QR-kodni skanerlang yoki havolani guruhga tashlang.</em>`;
+    else { const em=nm.querySelector("em"); if(em) em.remove(); P.forEach(([id,p])=>{ if(!have.has(id)){ const s=document.createElement("span"); s.dataset.id=id; s.textContent=p.n; nm.appendChild(s); } });
+      nm.querySelectorAll("[data-id]").forEach(x=>{ if(!K.players[x.dataset.id]) x.remove(); }); } }
+  const an=document.getElementById("kg-ans"); if(an&&st==="q"){ const i=K.ctl.i, n=P.filter(([id,p])=>p.a&&p.a[i]).length; an.textContent=`${n} / ${P.length} javob`; }
+  const c2=document.getElementById("kg-cnt2"); if(c2) c2.textContent=`${P.length} o‘quvchi · ${P.filter(([i,p])=>p.st==="done").length} tugatdi`;
+  const rows=document.getElementById("kg-rows"); if(rows) rows.innerHTML=kgRowsHTML(K, st==="rev"?5:200); }
+function kgTick(){ const K=TP.k; if(!K) return; const st=K.ctl.st, now=Date.now();
+  if(K.g.m==="k"&&st==="q"){ const q=K.qs[K.ctl.i], left=K.ctl.t+kgQT(K,q)-now, c=document.getElementById("kg-clock");
+    if(c&&!TP.kgR){ c.textContent=Math.max(0,Math.ceil(left/1000)); c.classList.toggle("hurry",left<5000); }
+    const P=Object.values(K.players).filter(p=>p&&p.n), all=P.length>0&&P.every(p=>p.a&&p.a[K.ctl.i]);
+    if(left<-700) kgReveal(); else if(all&&!K.allT){ K.allT=setTimeout(()=>{ K.allT=0; if(TP.k===K&&K.ctl.st==="q") kgReveal(); },800); } }
+  if(K.g.m==="s"&&st==="run"){ const c=document.getElementById("kg-clock"), dl=K.g.tm?K.ctl.t0+K.g.tm*60000:0;
+    if(c&&!TP.kgR){ c.textContent=dl?ltFmt(dl-now):ltFmt(now-K.ctl.t0); c.classList.toggle("hurry",!!dl&&dl-now<30000); }
+    const P=Object.values(K.players).filter(p=>p&&p.n);
+    if(P.length&&P.every(p=>p.st==="done")){ if(!K.allD) K.allD=now; else if(now-K.allD>2500){ K.allD=0; kgCtl({st:"end",t0:K.ctl.t0}); return; } } else K.allD=0;
+    if(dl&&now>=dl+1500) kgCtl({st:"end",t0:K.ctl.t0}); } }
+function kgRk(K){ return kgRank(K).map(p=>[p.id,p.ok,p.tie]); }
+function kgReveal(){ const K=TP.k; if(!K||K.ctl.st!=="q") return; const i=K.ctl.i, q=K.qs[i], T=kgQT(K,q), F={};
+  Object.entries(K.players).forEach(([id,p])=>{ const x=p&&p.a&&p.a[i]; if(Array.isArray(x)) F[id]=[typeof x[0]==="number"?x[0]:String(x[0]==null?"":x[0]).slice(0,80), Math.min(T,Math.max(0,+x[1]||0))]; });
+  K.fz[i]=F; clearTimeout(K.allT); K.allT=0;
+  kgCtl({st:"rev",i,c:q.o?q.c:q.a,rk:kgRk(K)}); }
+function kgNext(){ const K=TP.k; if(!K) return; const i=K.ctl.st==="lobby"?0:(K.ctl.i|0)+1; if(i>=K.qs.length) return kgFinish(); kgCtl({st:"q",i}); }
+function kgFinish(){ const K=TP.k; if(!K) return; if(K.g.m==="k"&&K.ctl.st==="q") kgReveal();
+  kgCtl(K.g.m==="k"? {st:"end",rk:kgRk(K),cs:K.qs.map(q=>q.o?q.c:q.a)} : {st:"end",t0:K.ctl.t0}); }
+
+/* ---------- Hisobot ---------- */
+function kgQStats(R){ const ids=Object.keys(R.players||{}).filter(id=>R.players[id]&&R.players[id].n);
+  return R.qs.map((q,i)=>{ let tot=0, ok=0; const wr={}; ids.forEach(id=>{ const a=kgGet(R,id,i); if(!a) return; tot++; if(kgJudge(q,a[0])) ok++; else { const w=kgVal(q,a[0]); if(w!=="—") wr[w]=(wr[w]||0)+1; } });
+    const top=Object.entries(wr).sort((a,b)=>b[1]-a[1])[0]; return {i,q,tot,ok,pct:tot?Math.round(ok/tot*100):null,wrong:top?top[0]:"",wrongN:top?top[1]:0}; }); }
+function kgRepOpen(R,fromBoard){ const X=TP.kgR={R,fb:!!fromBoard};
+  if(!fromBoard&&R.g.m==="s"){ const id=R.g.id; X.mq=mqMulti(cl=>cl.subscribe(KG_NS+id+"/p/+",{qos:1}),(t,m)=>{ if(TP.kgR!==X) return; kgPl(R.players,t,m); clearTimeout(X.dT); X.dT=setTimeout(()=>{ kgRepPut(R); kgRepDraw(); },400); }); }
+  kgRepDraw(); tpEl().scrollTop=0; }
+function kgRepClose(){ const X=TP.kgR; if(X&&X.mq) X.mq.end(); TP.kgR=null; if(TP.k) kgBoard(); else { TP.tab="kg"; tpRender(); } }
+function kgRepDraw(){ const X=TP.kgR; if(!X) return; const R=X.R, el=tpEl(), n=R.qs.length||1, sc=el.scrollTop;
+  const L=kgRank(R), Q=kgQStats(R), avg=L.length?Math.round(L.reduce((t,p)=>t+p.ok,0)/L.length/n*100):0, weak=L.filter(p=>p.ok/n<.6);
+  const hard=Q.filter(x=>x.pct!=null&&x.pct<100).sort((a,b)=>a.pct-b.pct).slice(0,3), qsort=X.qs==="h"?[...Q].sort((a,b)=>(a.pct??101)-(b.pct??101)):Q;
+  const live=TP.k===R, canResume=!live&&!X.fb&&R.ctl&&R.ctl.st!=="end"&&!R.g.hw;
+  el.innerHTML=`<div class="lrn-bar"><button class="btn" data-kg="rclose" aria-label="←">←</button><div class="lrn-tt"><b>📊 Hisobot</b><small>${esc(R.g.nm)} · ${esc(new Date(R.g.t).toLocaleString())}</small></div><button type="button" class="lrn-link" data-kg="csv">⬇ Excel</button></div>
+  <div class="lrn-body kg-rep">
+    ${canResume?`<div class="lrn-card"><p>Bu o‘yin tugatilmagan.</p><button type="button" class="btn primary" data-kg="resume">▶ Doskada davom ettirish</button></div>`:""}
+    <div class="lrn-card"><div class="kg-sum"><div><b>${L.length}</b><small>o‘quvchi</small></div><div><b>${avg}%</b><small>o‘rtacha natija</small></div><div><b>${R.qs.length}</b><small>savol</small></div><div class="${weak.length?"warn":""}"><b>${weak.length}</b><small>yordam kerak (60% dan past)</small></div></div>
+      ${hard.length?`<div class="kg-hard"><b>🔥 Eng qiyin savollar:</b> ${hard.map(x=>`<span>#${x.i+1} — ${x.pct}%</span>`).join(" ")}</div>`:""}
+      ${weak.length?`<div class="kg-hard"><b>🆘 Yordam kerak:</b> ${weak.map(p=>esc(p.n)).join(", ")}</div>`:""}</div>
+    <div class="lrn-card"><div class="tp-lbh"><h3>👥 O‘quvchilar</h3><span class="ch-net">ismni bosing — xatolari ochiladi</span></div>
+      <ul class="kg-st">${L.map((p,k)=>{ const miss=p.res.map((r,i)=>r?null:i).filter(i=>i!=null), pc=Math.round(p.ok/n*100);
+        return `<li><button type="button" class="kg-sth" data-kgst="${esc(p.id)}" aria-expanded="${X.op===p.id}"><span class="p">${k+1}</span><span class="nm"><b>${esc(p.n)}</b>${pc<60?` <em class="kg-hb">yordam kerak</em>`:""}<span class="kg-chips">${miss.map(i=>`<span>#${i+1}</span>`).join("")}</span></span><span class="sc">${p.ok}/${R.qs.length}<small>${pc}% · ${kgTie(R,p)}</small></span></button>
+        ${X.op===p.id?`<ul class="kg-mis">${miss.length?miss.map(i=>{ const q=R.qs[i], a=kgGet(R,p.id,i); return `<li><span>#${i+1} <span lang="de">${esc(q.q)}</span></span><s lang="de">${esc(a?kgVal(q,a[0]):"javob yo‘q")}</s><b lang="de">✓ ${esc(kgCor(q))}</b></li>`; }).join(""):"<li>✓ Hammasi to‘g‘ri!</li>"}</ul>`:""}</li>`; }).join("")||`<li class="ch-net">Hali natija yo‘q.</li>`}</ul></div>
+    <div class="lrn-card"><div class="tp-lbh"><h3>❓ Savollar</h3><div class="tp-seg"><button type="button" data-kgqs="o" aria-pressed="${X.qs!=="h"}">Tartib bo‘yicha</button><button type="button" data-kgqs="h" aria-pressed="${X.qs==="h"}">Qiyinlari oldin</button></div></div>
+      <ol class="kg-qs">${qsort.map(x=>`<li class="${x.pct!=null&&x.pct<50?"hard":""}"><div class="h"><span>#${x.i+1} <span lang="de">${esc(x.q.q)}</span></span><b>${x.pct==null?"—":x.pct+"%"}</b></div><div class="kg-pbar"><i style="width:${x.pct||0}%"></i></div>
+        <small>✓ <span lang="de">${esc(kgCor(x.q))}</span> · ${x.ok}/${x.tot} to‘g‘ri${x.wrongN?` · ko‘p tanlangan xato: <s lang="de">${esc(x.wrong)}</s> (${x.wrongN})`:""}</small></li>`).join("")}</ol></div>
+    ${R.g.hw?"":`<div class="lrn-card"><h3>🔁 Xatolar ustida ishlash</h3><p class="ch-net">Sinfning 70% dan kami to‘g‘ri topgan savollaridan uyga mashq havolasi (o‘z tempida). Kim bajargani «Hisobotlar»da chiqadi.</p>
+      <button type="button" class="btn primary" data-kg="hw"${Q.some(x=>x.pct!=null&&x.pct<70)?"":" disabled"}>🔗 Uyga mashq havolasini yaratish</button><div id="kg-hwo">${X.hw||""}</div></div>`}
+  </div>`; el.scrollTop=sc; }
+function kgHw(){ const X=TP.kgR, R=X&&X.R; if(!R) return; const sel=kgQStats(R).filter(x=>x.pct!=null&&x.pct<70).map(x=>R.qs[x.i]); if(!sel.length) return;
+  const g={id:kgId(),m:"s",nm:R.g.nm+" · takrorlash",tm:0,n:sel.length,t:Date.now(),hw:1}, url=kgBase()+"?kgd="+chB64e(JSON.stringify({g,qs:sel}));
+  kgRepPut({g,qs:sel,players:{},fz:{},ctl:{st:"run",t0:Date.now()}});
+  X.hw=`<p class="lrn-count">✓ ${sel.length} ta savol · havola tayyor</p><div class="ch-btns"><button type="button" class="btn" data-kgcopy="${esc(url)}">📋 Nusxalash</button><a class="btn" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent("🔁 "+g.nm)}">📤 Telegram</a></div>`;
+  const o=document.getElementById("kg-hwo"); if(o) o.innerHTML=X.hw; }
+function kgCsv(R){ const n=R.qs.length, L=kgRank(R), Q=kgQStats(R), s=R.g.m==="s", cell=v=>{ v=String(v==null?"":v); if(/^[=+\-@]/.test(v)) v="'"+v; return `"${v.replace(/"/g,'""')}"`; };
+  const rows=[["O‘rin","Ism","To‘g‘ri","Foiz",s?"Vaqt":"Vaqt (s)",...R.qs.map((q,i)=>"#"+(i+1))]];
+  L.forEach((p,k)=>rows.push([k+1,p.n,p.ok+"/"+n,Math.round(p.ok/n*100)+"%",s?ltFmt(p.tie):((p.tie/1000).toFixed(1).replace(".",",")),...R.qs.map((q,i)=>{ const a=kgGet(R,p.id,i); return p.res[i]?"✓":a?"✗ "+kgVal(q,a[0]):"—"; })]));
+  rows.push([]); rows.push(["#","Savol","To‘g‘ri javob","To‘g‘ri %","Ko‘p tanlangan xato"]);
+  Q.forEach(x=>rows.push([x.i+1,x.q.q,kgCor(x.q),x.pct==null?"":x.pct+"%",x.wrongN?x.wrong+" ("+x.wrongN+")":""]));
+  const csv="﻿"+rows.map(r=>r.map(cell).join(";")).join("\r\n"), a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"})); a.download=("Sinf oyini - "+R.g.nm+" - "+new Date(R.g.t).toISOString().slice(0,10)).replace(/[\\/:*?"<>|]+/g,"-")+".csv";
+  document.body.appendChild(a); a.click(); a.remove(); }
+
+/* ---------- O'quvchi tomoni (?kg=<id> yoki ?kgd=<uyga mashq>) ---------- */
+const KGUZ={uz:{t:"🎮 Sinf o‘yini",nm:"Ismingiz",nmPh:"Ism va familiya",join:"Qo‘shilish",errNm:"Ismingizni yozing",wait:"Ustoz o‘yinni boshlashini kuting…",load:"Savollar yuklanmoqda…",bad:"Havola noto‘g‘ri yoki o‘yin topilmadi.",
+    got:"Javob qabul qilindi!",gotS:"Boshqalarni kuting…",late:"Vaqt tugadi",ok:"To‘g‘ri!",no:"Xato",noAns:"Javob berilmadi",corr:"To‘g‘ri javob:",place:(a,b)=>`${a}-o‘rin (${b} kishidan)`,score:(o,n)=>`✓ ${o} / ${n} to‘g‘ri`,
+    write:"Nemischa yozing",ph:"Nemischa…",send:"Yuborish",dunno:"Bilmayman",next:"Keyingi savolni kuting…",done:"O‘yin tugadi!",review:"Xatolar",allOk:"Hammasi to‘g‘ri! 🎉",board:"Natijalar",you:"siz",q:(i,n)=>`${i} / ${n}`,
+    rulesK:t=>`Savollar doskada chiqadi · har biriga ${t} soniya`,rulesS:(n,m)=>`${n} ta savol · o‘z tezligingizda${m?` · ${m} daqiqa`:""}`,rules2:"O‘rin: ko‘p to‘g‘ri javob; teng bo‘lsa — kam vaqt sarflagan",
+    net0:"⏳ Ulanmoqda…",net1:"🟢 Ulandi",netBad:"🔴 Ulanib bo‘lmadi",ended:"Bu o‘yin tugagan."},
+  ru:{t:"🎮 Игра класса",nm:"Ваше имя",nmPh:"Имя и фамилия",join:"Присоединиться",errNm:"Напишите имя",wait:"Ждите, пока учитель начнёт игру…",load:"Загрузка вопросов…",bad:"Ссылка неверная или игра не найдена.",
+    got:"Ответ принят!",gotS:"Ждите остальных…",late:"Время вышло",ok:"Верно!",no:"Неверно",noAns:"Нет ответа",corr:"Правильный ответ:",place:(a,b)=>`${a}-е место (из ${b})`,score:(o,n)=>`✓ ${o} / ${n} верно`,
+    write:"Напишите по-немецки",ph:"По-немецки…",send:"Отправить",dunno:"Не знаю",next:"Ждите следующий вопрос…",done:"Игра окончена!",review:"Ошибки",allOk:"Всё верно! 🎉",board:"Результаты",you:"вы",q:(i,n)=>`${i} / ${n}`,
+    rulesK:t=>`Вопросы на доске · ${t} сек. на каждый`,rulesS:(n,m)=>`${n} вопросов · в своём темпе${m?` · ${m} мин`:""}`,rules2:"Место: больше верных ответов; при равенстве — меньше времени",
+    net0:"⏳ Подключение…",net1:"🟢 Подключено",netBad:"🔴 Нет связи",ended:"Эта игра уже окончена."}};
+const kz=k=>KGUZ[state.lang==="ru"?"ru":"uz"][k];
+const KGP={};
+function kgpEl(){ let e=document.getElementById("kgp"); if(!e){ e=document.createElement("div"); e.id="kgp"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
+function kgpHead(sub){ return `<div class="lrn-bar"><button class="btn" data-kgp="close" aria-label="✕">✕</button><div class="lrn-tt"><b>${esc(kz("t"))}</b><small>${esc(KGP.g?KGP.g.nm:"")}</small></div>${sub||""}</div>`; }
+function kgOpen(id,d){
+  let inl=null; if(d){ try{ inl=JSON.parse(chB64d(d)); }catch(e){} if(inl&&inl.g&&Array.isArray(inl.qs)&&inl.qs.length) id=String(inl.g.id); else inl=null; }
+  const el=kgpEl(); el.hidden=false; document.body.style.overflow="hidden";
+  if(KGP.mq) KGP.mq.end(); clearInterval(KGP.tick); for(const k in KGP) delete KGP[k];
+  if(!id||!/^[a-z0-9]{4,16}$/.test(id)){ el.innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card"><p>${esc(kz("bad"))}</p></div></div>`; return; }
+  let me=store.get("chme"); if(!me){ me=Math.random().toString(36).slice(2,10); store.set("chme",me); }
+  Object.assign(KGP,{id,me,solo:!!inl,g:inl?inl.g:null,qs:inl?inl.qs:null,ctl:null,players:{},st:"join",a:{},t0:0,qi:-1,qRecv:0,lock:false,name:store.get("chname")||ACC.name||"",openT:Date.now()});
+  try{ const s=JSON.parse(store.get("kg:"+id)||"null"); if(s) Object.assign(KGP,{name:s.n||KGP.name,st:s.st||"join",a:(s.a&&typeof s.a==="object")?s.a:{},t0:s.t0||0}); }catch(e){}
+  const ns=KG_NS+id;
+  KGP.mq=mqMulti(cl=>{ if(!KGP.solo) cl.subscribe(ns+"/qs",{qos:1}); cl.subscribe(ns+"/ctl",{qos:1}); cl.subscribe(ns+"/p/+",{qos:1}); kgpNet(); kgpPub(true); },(t,m)=>{ if(KGP.id===id) kgpMsg(t,m); });
+  KGP.tick=setInterval(kgpTick,250); kgpRender(); }
+function kgpNet(){ const e=document.getElementById("kg-pnet"); if(e) e.textContent= KGP.mq&&KGP.mq.ok()? kz("net1") : (Date.now()-KGP.openT>10000? kz("netBad") : kz("net0")); }
+function kgpSave(){ store.set("kg:"+KGP.id,JSON.stringify({n:KGP.name,st:KGP.st,a:KGP.a,t0:KGP.t0})); }
+function kgpPub(force){ if(!KGP.mq||!KGP.name||KGP.st==="join") return; const now=Date.now();
+  if(!force&&now-(KGP.pubT||0)<400){ clearTimeout(KGP.pubTm); KGP.pubTm=setTimeout(()=>kgpPub(true),400); return; } KGP.pubT=now;
+  KGP.mq.pub(KG_NS+KGP.id+"/p/"+KGP.me,JSON.stringify({n:KGP.name,st:KGP.st,a:KGP.a,t:now}),true); }
+function kgpMsg(t,m){ const ns=KG_NS+KGP.id;
+  if(t===ns+"/qs"){ if(KGP.solo) return; try{ const d=JSON.parse(m); if(d&&d.g&&Array.isArray(d.qs)&&d.qs.length){ const first=!KGP.qs; KGP.g=d.g; KGP.qs=d.qs; if(first){ if(KGP.ctl) kgpOnCtl(); else kgpRender(); } } }catch(e){} return; }
+  if(t===ns+"/ctl"){ let c=null; try{ c=m?JSON.parse(m):null; }catch(e){ return; } if(!c||typeof c!=="object") return;
+    if(KGP.ctl&&(+c.t||0)<(+KGP.ctl.t||0)) return; const same=KGP.ctl&&KGP.ctl.t===c.t&&KGP.ctl.st===c.st; KGP.ctl=c; if(!same) kgpOnCtl(); return; }
+  if(t.startsWith(ns+"/p/")){ const pid=t.split("/").pop(); if(pid===KGP.me) return; kgPl(KGP.players,t,m); if(KGP.g&&KGP.g.m==="s"){ clearTimeout(KGP.bT); KGP.bT=setTimeout(kgpBoard,250); } } }
+function kgpOnCtl(){ const c=KGP.ctl; if(!KGP.qs||!c) return;
+  if(KGP.g.m==="s"){ if(c.st==="run"&&KGP.st==="wait") kgpStart(); else if(c.st==="end"&&KGP.st==="play") kgpFinish(); else if(KGP.st==="wait"||KGP.st==="done") kgpRender(); return; }
+  if(KGP.st==="wait"&&c.st!=="lobby"){ KGP.st="play"; kgpSave(); kgpPub(true); }
+  if(c.st==="end"&&KGP.st==="play"){ KGP.st="done"; kgpSave(); kgpPub(true); }
+  if(c.st==="q"&&KGP.qi!==c.i){ KGP.qi=c.i; KGP.qRecv=Date.now(); }
+  if(KGP.st!=="join") kgpRender(); }
+function kgpRender(){ const el=kgpEl();
+  if(!KGP.qs){ el.innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card"><div class="lt-wait"><div class="lt-dots"><i></i><i></i><i></i></div><b>${esc(kz("load"))}</b></div><p class="ch-net" id="kg-pnet"></p></div></div>`; kgpNet(); return; }
+  const c=KGP.ctl, n=KGP.qs.length, M=KGP.g.m;
+  if(KGP.st==="join"||KGP.st==="wait"){
+    if(c&&c.st==="end"&&KGP.st==="join"&&!KGP.solo){ el.innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card"><h3>${esc(kz("ended"))}</h3></div></div>`; return; }
+    el.innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card"><h3>${esc(KGP.g.nm)}</h3><p class="ch-big">${esc(M==="k"?kz("rulesK")(KGP.g.tm||20):kz("rulesS")(n,KGP.g.tm))}</p><p class="ch-net">${esc(kz("rules2"))}</p>
+      ${KGP.st==="join"?`<label class="acc-lb">${esc(kz("nm"))}<input class="ch-in" id="kg-name" maxlength="30" placeholder="${esc(kz("nmPh"))}" value="${esc(KGP.name)}"></label><div class="acc-st err" id="kg-err"></div><button type="button" class="btn primary" data-kgp="join">${esc(kz("join"))} →</button>`
+        :`<div class="lt-wait"><div class="lt-dots"><i></i><i></i><i></i></div><b>${esc(kz("wait"))}</b><span>${esc(KGP.name)}</span></div>`}
+      <p class="ch-net" id="kg-pnet"></p></div></div>`;
+    kgpNet(); if(KGP.st==="join") setTimeout(()=>{ const i=document.getElementById("kg-name"); if(i&&!i.value) i.focus(); },50); return; }
+  if(M==="s") return KGP.st==="play"? kgpSQ() : kgpDone();
+  kgpK(); }
+function kgpJoin(){ const i=document.getElementById("kg-name"), nm=(i.value||"").replace(/\s+/g," ").trim();
+  if(nm.length<2){ document.getElementById("kg-err").textContent=kz("errNm"); i.focus(); return; }
+  KGP.name=nm; store.set("chname",nm); KGP.st="wait"; kgpSave(); kgpPub(true); const c=KGP.ctl;
+  if(KGP.g.m==="s"){ if(KGP.solo||(c&&c.st==="run")) return kgpStart(); if(c&&c.st==="end") return kgpFinish(); return kgpRender(); }
+  c? kgpOnCtl() : kgpRender(); }
+function kgpQCard(q){ const one=q.o&&q.o.some(o=>o.length>22);
+  return `<div class="lrn-card"><div class="ch-q" lang="de">${esc(q.q)}</div>
+  ${q.o?`<div class="kgp-opts${one?" one":""}">${q.o.map((o,j)=>`<button type="button" class="kg-o" style="--c:${KG_COL[j][0]}" data-kgo="${j}"><i>${KG_COL[j][1]}</i><span lang="de">${esc(o)}</span></button>`).join("")}</div>`
+    :`<form class="lrn-wr" id="kg-wr" autocomplete="off"><div class="lrn-ask">${esc(kz("write"))}</div><input id="kg-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(kz("ph"))}">
+      <div class="lrn-keys">${["ä","ö","ü","ß"].map(ch=>`<button type="button" class="lrn-key" data-kgk="${ch}">${ch}</button>`).join("")}</div>
+      <div class="lt-nav"><button type="button" class="lrn-link lt-dn" data-kgp="dunno">${esc(kz("dunno"))}</button></div>
+      <button type="submit" class="btn primary lt-chk">${esc(kz("send"))}</button></form>`}</div>`; }
+function kgpFocus(){ setTimeout(()=>{ const i=document.getElementById("kg-in"); if(i) i.focus(); },30); }
+function kgpStat(a){ let ok=0,tie=0; Object.keys(a||{}).forEach(i=>{ const q=KGP.qs[i], x=a[i]; if(!q||!Array.isArray(x)) return; if(kgJudge(q,x[0])){ ok++; tie=Math.max(tie,+x[1]||0); } }); return {ok,tie}; }
+function kgpRankS(){ const P={}; Object.entries(KGP.players).forEach(([id,p])=>{ if(p&&p.n&&p.st!=="wait") P[id]=Object.assign({n:p.n,st:p.st},kgpStat(p.a)); });
+  P[KGP.me]=Object.assign({n:KGP.name,st:KGP.st},kgpStat(KGP.a)); return Object.entries(P).map(([id,p])=>Object.assign({id},p)).sort((a,b)=>(b.ok-a.ok)||(a.tie-b.tie)); }
+function kgpBoard(){ if(!KGP.g||KGP.g.m!=="s"||KGP.st==="join"||KGP.st==="wait") return; const L=kgpRankS(), mi=L.findIndex(p=>p.id===KGP.me);
+  const pl=document.getElementById("kg-place"); if(pl) pl.textContent="🏅 "+kz("place")(mi+1,L.length);
+  const b=document.getElementById("kg-board"); if(!b) return; const lim=KGP.st==="done"?40:5; let rows=L.slice(0,lim); if(mi>=lim) rows=[...rows.slice(0,lim-1),L[mi]];
+  const medal=k=>k===0?"🥇":k===1?"🥈":k===2?"🥉":String(k+1);
+  b.innerHTML=`<ol class="ch-lb">${rows.map(p=>{ const k=L.indexOf(p); return `<li class="${p.id===KGP.me?"me":""}"><span class="pl">${medal(k)}</span><span class="nm">${esc(p.n)}${p.id===KGP.me?` (${esc(kz("you"))})`:""}</span><span class="sc">${p.ok}</span></li>`; }).join("")}</ol>`; }
+function kgpOrd(){ return chShuf(KGP.qs.map((_,i)=>i),chRng(parseInt(chHash(KGP.me+"/"+KGP.id),36)>>>0)); }
+function kgpStart(){ KGP.st="play"; if(!KGP.t0) KGP.t0=Date.now(); kgpSave(); kgpPub(true); kgpRender(); }
+function kgpFinish(){ if(KGP.st==="done") return; KGP.st="done"; kgpSave(); kgpPub(true); kgpRender(); }
+/* o'z tempida: savol → javob → darhol natija → keyingisi */
+function kgpSQ(){ const ord=KGP.ord||(KGP.ord=kgpOrd()), k=ord.find(i=>!KGP.a[i]); if(k==null) return kgpFinish();
+  const q=KGP.qs[k], n=KGP.qs.length, done=Object.keys(KGP.a).length, me=kgpStat(KGP.a); KGP.lock=false; KGP.cur=k;
+  kgpEl().innerHTML=kgpHead(`<span class="ch-time" id="kg-time"></span>`)+`<div class="lrn-body">
+    <div class="ch-bar"><i style="width:${done/n*100}%;background:var(--green)"></i></div>
+    <div class="ch-top"><span class="ch-score">✓ ${me.ok} · ${esc(kz("q")(done+1,n))}</span><span class="ch-rank" id="kg-place"></span></div>
+    ${kgpQCard(q)}<div class="kgp-fb" id="kg-fb"></div><div id="kg-board"></div></div>`;
+  kgpTick(); kgpBoard(); kgpFocus(); }
+function kgpAns(v){ if(KGP.lock||KGP.st!=="play"||!KGP.qs) return;
+  if(KGP.g.m==="k"){ const c=KGP.ctl; if(!c||c.st!=="q") return; const i=c.i, q=KGP.qs[i]; if(!q||KGP.a[i]) return;
+    const T=((q.tm)||KGP.g.tm||20)*1000, ms=Date.now()-KGP.qRecv; if(ms>T+300) return;
+    KGP.a[i]=[v,Math.min(ms,T)]; KGP.lock=true; kgpSave(); kgpPub(true); if(navigator.vibrate) try{ navigator.vibrate(30); }catch(e){} kgpRender(); return; }
+  const k=KGP.cur, q=KGP.qs[k]; if(!q||KGP.a[k]) return; KGP.lock=true; KGP.a[k]=[v,Date.now()-KGP.t0]; const good=kgJudge(q,v); kgpSave(); kgpPub(false);
+  kgpEl().querySelectorAll("[data-kgo]").forEach(b=>{ const j=+b.dataset.kgo; b.disabled=true; b.classList.add(q.c.includes(j)?"ok":j===+v?"bad":"no"); });
+  const inp=document.getElementById("kg-in"); if(inp) inp.disabled=true;
+  const fb=document.getElementById("kg-fb"); if(fb) fb.innerHTML=`<div class="kgp-res ${good?"ok":"bad"}">${good?"✓ "+esc(kz("ok")):"✗ "+esc(kz("no"))}${good?"":`<div><small>${esc(kz("corr"))}</small> <b lang="de">${esc(kgCor(q))}</b></div>`}</div>`;
+  if(navigator.vibrate) try{ navigator.vibrate(good?30:[40,40,40]); }catch(e){}
+  setTimeout(()=>{ if(KGP.st==="play") kgpSQ(); }, good?700:1900); }
+function kgpMissHTML(L){ return `<div class="lrn-card"><h3>${esc(kz("review"))}${L.length?` (${L.length})`:""}</h3>${L.length?`<ul class="lt-mis">${L.map(([q,a])=>`<li><span lang="de">${esc(q.q)}</span><b lang="de">${esc(kgCor(q))}</b>${a&&a[0]!==""&&a[0]!=null?`<s lang="de">${esc(kgVal(q,a[0]))}</s>`:""}</li>`).join("")}</ul>`:`<p>${esc(kz("allOk"))}</p>`}</div>`; }
+function kgpDone(){ const n=KGP.qs.length, me=kgpStat(KGP.a), miss=KGP.qs.map((q,i)=>[q,KGP.a[i]]).filter(([q,x])=>!x||!kgJudge(q,x[0]));
+  kgpEl().innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">🏁</div><h3>${esc(kz("done"))}</h3><p class="ch-big"><b>${esc(kz("score")(me.ok,n))}</b> · ⏱ ${ltFmt(me.tie)}</p><p class="ch-big" id="kg-place"></p></div>
+    ${kgpMissHTML(miss)}<div class="lrn-card"><h3>${esc(kz("board"))}</h3><div id="kg-board"></div></div></div>`; kgpBoard(); }
+/* savolma-savol: telefon — tugmalar, «qabul qilindi», natija, yakun */
+function kgpK(){ const c=KGP.ctl||{st:"lobby"}, el=kgpEl(), n=KGP.qs.length;
+  if(KGP.st==="done"||c.st==="end") return kgpKEnd();
+  const i=c.i|0, q=KGP.qs[i]; if(!q) return; const mine=KGP.a[i];
+  if(c.st==="q"){ const left=KGP.qRecv+((q.tm||KGP.g.tm||20)*1000)-Date.now();
+    if(mine){ const col=q.o&&KG_COL[+mine[0]]; el.innerHTML=kgpHead(`<span class="ch-time">${esc(kz("q")(i+1,n))}</span>`)+`<div class="lrn-body"><div class="lrn-card kgp-wait"><div class="kgp-big">${col?`<span style="color:${col[0]}">${col[1]}</span>`:"✍️"}</div><h3>${esc(kz("got"))}</h3><p class="ch-net">${esc(kz("gotS"))}</p></div></div>`; return; }
+    if(left<=0){ el.innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card kgp-wait"><div class="kgp-big">⏰</div><h3>${esc(kz("late"))}</h3></div></div>`; return; }
+    KGP.lock=false; el.innerHTML=kgpHead(`<span class="ch-time" id="kg-time"></span>`)+`<div class="lrn-body"><div class="ch-top"><span class="ch-score">${esc(kz("q")(i+1,n))}</span></div>${kgpQCard(q)}</div>`; kgpTick(); kgpFocus(); return; }
+  const cor=c.c, good=mine? (q.o? (Array.isArray(cor)&&cor.includes(+mine[0])) : !!lrnJudge(String(mine[0]),{de:String(cor||"")}).ok) : false;
+  const rk=Array.isArray(c.rk)?c.rk:[], pi=rk.findIndex(r=>r&&r[0]===KGP.me), corTxt=q.o?(Array.isArray(cor)?cor.map(k=>q.o[k]).join(" / "):""):String(cor||"");
+  el.innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card kgp-rev ${good?"ok":"bad"}"><div class="kgp-big">${good?"✅":mine?"❌":"⏰"}</div><h3>${esc(good?kz("ok"):mine?kz("no"):kz("noAns"))}</h3>
+    ${good?`<p class="ch-net">⏱ ${kgSec(mine[1])}</p>`:`<p>${esc(kz("corr"))} <b lang="de">${esc(corTxt)}</b></p>`}
+    ${pi>=0?`<p class="ch-big">🏅 ${esc(kz("place")(pi+1,rk.length))} · ✓ ${rk[pi][1]}</p>`:""}<p class="ch-net">${esc(kz("next"))}</p></div></div>`; }
+function kgpKEnd(){ const c=KGP.ctl||{}, n=KGP.qs.length, rk=Array.isArray(c.rk)?c.rk:[], pi=rk.findIndex(r=>r&&r[0]===KGP.me), cs=Array.isArray(c.cs)?c.cs:null;
+  const miss=cs? KGP.qs.map((q,i)=>{ const qq=Object.assign({},q,q.o?{c:Array.isArray(cs[i])?cs[i]:[]}:{a:String(cs[i]||"")}), x=KGP.a[i]; return (!x||!kgJudge(qq,x[0]))?[qq,x]:null; }).filter(Boolean) : [];
+  kgpEl().innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">${pi===0?"🏆":pi===1?"🥈":pi===2?"🥉":"🏁"}</div><h3>${esc(kz("done"))}</h3>
+    ${pi>=0?`<p class="ch-big"><b>${esc(kz("score")(rk[pi][1],n))}</b></p><p class="ch-big">🏅 ${esc(kz("place")(pi+1,rk.length))}</p>`:""}</div>${cs?kgpMissHTML(miss):""}</div>`; }
+function kgpTick(){ kgpNet(); if(!KGP.g||!KGP.qs) return; const now=Date.now(), t=document.getElementById("kg-time");
+  if(KGP.g.m==="s"&&KGP.st==="play"){ const c=KGP.ctl, dl=KGP.g.tm&&c&&c.t0&&!KGP.solo?c.t0+KGP.g.tm*60000:0; if(t) t.textContent=dl?ltFmt(dl-now):ltFmt(now-KGP.t0); if(dl&&now>=dl) kgpFinish(); }
+  if(KGP.g.m==="k"&&KGP.st==="play"&&KGP.ctl&&KGP.ctl.st==="q"){ const i=KGP.ctl.i, q=KGP.qs[i]; if(!q) return; const left=KGP.qRecv+((q.tm||KGP.g.tm||20)*1000)-now;
+    if(t){ t.textContent=Math.max(0,Math.ceil(left/1000)); t.classList.toggle("hurry",left<5000); } if(left<=0&&!KGP.a[i]&&KGP.lateI!==i){ KGP.lateI=i; kgpRender(); } } }
+function kgpClose(){ clearInterval(KGP.tick); if(KGP.mq) KGP.mq.end(); KGP.mq=null; KGP.id=null; kgpEl().hidden=true; document.body.style.overflow="";
+  const u=new URLSearchParams(location.search); if(u.get("kg")||u.get("kgd")) history.replaceState(null,"",location.pathname); }
+/* --- hodisalar --- */
+function kgCopy(u,btn){ (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>{ if(btn) btn.textContent="✓ Nusxalandi"; }).catch(()=>{ prompt("",u); }); }
+document.addEventListener("click",e=>{
+  const o=e.target.closest("[data-kgo]"); if(o&&!o.disabled&&o.closest("#kgp")){ kgpAns(+o.dataset.kgo); return; }
+  const kk=e.target.closest("[data-kgk]"); if(kk){ const i=document.getElementById("kg-in"); if(i&&!i.disabled){ const p=i.selectionStart??i.value.length; i.value=i.value.slice(0,p)+kk.dataset.kgk+i.value.slice(i.selectionEnd??p); i.focus(); i.setSelectionRange(p+1,p+1); } return; }
+  const pp=e.target.closest("[data-kgp]"); if(pp){ const a=pp.dataset.kgp; if(a==="close") kgpClose(); else if(a==="join") kgpJoin(); else if(a==="dunno") kgpAns(""); return; }
+  const cp=e.target.closest("[data-kgcopy]"); if(cp){ kgCopy(cp.dataset.kgcopy,cp); return; }
+  const m=e.target.closest("[data-kgm]"); if(m){ TP.kgM=m.dataset.kgm; kgPanel(); return; }
+  const t1=e.target.closest("[data-kgt]"); if(t1){ TP.kgT=+t1.dataset.kgt; kgPanel(); return; }
+  const t2=e.target.closest("[data-kgtot]"); if(t2){ TP.kgTot=+t2.dataset.kgtot; kgPanel(); return; }
+  const qo=e.target.closest("[data-kgqs]"); if(qo&&TP.kgR){ TP.kgR.qs=qo.dataset.kgqs; kgRepDraw(); return; }
+  const sh=e.target.closest("[data-kgst]"); if(sh&&TP.kgR){ TP.kgR.op=TP.kgR.op===sh.dataset.kgst?null:sh.dataset.kgst; kgRepDraw(); return; }
+  const b=e.target.closest("[data-kg]"); if(!b) return; const a=b.dataset.kg, id=b.dataset.k;
+  if(a==="new"){ TP.kgEd={id:null,name:"",txt:""}; kgPanel(); setTimeout(()=>{ const x=document.getElementById("kg-nm"); if(x) x.focus(); },30); }
+  else if(a==="ed"){ const s=kgSets().find(x=>x.id===id); if(s){ TP.kgEd={id:s.id,name:s.name,txt:s.txt}; kgPanel(); } }
+  else if(a==="del"){ const L=kgSets(), s=L.find(x=>x.id===id); if(s&&confirm("O‘chirilsinmi: «"+s.name+"»?")){ kgLSset("tch:kgsets",L.filter(x=>x.id!==id)); kgPanel(); } }
+  else if(a==="cancel"){ TP.kgEd=null; TP.kgGo=null; kgPanel(); }
+  else if(a==="save") kgSaveSet();
+  else if(a==="go"){ TP.kgGo=id; kgPanel(); }
+  else if(a==="launch") kgLaunch();
+  else if(a==="rep"){ const R=kgReps().find(x=>x.g.id===id); if(R) kgRepOpen(R,false); }
+  else if(a==="resume"){ const R=TP.kgR&&TP.kgR.R; if(R){ if(TP.kgR.mq) TP.kgR.mq.end(); TP.kgR=null; kgBoardOpen(R); } }
+  else if(a==="bback"){ const K=TP.k; if(K&&K.ctl.st!=="end"&&K.ctl.st!=="lobby"&&!confirm("O‘yindan chiqilsinmi? O‘yin «Hisobotlar»da saqlanadi — u yerdan davom ettirish mumkin.")) return; tpQrBig(false); kgBEnd(); TP.tab="kg"; tpRender(); }
+  else if(a==="start"){ if(TP.k) TP.k.g.m==="k"? kgNext() : kgCtl({st:"run",t0:Date.now()}); }
+  else if(a==="reveal") kgReveal(); else if(a==="next") kgNext(); else if(a==="fin") kgFinish();
+  else if(a==="rboard"){ if(TP.k) kgRepOpen(TP.k,true); }
+  else if(a==="rclose") kgRepClose();
+  else if(a==="csv"){ const R=(TP.kgR&&TP.kgR.R)||TP.k; if(R) kgCsv(R); }
+  else if(a==="hw") kgHw();
+  else if(a==="copy"){ if(TP.k) kgCopy(kgLink(TP.k.id),b); }
+});
+document.addEventListener("input",e=>{ if(e.target.id==="kg-tx"||e.target.id==="kg-nm"){ if(TP.kgEd){ TP.kgEd[e.target.id==="kg-tx"?"txt":"name"]=e.target.value; } if(e.target.id==="kg-tx"){ clearTimeout(TP.kgPvT); TP.kgPvT=setTimeout(kgPreview,250); } } });
+document.addEventListener("submit",e=>{ if(e.target.id==="kg-wr"){ e.preventDefault(); const i=document.getElementById("kg-in"), v=lrnNorm(i?i.value:""); if(!v){ if(i) i.focus(); return; } kgpAns(v.slice(0,80)); } });
+document.addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target.id==="kg-name"){ e.preventDefault(); kgpJoin(); } });
+(function(){ const u=new URLSearchParams(location.search), id=u.get("kg"), d=u.get("kgd"); if(id||d) setTimeout(()=>kgOpen(id,d),60); })();
+
 function chEl(){ let e=document.getElementById("chal"); if(!e){ e=document.createElement("div"); e.id="chal"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
 function chPool(c){ const D=lernData()[c.l]; if(!D) return []; return D.it.map((r,i)=>({i,l:r[0],de:r[3],ru:r[4],red:r[6],dis:r[7]})).filter(x=>x.ru && !x.red && c.s.includes(x.l)); }
 function chTitle(c){ const m=byId[c.l]; const D=lernData()[c.l]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:"")+" · "+c.s.map(lab).join(", "); }
