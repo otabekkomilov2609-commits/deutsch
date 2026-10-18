@@ -3888,6 +3888,8 @@ function iasFixInit(){ const f=document.getElementById("ias-fix"); if(!f) return
 /* «Prüfen» bosilganda klaviatura yopilmasin — fokus yozish joyida qoladi */
 document.addEventListener("mousedown",e=>{ if(e.target.closest&&e.target.closest("#ias-pr")&&V.body.querySelector(".ias-inl.ias-foc")) e.preventDefault(); });
 document.addEventListener("touchstart",e=>{ if(e.target.closest&&e.target.closest("#ias-pr")&&V.body.querySelector(".ias-inl.ias-foc")){ e.preventDefault(); iasCheck(); } },{passive:false});
+/* «Weiter →», «✓», «Überspringen», «Zurück» bosilganda klaviatura yopilmasin: yozish joyi fokusda bo'lsa — tegishni o'zimiz bajaramiz (2026-10-18) */
+document.addEventListener("touchstart",e=>{ const b=e.target.closest&&e.target.closest("#ias-go,.ias-nav [data-ias]"); if(!b) return; const a=document.activeElement; if(!a||a.id!=="ias-in") return; e.preventDefault(); b.click(); },{passive:false});
 function iasSlot(st,cur){ const it=iaItems()[st.i], v=IA.vals[st.i];
   if(st.kind==="c"){ return null; }
   const s=iasState(st.i), txt=String(v||"").trim();
@@ -3919,7 +3921,7 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
     if(it.long) inp.placeholder="Schreiben Sie den ganzen Satz …"; else inp.placeholder="";
     /* gap ichidagi «?» katakning o'zi yozish joyi: pastdagi maydon ko'rinmaydi */
     const inl=!it.long&&!inw.hidden&&!!document.querySelector("#ias-card .ias-slot.cur"); V.body.querySelector(".ias").classList.toggle("ias-inl",inl);
-    if(focus&&(!bw.length||starters)) setTimeout(()=>{ inp.focus({preventScroll:true}); try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(e){} },30); }
+    if(focus&&(!bw.length||starters)){ const fo=()=>{ if(document.activeElement!==inp) inp.focus({preventScroll:true}); try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(e){} }; fo(); setTimeout(fo,30); } } /* iPhone: fokus bosish bilan bir vaqtda (sinxron) bo'lmasa klaviatura ochilmaydi */
   else { inw.hidden=true; V.body.querySelector(".ias").classList.remove("ias-inl");
     const list= st.kind==="o"? st.b.opts : st.b.s.filter(x=>typeof x!=="string"&&x.c===st.i).map(x=>[x.k,x.t]);
     opts.innerHTML=list.map(([k,t])=>`<button type="button" class="ias-opt ${IA.vals[st.i]===k?(iasState(st.i)==="ok"?"ok":IAS.tried[st.i]?"bad":"sel"):""}" data-iaso="${k}">${esc(t||"abcdefgh"[k])}</button>`).join(""); }
