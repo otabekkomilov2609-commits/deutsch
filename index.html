@@ -826,6 +826,13 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 @keyframes iasBlink{to{visibility:hidden}}
 .ias-slot.shake{animation:iasShake .35s}
 @keyframes iasShake{20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.ias-pb{position:relative;overflow:visible!important}
+.ias-pb i{transition:width .5s cubic-bezier(.3,1.4,.5,1)!important}
+.ias-pbok{position:absolute;top:50%;left:0;width:28px;height:28px;margin-top:-14px;border-radius:50%;background:var(--green);color:#fff;font-size:16px;display:grid;place-items:center;opacity:0;transform:scale(.3);pointer-events:none;transition:left .5s cubic-bezier(.3,1.4,.5,1)}
+.ias-pbok.on{animation:iasOk 1.3s ease forwards}
+@keyframes iasOk{0%{opacity:0;transform:scale(.3)}25%{opacity:1;transform:scale(1.15)}40%{transform:scale(1)}75%{opacity:1}100%{opacity:0;transform:scale(1)}}
+.ias-card .ias-slot.pop{animation:iasSlotPop .45s ease}
+@keyframes iasSlotPop{40%{transform:scale(1.12)}}
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
 .ia-in{position:absolute;box-sizing:border-box;border:0;border-bottom:1.5px solid transparent;background:rgba(31,79,160,.06);color:#1F4FA0;font-family:var(--hand),"Patrick Hand",sans-serif;font-size:calc(var(--s) * 13px);line-height:1;padding:0 2px;margin:0;text-align:center;border-radius:3px 3px 0 0;outline:none;min-width:0}
@@ -3682,7 +3689,7 @@ function iasRender(m){
   Object.assign(IAS,{id:m.id,steps:iasSteps(m.id),k:0,tried:IAS.id===m.id?IAS.tried:{},fails:IAS.id===m.id?(IAS.fails||{}):{}}); if(IAS.id!==m.id){ IAS.tried={}; IAS.fails={}; }
   const first=IAS.steps.findIndex(s=>iasState(s.i)!=="ok"); IAS.k=first<0?0:first;
   V.el.classList.add("ias-on");
-  V.body.innerHTML=`<div class="ias"><div class="ias-top"><div class="ias-pb"><i id="ias-pb"></i></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button><button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
+  V.body.innerHTML=`<div class="ias"><div class="ias-top"><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button><button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
     <div class="ias-task" id="ias-task"></div><p class="ias-p" id="ias-p"></p>
     <div class="ias-card" id="ias-card"></div>
     <div class="ias-fb" id="ias-fb"></div>
@@ -3744,7 +3751,7 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
     const list= st.kind==="o"? st.b.opts : st.b.s.filter(x=>typeof x!=="string"&&x.c===st.i).map(x=>[x.k,x.t]);
     opts.innerHTML=list.map(([k,t])=>`<button type="button" class="ias-opt ${IA.vals[st.i]===k?(iasState(st.i)==="ok"?"ok":IAS.tried[st.i]?"bad":"sel"):""}" data-iaso="${k}">${esc(t||"abcdefgh"[k])}</button>`).join(""); }
   const fb=document.getElementById("ias-fb"); const s=iasState(st.i);
-  fb.className="ias-fb "+(s==="ok"?"ok":""); fb.innerHTML= s==="ok"? `✓ Richtig!` : "";
+  fb.className="ias-fb"; fb.innerHTML=""; /* to'g'ri bo'lsa: katak yashil + tepadagi chiziq oldinga, quti chiqmaydi */
   iasSolBtn(); iasGoMode(); iasDots();
 }
 /* «💡 Lösung» faqat 2 marta xato urinishdan keyin chiqadi */
@@ -3764,6 +3771,9 @@ function iasSee(el){ requestAnimationFrame(()=>{ const r=el.getBoundingClientRec
 function iasDots(){ const st=IAS.steps[IAS.k]; const el=document.getElementById("ias-dots"); if(!el||!st) return;
   el.innerHTML=IAS.steps.map((x,k)=>({x,k})).filter(o=>o.x.h===st.h).map(({x,k})=>`<button type="button" class="${iasState(x.i)} ${k===IAS.k?"cur":""}" data-iasd="${k}" aria-label="${k+1}"></button>`).join(""); }
 /* ✓ tugmasi: to'g'ri bo'lgach «Weiter →» ga aylanadi */
+function iasOkFlash(){ const pb=document.getElementById("ias-pb"), ok=document.getElementById("ias-pbok"); if(!pb||!ok) return;
+  ok.style.left=`calc(${pb.style.width} - 14px)`; ok.classList.remove("on"); void ok.offsetWidth; ok.classList.add("on");
+  const sl=document.querySelector("#ias-card .ias-slot.cur.ok, #ias-card .ias-slot.ok"); if(sl){ sl.classList.remove("pop"); void sl.offsetWidth; sl.classList.add("pop"); } }
 function iasGoMode(){ const st=IAS.steps[IAS.k], go=document.getElementById("ias-go"), wb=document.getElementById("ias-wb"), inw=document.getElementById("ias-inw"); if(!st||!go) return;
   const ok=iasState(st.i)==="ok"; go.classList.toggle("next",ok); go.textContent=ok?"Weiter →":"✓"; go.setAttribute("aria-label",ok?"Weiter":"✓");
   const pr=document.getElementById("ias-pr"); if(pr){ pr.classList.toggle("next",ok); pr.textContent=ok?"Weiter →":"✓ Prüfen"; }
@@ -3776,7 +3786,7 @@ function iasCheckOnly(){
   IA.vals[st.i]=inp.value; iaSave(); IAS.tried[st.i]=true; iasAfter(st); }
 function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document.getElementById("ias-fb"), itA=iaItems()[st.i];
   if(itA.free&&s==="ok"){ iasShow(false); fb.className="ias-fb sol"; fb.innerHTML=`✓ Gespeichert. Vergleichen Sie:<b class="ias-ans">${esc(itA.a||"")}</b>`; return; }
-  if(s==="ok"){ iasShow(false); fb.className="ias-fb ok"; fb.innerHTML=`✓ Richtig!`; return; }
+  if(s==="ok"){ iasShow(false); iasOkFlash(); return; }
   IAS.fails[st.i]=(IAS.fails[st.i]||0)+1; iasSolBtn();
   const why=iaWhyText(st.i);
   fb.className="ias-fb bad"; fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`;
