@@ -350,6 +350,13 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .kg-ctl{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}.kg-ctl .btn{font-size:18px;padding:12px 22px}
 .kg-lobby .tp-qr{max-width:320px}
 /* telefon */
+.kgp-cnt b{font-size:16px;margin-left:6px}.kgp-cnt .y{color:var(--green)}.kgp-cnt .n{color:#C62828}
+.kgp-all{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.kgp-all li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;padding:10px 12px;border-radius:12px;background:var(--green-soft)}
+.kgp-all li.bad{background:rgba(226,27,60,.1)}
+.kgp-all .ic{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;background:var(--green)}.kgp-all li.bad .ic{background:#E21B3C}
+.kgp-all .q{font-size:15px}.kgp-all .q small{color:var(--muted)}.kgp-all .a{margin-top:3px;font-size:16px}
+.kgp-all .a b{color:var(--green)}.kgp-all .a s{color:#C62828;margin-right:4px}.kgp-all .a em{font-style:normal;color:var(--muted);margin-right:4px}
 .kgp-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.kgp-opts.one{grid-template-columns:1fr}
 .kgp-opts .kg-o{min-height:104px;font-size:19px;flex-direction:column;justify-content:center;text-align:center;gap:6px;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .kgp-opts.one .kg-o{min-height:64px;flex-direction:row;text-align:left}
@@ -5201,12 +5208,12 @@ function kgCsv(R){ const n=R.qs.length, L=kgRank(R), Q=kgQStats(R), s=R.g.m==="s
 /* ---------- O'quvchi tomoni (?kg=<id> yoki ?kgd=<uyga mashq>) ---------- */
 const KGUZ={uz:{t:"🎮 Sinf o‘yini",nm:"Ismingiz",nmPh:"Ism va familiya",join:"Qo‘shilish",errNm:"Ismingizni yozing",wait:"Ustoz o‘yinni boshlashini kuting…",load:"Savollar yuklanmoqda…",bad:"Havola noto‘g‘ri yoki o‘yin topilmadi.",
     got:"Javob qabul qilindi!",gotS:"Boshqalarni kuting…",late:"Vaqt tugadi",ok:"To‘g‘ri!",no:"Xato",noAns:"Javob berilmadi",corr:"To‘g‘ri javob:",place:(a,b)=>`${a}-o‘rin (${b} kishidan)`,score:(o,n)=>`✓ ${o} / ${n} to‘g‘ri`,
-    write:"Nemischa yozing",ph:"Nemischa…",send:"Yuborish",dunno:"Bilmayman",next:"Keyingi savolni kuting…",done:"O‘yin tugadi!",review:"Xatolar",allOk:"Hammasi to‘g‘ri! 🎉",board:"Natijalar",you:"siz",q:(i,n)=>`${i} / ${n}`,
+    write:"Nemischa yozing",ph:"Nemischa…",send:"Yuborish",dunno:"Bilmayman",next:"Keyingi savolni kuting…",done:"O‘yin tugadi!",review:"Javoblaringiz",allOk:"Hammasi to‘g‘ri! 🎉",board:"Natijalar",you:"siz",q:(i,n)=>`${i} / ${n}`,
     rulesK:t=>`Savollar doskada chiqadi · har biriga ${t} soniya`,rulesS:(n,m)=>`${n} ta savol · o‘z tezligingizda${m?` · ${m} daqiqa`:""}`,rules2:"O‘rin: ko‘p to‘g‘ri javob; teng bo‘lsa — kam vaqt sarflagan",
     net0:"⏳ Ulanmoqda…",net1:"🟢 Ulandi",netBad:"🔴 Ulanib bo‘lmadi",ended:"Bu o‘yin tugagan."},
   ru:{t:"🎮 Игра класса",nm:"Ваше имя",nmPh:"Имя и фамилия",join:"Присоединиться",errNm:"Напишите имя",wait:"Ждите, пока учитель начнёт игру…",load:"Загрузка вопросов…",bad:"Ссылка неверная или игра не найдена.",
     got:"Ответ принят!",gotS:"Ждите остальных…",late:"Время вышло",ok:"Верно!",no:"Неверно",noAns:"Нет ответа",corr:"Правильный ответ:",place:(a,b)=>`${a}-е место (из ${b})`,score:(o,n)=>`✓ ${o} / ${n} верно`,
-    write:"Напишите по-немецки",ph:"По-немецки…",send:"Отправить",dunno:"Не знаю",next:"Ждите следующий вопрос…",done:"Игра окончена!",review:"Ошибки",allOk:"Всё верно! 🎉",board:"Результаты",you:"вы",q:(i,n)=>`${i} / ${n}`,
+    write:"Напишите по-немецки",ph:"По-немецки…",send:"Отправить",dunno:"Не знаю",next:"Ждите следующий вопрос…",done:"Игра окончена!",review:"Ваши ответы",allOk:"Всё верно! 🎉",board:"Результаты",you:"вы",q:(i,n)=>`${i} / ${n}`,
     rulesK:t=>`Вопросы на доске · ${t} сек. на каждый`,rulesS:(n,m)=>`${n} вопросов · в своём темпе${m?` · ${m} мин`:""}`,rules2:"Место: больше верных ответов; при равенстве — меньше времени",
     net0:"⏳ Подключение…",net1:"🟢 Подключено",netBad:"🔴 Нет связи",ended:"Эта игра уже окончена."}};
 const kz=k=>KGUZ[state.lang==="ru"?"ru":"uz"][k];
@@ -5294,8 +5301,11 @@ function kgpAns(v){ if(KGP.lock||KGP.st!=="play"||!KGP.qs) return;
   const fb=document.getElementById("kg-fb"); if(fb) fb.innerHTML=`<div class="kgp-res ${good?"ok":"bad"}">${good?"✓ "+esc(kz("ok")):"✗ "+esc(kz("no"))}${good?"":`<div><small>${esc(kz("corr"))}</small> <b lang="de">${esc(kgCor(q))}</b></div>`}</div>`;
   if(navigator.vibrate) try{ navigator.vibrate(good?30:[40,40,40]); }catch(e){}
   setTimeout(()=>{ if(KGP.st==="play") kgpSQ(); }, good?700:1900); }
-function kgpMissHTML(L){ return `<div class="lrn-card"><h3>${esc(kz("review"))}${L.length?` (${L.length})`:""}</h3>${L.length?`<ul class="lt-mis">${L.map(([q,a])=>`<li><span lang="de">${esc(q.q)}</span><b lang="de">${esc(kgCor(q))}</b>${a&&a[0]!==""&&a[0]!=null?`<s lang="de">${esc(kgVal(q,a[0]))}</s>`:""}</li>`).join("")}</ul>`:`<p>${esc(kz("allOk"))}</p>`}</div>`; }
-function kgpDone(){ const n=KGP.qs.length, me=kgpStat(KGP.a), miss=KGP.qs.map((q,i)=>[q,KGP.a[i]]).filter(([q,x])=>!x||!kgJudge(q,x[0]));
+/* oxirida barcha savollar: ✓/✗, o'quvchi javobi, xato bo'lsa — to'g'ri javob (2026-10-18) */
+function kgpMissHTML(L){ const ok=L.filter(x=>x[2]).length;
+  return `<div class="lrn-card"><div class="tp-lbh"><h3>${esc(kz("review"))}</h3><span class="kgp-cnt"><b class="y">✓ ${ok}</b> <b class="n">✗ ${L.length-ok}</b></span></div><ol class="kgp-all">${L.map(([q,a,g],i)=>{ const has=a&&a[0]!==""&&a[0]!=null;
+    return `<li class="${g?"ok":"bad"}"><span class="ic">${g?"✓":"✗"}</span><div><div class="q"><small>${i+1}.</small> <span lang="de">${esc(q.q)}</span></div><div class="a">${g?`<b lang="de">${esc(kgVal(q,a[0]))}</b>`:`${has?`<s lang="de">${esc(kgVal(q,a[0]))}</s>`:`<em>—</em>`} <b lang="de">→ ${esc(kgCor(q))}</b>`}</div></div></li>`; }).join("")}</ol></div>`; }
+function kgpDone(){ const n=KGP.qs.length, me=kgpStat(KGP.a), miss=KGP.qs.map((q,i)=>{ const x=KGP.a[i]; return [q,x,!!x&&kgJudge(q,x[0])]; });
   kgpEl().innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">🏁</div><h3>${esc(kz("done"))}</h3><p class="ch-big"><b>${esc(kz("score")(me.ok,n))}</b> · ⏱ ${ltFmt(me.tie)}</p><p class="ch-big" id="kg-place"></p></div>
     ${kgpMissHTML(miss)}<div class="lrn-card"><h3>${esc(kz("board"))}</h3><div id="kg-board"></div></div></div>`; kgpBoard(); }
 /* savolma-savol: telefon — tugmalar, «qabul qilindi», natija, yakun */
@@ -5312,7 +5322,7 @@ function kgpK(){ const c=KGP.ctl||{st:"lobby"}, el=kgpEl(), n=KGP.qs.length;
     ${good?`<p class="ch-net">⏱ ${kgSec(mine[1])}</p>`:`<p>${esc(kz("corr"))} <b lang="de">${esc(corTxt)}</b></p>`}
     ${pi>=0?`<p class="ch-big">🏅 ${esc(kz("place")(pi+1,rk.length))} · ✓ ${rk[pi][1]}</p>`:""}<p class="ch-net">${esc(kz("next"))}</p></div></div>`; }
 function kgpKEnd(){ const c=KGP.ctl||{}, n=KGP.qs.length, rk=Array.isArray(c.rk)?c.rk:[], pi=rk.findIndex(r=>r&&r[0]===KGP.me), cs=Array.isArray(c.cs)?c.cs:null;
-  const miss=cs? KGP.qs.map((q,i)=>{ const qq=Object.assign({},q,q.o?{c:Array.isArray(cs[i])?cs[i]:[]}:{a:String(cs[i]||"")}), x=KGP.a[i]; return (!x||!kgJudge(qq,x[0]))?[qq,x]:null; }).filter(Boolean) : [];
+  const miss=cs? KGP.qs.map((q,i)=>{ const qq=Object.assign({},q,q.o?{c:Array.isArray(cs[i])?cs[i]:[]}:{a:String(cs[i]||"")}), x=KGP.a[i]; return [qq,x,!!x&&kgJudge(qq,x[0])]; }) : [];
   kgpEl().innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">${pi===0?"🏆":pi===1?"🥈":pi===2?"🥉":"🏁"}</div><h3>${esc(kz("done"))}</h3>
     ${pi>=0?`<p class="ch-big"><b>${esc(kz("score")(rk[pi][1],n))}</b></p><p class="ch-big">🏅 ${esc(kz("place")(pi+1,rk.length))}</p>`:""}</div>${cs?kgpMissHTML(miss):""}</div>`; }
 function kgpTick(){ kgpNet(); if(!KGP.g||!KGP.qs) return; const now=Date.now(), t=document.getElementById("kg-time");
