@@ -811,6 +811,8 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-top{position:sticky;top:-16px;z-index:3;background:var(--bg);padding:6px 0;margin-top:-6px;box-shadow:0 -80px 0 0 var(--bg),8px -80px 0 0 var(--bg),-8px -80px 0 0 var(--bg),8px 0 0 0 var(--bg),-8px 0 0 0 var(--bg)}
 .ias-fb.sol{white-space:normal;overflow-wrap:anywhere}.ias-fb .ias-ans{display:block;margin-top:4px;font-size:1.2em;line-height:1.35}
 .ias-top .ias-tb[hidden]{display:none!important}
+.ias-go.next{width:auto;padding:0 18px;background:var(--green);font-size:18px;white-space:nowrap}
+.ias-wb{appearance:none;border:0;border-radius:16px;background:var(--green);color:#fff;font:inherit;font-size:19px;font-weight:800;padding:15px;cursor:pointer;width:100%}.ias-wb[hidden]{display:none!important}
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
 .ia-in{position:absolute;box-sizing:border-box;border:0;border-bottom:1.5px solid transparent;background:rgba(31,79,160,.06);color:#1F4FA0;font-family:var(--hand),"Patrick Hand",sans-serif;font-size:calc(var(--s) * 13px);line-height:1;padding:0 2px;margin:0;text-align:center;border-radius:3px 3px 0 0;outline:none;min-width:0}
@@ -3666,6 +3668,7 @@ function iasRender(m){
     <div class="ias-task" id="ias-task"></div><p class="ias-p" id="ias-p"></p>
     <div class="ias-card" id="ias-card"></div>
     <div class="ias-fb" id="ias-fb"></div>
+    <button type="button" class="ias-wb" id="ias-wb" hidden>Weiter →</button>
     <div class="ias-bank" id="ias-bank"></div>
     <div class="ias-in" id="ias-inw"><textarea rows="1" class="ia-in ias-input" id="ias-in" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="done"></textarea><button type="button" class="ias-go" id="ias-go" aria-label="✓">✓</button></div>
     <div class="ias-opts" id="ias-opts"></div>
@@ -3674,8 +3677,10 @@ function iasRender(m){
   const inp=document.getElementById("ias-in");
   inp.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); e.stopPropagation(); iasCheck(); } });
   inp.addEventListener("input",()=>{ const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) s.innerHTML=inp.value.trim()?esc(inp.value):"&nbsp;?&nbsp;"; inp.classList.remove("bad");
-    /* to'g'ri yozilsa — Enter'siz o'zi o'tadi */
-    clearTimeout(IAS.autoT); const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g"||!inp.value.trim()) return; const i=st.i;
+    /* to'g'ri yozilsa — Enter'siz «Richtig» chiqadi, keyingisiga «Weiter →» bilan o'tiladi */
+    clearTimeout(IAS.autoT); const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g") return; const i=st.i;
+    if(iasState(i)==="ok"){ IA.vals[i]=inp.value; if(iasState(i)!=="ok"){ iaSave(); iasShow(false); } }
+    if(!inp.value.trim()) return;
     IAS.autoT=setTimeout(()=>{ if(IAS.steps[IAS.k]!==st) return; IA.vals[i]=inp.value; const s2=iaState(i); if(s2==="ok"){ iaSave(); IAS.tried[i]=true; iasAfter(st); } },400); });
   iasShow(true);
 }
@@ -3710,7 +3715,7 @@ function iasShow(focus){
     opts.innerHTML=list.map(([k,t])=>`<button type="button" class="ias-opt ${IA.vals[st.i]===k?(iasState(st.i)==="ok"?"ok":IAS.tried[st.i]?"bad":"sel"):""}" data-iaso="${k}">${esc(t||"abcdefgh"[k])}</button>`).join(""); }
   const fb=document.getElementById("ias-fb"); const s=iasState(st.i);
   fb.className="ias-fb "+(s==="ok"?"ok":""); fb.innerHTML= s==="ok"? `✓ Richtig!` : "";
-  iasSolBtn(); iasDots();
+  iasSolBtn(); iasGoMode(); iasDots();
 }
 /* «💡 Lösung» faqat 2 marta xato urinishdan keyin chiqadi */
 function iasSolBtn(){ const b=document.getElementById("ias-solb"), st=IAS.steps[IAS.k]; if(!b||!st) return; const on=(IAS.fails[st.i]||0)>=2 && iasState(st.i)!=="ok"; if(on&&b.hidden){ b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop"); } b.hidden=!on; }
@@ -3728,11 +3733,18 @@ function iasSol(){ const st=IAS.steps[IAS.k]; if(!st) return; const it=iaItems()
 function iasSee(el){ requestAnimationFrame(()=>{ const r=el.getBoundingClientRect(), vh=(window.visualViewport?visualViewport.height:innerHeight); if(r.top<130||r.bottom>vh){ const sc=V.body, top=r.top-sc.getBoundingClientRect().top+sc.scrollTop-70; sc.scrollTo({top:Math.max(0,r.height>vh-140?top:top-(vh-140-r.height)/2),behavior:"smooth"}); } }); }
 function iasDots(){ const st=IAS.steps[IAS.k]; const el=document.getElementById("ias-dots"); if(!el||!st) return;
   el.innerHTML=IAS.steps.map((x,k)=>({x,k})).filter(o=>o.x.h===st.h).map(({x,k})=>`<button type="button" class="${iasState(x.i)} ${k===IAS.k?"cur":""}" data-iasd="${k}" aria-label="${k+1}"></button>`).join(""); }
-function iasCheck(){ const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g") return; const inp=document.getElementById("ias-in");
+/* ✓ tugmasi: to'g'ri bo'lgach «Weiter →» ga aylanadi */
+function iasGoMode(){ const st=IAS.steps[IAS.k], go=document.getElementById("ias-go"), wb=document.getElementById("ias-wb"), inw=document.getElementById("ias-inw"); if(!st||!go) return;
+  const ok=iasState(st.i)==="ok"; go.classList.toggle("next",ok); go.textContent=ok?"Weiter →":"✓"; go.setAttribute("aria-label",ok?"Weiter":"✓");
+  if(wb) wb.hidden=!(ok&&inw.hidden); }
+function iasCheck(){ const go=document.getElementById("ias-go"), st0=IAS.steps[IAS.k];
+  if(go&&go.classList.contains("next")&&st0&&iasState(st0.i)==="ok"){ iasNext(true); return; } iasCheckOnly(); }
+function iasCheckOnly(){
+  const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g") return; const inp=document.getElementById("ias-in");
   if(!inp.value.trim()){ inp.focus(); return; }
   IA.vals[st.i]=inp.value; iaSave(); IAS.tried[st.i]=true; iasAfter(st); }
 function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document.getElementById("ias-fb");
-  if(s==="ok"){ iasShow(false); fb.className="ias-fb ok"; fb.innerHTML=`✓ Richtig!`; setTimeout(()=>{ if(IAS.steps[IAS.k]===st) iasNext(true); },750); return; }
+  if(s==="ok"){ iasShow(false); fb.className="ias-fb ok"; fb.innerHTML=`✓ Richtig!`; return; }
   IAS.fails[st.i]=(IAS.fails[st.i]||0)+1; iasSolBtn();
   const why=iaWhyText(st.i);
   fb.className="ias-fb bad"; fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`;
@@ -3750,11 +3762,12 @@ function iasEnd(){ const n=IAS.steps.length, ok=IAS.steps.filter(s=>iasState(s.i
     <button type="button" class="btn ${SEND_ON?"":"primary"}" data-ias="again">Noch einmal von vorn</button>
     <button type="button" class="iam-sw" data-iam="page">📄 Ganzes Arbeitsblatt</button></div>`; }
 document.addEventListener("click",e=>{ if(!V.body.querySelector(".ias")) return;
-  const w=e.target.closest("[data-iasw]"); if(w){ const inp=document.getElementById("ias-in"); inp.value=w.dataset.iasw; inp.dispatchEvent(new Event("input",{bubbles:true})); iasCheck(); return; }
+  const w=e.target.closest("[data-iasw]"); if(w){ const inp=document.getElementById("ias-in"); inp.value=w.dataset.iasw; inp.dispatchEvent(new Event("input",{bubbles:true})); iasCheckOnly(); return; }
   const o=e.target.closest("[data-iaso]"); if(o){ const st=IAS.steps[IAS.k]; IA.vals[st.i]=+o.dataset.iaso; iaSave(); IAS.tried[st.i]=true; iasAfter(st); return; }
   if(e.target.closest("[data-iasx]")){ sndOpen(); return; }
   const d=e.target.closest("[data-iasd]"); if(d){ if(!document.getElementById("ias-card")){ iasRender(V.cur); } IAS.k=+d.dataset.iasd; iasShow(true); return; }
   if(e.target.closest("#ias-go")){ iasCheck(); return; }
+  if(e.target.closest("#ias-wb")){ iasNext(true); return; }
   const a=e.target.closest("[data-ias]"); if(!a) return; const k=a.dataset.ias;
   if(k==="prev"){ IAS.k=(IAS.k-1+IAS.steps.length)%IAS.steps.length; iasShow(true); }
   else if(k==="sol"){ iasSol(); }
