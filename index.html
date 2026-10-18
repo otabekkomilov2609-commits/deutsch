@@ -5402,7 +5402,7 @@ function kgpJoin(){ const i=document.getElementById("kg-name"), nm=(i.value||"")
   KGP.name=nm; store.set("chname",nm); KGP.st="wait"; kgpSave(); kgpPub(true); const c=KGP.ctl;
   if(KGP.g.m==="s"){ if(KGP.solo||(c&&c.st==="run")) return kgpStart(); if(c&&c.st==="end") return kgpFinish(); return kgpRender(); }
   c? kgpOnCtl() : kgpRender(); }
-function kgpQCard(q){ const one=q.o&&q.o.some(o=>o.length>22);
+function kgpQCard(q){ const one=q.o&&q.o.some(o=>o.length>22||o.split(/\s+/).some(w=>w.length>11)); /* uzun so'z ikki qatorga bo'linmasin */
   return `<div class="lrn-card"><div class="ch-q" lang="de">${kgQtx(q.q)}</div>
   ${q.o?`<div class="kgp-opts${one?" one":""}">${q.o.map((o,j)=>`<button type="button" class="kg-o" style="--c:${KG_COL[j][0]}" data-kgo="${j}"><i>${KG_COL[j][1]}</i><span lang="de">${esc(o)}</span></button>`).join("")}</div>`
     :`<form class="lrn-wr" id="kg-wr" autocomplete="off"><div class="lrn-ask">${esc(kz("write"))}</div><input id="kg-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(kz("ph"))}">
