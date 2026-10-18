@@ -3563,20 +3563,20 @@ function lernData(){ if(!window.__LERN){ try{ window.__LERN=JSON.parse(document.
 function lernHas(id){ return !!lernData()[id]; }
 const LT={
   uz:{lern:"Yodlash", title:"So‘z yodlash", pick:"Qaysi Lektionlar?", all:"Hammasi", none:"Tozalash", redem:"Redemittel (iboralar) ham", words:n=>`${n} ta so‘z`,
-      learn:"🧠 Lernen", learnD:"Test, keyingi raundda yozish. Ikkalasi to‘g‘ri — so‘z o‘rganildi.", learnDm:"🧩 Juftlash, keyingi raundda yozish. Ikkalasi to‘g‘ri — so‘z o‘rganildi.", goalQ:"Bugun nechta so‘z yodlaysiz?", goalAll:n=>`Hammasi (${n})`, goalOf:n=>`ta so‘z (${n} tadan)`, goalDone:n=>`${n} ta so‘z yodlandi! 🎉`, goalMore:n=>`Yana ${n} ta so‘z`, goalLeft:(a,b)=>`Maqsad: ${b} ta so‘z · ${a} tasi yodlandi`, cards:"🃏 Karteikarten", cardsD:"Kartani bosing — tarjimasi chiqadi.",
+      learn:"🧠 Lernen", learnD:"Test, keyingi raundda yozish. Ikkalasi to‘g‘ri — so‘z o‘rganildi.", learnDm:"🧩 Juftlash, keyingi raundda yozish. Ikkalasi to‘g‘ri — so‘z o‘rganildi.", goalQ:"Nechta so‘z yodlaysiz?", goalAll:n=>`Hammasi (${n})`, goalOf:n=>`ta so‘z (${n} tadan)`, goalDone:n=>`${n} ta so‘z yodlandi! 🎉`, goalMore:n=>`Yana ${n} ta so‘z`, goalLeft:(a,b)=>`Maqsad: ${b} ta so‘z · ${a} tasi yodlandi`, cards:"🃏 Karteikarten", cardsD:"Kartani bosing — tarjimasi chiqadi.",
       learned:(a,b)=>`${a} / ${b} o‘rganildi`, choose:"To‘g‘ri tarjimani tanlang", chooseP:"To‘g‘ri Perfekt shaklini tanlang", writeP:"Perfekt shaklini yozing", write:"Nemischa yozing", ph:"Nemischa…", check:"Prüfen", dunno:"Keine Ahnung",
       right:["Super!","Richtig!","Sehr gut!","Toll!","Prima!"], wrong:"Falsch", correct:"To‘g‘ri javob:", yours:"Sizning javobingiz:", next:"Weiter", override:"Ich habe es richtig geschrieben",
       caseNote:"Katta-kichik harfga e’tibor bering.", artNote:"Artikl (der/die/das) ham kerak!", almost:"Bitta harf xato.", near:"Fast richtig!", umlNote:"ä / ö / ü / ß ga e’tibor bering.", artWrong:"Artikl xato (der / die / das).",
       roundDone:"Raund tugadi!", roundRes:(a,b)=>`${b} savoldan ${a} tasiga to‘g‘ri javob berdingiz.`, cont:"Nächste Runde", allDone:"Hamma so‘zlar o‘rganildi! 🎉", restart:"Neu starten", back:"Zurück",
-      know:"Weiß ich ✓", dontknow:"Keine Ahnung ✗", tap:"Bosing — aylanadi", cardsDone:"Hammasini bilasiz! 🎉", left:n=>`${n} ta qoldi`, reset:"Natijani o‘chirish", sel0:"Kamida bitta Lektion tanlang", example:"Misol",
+      know:"Weiß ich ✓", dontknow:"Keine Ahnung ✗", tap:"Bosing — aylanadi", cardsDone:"Hammasini bilasiz! 🎉", cardsGoal:n=>`${n} ta karta tugadi! 🎉`, cardsMore:n=>`Yana ${n} ta karta`, left:n=>`${n} ta qoldi`, reset:"Natijani o‘chirish", sel0:"Kamida bitta Lektion tanlang", example:"Misol",
       knownN:n=>`🃏 Kartalarda ${n} ta so‘zni «Bilaman» degansiz`, chk:"✅ Bilganlarimni tekshirish", chkD:"Kartada «Bilaman» degan so‘zlar — test + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", chkDm:"Kartada «Bilaman» degan so‘zlar — 🧩 juftlash + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", cardsAll:"Bu Lektionlardagi hamma kartalarni «Bilaman» degansiz.", cardsReset:"Kartalarni boshidan boshlash", chkDone:"Bilgan so‘zlaringizni tekshirib bo‘ldingiz! 🎉"},
   ru:{lern:"Учить", title:"Учить слова", pick:"Какие уроки?", all:"Все", none:"Очистить", redem:"Включая Redemittel (фразы)", words:n=>`${n} слов`,
-      learn:"🧠 Заучивание", learnD:"Тест, в следующем раунде — письмо. Оба верно — слово выучено.", learnDm:"🧩 Пары, в следующем раунде — письмо. Оба верно — слово выучено.", goalQ:"Сколько слов выучите сегодня?", goalAll:n=>`Все (${n})`, goalOf:n=>`слов (из ${n})`, goalDone:n=>`Выучено слов: ${n}! 🎉`, goalMore:n=>`Ещё ${n} слов`, goalLeft:(a,b)=>`Цель: ${b} слов · выучено ${a}`, cards:"🃏 Карточки", cardsD:"Нажмите на карточку — появится перевод.",
+      learn:"🧠 Заучивание", learnD:"Тест, в следующем раунде — письмо. Оба верно — слово выучено.", learnDm:"🧩 Пары, в следующем раунде — письмо. Оба верно — слово выучено.", goalQ:"Сколько слов будете учить?", goalAll:n=>`Все (${n})`, goalOf:n=>`слов (из ${n})`, goalDone:n=>`Выучено слов: ${n}! 🎉`, goalMore:n=>`Ещё ${n} слов`, goalLeft:(a,b)=>`Цель: ${b} слов · выучено ${a}`, cards:"🃏 Карточки", cardsD:"Нажмите на карточку — появится перевод.",
       learned:(a,b)=>`${a} / ${b} выучено`, choose:"Выберите правильный перевод", chooseP:"Выберите правильную форму Perfekt", writeP:"Напишите форму Perfekt", write:"Напишите по-немецки", ph:"По-немецки…", check:"Prüfen", dunno:"Keine Ahnung",
       right:["Super!","Richtig!","Sehr gut!","Toll!","Prima!"], wrong:"Falsch", correct:"Правильный ответ:", yours:"Ваш ответ:", next:"Weiter", override:"Ich habe es richtig geschrieben",
       caseNote:"Обратите внимание на большие и маленькие буквы.", artNote:"Нужен ещё артикль (der/die/das)!", almost:"Ошибка в одной букве.", near:"Fast richtig!", umlNote:"Обратите внимание на ä / ö / ü / ß.", artWrong:"Неверный артикль (der / die / das).",
       roundDone:"Раунд окончен!", roundRes:(a,b)=>`Верно: ${a} из ${b}.`, cont:"Nächste Runde", allDone:"Все слова выучены! 🎉", restart:"Neu starten", back:"Zurück",
-      know:"Weiß ich ✓", dontknow:"Keine Ahnung ✗", tap:"Нажмите — перевернётся", cardsDone:"Вы знаете все! 🎉", left:n=>`Осталось: ${n}`, reset:"Сбросить прогресс", sel0:"Выберите хотя бы один урок", example:"Пример",
+      know:"Weiß ich ✓", dontknow:"Keine Ahnung ✗", tap:"Нажмите — перевернётся", cardsDone:"Вы знаете все! 🎉", cardsGoal:n=>`Готово: ${n} карточек! 🎉`, cardsMore:n=>`Ещё ${n} карточек`, left:n=>`Осталось: ${n}`, reset:"Сбросить прогресс", sel0:"Выберите хотя бы один урок", example:"Пример",
       knownN:n=>`🃏 На карточках вы отметили «Знаю»: ${n}`, chk:"✅ Проверить, что я знаю", chkD:"Слова с отметкой «Знаю» — тест + письмо. Ошибся — слово вернётся в карточки.", chkDm:"Слова с отметкой «Знаю» — 🧩 пары + письмо. Ошибся — слово вернётся в карточки.", cardsAll:"Все карточки этих уроков отмечены «Знаю».", cardsReset:"Начать карточки заново", chkDone:"Вы проверили все знакомые слова! 🎉"}
 };
 const lt = k => LT[state.lang][k];
@@ -3702,7 +3702,7 @@ function lrnHead(sub){
   return `<div class="lrn-bar"><button class="btn" data-l="close" aria-label="${LR.mode?"←":"✕"}">${LR.mode?"←":"✕"}</button><div class="lrn-tt"><b>${esc(lt("title"))}</b><small>${esc(m?m.title:"")}</small></div>${sub||""}</div>`;
 }
 function lrnSetup(){
-  LR.chk=false; LR.mode=null;
+  LR.chk=false; LR.mode=null; LR.goalWant=0;
   const D=lernData()[LR.id], les=Object.keys(D.les).map(Number);
   const its=lrnItems(), done=its.filter(x=>LR.st[x.i]===2).length, KN=lrnKnown(), kn=its.filter(x=>KN.has(x.i)).length, kq=its.filter(x=>KN.has(x.i)&&LR.st[x.i]!==2).length;
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${progRank()}<div class="lrn-card lrn-setup">
@@ -3965,15 +3965,15 @@ function lrnRoundEnd(){
 function lrnFinish(){
   if(LR.mode==="learn") accLern();
   if(LR.mode==="cards"){ const kn=lrnLeftKnown().length;
-    lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">🏆</div><h3>${esc(lt("cardsDone"))}</h3>${LR.allKnown?`<p>${esc(lt("cardsAll"))}</p>`:""}
-      ${kn?`<button type="button" class="btn primary" data-l="kchk">${esc(lt("chk"))} (${kn})</button>`:""}
+    lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">🏆</div><h3>${esc(LR.cardsRest>0?lt("cardsGoal")(LR.cardsN):lt("cardsDone"))}</h3>${LR.cardsRest>0?`<button type="button" class="btn primary" data-l="cards">${esc(lt("cardsMore")(Math.min(lrnGoal(),LR.cardsRest)))} →</button>`:""}${LR.allKnown?`<p>${esc(lt("cardsAll"))}</p>`:""}
+      ${kn?`<button type="button" class="btn${LR.cardsRest>0?"":" primary"}" data-l="kchk">${esc(lt("chk"))} (${kn})</button>`:""}
       <button type="button" class="btn" data-l="back">${esc(lt("back"))}</button><button type="button" class="lrn-link" data-l="kreset">${esc(lt("cardsReset"))}</button></div></div>`;
     return; }
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card lrn-end"><div class="big">🏆</div><h3>${esc(LR.chk?lt("chkDone"):LR.goalN&&lrnItems().some(x=>LR.st[x.i]!==2)?lt("goalDone")(LR.goalN):lt("allDone"))}</h3>${progUpHtml()}
     ${!LR.chk&&lrnItems().some(x=>LR.st[x.i]!==2)?`<button type="button" class="btn primary" data-l="learn">${esc(lt("goalMore")(Math.min(lrnGoal()||1e9,lrnItems().filter(x=>LR.st[x.i]!==2).length)))} →</button><button type="button" class="btn" data-l="back">${esc(lt("back"))}</button>`:`<button type="button" class="btn primary" data-l="back">${esc(lt("back"))}</button><button type="button" class="lrn-link" data-l="restart">${esc(lt("restart"))}</button>`}</div></div>`;
 }
 /* ---------- Karteikarten ---------- */
-function lrnStartCards(){ LR.mode="cards"; const KN=lrnKnown(), all=lrnItems(); LR.cards=lrnShuffle(all.filter(x=>!KN.has(x.i))); LR.allKnown=!LR.cards.length&&all.length>0; LR.flip=false; lrnCard(); }
+function lrnStartCards(){ LR.mode="cards"; const KN=lrnKnown(), all=lrnItems(); const un=lrnShuffle(all.filter(x=>!KN.has(x.i))); LR.cards=un.slice(0,lrnGoal()||un.length); LR.cardsN=LR.cards.length; LR.cardsRest=un.length-LR.cards.length; LR.allKnown=!un.length&&all.length>0; LR.flip=false; lrnCard(); }
 function lrnCard(){
   if(!LR.cards.length){ lrnFinish(); return; }
   const x=LR.cards[0];
@@ -4001,10 +4001,9 @@ document.addEventListener("click",e=>{
   if(a==="close"){ LR.mg=null; if(LR.mode){ try{ speechSynthesis.cancel(); }catch(e){} wkStop(); lrnSetup(); } else lrnClose(); }
   else if(a==="all"){ Object.keys(lernData()[LR.id].les).forEach(n=>LR.sel.add(+n)); store.set(lrnKey(LR.id)+":sel",JSON.stringify([...LR.sel])); lrnSetup(); }
   else if(a==="none"){ LR.sel.clear(); store.set(lrnKey(LR.id)+":sel","[]"); lrnSetup(); }
-  else if(a==="learn"){ const gi=document.getElementById("lrn-goal");
-    if(gi){ const n=Math.round(+gi.value), mx=+gi.max; if(!gi.value||!(n>=1)){ const w=gi.closest(".lrn-goal"); w.classList.remove("need"); void w.offsetWidth; w.classList.add("need"); gi.focus(); return; } LR.goalWant=Math.min(n,mx); }
-    lrnStartLearn(); }
-  else if(a==="cards") lrnStartCards();
+  else if(a==="learn"||a==="cards"){ const gi=document.getElementById("lrn-goal"); /* son Lernen'ga ham, kartalarga ham ta'sir qiladi */
+    if(gi){ const n=Math.round(+gi.value); if(!gi.value||!(n>=1)){ const w=gi.closest(".lrn-goal"); w.classList.remove("need"); void w.offsetWidth; w.classList.add("need"); gi.focus(); return; } LR.goalWant=n; }
+    if(a==="learn") lrnStartLearn(); else lrnStartCards(); }
   else if(a==="reset"){ lrnItems().forEach(x=>delete LR.st[x.i]); lrnSave(); const KN=lrnKnown(); lrnItems().forEach(x=>KN.delete(x.i)); lrnKnownSet(KN); lrnSetup(); }
   else if(a==="next"){ LR.qi++; lrnAsk(); }
   else if(a==="cont") lrnNewRound();
