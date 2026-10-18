@@ -3774,7 +3774,40 @@ function lrnAsk(){
    Ma'lumot: lern-data[id].mt = {indeks:[chap, o'ng]}. Perfekt ro'yxatlarida yo'q. Mt bo'lmagan so'zda eski test qoladi. */
 function lrnMtOk(x){ const D=lernData()[LR.id]||{}; return !!(x&&x.mt&&D.kind!=="perfekt"); }
 function lrnMtKey(s){ return String(s).toLowerCase().replace(/[„“”"«».,!?:;…’']/g,"").replace(/\s+/g," ").trim(); }
-function lrnMtFits(g,x){ return !g.some(y=>y.s===x.s||lrnMtKey(y.mt[0])===lrnMtKey(x.mt[0])||lrnMtKey(y.mt[1])===lrnMtKey(x.mt[1])); }
+/* Match: bitta guruhda ikki juftlik "almashib" ham to'g'ri gap bo'lib qolmasin (2026-10-19).
+   Chap qismning oxirgi so'zi va o'ng qismning birinchi so'zi bir xil turda bo'lsa (sein/haben/modal, artikl, predlog, ravish, javob so'zi, olmosh),
+   yoki ikkalasi ham dialog (savol↔javob, gap↔reaksiya) yoki ikkalasi ham «…,» bilan tugasa — ular bir guruhga tushmaydi. */
+const LRN_MTC=(()=>{ const m={}, add=(c,ws)=>ws.split(" ").forEach(w=>m[w]=c);
+  add("sein","bin bist ist sind seid war warst waren wart sein gewesen");
+  add("haben","habe hast hat haben habt hatte hattest hatten hattet");
+  add("modal","kann kannst können könnt konnte muss musst müssen müsst musste will willst wollen wollt wollte soll sollst sollen sollt sollte darf darfst dürfen dürft durfte möchte möchtest möchten möchtet mag magst mögen würde würdest würden würdet werde wirst wird werden werdet");
+  add("art","der die das den dem des ein eine einen einem einer eines kein keine keinen keinem keiner mein meine meinen meinem meiner dein deine deinen deinem sein seine seinen seinem ihr ihre ihren ihrem unser unsere unseren euer eure diese dieser dieses diesen diesem jeder jede jedes jeden");
+  add("prep","in im ins an am ans auf aus bei beim mit nach von vom zu zum zur für über unter vor hinter neben zwischen durch ohne um gegen seit bis ab");
+  add("adv","sehr zu ganz so nicht noch schon immer auch gern gerne lieber oft nie manchmal heute morgen jetzt hier dort dann sofort wirklich leider total echt ziemlich");
+  add("ans","ja nein doch klar natürlich okay ok gut danke prima super toll schade sicher genau bitte gerne einverstanden");
+  add("pron","ich du er sie es wir ihr mich dich sich uns euch mir dir ihm ihnen man jemand niemand alles nichts etwas");
+  return m; })();
+function lrnMtWord(s,last){ const w=String(s).trim().split(/\s+/); return (last?w[w.length-1]:w[0]||"").toLowerCase().replace(/[^a-zäöüß]/g,""); }
+function lrnMtClash(a,b){ const A=a.mt, B=b.mt, dl=x=>/[.!?…]\s*$/.test(x[0]), cm=x=>/,\s*$/.test(x[0]);
+  if(dl(A)&&dl(B)) return true; if(cm(A)&&cm(B)) return true;
+  const ra=lrnMtWord(A[1]), rb=lrnMtWord(B[1]), la=lrnMtWord(A[0],1), lb=lrnMtWord(B[0],1);
+  if(ra&&ra===rb) return true; if(la&&la===lb) return true;
+  const c=w=>LRN_MTC[w]; if(c(ra)&&c(ra)===c(rb)) return true; if(c(la)&&c(la)===c(lb)) return true;
+  /* ikkita «… + fe'l» birikmasi (Gäste | empfangen, Tee | kochen) — o'ng qismlar almashsa ham ko'pincha gap chiqadi */
+  const inf=x=>!/[.!?,…]\s*$/.test(x[1])&&!/[.!?,…]\s*$/.test(x[0])&&/^[a-zäöüß]+(en|ern|eln|n)$/.test(lrnMtWord(x[1],1))&&!/^[A-ZÄÖÜ]/.test(String(x[1]).trim().split(/\s+/).pop());
+  if(inf(A)&&inf(B)) return true;
+  /* «… | fe'l + ega» (Am Freitag | essen wir Fisch, Im Januar | habe ich Urlaub) — istalgan vaqt/joy boshiga ulanadi */
+  const SUBJ=/^(ich|du|er|sie|es|wir|ihr|man|der|die|das|ein|eine|mein|meine|dein|deine|sein|seine|unser|unsere)$/;
+  const inv=x=>{ const w=String(x[1]).trim().split(/\s+/); return !dl(x)&&w.length>1&&/^[a-zäöüß]/.test(w[0])&&!LRN_MTC[w[0].toLowerCase()]&&SUBJ.test(w[1].toLowerCase().replace(/[^a-zäöüß]/g,"")) || (!dl(x)&&w.length>1&&["sein","haben","modal"].includes(LRN_MTC[w[0].toLowerCase()])&&SUBJ.test(w[1].toLowerCase().replace(/[^a-zäöüß]/g,""))); };
+  if(inv(A)&&inv(B)) return true;
+  /* «… | to'ldiruvchi» (Heute haben wir | Gäste, Ich habe | drei Nachrichten) — ikkita bo'lsa almashib qoladi */
+  const obj=x=>{ if(dl(x)) return false; const r=String(x[1]).trim(), w0=r.split(/\s+/)[0]||"", lw=lrnMtWord(x[0],1);
+    if(["art","prep"].includes(LRN_MTC[lw])) return false; return /^[A-ZÄÖÜ0-9]/.test(w0)||LRN_MTC[w0.toLowerCase()]==="art"||/^(viel|viele|wenig|zwei|drei|vier|fünf|zehn|ganz|keine|kein)$/i.test(w0); };
+  if(obj(A)&&obj(B)) return true;
+  /* chap qismlar bir xil so'z/turdan boshlansa (am Montag … / am Sonntag …, Das Bild … / Das Zimmer …) */
+  const fa=lrnMtWord(A[0]), fb=lrnMtWord(B[0]); if(fa&&(fa===fb||(c(fa)&&c(fa)===c(fb)))) return true;
+  return false; }
+function lrnMtFits(g,x){ return !g.some(y=>y.s===x.s||lrnMtKey(y.mt[0])===lrnMtKey(x.mt[0])||lrnMtKey(y.mt[1])===lrnMtKey(x.mt[1])||lrnMtClash(x,y)); }
 function lrnMatchStart(){
   const isM=y=>lrnMtOk(y)&&!(LR.st[y.i]===1&&lrnTypable(y));
   const rest=LR.round.slice(LR.qi), g=[];
@@ -3789,7 +3822,7 @@ function lrnMatchStart(){
     /* raunddagi so'zlar to'ldiruvchi bo'lmaydi (aks holda bitta juftlik ikki marta chiqadi); avval allaqachon o'rganilganlar */
     const fresh=y=>!uf.has(y.i); /* shu raundda to'ldiruvchi bo'lgan juftlik qayta chiqmaydi */
     const pools=[lrnShuffle(allMt.filter(y=>fresh(y)&&LR.sel.has(y.l)&&!ri.has(y.i)&&LR.st[y.i]===2)), lrnShuffle(allMt.filter(y=>fresh(y)&&LR.sel.has(y.l)&&!ri.has(y.i)&&LR.st[y.i]!==2)), lrnShuffle(allMt.filter(y=>fresh(y)&&!LR.sel.has(y.l)&&!ri.has(y.i))), lrnShuffle(allMt.filter(y=>!fresh(y)&&!ri.has(y.i))), lrnShuffle(allMt.filter(y=>ri.has(y.i)))];
-    const keyOk=(arr,y)=>!arr.some(z=>lrnMtKey(z.mt[0])===lrnMtKey(y.mt[0])||lrnMtKey(z.mt[1])===lrnMtKey(y.mt[1]));
+    const keyOk=(arr,y)=>!arr.some(z=>lrnMtKey(z.mt[0])===lrnMtKey(y.mt[0])||lrnMtKey(z.mt[1])===lrnMtKey(y.mt[1])||lrnMtClash(z,y));
     for(const strict of [true,false]) for(const pool of pools) for(const y of pool){ if(g.length+fill.length>=4) break; const cur=[...g,...fill]; if(fill.includes(y)) continue; if(strict?lrnMtFits(cur,y):keyOk(cur,y)) fill.push(y); } fill.forEach(y=>uf.add(y.i)); }
   const P=[...g.map(x=>({x,real:true})),...fill.map(x=>({x,real:false}))];
   const Lo=lrnShuffle(P.map((_,k)=>k)); let Ro; for(let t=0;t<50;t++){ Ro=lrnShuffle(P.map((_,k)=>k)); if(Ro.every((k,r)=>k!==Lo[r])) break; } /* juftlar hech qachon bir qatorda turmaydi */
