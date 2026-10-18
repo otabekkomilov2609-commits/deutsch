@@ -368,6 +368,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .kgp-res{padding:14px 16px;border-radius:14px;font-size:22px;font-weight:800;text-align:center}.kgp-res div{font-size:18px;font-weight:600;margin-top:4px}
 .kgp-res.ok{background:var(--green-soft);color:var(--green)}.kgp-res.bad{background:rgba(226,27,60,.12);color:#C62828}
 .kgp-fb:empty{display:none}
+.kgp-tb{position:relative;height:28px;border-radius:99px;background:var(--line);overflow:hidden}.kgp-tb i{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--blue);transition:width .25s linear}.kgp-tb b{position:absolute;right:12px;top:0;line-height:28px;font-size:16px;color:var(--ink)}.kgp-tb.hurry i{background:#E21B3C}
 .ch-time.hurry{color:#E21B3C}
 /* hisobot */
 .kg-rep{max-width:860px}
@@ -5091,12 +5092,15 @@ function kgSetup(b){ const s=kgSets().find(x=>x.id===TP.kgGo); if(!s){ TP.kgGo=n
     <div class="tp-row"><span>Rejim</span><div class="tp-seg"><button type="button" data-kgm="k" aria-pressed="${M==="k"}">⚡ Savolma-savol</button><button type="button" data-kgm="s" aria-pressed="${M==="s"}">🏃 O‘z tempida</button></div></div>
     <p class="ch-net">${M==="k"?"Savol doskada chiqadi, hamma bir vaqtda javob beradi. Keyingi savolga siz o‘tkazasiz. O‘rin: ko‘p to‘g‘ri javob; teng bo‘lsa — to‘g‘ri javoblarga kam vaqt sarflagan.":"Har kim o‘z tezligida, to‘xtovsiz ishlaydi, boshqalarni kutmaydi. O‘rin: ko‘p to‘g‘ri javob; teng bo‘lsa — o‘sha natijaga tezroq yetgan."}</p>
     ${M==="k"&&P.qs.every(q=>q.tm)?`<div class="tp-row"><span>Vaqt</span><b class="kg-tmn">⏱ har savolning o‘z vaqti (${Math.min(...P.qs.map(q=>q.tm))}–${Math.max(...P.qs.map(q=>q.tm))} s)</b></div>`:M==="k"?`<div class="tp-row"><span>Har savolga</span><div class="tp-seg">${[10,20,30,60].map(v=>`<button type="button" data-kgt="${v}" aria-pressed="${(TP.kgT||20)===v}">${v} s</button>`).join("")}</div></div>`
-      :`<div class="tp-row"><span>Umumiy vaqt</span><div class="tp-seg">${[[0,"Cheksiz"],[5,"5 daq"],[10,"10 daq"],[15,"15 daq"],[20,"20 daq"]].map(([v,t])=>`<button type="button" data-kgtot="${v}" aria-pressed="${(TP.kgTot||0)===v}">${t}</button>`).join("")}</div></div>`}
+      :`<div class="tp-row"><span>Har savolga</span><div class="tp-seg">${(P.qs.every(q=>q.tm)?[[-1,"Savoldagi vaqt"]]:[]).concat([[0,"Cheksiz"],[10,"10 s"],[20,"20 s"],[30,"30 s"],[60,"60 s"]]).map(([v,t])=>`<button type="button" data-kgqt="${v}" aria-pressed="${kgQtDef(P)===v}">${t}</button>`).join("")}</div></div>
+      ${kgQtDef(P)===-1?`<p class="ch-net">⏱ Har savolning o‘z vaqti (${Math.min(...P.qs.map(q=>q.tm))}–${Math.max(...P.qs.map(q=>q.tm))} s). Vaqt tugasa — savol xato hisoblanib, keyingisi chiqadi.</p>`:kgQtDef(P)>0?`<p class="ch-net">⏱ Vaqt tugasa — savol xato hisoblanib, keyingisi chiqadi.</p>`:""}
+      <div class="tp-row"><span>Umumiy vaqt</span><div class="tp-seg">${[[0,"Cheksiz"],[5,"5 daq"],[10,"10 daq"],[15,"15 daq"],[20,"20 daq"]].map(([v,t])=>`<button type="button" data-kgtot="${v}" aria-pressed="${(TP.kgTot||0)===v}">${t}</button>`).join("")}</div></div>`}
     <div class="ch-btns"><button type="button" class="btn" data-kg="cancel">← Orqaga</button><button type="button" class="btn primary" data-kg="launch">🎮 Doskaga chiqarish</button></div></div>`; }
+function kgQtDef(P){ const v=TP.kgQt; if(v==null) return P.qs.every(q=>q.tm)?-1:20; if(v===-1&&!P.qs.every(q=>q.tm)) return 20; return v; }
 function kgLaunch(){ const s=kgSets().find(x=>x.id===TP.kgGo); if(!s) return; const P=kgParse(s.txt); if(!P.qs.length) return;
   const r=chRng(Math.floor(Math.random()*2147483647));
   const qs=P.qs.map(q=>{ if(!q.o||q.o.length<3||s.f) return q; /* Kahoot to'plamlari: variantlar asl tartibda */ const ix=chShuf(q.o.map((_,i)=>i),r); return Object.assign({},q,{o:ix.map(i=>q.o[i]),c:q.c.map(ci=>ix.indexOf(ci))}); });
-  const M=TP.kgM||"k", g={id:kgId(),m:M,nm:s.name,tm:M==="k"?(TP.kgT||20):(TP.kgTot||0),n:qs.length,t:Date.now()};
+  const M=TP.kgM||"k", g={id:kgId(),m:M,nm:s.name,tm:M==="k"?(TP.kgT||20):(TP.kgTot||0),n:qs.length,t:Date.now()}; if(M==="s") g.qt=kgQtDef(P);
   TP.kgGo=null; kgBoardOpen({g,qs,players:{},fz:{},ctl:{st:"lobby",t:Date.now()}}); }
 
 /* ---------- Doska (proyektor) ---------- */
@@ -5121,7 +5125,7 @@ function kgLobbyHTML(K){ const url=kgLink(K.id);
   return `<div class="kg-lobby"><div class="kg-box"><button type="button" class="tp-qr" id="kg-qr" data-tp="qrbig" title="Kattalashtirish"></button><div class="tp-url">🔍 QR-kodni bosing — kattalashadi</div>
       <div class="ch-btns"><button type="button" class="btn" data-kg="copy">📋 Havolani nusxalash</button><a class="btn" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent("🎮 "+K.g.nm)}">📤 Telegram</a></div><p class="ch-net" id="kg-net"></p></div>
     <div class="kg-box"><h2 class="kg-h2">👋 Qo‘shilganlar: <b id="kg-cnt">0</b></h2><div class="kg-names" id="kg-names"></div>
-      <p class="ch-net">${K.g.m==="k"?`⚡ Savolma-savol · har savolga ${K.g.tm} soniya`:`🏃 O‘z tempida${K.g.tm?` · ${K.g.tm} daqiqa`:" · vaqt cheklanmagan"}`} · ${K.qs.length} ta savol</p>
+      <p class="ch-net">${K.g.m==="k"?`⚡ Savolma-savol · har savolga ${K.g.tm} soniya`:`🏃 O‘z tempida${K.g.qt===-1?" · har savolga o‘z vaqti":K.g.qt>0?` · har savolga ${K.g.qt} s`:""}${K.g.tm?` · jami ${K.g.tm} daqiqa`:""}`} · ${K.qs.length} ta savol</p>
       <button type="button" class="btn primary tp-big" data-kg="start">▶ Boshlash</button></div></div>`; }
 function kgQHTML(K){ const i=K.ctl.i, q=K.qs[i], rev=K.ctl.st==="rev", n=K.qs.length, cnt=[0,0,0,0], wr={}; let okN=0, tot=0;
   if(rev) Object.values(K.fz[i]||{}).forEach(a=>{ tot++; if(q.o){ const v=+a[0]; if(v>=0&&v<4) cnt[v]++; } if(kgJudge(q,a[0])) okN++; else if(!q.o){ const w=lrnNorm(a[0]); if(w) wr[w]=(wr[w]||0)+1; } });
@@ -5201,7 +5205,7 @@ function kgRepDraw(){ const X=TP.kgR; if(!X) return; const R=X.R, el=tpEl(), n=R
       <button type="button" class="btn primary" data-kg="hw"${Q.some(x=>x.pct!=null&&x.pct<70)?"":" disabled"}>🔗 Uyga mashq havolasini yaratish</button><div id="kg-hwo">${X.hw||""}</div></div>`}
   </div>`; el.scrollTop=sc; }
 function kgHw(){ const X=TP.kgR, R=X&&X.R; if(!R) return; const sel=kgQStats(R).filter(x=>x.pct!=null&&x.pct<70).map(x=>R.qs[x.i]); if(!sel.length) return;
-  const g={id:kgId(),m:"s",nm:R.g.nm+" · takrorlash",tm:0,n:sel.length,t:Date.now(),hw:1}, url=kgBase()+"?kgd="+chB64e(JSON.stringify({g,qs:sel}));
+  const g={id:kgId(),m:"s",nm:R.g.nm+" · takrorlash",tm:0,n:sel.length,t:Date.now(),hw:1,qt:R.g.m==="s"?(R.g.qt||0):(sel.every(q=>q.tm)?-1:(R.g.tm||20))}, url=kgBase()+"?kgd="+chB64e(JSON.stringify({g,qs:sel}));
   kgRepPut({g,qs:sel,players:{},fz:{},ctl:{st:"run",t0:Date.now()}});
   X.hw=`<p class="lrn-count">✓ ${sel.length} ta savol · havola tayyor</p><div class="ch-btns"><button type="button" class="btn" data-kgcopy="${esc(url)}">📋 Nusxalash</button><a class="btn" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent("🔁 "+g.nm)}">📤 Telegram</a></div>`;
   const o=document.getElementById("kg-hwo"); if(o) o.innerHTML=X.hw; }
@@ -5218,12 +5222,12 @@ function kgCsv(R){ const n=R.qs.length, L=kgRank(R), Q=kgQStats(R), s=R.g.m==="s
 const KGUZ={uz:{t:"🎮 Sinf o‘yini",nm:"Ismingiz",nmPh:"Ism va familiya",join:"Qo‘shilish",errNm:"Ismingizni yozing",wait:"Ustoz o‘yinni boshlashini kuting…",load:"Savollar yuklanmoqda…",bad:"Havola noto‘g‘ri yoki o‘yin topilmadi.",
     got:"Javob qabul qilindi!",gotS:"Boshqalarni kuting…",late:"Vaqt tugadi",ok:"To‘g‘ri!",no:"Xato",noAns:"Javob berilmadi",corr:"To‘g‘ri javob:",place:(a,b)=>`${a}-o‘rin (${b} kishidan)`,score:(o,n)=>`✓ ${o} / ${n} to‘g‘ri`,
     write:"Nemischa yozing",ph:"Nemischa…",send:"Yuborish",dunno:"Bilmayman",next:"Keyingi savolni kuting…",done:"O‘yin tugadi!",review:"Javoblaringiz",allOk:"Hammasi to‘g‘ri! 🎉",board:"Natijalar",you:"siz",q:(i,n)=>`${i} / ${n}`,
-    rulesK:t=>`Savollar doskada chiqadi · har biriga ${t} soniya`,rulesS:(n,m)=>`${n} ta savol · o‘z tezligingizda${m?` · ${m} daqiqa`:""}`,rules2:"O‘rin: ko‘p to‘g‘ri javob; teng bo‘lsa — kam vaqt sarflagan",
+    rulesK:t=>`Savollar doskada chiqadi · har biriga ${t} soniya`,rulesS:(n,m,q)=>`${n} ta savol · o‘z tezligingizda${q?` · har savolga ${q}`:""}${m?` · jami ${m} daqiqa`:""}`,rules2:"O‘rin: ko‘p to‘g‘ri javob; teng bo‘lsa — kam vaqt sarflagan",
     net0:"⏳ Ulanmoqda…",net1:"🟢 Ulandi",netBad:"🔴 Ulanib bo‘lmadi",ended:"Bu o‘yin tugagan."},
   ru:{t:"🎮 Игра класса",nm:"Ваше имя",nmPh:"Имя и фамилия",join:"Присоединиться",errNm:"Напишите имя",wait:"Ждите, пока учитель начнёт игру…",load:"Загрузка вопросов…",bad:"Ссылка неверная или игра не найдена.",
     got:"Ответ принят!",gotS:"Ждите остальных…",late:"Время вышло",ok:"Верно!",no:"Неверно",noAns:"Нет ответа",corr:"Правильный ответ:",place:(a,b)=>`${a}-е место (из ${b})`,score:(o,n)=>`✓ ${o} / ${n} верно`,
     write:"Напишите по-немецки",ph:"По-немецки…",send:"Отправить",dunno:"Не знаю",next:"Ждите следующий вопрос…",done:"Игра окончена!",review:"Ваши ответы",allOk:"Всё верно! 🎉",board:"Результаты",you:"вы",q:(i,n)=>`${i} / ${n}`,
-    rulesK:t=>`Вопросы на доске · ${t} сек. на каждый`,rulesS:(n,m)=>`${n} вопросов · в своём темпе${m?` · ${m} мин`:""}`,rules2:"Место: больше верных ответов; при равенстве — меньше времени",
+    rulesK:t=>`Вопросы на доске · ${t} сек. на каждый`,rulesS:(n,m,q)=>`${n} вопросов · в своём темпе${q?` · на вопрос ${q}`:""}${m?` · всего ${m} мин`:""}`,rules2:"Место: больше верных ответов; при равенстве — меньше времени",
     net0:"⏳ Подключение…",net1:"🟢 Подключено",netBad:"🔴 Нет связи",ended:"Эта игра уже окончена."}};
 const kz=k=>KGUZ[state.lang==="ru"?"ru":"uz"][k];
 const KGP={};
@@ -5261,7 +5265,7 @@ function kgpRender(){ const el=kgpEl();
   const c=KGP.ctl, n=KGP.qs.length, M=KGP.g.m;
   if(KGP.st==="join"||KGP.st==="wait"){
     if(c&&c.st==="end"&&KGP.st==="join"&&!KGP.solo){ el.innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card"><h3>${esc(kz("ended"))}</h3></div></div>`; return; }
-    el.innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card"><h3>${esc(KGP.g.nm)}</h3><p class="ch-big">${esc(M==="k"?kz("rulesK")(KGP.g.tm||20):kz("rulesS")(n,KGP.g.tm))}</p><p class="ch-net">${esc(kz("rules2"))}</p>
+    el.innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card"><h3>${esc(KGP.g.nm)}</h3><p class="ch-big">${esc(M==="k"?kz("rulesK")(KGP.g.tm||20):kz("rulesS")(n,KGP.g.tm,KGP.g.qt===-1?(()=>{ const T=KGP.qs.map(q=>q.tm||20); return Math.min(...T)+"–"+Math.max(...T)+" s"; })():KGP.g.qt>0?KGP.g.qt+" s":""))}</p><p class="ch-net">${esc(kz("rules2"))}</p>
       ${KGP.st==="join"?`<label class="acc-lb">${esc(kz("nm"))}<input class="ch-in" id="kg-name" maxlength="30" placeholder="${esc(kz("nmPh"))}" value="${esc(KGP.name)}"></label><div class="acc-st err" id="kg-err"></div><button type="button" class="btn primary" data-kgp="join">${esc(kz("join"))} →</button>`
         :`<div class="lt-wait"><div class="lt-dots"><i></i><i></i><i></i></div><b>${esc(kz("wait"))}</b><span>${esc(KGP.name)}</span></div>`}
       <p class="ch-net" id="kg-pnet"></p></div></div>`;
@@ -5294,20 +5298,22 @@ function kgpStart(){ KGP.st="play"; if(!KGP.t0) KGP.t0=Date.now(); kgpSave(); kg
 function kgpFinish(){ if(KGP.st==="done") return; KGP.st="done"; kgpSave(); kgpPub(true); kgpRender(); }
 /* o'z tempida: savol → javob → darhol natija → keyingisi */
 function kgpSQ(){ const ord=KGP.ord||(KGP.ord=kgpOrd()), k=ord.find(i=>!KGP.a[i]); if(k==null) return kgpFinish();
-  const q=KGP.qs[k], n=KGP.qs.length, done=Object.keys(KGP.a).length, me=kgpStat(KGP.a); KGP.lock=false; KGP.cur=k;
+  const q=KGP.qs[k], n=KGP.qs.length, done=Object.keys(KGP.a).length, me=kgpStat(KGP.a), QT=kgpLim(q); KGP.lock=false; KGP.cur=k; KGP.qS=Date.now();
   kgpEl().innerHTML=kgpHead(`<span class="ch-time" id="kg-time"></span>`)+`<div class="lrn-body">
     <div class="ch-bar"><i style="width:${done/n*100}%;background:var(--green)"></i></div>
     <div class="ch-top"><span class="ch-score">✓ ${me.ok} · ${esc(kz("q")(done+1,n))}</span><span class="ch-rank" id="kg-place"></span></div>
-    ${kgpQCard(q)}<div class="kgp-fb" id="kg-fb"></div><div id="kg-board"></div></div>`;
+    ${QT?`<div class="kgp-tb"><i id="kg-tb"></i><b id="kg-tl">${Math.round(QT/1000)}</b></div>`:""}${kgpQCard(q)}<div class="kgp-fb" id="kg-fb"></div><div id="kg-board"></div></div>`;
   kgpTick(); kgpBoard(); kgpFocus(); }
-function kgpAns(v){ if(KGP.lock||KGP.st!=="play"||!KGP.qs) return;
+/* o'z tempida: bir savolga vaqt (g.qt: -1 = savoldagi vaqt, 0 = cheksiz, n = soniya) — 2026-10-18 */
+function kgpLim(q){ const t=KGP.g&&KGP.g.qt; return t===-1? ((q&&q.tm)||20)*1000 : t>0? t*1000 : 0; }
+function kgpAns(v,late){ if(KGP.lock||KGP.st!=="play"||!KGP.qs) return;
   if(KGP.g.m==="k"){ const c=KGP.ctl; if(!c||c.st!=="q") return; const i=c.i, q=KGP.qs[i]; if(!q||KGP.a[i]) return;
     const T=((q.tm)||KGP.g.tm||20)*1000, ms=Date.now()-KGP.qRecv; if(ms>T+300) return;
     KGP.a[i]=[v,Math.min(ms,T)]; KGP.lock=true; kgpSave(); kgpPub(true); if(navigator.vibrate) try{ navigator.vibrate(30); }catch(e){} kgpRender(); return; }
   const k=KGP.cur, q=KGP.qs[k]; if(!q||KGP.a[k]) return; KGP.lock=true; KGP.a[k]=[v,Date.now()-KGP.t0]; const good=kgJudge(q,v); kgpSave(); kgpPub(false);
-  kgpEl().querySelectorAll("[data-kgo]").forEach(b=>{ const j=+b.dataset.kgo; b.disabled=true; b.classList.add(q.c.includes(j)?"ok":j===+v?"bad":"no"); });
+  kgpEl().querySelectorAll("[data-kgo]").forEach(b=>{ const j=+b.dataset.kgo; b.disabled=true; b.classList.add(q.c.includes(j)?"ok":(v!==""&&j===+v)?"bad":"no"); });
   const inp=document.getElementById("kg-in"); if(inp) inp.disabled=true;
-  const fb=document.getElementById("kg-fb"); if(fb) fb.innerHTML=`<div class="kgp-res ${good?"ok":"bad"}">${good?"✓ "+esc(kz("ok")):"✗ "+esc(kz("no"))}${good?"":`<div><small>${esc(kz("corr"))}</small> <b lang="de">${esc(kgCor(q))}</b></div>`}</div>`;
+  const fb=document.getElementById("kg-fb"); if(fb) fb.innerHTML=`<div class="kgp-res ${good?"ok":"bad"}">${good?"✓ "+esc(kz("ok")):late?"⏰ "+esc(kz("late")):"✗ "+esc(kz("no"))}${good?"":`<div><small>${esc(kz("corr"))}</small> <b lang="de">${esc(kgCor(q))}</b></div>`}</div>`;
   if(navigator.vibrate) try{ navigator.vibrate(good?30:[40,40,40]); }catch(e){}
   setTimeout(()=>{ if(KGP.st==="play") kgpSQ(); }, good?700:1900); }
 /* oxirida barcha savollar: ✓/✗, o'quvchi javobi, xato bo'lsa — to'g'ri javob (2026-10-18) */
@@ -5335,7 +5341,10 @@ function kgpKEnd(){ const c=KGP.ctl||{}, n=KGP.qs.length, rk=Array.isArray(c.rk)
   kgpEl().innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">${pi===0?"🏆":pi===1?"🥈":pi===2?"🥉":"🏁"}</div><h3>${esc(kz("done"))}</h3>
     ${pi>=0?`<p class="ch-big"><b>${esc(kz("score")(rk[pi][1],n))}</b></p><p class="ch-big">🏅 ${esc(kz("place")(pi+1,rk.length))}</p>`:""}</div>${cs?kgpMissHTML(miss):""}</div>`; }
 function kgpTick(){ kgpNet(); if(!KGP.g||!KGP.qs) return; const now=Date.now(), t=document.getElementById("kg-time");
-  if(KGP.g.m==="s"&&KGP.st==="play"){ const c=KGP.ctl, dl=KGP.g.tm&&c&&c.t0&&!KGP.solo?c.t0+KGP.g.tm*60000:0; if(t) t.textContent=dl?ltFmt(dl-now):ltFmt(now-KGP.t0); if(dl&&now>=dl) kgpFinish(); }
+  if(KGP.g.m==="s"&&KGP.st==="play"){ const c=KGP.ctl, dl=KGP.g.tm&&c&&c.t0&&!KGP.solo?c.t0+KGP.g.tm*60000:0; if(t) t.textContent=dl?ltFmt(dl-now):ltFmt(now-KGP.t0); if(dl&&now>=dl) return kgpFinish();
+    const q=KGP.qs[KGP.cur], QT=kgpLim(q); if(QT&&!KGP.lock&&KGP.qS&&q&&!KGP.a[KGP.cur]){ const left=KGP.qS+QT-now, tb=document.getElementById("kg-tb"), tl=document.getElementById("kg-tl");
+      if(tb){ tb.style.width=Math.max(0,left/QT*100)+"%"; tb.parentNode.classList.toggle("hurry",left<5000); } if(tl) tl.textContent=Math.max(0,Math.ceil(left/1000));
+      if(left<=0) kgpAns("",true); } }
   if(KGP.g.m==="k"&&KGP.st==="play"&&KGP.ctl&&KGP.ctl.st==="q"){ const i=KGP.ctl.i, q=KGP.qs[i]; if(!q) return; const left=KGP.qRecv+((q.tm||KGP.g.tm||20)*1000)-now;
     if(t){ t.textContent=Math.max(0,Math.ceil(left/1000)); t.classList.toggle("hurry",left<5000); } if(left<=0&&!KGP.a[i]&&KGP.lateI!==i){ KGP.lateI=i; kgpRender(); } } }
 function kgpClose(){ clearInterval(KGP.tick); if(KGP.mq) KGP.mq.end(); KGP.mq=null; KGP.id=null; kgpEl().hidden=true; document.body.style.overflow="";
@@ -5350,6 +5359,7 @@ document.addEventListener("click",e=>{
   const m=e.target.closest("[data-kgm]"); if(m){ TP.kgM=m.dataset.kgm; kgPanel(); return; }
   const t1=e.target.closest("[data-kgt]"); if(t1){ TP.kgT=+t1.dataset.kgt; kgPanel(); return; }
   const t2=e.target.closest("[data-kgtot]"); if(t2){ TP.kgTot=+t2.dataset.kgtot; kgPanel(); return; }
+  const t3=e.target.closest("[data-kgqt]"); if(t3){ TP.kgQt=+t3.dataset.kgqt; kgPanel(); return; }
   const qo=e.target.closest("[data-kgqs]"); if(qo&&TP.kgR){ TP.kgR.qs=qo.dataset.kgqs; kgRepDraw(); return; }
   const sh=e.target.closest("[data-kgst]"); if(sh&&TP.kgR){ TP.kgR.op=TP.kgR.op===sh.dataset.kgst?null:sh.dataset.kgst; kgRepDraw(); return; }
   const b=e.target.closest("[data-kg]"); if(!b) return; const a=b.dataset.kg, id=b.dataset.k;
