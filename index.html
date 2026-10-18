@@ -895,7 +895,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-bw{border:1.5px solid var(--blue);background:var(--blue-soft);color:var(--blue);border-radius:999px;padding:9px 16px;font:inherit;font-size:18px;font-weight:700;cursor:pointer}
 .ias textarea.ias-input{resize:none;padding:14px 16px!important;line-height:1.3!important;height:auto!important;min-height:56px}
 .ias textarea.ias-input:not(.long){height:56px!important;overflow:hidden;white-space:nowrap}
-.ias textarea.ias-input.long{font-size:24px!important;min-height:112px}
+.ias textarea.ias-input.long{font-size:24px!important;min-height:60px;overflow:hidden}.ias textarea.ias-input.long::placeholder{font-size:18px;white-space:nowrap} /* bir qatordan boshlanadi, yozilgan sari kengayadi (2026-10-18) */
 .ias > .ias-dots{display:none!important} /* pastdagi nuqtachalar kerak emas (Otabek) */
 /* qotirilgan yuqori qism (Otabek, 2026-10-18) */
 .ias .ias-head{position:static!important;margin:0!important;padding:0!important;box-shadow:none!important;background:none!important}
@@ -907,7 +907,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 @media (pointer:coarse){.ias::after{content:"";display:block;flex:none;height:60vh}} /* padding emas, ichki bo'sh joy — aks holda sticky savol ishlamaydi */ /* telefonda doim surish uchun joy bo'lsin */
 .ias-kb .ias-task{display:none!important}.ias-kb .ias-p{font-size:15px}
 .ias-kb .ias-card{font-size:20px;padding:12px 14px;line-height:1.4}
-.ias-kb textarea.ias-input.long{min-height:76px!important}
+.ias-kb textarea.ias-input.long{min-height:60px!important}
 .ias-kb .ias-fix{gap:8px}
 /* yozish shrifti kattaroq (Otabek, 2026-10-18) */
 .ias .ias-input{font-size:26px!important}.ias textarea.ias-input:not(.long){height:60px!important}.ias-go{height:60px}
@@ -3854,7 +3854,7 @@ function iasRender(m){
   document.addEventListener("focusin",e=>{ if(e.target&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName)){ if(window.scrollY) window.scrollTo(0,0); setTimeout(go,50); setTimeout(go,400); } });
   document.addEventListener("focusout",()=>setTimeout(go,350));
 })();
-function iasFixUpd(){ const f=document.getElementById("ias-fix"); if(!f) return; const vv=window.visualViewport, vh=vv?vv.height:innerHeight;
+function iasFixUpd(){ const f=document.getElementById("ias-fix"); if(!f) return; iasGrow(document.querySelector(".ias textarea.ias-input.long")); const vv=window.visualViewport, vh=vv?vv.height:innerHeight;
   const kb=!!(vv && vv.height<window.innerHeight*0.8) || (document.activeElement&&document.activeElement.closest&&document.activeElement.closest(".ias")&&/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)&&matchMedia("(pointer:coarse)").matches&&vh<640);
   f.parentElement.classList.toggle("ias-kb",kb);
   if(kb&&!window.__iasKbWas) iasKbPin(); window.__iasKbWas=kb;
@@ -3865,8 +3865,15 @@ function iasCardTop(force){ const c=document.getElementById("ias-card"), f=docum
   const sc=V.body, y=c.getBoundingClientRect().top-sc.getBoundingClientRect().top+sc.scrollTop-10; if(Math.abs(sc.scrollTop-y)>8) sc.scrollTo({top:Math.max(0,y),behavior:force?"auto":"smooth"}); }
 /* iPhone yozish joyiga fokus bo'lganda sahifani o'zi pastga suradi (savol yashirinadi).
    Klaviatura ochilayotgan ~1,5 soniya davomida savol kartasini qayta-qayta tepaga qaytaramiz; o'quvchi barmog'i bilan sursa — to'xtaymiz. 2026-10-18 */
+/* uzun javob maydoni: matnga qarab balandligi o'sadi */
+function iasGrow(t){ if(!t||!t.classList.contains("long")) return; t.rows=1; if(!t.value){ t.style.setProperty("height","60px","important"); return; } t.style.setProperty("height","auto","important"); const h=Math.max(60,t.scrollHeight+2); t.style.setProperty("height",h+"px","important"); }
+document.addEventListener("input",e=>{ if(e.target&&e.target.matches&&e.target.matches(".ias textarea.ias-input")) iasGrow(e.target); });
+/* klaviatura ochilganda: hammasi ekranga sig'sa — umuman surmaymiz (tepaga qaytaramiz); sig'masagina savolni tepaga olib chiqamiz */
+function iasKbFit(){ const sc=V.body, f=document.getElementById("ias-fix"); if(!sc||!f) return; const t=document.querySelector(".ias textarea.ias-input.long, #ias-in"); if(t) iasGrow(t);
+  const nav=document.querySelector(".ias-nav"), bottom=(nav||f).getBoundingClientRect().bottom-sc.getBoundingClientRect().top+sc.scrollTop;
+  if(bottom+8<=sc.clientHeight){ if(sc.scrollTop) sc.scrollTo({top:0,behavior:"auto"}); } else iasCardTop(1); }
 function iasKbPin(){ const until=Date.now()+1600; IAS.pinUntil=until; setTimeout(iasFixUpd,350);
-  [40,150,300,500,750,1000,1350].forEach(d=>setTimeout(()=>{ if(IAS.pinUntil===until&&Date.now()<until) iasCardTop(1); },d)); }
+  [40,150,300,500,750,1000,1350].forEach(d=>setTimeout(()=>{ if(IAS.pinUntil===until&&Date.now()<until) iasKbFit(); },d)); }
 document.addEventListener("click",e=>{ if(e.target.closest&&e.target.closest("[data-iasx]")){ const b=document.getElementById("v-close"); if(b) b.click(); } });
 document.addEventListener("touchmove",e=>{ if(IAS.pinUntil&&e.target.closest&&e.target.closest("#v-body")) IAS.pinUntil=0; },{passive:true});
 function iasFixInit(){ const f=document.getElementById("ias-fix"); if(!f) return; iasFixUpd();
