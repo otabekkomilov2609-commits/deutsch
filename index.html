@@ -187,7 +187,7 @@ main{padding-block:6px 40px}
 .lrn-inw.artw input{color:transparent;caret-color:var(--ink);border-color:#e3a1a1}.lrn-inw.artw .lrn-ov{display:block}
 .lrn-ov .lrn-artl{display:inline-block;font-weight:inherit;color:#d0021b;background:#fde2e2;border-radius:4px;text-decoration:underline wavy #d0021b;text-underline-offset:4px}
 .lrn-ov .lrn-artl.sh{animation:lrnArtShake .5s ease 2}
-.lrn-keys{display:flex;gap:6px}.lrn-key{width:42px;height:38px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font:inherit;font-size:17px;cursor:pointer}
+.lrn-keys{display:flex;gap:6px}.lrn-keys.uk{position:relative;z-index:5}.uk .uk-p{display:none;position:absolute;left:0;top:calc(100% + 6px);gap:4px;padding:5px;border:1px solid var(--line);border-radius:12px;background:var(--card,var(--bg));box-shadow:0 8px 24px rgba(0,0,0,.18);white-space:nowrap}.uk .uk-p .lrn-key{width:38px}.uk.open .uk-p{display:flex;animation:ukIn .15s ease-out}.uk.open .uk-t{border-color:var(--blue);background:var(--blue-soft)}@keyframes ukIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}.lrn-key{width:42px;height:38px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font:inherit;font-size:17px;cursor:pointer}
 .lrn-row2{display:flex;justify-content:space-between;align-items:center;gap:10px}.lrn-row2 .btn{padding:10px 18px;font-size:15px;cursor:pointer}
 .lrn-fb:empty{display:none}.lrn-fb{position:fixed;left:0;right:0;bottom:0;z-index:5;margin:0 auto;max-width:640px;max-height:55vh;overflow:auto;border-radius:18px 18px 0 0;padding:16px 18px calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px;box-shadow:0 -6px 24px rgba(10,18,35,.18)}
 .lrn.has-fb .lrn-body{padding-bottom:calc(var(--fbh,260px) + 24px)}
@@ -3653,6 +3653,13 @@ function ttsSay(t){ try{
   lrnSayT=setTimeout(()=>{ try{ ss.resume(); const u=new SpeechSynthesisUtterance(", "+t); u.lang="de-DE"; u.rate=.9;
     const v=(ss.getVoices()||[]).find(v=>/^de(-|_|$)/i.test(v.lang)); if(v) u.voice=v; ss.speak(u); }catch(e){} }, busy?250:120);
 }catch(e){} }
+/* Umlaut: bitta «ä» tugmasi; bossa ä ö ü ß Ä Ö Ü ochiladi, harf tanlangach yopiladi (2026-10-19, Otabek) */
+function umKeys(attr){ return `<div class="lrn-keys uk"><button type="button" class="lrn-key uk-t" aria-expanded="false" aria-label="ä ö ü ß">ä</button><span class="uk-p">${["ä","ö","ü","ß","Ä","Ö","Ü"].map(c=>`<button type="button" class="lrn-key" ${attr}="${c}">${c}</button>`).join("")}</span></div>`; }
+document.addEventListener("pointerdown",e=>{ if(e.target.closest(".uk button")) e.preventDefault(); }); /* klaviatura yopilmasin */
+document.addEventListener("click",e=>{ const t=e.target.closest(".uk-t"), k=e.target.closest(".uk-p button");
+  document.querySelectorAll(".uk.open").forEach(u=>{ if(!t||!u.contains(t)){ u.classList.remove("open"); const b=u.querySelector(".uk-t"); if(b) b.setAttribute("aria-expanded","false"); } });
+  if(t){ const u=t.closest(".uk"), o=!u.classList.contains("open"); u.classList.toggle("open",o); t.setAttribute("aria-expanded",String(o)); }
+  void k; });
 function lrnShuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function lrnEl(){ return document.getElementById("lrn"); }
 function lrnOpen(id){
@@ -3779,7 +3786,7 @@ function lrnAsk(){
   } else {
     lrnEl().innerHTML=top+`<div class="lrn-ask">${esc(lt(lernData()[LR.id].kind==="perfekt"?"writeP":"write"))}</div>
       <form class="lrn-wr" id="lrn-wr" autocomplete="off"><div class="lrn-inw" id="lrn-inw"><input id="lrn-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(lt("ph"))}"><div class="lrn-ov" id="lrn-ov" aria-hidden="true"></div></div>
-      <div class="lrn-keys">${["ä","ö","ü","ß"].map(c=>`<button type="button" class="lrn-key" data-ch="${c}">${c}</button>`).join("")}</div>${lrnHint(x)}
+      ${umKeys("data-ch")}${lrnHint(x)}
       <div class="lrn-row2"><button type="button" class="lrn-link" data-l="dunno">${esc(lt("dunno"))}</button><button type="submit" class="btn primary">${esc(lt("check"))}</button></div></form>
       <div class="lrn-fb" id="lrn-fb"></div></div></div>`;
     LR.kind="wr"; setTimeout(()=>{ const i=document.getElementById("lrn-in"); if(i) i.focus(); },30);
@@ -5099,7 +5106,7 @@ function ltpQ(){
     <div class="lrn-card"><div class="ch-q">${esc(x.q)}</div><div class="lrn-ask">${esc(lz("write"))}${LTP.best[k]===.5?` · <span class="lt-half">≈ 0,5</span>`:""}</div>
       ${LTP.hw[k]?`<div class="lt-mask" lang="de">${esc(ltpMask(x.de))}</div>`:""}
       <form class="lrn-wr" id="lt-wr" autocomplete="off"><input id="lt-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(lz("ph"))}">
-      <div class="lrn-keys">${["ä","ö","ü","ß"].map(ch=>`<button type="button" class="lrn-key" data-ltk="${ch}">${ch}</button>`).join("")}
+      ${umKeys("data-ltk")}
         <button type="button" class="lt-help" data-lt="help"${LTP.hl>0&&!LTP.hw[k]?"":" disabled"}>${esc(LTP.hl>0?lz("help")(LTP.hl):lz("helpNo"))}</button></div>
       ${noun?`<div class="lrn-hint">💡 ${esc(lz("art"))}</div>`:""}
       <div class="lt-nav"><button type="button" class="lrn-link" data-lt="back"${LTP.q.length>1?"":" disabled"}>${esc(lz("back"))}</button><button type="button" class="lrn-link lt-dn" data-lt="dunno">${esc(lz("dunno"))}</button><button type="button" class="lrn-link" data-lt="skip"${LTP.q.length>1?"":" disabled"}>${esc(lz("skip"))}</button></div>
@@ -5804,7 +5811,7 @@ function kgpQCard(q){ const one=q.o&&q.o.some(o=>o.length>22||o.split(/\s+/).som
   return `<div class="lrn-card"><div class="ch-q" lang="de">${kgQtx(q.q)}</div>
   ${q.o?`<div class="kgp-opts${one?" one":""}">${q.o.map((o,j)=>`<button type="button" class="kg-o" style="--c:${KG_COL[j][0]}" data-kgo="${j}"><i>${KG_COL[j][1]}</i><span lang="de">${esc(o)}</span></button>`).join("")}</div>`
     :`<form class="lrn-wr" id="kg-wr" autocomplete="off"><div class="lrn-ask">${esc(kz("write"))}</div><input id="kg-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(kz("ph"))}">
-      <div class="lrn-keys">${["ä","ö","ü","ß"].map(ch=>`<button type="button" class="lrn-key" data-kgk="${ch}">${ch}</button>`).join("")}</div>
+      ${umKeys("data-kgk")}
       <div class="lt-nav"><button type="button" class="lrn-link lt-dn" data-kgp="dunno">${esc(kz("dunno"))}</button></div>
       <button type="submit" class="btn primary lt-chk">${esc(kz("send"))}</button></form>`}</div>`; }
 function kgpFocus(){ setTimeout(()=>{ const i=document.getElementById("kg-in"); if(i) i.focus(); },30); }
