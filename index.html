@@ -3838,8 +3838,21 @@ function iasRender(m){
 }
 /* Yuqori qism (chiziq, topshiriq, savol, yozish joyi) qotib turadi; «Leider falsch» va izoh uning tagidan suzadi.
    Klaviatura ochilganda (ekran kichrayadi) yuqori qism ixchamlashadi; baribir sig'masa — qotirilmaydi (oddiy aylantirish). 2026-10-18 */
+/* iPhone: klaviatura ochilganda Safari butun oynani tepaga suradi va savol ko'rinmay qoladi.
+   Ochiq oynani (mashq, Yodlash, o'yin) ekranning ko'rinib turgan qismiga "mixlaymiz": tepasi = visualViewport.offsetTop, balandligi = visualViewport.height. 2026-10-18 */
+(function(){ const vv=window.visualViewport; if(!vv) return; let raf=0;
+  const fit=()=>{ raf=0; const open=[...document.querySelectorAll(".viewer:not([hidden]),.lrn:not([hidden])")].pop();
+    document.querySelectorAll("[data-vvfit]").forEach(x=>{ if(x!==open){ x.style.top=x.style.height=x.style.bottom=""; delete x.dataset.vvfit; } });
+    if(!open) return; const kb=vv.offsetTop>1||vv.height<innerHeight-60;
+    if(kb){ open.dataset.vvfit="1"; open.style.top=Math.round(vv.offsetTop)+"px"; open.style.bottom="auto"; open.style.height=Math.round(vv.height)+"px"; }
+    else if(open.dataset.vvfit){ open.style.top=open.style.height=open.style.bottom=""; delete open.dataset.vvfit; } };
+  const go=()=>{ if(!raf) raf=requestAnimationFrame(fit); };
+  vv.addEventListener("resize",go); vv.addEventListener("scroll",go);
+  document.addEventListener("focusin",e=>{ if(e.target&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName)){ if(window.scrollY) window.scrollTo(0,0); setTimeout(go,50); setTimeout(go,400); } });
+  document.addEventListener("focusout",()=>setTimeout(go,350));
+})();
 function iasFixUpd(){ const f=document.getElementById("ias-fix"); if(!f) return; const vv=window.visualViewport, vh=vv?vv.height:innerHeight;
-  const kb=!!(vv && vv.height<window.innerHeight*0.8) || (document.activeElement&&document.activeElement.id==="ias-in"&&matchMedia("(pointer:coarse)").matches&&vh<640);
+  const kb=!!(vv && vv.height<window.innerHeight*0.8) || (document.activeElement&&document.activeElement.closest&&document.activeElement.closest(".ias")&&/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)&&matchMedia("(pointer:coarse)").matches&&vh<640);
   f.parentElement.classList.toggle("ias-kb",kb);
   if(kb&&!window.__iasKbWas) setTimeout(iasCardTop,120); window.__iasKbWas=kb;
   /* klaviatura ochiq bo'lsa qotirmaymiz — barmoq bilan surib savolni ko'rish mumkin bo'lsin */
@@ -3849,7 +3862,7 @@ function iasCardTop(){ const c=document.getElementById("ias-card"), f=document.g
   const sc=V.body, y=c.getBoundingClientRect().top-sc.getBoundingClientRect().top+sc.scrollTop-10; if(Math.abs(sc.scrollTop-y)>8) sc.scrollTo({top:Math.max(0,y),behavior:"smooth"}); }
 function iasFixInit(){ const f=document.getElementById("ias-fix"); if(!f) return; iasFixUpd();
   if(!window.__iasFixRO){ window.__iasFixRO=new ResizeObserver(()=>requestAnimationFrame(iasFixUpd)); if(window.visualViewport) visualViewport.addEventListener("resize",()=>requestAnimationFrame(iasFixUpd)); addEventListener("resize",iasFixUpd);
-    document.addEventListener("focusin",e=>{ if(e.target&&e.target.id==="ias-in"){ setTimeout(iasFixUpd,350); setTimeout(iasCardTop,450); } }); document.addEventListener("focusout",e=>{ if(e.target&&e.target.id==="ias-in") setTimeout(iasFixUpd,350); }); }
+    document.addEventListener("focusin",e=>{ if(e.target&&e.target.closest&&e.target.closest(".ias")&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName)){ setTimeout(iasFixUpd,350); setTimeout(iasCardTop,450); setTimeout(iasCardTop,900); } }); document.addEventListener("focusout",e=>{ if(e.target&&e.target.closest&&e.target.closest(".ias")) setTimeout(iasFixUpd,350); }); }
   window.__iasFixRO.disconnect(); window.__iasFixRO.observe(f); }
 /* «Prüfen» bosilganda klaviatura yopilmasin — fokus yozish joyida qoladi */
 document.addEventListener("mousedown",e=>{ if(e.target.closest&&e.target.closest("#ias-pr")&&V.body.querySelector(".ias-inl.ias-foc")) e.preventDefault(); });
