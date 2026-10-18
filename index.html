@@ -368,6 +368,23 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .kgp-res{padding:14px 16px;border-radius:14px;font-size:22px;font-weight:800;text-align:center}.kgp-res div{font-size:18px;font-weight:600;margin-top:4px}
 .kgp-res.ok{background:var(--green-soft);color:var(--green)}.kgp-res.bad{background:rgba(226,27,60,.12);color:#C62828}
 .kgp-fb:empty{display:none}
+.kg-toast{position:fixed;left:50%;top:84px;z-index:90;transform:translate(-50%,-30px) scale(.8);opacity:0;pointer-events:none;padding:16px 30px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:clamp(20px,2.4vw,32px);font-weight:800;box-shadow:0 10px 40px rgba(0,0,0,.3);transition:all .45s cubic-bezier(.2,1.4,.4,1);white-space:nowrap;max-width:94vw;overflow:hidden;text-overflow:ellipsis}
+.kg-toast.show{opacity:1;transform:translate(-50%,0) scale(1)}.kg-toast.gold{background:linear-gradient(90deg,#F2B632,#FF8A00);color:#1a1200}.kg-toast.fire{background:linear-gradient(90deg,#FF5E3A,#E21B3C);color:#fff}
+.kg-dn{font-style:normal;font-size:12px;color:#C62828;margin-left:2px}.kg-stk{font-style:normal;font-size:.75em;margin-left:8px;color:#E8590C}
+.kg-sndb{font-size:20px;text-decoration:none!important;margin-right:6px}
+.kg-pod .pd{opacity:0;transform:translateY(50px) scale(.9);animation:kgrise .9s cubic-bezier(.2,1.3,.4,1) forwards}.kg-pod .pd3{animation-delay:.4s}.kg-pod .pd2{animation-delay:1.6s}.kg-pod .pd1{animation-delay:3s}
+@keyframes kgrise{to{opacity:1;transform:none}}
+.kg-end .tp-rows,.kg-end .kg-ctl{opacity:0;animation:kgfade .6s 3.8s forwards}@keyframes kgfade{to{opacity:1}}
+.kg-end.shown .kg-pod .pd,.kg-end.shown .tp-rows,.kg-end.shown .kg-ctl{animation:none;opacity:1;transform:none}
+.kgp-toast{position:fixed;left:50%;top:70px;z-index:95;width:min(92vw,420px);box-sizing:border-box;transform:translate(-50%,-20px) scale(.9);opacity:0;pointer-events:none;padding:14px 18px;border-radius:16px;text-align:center;background:var(--ink);color:var(--bg);box-shadow:0 12px 40px rgba(0,0,0,.3);transition:all .4s cubic-bezier(.2,1.4,.4,1)}
+.kgp-toast.show{opacity:1;transform:translate(-50%,0) scale(1)}.kgp-toast b{display:block;font-size:20px}.kgp-toast small{display:block;margin-top:4px;font-size:15px;opacity:.92}
+.kgp-toast.up{background:linear-gradient(135deg,#1F7A0A,#2FB344);color:#fff}.kgp-toast.down{background:linear-gradient(135deg,#B3261E,#E21B3C);color:#fff}.kgp-toast.fire{background:linear-gradient(135deg,#FF8A00,#E8590C);color:#fff}
+#kgp.fx-ok::after,#kgp.fx-bad::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:3;animation:kgflash .8s forwards}
+#kgp.fx-ok::after{background:radial-gradient(circle,rgba(38,137,12,.4),rgba(38,137,12,0) 72%)}#kgp.fx-bad::after{background:radial-gradient(circle,rgba(226,27,60,.4),rgba(226,27,60,0) 72%)}
+@keyframes kgflash{from{opacity:1}to{opacity:0}}
+.kgp-rev .kgp-big{animation:kgpop2 .6s cubic-bezier(.2,1.6,.4,1)}@keyframes kgpop2{from{transform:scale(.2) rotate(-20deg);opacity:0}}
+.kgp-mv{font-weight:800;font-size:18px;margin:0}.kgp-mv.up{color:var(--green)}.kgp-mv.down{color:#C62828}.kgp-stk{font-weight:800;color:#E8590C;margin:0}
+.kgp-snd{border:0;background:none;font-size:20px;cursor:pointer;padding:4px 8px;margin-left:auto}
 .kgp-tb{position:relative;height:28px;border-radius:99px;background:var(--line);overflow:hidden}.kgp-tb i{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--blue);transition:width .25s linear}.kgp-tb b{position:absolute;right:12px;top:0;line-height:28px;font-size:16px;color:var(--ink)}.kgp-tb.hurry i{background:#E21B3C}
 .ch-time.hurry{color:#E21B3C}
 /* hisobot */
@@ -5114,12 +5131,12 @@ function kgBEnd(){ const K=TP.k; if(!K) return; clearInterval(TP.kT); clearTimeo
 let kgSvT=0; function kgSaveSoon(){ clearTimeout(kgSvT); kgSvT=setTimeout(()=>{ if(TP.k) kgRepPut(TP.k); },1500); }
 function kgNet(){ const e=document.getElementById("kg-net"), K=TP.k; if(e&&K) e.textContent=K.mq&&K.mq.ok()?"🟢 Ulandi":"⏳ Ulanmoqda…"; }
 function kgCtl(c){ const K=TP.k; if(!K) return; K.ctl=Object.assign({t:Date.now()},c); K.mq.pub(KG_NS+K.id+"/ctl",JSON.stringify(K.ctl),true); kgRepPut(K); kgBoard(); }
-function kgHead(K){ return `<div class="lrn-bar"><button class="btn" data-kg="bback" aria-label="←">←</button><div class="lrn-tt"><b>🎮 ${esc(K.g.nm)}</b><small>${K.g.m==="k"?"⚡ Savolma-savol":"🏃 O‘z tempida"} · ${K.qs.length} savol</small></div><button type="button" class="lrn-link" data-kg="rboard">📊 Hisobot</button></div>`; }
+function kgHead(K){ return `<div class="lrn-bar"><button class="btn" data-kg="bback" aria-label="←">←</button><div class="lrn-tt"><b>🎮 ${esc(K.g.nm)}</b><small>${K.g.m==="k"?"⚡ Savolma-savol":"🏃 O‘z tempida"} · ${K.qs.length} savol</small></div><button type="button" class="lrn-link kg-sndb" data-kg="snd" title="Ovoz">${kgSndOn(true)?"🔊":"🔇"}</button><button type="button" class="lrn-link" data-kg="rboard">📊 Hisobot</button></div>`; }
 function kgBoard(){ const K=TP.k; if(!K||TP.kgR) return; const el=tpEl(), st=K.ctl.st;
   const body= st==="lobby"? kgLobbyHTML(K) : (K.g.m==="k"&&(st==="q"||st==="rev"))? kgQHTML(K) : (K.g.m==="s"&&st==="run")? kgRunHTML(K) : kgEndHTML(K);
-  el.innerHTML=kgHead(K)+`<div class="kg-wrap kg-${st}">${body}</div>`; el.scrollTop=0;
+  el.innerHTML=kgHead(K)+`<div class="kg-wrap kg-${st}${st==="end"&&K.conf?" shown":""}">${body}</div><div class="kg-toast" id="kg-toast"></div>`; el.scrollTop=0;
   if(st==="lobby") ltQr(kgLink(K.id),"kg-qr");
-  if(st==="end"&&!K.conf){ K.conf=1; setTimeout(ltConfetti,300); }
+  if(st==="end"&&!K.conf){ K.conf=1; kgEndShow(K); }
   kgBoardUpd(); kgTick(); kgNet(); }
 function kgLobbyHTML(K){ const url=kgLink(K.id);
   return `<div class="kg-lobby"><div class="kg-box"><button type="button" class="tp-qr" id="kg-qr" data-tp="qrbig" title="Kattalashtirish"></button><div class="tp-url">🔍 QR-kodni bosing — kattalashadi</div>
@@ -5140,26 +5157,26 @@ function kgRunHTML(K){ return `<div class="kg-qhead"><span class="kg-qn">🏃 O�
     <div class="kg-ctl"><button type="button" class="btn" data-tp="qrbig">📱 QR-kod</button><button type="button" class="btn tp-stop" data-kg="fin">⏹ Tugatish</button></div>
     <ol class="tp-rows" id="kg-rows"></ol>`; }
 function kgEndHTML(K){ const L=kgRank(K), medal=["🥇","🥈","🥉"], P=[L[1],L[0],L[2]];
-  return `${L[0]?`<div class="tp-podium">${P.map((p,i)=>p?`<div class="pd pd${[2,1,3][i]}"><div class="pn">${esc(p.n)}</div><div class="ps">${p.ok} to‘g‘ri · ${kgTie(K,p)}</div><div class="pb">${medal[[1,0,2][i]]}</div></div>`:`<div class="pd pd${[2,1,3][i]} empty"></div>`).join("")}</div>`:""}
+  return `${L[0]?`<div class="tp-podium kg-pod">${P.map((p,i)=>p?`<div class="pd pd${[2,1,3][i]}"><div class="pn">${esc(p.n)}</div><div class="ps">${p.ok} to‘g‘ri · ${kgTie(K,p)}</div><div class="pb">${medal[[1,0,2][i]]}</div></div>`:`<div class="pd pd${[2,1,3][i]} empty"></div>`).join("")}</div>`:""}
     <div class="kg-ctl"><button type="button" class="btn primary" data-kg="rboard">📊 Hisobot — kim qayerda xato qildi</button><button type="button" class="btn" data-kg="csv">⬇ Excel</button></div>
     <ol class="tp-rows" id="kg-rows"></ol>`; }
-function kgRowsHTML(K,lim){ const L=kgRank(K), n=K.qs.length, medal=["🥇","🥈","🥉"], s=K.g.m==="s";
+function kgRowsHTML(K,lim,mv,stk){ mv=mv||{}; stk=stk||{}; const L=kgRank(K), n=K.qs.length, medal=["🥇","🥈","🥉"], s=K.g.m==="s";
   if(!L.length) return `<li class="tp-empty">Hali hech kim yo‘q.</li>`;
   return L.slice(0,lim).map((p,k)=>{ const ld=p.ok>0&&k<3, pr=n?Math.min(100,p.cnt/n*100):0;
-    return `<li class="${p.st==="done"?"fin ":""}${ld?"top"+(k+1):""}"><span class="tp-pos">${ld?medal[k]:k+1}</span><span class="tp-nm"><b>${ld&&k===0?"👑 ":""}${esc(p.n)}</b>${s?`<span class="tp-track"><i style="width:${pr}%"></i><em style="left:${pr}%">${p.st==="done"?"🏁":"🏃"}</em></span>`:""}</span>
+    return `<li data-id="${esc(p.id)}" class="${p.st==="done"?"fin ":""}${ld?"top"+(k+1):""}${mv[p.id]>0?" gain":""}"><span class="tp-pos">${ld?medal[k]:k+1}${mv[p.id]>0?`<i class="tp-up">▲${mv[p.id]}</i>`:mv[p.id]<0?`<i class="kg-dn">▼${-mv[p.id]}</i>`:""}</span><span class="tp-nm"><b>${ld&&k===0?"👑 ":""}${esc(p.n)}${stk[p.id]>=2?`<i class="kg-stk">🔥${stk[p.id]}</i>`:""}</b>${s?`<span class="tp-track"><i style="width:${pr}%"></i><em style="left:${pr}%">${p.st==="done"?"🏁":"🏃"}</em></span>`:""}</span>
       <span class="tp-ok">${p.ok}<small>/${n}</small></span><span class="tp-tm">${kgTie(K,p)}${s&&p.st==="play"?' <i class="tp-live">●</i>':""}</span></li>`; }).join(""); }
 function kgBoardUpd(){ const K=TP.k; if(!K||TP.kgR) return; const st=K.ctl.st, P=Object.entries(K.players).filter(([i,p])=>p&&p.n);
   const c=document.getElementById("kg-cnt"); if(c) c.textContent=P.length;
   const nm=document.getElementById("kg-names"); if(nm){ const have=new Set([...nm.querySelectorAll("[data-id]")].map(x=>x.dataset.id));
     if(!P.length) nm.innerHTML=`<em class="ch-net">QR-kodni skanerlang yoki havolani guruhga tashlang.</em>`;
-    else { const em=nm.querySelector("em"); if(em) em.remove(); P.forEach(([id,p])=>{ if(!have.has(id)){ const s=document.createElement("span"); s.dataset.id=id; s.textContent=p.n; nm.appendChild(s); } });
-      nm.querySelectorAll("[data-id]").forEach(x=>{ if(!K.players[x.dataset.id]) x.remove(); }); } }
+    else { const em=nm.querySelector("em"); if(em) em.remove(); P.forEach(([id,p])=>{ if(!have.has(id)){ const s=document.createElement("span"); s.dataset.id=id; s.textContent=p.n; nm.appendChild(s); if(K.seenInit) kgSnd("join",1); } });
+      nm.querySelectorAll("[data-id]").forEach(x=>{ if(!K.players[x.dataset.id]) x.remove(); }); } K.seenInit=1; }
   const an=document.getElementById("kg-ans"); if(an&&st==="q"){ const i=K.ctl.i, n=P.filter(([id,p])=>p.a&&p.a[i]).length; an.textContent=`${n} / ${P.length} javob`; }
   const c2=document.getElementById("kg-cnt2"); if(c2) c2.textContent=`${P.length} o‘quvchi · ${P.filter(([i,p])=>p.st==="done").length} tugatdi`;
-  const rows=document.getElementById("kg-rows"); if(rows) rows.innerHTML=kgRowsHTML(K, st==="rev"?5:200); }
+  const rows=document.getElementById("kg-rows"); if(rows){ if(st==="rev"){ if(K.flipI!==K.ctl.i||!rows.children.length){ K.flipI=K.ctl.i; kgRevRows(K,rows); } } else { if(st==="run") kgRunFx(K); rows.innerHTML=kgRowsHTML(K,200,st==="run"?kgMvMap(K):null); } } }
 function kgTick(){ const K=TP.k; if(!K) return; const st=K.ctl.st, now=Date.now();
   if(K.g.m==="k"&&st==="q"){ const q=K.qs[K.ctl.i], left=K.ctl.t+kgQT(K,q)-now, c=document.getElementById("kg-clock");
-    if(c&&!TP.kgR){ c.textContent=Math.max(0,Math.ceil(left/1000)); c.classList.toggle("hurry",left<5000); }
+    if(c&&!TP.kgR){ c.textContent=Math.max(0,Math.ceil(left/1000)); c.classList.toggle("hurry",left<5000); } const sec=Math.ceil(left/1000); if(sec>0&&sec<=5&&K.tickS!==K.ctl.i+":"+sec){ K.tickS=K.ctl.i+":"+sec; kgSnd("tick",1); }
     const P=Object.values(K.players).filter(p=>p&&p.n), all=P.length>0&&P.every(p=>p.a&&p.a[K.ctl.i]);
     if(left<-700) kgReveal(); else if(all&&!K.allT){ K.allT=setTimeout(()=>{ K.allT=0; if(TP.k===K&&K.ctl.st==="q") kgReveal(); },800); } }
   if(K.g.m==="s"&&st==="run"){ const c=document.getElementById("kg-clock"), dl=K.g.tm?K.ctl.t0+K.g.tm*60000:0;
@@ -5167,11 +5184,72 @@ function kgTick(){ const K=TP.k; if(!K) return; const st=K.ctl.st, now=Date.now(
     const P=Object.values(K.players).filter(p=>p&&p.n);
     if(P.length&&P.every(p=>p.st==="done")){ if(!K.allD) K.allD=now; else if(now-K.allD>2500){ K.allD=0; kgCtl({st:"end",t0:K.ctl.t0}); return; } } else K.allD=0;
     if(dl&&now>=dl+1500) kgCtl({st:"end",t0:K.ctl.t0}); } }
-function kgRk(K){ return kgRank(K).map(p=>[p.id,p.ok,p.tie]); }
+/* ===== 🎉 Effektlar: ovozlar, nemischa ovozli e'lon (doska), o'rin o'zgarishi, ketma-ket to'g'ri javoblar, shohsupa — 2026-10-18 ===== */
+const KGS={ctx:null};
+function kgSndOn(board){ try{ const v=localStorage.getItem(board?"tch:kgsnd":"kgpsnd"); return v==null? true : v==="1"; }catch(e){ return true; } }
+function kgUnlock(){ try{ const C=KGS.ctx||(KGS.ctx=new (window.AudioContext||window.webkitAudioContext)()); if(C.state==="suspended") C.resume(); }catch(e){} }
+function kgSnd(type,board){ if(!kgSndOn(board)) return; try{ kgUnlock(); const C=KGS.ctx; if(!C) return; const t0=C.currentTime+.02;
+  const tone=(f,d,st,tp,v)=>{ const o=C.createOscillator(), g=C.createGain(); o.type=tp||"sine"; o.frequency.setValueAtTime(f,t0+st); g.gain.setValueAtTime(.0001,t0+st); g.gain.exponentialRampToValueAtTime(v||.18,t0+st+.012); g.gain.exponentialRampToValueAtTime(.0001,t0+st+d); o.connect(g); g.connect(C.destination); o.start(t0+st); o.stop(t0+st+d+.05); };
+  const S={ ok:()=>{ tone(660,.12,0,"triangle"); tone(880,.12,.09,"triangle"); tone(1320,.3,.18,"triangle"); },
+    bad:()=>{ tone(196,.25,0,"sawtooth",.09); tone(147,.35,.18,"sawtooth",.09); },
+    tick:()=>tone(1250,.05,0,"square",.05),
+    join:()=>{ tone(784,.08,0,"triangle",.12); tone(1175,.14,.07,"triangle",.12); },
+    up:()=>[523,659,784,1047].forEach((f,i)=>tone(f,.15,i*.07,"triangle",.16)),
+    down:()=>[440,349,262].forEach((f,i)=>tone(f,.22,i*.13,"triangle",.12)),
+    gong:()=>{ tone(196,1.4,0,"sine",.25); tone(392,1,0,"sine",.08); },
+    lead:()=>[784,988,1175,1568].forEach((f,i)=>tone(f,.2,i*.09,"square",.06)),
+    streak:()=>[880,1175,1568].forEach((f,i)=>tone(f,.11,i*.06,"triangle",.14)),
+    drum:()=>{ for(let i=0;i<22;i++) tone(110+(i%2)*9,.06,i*.06,"square",.03+i*.004); },
+    fan:()=>[[523,0],[659,.15],[784,.3],[1047,.45],[784,.7],[1047,.85]].forEach(([f,s])=>tone(f,s>=.85?.8:.16,s,"triangle",.2)) };
+  (S[type]||(()=>{}))(); }catch(e){} }
+function kgSay(txt){ if(!kgSndOn(true)||!window.speechSynthesis) return; try{ const u=new SpeechSynthesisUtterance(txt); u.lang="de-DE"; const v=speechSynthesis.getVoices().find(x=>/^de/i.test(x.lang)); if(v) u.voice=v; speechSynthesis.speak(u); }catch(e){} }
+function kgToast(html,cls){ const t=document.getElementById("kg-toast"); if(!t) return; t.className="kg-toast "+(cls||""); t.innerHTML=html; void t.offsetWidth; t.classList.add("show"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),3400); }
+/* i-savolgacha ketma-ket to'g'ri javoblar (savolma-savol) */
+function kgStreak(K,id,i){ let s=0; for(let j=i;j>=0;j--){ const f=K.fz[j]; if(!f) break; const a=f[id]; if(a&&kgJudge(K.qs[j],a[0])) s++; else break; } return s; }
+/* javob ochilganda: reyting qatorlari eski o'rnidan yangi o'rniga suriladi (FLIP) */
+function kgRevRows(K,rows){ const i=K.ctl.i, prev=K.prevOrd||[], L=kgRank(K), mv={}, stk={};
+  L.forEach((p,k)=>{ const j=prev.indexOf(p.id); if(j>=0&&j!==k) mv[p.id]=j-k; stk[p.id]=kgStreak(K,p.id,i); });
+  rows.innerHTML=kgRowsHTML(K,5,mv,stk); if(K.flipA===i) return; K.flipA=i;
+  const lis=[...rows.children].filter(li=>li.dataset.id); if(!lis.length) return; const h=lis[0].offsetHeight+8;
+  lis.forEach((li,k)=>{ const j=prev.indexOf(li.dataset.id), from=j<0?5:Math.min(j,5); if(from===k) return; li.style.transition="none"; li.style.transform=`translateY(${(from-k)*h}px)`; if(from>=5) li.style.opacity="0"; });
+  setTimeout(()=>{ lis.forEach(li=>{ li.style.transition="transform .9s cubic-bezier(.2,.8,.2,1), opacity .6s"; li.style.transform=""; li.style.opacity=""; }); },900); }
+function kgRevFx(K,i){ kgSnd("gong",1); const L=kgRank(K), lead=L[0]&&L[0].ok>0?L[0]:null, isNew=!!lead&&K.prevLead!==lead.id; if(lead) K.prevLead=lead.id;
+  setTimeout(()=>{ if(TP.k!==K||K.ctl.i!==i) return;
+    if(isNew){ kgToast(`👑 Yangi lider: <b>${esc(lead.n)}</b>!`,"gold"); kgSnd("lead",1); kgSay(`Neuer Spitzenreiter: ${lead.n}!`); }
+    else { const s=L.map(p=>[p,kgStreak(K,p.id,i)]).filter(x=>x[1]>=3).sort((a,b)=>b[1]-a[1])[0]; if(s){ kgToast(`🔥 <b>${esc(s[0].n)}</b> — ${s[1]} ta ketma-ket!`,"fire"); kgSnd("streak",1); } }
+  },1300); }
+/* o'z tempida (doska): yangi lider, kim ko'tarildi, kim marraga yetdi */
+function kgRunFx(K){ const L=kgRank(K), ord=L.map(p=>p.id), now=Date.now(), prev=K.sOrd; K.mvT=K.mvT||{};
+  if(prev){ ord.forEach((id,k)=>{ const j=prev.indexOf(id); if(j>k) K.mvT[id]={d:j-k,t:now}; });
+    const lead=L[0]; if(lead&&lead.ok>0&&K.sLead!==lead.id&&now-(K.sLT||0)>2500){ K.sLT=now; kgToast(`👑 Yangi lider: <b>${esc(lead.n)}</b>!`,"gold"); kgSnd("lead",1); kgSay(`Neuer Spitzenreiter: ${lead.n}!`); }
+    L.forEach(p=>{ if(p.st==="done"&&K.sDone&&!K.sDone.has(p.id)){ kgSnd("join",1); if(!(lead&&K.sLead!==lead.id)) kgToast(`🏁 <b>${esc(p.n)}</b> marraga yetdi!`,""); } }); }
+  if(L[0]&&L[0].ok>0) K.sLead=L[0].id; K.sDone=new Set(L.filter(p=>p.st==="done").map(p=>p.id)); K.sOrd=ord; }
+function kgMvMap(K){ const m={}, now=Date.now(); Object.entries(K.mvT||{}).forEach(([id,x])=>{ if(now-x.t<3500) m[id]=x.d; }); return m; }
+function kgEndShow(K){ const L=kgRank(K); if(!L[0]||!(L[0].ok>0)){ setTimeout(ltConfetti,300); return; }
+  if(L[2]) setTimeout(()=>kgSay(`Platz drei: ${L[2].n}!`),500);
+  if(L[1]) setTimeout(()=>kgSay(`Platz zwei: ${L[1].n}!`),1700);
+  setTimeout(()=>kgSnd("drum",1),1700);
+  setTimeout(()=>{ kgSnd("fan",1); kgSay(`Und Platz eins: ${L[0].n}! Herzlichen Glückwunsch!`); ltConfetti(); },3100); }
+/* telefon */
+function kgpToast(t,s,cls){ let e=document.getElementById("kgp-toast"); if(!e){ e=document.createElement("div"); e.id="kgp-toast"; document.body.appendChild(e); }
+  e.className="kgp-toast "+(cls||""); e.innerHTML=`<b>${esc(t)}</b>${s?`<small>${esc(s)}</small>`:""}`; void e.offsetWidth; e.classList.add("show"); clearTimeout(e._h); e._h=setTimeout(()=>e.classList.remove("show"),3000); }
+function kgpFx(good){ const e=kgpEl(); e.classList.remove("fx-ok","fx-bad"); void e.offsetWidth; e.classList.add(good?"fx-ok":"fx-bad"); }
+function kgpRevCalc(rk,pi,good){ const prev=KGP.prevRk||[], ppi=prev.findIndex(r=>r&&r[0]===KGP.me), me=rk[pi]||[], F={fresh:1,good}; KGP.prevRk=rk;
+  if(pi>=0&&ppi>=0&&pi<ppi){ const passed=prev.slice(pi,ppi).filter(r=>r&&r[0]!==KGP.me).map(r=>r[3]).filter(Boolean); F.cls="up"; F.mv=pi===0?kz("lead"):kz("up")(pi+1,ppi-pi); F.sub=passed.length?kz("passed")(passed.slice(0,2).join(", ")):""; F.conf=pi===0; }
+  else if(pi>=0&&ppi>=0&&pi>ppi){ const by=rk.slice(0,pi).filter(r=>{ const j=prev.findIndex(x=>x&&x[0]===r[0]); return j<0||j>ppi; }).map(r=>r[3]).filter(Boolean); F.cls="down"; F.mv=kz("down")(by[0],pi+1); }
+  else if(pi===0&&ppi<0&&me[1]>0){ F.cls="up"; F.mv=kz("lead"); F.conf=1; }
+  if(good&&me[4]>=2) F.stk=kz("streak")(me[4]);
+  return F; }
+function kgpSFx(L,mi){ if(KGP.st!=="play"){ KGP.sOrd=L.map(p=>p.id); return; } const ord=L.map(p=>p.id), pm=KGP.sOrd?KGP.sOrd.indexOf(KGP.me):-1, nm=id=>(L.find(p=>p.id===id)||{}).n;
+  if(KGP.sOrd&&pm>=0&&mi>=0&&mi!==pm){
+    if(mi<pm){ const passed=KGP.sOrd.slice(mi,pm).filter(id=>id!==KGP.me).map(nm).filter(Boolean); kgpToast(mi===0?kz("lead"):kz("up")(mi+1,pm-mi),passed.length?kz("passed")(passed.slice(0,2).join(", ")):"","up"); kgSnd("up",0); if(mi===0) ltConfetti(); }
+    else { const by=ord.slice(0,mi).filter(id=>{ const j=KGP.sOrd.indexOf(id); return j<0||j>pm; }).map(nm).filter(Boolean); kgpToast(kz("down")(by[0],mi+1),"","down"); kgSnd("down",0); } }
+  KGP.sOrd=ord; }
+function kgRk(K,i){ return kgRank(K).map(p=>[p.id,p.ok,p.tie,p.n,i!=null?kgStreak(K,p.id,i):0]); }
 function kgReveal(){ const K=TP.k; if(!K||K.ctl.st!=="q") return; const i=K.ctl.i, q=K.qs[i], T=kgQT(K,q), F={};
   Object.entries(K.players).forEach(([id,p])=>{ const x=p&&p.a&&p.a[i]; if(Array.isArray(x)) F[id]=[typeof x[0]==="number"?x[0]:String(x[0]==null?"":x[0]).slice(0,80), Math.min(T,Math.max(0,+x[1]||0))]; });
-  K.fz[i]=F; clearTimeout(K.allT); K.allT=0;
-  kgCtl({st:"rev",i,c:q.o?q.c:q.a,rk:kgRk(K)}); }
+  K.prevOrd=kgRank(K).map(p=>p.id); K.fz[i]=F; clearTimeout(K.allT); K.allT=0;
+  kgCtl({st:"rev",i,c:q.o?q.c:q.a,rk:kgRk(K,i)}); kgRevFx(K,i); }
 function kgNext(){ const K=TP.k; if(!K) return; const i=K.ctl.st==="lobby"?0:(K.ctl.i|0)+1; if(i>=K.qs.length) return kgFinish(); kgCtl({st:"q",i}); }
 function kgFinish(){ const K=TP.k; if(!K) return; if(K.g.m==="k"&&K.ctl.st==="q") kgReveal();
   kgCtl(K.g.m==="k"? {st:"end",rk:kgRk(K),cs:K.qs.map(q=>q.o?q.c:q.a)} : {st:"end",t0:K.ctl.t0}); }
@@ -5223,16 +5301,16 @@ const KGUZ={uz:{t:"🎮 Sinf o‘yini",nm:"Ismingiz",nmPh:"Ism va familiya",join
     got:"Javob qabul qilindi!",gotS:"Boshqalarni kuting…",late:"Vaqt tugadi",ok:"To‘g‘ri!",no:"Xato",noAns:"Javob berilmadi",corr:"To‘g‘ri javob:",place:(a,b)=>`${a}-o‘rin (${b} kishidan)`,score:(o,n)=>`✓ ${o} / ${n} to‘g‘ri`,
     write:"Nemischa yozing",ph:"Nemischa…",send:"Yuborish",dunno:"Bilmayman",next:"Keyingi savolni kuting…",done:"O‘yin tugadi!",review:"Javoblaringiz",allOk:"Hammasi to‘g‘ri! 🎉",board:"Natijalar",you:"siz",q:(i,n)=>`${i} / ${n}`,
     rulesK:t=>`Savollar doskada chiqadi · har biriga ${t} soniya`,rulesS:(n,m,q)=>`${n} ta savol · o‘z tezligingizda${q?` · har savolga ${q}`:""}${m?` · jami ${m} daqiqa`:""}`,rules2:"O‘rin: ko‘p to‘g‘ri javob; teng bo‘lsa — kam vaqt sarflagan",
-    net0:"⏳ Ulanmoqda…",net1:"🟢 Ulandi",netBad:"🔴 Ulanib bo‘lmadi",ended:"Bu o‘yin tugagan."},
+    net0:"⏳ Ulanmoqda…",net1:"🟢 Ulandi",netBad:"🔴 Ulanib bo‘lmadi",ended:"Bu o‘yin tugagan.",lead:"👑 Siz 1-o‘rindasiz!",up:(p,d)=>`🚀 ${p}-o‘ringa ko‘tarildingiz! ▲${d}`,passed:n=>`⚡ ${n} ortda qoldi`,down:(n,p)=>`😬 ${n?n+" sizni o‘zib ketdi":"O‘rningiz tushdi"} — ${p}-o‘rin`,streak:n=>`🔥 ${n} ta ketma-ket to‘g‘ri!`,snd:"Ovoz"},
   ru:{t:"🎮 Игра класса",nm:"Ваше имя",nmPh:"Имя и фамилия",join:"Присоединиться",errNm:"Напишите имя",wait:"Ждите, пока учитель начнёт игру…",load:"Загрузка вопросов…",bad:"Ссылка неверная или игра не найдена.",
     got:"Ответ принят!",gotS:"Ждите остальных…",late:"Время вышло",ok:"Верно!",no:"Неверно",noAns:"Нет ответа",corr:"Правильный ответ:",place:(a,b)=>`${a}-е место (из ${b})`,score:(o,n)=>`✓ ${o} / ${n} верно`,
     write:"Напишите по-немецки",ph:"По-немецки…",send:"Отправить",dunno:"Не знаю",next:"Ждите следующий вопрос…",done:"Игра окончена!",review:"Ваши ответы",allOk:"Всё верно! 🎉",board:"Результаты",you:"вы",q:(i,n)=>`${i} / ${n}`,
     rulesK:t=>`Вопросы на доске · ${t} сек. на каждый`,rulesS:(n,m,q)=>`${n} вопросов · в своём темпе${q?` · на вопрос ${q}`:""}${m?` · всего ${m} мин`:""}`,rules2:"Место: больше верных ответов; при равенстве — меньше времени",
-    net0:"⏳ Подключение…",net1:"🟢 Подключено",netBad:"🔴 Нет связи",ended:"Эта игра уже окончена."}};
+    net0:"⏳ Подключение…",net1:"🟢 Подключено",netBad:"🔴 Нет связи",ended:"Эта игра уже окончена.",lead:"👑 Вы на 1-м месте!",up:(p,d)=>`🚀 Вы поднялись на ${p}-е место! ▲${d}`,passed:n=>`⚡ Позади: ${n}`,down:(n,p)=>`😬 ${n?n+" обогнал(а) вас":"Вы опустились"} — ${p}-е место`,streak:n=>`🔥 ${n} верно подряд!`,snd:"Звук"}};
 const kz=k=>KGUZ[state.lang==="ru"?"ru":"uz"][k];
 const KGP={};
 function kgpEl(){ let e=document.getElementById("kgp"); if(!e){ e=document.createElement("div"); e.id="kgp"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
-function kgpHead(sub){ return `<div class="lrn-bar"><button class="btn" data-kgp="close" aria-label="✕">✕</button><div class="lrn-tt"><b>${esc(kz("t"))}</b><small>${esc(KGP.g?KGP.g.nm:"")}</small></div>${sub||""}</div>`; }
+function kgpHead(sub){ return `<div class="lrn-bar"><button class="btn" data-kgp="close" aria-label="✕">✕</button><div class="lrn-tt"><b>${esc(kz("t"))}</b><small>${esc(KGP.g?KGP.g.nm:"")}</small></div>${sub||""}<button type="button" class="kgp-snd" data-kgp="snd" aria-label="${esc(kz("snd"))}">${kgSndOn(false)?"🔊":"🔇"}</button></div>`; }
 function kgOpen(id,d){
   let inl=null; if(d){ try{ inl=JSON.parse(chB64d(d)); }catch(e){} if(inl&&inl.g&&Array.isArray(inl.qs)&&inl.qs.length) id=String(inl.g.id); else inl=null; }
   const el=kgpEl(); el.hidden=false; document.body.style.overflow="hidden";
@@ -5289,7 +5367,7 @@ function kgpStat(a){ let ok=0,tie=0; Object.keys(a||{}).forEach(i=>{ const q=KGP
 function kgpRankS(){ const P={}; Object.entries(KGP.players).forEach(([id,p])=>{ if(p&&p.n&&p.st!=="wait") P[id]=Object.assign({n:p.n,st:p.st},kgpStat(p.a)); });
   P[KGP.me]=Object.assign({n:KGP.name,st:KGP.st},kgpStat(KGP.a)); return Object.entries(P).map(([id,p])=>Object.assign({id},p)).sort((a,b)=>(b.ok-a.ok)||(a.tie-b.tie)); }
 function kgpBoard(){ if(!KGP.g||KGP.g.m!=="s"||KGP.st==="join"||KGP.st==="wait") return; const L=kgpRankS(), mi=L.findIndex(p=>p.id===KGP.me);
-  const pl=document.getElementById("kg-place"); if(pl) pl.textContent="🏅 "+kz("place")(mi+1,L.length);
+  kgpSFx(L,mi); const pl=document.getElementById("kg-place"); if(pl) pl.textContent="🏅 "+kz("place")(mi+1,L.length);
   const b=document.getElementById("kg-board"); if(!b) return; const lim=KGP.st==="done"?40:5; let rows=L.slice(0,lim); if(mi>=lim) rows=[...rows.slice(0,lim-1),L[mi]];
   const medal=k=>k===0?"🥇":k===1?"🥈":k===2?"🥉":String(k+1);
   b.innerHTML=`<ol class="ch-lb">${rows.map(p=>{ const k=L.indexOf(p); return `<li class="${p.id===KGP.me?"me":""}"><span class="pl">${medal(k)}</span><span class="nm">${esc(p.n)}${p.id===KGP.me?` (${esc(kz("you"))})`:""}</span><span class="sc">${p.ok}</span></li>`; }).join("")}</ol>`; }
@@ -5315,7 +5393,8 @@ function kgpAns(v,late){ if(KGP.lock||KGP.st!=="play"||!KGP.qs) return;
   const inp=document.getElementById("kg-in"); if(inp) inp.disabled=true;
   const fb=document.getElementById("kg-fb"); if(fb) fb.innerHTML=`<div class="kgp-res ${good?"ok":"bad"}">${good?"✓ "+esc(kz("ok")):late?"⏰ "+esc(kz("late")):"✗ "+esc(kz("no"))}${good?"":`<div><small>${esc(kz("corr"))}</small> <b lang="de">${esc(kgCor(q))}</b></div>`}</div>`;
   if(navigator.vibrate) try{ navigator.vibrate(good?30:[40,40,40]); }catch(e){}
-  setTimeout(()=>{ if(KGP.st==="play") kgpSQ(); }, good?700:1900); }
+  kgpFx(good); kgSnd(good?"ok":"bad",0); KGP.stk=good?(KGP.stk||0)+1:0; if(good&&KGP.stk>=3){ kgpToast(kz("streak")(KGP.stk),"","fire"); setTimeout(()=>kgSnd("streak",0),250); }
+  setTimeout(()=>{ if(KGP.st==="play") kgpSQ(); }, good?900:1900); }
 /* oxirida barcha savollar: ✓/✗, o'quvchi javobi, xato bo'lsa — to'g'ri javob (2026-10-18) */
 function kgpMissHTML(L){ const ok=L.filter(x=>x[2]).length;
   return `<div class="lrn-card"><div class="tp-lbh"><h3>${esc(kz("review"))}</h3><span class="kgp-cnt"><b class="y">✓ ${ok}</b> <b class="n">✗ ${L.length-ok}</b></span></div><ol class="kgp-all">${L.map(([q,a,g],i)=>{ const has=a&&a[0]!==""&&a[0]!=null;
@@ -5333,13 +5412,18 @@ function kgpK(){ const c=KGP.ctl||{st:"lobby"}, el=kgpEl(), n=KGP.qs.length;
     KGP.lock=false; el.innerHTML=kgpHead(`<span class="ch-time" id="kg-time"></span>`)+`<div class="lrn-body"><div class="ch-top"><span class="ch-score">${esc(kz("q")(i+1,n))}</span></div>${kgpQCard(q)}</div>`; kgpTick(); kgpFocus(); return; }
   const cor=c.c, good=mine? (q.o? (Array.isArray(cor)&&cor.includes(+mine[0])) : !!lrnJudge(String(mine[0]),{de:String(cor||"")}).ok) : false;
   const rk=Array.isArray(c.rk)?c.rk:[], pi=rk.findIndex(r=>r&&r[0]===KGP.me), corTxt=q.o?(Array.isArray(cor)?cor.map(k=>q.o[k]).join(" / "):""):String(cor||"");
+  if(KGP.revI!==i){ KGP.revI=i; KGP.revF=kgpRevCalc(rk,pi,good); } const F=KGP.revF||{};
   el.innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card kgp-rev ${good?"ok":"bad"}"><div class="kgp-big">${good?"✅":mine?"❌":"⏰"}</div><h3>${esc(good?kz("ok"):mine?kz("no"):kz("noAns"))}</h3>
     ${good?`<p class="ch-net">⏱ ${kgSec(mine[1])}</p>`:`<p>${esc(kz("corr"))} <b lang="de">${esc(corTxt)}</b></p>`}
-    ${pi>=0?`<p class="ch-big">🏅 ${esc(kz("place")(pi+1,rk.length))} · ✓ ${rk[pi][1]}</p>`:""}<p class="ch-net">${esc(kz("next"))}</p></div></div>`; }
+    ${pi>=0?`<p class="ch-big">🏅 ${esc(kz("place")(pi+1,rk.length))} · ✓ ${rk[pi][1]}</p>`:""}${F.mv?`<p class="kgp-mv ${F.cls}">${esc(F.mv)}</p>`:""}${F.stk?`<p class="kgp-stk">${esc(F.stk)}</p>`:""}<p class="ch-net">${esc(kz("next"))}</p></div></div>`;
+  if(F.fresh){ F.fresh=0; kgpFx(good); kgSnd(good?"ok":"bad",0); if(navigator.vibrate) try{ navigator.vibrate(good?[30,40,30]:80); }catch(e){}
+    if(F.mv) setTimeout(()=>{ kgpToast(F.mv,F.sub||"",F.cls); kgSnd(F.cls==="up"?"up":"down",0); if(F.conf) ltConfetti(); },800);
+    else if(F.stk) setTimeout(()=>{ kgpToast(F.stk,"","fire"); kgSnd("streak",0); },800); } }
 function kgpKEnd(){ const c=KGP.ctl||{}, n=KGP.qs.length, rk=Array.isArray(c.rk)?c.rk:[], pi=rk.findIndex(r=>r&&r[0]===KGP.me), cs=Array.isArray(c.cs)?c.cs:null;
   const miss=cs? KGP.qs.map((q,i)=>{ const qq=Object.assign({},q,q.o?{c:Array.isArray(cs[i])?cs[i]:[]}:{a:String(cs[i]||"")}), x=KGP.a[i]; return [qq,x,!!x&&kgJudge(qq,x[0])]; }) : [];
   kgpEl().innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">${pi===0?"🏆":pi===1?"🥈":pi===2?"🥉":"🏁"}</div><h3>${esc(kz("done"))}</h3>
-    ${pi>=0?`<p class="ch-big"><b>${esc(kz("score")(rk[pi][1],n))}</b></p><p class="ch-big">🏅 ${esc(kz("place")(pi+1,rk.length))}</p>`:""}</div>${cs?kgpMissHTML(miss):""}</div>`; }
+    ${pi>=0?`<p class="ch-big"><b>${esc(kz("score")(rk[pi][1],n))}</b></p><p class="ch-big">🏅 ${esc(kz("place")(pi+1,rk.length))}</p>`:""}</div>${cs?kgpMissHTML(miss):""}</div>`;
+  if(!KGP.endFx&&pi>=0){ KGP.endFx=1; if(pi<3){ setTimeout(()=>{ kgSnd("fan",0); ltConfetti(); },400); } } }
 function kgpTick(){ kgpNet(); if(!KGP.g||!KGP.qs) return; const now=Date.now(), t=document.getElementById("kg-time");
   if(KGP.g.m==="s"&&KGP.st==="play"){ const c=KGP.ctl, dl=KGP.g.tm&&c&&c.t0&&!KGP.solo?c.t0+KGP.g.tm*60000:0; if(t) t.textContent=dl?ltFmt(dl-now):ltFmt(now-KGP.t0); if(dl&&now>=dl) return kgpFinish();
     const q=KGP.qs[KGP.cur], QT=kgpLim(q); if(QT&&!KGP.lock&&KGP.qS&&q&&!KGP.a[KGP.cur]){ const left=KGP.qS+QT-now, tb=document.getElementById("kg-tb"), tl=document.getElementById("kg-tl");
@@ -5347,14 +5431,15 @@ function kgpTick(){ kgpNet(); if(!KGP.g||!KGP.qs) return; const now=Date.now(), 
       if(left<=0) kgpAns("",true); } }
   if(KGP.g.m==="k"&&KGP.st==="play"&&KGP.ctl&&KGP.ctl.st==="q"){ const i=KGP.ctl.i, q=KGP.qs[i]; if(!q) return; const left=KGP.qRecv+((q.tm||KGP.g.tm||20)*1000)-now;
     if(t){ t.textContent=Math.max(0,Math.ceil(left/1000)); t.classList.toggle("hurry",left<5000); } if(left<=0&&!KGP.a[i]&&KGP.lateI!==i){ KGP.lateI=i; kgpRender(); } } }
-function kgpClose(){ clearInterval(KGP.tick); if(KGP.mq) KGP.mq.end(); KGP.mq=null; KGP.id=null; kgpEl().hidden=true; document.body.style.overflow="";
+function kgpClose(){ const tt=document.getElementById("kgp-toast"); if(tt) tt.remove(); clearInterval(KGP.tick); if(KGP.mq) KGP.mq.end(); KGP.mq=null; KGP.id=null; kgpEl().hidden=true; document.body.style.overflow="";
   const u=new URLSearchParams(location.search); if(u.get("kg")||u.get("kgd")) history.replaceState(null,"",location.pathname); }
 /* --- hodisalar --- */
 function kgCopy(u,btn){ (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>{ if(btn) btn.textContent="✓ Nusxalandi"; }).catch(()=>{ prompt("",u); }); }
 document.addEventListener("click",e=>{
   const o=e.target.closest("[data-kgo]"); if(o&&!o.disabled&&o.closest("#kgp")){ kgpAns(+o.dataset.kgo); return; }
   const kk=e.target.closest("[data-kgk]"); if(kk){ const i=document.getElementById("kg-in"); if(i&&!i.disabled){ const p=i.selectionStart??i.value.length; i.value=i.value.slice(0,p)+kk.dataset.kgk+i.value.slice(i.selectionEnd??p); i.focus(); i.setSelectionRange(p+1,p+1); } return; }
-  const pp=e.target.closest("[data-kgp]"); if(pp){ const a=pp.dataset.kgp; if(a==="close") kgpClose(); else if(a==="join") kgpJoin(); else if(a==="dunno") kgpAns(""); return; }
+  if(e.target.closest("#kgp,#tch")) kgUnlock();
+  const pp=e.target.closest("[data-kgp]"); if(pp){ const a=pp.dataset.kgp; if(a==="snd"){ const on=!kgSndOn(false); try{ localStorage.setItem("kgpsnd",on?"1":"0"); }catch(err){} pp.textContent=on?"🔊":"🔇"; return; } if(a==="close") kgpClose(); else if(a==="join") kgpJoin(); else if(a==="dunno") kgpAns(""); return; }
   const cp=e.target.closest("[data-kgcopy]"); if(cp){ kgCopy(cp.dataset.kgcopy,cp); return; }
   const m=e.target.closest("[data-kgm]"); if(m){ TP.kgM=m.dataset.kgm; kgPanel(); return; }
   const t1=e.target.closest("[data-kgt]"); if(t1){ TP.kgT=+t1.dataset.kgt; kgPanel(); return; }
@@ -5381,6 +5466,7 @@ document.addEventListener("click",e=>{
   else if(a==="csv"){ const R=(TP.kgR&&TP.kgR.R)||TP.k; if(R) kgCsv(R); }
   else if(a==="hw") kgHw();
   else if(a==="copy"){ if(TP.k) kgCopy(kgLink(TP.k.id),b); }
+  else if(a==="snd"){ const on=!kgSndOn(true); try{ localStorage.setItem("tch:kgsnd",on?"1":"0"); }catch(err){} b.textContent=on?"🔊":"🔇"; if(!on&&window.speechSynthesis) speechSynthesis.cancel(); }
 });
 document.addEventListener("input",e=>{ if(e.target.id==="kg-tx"||e.target.id==="kg-nm"){ if(TP.kgEd){ TP.kgEd[e.target.id==="kg-tx"?"txt":"name"]=e.target.value; } if(e.target.id==="kg-tx"){ clearTimeout(TP.kgPvT); TP.kgPvT=setTimeout(kgPreview,250); } } });
 document.addEventListener("submit",e=>{ if(e.target.id==="kg-wr"){ e.preventDefault(); const i=document.getElementById("kg-in"), v=lrnNorm(i?i.value:""); if(!v){ if(i) i.focus(); return; } kgpAns(v.slice(0,80)); } });
