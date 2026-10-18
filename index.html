@@ -815,6 +815,17 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-wb{appearance:none;border:0;border-radius:16px;background:var(--green);color:#fff;font:inherit;font-size:19px;font-weight:800;padding:15px;cursor:pointer;width:100%}.ias-wb[hidden]{display:none!important}
 .ias-mark{color:var(--blue);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px}
 .ias-ctx{font-size:16px;font-weight:500;line-height:1.45;color:var(--ink);background:var(--bg);border-left:4px solid var(--blue);border-radius:10px;padding:10px 12px;margin-bottom:14px}
+.ias-pr{display:none}
+.ias-inl .ias-pr{display:block;appearance:none;border:0;border-radius:16px;background:var(--blue);color:#fff;font:inherit;font-size:19px;font-weight:800;padding:15px;cursor:pointer;width:100%}
+.ias-inl .ias-pr.next{background:var(--green)}
+.ias-inl #ias-inw{position:fixed;left:0;bottom:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}
+.ias-inl #ias-in{font-size:16px}
+.ias-inl #ias-card{cursor:text}
+.ias-inl.ias-foc .ias-slot.cur:not(.ok){box-shadow:0 0 0 3px rgba(31,79,160,.25)}
+.ias-inl.ias-foc .ias-slot.cur:not(.ok)::after{content:"";display:inline-block;width:2px;height:.85em;background:currentColor;margin-left:3px;vertical-align:-.08em;animation:iasBlink 1s steps(2,start) infinite}
+@keyframes iasBlink{to{visibility:hidden}}
+.ias-slot.shake{animation:iasShake .35s}
+@keyframes iasShake{20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
 .ia-in{position:absolute;box-sizing:border-box;border:0;border-bottom:1.5px solid transparent;background:rgba(31,79,160,.06);color:#1F4FA0;font-family:var(--hand),"Patrick Hand",sans-serif;font-size:calc(var(--s) * 13px);line-height:1;padding:0 2px;margin:0;text-align:center;border-radius:3px 3px 0 0;outline:none;min-width:0}
@@ -3675,6 +3686,7 @@ function iasRender(m){
     <div class="ias-task" id="ias-task"></div><p class="ias-p" id="ias-p"></p>
     <div class="ias-card" id="ias-card"></div>
     <div class="ias-fb" id="ias-fb"></div>
+    <button type="button" class="ias-pr" id="ias-pr">✓ Prüfen</button>
     <button type="button" class="ias-wb" id="ias-wb" hidden>Weiter →</button>
     <div class="ias-bank" id="ias-bank"></div>
     <div class="ias-in" id="ias-inw"><textarea rows="1" class="ia-in ias-input" id="ias-in" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="done"></textarea><button type="button" class="ias-go" id="ias-go" aria-label="✓">✓</button></div>
@@ -3682,6 +3694,8 @@ function iasRender(m){
     <div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" data-ias="skip">Überspringen →</button></div>
     <div class="ias-dots" id="ias-dots"></div></div>`;
   const inp=document.getElementById("ias-in");
+  inp.addEventListener("focus",()=>V.body.querySelector(".ias")&&V.body.querySelector(".ias").classList.add("ias-foc"));
+  inp.addEventListener("blur",()=>V.body.querySelector(".ias")&&V.body.querySelector(".ias").classList.remove("ias-foc"));
   inp.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); e.stopPropagation(); iasCheck(); } });
   inp.addEventListener("input",()=>{ const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) s.innerHTML=inp.value.trim()?esc(inp.value):"&nbsp;?&nbsp;"; inp.classList.remove("bad");
     /* to'g'ri yozilsa — Enter'siz «Richtig» chiqadi, keyingisiga «Weiter →» bilan o'tiladi */
@@ -3691,10 +3705,13 @@ function iasRender(m){
     IAS.autoT=setTimeout(()=>{ if(IAS.steps[IAS.k]!==st||!document.getElementById("ias-card")) return; IA.vals[i]=inp.value; const s2=iaState(i); if(s2==="ok"){ iaSave(); IAS.tried[i]=true; iasAfter(st); } },400); });
   iasShow(true);
 }
+/* «Prüfen» bosilganda klaviatura yopilmasin — fokus yozish joyida qoladi */
+document.addEventListener("mousedown",e=>{ if(e.target.closest&&e.target.closest("#ias-pr")&&V.body.querySelector(".ias-inl.ias-foc")) e.preventDefault(); });
+document.addEventListener("touchstart",e=>{ if(e.target.closest&&e.target.closest("#ias-pr")&&V.body.querySelector(".ias-inl.ias-foc")){ e.preventDefault(); iasCheck(); } },{passive:false});
 function iasSlot(st,cur){ const it=iaItems()[st.i], v=IA.vals[st.i];
   if(st.kind==="c"){ return null; }
   const s=iasState(st.i), txt=String(v||"").trim();
-  return `<span class="ias-slot ${cur?"cur":""} ${s}">${cur&&s!=="ok"?"&nbsp;?&nbsp;":esc(txt||"…")}</span>`; }
+  return `<span class="ias-slot ${cur?"cur":""} ${s}">${cur&&s!=="ok"?(txt?esc(txt):"&nbsp;?&nbsp;"):esc(txt||"…")}</span>`; }
 function iasShow(focus){ if(!document.getElementById("ias-card")) return;
   const st=IAS.steps[IAS.k]; if(!st){ iasEnd(); return; } const n=IAS.steps.length, it=iaItems()[st.i], uz=state.lang!=="ru";
   const okN=IAS.steps.filter(s=>iasState(s.i)==="ok").length;
@@ -3720,8 +3737,10 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
   bankEl.innerHTML=bw.map(w=>`<button type="button" class="ias-bw" data-iasw="${esc(bval(w))}">${esc(w)}</button>`).join(""); bankEl.hidden=!bw.length;
   if(st.kind==="g"){ inw.hidden=bw.length>0&&!starters; opts.innerHTML=""; inp.dataset.i=st.i; inp.value=IA.vals[st.i]||""; inp.classList.remove("ok","bad","shake"); inp.rows=it.long?3:1; inp.classList.toggle("long",!!it.long);
     if(it.long) inp.placeholder="Schreiben Sie den ganzen Satz …"; else inp.placeholder="";
+    /* gap ichidagi «?» katakning o'zi yozish joyi: pastdagi maydon ko'rinmaydi */
+    const inl=!it.long&&!inw.hidden&&!!document.querySelector("#ias-card .ias-slot.cur"); V.body.querySelector(".ias").classList.toggle("ias-inl",inl);
     if(focus&&(!bw.length||starters)) setTimeout(()=>{ inp.focus({preventScroll:true}); try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(e){} },30); }
-  else { inw.hidden=true;
+  else { inw.hidden=true; V.body.querySelector(".ias").classList.remove("ias-inl");
     const list= st.kind==="o"? st.b.opts : st.b.s.filter(x=>typeof x!=="string"&&x.c===st.i).map(x=>[x.k,x.t]);
     opts.innerHTML=list.map(([k,t])=>`<button type="button" class="ias-opt ${IA.vals[st.i]===k?(iasState(st.i)==="ok"?"ok":IAS.tried[st.i]?"bad":"sel"):""}" data-iaso="${k}">${esc(t||"abcdefgh"[k])}</button>`).join(""); }
   const fb=document.getElementById("ias-fb"); const s=iasState(st.i);
@@ -3747,6 +3766,7 @@ function iasDots(){ const st=IAS.steps[IAS.k]; const el=document.getElementById(
 /* ✓ tugmasi: to'g'ri bo'lgach «Weiter →» ga aylanadi */
 function iasGoMode(){ const st=IAS.steps[IAS.k], go=document.getElementById("ias-go"), wb=document.getElementById("ias-wb"), inw=document.getElementById("ias-inw"); if(!st||!go) return;
   const ok=iasState(st.i)==="ok"; go.classList.toggle("next",ok); go.textContent=ok?"Weiter →":"✓"; go.setAttribute("aria-label",ok?"Weiter":"✓");
+  const pr=document.getElementById("ias-pr"); if(pr){ pr.classList.toggle("next",ok); pr.textContent=ok?"Weiter →":"✓ Prüfen"; }
   if(wb) wb.hidden=!(ok&&(inw.hidden||V.body.querySelector(".ias-bw")&&[...V.body.querySelectorAll(".ias-bw")].some(b=>/…\s*$/.test(b.dataset.iasw)))); }
 function iasCheck(){ const go=document.getElementById("ias-go"), st0=IAS.steps[IAS.k];
   if(go&&go.classList.contains("next")&&st0&&iasState(st0.i)==="ok"){ iasNext(true); return; } iasCheckOnly(); }
@@ -3760,7 +3780,7 @@ function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document
   IAS.fails[st.i]=(IAS.fails[st.i]||0)+1; iasSolBtn();
   const why=iaWhyText(st.i);
   fb.className="ias-fb bad"; fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`;
-  const inp=document.getElementById("ias-in"); if(st.kind==="g"){ inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); inp.select(); }
+  const inp=document.getElementById("ias-in"); if(st.kind==="g"){ inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); if(V.body.querySelector(".ias-inl")){ try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(er){} } else inp.select(); const sl=document.querySelector("#ias-card .ias-slot.cur"); if(sl){ sl.classList.remove("shake"); void sl.offsetWidth; sl.classList.add("shake"); } }
   else iasShow(false), (fb.className="ias-fb bad", fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`);
   iasDots(); }
 function iasNext(auto){ const n=IAS.steps.length; for(let d=1; d<=n; d++){ const k=(IAS.k+d)%n; if(iasState(IAS.steps[k].i)!=="ok"||!auto){ if(auto&&k<=IAS.k&&IAS.steps.slice(IAS.k+1).every(s=>iasState(s.i)==="ok")&&IAS.steps.every(s=>iasState(s.i)==="ok")) break; IAS.k=k; iasShow(true); return; } }
@@ -3780,7 +3800,8 @@ document.addEventListener("click",e=>{ if(!V.body.querySelector(".ias")) return;
   const o=e.target.closest("[data-iaso]"); if(o){ const st=IAS.steps[IAS.k]; IA.vals[st.i]=+o.dataset.iaso; iaSave(); IAS.tried[st.i]=true; iasAfter(st); return; }
   if(e.target.closest("[data-iasx]")){ sndOpen(); return; }
   const d=e.target.closest("[data-iasd]"); if(d){ if(!document.getElementById("ias-card")){ iasRender(V.cur); } IAS.k=+d.dataset.iasd; iasShow(true); return; }
-  if(e.target.closest("#ias-go")){ iasCheck(); return; }
+  if(e.target.closest("#ias-go")||e.target.closest("#ias-pr")){ iasCheck(); return; }
+  if(e.target.closest("#ias-card")&&V.body.querySelector(".ias-inl")){ const ii=document.getElementById("ias-in"); ii.focus({preventScroll:true}); try{ ii.setSelectionRange(ii.value.length,ii.value.length); }catch(er){} return; }
   if(e.target.closest("#ias-wb")){ iasNext(true); return; }
   const a=e.target.closest("[data-ias]"); if(!a) return; const k=a.dataset.ias;
   if(k==="prev"){ IAS.k=(IAS.k-1+IAS.steps.length)%IAS.steps.length; iasShow(true); }
