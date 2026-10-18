@@ -3658,7 +3658,7 @@ function lrnMtFits(g,x){ return !g.some(y=>y.s===x.s||lrnMtKey(y.mt[0])===lrnMtK
 function lrnMatchStart(){
   const isM=y=>lrnMtOk(y)&&!(LR.st[y.i]===1&&lrnTypable(y));
   const rest=LR.round.slice(LR.qi), g=[];
-  for(const y of rest){ if(g.length>=5) break; if(isM(y)&&!g.includes(y)&&lrnMtFits(g,y)) g.push(y); }
+  for(const y of rest){ if(g.length>=4) break; if(isM(y)&&!g.includes(y)&&lrnMtFits(g,y)) g.push(y); }
   if(!g.length) return false;
   /* tanlanganlarni navbatning boshiga qo'yamiz */
   const others=rest.filter(y=>!g.includes(y)); LR.round=[...LR.round.slice(0,LR.qi),...g,...others];
@@ -3666,7 +3666,8 @@ function lrnMatchStart(){
   const fill=[]; if(g.length<4){ const all=lrnShuffle(lrnItems().filter(y=>y.mt&&!LR.round.includes(y)));
     for(const y of all){ if(g.length+fill.length>=4) break; if(lrnMtFits([...g,...fill],y)) fill.push(y); } }
   const P=[...g.map(x=>({x,real:true})),...fill.map(x=>({x,real:false}))];
-  LR.mg={P,g:g.length,sel:null,done:new Set(),bad:new Set(),L:lrnShuffle(P.map((_,k)=>k)),R:lrnShuffle(P.map((_,k)=>k))};
+  const Lo=lrnShuffle(P.map((_,k)=>k)); let Ro; for(let t=0;t<50;t++){ Ro=lrnShuffle(P.map((_,k)=>k)); if(Ro.every((k,r)=>k!==Lo[r])) break; } /* juftlar hech qachon bir qatorda turmaydi */
+  LR.mg={P,g:g.length,sel:null,done:new Set(),bad:new Set(),L:Lo,R:Ro};
   lrnMatchRender(); return true;
 }
 function lrnMatchRender(){
