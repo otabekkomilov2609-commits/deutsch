@@ -902,6 +902,11 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-fix{display:flex;flex-direction:column;gap:12px;margin:-16px -12px 0;padding:14px 12px 12px;background:var(--bg)}
 /* telefonda bittalab rejimida yuqori panel (−/+, Javoblar, yuklab olish) kerak emas — joy savolga (2026-10-18) */
 .v-body,.lrn{overflow-anchor:none} /* brauzer o'zi surmasin (scroll anchoring) — savol sakramasin */
+.ias-fb.ias-fbq{display:flex;justify-content:flex-end;padding:0!important;margin:-4px 0 0;background:none!important;border:0!important;box-shadow:none!important;min-height:0}
+.ias-qb{width:40px;height:40px;border-radius:50%;border:2px solid #C62828;background:var(--surface);color:#C62828;font:800 22px/1 inherit;cursor:pointer;display:grid;place-items:center;animation:iasPop .45s ease;box-shadow:0 2px 8px rgba(198,40,40,.18)}
+.ias-fb.ias-fbw{position:relative;padding-right:46px!important}.ias-fbw .ias-why{margin-top:0}
+.ias-qx{position:absolute;top:6px;right:6px;width:34px;height:34px;border-radius:50%;border:0;background:rgba(198,40,40,.12);color:#C62828;font:800 22px/1 inherit;cursor:pointer}
+.ias-slot.bad:not(.ok){color:#C62828!important;border-color:#C62828!important;background:rgba(198,40,40,.08)!important}
 .ias-top .ias-tb.ias-x{display:none}
 @media (pointer:coarse),(max-width:560px){.viewer.ias-on .v-bar{display:none}.viewer.ias-on .ias-top .ias-tb.ias-x{display:grid}.viewer.ias-on .v-body{padding-top:calc(16px + env(safe-area-inset-top,0px))}}
 .ias-fix.stick{position:sticky;top:-16px;z-index:3;box-shadow:0 10px 14px -12px rgba(23,36,60,.45)}
@@ -3832,7 +3837,7 @@ function iasRender(m){
   inp.addEventListener("focus",()=>V.body.querySelector(".ias")&&V.body.querySelector(".ias").classList.add("ias-foc"));
   inp.addEventListener("blur",()=>V.body.querySelector(".ias")&&V.body.querySelector(".ias").classList.remove("ias-foc"));
   inp.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); e.stopPropagation(); iasCheck(); } });
-  inp.addEventListener("input",()=>{ const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) s.innerHTML=inp.value.trim()?esc(inp.value):"&nbsp;?&nbsp;"; inp.classList.remove("bad");
+  inp.addEventListener("input",()=>{ const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) s.innerHTML=inp.value.trim()?esc(inp.value):"&nbsp;?&nbsp;"; if(s) s.classList.remove("bad"); inp.classList.remove("bad");
     /* to'g'ri yozilsa — Enter'siz «Richtig» chiqadi, keyingisiga «Weiter →» bilan o'tiladi */
     clearTimeout(IAS.autoT); const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g") return; const i=st.i;
     if(iasState(i)==="ok"){ IA.vals[i]=inp.value; if(iasState(i)!=="ok"){ iaSave(); iasShow(false); } }
@@ -3923,6 +3928,11 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
   iasSolBtn(); iasGoMode(); iasDots();
 }
 /* «💡 Lösung» faqat 2 marta xato urinishdan keyin chiqadi */
+/* xato: «Leider falsch» qutisi yo'q — faqat silkinadi; izoh bo'lsa kichik «?» chiqadi, bosilsa izoh ochiladi, «×» — yopiladi (2026-10-18) */
+function iasWhyQ(fb){ fb.className="ias-fb ias-fbq"; fb.innerHTML=IAS.why?`<button type="button" class="ias-qb" data-iasq="open" aria-label="Warum falsch?">?</button>`:""; }
+document.addEventListener("click",e=>{ const q=e.target.closest&&e.target.closest("[data-iasq]"); if(!q) return; const fb=document.getElementById("ias-fb"); if(!fb) return; e.preventDefault();
+  if(q.dataset.iasq==="open"){ fb.className="ias-fb bad ias-fbw"; fb.innerHTML=`<button type="button" class="ias-qx" data-iasq="close" aria-label="Schließen">×</button><div class="ias-why">${IAS.why||""}</div>`; iasSee(fb); }
+  else { fb.className="ias-fb"; fb.innerHTML=""; } });
 function iasSolBtn(){ const b=document.getElementById("ias-solb"), st=IAS.steps[IAS.k]; if(!b||!st) return; const on=(IAS.fails[st.i]||0)>=2 && iasState(st.i)!=="ok"; if(on&&b.hidden){ b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop"); } b.hidden=!on; }
 function iasErkl(i){ const hd=typeof HINTS!=="undefined"&&HINTS[IA.id], key=hd&&hd.m[i], h=key!=null?hd.t[key]:null; if(!h) return "";
   const L=state.lang==="ru"?"ru":"uz", rr=typeof h.r==="number"?(HINTS._R||[])[h.r]:h.r;
@@ -3957,12 +3967,15 @@ function iasCheckOnly(){
   IA.vals[st.i]=inp.value; iaSave(); IAS.tried[st.i]=true; iasAfter(st); }
 function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document.getElementById("ias-fb"), itA=iaItems()[st.i];
   if(itA.free&&s==="ok"){ iasShow(false); fb.className="ias-fb sol"; fb.innerHTML=`✓ Gespeichert. Vergleichen Sie:<b class="ias-ans">${esc(itA.a||"")}</b>`; return; }
-  if(s==="ok"){ iasShow(false); iasOkFlash(); return; }
+  if(s==="ok"){ iasShow(false); iasOkFlash();
+    /* bir gapda bir nechta bo'shliq bo'lsa — to'g'ri yozilgach o'zi keyingi bo'shliqqa o'tadi (2026-10-18) */
+    if(st.b){ const nk=IAS.steps.findIndex((s2,k)=>k!==IAS.k&&s2.b===st.b&&iasState(s2.i)!=="ok"); if(nk>=0){ clearTimeout(IAS.advT); IAS.advT=setTimeout(()=>{ if(IAS.steps[IAS.k]===st&&document.getElementById("ias-card")){ IAS.k=nk; iasShow(true); } },550); } }
+    return; }
   IAS.fails[st.i]=(IAS.fails[st.i]||0)+1; iasSolBtn();
   const why=iaWhyText(st.i);
-  fb.className="ias-fb bad"; fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`; iasSee(fb);
-  const inp=document.getElementById("ias-in"); if(st.kind==="g"){ inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); if(V.body.querySelector(".ias-inl")){ try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(er){} } else inp.select(); const sl=document.querySelector("#ias-card .ias-slot.cur"); if(sl){ sl.classList.remove("shake"); void sl.offsetWidth; sl.classList.add("shake"); } }
-  else iasShow(false), (fb.className="ias-fb bad", fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`, iasSee(fb));
+  IAS.why=why; iasWhyQ(fb);
+  const inp=document.getElementById("ias-in"); if(st.kind==="g"){ inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); if(V.body.querySelector(".ias-inl")){ try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(er){} } else inp.select(); const sl=document.querySelector("#ias-card .ias-slot.cur"); if(sl){ sl.classList.remove("shake"); void sl.offsetWidth; sl.classList.add("shake","bad"); } }
+  else { iasShow(false); IAS.why=why; iasWhyQ(fb); const cd=document.getElementById("ias-card"); if(cd){ cd.classList.remove("shake"); void cd.offsetWidth; cd.classList.add("shake"); } }
   iasDots(); }
 function iasNext(auto){ const n=IAS.steps.length; for(let d=1; d<=n; d++){ const k=(IAS.k+d)%n; if(iasState(IAS.steps[k].i)!=="ok"||!auto){ if(auto&&k<=IAS.k&&IAS.steps.slice(IAS.k+1).every(s=>iasState(s.i)==="ok")&&IAS.steps.every(s=>iasState(s.i)==="ok")) break; IAS.k=k; iasShow(true); return; } }
   iasEnd(); }
