@@ -3436,21 +3436,21 @@ function lernData(){ if(!window.__LERN){ try{ window.__LERN=JSON.parse(document.
 function lernHas(id){ return !!lernData()[id]; }
 const LT={
   uz:{lern:"Yodlash", title:"So‘z yodlash", pick:"Qaysi Lektionlar?", all:"Hammasi", none:"Tozalash", redem:"Redemittel (iboralar) ham", words:n=>`${n} ta so‘z`,
-      learn:"🧠 Lernen", learnD:"Test + yozish. Har so‘z 2 marta to‘g‘ri topilsa — o‘rganildi.", cards:"🃏 Karteikarten", cardsD:"Kartani bosing — tarjimasi chiqadi.",
+      learn:"🧠 Lernen", learnD:"Test + yozish. Har so‘z 2 marta to‘g‘ri topilsa — o‘rganildi.", learnDm:"🧩 Juftlash + yozish. Har so‘z 2 marta to‘g‘ri topilsa — o‘rganildi.", cards:"🃏 Karteikarten", cardsD:"Kartani bosing — tarjimasi chiqadi.",
       learned:(a,b)=>`${a} / ${b} o‘rganildi`, choose:"To‘g‘ri tarjimani tanlang", chooseP:"To‘g‘ri Perfekt shaklini tanlang", writeP:"Perfekt shaklini yozing", write:"Nemischa yozing", ph:"Nemischa…", check:"Tekshirish", dunno:"Bilmayman",
       right:["Zo‘r!","To‘g‘ri!","Barakalla!","Ajoyib!","Super!"], wrong:"Xato", correct:"To‘g‘ri javob:", yours:"Sizning javobingiz:", next:"Davom etish", override:"Men to‘g‘ri yozganman",
       caseNote:"Katta-kichik harfga e’tibor bering.", artNote:"Artikl (der/die/das) ham kerak!", almost:"Bitta harf xato.", near:"Deyarli!", umlNote:"ä / ö / ü / ß ga e’tibor bering.", artWrong:"Artikl xato (der / die / das).",
       roundDone:"Raund tugadi!", roundRes:(a,b)=>`${b} savoldan ${a} tasiga to‘g‘ri javob berdingiz.`, cont:"Keyingi raund", allDone:"Hamma so‘zlar o‘rganildi! 🎉", restart:"Qaytadan boshlash", back:"Lektion tanlash",
       know:"Bilaman ✓", dontknow:"Bilmayman ✗", tap:"Bosing — aylanadi", cardsDone:"Hammasini bilasiz! 🎉", left:n=>`${n} ta qoldi`, reset:"Natijani o‘chirish", sel0:"Kamida bitta Lektion tanlang", example:"Misol",
-      knownN:n=>`🃏 Kartalarda ${n} ta so‘zni «Bilaman» degansiz`, chk:"✅ Bilganlarimni tekshirish", chkD:"Kartada «Bilaman» degan so‘zlar — test + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", cardsAll:"Bu Lektionlardagi hamma kartalarni «Bilaman» degansiz.", cardsReset:"Kartalarni boshidan boshlash", chkDone:"Bilgan so‘zlaringizni tekshirib bo‘ldingiz! 🎉"},
+      knownN:n=>`🃏 Kartalarda ${n} ta so‘zni «Bilaman» degansiz`, chk:"✅ Bilganlarimni tekshirish", chkD:"Kartada «Bilaman» degan so‘zlar — test + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", chkDm:"Kartada «Bilaman» degan so‘zlar — 🧩 juftlash + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", cardsAll:"Bu Lektionlardagi hamma kartalarni «Bilaman» degansiz.", cardsReset:"Kartalarni boshidan boshlash", chkDone:"Bilgan so‘zlaringizni tekshirib bo‘ldingiz! 🎉"},
   ru:{lern:"Учить", title:"Учить слова", pick:"Какие уроки?", all:"Все", none:"Очистить", redem:"Включая Redemittel (фразы)", words:n=>`${n} слов`,
-      learn:"🧠 Заучивание", learnD:"Тест + письмо. Слово выучено после 2 верных ответов.", cards:"🃏 Карточки", cardsD:"Нажмите на карточку — появится перевод.",
+      learn:"🧠 Заучивание", learnD:"Тест + письмо. Слово выучено после 2 верных ответов.", learnDm:"🧩 Пары + письмо. Слово выучено после 2 верных ответов.", cards:"🃏 Карточки", cardsD:"Нажмите на карточку — появится перевод.",
       learned:(a,b)=>`${a} / ${b} выучено`, choose:"Выберите правильный перевод", chooseP:"Выберите правильную форму Perfekt", writeP:"Напишите форму Perfekt", write:"Напишите по-немецки", ph:"По-немецки…", check:"Проверить", dunno:"Не знаю",
       right:["Отлично!","Верно!","Молодец!","Супер!","Здорово!"], wrong:"Неверно", correct:"Правильный ответ:", yours:"Ваш ответ:", next:"Дальше", override:"Я ответил(а) правильно",
       caseNote:"Обратите внимание на большие и маленькие буквы.", artNote:"Нужен ещё артикль (der/die/das)!", almost:"Ошибка в одной букве.", near:"Почти!", umlNote:"Обратите внимание на ä / ö / ü / ß.", artWrong:"Неверный артикль (der / die / das).",
       roundDone:"Раунд окончен!", roundRes:(a,b)=>`Верно: ${a} из ${b}.`, cont:"Следующий раунд", allDone:"Все слова выучены! 🎉", restart:"Начать заново", back:"Выбрать уроки",
       know:"Знаю ✓", dontknow:"Не знаю ✗", tap:"Нажмите — перевернётся", cardsDone:"Вы знаете все! 🎉", left:n=>`Осталось: ${n}`, reset:"Сбросить прогресс", sel0:"Выберите хотя бы один урок", example:"Пример",
-      knownN:n=>`🃏 На карточках вы отметили «Знаю»: ${n}`, chk:"✅ Проверить, что я знаю", chkD:"Слова с отметкой «Знаю» — тест + письмо. Ошибся — слово вернётся в карточки.", cardsAll:"Все карточки этих уроков отмечены «Знаю».", cardsReset:"Начать карточки заново", chkDone:"Вы проверили все знакомые слова! 🎉"}
+      knownN:n=>`🃏 На карточках вы отметили «Знаю»: ${n}`, chk:"✅ Проверить, что я знаю", chkD:"Слова с отметкой «Знаю» — тест + письмо. Ошибся — слово вернётся в карточки.", chkDm:"Слова с отметкой «Знаю» — 🧩 пары + письмо. Ошибся — слово вернётся в карточки.", cardsAll:"Все карточки этих уроков отмечены «Знаю».", cardsReset:"Начать карточки заново", chkDone:"Вы проверили все знакомые слова! 🎉"}
 };
 const lt = k => LT[state.lang][k];
 const LR={id:null, sel:new Set(), redem:false, mode:null, pool:[], st:{}, round:[], qi:0, okN:0, qN:0, cur:null, answered:false, cards:[], flip:false};
@@ -3588,9 +3588,9 @@ function lrnSetup(){
     <p class="lrn-count">${its.length? esc(lt("words")(its.length))+" · "+esc(lt("learned")(done,its.length)) : esc(lt("sel0"))}</p>
     ${kn?`<p class="lrn-kc">${esc(lt("knownN")(kn))}</p>`:""}
     <div class="lrn-modes">
-      <button type="button" class="lrn-mode" data-l="learn"${its.length?"":" disabled"}><b>${esc(lt("learn"))}</b><span>${esc(lt("learnD"))}</span></button>
+      <button type="button" class="lrn-mode" data-l="learn"${its.length?"":" disabled"}><b>${esc(lt("learn"))}</b><span>${esc(lt((lernData()[LR.id]||{}).mt?"learnDm":"learnD"))}</span></button>
       <button type="button" class="lrn-mode" data-l="cards"${its.length?"":" disabled"}><b>${esc(lt("cards"))}</b><span>${esc(lt("cardsD"))}</span></button>
-      ${kq?`<button type="button" class="lrn-mode kchk" data-l="kchk"><b>${esc(lt("chk"))} (${kq})</b><span>${esc(lt("chkD"))}</span></button>`:""}
+      ${kq?`<button type="button" class="lrn-mode kchk" data-l="kchk"><b>${esc(lt("chk"))} (${kq})</b><span>${esc(lt((lernData()[LR.id]||{}).mt?"chkDm":"chkD"))}</span></button>`:""}
     </div>
     ${done||kn?`<button type="button" class="lrn-link lrn-reset" data-l="reset">${esc(lt("reset"))}</button>`:""}
   </div>
