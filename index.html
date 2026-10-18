@@ -168,6 +168,9 @@ main{padding-block:6px 40px}
 .lrn-row2{display:flex;justify-content:space-between;align-items:center;gap:10px}.lrn-row2 .btn{padding:10px 18px;font-size:15px;cursor:pointer}
 .lrn-fb:empty{display:none}.lrn-fb{position:fixed;left:0;right:0;bottom:0;z-index:5;margin:0 auto;max-width:640px;max-height:55vh;overflow:auto;border-radius:18px 18px 0 0;padding:16px 18px calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px;box-shadow:0 -6px 24px rgba(10,18,35,.18)}
 .lrn.has-fb .lrn-body{padding-bottom:calc(var(--fbh,260px) + 24px)}
+/* javob qutisi yozuv maydonining shundoq ostida (pastga qarash shart emas) — 2026-10-18 */
+.lrn .lrn-card .lrn-fb{position:static;max-width:none;max-height:none;overflow:visible;margin-top:12px;border-radius:16px;box-shadow:none;padding:14px 16px}
+.lrn.has-fb .lrn-body{padding-bottom:24px}
 .lrn.has-fb .lrn-wr .lrn-keys,.lrn.has-fb .lrn-wr .lrn-row2{display:none}
 .lrn-fb.ok{background:var(--green-soft)}.lrn-fb.bad{background:#FDECEC;color:#3a1515}.lrn-fb.near{background:#FFF6D6;color:#3a2e05}
 .lrn-v{font-weight:800;font-size:17px}.lrn-fb.ok .lrn-v{color:var(--green)}.lrn-fb.bad .lrn-v{color:#C62828}.lrn-fb.near .lrn-v{color:#A16207}
@@ -894,7 +897,10 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-fb{min-height:0;border-radius:14px;font-weight:800;font-size:17px}.ias-fb:empty{display:none}
 .ias-fb.ok{background:var(--green-soft);color:var(--green);padding:12px 14px}.ias-fb.bad{background:#FDECEC;color:#C62828;padding:12px 14px}
 .ias-why{font-weight:500;font-size:14px;color:var(--ink);margin-top:6px;display:flex;flex-direction:column;gap:4px}
-.ias-nav{display:flex;justify-content:space-between}.ias-nav button{border:0;background:none;color:var(--muted);font:inherit;font-size:15px;font-weight:700;cursor:pointer;padding:6px 0}
+.ias-nav{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ias-nav .ias-go{width:auto;height:46px;padding:0 22px;border-radius:999px;background:var(--blue);color:#fff;font-size:17px;font-weight:800;white-space:nowrap;flex:none}
+.ias-nav .ias-go.next{background:var(--green)}
+.ias-nav .ias-go[hidden]{display:none}.ias-nav button{border:0;background:none;color:var(--muted);font:inherit;font-size:15px;font-weight:700;cursor:pointer;padding:6px 0}
 .ias-dots{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.ias-dots button{display:block;flex:none;margin:0;width:22px;height:22px;border-radius:50%;border:0;background:var(--line);cursor:pointer;padding:0;font-size:11px;font-weight:800;color:#fff}
 .ias-dots button.ok{background:var(--green)}.ias-dots button.bad{background:#C62828}.ias-dots button.cur{box-shadow:0 0 0 2px var(--blue);background:var(--surface)}
 .ias-end .ias-dots button{width:30px;height:30px}
@@ -3951,10 +3957,10 @@ function iasRender(m){
     <button type="button" class="ias-pr" id="ias-pr">✓ Prüfen</button>
     <button type="button" class="ias-wb" id="ias-wb" hidden>Weiter →</button>
     <div class="ias-bank" id="ias-bank"></div>
-    <div class="ias-in" id="ias-inw"><textarea rows="1" class="ia-in ias-input" id="ias-in" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="done"></textarea><button type="button" class="ias-go" id="ias-go" aria-label="✓">✓</button></div>
+    <div class="ias-in" id="ias-inw"><textarea rows="1" class="ia-in ias-input" id="ias-in" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="done"></textarea></div>
     <div class="ias-opts" id="ias-opts"></div></div>
     <div class="ias-fb" id="ias-fb"></div>
-    <div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" data-ias="skip">Überspringen →</button></div>
+    <div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" class="ias-go" id="ias-go" aria-label="Prüfen">✓ Prüfen</button><button type="button" data-ias="skip">Überspringen →</button></div>
     <div class="ias-dots" id="ias-dots"></div></div>`;
   const inp=document.getElementById("ias-in");
   inp.addEventListener("focus",()=>V.body.querySelector(".ias")&&V.body.querySelector(".ias").classList.add("ias-foc"));
@@ -4088,7 +4094,7 @@ function iasOkFlash(){ const pb=document.getElementById("ias-pb"), ok=document.g
   ok.style.left=`calc(${pb.style.width} - 14px)`; ok.classList.remove("on"); void ok.offsetWidth; ok.classList.add("on");
   const sl=document.querySelector("#ias-card .ias-slot.cur.ok, #ias-card .ias-slot.ok"); if(sl){ sl.classList.remove("pop"); void sl.offsetWidth; sl.classList.add("pop"); } }
 function iasGoMode(){ const st=IAS.steps[IAS.k], go=document.getElementById("ias-go"), wb=document.getElementById("ias-wb"), inw=document.getElementById("ias-inw"); if(!st||!go) return;
-  const ok=iasState(st.i)==="ok"; go.classList.toggle("next",ok); go.textContent=ok?"Weiter →":"✓"; go.setAttribute("aria-label",ok?"Weiter":"✓");
+  const ok=iasState(st.i)==="ok"; go.classList.toggle("next",ok); go.textContent=ok?"Weiter →":"✓ Prüfen"; go.setAttribute("aria-label",ok?"Weiter":"Prüfen"); go.hidden=!!inw.hidden;
   const pr=document.getElementById("ias-pr"); if(pr){ pr.classList.toggle("next",ok); pr.textContent=ok?"Weiter →":"✓ Prüfen"; }
   if(wb) wb.hidden=!(ok&&(inw.hidden||V.body.querySelector(".ias-bw")&&[...V.body.querySelectorAll(".ias-bw")].some(b=>/…\s*$/.test(b.dataset.iasw)))); }
 function iasCheck(){ const go=document.getElementById("ias-go"), st0=IAS.steps[IAS.k];
