@@ -120,17 +120,21 @@ main{padding-block:6px 40px}
 .lrn-body{width:100%;max-width:640px;margin:0 auto;padding:18px 16px calc(28px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:12px}
 .lrn-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
 .lrn-setup h3,.lrn-end h3{margin:0;font-size:18px}
-.lrn-les{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.lrn-les{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));grid-auto-rows:1fr;gap:8px}
 .lrn-chip{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:9px 11px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;cursor:pointer}
 .lrn-chip b{font-size:15px}.lrn-chip span{font-size:12px;color:var(--muted);line-height:1.25}
 .lrn-chip[aria-pressed="true"]{border-color:var(--blue);background:var(--blue-soft)}.lrn-chip[aria-pressed="true"] b{color:var(--blue)}
 .lrn-chip,.lrn-chip[aria-pressed="true"]{position:relative;background-image:linear-gradient(90deg,var(--lrn-fill),var(--lrn-fill2) var(--p,0%),transparent var(--p,0%));transition:background .4s}
-.lrn-chip .lrn-cn{font-size:11.5px;font-weight:700;color:var(--green);font-variant-numeric:tabular-nums;margin-top:2px}
+.lrn-chip .lrn-cn{font-size:11.5px;font-weight:700;color:var(--green);font-variant-numeric:tabular-nums;margin-top:auto;padding-top:2px}
+.lrn-chip .lrn-cn i{font-style:normal;color:#b07800} @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lrn-chip .lrn-cn i{color:#F4C84A}} :root[data-theme="dark"] .lrn-chip .lrn-cn i{color:#F4C84A}
+.lrn-les .lrn-chip{height:100%;min-height:92px}
+.lrn-chip .lrn-lt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.lrn-les .lrn-chip,.lrn-les .lrn-chip[aria-pressed="true"]{background-image:linear-gradient(90deg,var(--lrn-fill),var(--lrn-fill2) var(--p,0%),var(--lrn-yel) var(--p,0%),var(--lrn-yel) var(--q,0%),transparent var(--q,0%))}
 .lrn-chip.full:not([aria-pressed="true"]){border-color:var(--green)}.lrn-chip.full b{color:var(--green)}
-:root{--lrn-fill:#C9F0D6;--lrn-fill2:#A6E6BD}
+:root{--lrn-fill:#C9F0D6;--lrn-fill2:#A6E6BD;--lrn-yel:#FBE7A8}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lrn-mode.chal{background:#3a2414}}:root[data-theme="dark"] .lrn-mode.chal{background:#3a2414}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lrn-fill:#1C4A33;--lrn-fill2:#226B45}}
-:root[data-theme="dark"]{--lrn-fill:#1C4A33;--lrn-fill2:#226B45}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lrn-fill:#1C4A33;--lrn-fill2:#226B45;--lrn-yel:#5E4A12}}
+:root[data-theme="dark"]{--lrn-fill:#1C4A33;--lrn-fill2:#226B45;--lrn-yel:#5E4A12}
 .lrn-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
 .lrn-link{border:0;background:none;color:var(--blue);font:inherit;font-size:14px;font-weight:600;cursor:pointer;padding:4px 0}
 .lrn-tog{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--muted);margin-left:auto}
@@ -3691,9 +3695,9 @@ function lrnSetup(){
   const its=lrnItems(), done=its.filter(x=>LR.st[x.i]===2).length, KN=lrnKnown(), kn=its.filter(x=>KN.has(x.i)).length, kq=its.filter(x=>KN.has(x.i)&&LR.st[x.i]!==2).length;
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${progRank()}<div class="lrn-card lrn-setup">
     <h3>${esc(lt("pick"))}</h3>
-    <div class="lrn-les">${les.map(n=>{ let a=0,d=0; D.it.forEach((r,i)=>{ if(r[0]!==n||!r[4]||(r[6]&&!LR.redem)) return; a++; if(LR.st[i]===2) d++; });
-      const pc=a?Math.round(d/a*100):0;
-      return `<button type="button" class="lrn-chip${a&&d===a?" full":""}" style="--p:${pc}%" aria-pressed="${LR.sel.has(n)}" data-les="${n}"><b>${esc(lrnLab(n))}${a&&d===a?" ✓":""}</b><span>${esc(D.les[n])}</span>${d?`<span class="lrn-cn">${d} / ${a}</span>`:""}</button>`; }).join("")}</div>
+    <div class="lrn-les">${les.map(n=>{ let a=0,d=0,h=0; D.it.forEach((r,i)=>{ if(r[0]!==n||!r[4]||(r[6]&&!LR.redem)) return; a++; if(LR.st[i]===2) d++; else if(LR.st[i]===1) h++; });
+      const pc=a?Math.round(d/a*100):0, pq=a?Math.round((d+h)/a*100):0;
+      return `<button type="button" class="lrn-chip${a&&d===a?" full":""}" style="--p:${pc}%;--q:${pq}%" aria-pressed="${LR.sel.has(n)}" data-les="${n}"><b>${esc(lrnLab(n))}${a&&d===a?" ✓":""}</b><span class="lrn-lt">${esc(D.les[n])}</span><span class="lrn-cn">${d||h?`${d} / ${a}${h?` <i>+${h}</i>`:""}`:"&nbsp;"}</span></button>`; }).join("")}</div>
     <div class="lrn-row"><button type="button" class="lrn-link" data-l="all">${esc(lt("all"))}</button><button type="button" class="lrn-link" data-l="none">${esc(lt("none"))}</button>
       ${D.it.some(r=>r[6])?`<label class="lrn-tog"><input type="checkbox" data-l="redem"${LR.redem?" checked":""}> ${esc(lt("redem"))}</label>`:""}</div>
     <p class="lrn-count">${its.length? esc(lt("words")(its.length))+" · "+esc(lt("learned")(done,its.length)) : esc(lt("sel0"))}</p>
