@@ -154,6 +154,13 @@ main{padding-block:6px 40px}
 .lrn-mt.ok{border-color:var(--green);background:var(--green-soft);opacity:.45;cursor:default}
 .lrn-mt.bad{border-color:#C62828;background:#FDECEC;animation:lrnShake .35s}
 @keyframes lrnShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.lrn-mdone{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+.lrn-mrow{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.lrn-mrow .lrn-mt{opacity:1}
+.lrn-mrow .lrn-mt:first-child{border-radius:12px 0 0 12px;border-right-width:0}
+.lrn-mrow .lrn-mt:last-child{border-radius:0 12px 12px 0}
+.lrn-mrow.pop{animation:lrnPop .35s ease-out}
+@keyframes lrnPop{0%{transform:scale(.92);opacity:.3}100%{transform:none;opacity:1}}
 .lrn-mfs{margin-top:12px;display:flex;flex-direction:column;gap:6px}
 .lrn-mf{padding:8px 10px;border-radius:10px;background:var(--green-soft);font-size:15px}
 .lrn-mf b{font-weight:600} .lrn-mf small{display:block;color:var(--muted);font-size:13px}
@@ -3673,19 +3680,23 @@ function lrnMatchStart(){
     for(const y of all){ if(g.length+fill.length>=4) break; if(lrnMtFits([...g,...fill],y)) fill.push(y); } }
   const P=[...g.map(x=>({x,real:true})),...fill.map(x=>({x,real:false}))];
   const Lo=lrnShuffle(P.map((_,k)=>k)); let Ro; for(let t=0;t<50;t++){ Ro=lrnShuffle(P.map((_,k)=>k)); if(Ro.every((k,r)=>k!==Lo[r])) break; } /* juftlar hech qachon bir qatorda turmaydi */
-  LR.mg={P,g:g.length,sel:null,done:new Set(),bad:new Set(),L:Lo,R:Ro};
+  LR.mg={P,g:g.length,sel:null,done:new Set(),ord:[],last:null,bad:new Set(),L:Lo,R:Ro};
   lrnMatchRender(); return true;
 }
 function lrnMatchRender(){
   const M=LR.mg, uz=state.lang!=="ru";
   const tile=(side,k)=>{ const p=M.P[k], d=M.done.has(k), s=M.sel&&M.sel[0]===side&&M.sel[1]===k;
     return `<button type="button" class="lrn-mt${d?" ok":""}${s?" sel":""}" data-mt="${side}${k}"${d?" disabled":""}>${esc(p.x.mt[side==="L"?0:1])}</button>`; };
-  const found=[...M.done].map(k=>{ const x=M.P[k].x; return `<div class="lrn-mf"><b>${esc(x.mt[0])} ${esc(x.mt[1])}</b><small>${esc(x.mt[2]||x.ru)}</small></div>`; }).join("");
+  const found=M.ord.map(k=>{ const x=M.P[k].x; return `<div class="lrn-mf"><b>${esc(x.mt[0])} ${esc(x.mt[1])}</b><small>${esc(x.mt[2]||x.ru)}</small></div>`; }).join("");
   const all=M.done.size===M.P.length;
+  /* qolganlar: juft hech qachon bir qatorda turmasin (siljitib) */
+  const remL=M.L.filter(k=>!M.done.has(k)); let remR=M.R.filter(k=>!M.done.has(k));
+  for(let t=0;t<remR.length&&remR.length>1&&remR.some((k,r)=>remL[r]===k);t++) remR=[...remR.slice(1),remR[0]];
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card">
     <div class="lrn-ask">${uz?"🧩 Juftini toping: chapdan bittasini, o‘ngdan bittasini bosing":"🧩 Найдите пару: нажмите одно слева и одно справа"}</div>
-    <div class="lrn-mts"><div class="lrn-mc">${M.L.map(k=>tile("L",k)).join("")}</div><div class="lrn-mc">${M.R.map(k=>tile("R",k)).join("")}</div></div>
-    ${found?`<div class="lrn-mfs">${found}</div>`:""}
+    ${M.ord.length?`<div class="lrn-mts lrn-mdone">${M.ord.map(k=>`<div class="lrn-mrow${k===M.last?" pop":""}">${tile("L",k)}${tile("R",k)}</div>`).join("")}</div>`:""}
+    ${all?"":`<div class="lrn-mts"><div class="lrn-mc">${remL.map(k=>tile("L",k)).join("")}</div><div class="lrn-mc">${remR.map(k=>tile("R",k)).join("")}</div></div>`}
+    ${all&&found?`<div class="lrn-mfs">${found}</div>`:""}
     ${all?`<div class="lrn-row2"><span></span><button type="button" class="btn primary" data-l="mtnext">${esc(lt("next"))} →</button></div>`:""}
   </div></div>`;
   if(all) setTimeout(()=>{ const b=lrnEl().querySelector('[data-l="mtnext"]'); if(b) b.focus(); },20);
@@ -3694,7 +3705,7 @@ function lrnMatchTap(side,k){
   const M=LR.mg; if(!M||M.done.has(k)) return;
   if(!M.sel||M.sel[0]===side){ M.sel=[side,k]; lrnMatchRender(); return; }
   const [s0,k0]=M.sel; M.sel=null;
-  if(k0===k){ M.done.add(k); lrnMatchRender(); return; }
+  if(k0===k){ M.done.add(k); M.ord.push(k); M.last=k; lrnMatchRender(); return; }
   if(M.P[k0].real) M.bad.add(k0);
   lrnMatchRender();
   const b1=lrnEl().querySelector(`[data-mt="${s0}${k0}"]`), b2=lrnEl().querySelector(`[data-mt="${side}${k}"]`);
