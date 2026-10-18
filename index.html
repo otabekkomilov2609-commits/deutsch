@@ -725,6 +725,8 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ch-in{font:inherit;font-size:16px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
 .ch-big{font-size:15px;line-height:1.45;margin:0}
 .ch-flash-ok{animation:chok .35s}.ch-flash-bad{animation:chbad .35s}
+#ch-card{position:relative}.ch-pts{position:absolute;right:16px;top:12px;font-size:24px;font-weight:800;color:var(--green);pointer-events:none;animation:chpts .9s ease-out forwards}
+@keyframes chpts{0%{opacity:0;transform:translateY(8px) scale(.8)}20%{opacity:1;transform:translateY(0) scale(1.1)}100%{opacity:0;transform:translateY(-34px) scale(1)}}
 @keyframes chok{0%{box-shadow:0 0 0 0 rgba(22,163,74,.6)}100%{box-shadow:0 0 0 14px rgba(22,163,74,0)}}
 @keyframes chbad{0%,100%{transform:none}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
 .lrn-hint{font-size:13px;color:var(--muted);line-height:1.35;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:7px 10px}
@@ -4204,14 +4206,14 @@ const CH_NS="otabek-deutsch/ch1/";
 const CH_SEC=(()=>{ try{ return +localStorage.getItem("chSec")||60; }catch(e){ return 60; } })();
 const CHT={
  uz:{mode:"⚡ Challenge", modeD:"Do‘stlaringizni chaqiring: 1 daqiqada kim ko‘p so‘z topadi?", title:"⚡ Challenge", made:"Challenge tayyor!", share:"Havolani guruhga tashlang — kim ko‘p topsa, o‘sha yutadi.",
-  tg:"📤 Telegramga yuborish", copy:"📋 Nusxalash", copied:"✓ Nusxalandi", playToo:"▶ O‘zim ham o‘ynayman", from:n=>`${n} sizni chaqirdi!`, rules:"1 daqiqa · har to‘g‘ri javob = 1 ball · eng ko‘p topgan yutadi",
+  tg:"📤 Telegramga yuborish", copy:"📋 Nusxalash", copied:"✓ Nusxalandi", playToo:"▶ O‘zim ham o‘ynayman", from:n=>`${n} sizni chaqirdi!`, rules:"1 daqiqa · har to‘g‘ri javob = 1 ball · eng ko‘p topgan yutadi", rulesP:"1 daqiqa · tez javob — ko‘proq ball (500–1000) · eng ko‘p ball to‘plagan yutadi",
   name:"Ismingiz", namePh:"Ism va familiya", start:"Boshlash", errName:"Ismingizni yozing", board:"Natijalar", empty:"Hali hech kim o‘ynamadi — birinchi bo‘ling!",
   you:"siz", live:"o‘ynayapti", place:(a,b)=>`${a}-o‘rin / ${b}`, score:n=>`${n} ball`, done:"Vaqt tugadi!", yourRes:(s,p,n)=>`Natijangiz: ${s} ball · ${p}-o‘rin (${n} kishidan)`,
   played:"Siz bu challenge’da o‘ynab bo‘lgansiz.", invite:"📤 Boshqalarni chaqirish", newCh:"Yangi challenge", close:"Yopish",
   netOk:"🟢 Jonli natijalar ulandi", netWait:"⏳ Ulanmoqda…", netBad:"🔴 Internetga ulanib bo‘lmadi — natijangiz boshqalarga ko‘rinmaydi",
   tgText:(n,t)=>`⚡ ${n} sizni Deutsch challenge’ga chaqiryapti: ${t}. 1 daqiqada kim ko‘p so‘z topadi?`, choose:"To‘g‘ri tarjimani tanlang", bad:"Havola noto‘g‘ri yoki eskirgan.", words:n=>`${n} ta so‘z`},
  ru:{mode:"⚡ Челлендж", modeD:"Вызовите друзей: кто за 1 минуту найдёт больше слов?", title:"⚡ Челлендж", made:"Челлендж готов!", share:"Отправьте ссылку в группу — кто наберёт больше, тот победит.",
-  tg:"📤 Отправить в Telegram", copy:"📋 Копировать", copied:"✓ Скопировано", playToo:"▶ Сыграть самому", from:n=>`${n} бросает вам вызов!`, rules:"1 минута · каждый верный ответ = 1 балл · побеждает тот, кто наберёт больше",
+  tg:"📤 Отправить в Telegram", copy:"📋 Копировать", copied:"✓ Скопировано", playToo:"▶ Сыграть самому", from:n=>`${n} бросает вам вызов!`, rules:"1 минута · каждый верный ответ = 1 балл · побеждает тот, кто наберёт больше", rulesP:"1 минута · чем быстрее ответ, тем больше баллов (500–1000) · побеждает тот, кто наберёт больше",
   name:"Ваше имя", namePh:"Имя и фамилия", start:"Начать", errName:"Напишите имя", board:"Результаты", empty:"Пока никто не играл — будьте первым!",
   you:"вы", live:"играет", place:(a,b)=>`${a}-е место / ${b}`, score:n=>`${n} б.`, done:"Время вышло!", yourRes:(s,p,n)=>`Ваш результат: ${s} б. · ${p}-е место (из ${n})`,
   played:"Вы уже сыграли в этот челлендж.", invite:"📤 Позвать других", newCh:"Новый челлендж", close:"Закрыть",
@@ -4854,6 +4856,7 @@ document.addEventListener("keydown",e=>{
 function chEl(){ let e=document.getElementById("chal"); if(!e){ e=document.createElement("div"); e.id="chal"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
 function chPool(c){ const D=lernData()[c.l]; if(!D) return []; return D.it.map((r,i)=>({i,l:r[0],de:r[3],ru:r[4],red:r[6],dis:r[7]})).filter(x=>x.ru && !x.red && c.s.includes(x.l)); }
 function chTitle(c){ const m=byId[c.l]; const D=lernData()[c.l]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:"")+" · "+c.s.map(lab).join(", "); }
+function chPts(){ return !!(CHS.c&&CHS.c.v>=2); }
 function chQuestions(c){
   const pool=chPool(c); if(pool.length<4) return []; const r=chRng(c.r); const qs=[];
   while(qs.length<160){ for(const x of chShuf(pool.slice(),r)){
@@ -4869,7 +4872,7 @@ function chLib(cb){ if(window.mqtt) return cb(); let s=document.getElementById("
 /* --- yaratish (Yodlash oynasidan) --- */
 function chCreate(){
   if(!LR.id||!LR.sel.size) return;
-  const c={v:1,l:LR.id,s:[...LR.sel].sort((a,b)=>a-b),r:Math.floor(Math.random()*2147483647),c:(ACC.name||"").split(" ")[0]||"",t:Date.now()};
+  const c={v:2,l:LR.id,s:[...LR.sel].sort((a,b)=>a-b),r:Math.floor(Math.random()*2147483647),c:(ACC.name||"").split(" ")[0]||"",t:Date.now()};
   const code=chB64e(JSON.stringify(c)), url=chLink(code), title=chTitle(c);
   const txt=ct("tgText")(c.c||"⚡",title);
   lrnEl().querySelector(".lrn-body").innerHTML=`<div class="lrn-card"><h3>${esc(ct("made"))}</h3><p class="ch-big">${esc(ct("share"))}</p>
@@ -4933,7 +4936,7 @@ function chOpen(code){
 function chLobby(){
   const c=CHS.c, n=chPool(c).length;
   chEl().innerHTML=chHead()+`<div class="lrn-body"><div class="lrn-card">
-    ${c.c?`<h3>${esc(ct("from")(c.c))}</h3>`:""}<p class="ch-big"><b>${esc(chTitle(c))}</b> · ${esc(ct("words")(n))}</p><p class="ch-big">⏱ ${esc(ct("rules"))}</p>
+    ${c.c?`<h3>${esc(ct("from")(c.c))}</h3>`:""}<p class="ch-big"><b>${esc(chTitle(c))}</b> · ${esc(ct("words")(n))}</p><p class="ch-big">⏱ ${esc(ct(c.v>=2?"rulesP":"rules"))}</p>
     <label class="acc-lb">${esc(ct("name"))}<input class="ch-in" id="ch-name" maxlength="30" placeholder="${esc(ct("namePh"))}" value="${esc(CHS.name)}"></label>
     <div class="acc-st err" id="ch-err"></div>
     <button type="button" class="btn primary" data-ch="start">${esc(ct("start"))} →</button>
@@ -4949,17 +4952,17 @@ function chStart(){
   tick();
 }
 /* 🏆 Rekordchi bilan poyga: rekordchining o'yini soniyama-soniya qayta ko'rsatiladi (faqat ko'rsatadi, ballga ta'sir qilmaydi) — 2026-10-18 */
-function chGhostPick(){ const G=Object.entries(CHS.players).filter(([id,p])=>id!==CHS.me&&p.st==="done"&&p.g&&p.g.length===p.s&&p.s>0).sort((a,b)=>b[1].s-a[1].s||(a[1].t||0)-(b[1].t||0))[0];
-  return G?{n:G[1].n,s:G[1].s,g:G[1].g.slice().sort((a,b)=>a-b)}:null; }
+function chGhostPick(){ const G=Object.entries(CHS.players).filter(([id,p])=>id!==CHS.me&&p.st==="done"&&p.g&&p.g.length>0&&(chPts()||p.g.length===p.s)).sort((a,b)=>b[1].s-a[1].s||(a[1].t||0)-(b[1].t||0))[0];
+  return G?{n:G[1].n,s:G[1].g.length,g:G[1].g.slice().sort((a,b)=>a-b)}:null; }
 function chGhostDraw(){ const el=document.getElementById("ch-ghost"); if(!el) return; const uz=state.lang!=="ru", G=CHS.ghost;
   if(!G){ el.innerHTML=`<div class="gh-solo">🏆 ${uz?"Hali rekord yo‘q — siz birinchisiz! Rekord o‘rnating.":"Рекорда пока нет — установите его первым!"}</div>`; return; }
-  const e=(performance.now()-CHS.t0)/1000, gs=G.g.filter(x=>x<=e).length, me=CHS.score, mx=Math.max(G.s,me,1), d=me-gs;
+  const e=(performance.now()-CHS.t0)/1000, gs=G.g.filter(x=>x<=e).length, me=chPts()?(CHS.okN||0):CHS.score, mx=Math.max(G.s,me,1), d=me-gs;
   const first=G.n.split(" ")[0];
   el.innerHTML=`<div class="gh-lane gh-g"><span class="gh-l">🏆 ${esc(first)}</span><span class="gh-t"><i style="width:${gs/mx*100}%"></i></span><b>${gs}</b></div>
     <div class="gh-lane gh-me"><span class="gh-l">🏃 ${uz?"Siz":"Вы"}</span><span class="gh-t"><i style="width:${me/mx*100}%"></i></span><b>${me}</b></div>
     <div class="gh-msg ${d>0?"up":d<0?"down":""}">${d>0?(uz?`💪 Rekordchidan ${d} ta oldindasiz!`:`💪 Вы впереди рекордсмена на ${d}!`):d<0?(uz?`🏆 Rekordchi ${-d} ta oldinda — tezlashing!`:`🏆 Рекордсмен впереди на ${-d} — быстрее!`):(uz?"⚖️ Teng ketyapsiz!":"⚖️ Идёте вровень!")}${G.s?` <small>${uz?`rekord: ${G.s}`:`рекорд: ${G.s}`}</small>`:""}</div>`; }
 function chPlay(){
-  Object.assign(CHS,{phase:"play",score:0,ans:0,qi:0,t0:performance.now(),gt:[],ghost:chGhostPick()});
+  Object.assign(CHS,{phase:"play",score:0,okN:0,ans:0,qi:0,t0:performance.now(),gt:[],ghost:chGhostPick()});
   chEl().innerHTML=chHead(`<span class="ch-time" id="ch-time">${CH_SEC}</span>`)+`<div class="lrn-body">
     <div class="ch-bar"><i id="ch-tb" style="width:100%"></i></div>
     <div class="ch-ghost" id="ch-ghost"></div>
@@ -4972,14 +4975,17 @@ function chPlay(){
     if(left<=0){ clearInterval(CHS.tm); chFinish(); } }, 200);
 }
 function chQ(){
-  const q=CHS.qs[CHS.qi%CHS.qs.length]; CHS.cur=q; CHS.lock=false;
+  const q=CHS.qs[CHS.qi%CHS.qs.length]; CHS.cur=q; CHS.lock=false; CHS.qT=performance.now();
   const card=document.getElementById("ch-card"); if(!card) return;
   card.innerHTML=`<div class="ch-q">${esc(q.q)}</div><div class="lrn-ask">${esc(ct("choose"))}</div><div class="lrn-opts">${q.o.map((o,k)=>`<button type="button" class="lrn-opt" data-cho="${k}"><span class="k">${k+1}</span>${esc(o)}</button>`).join("")}</div>`;
 }
 function chAnswer(k){
   if(CHS.phase!=="play"||CHS.lock) return; CHS.lock=true;
   const q=CHS.cur, ok=q.o[k]===q.a, card=document.getElementById("ch-card");
-  CHS.ans++; if(ok){ CHS.score++; CHS.gt.push(Math.round((performance.now()-CHS.t0)/100)/10); }
+  CHS.ans++; let pts=0;
+  /* ⚡ Tezlik ballari (v2 challenge'lar): darrov javob = 1000, 10 soniya va undan ko'p = 500. Eski (v1) havolalar — 1 ball. */
+  if(ok){ const dt=(performance.now()-(CHS.qT||performance.now()))/1000; pts=chPts()?Math.round(1000-500*Math.min(dt,10)/10):1; CHS.score+=pts; CHS.okN=(CHS.okN||0)+1; CHS.gt.push(Math.round((performance.now()-CHS.t0)/100)/10);
+    if(chPts()){ const pp=document.createElement("div"); pp.className="ch-pts"; pp.textContent="+"+pts+(dt<2?" ⚡":""); card.appendChild(pp); } }
   card.querySelectorAll(".lrn-opt").forEach((b,j)=>{ b.disabled=true; if(q.o[j]===q.a) b.classList.add("ok"); else if(j===k) b.classList.add("bad"); });
   card.classList.remove("ch-flash-ok","ch-flash-bad"); void card.offsetWidth; card.classList.add(ok?"ch-flash-ok":"ch-flash-bad");
   document.getElementById("ch-score").textContent=ct("score")(CHS.score);
