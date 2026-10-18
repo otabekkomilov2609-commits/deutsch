@@ -3829,8 +3829,9 @@ function lrnMatchTap(side,k){
 }
 function lrnMatchNext(){
   const M=LR.mg; LR.mg=null; const g=M.P.slice(0,M.g);
-  g.forEach((p,k)=>{ LR.cur=p.x; LR.kind="mc"; lrnMark(!M.bad.has(k)); });
-  LR.qi+=M.g; lrnAsk();
+  /* tezroq (2026-10-19): xatosiz juftlangan so'z darhol shu raundda yozdiriladi — bir raundda yashil bo'lishi mumkin */
+  const W=[]; g.forEach((p,k)=>{ LR.cur=p.x; LR.kind="mc"; const ok=!M.bad.has(k); lrnMark(ok); if(ok&&LR.st[p.x.i]===1&&lrnTypable(p.x)) W.push(p.x); });
+  LR.qi+=M.g; if(W.length) LR.round.splice(LR.qi,0,...lrnShuffle(W)); lrnAsk();
 }
 function lrnNorm(s){ return String(s).normalize("NFC").replace(/[’‘`´]/g,"'").replace(/[↔·]/g," ").replace(/\s+/g," ").replace(/^\s+|[\s.!?;,]+$/g,"").trim(); }
 function lrnVariants(de){
@@ -3873,9 +3874,9 @@ function lrnFeedback(ok, x, extra){
 }
 function lrnMark(ok){
   const x=LR.cur; LR.qN++;
-  if(ok){ LR.okN++; LR.st[x.i]= (LR.kind==="mc" && lrnTypable(x)) ? 1 : (LR.kind==="mc" ? Math.min(2,(LR.st[x.i]||0)+1) : 2); }
+  if(ok){ LR.okN++; LR.st[x.i]= (LR.kind==="mc" && lrnTypable(x)) ? 1 : 2; } /* yozilmaydigan (Redemittel, uzun ibora) — bitta xatosiz juftlashda o'rganiladi */
   else { if(LR.chk){ const KN=lrnKnown(); if(KN.delete(x.i)) lrnKnownSet(KN); }
-    if(LR.kind==="wr" && LR.st[x.i]===1) LR.st[x.i]=1; LR.round.push(x); if(LR.round.length>14) LR.round.length=14; }
+    if(LR.kind==="wr" && LR.st[x.i]===1) LR.st[x.i]=1; LR.round.push(x); if(LR.round.length>28) LR.round.length=28; }
   lrnSave();
   try{ const pr=lrnEl().querySelector(".lrn-prog"), pt=lrnEl().querySelector(".lrn-pt"); if(pr&&pt){ const w=document.createElement("div"); w.innerHTML=lrnProgress(); pr.replaceWith(w.firstElementChild); pt.replaceWith(w.firstElementChild); } }catch(e){}
 }
@@ -3920,7 +3921,7 @@ document.addEventListener("click",e=>{
   const mt=e.target.closest("[data-mt]"); if(mt){ lrnMatchTap(mt.dataset.mt[0], +mt.dataset.mt.slice(1)); return; }
   const op=e.target.closest("[data-opt]"); if(op){ if(LR.answered) return; const o=LR.opts[+op.dataset.opt], ok=o.i===LR.cur.i && o.de===LR.cur.de;
     root.querySelectorAll(".lrn-opt").forEach((b,k)=>{ b.disabled=true; if(LR.opts[k].de===LR.cur.de) b.classList.add("ok"); }); if(!ok) op.classList.add("bad");
-    lrnMark(ok); lrnFeedback(ok, LR.cur); return; }
+    lrnMark(ok); if(ok&&LR.st[LR.cur.i]===1&&lrnTypable(LR.cur)) LR.round.splice(LR.qi+1,0,LR.cur); lrnFeedback(ok, LR.cur); return; }
   const b=e.target.closest("[data-l]"); if(!b) return; const a=b.dataset.l;
   if(a==="mtnext"){ lrnMatchNext(); return; }
   if(a==="close"){ LR.mg=null; if(LR.mode){ try{ speechSynthesis.cancel(); }catch(e){} wkStop(); lrnSetup(); } else lrnClose(); }
