@@ -3673,7 +3673,7 @@ function lrnMatchRender(){
   const M=LR.mg, uz=state.lang!=="ru";
   const tile=(side,k)=>{ const p=M.P[k], d=M.done.has(k), s=M.sel&&M.sel[0]===side&&M.sel[1]===k;
     return `<button type="button" class="lrn-mt${d?" ok":""}${s?" sel":""}" data-mt="${side}${k}"${d?" disabled":""}>${esc(p.x.mt[side==="L"?0:1])}</button>`; };
-  const found=[...M.done].map(k=>{ const x=M.P[k].x; return `<div class="lrn-mf"><b>${esc(x.mt[0])} ${esc(x.mt[1])}</b> <button type="button" class="lrn-say" data-say="${esc(x.mt[0]+" "+x.mt[1])}" aria-label="🔊">🔊</button><small>${esc(x.ru)}</small></div>`; }).join("");
+  const found=[...M.done].map(k=>{ const x=M.P[k].x; return `<div class="lrn-mf"><b>${esc(x.mt[0])} ${esc(x.mt[1])}</b><small>${esc(x.ru)}</small></div>`; }).join("");
   const all=M.done.size===M.P.length;
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card">
     <div class="lrn-ask">${uz?"🧩 Juftini toping: chapdan bittasini, o‘ngdan bittasini bosing":"🧩 Найдите пару: нажмите одно слева и одно справа"}</div>
@@ -3687,7 +3687,7 @@ function lrnMatchTap(side,k){
   const M=LR.mg; if(!M||M.done.has(k)) return;
   if(!M.sel||M.sel[0]===side){ M.sel=[side,k]; lrnMatchRender(); return; }
   const [s0,k0]=M.sel; M.sel=null;
-  if(k0===k){ M.done.add(k); try{ lrnSay(M.P[k].x.mt[0]+" "+M.P[k].x.mt[1]); }catch(e){} lrnMatchRender(); return; }
+  if(k0===k){ M.done.add(k); lrnMatchRender(); return; }
   if(M.P[k0].real) M.bad.add(k0);
   lrnMatchRender();
   const b1=lrnEl().querySelector(`[data-mt="${s0}${k0}"]`), b2=lrnEl().querySelector(`[data-mt="${side}${k}"]`);
