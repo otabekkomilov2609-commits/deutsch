@@ -185,7 +185,7 @@ main{padding-block:6px 40px}
 .lrn.has-fb .lrn-wr .lrn-keys,.lrn.has-fb .lrn-wr .lrn-row2{display:none}
 .lrn-fb.ok{background:var(--green-soft)}.lrn-fb.bad{background:#FDECEC;color:#3a1515}.lrn-fb.near{background:#FFF6D6;color:#3a2e05}
 .lrn-v{font-weight:800;font-size:17px}.lrn-fb.ok .lrn-v{color:var(--green)}.lrn-fb.bad .lrn-v{color:#C62828}.lrn-fb.near .lrn-v{color:#A16207}
-.lrn-note{font-size:14px}.lrn-yours{font-size:14px}.lrn-ans{font-size:18px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}.lrn-ans small{width:100%;font-size:12.5px;opacity:.8}
+.lrn-note{font-size:14px}.lrn-yours{font-size:14px} .lrn-artx{display:inline-block;color:#d0021b;background:#fde2e2;border-radius:5px;padding:0 4px;font-weight:800;text-decoration:line-through;animation:lrnArtShake .5s ease .15s 2} .lrn-arto{text-decoration:none;color:var(--green);border-bottom:2.5px solid var(--green)} @keyframes lrnArtShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px) rotate(-4deg)}40%{transform:translateX(5px) rotate(4deg)}60%{transform:translateX(-4px)}80%{transform:translateX(3px)}}.lrn-ans{font-size:18px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}.lrn-ans small{width:100%;font-size:12.5px;opacity:.8}
 .lrn-ex{font-size:20px;line-height:1.4;font-style:italic;opacity:.95}.lrn-ex small{font-size:13px;font-style:normal;opacity:.75;display:block;margin-bottom:2px}
 .lrn-flash .lrn-ex{font-size:22px;color:var(--ink)}
 .lrn-say{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:2px 8px;font-size:15px;cursor:pointer}
@@ -3846,7 +3846,8 @@ function lrnJudge(inp, x){
   const fold=s=>s.toLowerCase().replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss").replace(/ae/g,"a").replace(/oe/g,"o").replace(/ue/g,"u");
   if(vs.some(v=>fold(v)===fold(u))) return {ok:false, note:lt("umlNote"), close:true};
   if(vs.some(v=>v.length>3 && lrnLev(v.toLowerCase(),u.toLowerCase())===1)) return {ok:false, note:lt("almost"), close:true};
-  if(vs.some(v=>/^(der|die|das) /.test(v) && /^(der|die|das) /.test(u) && v.slice(4).toLowerCase()===u.slice(4).toLowerCase())) return {ok:false, note:lt("artWrong"), close:true};
+  { const va=vs.find(v=>/^(der|die|das) /.test(v) && /^(der|die|das) /i.test(u) && v.slice(4).toLowerCase()===u.slice(4).toLowerCase());
+    if(va) return {ok:false, note:lt("artWrong"), close:true, art:{bad:u.slice(0,3), ok:va.slice(0,3), rest:u.slice(3)}}; } /* faqat artikl xato — artikl silkinadi (2026-10-19) */
   return {ok:false};
 }
 function lrnFeedback(ok, x, extra){
@@ -3856,8 +3857,8 @@ function lrnFeedback(ok, x, extra){
   fb.className="lrn-fb "+(ok?"ok":near?"near":"bad");
   fb.innerHTML=`<div class="lrn-v">${ok?"✓ "+esc(praise):near?"≈ "+esc(lt("near")):"✗ "+esc(lt("wrong"))}</div>
     ${extra&&extra.note?`<div class="lrn-note">${esc(extra.note)}</div>`:""}
-    ${extra&&extra.yours!=null&&!ok?`<div class="lrn-yours">${esc(lt("yours"))} <s>${esc(extra.yours||"—")}</s></div>`:""}
-    <div class="lrn-ans">${ok?"":`<small>${esc(lt("correct"))}</small>`}<b>${esc(x.full)}</b>${x.fm?` <span class="lrn-fm">${esc(x.fm)}</span>`:""} <button type="button" class="lrn-say" data-say="${esc(x.say||x.de)}" aria-label="🔊">🔊</button></div>
+    ${extra&&extra.yours!=null&&!ok?(extra.art?`<div class="lrn-yours">${esc(lt("yours"))} <b class="lrn-artx">${esc(extra.art.bad)}</b>${esc(extra.art.rest)}</div>`:`<div class="lrn-yours">${esc(lt("yours"))} <s>${esc(extra.yours||"—")}</s></div>`):""}
+    <div class="lrn-ans">${ok?"":`<small>${esc(lt("correct"))}</small>`}<b>${extra&&extra.art&&String(x.full).startsWith(extra.art.ok+" ")?`<u class="lrn-arto">${esc(extra.art.ok)}</u>${esc(String(x.full).slice(3))}`:esc(x.full)}</b>${x.fm?` <span class="lrn-fm">${esc(x.fm)}</span>`:""} <button type="button" class="lrn-say" data-say="${esc(x.say||x.de)}" aria-label="🔊">🔊</button></div>
     ${x.ex?`<div class="lrn-ex"><small>${esc(lt("example"))}:</small> ${esc(x.ex)}</div>`:""}
     <div class="lrn-row2">${!ok&&LR.kind==="wr"?`<button type="button" class="lrn-link" data-l="override">${esc(lt("override"))}</button>`:"<span></span>"}<button type="button" class="btn primary" data-l="next">${esc(lt("next"))} →</button></div>`;
   const nb=fb.querySelector('[data-l="next"]'); if(nb) setTimeout(()=>nb.focus(),20);
@@ -3942,7 +3943,7 @@ document.addEventListener("submit",e=>{
   if(e.target.id!=="lrn-wr") return; e.preventDefault(); if(LR.answered) return;
   const i=document.getElementById("lrn-in"), v=i.value; if(!lrnNorm(v)){ i.focus(); return; }
   { const b=e.target.querySelector('button[type="submit"]'), j0=lrnJudge(v, LR.cur); if(b&&b.classList.contains("ready")&&j0.ok&&!j0.note){ LR.answered=true; i.disabled=true; lrnMark(true); LR.qi++; lrnAsk(); return; } }
-  const j=lrnJudge(v, LR.cur); i.disabled=true; lrnMark(j.ok); lrnFeedback(j.ok, LR.cur, {note:j.note, yours:v, close:j.close});
+  const j=lrnJudge(v, LR.cur); i.disabled=true; lrnMark(j.ok); lrnFeedback(j.ok, LR.cur, {note:j.note, yours:v, close:j.close, art:j.art});
 });
 document.addEventListener("keydown",e=>{
   const root=lrnEl(); if(!root||root.hidden) return;
