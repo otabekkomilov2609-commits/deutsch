@@ -3977,7 +3977,14 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
   const starters=bw.some(w=>/…\s*$/.test(w)&&!/^[a-h]\s*=/.test(w)); /* «Schade, dass …» kabi gap boshlari — yozish maydoni qoladi */
   const bval=w=>{ const m=w.match(/^([a-h])\s*=\s*/); return m?m[1]:w; };
   if(bw.length&&!starters&&document.activeElement&&document.activeElement.blur) document.activeElement.blur();
-  bankEl.innerHTML=bw.map(w=>`<button type="button" class="ias-bw" data-iasw="${esc(bval(w))}">${esc(w)}</button>`).join(""); bankEl.hidden=!bw.length;
+  /* har so'z bir marta ishlatiladigan bankda: to'g'ri qo'yilgan so'z ro'yxatdan yo'qoladi (2026-10-18) */
+  let bwShow=bw;
+  if(bw.length&&!starters){ const grp=IAS.steps.filter(s2=>s2.kind==="g"&&s2.bank===st.bank), cnt={};
+    st.bank.split("·").forEach(x=>{ const m=x.match(/\((\d+)×\)/), w=bval(x.replace(/\(\d+×\)/g,"").trim()); if(w){ const k=iaNorm(w); cnt[k]=(cnt[k]||0)+(m?+m[1]:1); } });
+    const tot=Object.values(cnt).reduce((a,b)=>a+b,0);
+    if(tot>=grp.length){ const used={}; grp.forEach(s2=>{ if(s2.i!==st.i&&iasState(s2.i)==="ok"){ const v=iaNorm(IA.vals[s2.i]||""); used[v]=(used[v]||0)+1; } });
+      bwShow=bw.filter(w=>{ const k=iaNorm(bval(w)); return !(used[k]>=(cnt[k]||1)); }); } }
+  bankEl.innerHTML=bwShow.map(w=>`<button type="button" class="ias-bw" data-iasw="${esc(bval(w))}">${esc(w)}</button>`).join(""); bankEl.hidden=!bw.length;
   if(st.kind==="g"){ inw.hidden=bw.length>0&&!starters; opts.innerHTML=""; inp.dataset.i=st.i; inp.value=IA.vals[st.i]||""; inp.classList.remove("ok","bad","shake"); inp.rows=it.long?3:1; inp.classList.toggle("long",!!it.long);
     if(it.long) inp.placeholder="Schreiben Sie den ganzen Satz …"; else inp.placeholder="";
     /* gap ichidagi «?» katakning o'zi yozish joyi: pastdagi maydon ko'rinmaydi */
