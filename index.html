@@ -834,6 +834,11 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-card .ias-slot.pop{animation:iasSlotPop .45s ease}
 @keyframes iasSlotPop{40%{transform:scale(1.12)}}
 .ias-on #v-body,.ias-on .v-body{padding-right:12px!important}
+/* tepa qism (chiziq + topshiriq) qotib turadi */
+.ias-top{position:static!important;box-shadow:none!important;margin-top:0!important;padding:0 0 4px!important}
+.ias-head{position:sticky;top:-16px;z-index:3;background:var(--bg);margin:-16px -12px 0;padding:14px 12px 10px;display:flex;flex-direction:column;gap:6px;box-shadow:0 6px 12px -10px rgba(23,36,60,.35)}
+.ias{position:relative}
+.ias-inl #ias-inw{position:absolute!important;top:140px;left:0;bottom:auto}
 .pg{position:relative;max-width:100%;--s:1}
 .pg canvas{display:block}
 .ia-in{position:absolute;box-sizing:border-box;border:0;border-bottom:1.5px solid transparent;background:rgba(31,79,160,.06);color:#1F4FA0;font-family:var(--hand),"Patrick Hand",sans-serif;font-size:calc(var(--s) * 13px);line-height:1;padding:0 2px;margin:0;text-align:center;border-radius:3px 3px 0 0;outline:none;min-width:0}
@@ -3690,8 +3695,8 @@ function iasRender(m){
   Object.assign(IAS,{id:m.id,steps:iasSteps(m.id),k:0,tried:IAS.id===m.id?IAS.tried:{},fails:IAS.id===m.id?(IAS.fails||{}):{}}); if(IAS.id!==m.id){ IAS.tried={}; IAS.fails={}; }
   const first=IAS.steps.findIndex(s=>iasState(s.i)!=="ok"); IAS.k=first<0?0:first;
   V.el.classList.add("ias-on");
-  V.body.innerHTML=`<div class="ias"><div class="ias-top"><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button><button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
-    <div class="ias-task" id="ias-task"></div><p class="ias-p" id="ias-p"></p>
+  V.body.innerHTML=`<div class="ias"><div class="ias-head"><div class="ias-top"><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button><button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
+    <div class="ias-task" id="ias-task"></div></div><p class="ias-p" id="ias-p"></p>
     <div class="ias-card" id="ias-card"></div>
     <div class="ias-fb" id="ias-fb"></div>
     <button type="button" class="ias-pr" id="ias-pr">✓ Prüfen</button>
