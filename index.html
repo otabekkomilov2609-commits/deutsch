@@ -3743,14 +3743,20 @@ function lrnGoal(){ return LR.goalWant||0; }
 function lrnStartLearn(){ LR.chk=false; LR.mode="learn"; const left=lrnItems().filter(x=>LR.st[x.i]!==2), N=lrnGoal()||left.length;
   const half=lrnShuffle(left.filter(x=>LR.st[x.i]===1)), fresh=lrnShuffle(left.filter(x=>!LR.st[x.i])), k=Math.ceil(N/2);
   let S=[...half.slice(0,k),...fresh].slice(0,N); if(S.length<N) S=[...S,...half.slice(k)].slice(0,N);
+  /* teng bo'laklar (2026-10-19, Otabek): N so'z ~7 talik teng bo'laklarga bo'linadi (20 → 7·7·6); har raund = yangi bo'lak Match + oldingi bo'lak yozish */
+  const nB=Math.max(1,Math.ceil(S.length/7)), Sh=lrnShuffle(S.slice()); LR.batches=[]; let o=0; for(let j=0;j<nB;j++){ const sz=Math.floor(S.length/nB)+(j<S.length%nB?1:0); LR.batches.push(Sh.slice(o,o+sz)); o+=sz; } LR.bi=0;
   LR.pool=S; LR.goalN=S.length; lrnNewRound(); }
 /* Kartada «Bilaman» degan, hali o'rganilmagan so'zlarni Lernen'da tekshirish. Natija asosiy «o'rganildi» hisobiga qo'shiladi. */
 function lrnLeftKnown(){ const KN=lrnKnown(); return lrnItems().filter(x=>KN.has(x.i)&&LR.st[x.i]!==2); }
-function lrnStartCheck(){ LR.chk=true; LR.mode="learn"; LR.pool=lrnLeftKnown();
+function lrnStartCheck(){ LR.chk=true; LR.mode="learn"; LR.batches=null; LR.pool=lrnLeftKnown();
   if(!LR.pool.length){ lrnSetup(); return; } lrnNewRound(); }
 function lrnNewRound(){
   const left=LR.pool.filter(x=>LR.st[x.i]!==2);
   if(!left.length){ lrnFinish(true); return; }
+  if(LR.batches){ const nb=LR.bi<LR.batches.length? LR.batches[LR.bi++] : [], fut=new Set(LR.batches.slice(LR.bi).flat().map(x=>x.i));
+    /* yangi bo'lak + avvalgi bo'laklardan qolganlar (yozish yoki xato qilingan Match) */
+    LR.round=lrnShuffle(left.filter(x=>!fut.has(x.i))); if(!LR.round.length){ lrnNewRound(); return; }
+    void nb; LR.rid=(LR.rid||0)+1; LR.qi=0; LR.okN=0; LR.qN=0; lrnAsk(); return; }
   const half=lrnShuffle(left.filter(x=>LR.st[x.i]===1)), fresh=lrnShuffle(left.filter(x=>!LR.st[x.i]));
   LR.round=[...half.slice(0,6),...fresh].slice(0,12); if(LR.round.length<12) LR.round=[...LR.round,...half.slice(6)].slice(0,12); /* raund = 12 so'z (2026-10-19, Otabek) */
   lrnShuffle(LR.round); LR.rid=(LR.rid||0)+1; LR.qi=0; LR.okN=0; LR.qN=0; lrnAsk();
