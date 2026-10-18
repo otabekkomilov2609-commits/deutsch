@@ -900,8 +900,11 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 /* qotirilgan yuqori qism (Otabek, 2026-10-18) */
 .ias .ias-head{position:static!important;margin:0!important;padding:0!important;box-shadow:none!important;background:none!important}
 .ias-fix{display:flex;flex-direction:column;gap:12px;margin:-16px -12px 0;padding:14px 12px 12px;background:var(--bg)}
+/* telefonda bittalab rejimida yuqori panel (−/+, Javoblar, yuklab olish) kerak emas — joy savolga (2026-10-18) */
+.ias-top .ias-tb.ias-x{display:none}
+@media (pointer:coarse),(max-width:560px){.viewer.ias-on .v-bar{display:none}.viewer.ias-on .ias-top .ias-tb.ias-x{display:grid}.viewer.ias-on .v-body{padding-top:calc(16px + env(safe-area-inset-top,0px))}}
 .ias-fix.stick{position:sticky;top:-16px;z-index:3;box-shadow:0 10px 14px -12px rgba(23,36,60,.45)}
-@media (pointer:coarse){.ias{padding-bottom:60vh!important}} /* telefonda doim surish uchun joy bo'lsin */
+@media (pointer:coarse){.ias::after{content:"";display:block;flex:none;height:60vh}} /* padding emas, ichki bo'sh joy — aks holda sticky savol ishlamaydi */ /* telefonda doim surish uchun joy bo'lsin */
 .ias-kb .ias-task{display:none!important}.ias-kb .ias-p{font-size:15px}
 .ias-kb .ias-card{font-size:20px;padding:12px 14px;line-height:1.4}
 .ias-kb textarea.ias-input.long{min-height:76px!important}
@@ -3813,7 +3816,7 @@ function iasRender(m){
   Object.assign(IAS,{id:m.id,steps:iasSteps(m.id),k:0,tried:IAS.id===m.id?IAS.tried:{},fails:IAS.id===m.id?(IAS.fails||{}):{}}); if(IAS.id!==m.id){ IAS.tried={}; IAS.fails={}; }
   const first=IAS.steps.findIndex(s=>iasState(s.i)!=="ok"); IAS.k=first<0?0:first;
   V.el.classList.add("ias-on");
-  V.body.innerHTML=`<div class="ias"><div class="ias-fix" id="ias-fix"><div class="ias-head"><div class="ias-top"><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button><button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
+  V.body.innerHTML=`<div class="ias"><div class="ias-fix" id="ias-fix"><div class="ias-head"><div class="ias-top"><button type="button" class="ias-tb ias-x" data-iasx="1" title="Yopish" aria-label="Yopish">✕</button><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button><button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
     <div class="ias-task" id="ias-task"></div></div><p class="ias-p" id="ias-p"></p>
     <div class="ias-card" id="ias-card"></div>
     <button type="button" class="ias-pr" id="ias-pr">✓ Prüfen</button>
@@ -3856,7 +3859,7 @@ function iasFixUpd(){ const f=document.getElementById("ias-fix"); if(!f) return;
   f.parentElement.classList.toggle("ias-kb",kb);
   if(kb&&!window.__iasKbWas) iasKbPin(); window.__iasKbWas=kb;
   /* klaviatura ochiq bo'lsa qotirmaymiz — barmoq bilan surib savolni ko'rish mumkin bo'lsin */
-  const ok=!kb && f.offsetHeight<=vh*0.72; if(ok!==f.classList.contains("stick")) f.classList.toggle("stick",ok); }
+  const ok=f.offsetHeight<=vh*(kb?0.9:0.72); /* klaviatura ochiq bo'lsa ham sig'sa — savol qotib turadi (2026-10-18) */ if(ok!==f.classList.contains("stick")) f.classList.toggle("stick",ok); }
 /* klaviatura ochilgach savol kartasini ekran tepasiga olib chiqamiz (savol + yozish joyi birga ko'rinsin) */
 function iasCardTop(force){ const c=document.getElementById("ias-card"), f=document.getElementById("ias-fix"); if(!c||(!force&&f&&f.classList.contains("stick"))) return;
   const sc=V.body, y=c.getBoundingClientRect().top-sc.getBoundingClientRect().top+sc.scrollTop-10; if(Math.abs(sc.scrollTop-y)>8) sc.scrollTo({top:Math.max(0,y),behavior:force?"auto":"smooth"}); }
@@ -3864,6 +3867,7 @@ function iasCardTop(force){ const c=document.getElementById("ias-card"), f=docum
    Klaviatura ochilayotgan ~1,5 soniya davomida savol kartasini qayta-qayta tepaga qaytaramiz; o'quvchi barmog'i bilan sursa — to'xtaymiz. 2026-10-18 */
 function iasKbPin(){ const until=Date.now()+1600; IAS.pinUntil=until; setTimeout(iasFixUpd,350);
   [40,150,300,500,750,1000,1350].forEach(d=>setTimeout(()=>{ if(IAS.pinUntil===until&&Date.now()<until) iasCardTop(1); },d)); }
+document.addEventListener("click",e=>{ if(e.target.closest&&e.target.closest("[data-iasx]")){ const b=document.getElementById("v-close"); if(b) b.click(); } });
 document.addEventListener("touchmove",e=>{ if(IAS.pinUntil&&e.target.closest&&e.target.closest("#v-body")) IAS.pinUntil=0; },{passive:true});
 function iasFixInit(){ const f=document.getElementById("ias-fix"); if(!f) return; iasFixUpd();
   if(!window.__iasFixRO){ window.__iasFixRO=new ResizeObserver(()=>requestAnimationFrame(iasFixUpd)); if(window.visualViewport) visualViewport.addEventListener("resize",()=>requestAnimationFrame(iasFixUpd)); addEventListener("resize",iasFixUpd);
