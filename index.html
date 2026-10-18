@@ -162,7 +162,8 @@ main{padding-block:6px 40px}
 .lrn-fb.ok{background:var(--green-soft)}.lrn-fb.bad{background:#FDECEC;color:#3a1515}.lrn-fb.near{background:#FFF6D6;color:#3a2e05}
 .lrn-v{font-weight:800;font-size:17px}.lrn-fb.ok .lrn-v{color:var(--green)}.lrn-fb.bad .lrn-v{color:#C62828}.lrn-fb.near .lrn-v{color:#A16207}
 .lrn-note{font-size:14px}.lrn-yours{font-size:14px}.lrn-ans{font-size:18px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}.lrn-ans small{width:100%;font-size:12.5px;opacity:.8}
-.lrn-ex{font-size:14.5px;font-style:italic;opacity:.9}
+.lrn-ex{font-size:20px;line-height:1.4;font-style:italic;opacity:.95}.lrn-ex small{font-size:13px;font-style:normal;opacity:.75;display:block;margin-bottom:2px}
+.lrn-flash .lrn-ex{font-size:22px;color:var(--ink)}
 .lrn-say{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:2px 8px;font-size:15px;cursor:pointer}
 .lrn-end{align-items:center;text-align:center}.lrn-end .big{font-size:52px}.lrn-end p{margin:0;color:var(--muted)}.lrn-end .btn{padding:11px 22px;font-size:15px;cursor:pointer}
 .lrn-flash{min-height:300px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;font:inherit;cursor:pointer}
@@ -3437,7 +3438,7 @@ function lrnAsk(){
   const x=LR.round[LR.qi]; LR.cur=x; LR.answered=false;
   const written = LR.st[x.i]===1 && lrnTypable(x);
   const top=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card">
-      <div class="lrn-meta">${esc(lrnLab(x.l))} · ${esc(x.s)}</div><div class="lrn-q">${esc(x.ru)}</div>`;
+      <div class="lrn-q">${esc(x.ru)}</div>`;
   if(!written){
     const same=LR.pool.filter(y=>y.i!==x.i && y.de!==x.de), art=/^(der|die|das) /.test(x.de);
     let cand=same.filter(y=>/^(der|die|das) /.test(y.de)===art && y.l===x.l); if(cand.length<3) cand=same.filter(y=>/^(der|die|das) /.test(y.de)===art); if(cand.length<3) cand=same;
@@ -3527,7 +3528,6 @@ function lrnCard(){
   const x=LR.cards[0];
   lrnEl().innerHTML=`${lrnHead(`<span class="lrn-left">${esc(lt("left")(LR.cards.length))}</span>`)}<div class="lrn-body">
     <button type="button" class="lrn-flash${LR.flip?" flip":""}" data-l="flip" aria-live="polite">
-      <span class="lrn-meta">${esc(lrnLab(x.l))} · ${esc(x.s)}</span>
       ${LR.flip?`<span class="lrn-q de">${esc(x.full)}</span>${x.fm?`<span class="lrn-fm">${esc(x.fm)}</span>`:""}${x.ex?`<span class="lrn-ex">${esc(x.ex)}</span>`:""}`:`<span class="lrn-q">${esc(x.ru)}</span>`}
     </button>
     ${LR.flip?`<div class="lrn-say-row"><button type="button" class="lrn-say" data-say="${esc(x.say||x.de)}">🔊</button></div>`:""}
