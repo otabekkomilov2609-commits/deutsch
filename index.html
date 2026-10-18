@@ -964,7 +964,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-ctx{font-size:16px;font-weight:500;line-height:1.45;color:var(--ink);background:var(--bg);border-left:4px solid var(--blue);border-radius:10px;padding:10px 12px;margin-bottom:14px}
 .ias-pr{display:none}
 .ias-inl .ias-pr{display:block;appearance:none;border:0;border-radius:16px;background:var(--blue);color:#fff;font:inherit;font-size:19px;font-weight:800;padding:15px;cursor:pointer;width:100%}
-.ias-inl .ias-pr.next{background:var(--green)}
+.ias-inl .ias-pr.next{background:var(--green)} .ias-inl .ias-nav .ias-go{display:none!important}
 .ias-inl #ias-inw{position:fixed;left:0;bottom:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}
 .ias-inl #ias-in{font-size:16px}
 .ias-inl #ias-card{cursor:text}
@@ -3789,16 +3789,19 @@ function lrnMatchRender(){
   const all=M.done.size===M.P.length;
   /* qolganlar: juft hech qachon bir qatorda turmasin (siljitib) */
   const remL=M.L.filter(k=>!M.done.has(k)); let remR=M.R.filter(k=>!M.done.has(k));
-  for(let t=0;t<remR.length&&remR.length>1&&remR.some((k,r)=>remL[r]===k);t++) remR=[...remR.slice(1),remR[0]];
+  if(remR.length>1&&remR.some((k,r)=>remL[r]===k)){ remR=lrnDerange(remL,remR); M.R=[...remR,...M.R.filter(k=>M.done.has(k))]; }
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card">
     <div class="lrn-ask">${uz?"🧩 Juftini toping: chapdan bittasini, o‘ngdan bittasini bosing":"🧩 Найдите пару: нажмите одно слева и одно справа"}</div>
     ${M.ord.length?`<div class="lrn-mts lrn-mdone">${M.ord.map(k=>`<div class="lrn-mrow${k===M.last?" pop":""}">${tile("L",k)}${tile("R",k)}</div>`).join("")}</div>`:""}
-    ${all?"":`<div class="lrn-mts"><div class="lrn-mc">${remL.map(k=>tile("L",k)).join("")}</div><div class="lrn-mc">${remR.map(k=>tile("R",k)).join("")}</div></div>`}
+    ${all?"":`<div class="lrn-mts">${remL.map((k,r)=>tile("L",k)+tile("R",remR[r])).join("")}</div>`}
     ${all&&found?`<div class="lrn-mfs">${found}</div>`:""}
     ${all?`<div class="lrn-row2"><span></span><button type="button" class="btn primary" data-l="mtnext">${esc(lt("next"))} →</button></div>`:""}
   </div></div>`;
   if(all) setTimeout(()=>{ const b=lrnEl().querySelector('[data-l="mtnext"]'); if(b) b.focus(); },20);
 }
+/* qolgan juftliklar: hech biri o'z jufti bilan bir qatorda turmasin — eng kam siljitish bilan (2026-10-19) */
+function lrnDerange(L,R){ const perms=a=>a.length<=1?[a]:a.flatMap((x,i)=>perms([...a.slice(0,i),...a.slice(i+1)]).map(p=>[x,...p]));
+  let best=null, bd=1e9; perms(R).forEach(p=>{ if(p.some((k,r)=>L[r]===k)) return; const d=p.reduce((s,k,r)=>s+(k!==R[r]?1:0),0); if(d<bd){ bd=d; best=p; } }); return best||R; }
 function lrnMatchTap(side,k){
   const M=LR.mg; if(!M||M.done.has(k)) return;
   if(!M.sel||M.sel[0]===side){ M.sel=[side,k]; lrnMatchRender(); return; }
@@ -4091,7 +4094,12 @@ function iasRender(m){
   inp.addEventListener("input",()=>{ const dfx=document.getElementById("ias-diff"); if(dfx) dfx.hidden=true; const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) s.innerHTML=inp.value.trim()?esc(inp.value):"&nbsp;?&nbsp;"; if(s) s.classList.remove("bad"); inp.classList.remove("bad");
     /* to'g'ri yozilsa — Enter'siz «Richtig» chiqadi, keyingisiga «Weiter →» bilan o'tiladi */
     clearTimeout(IAS.autoT); const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g") return; const i=st.i;
-    if(iasState(i)==="ok"){ IA.vals[i]=inp.value; if(iasState(i)!=="ok"){ iaSave(); iasShow(false); } }
+    if(iasState(i)==="ok"){ const old=String(IA.vals[i]||""), v=inp.value;
+      if(v.length>old.length&&v.startsWith(old)){ /* to'g'ri javobdan keyin yozilgan harflar to'g'ri katakni buzmaydi (2026-10-19) */
+        inp.value=old; const extra=v.slice(old.length).replace(/^\s+/,""); const nk=IAS.steps.findIndex((s2,k)=>k!==IAS.k&&s2.b===st.b&&iasState(s2.i)!=="ok");
+        if(nk>=0){ clearTimeout(IAS.advT); IAS.k=nk; iasShow(true); if(extra){ const in2=document.getElementById("ias-in"); in2.value=extra; in2.dispatchEvent(new Event("input",{bubbles:true})); } }
+        return; }
+      if(v!==old){ IA.vals[i]=v; if(iasState(i)!=="ok"){ iaSave(); iasShow(false); } } }
     if(!inp.value.trim()) return;
     IAS.autoT=setTimeout(()=>{ if(IAS.steps[IAS.k]!==st||!document.getElementById("ias-card")) return; IA.vals[i]=inp.value; const s2=iaState(i); if(s2==="ok"){ iaSave(); IAS.tried[i]=true; iasAfter(st); } },400); });
   iasShow(true); iasFixInit();
@@ -4130,6 +4138,7 @@ function iasKbFit(){ const sc=V.body, f=document.getElementById("ias-fix"); if(!
   if(bottom+8<=sc.clientHeight){ if(sc.scrollTop) sc.scrollTo({top:0,behavior:"auto"}); } else iasCardTop(1); }
 function iasKbPin(){ const until=Date.now()+1600; IAS.pinUntil=until; setTimeout(iasFixUpd,350);
   [40,150,300,500,750,1000,1350].forEach(d=>setTimeout(()=>{ if(IAS.pinUntil===until&&Date.now()<until) iasKbFit(); },d)); }
+document.addEventListener("click",e=>{ if(e.target.closest&&e.target.closest("[data-iasback]")){ closeViewer(); return; } });
 document.addEventListener("click",e=>{ if(e.target.closest&&e.target.closest("[data-iasx]")){ const b=document.getElementById("v-close"); if(b) b.click(); } });
 document.addEventListener("touchmove",e=>{ if(IAS.pinUntil&&e.target.closest&&e.target.closest("#v-body")) IAS.pinUntil=0; },{passive:true});
 function iasFixInit(){ const f=document.getElementById("ias-fix"); if(!f) return; iasFixUpd();
@@ -4244,7 +4253,7 @@ function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document
   if(itA.free&&s==="ok"){ iasShow(false); fb.className="ias-fb sol"; fb.innerHTML=`✓ Gespeichert. Vergleichen Sie:<b class="ias-ans">${esc(itA.a||"")}</b>`; return; }
   if(s==="ok"){ iasShow(false); iasOkFlash();
     /* bir gapda bir nechta bo'shliq bo'lsa — to'g'ri yozilgach o'zi keyingi bo'shliqqa o'tadi (2026-10-18) */
-    if(st.b){ const nk=IAS.steps.findIndex((s2,k)=>k!==IAS.k&&s2.b===st.b&&iasState(s2.i)!=="ok"); if(nk>=0){ clearTimeout(IAS.advT); IAS.advT=setTimeout(()=>{ if(IAS.steps[IAS.k]===st&&document.getElementById("ias-card")){ IAS.k=nk; iasShow(true); } },550); } }
+    if(st.b){ const nk=IAS.steps.findIndex((s2,k)=>k!==IAS.k&&s2.b===st.b&&iasState(s2.i)!=="ok"); if(nk>=0){ clearTimeout(IAS.advT); IAS.advT=setTimeout(()=>{ if(IAS.steps[IAS.k]===st&&document.getElementById("ias-card")){ IAS.k=nk; iasShow(true); } },250); } }
     return; }
   IAS.fails[st.i]=(IAS.fails[st.i]||0)+1; iasSolBtn();
   const why=iaWhyText(st.i);
@@ -4277,7 +4286,8 @@ function iasEnd(){ clearTimeout(IAS.autoT); const n=IAS.steps.length, ok=IAS.ste
   V.body.querySelector(".ias").innerHTML=`<div class="ias-end"><div class="big">${ok===n?"🏆":"💪"}</div><h3>${ok} / ${n}</h3><p>${ok===n?"Alles richtig! Super!":"Versuchen Sie die anderen noch einmal:"}</p>
     ${left.length?`<div class="ias-dots">${left.map(o=>`<button type="button" class="${iasState(o.s.i)}" data-iasd="${o.k}">${o.k+1}</button>`).join("")}</div>`:""}
     ${SEND_ON?`<button type="button" class="ias-brag" data-iasx="send">🏆 Dem Lehrer zeigen</button>`:""}
-    <button type="button" class="btn ${SEND_ON?"":"primary"}" data-ias="again">Noch einmal von vorn</button>
+    <button type="button" class="btn primary ias-home" data-iasback="1">← Zurück zur Übersicht</button>
+    <button type="button" class="btn" data-ias="again">Noch einmal von vorn</button>
     <button type="button" class="iam-sw" data-iam="page">📄 Ganzes Arbeitsblatt</button></div>`; }
 document.addEventListener("click",e=>{ if(!V.body.querySelector(".ias")) return;
   const w=e.target.closest("[data-iasw]"); if(w){ const inp=document.getElementById("ias-in"), stw=IAS.steps[IAS.k];
