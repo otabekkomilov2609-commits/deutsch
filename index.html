@@ -140,8 +140,11 @@ main{padding-block:6px 40px}
 .lrn-tog{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--muted);margin-left:auto}
 .lrn-count{margin:0;font-size:14px;color:var(--muted)}
 .lrn-goal{display:flex;flex-direction:column;gap:8px}.lrn-goal>span{font-weight:600;font-size:15px}
-.lrn-gch{display:flex;flex-wrap:wrap;gap:8px}.lrn-gch button{font:inherit;font-size:15px;min-width:52px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;touch-action:manipulation}
-.lrn-gch button[aria-pressed="true"]{border-color:var(--blue);background:var(--blue-soft);font-weight:700}
+.lrn-goal>span.lrn-gin{display:flex;align-items:center;gap:10px;font-weight:400}.lrn-gin small{font-size:14px;color:var(--muted)}
+.lrn-gin input{font:inherit;font-size:18px;font-weight:700;width:96px;padding:9px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);text-align:center;-moz-appearance:textfield}
+.lrn-gin input::-webkit-inner-spin-button,.lrn-gin input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.lrn-gin input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+.lrn-goal.need input{border-color:#C62828;animation:lrnShake .35s}.lrn-goal.need>span:first-child{color:#C62828}
 .lrn-modes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 @media (max-width:480px){.lrn-modes{grid-template-columns:1fr}}
 .lrn-mode{display:flex;flex-direction:column;gap:4px;text-align:left;padding:14px;border:1.5px solid var(--blue);border-radius:14px;background:var(--blue-soft);color:var(--ink);font:inherit;cursor:pointer}
@@ -3560,7 +3563,7 @@ function lernData(){ if(!window.__LERN){ try{ window.__LERN=JSON.parse(document.
 function lernHas(id){ return !!lernData()[id]; }
 const LT={
   uz:{lern:"Yodlash", title:"So‘z yodlash", pick:"Qaysi Lektionlar?", all:"Hammasi", none:"Tozalash", redem:"Redemittel (iboralar) ham", words:n=>`${n} ta so‘z`,
-      learn:"🧠 Lernen", learnD:"Test, keyingi raundda yozish. Ikkalasi to‘g‘ri — so‘z o‘rganildi.", learnDm:"🧩 Juftlash, keyingi raundda yozish. Ikkalasi to‘g‘ri — so‘z o‘rganildi.", goalQ:"Bugun nechta so‘z yodlaysiz?", goalAll:n=>`Hammasi (${n})`, goalDone:n=>`${n} ta so‘z yodlandi! 🎉`, goalMore:n=>`Yana ${n} ta so‘z`, goalLeft:(a,b)=>`Maqsad: ${b} ta so‘z · ${a} tasi yodlandi`, cards:"🃏 Karteikarten", cardsD:"Kartani bosing — tarjimasi chiqadi.",
+      learn:"🧠 Lernen", learnD:"Test, keyingi raundda yozish. Ikkalasi to‘g‘ri — so‘z o‘rganildi.", learnDm:"🧩 Juftlash, keyingi raundda yozish. Ikkalasi to‘g‘ri — so‘z o‘rganildi.", goalQ:"Bugun nechta so‘z yodlaysiz?", goalAll:n=>`Hammasi (${n})`, goalOf:n=>`ta so‘z (${n} tadan)`, goalDone:n=>`${n} ta so‘z yodlandi! 🎉`, goalMore:n=>`Yana ${n} ta so‘z`, goalLeft:(a,b)=>`Maqsad: ${b} ta so‘z · ${a} tasi yodlandi`, cards:"🃏 Karteikarten", cardsD:"Kartani bosing — tarjimasi chiqadi.",
       learned:(a,b)=>`${a} / ${b} o‘rganildi`, choose:"To‘g‘ri tarjimani tanlang", chooseP:"To‘g‘ri Perfekt shaklini tanlang", writeP:"Perfekt shaklini yozing", write:"Nemischa yozing", ph:"Nemischa…", check:"Prüfen", dunno:"Keine Ahnung",
       right:["Super!","Richtig!","Sehr gut!","Toll!","Prima!"], wrong:"Falsch", correct:"To‘g‘ri javob:", yours:"Sizning javobingiz:", next:"Weiter", override:"Ich habe es richtig geschrieben",
       caseNote:"Katta-kichik harfga e’tibor bering.", artNote:"Artikl (der/die/das) ham kerak!", almost:"Bitta harf xato.", near:"Fast richtig!", umlNote:"ä / ö / ü / ß ga e’tibor bering.", artWrong:"Artikl xato (der / die / das).",
@@ -3568,7 +3571,7 @@ const LT={
       know:"Weiß ich ✓", dontknow:"Keine Ahnung ✗", tap:"Bosing — aylanadi", cardsDone:"Hammasini bilasiz! 🎉", left:n=>`${n} ta qoldi`, reset:"Natijani o‘chirish", sel0:"Kamida bitta Lektion tanlang", example:"Misol",
       knownN:n=>`🃏 Kartalarda ${n} ta so‘zni «Bilaman» degansiz`, chk:"✅ Bilganlarimni tekshirish", chkD:"Kartada «Bilaman» degan so‘zlar — test + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", chkDm:"Kartada «Bilaman» degan so‘zlar — 🧩 juftlash + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", cardsAll:"Bu Lektionlardagi hamma kartalarni «Bilaman» degansiz.", cardsReset:"Kartalarni boshidan boshlash", chkDone:"Bilgan so‘zlaringizni tekshirib bo‘ldingiz! 🎉"},
   ru:{lern:"Учить", title:"Учить слова", pick:"Какие уроки?", all:"Все", none:"Очистить", redem:"Включая Redemittel (фразы)", words:n=>`${n} слов`,
-      learn:"🧠 Заучивание", learnD:"Тест, в следующем раунде — письмо. Оба верно — слово выучено.", learnDm:"🧩 Пары, в следующем раунде — письмо. Оба верно — слово выучено.", goalQ:"Сколько слов выучите сегодня?", goalAll:n=>`Все (${n})`, goalDone:n=>`Выучено слов: ${n}! 🎉`, goalMore:n=>`Ещё ${n} слов`, goalLeft:(a,b)=>`Цель: ${b} слов · выучено ${a}`, cards:"🃏 Карточки", cardsD:"Нажмите на карточку — появится перевод.",
+      learn:"🧠 Заучивание", learnD:"Тест, в следующем раунде — письмо. Оба верно — слово выучено.", learnDm:"🧩 Пары, в следующем раунде — письмо. Оба верно — слово выучено.", goalQ:"Сколько слов выучите сегодня?", goalAll:n=>`Все (${n})`, goalOf:n=>`слов (из ${n})`, goalDone:n=>`Выучено слов: ${n}! 🎉`, goalMore:n=>`Ещё ${n} слов`, goalLeft:(a,b)=>`Цель: ${b} слов · выучено ${a}`, cards:"🃏 Карточки", cardsD:"Нажмите на карточку — появится перевод.",
       learned:(a,b)=>`${a} / ${b} выучено`, choose:"Выберите правильный перевод", chooseP:"Выберите правильную форму Perfekt", writeP:"Напишите форму Perfekt", write:"Напишите по-немецки", ph:"По-немецки…", check:"Prüfen", dunno:"Keine Ahnung",
       right:["Super!","Richtig!","Sehr gut!","Toll!","Prima!"], wrong:"Falsch", correct:"Правильный ответ:", yours:"Ваш ответ:", next:"Weiter", override:"Ich habe es richtig geschrieben",
       caseNote:"Обратите внимание на большие и маленькие буквы.", artNote:"Нужен ещё артикль (der/die/das)!", almost:"Ошибка в одной букве.", near:"Fast richtig!", umlNote:"Обратите внимание на ä / ö / ü / ß.", artWrong:"Неверный артикль (der / die / das).",
@@ -3711,8 +3714,8 @@ function lrnSetup(){
       ${D.it.some(r=>r[6])?`<label class="lrn-tog"><input type="checkbox" data-l="redem"${LR.redem?" checked":""}> ${esc(lt("redem"))}</label>`:""}</div>
     <p class="lrn-count">${its.length? esc(lt("words")(its.length))+" · "+esc(lt("learned")(done,its.length)) : esc(lt("sel0"))}</p>
     ${kn?`<p class="lrn-kc">${esc(lt("knownN")(kn))}</p>`:""}
-    ${(()=>{ const lf=its.length-done; if(!lf) return ""; const g=lrnGoal(), opts=[5,10,15,20,30].filter(n=>n<lf);
-      return `<div class="lrn-goal"><span>${esc(lt("goalQ"))}</span><div class="lrn-gch">${opts.map(n=>`<button type="button" data-goal="${n}" aria-pressed="${g===n}">${n}</button>`).join("")}<button type="button" data-goal="0" aria-pressed="${!opts.includes(g)}">${esc(lt("goalAll")(lf))}</button></div></div>`; })()}
+    ${(()=>{ const lf=its.length-done; if(!lf) return "";
+      return `<label class="lrn-goal" for="lrn-goal"><span>${esc(lt("goalQ"))}</span><span class="lrn-gin"><input id="lrn-goal" type="number" inputmode="numeric" min="1" max="${lf}" placeholder="1–${lf}" autocomplete="off"><small>${esc(lt("goalOf")(lf))}</small></span></label>`; })()}
     <div class="lrn-modes">
       <button type="button" class="lrn-mode" data-l="learn"${its.length?"":" disabled"}><b>${esc(lt("learn"))}</b><span>${esc(lt((lernData()[LR.id]||{}).mt?"learnDm":"learnD"))}</span></button>
       <button type="button" class="lrn-mode" data-l="cards"${its.length?"":" disabled"}><b>${esc(lt("cards"))}</b><span>${esc(lt("cardsD"))}</span></button>
@@ -3728,7 +3731,8 @@ function lrnSetup(){
 }
 /* ---------- Lernen ---------- */
 /* Maqsad (2026-10-19, Otabek): o'quvchi nechta so'z yodlashini tanlaydi — sessiya shu so'zlar yashil bo'lguncha davom etadi */
-function lrnGoal(){ const v=store.get("lern:goal"); return v==null||v===""||isNaN(+v)?10:+v; }
+/* son oldindan berilmaydi — o'quvchi o'zi yozadi (2026-10-19, Otabek) */
+function lrnGoal(){ return LR.goalWant||0; }
 function lrnStartLearn(){ LR.chk=false; LR.mode="learn"; const left=lrnItems().filter(x=>LR.st[x.i]!==2), N=lrnGoal()||left.length;
   const half=lrnShuffle(left.filter(x=>LR.st[x.i]===1)), fresh=lrnShuffle(left.filter(x=>!LR.st[x.i])), k=Math.ceil(N/2);
   let S=[...half.slice(0,k),...fresh].slice(0,N); if(S.length<N) S=[...S,...half.slice(k)].slice(0,N);
@@ -3992,13 +3996,14 @@ document.addEventListener("click",e=>{
   const op=e.target.closest("[data-opt]"); if(op){ if(LR.answered) return; const o=LR.opts[+op.dataset.opt], ok=o.i===LR.cur.i && o.de===LR.cur.de;
     root.querySelectorAll(".lrn-opt").forEach((b,k)=>{ b.disabled=true; if(LR.opts[k].de===LR.cur.de) b.classList.add("ok"); }); if(!ok) op.classList.add("bad");
     lrnMark(ok); lrnFeedback(ok, LR.cur); return; }
-  const b=e.target.closest("[data-l],[data-goal]"); if(!b) return; const a=b.dataset.l;
+  const b=e.target.closest("[data-l]"); if(!b) return; const a=b.dataset.l;
   if(a==="mtnext"){ lrnMatchNext(); return; }
-  if(b.dataset.goal!=null){ store.set("lern:goal",b.dataset.goal); lrnSetup(); return; }
   if(a==="close"){ LR.mg=null; if(LR.mode){ try{ speechSynthesis.cancel(); }catch(e){} wkStop(); lrnSetup(); } else lrnClose(); }
   else if(a==="all"){ Object.keys(lernData()[LR.id].les).forEach(n=>LR.sel.add(+n)); store.set(lrnKey(LR.id)+":sel",JSON.stringify([...LR.sel])); lrnSetup(); }
   else if(a==="none"){ LR.sel.clear(); store.set(lrnKey(LR.id)+":sel","[]"); lrnSetup(); }
-  else if(a==="learn") lrnStartLearn();
+  else if(a==="learn"){ const gi=document.getElementById("lrn-goal");
+    if(gi){ const n=Math.round(+gi.value), mx=+gi.max; if(!gi.value||!(n>=1)){ const w=gi.closest(".lrn-goal"); w.classList.remove("need"); void w.offsetWidth; w.classList.add("need"); gi.focus(); return; } LR.goalWant=Math.min(n,mx); }
+    lrnStartLearn(); }
   else if(a==="cards") lrnStartCards();
   else if(a==="reset"){ lrnItems().forEach(x=>delete LR.st[x.i]); lrnSave(); const KN=lrnKnown(); lrnItems().forEach(x=>KN.delete(x.i)); lrnKnownSet(KN); lrnSetup(); }
   else if(a==="next"){ LR.qi++; lrnAsk(); }
@@ -5911,6 +5916,7 @@ document.addEventListener("click",e=>{
 });
 document.addEventListener("input",e=>{ if(e.target.id==="kg-tx"||e.target.id==="kg-nm"){ if(TP.kgEd){ TP.kgEd[e.target.id==="kg-tx"?"txt":"name"]=e.target.value; } if(e.target.id==="kg-tx"){ clearTimeout(TP.kgPvT); TP.kgPvT=setTimeout(kgPreview,250); } } });
 document.addEventListener("submit",e=>{ if(e.target.id==="kg-wr"){ e.preventDefault(); const i=document.getElementById("kg-in"), v=lrnNorm(i?i.value:""); if(!v){ if(i) i.focus(); return; } kgpAns(v.slice(0,80)); } });
+document.addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target.id==="lrn-goal"){ e.preventDefault(); const b=lrnEl().querySelector('[data-l="learn"]'); if(b) b.click(); } });
 document.addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target.id==="kg-name"){ e.preventDefault(); kgpJoin(); } });
 document.addEventListener("toggle",e=>{ const d=e.target; if(d&&d.dataset&&d.dataset.kgf){ if(d.open) TP.kgOpenF=d.dataset.kgf; else if(TP.kgOpenF===d.dataset.kgf) TP.kgOpenF=null; } },true);
 (function(){ const u=new URLSearchParams(location.search), id=u.get("kg"), d=u.get("kgd"); if(id||d) setTimeout(()=>kgOpen(id,d),60); })();
