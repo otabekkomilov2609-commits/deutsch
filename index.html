@@ -2,7 +2,7 @@
 <html lang="uz">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
 <title>Deutsch A1 · A2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -796,6 +796,14 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias textarea.ias-input{resize:none;padding:14px 16px!important;line-height:1.3!important;height:auto!important;min-height:56px}
 .ias textarea.ias-input:not(.long){height:56px!important;overflow:hidden;white-space:nowrap}
 .ias textarea.ias-input.long{font-size:24px!important;min-height:112px}
+/* qotirilgan yuqori qism (Otabek, 2026-10-18) */
+.ias .ias-head{position:static!important;margin:0!important;padding:0!important;box-shadow:none!important;background:none!important}
+.ias-fix{display:flex;flex-direction:column;gap:12px;margin:-16px -12px 0;padding:14px 12px 12px;background:var(--bg)}
+.ias-fix.stick{position:sticky;top:-16px;z-index:3;box-shadow:0 10px 14px -12px rgba(23,36,60,.45)}
+.ias-kb .ias-task,.ias-kb .ias-p{display:none!important}
+.ias-kb .ias-card{font-size:20px;padding:12px 14px;line-height:1.4}
+.ias-kb textarea.ias-input.long{min-height:76px!important}
+.ias-kb .ias-fix{gap:8px}
 /* yozish shrifti kattaroq (Otabek, 2026-10-18) */
 .ias .ias-input{font-size:26px!important}.ias textarea.ias-input:not(.long){height:60px!important}.ias-go{height:60px}
 
@@ -3703,14 +3711,14 @@ function iasRender(m){
   Object.assign(IAS,{id:m.id,steps:iasSteps(m.id),k:0,tried:IAS.id===m.id?IAS.tried:{},fails:IAS.id===m.id?(IAS.fails||{}):{}}); if(IAS.id!==m.id){ IAS.tried={}; IAS.fails={}; }
   const first=IAS.steps.findIndex(s=>iasState(s.i)!=="ok"); IAS.k=first<0?0:first;
   V.el.classList.add("ias-on");
-  V.body.innerHTML=`<div class="ias"><div class="ias-head"><div class="ias-top"><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button><button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
+  V.body.innerHTML=`<div class="ias"><div class="ias-fix" id="ias-fix"><div class="ias-head"><div class="ias-top"><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button><button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
     <div class="ias-task" id="ias-task"></div></div><p class="ias-p" id="ias-p"></p>
     <div class="ias-card" id="ias-card"></div>
     <button type="button" class="ias-pr" id="ias-pr">✓ Prüfen</button>
     <button type="button" class="ias-wb" id="ias-wb" hidden>Weiter →</button>
     <div class="ias-bank" id="ias-bank"></div>
     <div class="ias-in" id="ias-inw"><textarea rows="1" class="ia-in ias-input" id="ias-in" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="done"></textarea><button type="button" class="ias-go" id="ias-go" aria-label="✓">✓</button></div>
-    <div class="ias-opts" id="ias-opts"></div>
+    <div class="ias-opts" id="ias-opts"></div></div>
     <div class="ias-fb" id="ias-fb"></div>
     <div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" data-ias="skip">Überspringen →</button></div>
     <div class="ias-dots" id="ias-dots"></div></div>`;
@@ -3724,8 +3732,18 @@ function iasRender(m){
     if(iasState(i)==="ok"){ IA.vals[i]=inp.value; if(iasState(i)!=="ok"){ iaSave(); iasShow(false); } }
     if(!inp.value.trim()) return;
     IAS.autoT=setTimeout(()=>{ if(IAS.steps[IAS.k]!==st||!document.getElementById("ias-card")) return; IA.vals[i]=inp.value; const s2=iaState(i); if(s2==="ok"){ iaSave(); IAS.tried[i]=true; iasAfter(st); } },400); });
-  iasShow(true);
+  iasShow(true); iasFixInit();
 }
+/* Yuqori qism (chiziq, topshiriq, savol, yozish joyi) qotib turadi; «Leider falsch» va izoh uning tagidan suzadi.
+   Klaviatura ochilganda (ekran kichrayadi) yuqori qism ixchamlashadi; baribir sig'masa — qotirilmaydi (oddiy aylantirish). 2026-10-18 */
+function iasFixUpd(){ const f=document.getElementById("ias-fix"); if(!f) return; const vv=window.visualViewport, vh=vv?vv.height:innerHeight;
+  const kb=!!(vv && vv.height<window.innerHeight*0.8) || (document.activeElement&&document.activeElement.id==="ias-in"&&matchMedia("(pointer:coarse)").matches&&vh<640);
+  f.parentElement.classList.toggle("ias-kb",kb);
+  const ok=f.offsetHeight<=vh*(kb?0.8:0.72); if(ok!==f.classList.contains("stick")) f.classList.toggle("stick",ok); }
+function iasFixInit(){ const f=document.getElementById("ias-fix"); if(!f) return; iasFixUpd();
+  if(!window.__iasFixRO){ window.__iasFixRO=new ResizeObserver(()=>requestAnimationFrame(iasFixUpd)); if(window.visualViewport) visualViewport.addEventListener("resize",()=>requestAnimationFrame(iasFixUpd)); addEventListener("resize",iasFixUpd);
+    document.addEventListener("focusin",e=>{ if(e.target&&e.target.id==="ias-in") setTimeout(iasFixUpd,350); }); document.addEventListener("focusout",e=>{ if(e.target&&e.target.id==="ias-in") setTimeout(iasFixUpd,350); }); }
+  window.__iasFixRO.disconnect(); window.__iasFixRO.observe(f); }
 /* «Prüfen» bosilganda klaviatura yopilmasin — fokus yozish joyida qoladi */
 document.addEventListener("mousedown",e=>{ if(e.target.closest&&e.target.closest("#ias-pr")&&V.body.querySelector(".ias-inl.ias-foc")) e.preventDefault(); });
 document.addEventListener("touchstart",e=>{ if(e.target.closest&&e.target.closest("#ias-pr")&&V.body.querySelector(".ias-inl.ias-foc")){ e.preventDefault(); iasCheck(); } },{passive:false});
@@ -3781,7 +3799,7 @@ function iasSol(){ const st=IAS.steps[IAS.k]; if(!st) return; const it=iaItems()
   else { ans=String(it.a||""); V.body.querySelectorAll(".ias-bw").forEach(b=>b.classList.toggle("sol",iaNorm(b.dataset.iasw)===iaNorm(ans))); }
   const fb=document.getElementById("ias-fb"); fb.className="ias-fb sol"; fb.innerHTML=`💡 Lösung:<b class="ias-ans">${esc(ans)}</b>${iasErkl(st.i)}`; iasSee(fb); }
 /* Lösung/xato qutisi ekrandan chiqib ketmasin */
-function iasSee(el){ requestAnimationFrame(()=>{ const r=el.getBoundingClientRect(), vh=(window.visualViewport?visualViewport.height:innerHeight); if(r.top<130||r.bottom>vh){ const sc=V.body, top=r.top-sc.getBoundingClientRect().top+sc.scrollTop-70; sc.scrollTo({top:Math.max(0,r.height>vh-140?top:top-(vh-140-r.height)/2),behavior:"smooth"}); } }); }
+function iasSee(el){ requestAnimationFrame(()=>{ const r=el.getBoundingClientRect(), vh=(window.visualViewport?visualViewport.height:innerHeight); const fx=document.getElementById("ias-fix"), H=fx&&fx.classList.contains("stick")?fx.offsetHeight-6:70; if(r.top<H+10||r.bottom>vh){ const sc=V.body, top=r.top-sc.getBoundingClientRect().top+sc.scrollTop-H; sc.scrollTo({top:Math.max(0,r.height>vh-H-70?top:top-(vh-H-70-r.height)/2),behavior:"smooth"}); } }); }
 function iasDots(){ const st=IAS.steps[IAS.k]; const el=document.getElementById("ias-dots"); if(!el||!st) return;
   el.innerHTML=IAS.steps.map((x,k)=>({x,k})).filter(o=>o.x.h===st.h).map(({x,k})=>`<button type="button" class="${iasState(x.i)} ${k===IAS.k?"cur":""}" data-iasd="${k}" aria-label="${k+1}"></button>`).join(""); }
 /* ✓ tugmasi: to'g'ri bo'lgach «Weiter →» ga aylanadi */
