@@ -3774,8 +3774,12 @@ function lrnMatchStart(){
   /* tanlanganlarni navbatning boshiga qo'yamiz */
   const others=rest.filter(y=>!g.includes(y)); LR.round=[...LR.round.slice(0,LR.qi),...g,...others];
   /* kamida 4 juftlik bo'lsin — qo'shimcha (ballsiz) juftliklar */
-  const fill=[]; if(g.length<4){ const all=lrnShuffle(lrnItems().filter(y=>y.mt&&!LR.round.includes(y)));
-    for(const y of all){ if(g.length+fill.length>=4) break; if(lrnMtFits([...g,...fill],y)) fill.push(y); } }
+  /* har doim 4 juftlik (2026-10-19): avval tanlangan Lektionlardan, keyin boshqa Lektionlardan, oxirida raunddagilardan; kerak bo'lsa bo'lim sharti yumshatiladi */
+  const fill=[]; if(g.length<4){ const Dl=lernData()[LR.id], gi=new Set(g.map(y=>y.i)), ri=new Set(LR.round.map(y=>y.i));
+    const allMt=Dl.it.map((r,i)=>({i,l:r[0],s:Dl.sec[r[1]],full:r[2],de:r[3],ru:r[4],ex:r[5],red:r[6],dis:r[7],say:r[8],mt:(Dl.mt&&Dl.mt[i])||null,fm:""})).filter(y=>y.mt&&y.ru&&!gi.has(y.i));
+    const pools=[lrnShuffle(allMt.filter(y=>LR.sel.has(y.l)&&!ri.has(y.i))), lrnShuffle(allMt.filter(y=>!LR.sel.has(y.l)&&!ri.has(y.i))), lrnShuffle(allMt.filter(y=>ri.has(y.i)))];
+    const keyOk=(arr,y)=>!arr.some(z=>lrnMtKey(z.mt[0])===lrnMtKey(y.mt[0])||lrnMtKey(z.mt[1])===lrnMtKey(y.mt[1]));
+    for(const strict of [true,false]) for(const pool of pools) for(const y of pool){ if(g.length+fill.length>=4) break; const cur=[...g,...fill]; if(fill.includes(y)) continue; if(strict?lrnMtFits(cur,y):keyOk(cur,y)) fill.push(y); } }
   const P=[...g.map(x=>({x,real:true})),...fill.map(x=>({x,real:false}))];
   const Lo=lrnShuffle(P.map((_,k)=>k)); let Ro; for(let t=0;t<50;t++){ Ro=lrnShuffle(P.map((_,k)=>k)); if(Ro.every((k,r)=>k!==Lo[r])) break; } /* juftlar hech qachon bir qatorda turmaydi */
   LR.mg={P,g:g.length,sel:null,done:new Set(),ord:[],last:null,bad:new Set(),L:Lo,R:Ro};
