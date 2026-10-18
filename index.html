@@ -180,7 +180,7 @@ main{padding-block:6px 40px}
 .lrn-fb:empty{display:none}.lrn-fb{position:fixed;left:0;right:0;bottom:0;z-index:5;margin:0 auto;max-width:640px;max-height:55vh;overflow:auto;border-radius:18px 18px 0 0;padding:16px 18px calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px;box-shadow:0 -6px 24px rgba(10,18,35,.18)}
 .lrn.has-fb .lrn-body{padding-bottom:calc(var(--fbh,260px) + 24px)}
 /* javob qutisi yozuv maydonining shundoq ostida (pastga qarash shart emas) — 2026-10-18 */
-.lrn .lrn-card .lrn-fb{position:static;max-width:none;max-height:none;overflow:visible;margin-top:12px;border-radius:16px;box-shadow:none;padding:14px 16px}
+.lrn .lrn-card .lrn-fb{position:static;max-width:none;max-height:none;overflow:visible;margin:4px -20px -20px;border-radius:0 0 15px 15px;box-shadow:none;padding:16px 20px 20px}
 .lrn.has-fb .lrn-body{padding-bottom:24px}
 .lrn.has-fb .lrn-wr .lrn-keys,.lrn.has-fb .lrn-wr .lrn-row2{display:none}
 .lrn-fb.ok{background:var(--green-soft)}.lrn-fb.bad{background:#FDECEC;color:#3a1515}.lrn-fb.near{background:#FFF6D6;color:#3a2e05}
@@ -3726,7 +3726,7 @@ function lrnNewRound(){
   if(!left.length){ lrnFinish(true); return; }
   const half=lrnShuffle(left.filter(x=>LR.st[x.i]===1)), fresh=lrnShuffle(left.filter(x=>!LR.st[x.i]));
   LR.round=[...half.slice(0,3),...fresh].slice(0,7); if(LR.round.length<7) LR.round=[...LR.round,...half.slice(3)].slice(0,7);
-  lrnShuffle(LR.round); LR.qi=0; LR.okN=0; LR.qN=0; lrnAsk();
+  lrnShuffle(LR.round); LR.rid=(LR.rid||0)+1; LR.qi=0; LR.okN=0; LR.qN=0; lrnAsk();
 }
 function lrnTypable(x){ return x.de.length<=40 && !/[…·]/.test(x.de) && !x.red; }
 function lrnProgress(){ const tot=LR.pool.length, d=LR.pool.filter(x=>LR.st[x.i]===2).length, h=LR.pool.filter(x=>LR.st[x.i]===1).length;
@@ -3779,11 +3779,13 @@ function lrnMatchStart(){
   const others=rest.filter(y=>!g.includes(y)); LR.round=[...LR.round.slice(0,LR.qi),...g,...others];
   /* kamida 4 juftlik bo'lsin — qo'shimcha (ballsiz) juftliklar */
   /* har doim 4 juftlik (2026-10-19): avval tanlangan Lektionlardan, keyin boshqa Lektionlardan, oxirida raunddagilardan; kerak bo'lsa bo'lim sharti yumshatiladi */
-  const fill=[]; if(g.length<4){ const Dl=lernData()[LR.id], gi=new Set(g.map(y=>y.i)), ri=new Set(LR.round.map(y=>y.i));
+  const fill=[]; if(g.length<4){ const Dl=lernData()[LR.id], gi=new Set(g.map(y=>y.i)), ri=new Set(LR.round.map(y=>y.i)); if(LR.fRound!==LR.rid){ LR.fRound=LR.rid; LR.usedF=new Set(); } const uf=LR.usedF;
     const allMt=Dl.it.map((r,i)=>({i,l:r[0],s:Dl.sec[r[1]],full:r[2],de:r[3],ru:r[4],ex:r[5],red:r[6],dis:r[7],say:r[8],mt:(Dl.mt&&Dl.mt[i])||null,fm:""})).filter(y=>y.mt&&y.ru&&!gi.has(y.i));
-    const pools=[lrnShuffle(allMt.filter(y=>LR.sel.has(y.l)&&!ri.has(y.i))), lrnShuffle(allMt.filter(y=>!LR.sel.has(y.l)&&!ri.has(y.i))), lrnShuffle(allMt.filter(y=>ri.has(y.i)))];
+    /* raunddagi so'zlar to'ldiruvchi bo'lmaydi (aks holda bitta juftlik ikki marta chiqadi); avval allaqachon o'rganilganlar */
+    const fresh=y=>!uf.has(y.i); /* shu raundda to'ldiruvchi bo'lgan juftlik qayta chiqmaydi */
+    const pools=[lrnShuffle(allMt.filter(y=>fresh(y)&&LR.sel.has(y.l)&&!ri.has(y.i)&&LR.st[y.i]===2)), lrnShuffle(allMt.filter(y=>fresh(y)&&LR.sel.has(y.l)&&!ri.has(y.i)&&LR.st[y.i]!==2)), lrnShuffle(allMt.filter(y=>fresh(y)&&!LR.sel.has(y.l)&&!ri.has(y.i))), lrnShuffle(allMt.filter(y=>!fresh(y)&&!ri.has(y.i))), lrnShuffle(allMt.filter(y=>ri.has(y.i)))];
     const keyOk=(arr,y)=>!arr.some(z=>lrnMtKey(z.mt[0])===lrnMtKey(y.mt[0])||lrnMtKey(z.mt[1])===lrnMtKey(y.mt[1]));
-    for(const strict of [true,false]) for(const pool of pools) for(const y of pool){ if(g.length+fill.length>=4) break; const cur=[...g,...fill]; if(fill.includes(y)) continue; if(strict?lrnMtFits(cur,y):keyOk(cur,y)) fill.push(y); } }
+    for(const strict of [true,false]) for(const pool of pools) for(const y of pool){ if(g.length+fill.length>=4) break; const cur=[...g,...fill]; if(fill.includes(y)) continue; if(strict?lrnMtFits(cur,y):keyOk(cur,y)) fill.push(y); } fill.forEach(y=>uf.add(y.i)); }
   const P=[...g.map(x=>({x,real:true})),...fill.map(x=>({x,real:false}))];
   const Lo=lrnShuffle(P.map((_,k)=>k)); let Ro; for(let t=0;t<50;t++){ Ro=lrnShuffle(P.map((_,k)=>k)); if(Ro.every((k,r)=>k!==Lo[r])) break; } /* juftlar hech qachon bir qatorda turmaydi */
   LR.mg={P,g:g.length,sel:null,done:new Set(),ord:[],last:null,bad:new Set(),L:Lo,R:Ro};
