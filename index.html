@@ -901,6 +901,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias .ias-head{position:static!important;margin:0!important;padding:0!important;box-shadow:none!important;background:none!important}
 .ias-fix{display:flex;flex-direction:column;gap:12px;margin:-16px -12px 0;padding:14px 12px 12px;background:var(--bg)}
 /* telefonda bittalab rejimida yuqori panel (−/+, Javoblar, yuklab olish) kerak emas — joy savolga (2026-10-18) */
+.v-body,.lrn{overflow-anchor:none} /* brauzer o'zi surmasin (scroll anchoring) — savol sakramasin */
 .ias-top .ias-tb.ias-x{display:none}
 @media (pointer:coarse),(max-width:560px){.viewer.ias-on .v-bar{display:none}.viewer.ias-on .ias-top .ias-tb.ias-x{display:grid}.viewer.ias-on .v-body{padding-top:calc(16px + env(safe-area-inset-top,0px))}}
 .ias-fix.stick{position:sticky;top:-16px;z-index:3;box-shadow:0 10px 14px -12px rgba(23,36,60,.45)}
@@ -3854,12 +3855,11 @@ function iasRender(m){
   document.addEventListener("focusin",e=>{ if(e.target&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName)){ if(window.scrollY) window.scrollTo(0,0); setTimeout(go,50); setTimeout(go,400); } });
   document.addEventListener("focusout",()=>setTimeout(go,350));
 })();
-function iasFixUpd(){ const f=document.getElementById("ias-fix"); if(!f) return; iasGrow(document.querySelector(".ias textarea.ias-input.long")); const vv=window.visualViewport, vh=vv?vv.height:innerHeight;
-  const kb=!!(vv && vv.height<window.innerHeight*0.8) || (document.activeElement&&document.activeElement.closest&&document.activeElement.closest(".ias")&&/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)&&matchMedia("(pointer:coarse)").matches&&vh<640);
-  f.parentElement.classList.toggle("ias-kb",kb);
-  if(kb&&!window.__iasKbWas) iasKbPin(); window.__iasKbWas=kb;
-  /* klaviatura ochiq bo'lsa qotirmaymiz — barmoq bilan surib savolni ko'rish mumkin bo'lsin */
-  const ok=f.offsetHeight<=vh*(kb?0.9:0.72); /* klaviatura ochiq bo'lsa ham sig'sa — savol qotib turadi (2026-10-18) */ if(ok!==f.classList.contains("stick")) f.classList.toggle("stick",ok); }
+/* Savol qismini qotirish — klaviaturaga BOG'LIQ EMAS (2026-10-18): ochilib-yopilganda hech narsa sakramasin.
+   Qaror ekranning to'liq balandligiga qarab bir marta qilinadi: telefonda savol qismi ekranning yarmidan oshmasa — doim qotib turadi. */
+function iasFixUpd(){ const f=document.getElementById("ias-fix"); if(!f) return; iasGrow(document.querySelector(".ias textarea.ias-input.long"));
+  IAS.maxH=Math.max(IAS.maxH||0, innerHeight); f.parentElement.classList.remove("ias-kb");
+  const ok=f.offsetHeight<=IAS.maxH*(matchMedia("(pointer:coarse)").matches?0.55:0.72); if(ok!==f.classList.contains("stick")) f.classList.toggle("stick",ok); }
 /* klaviatura ochilgach savol kartasini ekran tepasiga olib chiqamiz (savol + yozish joyi birga ko'rinsin) */
 function iasCardTop(force){ const c=document.getElementById("ias-card"), f=document.getElementById("ias-fix"); if(!c||(!force&&f&&f.classList.contains("stick"))) return;
   const sc=V.body, y=c.getBoundingClientRect().top-sc.getBoundingClientRect().top+sc.scrollTop-10; if(Math.abs(sc.scrollTop-y)>8) sc.scrollTo({top:Math.max(0,y),behavior:force?"auto":"smooth"}); }
@@ -3878,7 +3878,7 @@ document.addEventListener("click",e=>{ if(e.target.closest&&e.target.closest("[d
 document.addEventListener("touchmove",e=>{ if(IAS.pinUntil&&e.target.closest&&e.target.closest("#v-body")) IAS.pinUntil=0; },{passive:true});
 function iasFixInit(){ const f=document.getElementById("ias-fix"); if(!f) return; iasFixUpd();
   if(!window.__iasFixRO){ window.__iasFixRO=new ResizeObserver(()=>requestAnimationFrame(iasFixUpd)); if(window.visualViewport) visualViewport.addEventListener("resize",()=>requestAnimationFrame(iasFixUpd)); addEventListener("resize",iasFixUpd);
-    document.addEventListener("focusin",e=>{ if(e.target&&e.target.closest&&e.target.closest(".ias")&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName)&&matchMedia("(pointer:coarse)").matches) iasKbPin(); }); document.addEventListener("focusout",e=>{ if(e.target&&e.target.closest&&e.target.closest(".ias")) setTimeout(iasFixUpd,350); }); }
+    document.addEventListener("focusin",e=>{ if(e.target&&e.target.closest&&e.target.closest(".ias")&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName)&&matchMedia("(pointer:coarse)").matches) setTimeout(iasFixUpd,400); }); document.addEventListener("focusout",e=>{ if(e.target&&e.target.closest&&e.target.closest(".ias")) setTimeout(iasFixUpd,350); }); }
   window.__iasFixRO.disconnect(); window.__iasFixRO.observe(f); }
 /* «Prüfen» bosilganda klaviatura yopilmasin — fokus yozish joyida qoladi */
 document.addEventListener("mousedown",e=>{ if(e.target.closest&&e.target.closest("#ias-pr")&&V.body.querySelector(".ias-inl.ias-foc")) e.preventDefault(); });
@@ -3935,7 +3935,10 @@ function iasSol(){ const st=IAS.steps[IAS.k]; if(!st) return; const it=iaItems()
   else { ans=String(it.a||""); V.body.querySelectorAll(".ias-bw").forEach(b=>b.classList.toggle("sol",iaNorm(b.dataset.iasw)===iaNorm(ans))); }
   const fb=document.getElementById("ias-fb"); fb.className="ias-fb sol"; fb.innerHTML=`💡 Lösung:<b class="ias-ans">${esc(ans)}</b>${iasErkl(st.i)}`; iasSee(fb); }
 /* Lösung/xato qutisi ekrandan chiqib ketmasin */
-function iasSee(el){ requestAnimationFrame(()=>{ const r=el.getBoundingClientRect(), vh=(window.visualViewport?visualViewport.height:innerHeight); const fx=document.getElementById("ias-fix"), H=fx&&fx.classList.contains("stick")?fx.offsetHeight-6:70; if(r.top<H+10||r.bottom>vh){ const sc=V.body, top=r.top-sc.getBoundingClientRect().top+sc.scrollTop-H; sc.scrollTo({top:Math.max(0,r.height>vh-H-70?top:top-(vh-H-70-r.height)/2),behavior:"smooth"}); } }); }
+/* elementni ko'rsatish: qotgan savol ostiga kiritmaymiz; ko'rinib tursa — umuman surmaymiz (2026-10-18) */
+function iasSee(el){ requestAnimationFrame(()=>{ if(!el||!el.isConnected) return; const sc=V.body, sr=sc.getBoundingClientRect(), r=el.getBoundingClientRect(), fx=document.getElementById("ias-fix");
+  const H=fx&&fx.classList.contains("stick")?fx.getBoundingClientRect().bottom:sr.top+70; if(r.top>=H-4&&r.top<sr.bottom-60) return;
+  sc.scrollTo({top:Math.max(0,sc.scrollTop+(r.top-H)-8),behavior:"smooth"}); }); }
 function iasDots(){ const st=IAS.steps[IAS.k]; const el=document.getElementById("ias-dots"); if(!el||!st) return;
   el.innerHTML=IAS.steps.map((x,k)=>({x,k})).filter(o=>o.x.h===st.h).map(({x,k})=>`<button type="button" class="${iasState(x.i)} ${k===IAS.k?"cur":""}" data-iasd="${k}" aria-label="${k+1}"></button>`).join(""); }
 /* ✓ tugmasi: to'g'ri bo'lgach «Weiter →» ga aylanadi */
@@ -3957,9 +3960,9 @@ function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document
   if(s==="ok"){ iasShow(false); iasOkFlash(); return; }
   IAS.fails[st.i]=(IAS.fails[st.i]||0)+1; iasSolBtn();
   const why=iaWhyText(st.i);
-  fb.className="ias-fb bad"; fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`;
+  fb.className="ias-fb bad"; fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`; iasSee(fb);
   const inp=document.getElementById("ias-in"); if(st.kind==="g"){ inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); if(V.body.querySelector(".ias-inl")){ try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(er){} } else inp.select(); const sl=document.querySelector("#ias-card .ias-slot.cur"); if(sl){ sl.classList.remove("shake"); void sl.offsetWidth; sl.classList.add("shake"); } }
-  else iasShow(false), (fb.className="ias-fb bad", fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`);
+  else iasShow(false), (fb.className="ias-fb bad", fb.innerHTML=`✗ Leider falsch – noch einmal!${why?`<div class="ias-why">${why}</div>`:""}`, iasSee(fb));
   iasDots(); }
 function iasNext(auto){ const n=IAS.steps.length; for(let d=1; d<=n; d++){ const k=(IAS.k+d)%n; if(iasState(IAS.steps[k].i)!=="ok"||!auto){ if(auto&&k<=IAS.k&&IAS.steps.slice(IAS.k+1).every(s=>iasState(s.i)==="ok")&&IAS.steps.every(s=>iasState(s.i)==="ok")) break; IAS.k=k; iasShow(true); return; } }
   iasEnd(); }
