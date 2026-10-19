@@ -3065,9 +3065,9 @@ const T = {
 /* Akkaunt: ism + parol (serversiz — shu qurilmada). Har o'quvchining ma'lumoti alohida kalitda: "u:<ism>:<kalit>". 2026-10-17 */
 const ACC={cur:null,name:""};
 try{ ACC.cur=localStorage.getItem("acc:cur")||null; const U=JSON.parse(localStorage.getItem("acc:users")||"{}"); if(ACC.cur&&U[ACC.cur]) ACC.name=U[ACC.cur].name; else ACC.cur=null; }catch(e){ ACC.cur=null; }
-const ACC_GLOBAL=/^(lang|tab2|vzoom|acc:|u:)/;
+const ACC_GLOBAL=/^(lang|tab2|vzoom|acc:|u:|cloud:)/;
 function accK(k){ return (ACC.cur && !ACC_GLOBAL.test(k)) ? "u:"+ACC.cur+":"+k : k; }
-const store = {get(k){try{return localStorage.getItem(accK(k))}catch(e){return null}}, set(k,v){try{localStorage.setItem(accK(k),v)}catch(e){}}};
+const store = {get(k){try{return localStorage.getItem(accK(k))}catch(e){return null}}, set(k,v){try{localStorage.setItem(accK(k),v)}catch(e){} if(ACC.cur&&typeof cloudDirty==="function") cloudDirty();}};
 let HW = []; try{ HW = JSON.parse(document.getElementById("hw-data").textContent) || []; }catch(e){ HW = []; }
 HW = HW.filter(h=>h && h.date && (h.title || Array.isArray(h.items))).map(h=>{
   h.items = Array.isArray(h.items) ? h.items : [];
@@ -4613,7 +4613,7 @@ initDl(10);
 /* ===== Akkaunt oynasi ===== */
 const ACCT={
   uz:{title:"Ro‘yxatdan o‘tish", lead:"Ma’lumotlar saqlanishi uchun ismingiz va parolingizni kiriting.", name:"Ism va familiya", pw:"Parol", namePh:"Masalan: Jamila Jamilova", pwPh:"Kamida 4 ta belgi", go:"Kirish",
-      note:"Natijalaringiz (Yodlash, varaqlardagi javoblar) shu telefonda sizning ismingiz bilan saqlanadi va ustozga yuboriladi. Parolni eslab qoling.",
+      note:"Natijalaringiz (Yodlash, varaqlardagi javoblar) internetda saqlanadi: boshqa telefondan ham shu ism va parol bilan kirsangiz, natijalaringiz qaytadi. Ustoz ham ularni ko‘radi. Parolni eslab qoling.", cT:"☁️ Natijalaringizni saqlab qo‘yamiz", cL:"Endi natijalaringiz internetda ham saqlanadi — telefon almashsa yoki sayt manzili o‘zgarsa ham yo‘qolmaydi. Buning uchun parolingizni bir marta kiriting.", cGo:"Saqlash", cLater:"Keyinroq", cBad:"Parol noto‘g‘ri. Esingizda bo‘lmasa — «Parolni unutdim»ni bosing va ustozga ayting.", cChk:"☁️ Tekshirilmoqda…", eCloudPw:"Bu ism bilan ro‘yxatdan o‘tilgan, lekin parol noto‘g‘ri. Parolni unutgan bo‘lsangiz — ustozga ayting.", rNoCloud:"Bunday ism bilan ro‘yxatdan o‘tilmagan.",
       eName:"Ism va familiyangizni to‘liq yozing", ePw:"Parol kamida 4 ta belgidan iborat bo‘lsin", eWrong:"Parol noto‘g‘ri. Qaytadan urinib ko‘ring.",
       you:"Siz:", out:"Chiqish", close:"Yopish", other:"Boshqa o‘quvchi bo‘lib kirish uchun «Chiqish»ni bosing.",
       warn:"⚠️ Ism va parolingizni albatta yozib oling! Parolni unutsangiz, uni faqat ustoz tiklay oladi.", forgot:"Parolni unutdim",
@@ -4625,7 +4625,7 @@ const ACCT={
       here:"Bu telefonda ro‘yxatdan o‘tganlar — ismingizni bosing:", loginIs:"Login — bu ism va familiyangiz (katta-kichik harf farqi yo‘q).",
       sim:n=>`Siz avval «${n}» deb ro‘yxatdan o‘tgansiz shekilli. Bu sizmisiz?`, simYes:"Ha, bu men", simNo:"Yo‘q, men yangi o‘quvchiman"},
   ru:{title:"Регистрация", lead:"Чтобы данные сохранялись, введите имя и пароль.", name:"Имя и фамилия", pw:"Пароль", namePh:"Например: Jamila Jamilova", pwPh:"Минимум 4 символа", go:"Войти",
-      note:"Ваши результаты (заучивание, ответы в листах) сохраняются на этом телефоне под вашим именем и отправляются учителю. Запомните пароль.",
+      note:"Ваши результаты (заучивание, ответы в листах) сохраняются в интернете: войдёте с другого телефона с тем же именем и паролем — результаты вернутся. Учитель тоже их видит. Запомните пароль.", cT:"☁️ Сохраним ваши результаты", cL:"Теперь результаты сохраняются и в интернете — не пропадут, даже если смените телефон или адрес сайта. Для этого один раз введите пароль.", cGo:"Сохранить", cLater:"Позже", cBad:"Неверный пароль. Если не помните — нажмите «Забыл пароль» и скажите учителю.", cChk:"☁️ Проверяем…", eCloudPw:"Ученик с таким именем уже есть, но пароль неверный. Если забыли пароль — скажите учителю.", rNoCloud:"Ученика с таким именем нет.",
       eName:"Напишите имя и фамилию полностью", ePw:"Пароль — минимум 4 символа", eWrong:"Неверный пароль. Попробуйте ещё раз.",
       you:"Вы:", out:"Выйти", close:"Закрыть", other:"Чтобы войти как другой ученик, нажмите «Выйти».",
       warn:"⚠️ Обязательно запишите имя и пароль! Если забудете пароль, восстановить его сможет только учитель.", forgot:"Забыл(а) пароль",
@@ -4676,6 +4676,7 @@ function accMigrate(key){
 document.addEventListener("change",e=>{ if(e.target.id==="acc-ok"){ const b=document.getElementById("acc-cont"); if(b) b.disabled=!e.target.checked; } });
 document.addEventListener("submit",async e=>{
   if(e.target.id!=="acc-f") return; e.preventDefault();
+  if(document.getElementById("acc-cpw")){ cloudAskGo(); return; }
   const st=document.getElementById("acc-st"); if(!st) return;
   const name=(document.getElementById("acc-name").value||"").replace(/\s+/g," ").trim(), pw=document.getElementById("acc-pw").value||"";
   st.className="acc-st err";
@@ -4683,13 +4684,25 @@ document.addEventListener("submit",async e=>{
   if(pw.length<4){ st.textContent=at("ePw"); document.getElementById("acc-pw").focus(); return; }
   const U=accUsers(), key=accKeyOf(name), first=!Object.keys(U).length;
   if(U[key]){ const hh=await accHash(U[key].s+":"+pw); if(hh!==U[key].h){ st.textContent=at("eWrong"); document.getElementById("acc-pw").select(); return; }
+    if(CLOUD_ON&&!U[key].c){ st.className="acc-st"; st.textContent=at("cChk"); try{ U[key].c=await cloudCap(key,pw); localStorage.setItem("acc:users",JSON.stringify(U)); }catch(err){} }
     try{ localStorage.setItem("acc:cur",key); }catch(err){} location.reload(); return; }
+  /* ☁️ bu telefonda yo'q — bazadan qidiramiz (boshqa telefonda yoki eski manzilda ro'yxatdan o'tgan bo'lishi mumkin) */
+  let CAP=null;
+  if(CLOUD_ON){ st.className="acc-st"; st.textContent=at("cChk");
+    try{ CAP=await cloudCap(key,pw); const fd=await fsGet("p/"+CAP);
+      if(fd&&fd.d){ const U2=accUsers(), s=Math.random().toString(36).slice(2,10), od=JSON.parse(fd.d.stringValue||"{}"); U2[key]={name:od.__nm||name, s, h:await accHash(s+":"+pw), d:new Date().toISOString().slice(0,10), c:CAP};
+        localStorage.setItem("acc:users",JSON.stringify(U2)); cloudApply(key, od);
+        localStorage.setItem("cloud:t:"+key, String((fd.t||{}).integerValue||0)); localStorage.setItem("cloud:n:"+key, CAP); localStorage.setItem("acc:cur",key); location.reload(); return; }
+      if(await fsGet("n/"+await cloudNameId(key))){ st.className="acc-st err"; st.textContent=at("eCloudPw"); document.getElementById("acc-pw").select(); return; }
+    }catch(err){}
+    st.className="acc-st err"; st.textContent=""; }
   /* o'xshash ism bormi? (familiya-ism o'rni almashgan yoki 1-2 harf farq) */
   if(!ACC_NEWOK){ const words=k=>k.split("_").filter(Boolean).sort().join("_");
     const sim=Object.entries(U).find(([k,u])=>words(k)===words(key)||(Math.abs(k.length-key.length)<=2&&accLev(k,key)<=2));
     if(sim){ st.className="acc-st"; st.innerHTML=`<div class="acc-sim">${esc(at("sim")(sim[1].name))}<div class="ch-btns"><button type="button" class="btn primary" data-accnm="${esc(sim[1].name)}">${esc(at("simYes"))}</button><button type="button" class="btn" data-acc="newok">${esc(at("simNo"))}</button></div></div>`; return; } }
   /* yangi akkaunt: avval login/parolni yozib olishni qattiq eslatamiz */
-  accSaveScreen(name,pw,async()=>{ const U2=accUsers(), s=Math.random().toString(36).slice(2,10); U2[key]={name, s, h:await accHash(s+":"+pw), d:new Date().toISOString().slice(0,10)};
+  accSaveScreen(name,pw,async()=>{ const U2=accUsers(), s=Math.random().toString(36).slice(2,10); let c=CAP; if(!c&&CLOUD_ON){ try{ c=await cloudCap(key,pw); }catch(err){} }
+    U2[key]={name, s, h:await accHash(s+":"+pw), d:new Date().toISOString().slice(0,10)}; if(c) U2[key].c=c;
     try{ localStorage.setItem("acc:users",JSON.stringify(U2)); localStorage.setItem("acc:cur",key); }catch(err){}
     if(first) accMigrate(key); location.reload(); });
 });
@@ -4718,10 +4731,23 @@ function accForgot(){ const f=document.getElementById("acc-f"), nm=(document.get
 async function accReset(){ const st=document.getElementById("acc-rst"), name=(document.getElementById("acc-rname").value||"").replace(/\s+/g," ").trim(),
     code=document.getElementById("acc-rcode").value.trim(), pw=document.getElementById("acc-rpw").value||"";
   const U=accUsers(), key=accKeyOf(name);
-  if(!U[key]){ st.textContent=at("rNoUser"); return; }
+  if(!U[key]&&!CLOUD_ON){ st.textContent=at("rNoUser"); return; }
   if(await accHash(code)!=="33dfc2422f82ed5675d6be3862f58c0de5cb4b6b9a122d95119274c87b7f8d2c"){ st.textContent=at("rBadCode"); return; }
   if(pw.length<4){ st.textContent=at("ePw"); return; }
+  if(!U[key]){ /* ☁️ bu telefonda yo'q: bazadagi tiklash kaliti ustoz kodi bilan ochiladi */
+    st.className="acc-st"; st.textContent=at("cChk");
+    try{ const pk=await cloudTchKey(code); let r=null, tok="", n=0;
+      do{ const rr=await fetch(FS_BASE+"s?pageSize=300"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!rr.ok) break; const j=await rr.json();
+        for(const doc of (j.documents||[])){ const e=doc.fields&&doc.fields.e&&doc.fields.e.stringValue; if(!e) continue; try{ const d=await cloudDecWith(pk,e); if(d&&d.ak===key&&d.c&&(!r||(d.t||0)>(r.t||0))) r=d; }catch(err){} }
+        tok=j.nextPageToken||""; }while(tok&&++n<30);
+      if(!r){ st.className="acc-st err"; st.textContent=at("rNoCloud"); return; }
+      const fd=await fsGet("p/"+r.c), nm=r.nm||name, c2=await cloudCap(key,pw);
+      accSaveScreen(nm,pw,async()=>{ const U2=accUsers(), s=Math.random().toString(36).slice(2,10); U2[key]={name:nm, s, h:await accHash(s+":"+pw), d:new Date().toISOString().slice(0,10), c:c2};
+        try{ localStorage.setItem("acc:users",JSON.stringify(U2)); if(fd&&fd.d) cloudApply(key, JSON.parse(fd.d.stringValue||"{}")); localStorage.setItem("acc:cur",key); }catch(err){} location.reload(); });
+    }catch(err){ st.className="acc-st err"; st.textContent=at("rNoCloud"); }
+    return; }
   const nm=U[key].name; accSaveScreen(nm,pw,async()=>{ const U2=accUsers(), s=Math.random().toString(36).slice(2,10); U2[key].s=s; U2[key].h=await accHash(s+":"+pw);
+    if(CLOUD_ON){ try{ U2[key].c=await cloudCap(key,pw); localStorage.removeItem("cloud:h:"+key); }catch(err){} }
     try{ localStorage.setItem("acc:users",JSON.stringify(U2)); localStorage.setItem("acc:cur",key); }catch(err){} location.reload(); }); }
 document.addEventListener("click",e=>{
   const lg=e.target.closest("[data-acclang]"); if(lg){ const b=document.getElementById("lang-"+lg.dataset.acclang); if(b) b.click(); const nm=document.getElementById("acc-name"), v=nm?nm.value:""; accLogin(); const n2=document.getElementById("acc-name"); if(n2) n2.value=v; return; }
@@ -4731,6 +4757,8 @@ document.addEventListener("click",e=>{
     else if(k==="close"){ accEl().hidden=true; }
     else if(k==="newok"){ ACC_NEWOK=true; document.getElementById("acc-f").requestSubmit(); }
     else if(k==="forgot") accForgot(); else if(k==="rback") accLogin(); else if(k==="rgo") accReset();
+    else if(k==="cgo") cloudAskGo(); else if(k==="ceye"){ const p=document.getElementById("acc-cpw"); if(p) p.type=p.type==="password"?"text":"password"; }
+    else if(k==="clater"){ try{ sessionStorage.setItem("cloud:later","1"); }catch(err){} accEl().hidden=true; document.body.style.overflow=""; }
     else if(k==="saved"){ if(document.getElementById("acc-ok").checked && ACC_SAVE) ACC_SAVE(); }
     else if(k==="ccopy"){ const t=a.dataset.t; (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{ a.textContent=at("copied"); }).catch(()=>{ prompt("",t); }); }
     else if(k==="out"){ try{ localStorage.removeItem("acc:cur"); }catch(err){} location.reload(); }
@@ -5344,7 +5372,7 @@ function stCollect(){ const pre="u:"+ACC.cur+":", sent={}, best={}, D=lernData()
   const g=Object.entries(Object.assign(sent,best)).map(([id,v])=>{ const mm=byId[id]; return [mm?mm.title:id, mm?accLvl(mm):"", v[0], v[1]]; });
   const y=Object.keys(D).map(id=>{ let st={}; try{ st=JSON.parse(store.get("lern:"+id)||"{}")||{}; }catch(e){} let ok=0,n=0;
     D[id].it.forEach((r,i)=>{ if(!r[4]||r[6]) return; n++; if(st[i]===2) ok++; }); const mm=byId[id]; return ok?[mm?mm.title:id, mm?accLvl(mm):"", ok, n]:null; }).filter(Boolean);
-  const c=progCount(); return {nm:ACC.name, w:c.n, k:c.k, g, y, t:Date.now()}; }
+  const c=progCount(); return {nm:ACC.name, ak:ACC.cur, w:c.n, k:c.k, g, y, t:Date.now()}; }
 function stSync(force){ if(!ACC.cur||IN_ARTIFACT||tchOk()||!(window.crypto&&crypto.subtle)) return;
   clearTimeout(stSync.t); stSync.t=setTimeout(async()=>{ try{
     const d=stCollect(), sig=JSON.stringify([d.nm,d.w,d.k,d.g,d.y]); let last={}; try{ last=JSON.parse(store.get("st:pub")||"{}")||{}; }catch(e){}
@@ -5355,11 +5383,95 @@ function stSync(force){ if(!ACC.cur||IN_ARTIFACT||tchOk()||!(window.crypto&&cryp
       c.on("error",()=>{}); setTimeout(()=>{ try{ c.end(true); }catch(e){} },15000); }catch(e){} }); });
   }catch(e){} }, force?0:1500); }
 setTimeout(()=>{ try{ stSync(); }catch(e){} },5000);
+
+/* ===== ☁️ Bulut saqlash — Firestore (2026-10-19, Otabek) =====
+   O'quvchi natijalari telefonda ham, internetdagi bazada ham saqlanadi: boshqa telefondan kirsa — natijasi qaytadi.
+   p/<kalit>  — to'liq natijalar; kalit = ism + paroldan PBKDF2 (64 hex, maxfiy).
+   s/<id>     — ustoz paneli uchun qisqa natija (ustoz ochiq kaliti bilan shifrlangan).
+   n/<ism-id> — ism band ekanini bildiradi. Parolni tiklash kaliti s/ ichida (faqat ustoz ochadi). */
+const FS_BASE="https://firestore.googleapis.com/v1/projects/streber-c25a3/databases/(default)/documents/";
+const CLOUD_ON=!IN_ARTIFACT && !!(window.crypto&&crypto.subtle) && typeof fetch==="function";
+const CLOUD_SKIP=/^(st:pub|rank:pub|cloud:|__nm$)/;
+function cloudHex(b){ return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join(""); }
+async function cloudSha(s){ return cloudHex(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s))); }
+async function cloudCap(key,pw){ const S=crypto.subtle, base=await S.importKey("raw",new TextEncoder().encode(key+"\u0000"+pw),"PBKDF2",false,["deriveBits"]);
+  return cloudHex(await S.deriveBits({name:"PBKDF2",salt:new TextEncoder().encode("streber.uz/p/v1"),iterations:120000,hash:"SHA-256"},base,256)); }
+function cloudNameId(key){ return cloudSha("streber.uz/n/v1:"+key); }
+function cloudSumId(cap){ return cloudSha("streber.uz/s/v1:"+cap); }
+async function fsGet(path){ const r=await fetch(FS_BASE+path,{cache:"no-store"}); if(r.status===404) return null; if(!r.ok) throw new Error("fs "+r.status); return (await r.json()).fields||{}; }
+async function fsPut(path,fields,ka){ const r=await fetch(FS_BASE+path,{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify({fields}),keepalive:!!ka}); if(!r.ok) throw new Error("fs "+r.status); }
+const fsS=v=>({stringValue:String(v)}), fsI=v=>({integerValue:String(Math.round(v))});
+function cloudDump(key){ const pre="u:"+key+":", o={}; for(let i=0;i<localStorage.length;i++){ const k=localStorage.key(i); if(k&&k.startsWith(pre)){ const kk=k.slice(pre.length); if(!CLOUD_SKIP.test(kk)) o[kk]=localStorage.getItem(k); } } o.__nm=(accUsers()[key]||{}).name||""; return o; }
+/* ikki qurilma natijasini birlashtirish: sonlar — kattasi, ro'yxat/obyekt — birlashma (o'rganilgan so'z yo'qolmaydi) */
+function cloudMergeV(a,b){ if(a==null) return b; if(b==null||a===b) return a;
+  let A,B; try{ A=JSON.parse(a); B=JSON.parse(b); }catch(e){ return b; }
+  const mo=(x,y)=>{ if(typeof x==="number"&&typeof y==="number") return Math.max(x,y);
+    if(Array.isArray(x)&&Array.isArray(y)){ const seen=new Set(), out=[]; [...y,...x].forEach(v=>{ const s=JSON.stringify(v); if(!seen.has(s)){ seen.add(s); out.push(v); } }); return out; }
+    if(x&&y&&typeof x==="object"&&typeof y==="object"&&!Array.isArray(x)&&!Array.isArray(y)){ const o=Object.assign({},y); for(const k in x) o[k]= k in o? mo(x[k],o[k]) : x[k]; return o; }
+    return y; };
+  const r=mo(A,B); return typeof r==="string"? r : JSON.stringify(r); }
+function cloudApply(key,o){ let ch=0; const pre="u:"+key+":"; for(const kk in o){ if(CLOUD_SKIP.test(kk)) continue; const cur=localStorage.getItem(pre+kk), nv=cloudMergeV(cur,o[kk]); if(nv!=null&&nv!==cur){ try{ localStorage.setItem(pre+kk,nv); ch++; }catch(e){} } } return ch; }
+function cloudUser(){ const U=accUsers(); return ACC.cur&&U[ACC.cur]||null; }
+function cloudG(k){ try{ return localStorage.getItem("cloud:"+k+":"+ACC.cur); }catch(e){ return null; } }
+function cloudS(k,v){ try{ localStorage.setItem("cloud:"+k+":"+ACC.cur,String(v)); }catch(e){} }
+let CLOUD_T=null, CLOUD_BUSY=false;
+function cloudDirty(){ if(!CLOUD_ON||!ACC.cur) return; clearTimeout(CLOUD_T); CLOUD_T=setTimeout(()=>cloudPush(),12000); }
+async function cloudPush(ka){ const u=cloudUser(); if(!CLOUD_ON||!u||!u.c||CLOUD_BUSY||tchOk()) return; CLOUD_BUSY=true;
+  try{ const d=JSON.stringify(cloudDump(ACC.cur)), h=await cloudSha(d);
+    if(h!==cloudG("h")){ const t=Date.now(); await fsPut("p/"+u.c,{d:fsS(d),t:fsI(t)},ka&&d.length<60000); cloudS("h",h); cloudS("t",t); }
+    if(!cloudG("n")){ await fsPut("n/"+await cloudNameId(ACC.cur),{t:fsI(Date.now())}).catch(()=>{}); cloudS("n",1); }
+    const sm=stCollect(); sm.ak=ACC.cur; sm.c=u.c; /* c — tiklash kaliti, faqat ustoz ocha oladi */ const sh=await cloudSha(JSON.stringify([sm.nm,sm.w,sm.k,sm.g,sm.y,sm.c]));
+    if(sh!==cloudG("sh")||Date.now()-(+cloudG("st")||0)>864e5){ await fsPut("s/"+await cloudSumId(u.c),{e:fsS(await stEnc(sm)),t:fsI(Date.now())}); cloudS("sh",sh); cloudS("st",Date.now()); }
+  }catch(e){} CLOUD_BUSY=false; }
+async function cloudPull(){ const u=cloudUser(); if(!CLOUD_ON||!u||!u.c) return;
+  try{ const f=await fsGet("p/"+u.c);
+    if(f&&f.d){ const st=+((f.t||{}).integerValue||0), lt=+(cloudG("t")||0);
+      if(st>lt){ const ch=cloudApply(ACC.cur, JSON.parse(f.d.stringValue||"{}")); cloudS("t",st); cloudS("h","");
+        if(ch){ let rl=null; try{ rl=sessionStorage.getItem("cloud:rl"); sessionStorage.setItem("cloud:rl","1"); }catch(e){} if(!rl){ location.reload(); return; } } } }
+  }catch(e){}
+  cloudPush(); }
+/* eski akkaunt (bulutsiz): parolni bir marta so'raymiz — natijalar bazaga ko'chadi */
+function cloudAsk(){ if(!accEl()) return; const f=document.getElementById("acc-f");
+  f.innerHTML=`<div class="snd-h"><h2>${esc(at("cT"))}</h2></div><p class="acc-lead">${esc(at("cL"))}</p>
+    <p class="acc-who">${esc(at("you"))} <b>${esc(ACC.name)}</b></p>
+    <label class="acc-lb">${esc(at("pw"))}<span class="acc-pw"><input id="acc-cpw" type="password" maxlength="40" autocomplete="current-password"><button type="button" class="acc-eye" data-acc="ceye" aria-label="👁">👁</button></span></label>
+    <div class="acc-st err" id="acc-cst"></div>
+    <button type="button" class="btn primary" data-acc="cgo">${esc(at("cGo"))}</button>
+    <button type="button" class="lrn-link" data-acc="clater">${esc(at("cLater"))}</button>
+    <button type="button" class="lrn-link acc-forgot" data-acc="forgot">🔑 ${esc(at("forgot"))}</button>`;
+  accEl().hidden=false; document.body.style.overflow="hidden"; setTimeout(()=>{ const i=document.getElementById("acc-cpw"); if(i) i.focus(); },50); }
+async function cloudAskGo(){ const st=document.getElementById("acc-cst"), pw=(document.getElementById("acc-cpw")||{}).value||"", U=accUsers(), u=U[ACC.cur]; if(!u) return;
+  if(await accHash(u.s+":"+pw)!==u.h){ st.textContent=at("cBad"); return; }
+  st.className="acc-st"; st.textContent=at("cChk"); u.c=await cloudCap(ACC.cur,pw); try{ localStorage.setItem("acc:users",JSON.stringify(U)); }catch(e){}
+  accEl().hidden=true; document.body.style.overflow=""; cloudPull(); }
+/* ustoz kodi bilan (shu qurilmada saqlamasdan) ustoz kalitini ochish — parolni boshqa telefonda tiklash uchun */
+async function cloudTchKey(code){ const S=crypto.subtle, e=ST_KEY.enc;
+  const base=await S.importKey("raw",new TextEncoder().encode(code),"PBKDF2",false,["deriveKey"]);
+  const k=await S.deriveKey({name:"PBKDF2",salt:stB64d(e.s),iterations:150000,hash:"SHA-256"},base,{name:"AES-GCM",length:256},false,["decrypt"]);
+  const jwk=JSON.parse(new TextDecoder().decode(await S.decrypt({name:"AES-GCM",iv:stB64d(e.i)},k,stB64d(e.c))));
+  return S.importKey("jwk",jwk,{name:"ECDH",namedCurve:"P-256"},false,["deriveKey"]); }
+async function cloudDecWith(pk,s){ const d=JSON.parse(s), S=crypto.subtle;
+  const ep=await S.importKey("jwk",{kty:"EC",crv:"P-256",x:d.x,y:d.y,ext:true},{name:"ECDH",namedCurve:"P-256"},false,[]);
+  const k=await S.deriveKey({name:"ECDH",public:ep},pk,{name:"AES-GCM",length:256},false,["decrypt"]);
+  return JSON.parse(new TextDecoder().decode(await S.decrypt({name:"AES-GCM",iv:stB64d(d.i)},k,stB64d(d.c)))); }
+if(CLOUD_ON){
+  setTimeout(()=>{ try{ const u=cloudUser(); if(!u||tchOk()) return; if(u.c) cloudPull();
+    else{ let skip=null; try{ skip=sessionStorage.getItem("cloud:later"); }catch(e){} if(!skip&&accEl()&&accEl().hidden) cloudAsk(); } }catch(e){} },2500);
+  document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="hidden"){ clearTimeout(CLOUD_T); cloudPush(true); } });
+}
+/* ustoz paneli: bazadagi natijalarni o'qish */
+async function tpCloudLoad(){ if(!CLOUD_ON) return; try{ let tok="", n=0;
+  do{ const r=await fetch(FS_BASE+"s?pageSize=300"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok) break; const j=await r.json();
+    for(const doc of (j.documents||[])){ const id=doc.name.split("/").pop(), e=doc.fields&&doc.fields.e&&doc.fields.e.stringValue; if(!e||TP.stRaw["c:"+id]===e) continue; TP.stRaw["c:"+id]=e;
+      try{ const d=await stDec(e); if(d&&d.nm){ const kk=d.ak||("c:"+id), o=TP.stu[kk]; if(!o||(d.t||0)>=(o.t||0)) TP.stu[kk]=d; } }catch(err){ TP.stLocked=true; } }
+    tok=j.nextPageToken||""; }while(tok&&++n<30);
+  tpStDrawSoon(); }catch(e){} }
 /* ustoz tomoni: 👥 O'quvchilar */
 function tpStStart(){ if(TP.mqSt) return; TP.stu={}; TP.stRaw={};
   TP.mqSt=mqMulti(cl=>cl.subscribe(ST_NS+"+",{qos:1}),(t,m)=>{ const id=t.split("/").pop();
-    if(!m){ delete TP.stu[id]; delete TP.stRaw[id]; tpStDrawSoon(); return; } if(TP.stRaw[id]===m) return; TP.stRaw[id]=m;
-    stDec(m).then(d=>{ if(d&&d.nm){ const o=TP.stu[id]; if(!o||(d.t||0)>=(o.t||0)) TP.stu[id]=d; tpStDrawSoon(); } }).catch(()=>{ TP.stLocked=true; tpStDrawSoon(); }); }); }
+    if(!m){ delete TP.stRaw[id]; return; } if(TP.stRaw[id]===m) return; TP.stRaw[id]=m;
+    stDec(m).then(d=>{ if(d&&d.nm){ const kk=d.ak||id, o=TP.stu[kk]; d._mq=id; if(!o||(d.t||0)>=(o.t||0)) TP.stu[kk]=d; tpStDrawSoon(); } }).catch(()=>{ TP.stLocked=true; tpStDrawSoon(); }); });
+  tpCloudLoad(); clearInterval(TP.cloudIv); TP.cloudIv=setInterval(tpCloudLoad,60000); }
 function tpStDrawSoon(){ clearTimeout(TP.stD); TP.stD=setTimeout(tpStDraw,200); }
 function stPct(g){ const w=g.filter(x=>x[3]>0); return w.length? Math.round(w.reduce((s,x)=>s+x[2]/x[3],0)/w.length*100) : null; }
 function tpSt(){ document.getElementById("tp-body").innerHTML=`<div class="lrn-card"><div class="tp-lbh"><h3>👥 O‘quvchilar natijalari</h3><span class="ch-net">ro‘yxatdan o‘tganlar · o‘zi yangilanadi</span></div>
@@ -5367,7 +5479,8 @@ function tpSt(){ document.getElementById("tp-body").innerHTML=`<div class="lrn-c
     <div class="tp-strow"><input class="ch-in" id="tp-stq" placeholder="🔍 Ism bo‘yicha qidirish" value="${esc(TP.stQ||"")}"><div class="tp-seg">${[["w","So‘zlar"],["g","Grammatika"],["n","Ism"]].map(([k,t])=>`<button type="button" data-tpsort="${k}" aria-pressed="${(TP.stS||"w")===k}">${t}</button>`).join("")}</div></div>
     <ul class="tp-st" id="tp-st"></ul><button type="button" class="lrn-link" data-tp="stcsv">📥 Jadvalni yuklab olish (CSV)</button></div>`; tpStDraw(); }
 function tpStList(){ const q=(TP.stQ||"").toLowerCase(), S=TP.stS||"w";
-  return Object.entries(TP.stu||{}).filter(([id,d])=>!q||String(d.nm).toLowerCase().includes(q))
+  let hid={}; try{ hid=JSON.parse(localStorage.getItem("tp:hid")||"{}")||{}; }catch(e){}
+  return Object.entries(TP.stu||{}).filter(([id,d])=>(d.t||0)>(hid[id]||0)&&(!q||String(d.nm).toLowerCase().includes(q)))
     .sort((a,b)=> S==="n"? String(a[1].nm).localeCompare(String(b[1].nm)) : S==="g"? ((stPct(b[1].g||[])??-1)-(stPct(a[1].g||[])??-1)) : (b[1].w-a[1].w)); }
 function tpStDraw(){ const b=document.getElementById("tp-stn"); if(b) b.textContent=Object.keys(TP.stu||{}).length;
   const lk=document.getElementById("tp-stlock"); if(lk) lk.innerHTML= (!localStorage.getItem("tchk"))? `<form class="tp-unlock" id="tp-unlock"><b>🔐 Natijalar shifrlangan.</b> Ochish uchun ustoz kodini bir marta qayta kiriting:<div class="tp-strow"><input class="ch-in" id="tp-ucode" type="password" placeholder="Kod"><button type="submit" class="btn primary">Ochish</button></div><div class="acc-st err" id="tp-uerr"></div></form>` : "";
@@ -5395,7 +5508,7 @@ document.addEventListener("click",e=>{
   const tn=e.target.closest("[data-tpn]"); if(tn){ TP.n=+tn.dataset.tpn; tpLt(); return; }
   const tt=e.target.closest("[data-tptm]"); if(tt){ TP.tm=+tt.dataset.tptm; tpLt(); return; }
   const sh=e.target.closest("[data-tpst]"); if(sh){ TP.stOpen=TP.stOpen===sh.dataset.tpst?null:sh.dataset.tpst; tpStDraw(); return; }
-  const sd=e.target.closest("[data-tpstdel]"); if(sd){ const id=sd.dataset.tpstdel, d=TP.stu[id]; if(!confirm("Ro‘yxatdan olib tashlansinmi: "+(d?d.nm:id)+"?\n(O‘quvchi saytga yana kirsa, qaytib chiqadi.)")) return; if(TP.mqSt) TP.mqSt.pub(ST_NS+id,"",true); delete TP.stu[id]; tpStDraw(); return; }
+  const sd=e.target.closest("[data-tpstdel]"); if(sd){ const id=sd.dataset.tpstdel, d=TP.stu[id]; if(!confirm("Ro‘yxatdan olib tashlansinmi: "+(d?d.nm:id)+"?\n(O‘quvchi saytga yana kirsa, qaytib chiqadi.)")) return; if(TP.mqSt&&d&&d._mq) TP.mqSt.pub(ST_NS+d._mq,"",true); try{ const h=JSON.parse(localStorage.getItem("tp:hid")||"{}")||{}; h[id]=(d&&d.t)||Date.now(); localStorage.setItem("tp:hid",JSON.stringify(h)); }catch(e){} tpStDraw(); return; }
   const so=e.target.closest("[data-tpsort]"); if(so){ TP.stS=so.dataset.tpsort; tpSt(); return; }
   const tg=e.target.closest("[data-tpgame]"); if(tg){ tpBoardOpen(tg.dataset.tpgame,false); return; }
   const t=e.target.closest("[data-tp]"); if(t){ const a=t.dataset.tp;
