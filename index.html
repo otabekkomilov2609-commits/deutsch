@@ -140,6 +140,14 @@ main{padding-block:6px 40px}
 #lrn .lrn-mode.mu{grid-column:1/-1;border-color:#0d9488;background:#e6f7f5;box-shadow:0 4px 0 #0d9488}#lrn .lrn-mode.mu b{color:#0d9488}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #lrn .lrn-mode.mu{background:#0f2f2c}}:root[data-theme="dark"] #lrn .lrn-mode.mu{background:#0f2f2c}
 #lrn .mu-c{gap:14px}
+#lrn .mu-pr{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+#lrn .mu-pt,#lrn .mu-w{font:inherit;color:var(--ink);font-weight:700;border:2px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:0 4px 0 var(--lsh);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .1s,box-shadow .1s}
+#lrn .mu-pt{font-size:15.5px;line-height:1.3;padding:10px 8px;min-height:62px;text-align:center}
+#lrn .mu-pt.sel{border-color:var(--blue);background:var(--blue-soft);color:var(--blue);box-shadow:0 4px 0 var(--blue);transform:translateY(-2px)}
+#lrn .mu-pt.ok,#lrn .mu-w.ok{border-color:var(--green);background:var(--green-soft);color:var(--green);box-shadow:0 4px 0 var(--green)}#lrn .mu-pt.ok{opacity:.55}
+#lrn .mu-pt.bad,#lrn .mu-w.bad{border-color:#e5484d;background:#FDECEC;color:#c62828;box-shadow:0 4px 0 #e5484d;animation:lrnShake .35s}
+#lrn .mu-wb{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}#lrn .mu-w{font-size:18px;padding:10px 18px}#lrn .mu-w.dim{opacity:.4}
+#lrn .mu-slot{display:inline-block;min-width:4ch;padding:0 6px;border-bottom:2.5px dashed var(--blue);color:var(--blue);font-weight:800;line-height:1.5;text-align:center}#lrn .mu-slot.ok{border-bottom-style:solid;border-color:var(--green);color:var(--green)}#lrn .mu-slot.bad{border-bottom-style:solid;border-color:#c62828;color:#c62828}
 #lrn .mu-cue{font-size:14.5px;font-weight:700;color:var(--muted);line-height:1.35;padding:8px 12px;border-radius:12px;background:var(--bg);border:1.5px dashed var(--line)}#lrn .mu-cue b{color:var(--ink);font-weight:800}
 #lrn .mu-in::placeholder{color:var(--muted);opacity:.55;font-weight:700}
 #lrn .mu-phrase{font-weight:800;font-size:21px;line-height:1.3;text-align:center;padding:18px 14px;border:2px dashed var(--line);border-radius:18px;background:var(--bg);transition:background .2s,border-color .2s}
@@ -4098,7 +4106,7 @@ function lrnSetup(){
       <button type="button" class="lrn-mode" data-l="learn"${its.length?"":" disabled"}><b>${esc(lt("learn"))}</b><span>${esc(lt((lernData()[LR.id]||{}).mt?"learnDm":"learnD"))}</span></button>
       <button type="button" class="lrn-mode" data-l="cards"${its.length?"":" disabled"}><b>${esc(lt("cards"))}</b><span>${esc(lt("cardsD"))}</span></button>
       ${(()=>{ const mp=muPool(); if(mp.length<3) return ""; const st=muStore(), m=mp.filter(x=>st[x.i]).length, uz=state.lang!=="ru";
-        return `<button type="button" class="lrn-mode mu" data-mu="start"><b>💬 ${uz?"Muloqot":"Диалоги"}</b><span>${uz?`Iboralar: savat → chat → yozish · ${m} / ${mp.length} o‘zlashtirildi`:`Фразы: корзины → чат → письмо · освоено ${m} / ${mp.length}`}</span></button>`; })()}
+        const a1=String(LR.id).startsWith("A1"); return `<button type="button" class="lrn-mode mu" data-mu="start"><b>💬 ${uz?"Muloqot":"Диалоги"}</b><span>${uz?`Iboralar: ${a1?"juftlash → chat → so‘z tanlash":"savat → chat → yozish"} · ${m} / ${mp.length} o‘zlashtirildi`:`Фразы: ${a1?"пары → чат → выбор слова":"корзины → чат → письмо"} · освоено ${m} / ${mp.length}`}</span></button>`; })()}
       ${kq?`<button type="button" class="lrn-mode kchk" data-l="kchk"><b>${esc(lt("chk"))} (${kq})</b><span>${esc(lt((lernData()[LR.id]||{}).mt?"chkDm":"chkD"))}</span></button>`:""}
     </div>
     ${done||kn?`<button type="button" class="lrn-link lrn-reset" data-l="reset">${esc(lt("reset"))}</button>`:""}
@@ -4132,21 +4140,28 @@ function muGap(x){ const s=muLine(x); const toks=[...s.matchAll(/[A-Za-zÄÖÜä
   return {w:pick.w, pre:s.slice(0,pick.i), post:s.slice(pick.i+pick.w.length)}; }
 function muStart(){ const D=lernData()[LR.id], pool=muPool(); if(pool.length<3) return; const st=muStore();
   LR.mode="mu"; LR.chk=false; LR.emoL=null; LR.emoE=null;
-  const fresh=lrnShuffle(pool.filter(x=>!st[x.i])), old=lrnShuffle(pool.filter(x=>st[x.i])); const items=[...fresh,...old].slice(0,8);
+  const A1=String(LR.id).startsWith("A1"); /* A1 — osonroq: Verbinden (kitobdagi "Wer sagt was? Verbinden Sie"), chat, so'z banki (2026-10-19, Otabek) */
+  const fresh=lrnShuffle(pool.filter(x=>!st[x.i])), old=lrnShuffle(pool.filter(x=>st[x.i])); const items=[...fresh,...old].slice(0,A1?6:8);
   /* Sortieren: kamida 2 ta vazifa, har birida ≥2 ibora */
   const byF={}; pool.forEach(x=>{ (byF[x.fn]=byF[x.fn]||[]).push(x); });
   let fs=Object.keys(byF).map(Number).filter(f=>byF[f].length>=2); fs=lrnShuffle(fs).sort((a,b)=>items.filter(x=>x.fn===b).length-items.filter(x=>x.fn===a).length).slice(0,3);
   const steps=[];
-  if(fs.length>=2){ let srt=[]; fs.forEach(f=>{ const its=lrnShuffle(byF[f]); const inS=its.filter(x=>items.includes(x)); srt.push(...[...inS,...its.filter(x=>!inS.includes(x))].slice(0,Math.max(2,Math.min(3,inS.length||2)))); });
+  if(A1){ const dl=items.filter(muDlg); for(let a=0;a<dl.length;a+=4){ const g=dl.slice(a,a+4); if(g.length>=2) steps.push({t:"pair",xs:g}); } }
+  else if(fs.length>=2){ let srt=[]; fs.forEach(f=>{ const its=lrnShuffle(byF[f]); const inS=its.filter(x=>items.includes(x)); srt.push(...[...inS,...its.filter(x=>!inS.includes(x))].slice(0,Math.max(2,Math.min(3,inS.length||2)))); });
     lrnShuffle(srt).slice(0,8).forEach(x=>steps.push({t:"sort",x,fs})); }
   lrnShuffle(items.filter(muDlg)).forEach(x=>steps.push({t:"chat",x}));
-  lrnShuffle([...items]).forEach(x=>{ const g=muGap(x); if(g) steps.push({t:"gap",x,g}); });
+  lrnShuffle([...items]).forEach(x=>{ const g=muGap(x); if(g) steps.push({t:"gap",x,g,bank:A1}); });
+  if(A1){ const ws=muAll().map(y=>muGap(y)).filter(Boolean).map(g=>g.w); steps.forEach(stp=>{ if(stp.t!=="gap") return; const own=stp.g.w.toLowerCase();
+    const cand=lrnShuffle([...new Set(ws.filter(w=>w.toLowerCase()!==own&&Math.abs(w.length-own.length)<=4))]); stp.opts=lrnShuffle([stp.g.w,...cand.slice(0,2)]); }); }
   Object.assign(MU,{steps,k:0,okN:0,first:{},tries:0,done:false,items,pool,fns:D.fns});
   muShow(); }
 function muProg(){ const n=MU.steps.length, d=MU.k+(MU.done?1:0), r=n?d/n:0, E=r>=1?"🏆":r>=.75?"🔥":r>=.5?"🤓":r>=.25?"😍":"🤩", from=LR.emoL==null?r:LR.emoL; setTimeout(()=>lrnEmoGo(r,E,d>0),40);
   return `<div class="lrn-pw"><div class="lrn-prog"><i class="d" style="width:${r*100}%"></i></div><b class="ias-pbe lrn-pbe${LR.emoE&&from>0?"":" hid"}" id="lrn-pbe" style="left:${lrnEmoX(from)}">${LR.emoE||E}</b></div><div class="lrn-pt">${Math.min(d,n)} / ${n}</div>`; }
 function muShow(){ const st=MU.steps[MU.k]; if(!st){ muEnd(); return; } const uz=state.lang!=="ru", x=st.x; MU.tries=0; MU.done=false; let h="";
-  if(st.t==="sort"){ h=`<div class="lrn-card mu-c"><div class="lrn-ask">🧺 ${uz?"Bu ibora qaysi savatga tushadi?":"В какую корзину эта фраза?"}</div>
+  if(st.t==="pair"){ st.R=st.R||lrnShuffle(st.xs.map((_,k)=>k)); st.done=st.done||{};
+    h=`<div class="lrn-card mu-c"><div class="lrn-ask">🧩 ${uz?"Savol va javobni juftlang":"Соедините вопрос и ответ"}</div>
+      <div class="mu-pr">${st.xs.map((y,k)=>`<button type="button" class="mu-pt L${st.done[k]?" ok":""}" data-mu="pl" data-k="${k}" lang="de"${st.done[k]?" disabled":""}>${esc(y.mt[0])}</button><button type="button" class="mu-pt R${st.done[st.R[k]]?" ok":""}" data-mu="pr" data-k="${st.R[k]}" lang="de"${st.done[st.R[k]]?" disabled":""}>${esc(st.xs[st.R[k]].mt[1])}</button>`).join("")}</div></div>`; }
+  else if(st.t==="sort"){ h=`<div class="lrn-card mu-c"><div class="lrn-ask">🧺 ${uz?"Bu ibora qaysi savatga tushadi?":"В какую корзину эта фраза?"}</div>
       <div class="mu-phrase" lang="de">${esc(x.de)}</div>
       <div class="mu-bks">${st.fs.map(f=>{ const F=MU.fns[f]; return `<button type="button" class="mu-bk" data-mu="bk" data-f="${f}"><b lang="de">${esc(F[0])}</b><small>${esc(uz?F[1]:F[2])}</small></button>`; }).join("")}</div></div>`; }
   else if(st.t==="chat"){ const others=MU.pool.concat(muAll()).filter(y=>y.i!==x.i&&String(y.mt[1])!==String(x.mt[1]));
@@ -4158,14 +4173,14 @@ function muShow(){ const st=MU.steps[MU.k]; if(!st){ muEnd(); return; } const uz
       <div class="mu-cue">🎯 ${uz?"Siz aytmoqchisiz:":"Вы хотите сказать:"} <b>«${esc(muCue(x))}»</b></div>
       <div class="mu-ops">${st.opts.map((o,k)=>`<button type="button" class="mu-op" data-mu="op" data-k="${k}" lang="de">${esc(o)}</button>`).join("")}</div><div id="mu-after"></div></div>`; }
   else { const g=st.g, wl=Math.max(4,g.w.length+1);
-    h=`<div class="lrn-card mu-c"><div class="lrn-ask">✍️ ${uz?"Tushib qolgan so‘zni yozing":"Впишите пропущенное слово"}</div>
+    h=`<div class="lrn-card mu-c"><div class="lrn-ask">${st.bank?`🧩 ${uz?"Mos so‘zni tanlang":"Выберите подходящее слово"}`:`✍️ ${uz?"Tushib qolgan so‘zni yozing":"Впишите пропущенное слово"}`}</div>
       <div class="mu-th">${muDlg(x)?`<div class="mu-b in" lang="de">${esc(x.mt[0])}</div>`:""}
-      <div class="mu-b out gap" lang="de">${esc(g.pre)}<span class="mu-gw" id="mu-gw"><input id="mu-in" class="mu-in" style="width:${wl+1}ch" placeholder="${esc(g.w[0])}…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-label="?"><span class="mu-ov" id="mu-ov"></span></span>${esc(g.post)}</div></div>
+      <div class="mu-b out gap" lang="de">${esc(g.pre)}${st.bank?`<span class="mu-slot" id="mu-slot">${"&nbsp;".repeat(Math.max(4,g.w.length))}</span>`:`<span class="mu-gw" id="mu-gw"><input id="mu-in" class="mu-in" style="width:${wl+1}ch" placeholder="${esc(g.w[0])}…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-label="?"><span class="mu-ov" id="mu-ov"></span></span>`}${esc(g.post)}</div></div>
       <div class="mu-cue">💡 ${uz?"Ma’nosi:":"Значение:"} <b>«${esc(muCue(x))}»</b></div>
-      <div class="mu-keys">${["ä","ö","ü","ß"].map(c=>`<button type="button" class="mu-key" data-mu="ch" data-c="${c}">${c}</button>`).join("")}</div>
-      <div class="lrn-row2"><button type="button" class="lrn-link" data-mu="giveup">${esc(lt("dontknow"))}</button><button type="button" class="btn primary" data-mu="chk">${esc(lt("check"))}</button></div><div id="mu-after"></div></div>`; }
+      ${st.bank?`<div class="mu-wb">${st.opts.map((w,k)=>`<button type="button" class="mu-w" data-mu="wb" data-k="${k}" lang="de">${esc(w)}</button>`).join("")}</div><div id="mu-after"></div></div>`:`<div class="mu-keys">${["ä","ö","ü","ß"].map(c=>`<button type="button" class="mu-key" data-mu="ch" data-c="${c}">${c}</button>`).join("")}</div>
+      <div class="lrn-row2"><button type="button" class="lrn-link" data-mu="giveup">${esc(lt("dontknow"))}</button><button type="button" class="btn primary" data-mu="chk">${esc(lt("check"))}</button></div><div id="mu-after"></div></div>`}`; }
   lrnEl().innerHTML=`${lrnHead(`<span class="lrn-left">${MU.k+1} / ${MU.steps.length}</span>`)}<div class="lrn-body">${muProg()}${h}</div>`;
-  if(st.t==="gap") setTimeout(()=>{ const i=document.getElementById("mu-in"); if(i) i.focus(); },60); }
+  if(st.t==="gap"&&!st.bank) setTimeout(()=>{ const i=document.getElementById("mu-in"); if(i) i.focus(); },60); }
 function muNext(){ MU.k++; muShow(); }
 function muMark(ok){ const st=MU.steps[MU.k]; if(ok&&!MU.tries) MU.okN++; if(st.t!=="sort"){ const f=MU.first[st.x.i]=MU.first[st.x.i]||{}; f[st.t]=ok&&!MU.tries; } }
 function muAfter(ok){ const st=MU.steps[MU.k], uz=state.lang!=="ru", a=document.getElementById("mu-after"); MU.done=true; if(!a) return;
@@ -4181,6 +4196,14 @@ document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closes
   if(a==="again"){ muStart(); return; }
   if(a==="home"){ lrnSetup(); return; }
   if(!st||MU.done) return;
+  if(a==="pl"||a==="pr"){ const k=+b.dataset.k, side=a==="pl"?"L":"R";
+    if(!MU.psel||MU.psel[0]===side){ lrnEl().querySelectorAll(".mu-pt.sel").forEach(z=>z.classList.remove("sel")); MU.psel=[side,k,b]; b.classList.add("sel"); return; }
+    const [s0,k0,b0]=MU.psel; MU.psel=null; b0.classList.remove("sel");
+    if(k0===k){ st.done[k]=1; [b,b0].forEach(z=>{ z.classList.add("ok"); z.disabled=true; }); if(Object.keys(st.done).length===st.xs.length){ if(!MU.tries) MU.okN++; MU.done=true; setTimeout(muNext,700); } }
+    else { MU.tries++; [b,b0].forEach(z=>{ z.classList.remove("bad"); void z.offsetWidth; z.classList.add("bad"); setTimeout(()=>z.classList.remove("bad"),650); }); } return; }
+  if(a==="wb"){ const w=st.opts[+b.dataset.k], ok=w===st.g.w, sl=document.getElementById("mu-slot");
+    if(ok){ muMark(true); b.classList.add("ok"); if(sl){ sl.textContent=w; sl.classList.add("ok"); } lrnEl().querySelectorAll(".mu-w").forEach(z=>{ z.disabled=true; if(z!==b) z.classList.add("dim"); }); muAfter(!MU.tries); }
+    else { MU.tries++; b.classList.add("bad"); b.disabled=true; if(MU.tries>=2){ muMark(false); if(sl){ sl.textContent=st.g.w; sl.classList.add("bad"); } lrnEl().querySelectorAll(".mu-w").forEach(z=>z.disabled=true); muAfter(false); } } return; }
   if(a==="bk"){ const ok=+b.dataset.f===st.x.fn; if(ok){ muMark(true); MU.done=true; b.classList.add("ok"); const p=lrnEl().querySelector(".mu-phrase"); if(p) p.classList.add("ok"); setTimeout(muNext,650); }
     else { MU.tries++; b.classList.remove("bad"); void b.offsetWidth; b.classList.add("bad"); setTimeout(()=>b.classList.remove("bad"),700); } return; }
   if(a==="op"){ const o=st.opts[+b.dataset.k], ok=o===String(st.x.mt[1]);
