@@ -111,6 +111,13 @@ main{padding-block:6px 40px}
 .mat-act{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;gap:6px;margin-left:auto}
 .dlb{border:1px solid var(--line);background:none;border-radius:8px;font-size:15px;line-height:1;padding:5px 9px;color:var(--muted);cursor:pointer}@media (hover:hover){
 .dlb:hover{color:var(--ink,inherit);border-color:var(--muted)}}
+.wl-top{gap:10px}.wl-h{display:flex;align-items:center;gap:12px}.wl-h b{display:block;font-size:17px}.wl-h small{color:var(--muted);font-size:13px}
+.wl-n{flex:none;width:44px;height:44px;border-radius:50%;background:var(--fill);color:var(--on-fill);display:grid;place-items:center;font-weight:800}
+.wl-go{padding:12px;font-size:16px}.wl-c h3{margin:0;font-size:15px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.wl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.wl-r{display:flex;gap:10px;align-items:flex-start;padding:10px 0 10px 10px;border-top:1px solid var(--line);border-left:3px solid transparent;margin-left:-10px}
+.wl-r:first-child{border-top:0}.wl-r.d{border-left-color:var(--green)}.wl-r.h{border-left-color:#E7B23A}
+.wl-r .lrn-say{flex:none}.wl-t{display:flex;flex-direction:column;gap:1px;min-width:0}.wl-t b{font-size:16.5px}.wl-tr{color:var(--muted);font-size:14.5px}.wl-t i{font-size:13.5px;color:var(--muted);opacity:.85}
 .lek-lrn{margin-left:auto;align-self:flex-start;flex:none;display:flex;flex-direction:column;align-items:center;gap:1px;border:1.5px solid var(--green);background:var(--green-soft);color:var(--green);border-radius:12px;font:inherit;font-size:13.5px;font-weight:800;padding:7px 10px;cursor:pointer;white-space:nowrap}
 .lek-lrn small{font-size:11.5px;font-weight:700;opacity:.8}.lek-lrn.full{background:var(--green);color:var(--on-fill)}
 .lrn-cb{border:1px solid var(--green);background:var(--green-soft);color:var(--green);border-radius:8px;font:inherit;font-size:12px;font-weight:700;padding:4px 8px;white-space:nowrap;cursor:pointer}
@@ -3855,7 +3862,7 @@ function lrnShuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.r
 function lrnEl(){ return document.getElementById("lrn"); }
 function lrnOpen(id){
   const D=lernData()[id]; if(!D) return;
-  LR.id=id; store.set("lern:last",id); LR.st=lrnLoad(id); LR.chk=false; LR.mode=null; LR.redem=false;
+  LR.id=id; store.set("lern:last",id); LR.st=lrnLoad(id); LR.chk=false; LR.mode=null; LR.redem=false; LR.fromList=null;
   let saved=null; try{ saved=JSON.parse(store.get(lrnKey(id)+":sel")||"null"); }catch(e){}
   const les=Object.keys(D.les).map(Number);
   const m=byId[id]; const cur=m&&CURS[m.tab];
@@ -3894,6 +3901,20 @@ function lrnForms(de){
 function lrnFm(de,full){ const f=String(full||""); return lrnForms(de).split(" · ").filter(x=>x&&!f.includes(x.replace(/^er\/sie /,""))).join(" · "); }
 function lrnItems(){ const D=lernData()[LR.id]; return D.it.map((r,i)=>({i,l:r[0],s:D.sec[r[1]],full:r[2],de:r[3],ru:r[4],ex:r[5],red:r[6],dis:r[7],say:r[8],mt:(D.mt&&D.mt[i])||null,fm:D.kind==="perfekt"?"":lrnFm(r[3],r[2])})).filter(x=>x.ru && LR.sel.has(x.l) && (LR.redem||!x.red)); }
 function lrnLab(n){ const D=lernData()[LR.id]; return (D&&D.lab&&D.lab[n])||("L"+n); }
+/* 📋 Bitta Lektion so'zlari ro'yxati (Lektion oldidagi tugma) → ichidan Yodlashga (2026-10-19, Otabek) */
+function lrnList(n){ LR.mode="list"; LR.fromList=n; LR.chk=false; const D=lernData()[LR.id], uz=state.lang!=="ru";
+  const rows=D.it.map((r,i)=>({i,l:r[0],s:r[1],full:r[2],de:r[3],tr:r[4],ex:r[5],red:r[6],say:r[8]})).filter(x=>+x.l===+n&&x.tr);
+  /* "immer / oft / …" bitta qatorda bo'lsa — alohida takrorlarini ko'rsatmaymiz */
+  const parts=new Set(); rows.forEach(x=>{ if(/ \/ /.test(x.de)) x.de.split(" / ").forEach(p=>parts.add(p.trim())); });
+  const words=rows.filter(x=>!x.red&&!(!/ \/ /.test(x.de)&&parts.has(x.de.trim()))), red=rows.filter(x=>x.red), allw=rows.filter(x=>!x.red), d=allw.filter(x=>LR.st[x.i]===2).length;
+  const sec={}; words.forEach(x=>{ (sec[x.s]=sec[x.s]||[]).push(x); });
+  const row=x=>`<li class="wl-r${LR.st[x.i]===2?" d":LR.st[x.i]===1?" h":""}"><button type="button" class="lrn-say" data-say="${esc(x.say||x.de)}" aria-label="🔊">🔊</button><div class="wl-t"><b>${esc(x.full||x.de)}</b><span class="wl-tr">${esc(x.tr)}</span>${x.ex?`<i>${esc(x.ex)}</i>`:""}</div></li>`;
+  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body"><div class="lrn-card wl-top"><div class="wl-h"><span class="wl-n">L${esc(String(n))}</span><div><b>${esc(D.les[n]||"")}</b><small>${esc(lt("learned")(d,allw.length))}</small></div></div>
+      <div class="lrn-prog"><i class="d" style="width:${allw.length?d/allw.length*100:0}%"></i></div>
+      <button type="button" class="btn primary wl-go" data-l="wlgo">🧠 ${esc(uz?"Yodlashni boshlash":"Начать учить")} →</button></div>
+    ${Object.keys(sec).map(k=>`<div class="lrn-card wl-c"><h3>${esc(D.sec[k]||"")}</h3><ul class="wl">${sec[k].map(row).join("")}</ul></div>`).join("")}
+    ${red.length?`<div class="lrn-card wl-c"><h3>💬 Redemittel</h3><ul class="wl">${red.map(row).join("")}</ul></div>`:""}</div>`;
+  lrnEl().scrollTo({top:0}); }
 function lrnHead(sub){
   lrnEl().classList.remove("has-fb");
   const m=byId[LR.id];
@@ -4192,7 +4213,7 @@ function lrnCard(){
 /* ---------- events ---------- */
 document.addEventListener("click",e=>{
   const lb=e.target.closest("[data-lern]"); if(lb){ e.preventDefault(); lrnOpen(lb.dataset.lern);
-    if(lb.dataset.les){ const n=+lb.dataset.les; LR.sel=new Set([n]); try{ store.set(lrnKey(lb.dataset.lern)+":sel",JSON.stringify([n])); }catch(err){} lrnSetup(); } return; }
+    if(lb.dataset.les){ const n=+lb.dataset.les; LR.sel=new Set([n]); try{ store.set(lrnKey(lb.dataset.lern)+":sel",JSON.stringify([n])); }catch(err){} lrnList(n); } return; }
   const root=lrnEl(); if(!root||root.hidden||!root.contains(e.target)) return;
   const say=e.target.closest("[data-say]"); if(say){ lrnSay(say.dataset.say); return; }
   const ch=e.target.closest("[data-ch]"); if(ch){ const i=document.getElementById("lrn-in"); if(i){ const p=i.selectionStart??i.value.length; i.value=i.value.slice(0,p)+ch.dataset.ch+i.value.slice(i.selectionEnd??p); i.focus(); i.setSelectionRange(p+1,p+1); } return; }
@@ -4203,7 +4224,8 @@ document.addEventListener("click",e=>{
     lrnMark(ok); lrnFeedback(ok, LR.cur); return; }
   const b=e.target.closest("[data-l]"); if(!b) return; const a=b.dataset.l;
   if(a==="mtnext"){ lrnMatchNext(); return; }
-  if(a==="close"){ LR.mg=null; if(LR.mode){ try{ speechSynthesis.cancel(); }catch(e){} wkStop(); lrnSetup(); } else lrnClose(); }
+  if(a==="close"){ LR.mg=null; if(LR.mode==="list"){ LR.fromList=null; lrnClose(); return; } if(LR.mode){ try{ speechSynthesis.cancel(); }catch(e){} wkStop(); lrnSetup(); } else if(LR.fromList){ lrnList(LR.fromList); } else lrnClose(); }
+  else if(a==="wlgo"){ lrnSetup(); }
   else if(a==="all"){ Object.keys(lernData()[LR.id].les).forEach(n=>LR.sel.add(+n)); store.set(lrnKey(LR.id)+":sel",JSON.stringify([...LR.sel])); lrnSetup(); }
   else if(a==="none"){ LR.sel.clear(); store.set(lrnKey(LR.id)+":sel","[]"); lrnSetup(); }
   else if(a==="learn"||a==="cards"){ const gi=document.getElementById("lrn-goal"); /* son Lernen'ga ham, kartalarga ham ta'sir qiladi */
