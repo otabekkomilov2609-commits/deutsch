@@ -1318,6 +1318,35 @@ mark.trm.bad sup{color:#C62828}
 :is(#lrn,#duel,#chal) .lrn-gin input{border-width:2px;border-radius:14px;font-weight:800}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) :is(#lrn,#duel,#chal){--lsh:#0b1220}:root:not([data-theme="light"]) :is(#lrn,#duel,#chal) .lrn-mt.bad,:root:not([data-theme="light"]) :is(#lrn,#duel,#chal) .lrn-opt.bad{background:#3a1717;color:#ff8a8a}}
 :root[data-theme="dark"] :is(#lrn,#duel,#chal){--lsh:#0b1220}:root[data-theme="dark"] :is(#lrn,#duel,#chal) .lrn-mt.bad,:root[data-theme="dark"] :is(#lrn,#duel,#chal) .lrn-opt.bad{background:#3a1717;color:#ff8a8a}
+
+/* 📱 iPad / planshet (2026-10-19, Otabek): grammatika mashqlari planshetda ham "bittalab" rejimda; kattaroq yozuv, yotiq holatda ikki ustun */
+@media (pointer:coarse) and (min-width:760px){
+ .ias{max-width:780px;gap:16px}
+ .ias-card{font-size:32px;padding:30px 34px;border-radius:24px}
+ .ias-task{font-size:21px}.ias-task span{font-size:14.5px}
+ .ias-p{font-size:19px}
+ .ias-bw{font-size:22px;padding:12px 22px}.ias-bank{gap:10px}
+ .ias-opt{font-size:22px;padding:18px 22px}
+ .ias .ias-input{font-size:30px!important}.ias textarea.ias-input:not(.long){height:68px!important}.ias textarea.ias-input{min-height:68px}
+ .ias-nav button{font-size:18px}.ias-nav .ias-go{height:56px;font-size:20px;padding:0 32px}
+ .ias-inl .ias-pr,.ias-wb{font-size:22px;padding:18px}
+ .ias-sec{height:38px;min-width:44px;font-size:16.5px;padding:0 14px}
+ .ias-top .ias-tb{width:52px;height:52px;font-size:22px}.ias-pb{height:12px}.ias-top span{font-size:16px}
+ .ias-kb .ias-card{font-size:26px;padding:18px 24px}
+ .ias-cheer{font-size:17px}
+}
+@media (pointer:coarse) and (min-width:1000px) and (orientation:landscape){
+ .ias{max-width:1240px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(340px,1fr);grid-template-rows:auto repeat(9,auto) 1fr;column-gap:34px;row-gap:0;align-items:start}
+ .ias-fix{display:contents}
+ .ias-fix>.ias-head{grid-column:1/-1;grid-row:1;margin-bottom:16px}
+ .ias-fix>#ias-p{grid-column:1;grid-row:2;margin-bottom:12px}
+ .ias-fix>#ias-card{grid-column:1;grid-row:3/12}
+ .ias-fix>#ias-p[hidden]+#ias-card{grid-row:2/12}
+ .ias-fix>#ias-diff,.ias-fix>#ias-pr,.ias-fix>#ias-wb,.ias-fix>#ias-bank,.ias-fix>#ias-opts,.ias>.ias-fb,.ias>.ias-nav{grid-column:2;margin-bottom:16px}
+ .ias-fix>#ias-inw:not([hidden]){grid-column:2;margin-bottom:16px}
+ .ias>.ias-nav{flex-wrap:wrap}
+ .ias-kb .ias-card{font-size:28px}
+}
 </style>
 <script>/* tungi rejim: avto / tungi / kunduzgi (2026-10-19) */try{var __t=localStorage.getItem("theme");if(__t==="dark"||__t==="light")document.documentElement.setAttribute("data-theme",__t);}catch(e){}</script>
 </head>
@@ -3619,7 +3648,7 @@ async function renderPages(m, my){
   V.body.innerHTML=""; V.body.classList.toggle("zoomed", V.zoom>1); zoomLabel();
   V.el.classList.toggle("iam-on", iamUse(m)); if(!iamUse(m)) V.el.classList.remove("ias-on");
   if(iamUse(m)){ await iamRender(m,my); if(trp && my===V.token) V.body.appendChild(trp); return; }
-  if(IA.on && IA.id===m.id && IAM[m.id] && window.innerWidth<760) V.body.insertAdjacentHTML("afterbegin",`<div class="iam-bar"><button type="button" class="iam-sw" data-iam="mob">📱 ${state.lang==="ru"?"Вид для телефона":"Telefon ko‘rinishi"}</button></div>`);
+  if(IA.on && IA.id===m.id && IAM[m.id] && (window.innerWidth<760||iamTab())) V.body.insertAdjacentHTML("afterbegin",`<div class="iam-bar"><button type="button" class="iam-sw" data-iam="mob">${window.innerWidth<760?`📱 ${state.lang==="ru"?"Вид для телефона":"Telefon ko‘rinishi"}`:`✍️ ${state.lang==="ru"?"По одному заданию":"Bittalab ishlash"}`}</button></div>`);
   const base = Math.min(V.body.clientWidth-24, 900), w = Math.round(base*V.zoom);
   for(let i=1;i<=doc.numPages;i++){
     const page = await doc.getPage(i); if(my!==V.token) return;
@@ -4683,7 +4712,9 @@ function iaMountPage(pgw){
 /* 📱 Telefon ko'rinishi: grammatika varaqlari matn sifatida (PDF matn qatlamidan avtomatik ajratilgan) — 2026-10-18
    Kataklar oddiy .ia-in / .ia-o bo'lib qoladi — tekshirish, javoblar, natija, «Nega xato?» avvalgidek ishlaydi. */
 const IAM=(()=>{ try{ return JSON.parse(document.getElementById("iam-data").textContent)||{}; }catch(e){ return {}; } })();
-function iamMode(){ const m=store.get("iam:mode"); return m||(window.innerWidth<760?"mob":"page"); }
+/* planshet (iPad) ham — sukut bo'yicha bittalab rejim (2026-10-19, Otabek) */
+function iamTab(){ try{ return matchMedia("(pointer:coarse)").matches&&window.innerWidth<=1400; }catch(e){ return false; } }
+function iamMode(){ const m=store.get("iam:mode"); return m||(window.innerWidth<760||iamTab()?"mob":"page"); }
 function iamUse(m){ return IA.on && IA.id===m.id && !!IAM[m.id] && iamMode()==="mob"; }
 function iamW(it){ const n=String(it.a||"").length; return Math.min(26,Math.max(3,Math.round(n*0.62+1.6))); }
 function iamInp(i){ const it=iaItems()[i]; if(!it) return "";
