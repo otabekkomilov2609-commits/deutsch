@@ -6,7 +6,7 @@
 <title>Deutsch A1 · A2 · B1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Figtree:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Neucha&family=Nunito:wght@400;500;600;700;800;900&display=swap">
 <style>
 /* Layout: one reading column; Momente modules as chapters, each Lektion a handout-style card with its sheets. */
 :root{
@@ -14,8 +14,9 @@
   --blue:#1F4FA0; --blue-soft:#E2EAF8; --fill:#1F4FA0; --on-fill:#fff; --orange:#C95F17; --orange-soft:#FBEADB;
   --green:#2B7653; --green-soft:#DFF0E6; --slate:#4A5872; --slate-soft:#E6EAF1;
   --shadow:0 1px 2px rgba(23,36,60,.06),0 4px 14px rgba(23,36,60,.06);
-  --hand:"Patrick Hand","Comic Neue","Comic Sans MS",cursive;
-  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  /* shriftlar (2026-10-19, Otabek): Nunito — asosiy; Patrick Hand — qo'lyozma urg'u, ruschasi Neucha (PDF'dagidek) */
+  --hand:"Patrick Hand","Neucha","Comic Neue","Comic Sans MS",cursive;
+  --sans:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0E1524; --surface:#16203A; --surface-2:#1C2846; --ink:#E5EBF5; --muted:#9AA8C0; --line:#2A3858;
@@ -29,7 +30,8 @@
   --shadow:0 1px 2px rgba(0,0,0,.3); color-scheme:dark}
 
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+html{font-synthesis:style} /* Patrick Hand / Neucha — bitta qalinlik: soxta qalin qilinmasin */
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:500;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 .wrap{max-width:880px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 button{font:inherit;color:inherit;cursor:pointer}
 :focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:6px}
@@ -3594,7 +3596,7 @@ function cardPraise(p){ return p>=100?"Perfekt!":p>=90?"Ausgezeichnet!":p>=75?"S
 function cardWrap(c,text,maxW){ const words=String(text).split(" "), lines=[]; let cur=""; for(const w of words){ const tst=cur?cur+" "+w:w; if(c.measureText(tst).width>maxW&&cur){ lines.push(cur); cur=w; } else cur=tst; } if(cur) lines.push(cur); return lines; }
 function cardDraw(name){
   const W=1080,H=1350, cv=document.createElement("canvas"); cv.width=W; cv.height=H; const c=cv.getContext("2d");
-  const HAND='"Patrick Hand", "Comic Sans MS", cursive', SANS='Figtree, system-ui, -apple-system, sans-serif';
+  const HAND='"Patrick Hand", Neucha, "Comic Sans MS", cursive', SANS='Nunito, system-ui, -apple-system, sans-serif';
   const pct=SND.n?Math.round(SND.ok/SND.n*100):0;
   const g=c.createLinearGradient(0,0,W,H); g.addColorStop(0,"#1F4FA0"); g.addColorStop(1,"#12305F"); c.fillStyle=g; c.fillRect(0,0,W,H);
   c.globalAlpha=.07; c.fillStyle="#fff"; c.beginPath(); c.arc(W-80,120,260,0,7); c.fill(); c.beginPath(); c.arc(60,H-80,200,0,7); c.fill(); c.globalAlpha=1;
@@ -3619,7 +3621,7 @@ function cardDraw(name){
 let cardBlob=null, cardTimer=null, cardSeq=0;
 async function cardRender(){
   const f=document.getElementById("snd-f"), img=f.querySelector(".snd-img"); if(!img) return;
-  const my=++cardSeq; try{ await Promise.all(['92px "Patrick Hand"','700 100px Figtree','600 40px Figtree','500 40px Figtree'].map(x=>document.fonts.load(x))); }catch(e){}
+  const my=++cardSeq; try{ await Promise.all(['92px "Patrick Hand"','92px Neucha','800 100px Nunito','700 40px Nunito','600 40px Nunito'].map(x=>document.fonts.load(x))); }catch(e){}
   const name=(f.querySelector("#snd-name").value||"").replace(/\s+/g," ").trim().slice(0,40);
   const cv=cardDraw(name); img.src=cv.toDataURL("image/png");
   cardBlob=null; cv.toBlob(b=>{ if(my===cardSeq) cardBlob=b; },"image/png");
