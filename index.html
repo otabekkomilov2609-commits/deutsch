@@ -6,7 +6,7 @@
 <title>Deutsch A1 · A2 · B1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Figtree:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap">
 <style>
 /* Layout: one reading column; Momente modules as chapters, each Lektion a handout-style card with its sheets. */
 :root{
@@ -1207,6 +1207,54 @@ mark.trm.bad sup{color:#C62828}
 .ex-mts .lrn-mt.ok{opacity:.55}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ex-gap.bad,:root:not([data-theme="light"]) .ex-line.bad,:root:not([data-theme="light"]) .ex-cr.bad,:root:not([data-theme="light"]) .ex-mw.bad{background:#3a1d1d;color:#FF8A80}}
 :root[data-theme="dark"] .ex-gap.bad,:root[data-theme="dark"] .ex-line.bad,:root[data-theme="dark"] .ex-cr.bad,:root[data-theme="dark"] .ex-mw.bad{background:#3a1d1d;color:#FF8A80}
+
+/* 🎈 Lernen / Quizlet — do'stona ko'rinish (2026-10-19, Otabek): yumaloq «Nunito» shrift, qalinroq yozuv, bosiladigan (3D) plitkalar */
+:is(#lrn,#duel,#chal){font-family:"Nunito",var(--sans);font-weight:600;--lsh:var(--line)}
+:is(#lrn,#duel,#chal) b,:is(#lrn,#duel,#chal) h3,:is(#lrn,#duel,#chal) .lrn-tt b{font-weight:800}
+:is(#lrn,#duel,#chal) .lrn-card{border-radius:24px;border-width:2px;box-shadow:0 4px 0 var(--lsh),0 12px 28px rgba(31,79,160,.07)}
+:is(#lrn,#duel,#chal) .lrn-q{font-weight:800;font-size:28px;letter-spacing:-.005em}
+:is(#lrn,#duel,#chal) .lrn-ask,:is(#lrn,#duel,#chal) .lrn-pt,:is(#lrn,#duel,#chal) .lrn-count{font-weight:700}
+:is(#lrn,#duel,#chal) .lrn-prog{height:12px}:is(#lrn,#duel,#chal) .lrn-prog .d{background:linear-gradient(90deg,#43c97b,#2a9d5c)}
+:is(#lrn,#duel,#chal) .btn{border-radius:14px;font-weight:800;border-width:2px;box-shadow:0 3px 0 var(--lsh);transition:transform .1s,box-shadow .1s}
+:is(#lrn,#duel,#chal) .btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--lsh)}
+:is(#lrn,#duel,#chal) .btn.primary{box-shadow:0 4px 0 #15397a}:is(#lrn,#duel,#chal) .btn.primary:active{box-shadow:0 1px 0 #15397a}
+/* juftlash plitkalari */
+:is(#lrn,#duel,#chal) .lrn-mt{-webkit-hyphens:auto;hyphens:auto;font-weight:700;font-size:16.5px;border:2px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:0 4px 0 var(--lsh);min-height:58px;padding:10px 10px;transition:transform .12s,box-shadow .12s,background .15s,border-color .15s,opacity .3s}
+:is(#lrn,#duel,#chal) .lrn-mt.lng{font-size:14.5px}:is(#lrn,#duel,#chal) .lrn-mt.lng2{font-size:13px}
+:is(#lrn,#duel,#chal) .lrn-mt:active{transform:translateY(3px);box-shadow:0 1px 0 var(--lsh)}
+:is(#lrn,#duel,#chal) .lrn-mt.sel{border-color:var(--blue);background:var(--blue-soft);color:var(--blue);box-shadow:0 4px 0 var(--blue);transform:translateY(-2px)}
+:is(#lrn,#duel,#chal) .lrn-mt.ok{border-color:var(--green);background:var(--green-soft);color:var(--green);box-shadow:0 4px 0 var(--green);opacity:.5;animation:lrnOkPop .35s ease-out}
+:is(#lrn,#duel,#chal) .lrn-mt.bad{border-color:#e5484d;background:#FDECEC;color:#c62828;box-shadow:0 4px 0 #e5484d;animation:lrnShake .35s}
+@keyframes lrnOkPop{0%{transform:scale(1)}45%{transform:scale(1.07)}100%{transform:scale(1)}}
+:is(#lrn,#duel,#chal) .lrn-mrow .lrn-mt{box-shadow:none;opacity:1;animation:none;transform:none;color:var(--ink)}
+:is(#lrn,#duel,#chal) .lrn-mpair .lrn-mt:first-child{border-radius:16px 0 0 16px;border-right-width:0}:is(#lrn,#duel,#chal) .lrn-mpair .lrn-mt:last-child{border-radius:0 16px 16px 0}
+:is(#lrn,#duel,#chal) .lrn-mrow.tr .lrn-mpair .lrn-mt:first-child{border-radius:16px 0 0 0}:is(#lrn,#duel,#chal) .lrn-mrow.tr .lrn-mpair .lrn-mt:last-child{border-radius:0 16px 0 0}
+:is(#lrn,#duel,#chal) .lrn-mtr{border-width:2px;border-radius:0 0 16px 16px;font-weight:700;color:var(--green)}
+:is(#lrn,#duel,#chal) .lrn-kw{font-weight:900}
+/* variantlar */
+:is(#lrn,#duel,#chal) .lrn-opt{font-weight:700;font-size:17px;border:2px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:0 4px 0 var(--lsh);transition:transform .1s,box-shadow .1s}
+:is(#lrn,#duel,#chal) .lrn-opt:active:not(:disabled){transform:translateY(3px);box-shadow:0 1px 0 var(--lsh)}
+:is(#lrn,#duel,#chal) .lrn-opt .k{border-width:2px;font-weight:800}
+:is(#lrn,#duel,#chal) .lrn-opt.ok{border-color:var(--green);background:var(--green-soft);box-shadow:0 4px 0 var(--green)}
+:is(#lrn,#duel,#chal) .lrn-opt.bad{border-color:#e5484d;background:#FDECEC;box-shadow:0 4px 0 #e5484d}
+/* yozish — ustidagi xato belgilari qatlami (lrn-ov) bilan bir xil o'lcham */
+:is(#lrn,#duel,#chal) .lrn-wr input{font-weight:700;font-size:21px;line-height:1.3;padding:12px 14px;border-width:2px;border-radius:16px;background:var(--surface)}
+:is(#lrn,#duel,#chal) .lrn-wr input:focus{box-shadow:0 0 0 4px var(--blue-soft)}
+:is(#lrn,#duel,#chal) .lrn-ov{font-weight:700;font-size:21px;line-height:1.3;padding:14px 16px}
+:is(#lrn,#duel,#chal) .lrn-fb{font-weight:600}:is(#lrn,#duel,#chal) .lrn-v{font-weight:900;font-size:18px}
+/* kartochkalar */
+:is(#lrn,#duel,#chal) .lrn-flash{border:2px solid var(--line);border-radius:26px;box-shadow:0 6px 0 var(--lsh);transition:transform .12s}
+:is(#lrn,#duel,#chal) .lrn-flash:active{transform:translateY(3px)}
+:is(#lrn,#duel,#chal) .lrn-flash .lrn-q{font-size:30px}
+/* sozlash */
+:is(#lrn,#duel,#chal) .lrn-chip{border-width:2px;border-radius:16px}:is(#lrn,#duel,#chal) .lrn-chip b{font-weight:800}
+:is(#lrn,#duel,#chal) .lrn-mode{border-width:2px;border-radius:18px;box-shadow:0 4px 0 var(--blue);transition:transform .1s,box-shadow .1s}
+:is(#lrn,#duel,#chal) .lrn-mode:active:not(:disabled){transform:translateY(3px);box-shadow:0 1px 0 var(--blue)}
+:is(#lrn,#duel,#chal) .lrn-mode b{font-size:18px}:is(#lrn,#duel,#chal) .lrn-mode span{font-weight:600}
+:is(#lrn,#duel,#chal) .lrn-mode.kchk{box-shadow:0 4px 0 var(--green)}:is(#lrn,#duel,#chal) .lrn-mode.chal{box-shadow:0 4px 0 #c2410c}:is(#lrn,#duel,#chal) .lrn-mode.duel{box-shadow:0 4px 0 #7c3aed}
+:is(#lrn,#duel,#chal) .lrn-gin input{border-width:2px;border-radius:14px;font-weight:800}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) :is(#lrn,#duel,#chal){--lsh:#0b1220}:root:not([data-theme="light"]) :is(#lrn,#duel,#chal) .lrn-mt.bad,:root:not([data-theme="light"]) :is(#lrn,#duel,#chal) .lrn-opt.bad{background:#3a1717;color:#ff8a8a}}
+:root[data-theme="dark"] :is(#lrn,#duel,#chal){--lsh:#0b1220}:root[data-theme="dark"] :is(#lrn,#duel,#chal) .lrn-mt.bad,:root[data-theme="dark"] :is(#lrn,#duel,#chal) .lrn-opt.bad{background:#3a1717;color:#ff8a8a}
 </style>
 <script>/* tungi rejim: avto / tungi / kunduzgi (2026-10-19) */try{var __t=localStorage.getItem("theme");if(__t==="dark"||__t==="light")document.documentElement.setAttribute("data-theme",__t);}catch(e){}</script>
 </head>
@@ -4158,7 +4206,7 @@ function lrnKwHl(text,x){ const st=lrnKwStems(x); if(!st.length) return esc(text
 function lrnMatchRender(){
   const M=LR.mg, uz=state.lang!=="ru";
   const tile=(side,k)=>{ const p=M.P[k], d=M.done.has(k), s=M.sel&&M.sel[0]===side&&M.sel[1]===k;
-    return `<button type="button" class="lrn-mt${d?" ok":""}${s?" sel":""}" data-mt="${side}${k}"${d?" disabled":""}>${lrnKwHl(p.x.mt[side==="L"?0:1],p.x)}</button>`; };
+    return `<button type="button" class="lrn-mt${d?" ok":""}${s?" sel":""}${(()=>{ const m=Math.max(...String(p.x.mt[side==="L"?0:1]).split(/\s+/).map(w=>w.length)); return m>16?" lng2":m>12?" lng":""; })()}" lang="de" data-mt="${side}${k}"${d?" disabled":""}>${lrnKwHl(p.x.mt[side==="L"?0:1],p.x)}</button>`; };
   const found=M.ord.map(k=>{ const x=M.P[k].x; return `<div class="lrn-mf"><b>${lrnKwHl(x.mt[0]+" "+x.mt[1],x)}</b><small>${esc(x.mt[2]||x.ru)}</small></div>`; }).join("");
   const all=M.done.size===M.P.length;
   /* qolganlar: juft hech qachon bir qatorda turmasin (siljitib) */
