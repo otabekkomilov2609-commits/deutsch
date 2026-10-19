@@ -1214,7 +1214,7 @@ mark.trm.bad sup{color:#C62828}
 :is(#lrn,#duel,#chal) .lrn-card{border-radius:24px;border-width:2px;box-shadow:0 4px 0 var(--lsh),0 12px 28px rgba(31,79,160,.07)}
 :is(#lrn,#duel,#chal) .lrn-q{font-weight:800;font-size:28px;letter-spacing:-.005em}
 :is(#lrn,#duel,#chal) .lrn-ask,:is(#lrn,#duel,#chal) .lrn-pt,:is(#lrn,#duel,#chal) .lrn-count{font-weight:700}
-:is(#lrn,#duel,#chal) .lrn-prog{height:12px}:is(#lrn,#duel,#chal) .lrn-prog .d{background:linear-gradient(90deg,#43c97b,#2a9d5c)}
+:is(#lrn,#duel,#chal) .lrn-prog{height:12px}.lrn-pw{position:relative}#lrn .lrn-pbe{font-size:22px}:is(#lrn,#duel,#chal) .lrn-prog .d{background:linear-gradient(90deg,#43c97b,#2a9d5c)}
 :is(#lrn,#duel,#chal) .btn{border-radius:14px;font-weight:800;border-width:2px;box-shadow:0 3px 0 var(--lsh);transition:transform .1s,box-shadow .1s}
 :is(#lrn,#duel,#chal) .btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--lsh)}
 :is(#lrn,#duel,#chal) .btn.primary{box-shadow:0 4px 0 #15397a}:is(#lrn,#duel,#chal) .btn.primary:active{box-shadow:0 1px 0 #15397a}
@@ -4061,7 +4061,7 @@ function lrnSetup(){
 /* Maqsad (2026-10-19, Otabek): o'quvchi nechta so'z yodlashini tanlaydi — sessiya shu so'zlar yashil bo'lguncha davom etadi */
 /* son oldindan berilmaydi — o'quvchi o'zi yozadi (2026-10-19, Otabek) */
 function lrnGoal(){ return LR.goalWant||0; }
-function lrnStartLearn(){ LR.chk=false; LR.mode="learn"; const left=lrnItems().filter(x=>LR.st[x.i]!==2), N=lrnGoal()||left.length;
+function lrnStartLearn(){ LR.chk=false; LR.mode="learn"; LR.emoL=null; LR.emoE=null; const left=lrnItems().filter(x=>LR.st[x.i]!==2), N=lrnGoal()||left.length;
   const half=lrnShuffle(left.filter(x=>LR.st[x.i]===1)), fresh=lrnShuffle(left.filter(x=>!LR.st[x.i])), k=Math.ceil(N/2);
   let S=[...half.slice(0,k),...fresh].slice(0,N); if(S.length<N) S=[...S,...half.slice(k)].slice(0,N);
   /* teng bo'laklar (2026-10-19, Otabek): N so'z ~7 talik teng bo'laklarga bo'linadi (20 → 7·7·6); har raund = yangi bo'lak Match + oldingi bo'lak yozish */
@@ -4084,7 +4084,14 @@ function lrnNewRound(){
 }
 function lrnTypable(x){ return x.de.length<=40 && !/[…·]/.test(x.de) && !x.red; }
 function lrnProgress(){ const tot=LR.pool.length, d=LR.pool.filter(x=>LR.st[x.i]===2).length, h=LR.pool.filter(x=>LR.st[x.i]===1).length;
-  return `<div class="lrn-prog" role="img" aria-label="${esc(lt("learned")(d,tot))}"><i class="d" style="width:${d/tot*100}%"></i><i class="h" style="width:${h/tot*100}%"></i></div><div class="lrn-pt">${esc(lt("learned")(d,tot))}</div>`; }
+  /* grammatika mashqlaridagidek: chiziq ustida yuradigan emoji 🤩 → 😍 → 🤓 → 🔥 → 🏆 (2026-10-19, Otabek) */
+  const r=tot?(d+h*.5)/tot:0, edge=tot?(d+h)/tot:0, E=r>=1?"🏆":r>=.75?"🔥":r>=.5?"🤓":r>=.25?"😍":"🤩", from=LR.emoL==null?edge:LR.emoL;
+  setTimeout(()=>lrnEmoGo(edge,E,d+h>0),40);
+  return `<div class="lrn-pw"><div class="lrn-prog" role="img" aria-label="${esc(lt("learned")(d,tot))}"><i class="d" style="width:${d/tot*100}%"></i><i class="h" style="width:${h/tot*100}%"></i></div><b class="ias-pbe lrn-pbe${LR.emoE&&from>0?"":" hid"}" id="lrn-pbe" style="left:${lrnEmoX(from)}">${LR.emoE||E}</b></div><div class="lrn-pt">${esc(lt("learned")(d,tot))}</div>`; }
+function lrnEmoX(x){ return `calc(${(x*100).toFixed(2)}% - ${x>=1?10:0}px)`; }
+function lrnEmoGo(edge,E,on){ const e=document.getElementById("lrn-pbe"); if(!e) return; e.style.left=lrnEmoX(edge);
+  if(!on){ e.classList.add("hid"); return; } const ch=e.textContent!==E||e.classList.contains("hid"); e.textContent=E; e.classList.remove("hid");
+  if(ch){ e.classList.remove("pop"); void e.offsetWidth; e.classList.add("pop"); } LR.emoL=edge; LR.emoE=E; }
 function lrnHint(x){
   const uz=state.lang!=="ru", D=lernData()[LR.id]||{}, de=x.de, h=[];
   if(D.kind==="perfekt") h.push(uz?"hat / ist bilan yozing: hat gemacht, ist gefahren":"Пишите с hat / ist: hat gemacht, ist gefahren");
