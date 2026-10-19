@@ -130,6 +130,7 @@ main{padding-block:6px 40px}
 .wl-red .wl-de{font-size:17.5px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wl-a.die{color:#FF8A80}}:root[data-theme="dark"] .wl-a.die{color:#FF8A80}
 .lek-lrn{margin-left:auto;align-self:flex-start;flex:none;display:flex;flex-direction:column;align-items:center;gap:1px;border:1.5px solid var(--green);background:var(--green-soft);color:var(--green);border-radius:12px;font:inherit;font-size:13.5px;font-weight:800;padding:7px 10px;cursor:pointer;white-space:nowrap}
+.lrn-les.one{grid-template-columns:1fr}.lrn-les.one .lrn-chip{cursor:default;min-height:0}
 .lek-lrn small{font-size:11.5px;font-weight:700;opacity:.8}.lek-lrn.full{background:var(--green);color:var(--on-fill)}
 .lrn-cb{border:1px solid var(--green);background:var(--green-soft);color:var(--green);border-radius:8px;font:inherit;font-size:12px;font-weight:700;padding:4px 8px;white-space:nowrap;cursor:pointer}
 .lrn{position:fixed;inset:0;z-index:70;background:var(--bg);color:var(--ink);display:flex;flex-direction:column;overflow:auto}
@@ -937,6 +938,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-slot.ok{border-color:var(--green);background:var(--green-soft);color:var(--green)}
 .ias-slot.bad:not(.cur){border-color:#C62828;color:#C62828}
 .ias-chip{display:inline-block;padding:0 10px;border-radius:999px;border:1.5px solid var(--line);font-size:18px}.ias-chip.sel{border-color:var(--blue);background:var(--blue-soft)}
+#ias-card button.ias-chip{text-transform:none;letter-spacing:0;font-weight:700;min-height:0;width:auto}button.ias-chip{font:inherit;font-size:.9em;color:inherit;background:var(--surface);cursor:pointer;margin:2px 1px;padding:2px 12px;line-height:1.35;-webkit-tap-highlight-color:transparent}button.ias-chip.cur{border:1.5px dashed var(--blue);color:var(--blue)}button.ias-chip.cur:active{transform:scale(.96)}button.ias-chip.cur.sel{border-style:solid;background:var(--blue-soft)}button.ias-chip.cur.ok{border:1.5px solid var(--green);background:var(--green-soft);color:var(--green)}button.ias-chip.cur.bad{border:1.5px solid #c0392b;background:#fdecea;color:#c0392b}button.ias-chip.cur.sol{border:1.5px solid var(--green);box-shadow:0 0 0 2px var(--green-soft)}
 .ias-in{display:flex;gap:8px}.ias-in[hidden]{display:none}
 .ias .ias-input{position:static!important;flex:1;height:56px!important;width:auto!important;border-radius:16px;border:2px solid var(--blue)!important;background:var(--surface)!important;padding:0 16px;font:700 22px/1 var(--hand),"Patrick Hand",sans-serif!important;color:var(--blue)!important;text-align:left;text-decoration:none!important;box-shadow:none}
 .ias .ias-input:focus{outline:none;box-shadow:0 0 0 3px rgba(31,79,160,.18)}
@@ -3842,7 +3844,7 @@ document.addEventListener("click",e=>{ const root=exEl(); if(!root||root.hidden|
   if(a==="sec"){ exStart(+b.dataset.si, false); return; }
   if(a==="menu"){ exMenu(); return; }
   if(a==="again"){ exStart(EX.si, true); return; }
-  if(a==="yod"){ const D=exData()[EX.id], id=D.lern[state.lang==="ru"?1:0]; exClose(); lrnOpen(id); LR.sel=new Set([D.lern[2]]); try{ store.set(lrnKey(id)+":sel",JSON.stringify([D.lern[2]])); }catch(err){} lrnSetup(); return; }
+  if(a==="yod"){ const D=exData()[EX.id], id=D.lern[state.lang==="ru"?1:0]; exClose(); lrnOpen(id); LR.one=+D.lern[2]; LR.sel=new Set([D.lern[2]]); try{ store.set(lrnKey(id)+":sel",JSON.stringify([D.lern[2]])); }catch(err){} lrnSetup(); return; }
   if(a==="next"){ EX.qi++; exItem(); return; }
   if(a==="say"){ exSay(it.say); return; }
   if(!it||EX.done) return;
@@ -3879,7 +3881,7 @@ function lrnShuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.r
 function lrnEl(){ return document.getElementById("lrn"); }
 function lrnOpen(id){
   const D=lernData()[id]; if(!D) return;
-  LR.id=id; store.set("lern:last",id); LR.st=lrnLoad(id); LR.chk=false; LR.mode=null; LR.redem=false; LR.fromList=null;
+  LR.id=id; store.set("lern:last",id); LR.st=lrnLoad(id); LR.chk=false; LR.mode=null; LR.redem=false; LR.fromList=null; LR.one=null;
   let saved=null; try{ saved=JSON.parse(store.get(lrnKey(id)+":sel")||"null"); }catch(e){}
   const les=Object.keys(D.les).map(Number);
   const m=byId[id]; const cur=m&&CURS[m.tab];
@@ -3919,7 +3921,7 @@ function lrnFm(de,full){ const f=String(full||""); return lrnForms(de).split(" �
 function lrnItems(){ const D=lernData()[LR.id]; return D.it.map((r,i)=>({i,l:r[0],s:D.sec[r[1]],full:r[2],de:r[3],ru:r[4],ex:r[5],red:r[6],dis:r[7],say:r[8],mt:(D.mt&&D.mt[i])||null,fm:D.kind==="perfekt"?"":lrnFm(r[3],r[2])})).filter(x=>x.ru && LR.sel.has(x.l) && (LR.redem||!x.red)); }
 function lrnLab(n){ const D=lernData()[LR.id]; return (D&&D.lab&&D.lab[n])||("L"+n); }
 /* 📋 Bitta Lektion so'zlari ro'yxati (Lektion oldidagi tugma) → ichidan Yodlashga (2026-10-19, Otabek) */
-function lrnList(n){ LR.mode="list"; LR.fromList=n; LR.chk=false; const D=lernData()[LR.id], uz=state.lang!=="ru";
+function lrnList(n){ LR.mode="list"; LR.fromList=n; LR.one=+n; LR.chk=false; const D=lernData()[LR.id], uz=state.lang!=="ru";
   const rows=D.it.map((r,i)=>({i,l:r[0],s:r[1],full:r[2],de:r[3],tr:r[4],ex:r[5],red:r[6],say:r[8]})).filter(x=>+x.l===+n&&x.tr);
   /* "immer / oft / …" bitta qatorda bo'lsa — alohida takrorlarini ko'rsatmaymiz */
   const parts=new Set(); rows.forEach(x=>{ if(/ \/ /.test(x.de)) x.de.split(" / ").forEach(p=>parts.add(p.trim())); });
@@ -3944,14 +3946,16 @@ function lrnHead(sub){
 }
 function lrnSetup(){
   LR.chk=false; LR.mode=null; LR.goalWant=0;
-  const D=lernData()[LR.id], les=Object.keys(D.les).map(Number);
+  /* Lektion oldidagi «So'zlar»dan kelsa — boshqa Lektionlar taklif qilinmaydi, faqat shu Lektion (2026-10-19, Otabek) */
+  const D=lernData()[LR.id], one=LR.one&&D.les[LR.one]!=null?LR.one:null, les=one?[one]:Object.keys(D.les).map(Number);
+  if(one) LR.sel=new Set([one]);
   const its=lrnItems(), done=its.filter(x=>LR.st[x.i]===2).length, KN=lrnKnown(), kn=its.filter(x=>KN.has(x.i)).length, kq=its.filter(x=>KN.has(x.i)&&LR.st[x.i]!==2).length;
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${progRank()}<div class="lrn-card lrn-setup">
-    <h3>${esc(lt("pick"))}</h3>
-    <div class="lrn-les">${les.map(n=>{ let a=0,d=0,h=0; D.it.forEach((r,i)=>{ if(r[0]!==n||!r[4]||(r[6]&&!LR.redem)) return; a++; if(LR.st[i]===2) d++; else if(LR.st[i]===1) h++; });
+    ${one?"":`<h3>${esc(lt("pick"))}</h3>`}
+    <div class="lrn-les${one?" one":""}">${les.map(n=>{ let a=0,d=0,h=0; D.it.forEach((r,i)=>{ if(r[0]!==n||!r[4]||(r[6]&&!LR.redem)) return; a++; if(LR.st[i]===2) d++; else if(LR.st[i]===1) h++; });
       const pc=a?Math.round(d/a*100):0, pq=a?Math.round((d+h)/a*100):0;
-      return `<button type="button" class="lrn-chip${a&&d===a?" full":""}" style="--p:${pc}%;--q:${pq}%" aria-pressed="${LR.sel.has(n)}" data-les="${n}"><b>${esc(lrnLab(n))}${a&&d===a?" ✓":""}</b><span class="lrn-lt">${esc(D.les[n])}</span><span class="lrn-cn">${d||h?`${d} / ${a}${h?` <i>+${h}</i>`:""}`:"&nbsp;"}</span></button>`; }).join("")}</div>
-    <div class="lrn-row"><button type="button" class="lrn-link" data-l="all">${esc(lt("all"))}</button><button type="button" class="lrn-link" data-l="none">${esc(lt("none"))}</button>
+      return `<button type="button" class="lrn-chip${a&&d===a?" full":""}" style="--p:${pc}%;--q:${pq}%" aria-pressed="${LR.sel.has(n)}"${one?"":` data-les="${n}"`}><b>${esc(lrnLab(n))}${a&&d===a?" ✓":""}</b><span class="lrn-lt">${esc(D.les[n])}</span><span class="lrn-cn">${d||h?`${d} / ${a}${h?` <i>+${h}</i>`:""}`:"&nbsp;"}</span></button>`; }).join("")}</div>
+    <div class="lrn-row">${one?"<span></span>":`<button type="button" class="lrn-link" data-l="all">${esc(lt("all"))}</button><button type="button" class="lrn-link" data-l="none">${esc(lt("none"))}</button>`}
       ${D.it.some(r=>r[6])?`<label class="lrn-tog"><input type="checkbox" data-l="redem"${LR.redem?" checked":""}> ${esc(lt("redem"))}</label>`:""}</div>
     <p class="lrn-count">${its.length? esc(lt("words")(its.length))+" · "+esc(lt("learned")(done,its.length)) : esc(lt("sel0"))}</p>
     ${kn?`<p class="lrn-kc">${esc(lt("knownN")(kn))}</p>`:""}
@@ -4528,6 +4532,8 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
   else if(noWords){ html=`<div class="ias-q">${iamLbl(esc(st.p||"").replace(/\n/g,"<br>").replace(/\*([^*]+)\*/g,"<b class=\"ias-mark\">$1</b>"))}</div>`+(iaItems()[st.i].long?"":`<div style="margin-top:10px">${iasSlot({i:st.i,kind:"g"},true)}</div>`); }
   else html=st.b.s.map((x,xi)=>{ if(typeof x==="string"){ const h=esc(x.replace(/\s*\(\d{1,2}\)\s*$/," ").replace(/^\s*\(\d{1,2}\)\s*/,"")).replace(/\n/g,"<br>").replace(/\*([^*]+)\*/g,"<b class=\"ias-mark\">$1</b>").replace(/\(([^)]*)\)/g,'<small class="ias-hint">($1)</small>'); return xi===0?iamLbl(h):h; } const i=x.g!=null?x.g:x.c;
     if(x.g!=null) return iasSlot({i,kind:"g"}, i===st.i);
+    /* tanlash mashqi: tepadagi gap ichidagi variantni bosish ham ishlaydi (2026-10-19, Otabek) */
+    if(i===st.i){ const on=IA.vals[i]===x.k, sc=on?(iasState(i)==="ok"?"ok":IAS.tried[i]?"bad":"sel"):""; return `<button type="button" class="ias-chip cur ${sc}" data-iaso="${x.k}">${esc(x.t)}</button>`; }
     return `<span class="ias-chip ${IA.vals[i]===x.k?"sel":""}">${esc(x.t)}</span>`; }).join("");
   document.getElementById("ias-card").innerHTML=(st.b.img?`<canvas class="iam-img" data-p="${st.b.img[0]}" data-y0="${st.b.img[1]}" data-y1="${st.b.img[2]}" data-x0="${st.b.img[3]||0}" data-x1="${st.b.img[4]||0}"></canvas>`:"")+`<div>${html}</div>`;
   if(st.b.img) iamStrips(IAS.my||V.token);
@@ -4573,7 +4579,7 @@ function iasErkl(i){ const hd=typeof HINTS!=="undefined"&&HINTS[IA.id], key=hd&&
   return `<div class="ias-erk"><i>Erklärung:</i> ${hq?esc(hq):""}${rr&&rr[L]?`${hq?"<br>":""}${esc(rr[L])}`:""}</div>`; }
 function iasSol(){ const st=IAS.steps[IAS.k]; if(!st) return; const it=iaItems()[st.i]; let ans="";
   if(it.t==="c"){ const list= st.kind==="o"? st.b.opts : st.b.s.filter(x=>typeof x!=="string"&&x.c===st.i).map(x=>[x.k,x.t]); const o=list.find(([k])=>k===it.ans); ans=o?(o[1]||"abcdefgh"[o[0]]):"";
-    V.body.querySelectorAll(".ias-opt").forEach(b=>b.classList.toggle("sol",+b.dataset.iaso===it.ans)); }
+    V.body.querySelectorAll(".ias-opt, .ias-chip[data-iaso]").forEach(b=>b.classList.toggle("sol",+b.dataset.iaso===it.ans)); }
   else { ans=String(it.a||""); if(IAS.blet&&IAS.blet[ans.trim()]) ans=IAS.blet[ans.trim()]; V.body.querySelectorAll(".ias-bw").forEach(b=>b.classList.toggle("sol",iaNorm(b.dataset.iasw)===iaNorm(ans))); }
   const fb=document.getElementById("ias-fb"); fb.className="ias-fb sol"; fb.innerHTML=`💡 Lösung:<b class="ias-ans">${esc(ans)}</b>${iasErkl(st.i)}`; iasSee(fb); }
 /* Lösung/xato qutisi ekrandan chiqib ketmasin */
