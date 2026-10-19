@@ -4791,7 +4791,7 @@ if(!ACC.cur && ACC_OK && !new URLSearchParams(location.search).get("ch") && !new
    Havola ?ch=<kod>: ro'yxat + Lektionlar + seed. Hamma bir xil savollarni oladi.
    Natijalar jonli: ochiq MQTT broker (WebSocket), har o'yinchi o'z natijasini "retained" xabar qilib yuboradi. */
 const CH_BROKERS=(()=>{ try{ const b=localStorage.getItem("chBroker"); if(b) return [b]; }catch(e){} return ["wss://broker.hivemq.com:8884/mqtt","wss://broker.emqx.io:8084/mqtt"]; })();
-const CH_SITE="https://otabekkomilov2609-commits.github.io/deutsch/";
+const CH_SITE="https://www.streber.uz/";
 const CH_NS="otabek-deutsch/ch1/";
 const CH_SEC=(()=>{ try{ return +localStorage.getItem("chSec")||60; }catch(e){ return 60; } })();
 const CHT={
