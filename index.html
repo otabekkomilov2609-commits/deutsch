@@ -1322,8 +1322,9 @@ mark.trm.bad sup{color:#C62828}
 /* 📱 iPad / planshet (2026-10-19, Otabek): grammatika mashqlari planshetda ham "bittalab" rejimda; kattaroq yozuv, yotiq holatda ikki ustun */
 @media (pointer:coarse) and (min-width:760px){
  .ias{max-width:780px;gap:16px}
- .ias-card{font-size:32px;padding:30px 34px;border-radius:24px}
- .ias-task{font-size:21px}.ias-task span{font-size:14.5px}
+ .ias-card{font-size:27px;padding:26px 30px;border-radius:24px}
+ .ias-task{font-size:20px}.ias-task span{font-size:14.5px}
+ .ias textarea.ias-input.long{font-size:30px!important}.ias textarea.ias-input.long::placeholder{font-size:22px}
  .ias-p{font-size:19px}
  .ias-bw{font-size:22px;padding:12px 22px}.ias-bank{gap:10px}
  .ias-opt{font-size:22px;padding:18px 22px}
@@ -1342,11 +1343,23 @@ mark.trm.bad sup{color:#C62828}
  .ias-fix>#ias-p{grid-column:1;grid-row:2;margin-bottom:12px}
  .ias-fix>#ias-card{grid-column:1;grid-row:3/12}
  .ias-fix>#ias-p[hidden]+#ias-card{grid-row:2/12}
- .ias-fix>#ias-diff,.ias-fix>#ias-pr,.ias-fix>#ias-wb,.ias-fix>#ias-bank,.ias-fix>#ias-opts,.ias>.ias-fb,.ias>.ias-nav{grid-column:2;margin-bottom:16px}
+ .ias-fix>#ias-diff,.ias-fix>#ias-fb,.ias-fix>#ias-pr,.ias-fix>#ias-wb,.ias-fix>#ias-bank,.ias-fix>#ias-opts,.ias-fix>.ias-nav,.ias>.ias-nav{grid-column:2;margin-bottom:16px}
  .ias-fix>#ias-inw:not([hidden]){grid-column:2;margin-bottom:16px}
- .ias>.ias-nav{flex-wrap:wrap}
+ .ias .ias-nav{flex-wrap:wrap}
  .ias-kb .ias-card{font-size:28px}
 }
+
+.ias-scr #ias-p,.ias-scr #ias-inw,.ias-scr #ias-bank,.ias-scr #ias-opts,.ias-scr #ias-pr,.ias-scr #ias-wb,.ias-scr #ias-fb,.ias-scr #ias-diff,.ias-scr #ias-solb{display:none!important}
+.ias-scr .ias-nav .ias-go{display:inline-block!important}.ias-scr .ias-nav{position:sticky;bottom:0;z-index:4;background:var(--bg);padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -10px 14px -12px rgba(23,36,60,.35)}.ias-nav .ias-go.vst{background:var(--green)!important;color:#fff}
+.ias-scr #ias-card{cursor:default}.ias-scr .ias-bsp{margin:0;font-size:1em}
+.ias-expl-h{font:800 15px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin:0 0 10px}
+.ias-scr-x #ias-card{padding:14px 12px}.ias-expl-im{overflow:auto;border-radius:12px;border:1px solid var(--line);background:#fff;-webkit-overflow-scrolling:touch}
+.ias-expl-im img{display:block;width:100%;height:auto;cursor:zoom-in}.ias-expl-im.z img{width:230%;max-width:none;cursor:zoom-out}
+.ias-expl-z{display:block;margin-top:6px;font:600 13px var(--sans);color:var(--muted)}
+.ias-ib{font:italic 800 24px/1 Georgia,serif!important;color:var(--blue)!important}
+.ias-bspb{display:inline-block;margin:4px 0 0 10px;border:1.5px dashed var(--green);background:var(--green-soft);color:var(--green);border-radius:99px;padding:3px 12px;font:800 13px/1.5 var(--sans);cursor:pointer;vertical-align:middle}
+@media (pointer:coarse) and (min-width:1000px) and (orientation:landscape){ .ias-scr .ias-fix>#ias-card{grid-column:1/-1;grid-row:2/3!important} .ias-scr .ias-fix>.ias-nav{grid-column:1/-1;grid-row:3;width:100%;margin-top:16px;justify-content:center;gap:64px} .ias-fix>#ias-fb,.ias-fix>.ias-nav{grid-column:2;margin-bottom:16px} }
+@media (min-width:760px){ .ias-expl-im.z img{width:160%} }
 </style>
 <script>/* tungi rejim: avto / tungi / kunduzgi (2026-10-19) */try{var __t=localStorage.getItem("theme");if(__t==="dark"||__t==="light")document.documentElement.setAttribute("data-theme",__t);}catch(e){}</script>
 </head>
@@ -4634,6 +4647,10 @@ document.addEventListener("keydown",e=>{
 });
 document.getElementById("v-lern").addEventListener("click",()=>{ if(V.cur) lrnOpen(V.cur.id); });
 
+/* oyna (PDF/mashq/Yodlash…) ochiq paytda orqa sahifa qotiriladi — iPad'da klaviatura ochilganda orqadagi "Übersicht" ko'rinib qolmasin (2026-10-19, Otabek) */
+(()=>{ const SL={on:false,y:0}, b=document.body; new MutationObserver(()=>{ const h=b.style.overflow==="hidden";
+  if(h&&!SL.on){ SL.on=true; SL.y=window.scrollY||0; b.style.position="fixed"; b.style.top=(-SL.y)+"px"; b.style.left="0"; b.style.right="0"; }
+  else if(!h&&SL.on){ SL.on=false; b.style.position=""; b.style.top=""; b.style.left=""; b.style.right=""; window.scrollTo(0,SL.y); } }).observe(b,{attributes:true,attributeFilter:["style"]}); })();
 function closeViewer(){ try{ progMarks(); }catch(e){} try{ document.getElementById("v-aud").pause(); }catch(e){} V.token++; V.el.hidden=true; V.body.innerHTML=""; document.body.style.overflow=""; if(V.lastFocus&&V.lastFocus.focus) V.lastFocus.focus(); }
 document.getElementById("v-close").addEventListener("click", closeViewer);
 document.addEventListener("keydown", e=>{ if(e.key==="Escape" && !V.el.hidden && lrnEl().hidden) closeViewer(); });
@@ -4750,6 +4767,8 @@ async function iamStrips(my){
     c.getContext("2d").drawImage(off,sx,Math.round(y0*sc),sw,hh,0,0,sw,hh); c.dataset.done="1"; }
 }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-iam]"); if(!b||!V.cur) return; store.set("iam:mode",b.dataset.iam); renderPages(V.cur,++V.token); });
+/* 📘 Mavzu tushuntirishi (2026-10-19, Otabek): varaqdagi "Regel" qismi rasm bo'lib (files/expl/), [sahifa, fayl, en, bo'y]. B1 — Lektionning Grammatik PDF'i. */
+const IAS_EXPL={"B1-b11-12-Arbeitsblatt-so-dass":[[0,"B1-b11-12-Arbeitsblatt-so-dass-0.webp",1273,1874]],"B1-b11-11-Arbeitsblatt-Relativsaetze":[[0,"B1-b11-11-Arbeitsblatt-Relativsaetze-0.webp",1273,447]],"B1-b11-10-Arbeitsblatt-temporale-Konnektoren":[[0,"B1-b11-10-Arbeitsblatt-temporale-Konnektoren-0.webp",1273,1874]],"B1-b11-9-Arbeitsblatt-wegen-trotz":[[0,"B1-b11-9-Arbeitsblatt-wegen-trotz-0.webp",1273,1874]],"B1-b11-8-Arbeitsblatt-Infinitiv-mit-zu":[[0,"B1-b11-8-Arbeitsblatt-Infinitiv-mit-zu-0.webp",1273,1874]],"B1-b11-7-Arbeitsblatt-Adjektive-ohne-Artikel":[[0,"B1-b11-7-Arbeitsblatt-Adjektive-ohne-Artikel-0.webp",1273,385]],"B1-b11-5-Arbeitsblatt-Konjunktiv-II":[[0,"B1-b11-5-Arbeitsblatt-Konjunktiv-II-0.webp",1273,611]],"B1-b11-4-Arbeitsblatt-damit-um-zu":[[0,"B1-b11-4-Arbeitsblatt-damit-um-zu-0.webp",1273,1874]],"B1-b11-3-Arbeitsblatt-Komparativ-Superlativ":[[0,"B1-b11-3-Arbeitsblatt-Komparativ-Superlativ-0.webp",1273,455]],"B1-b11-2-Arbeitsblatt-darum-deswegen":[[0,"B1-b11-2-Arbeitsblatt-darum-deswegen-0.webp",1273,1874]],"B1-b11-1-Arbeitsblatt-als-wenn":[[0,"B1-b11-1-Arbeitsblatt-als-wenn-0.webp",1273,1874]],"B1-b11-6-Arbeitsblatt-obwohl-trotzdem":[[0,"B1-b11-6-Arbeitsblatt-obwohl-trotzdem-0.webp",1273,1874]],"B1-b12-13-Arbeitsblatt-zweiteilige-Konnektoren":[[0,"B1-b12-13-Arbeitsblatt-zweiteilige-Konnektoren-0.webp",1273,1874]],"A1-a11-1-Arbeitsblatt-Konjugation-W-Fragen-aus":[[0,"A1-a11-1-Arbeitsblatt-Konjugation-W-Fragen-aus-0.webp",1273,658]],"A2-a21-4-Arbeitsblatt-deshalb":[[0,"A2-a21-4-Arbeitsblatt-deshalb-0.webp",1273,634]],"A2-a21-r-Grammatik-L1-12-Wiederholung":[[1,"A2-a21-r-Grammatik-L1-12-Wiederholung-0.webp",1276,875],[2,"A2-a21-r-Grammatik-L1-12-Wiederholung-1.webp",1276,657],[3,"A2-a21-r-Grammatik-L1-12-Wiederholung-2.webp",1276,715],[4,"A2-a21-r-Grammatik-L1-12-Wiederholung-3.webp",1276,645],[5,"A2-a21-r-Grammatik-L1-12-Wiederholung-4.webp",1276,672],[6,"A2-a21-r-Grammatik-L1-12-Wiederholung-5.webp",1276,643],[7,"A2-a21-r-Grammatik-L1-12-Wiederholung-6.webp",1273,667],[8,"A2-a21-r-Grammatik-L1-12-Wiederholung-7.webp",1273,489],[9,"A2-a21-r-Grammatik-L1-12-Wiederholung-8.webp",1273,635],[10,"A2-a21-r-Grammatik-L1-12-Wiederholung-9.webp",1273,734],[11,"A2-a21-r-Grammatik-L1-12-Wiederholung-10.webp",1273,782],[12,"A2-a21-r-Grammatik-L1-12-Wiederholung-11.webp",1276,612]],"A2-a22-16-Arbeitsblatt-reflexive-Verben":[[0,"A2-a22-16-Arbeitsblatt-reflexive-Verben-0.webp",1273,1874]],"A2-a22-20-Arbeitsblatt-lokale-Praepositionen":[[0,"A2-a22-20-Arbeitsblatt-lokale-Praepositionen-0.webp",1273,593]],"A2-a22-21-Grammatik-lassen":[[0,"A2-a22-21-Grammatik-lassen-0.webp",1276,791]],"A2-a22-22-Arbeitsblatt-Relativsaetze":[[0,"A2-a22-22-Arbeitsblatt-Relativsaetze-0.webp",1273,829]],"A2.1-Lektion-10---Grammatik-von-bei-zu":[[0,"A2.1-Lektion-10---Grammatik-von-bei-zu-0.webp",1273,734]],"A2.1-Lektion-11---Arbeitsblatt-Konjunktiv-II":[[0,"A2.1-Lektion-11---Arbeitsblatt-Konjunktiv-II-0.webp",1273,782]],"A2.1-Lektion-7---Arbeitsblatt-Konnektor-dass":[[0,"A2.1-Lektion-7---Arbeitsblatt-Konnektor-dass-0.webp",1273,667]],"A2.1-Lektion-8---Grammatika-wenn":[[0,"A2.1-Lektion-8---Grammatika-wenn-0.webp",1273,489]],"A2.1-Lektion-9---Grammatika-Wechselpraepositionen":[[0,"A2.1-Lektion-9---Grammatika-Wechselpraepositionen-0.webp",1273,635]],"A2.2-Lektion-13---Grammatika-Dativ-und-Akkusativ":[[0,"A2.2-Lektion-13---Grammatika-Dativ-und-Akkusativ-0.webp",1273,741]],"A2.2-Lektion-14---Arbeitsblatt-Adjektive-nach-definitem-Artikel":[[0,"A2.2-Lektion-14---Arbeitsblatt-Adjektive-nach-definitem-Artikel-0.webp",1273,602]],"A2.2-Lektion-15---Arbeitsblatt-Adjektive-nach-ein-kein-mein":[[0,"A2.2-Lektion-15---Arbeitsblatt-Adjektive-nach-ein-kein-mein-0.webp",1273,598]],"A2.2-Lektion-19-21---Grammatik-Uebersicht-und-Uebungen":[[0,"A2.2-Lektion-19-21---Grammatik-Uebersicht-und-Uebungen-0.webp",1273,714],[1,"A2.2-Lektion-19-21---Grammatik-Uebersicht-und-Uebungen-1.webp",1273,778],[2,"A2.2-Lektion-19-21---Grammatik-Uebersicht-und-Uebungen-2.webp",1273,765]],"A2.2-Lektion-23---Grammatik-n-Deklination-und-Praeteritum":[[0,"A2.2-Lektion-23---Grammatik-n-Deklination-und-Praeteritum-0.webp",1273,959],[1,"A2.2-Lektion-23---Grammatik-n-Deklination-und-Praeteritum-1.webp",1273,822]],"A1-a11-2-Arbeitsblatt-Konjugation-Plural-nicht-als-bei-in":[[0,"A1-a11-2-Arbeitsblatt-Konjugation-Plural-nicht-als-bei-in-0.webp",1273,775]],"A1-a11-4-Grammatik-der-das-die-er-es-sie":[[0,"A1-a11-4-Grammatik-der-das-die-er-es-sie-0.webp",1273,603]],"A1-a11-6-Grammatik-Plural-und-Akkusativ":[[0,"A1-a11-6-Grammatik-Plural-und-Akkusativ-0.webp",1273,778]],"A1-a11-r-Grammatik-L1-12-Wiederholung":[[1,"A1-a11-r-Grammatik-L1-12-Wiederholung-0.webp",1276,622],[2,"A1-a11-r-Grammatik-L1-12-Wiederholung-1.webp",1276,692],[3,"A1-a11-r-Grammatik-L1-12-Wiederholung-2.webp",1276,691],[4,"A1-a11-r-Grammatik-L1-12-Wiederholung-3.webp",1276,654],[5,"A1-a11-r-Grammatik-L1-12-Wiederholung-4.webp",1276,750],[6,"A1-a11-r-Grammatik-L1-12-Wiederholung-5.webp",1276,722],[7,"A1-a11-r-Grammatik-L1-12-Wiederholung-6.webp",1276,750],[8,"A1-a11-r-Grammatik-L1-12-Wiederholung-7.webp",1276,877],[9,"A1-a11-r-Grammatik-L1-12-Wiederholung-8.webp",1276,729],[10,"A1-a11-r-Grammatik-L1-12-Wiederholung-9.webp",1276,691],[11,"A1-a11-r-Grammatik-L1-12-Wiederholung-10.webp",1276,731],[12,"A1-a11-r-Grammatik-L1-12-Wiederholung-11.webp",1276,750]],"A1-a12-16-Grammatik-in-vor-nach-Dativ":[[0,"A1-a12-16-Grammatik-in-vor-nach-Dativ-0.webp",1274,484]],"A1-a12-19-Arbeitsblatt-Imperativ-du-ihr":[[0,"A1-a12-19-Arbeitsblatt-Imperativ-du-ihr-0.webp",1274,548]],"A1-a12-19-Arbeitsblatt-Personalpronomen-im-Akkusativ":[[0,"A1-a12-19-Arbeitsblatt-Personalpronomen-im-Akkusativ-0.webp",1274,464]],"A1-a12-m5-Dativ-Wiederholung-L13-14":[[0,"A1-a12-m5-Dativ-Wiederholung-L13-14-0.webp",1274,475],[1,"A1-a12-m5-Dativ-Wiederholung-L13-14-1.webp",1274,763]]};
 /* 📱 A variant — «bittadan» (Duolingo uslubi): har bir katak alohida ekranda. Sinov: bitta varaqda — 2026-10-18 */
 const IAS_SHEETS=new Set(["B1-b11-12-Arbeitsblatt-so-dass", "B1-b11-11-Arbeitsblatt-Relativsaetze", "B1-b11-10-telc-Sprachbausteine-Teil-1", "B1-b11-10-Arbeitsblatt-temporale-Konnektoren", "B1-b11-9-Arbeitsblatt-wegen-trotz", "B1-b11-8-Arbeitsblatt-Infinitiv-mit-zu", "B1-b11-7-Arbeitsblatt-Adjektive-ohne-Artikel", "B1-b11-5-Arbeitsblatt-Konjunktiv-II", "B1-b11-4-Arbeitsblatt-damit-um-zu", "B1-b11-3-telc-Sprachbausteine-Teil-1", "B1-b11-3-Arbeitsblatt-Komparativ-Superlativ", "B1-b11-2-Arbeitsblatt-darum-deswegen", "B1-b11-1-telc-Sprachbausteine-Teil-2", "B1-b11-1-Arbeitsblatt-als-wenn", "B1-b11-6-telc-Sprachbausteine-Teil-2", "B1-b11-6-Arbeitsblatt-obwohl-trotzdem", "B1-b12-13-Arbeitsblatt-zweiteilige-Konnektoren", "A1-a11-1-Arbeitsblatt-Konjugation-W-Fragen-aus", "A2-a21-4-Arbeitsblatt-deshalb", "A2-a21-7-Wiederholung-Grammatik-und-Kommunikation", "A2-a21-7-Wiederholung-schwer-Grammatik-und-Kommunikation", "A2-a21-9-Laufdiktat-Chaos-Saetze", "A2-a21-m3-Test-L7-9", "A2-a21-m3-Test-L7-9-Variante-A", "A2-a21-m3-Test-L7-9-Variante-B", "A2-a21-m4-Schnelltest-Wiederholung-L10-11", "A2-a21-r-Grammatik-L1-12-Wiederholung", "A2-a21-r-Wiederholungstest-L1-9", "A2-a22-14-Schnelltest-Lektion-14", "A2-a22-14-Schnelltest-Lektion-14-2", "A2-a22-16-Arbeitsblatt-reflexive-Verben", "A2-a22-20-Arbeitsblatt-lokale-Praepositionen", "A2-a22-21-Grammatik-lassen", "A2-a22-22-Arbeitsblatt-Relativsaetze", "A2.1-Lektion-10---Grammatik-von-bei-zu", "A2.1-Lektion-11---Arbeitsblatt-Konjunktiv-II", "A2.1-Lektion-7---Arbeitsblatt-Konnektor-dass", "A2.1-Lektion-8---Grammatika-wenn", "A2.1-Lektion-9---Grammatika-Wechselpraepositionen", "A2.2-Lektion-13---Grammatika-Dativ-und-Akkusativ", "A2.2-Lektion-14---Arbeitsblatt-Adjektive-nach-definitem-Artikel", "A2.2-Lektion-15---Arbeitsblatt-Adjektive-nach-ein-kein-mein", "A2.2-Lektion-19-21---Grammatik-Uebersicht-und-Uebungen", "A2.2-Lektion-19-21---Wortschatzuebung", "A2.2-Lektion-23---Grammatik-n-Deklination-und-Praeteritum", "A1-a11-2-Arbeitsblatt-Konjugation-Plural-nicht-als-bei-in", "A1-a11-4-Grammatik-der-das-die-er-es-sie", "A1-a11-6-Grammatik-Plural-und-Akkusativ", "A1-a11-m2-Wiederholung-L4-6", "A1-a11-r-Grammatik-L1-12-Wiederholung", "A1-a12-13-Uebung-6c-Fragen", "A1-a12-14-Praepositionen-mit-Dativ-Wo-ist-es", "A1-a12-16-Grammatik-in-vor-nach-Dativ", "A1-a12-19-Arbeitsblatt-Imperativ-du-ihr", "A1-a12-19-Arbeitsblatt-Personalpronomen-im-Akkusativ", "A1-a12-m5-Dativ-Wiederholung-L13-14", "A1-a12-m5-Wortschatz-Test-L13-14-In-der-Stadt", "A1-a12-r-Grammatik-L13-21-Wiederholung"]);
 const IAS={};
@@ -4783,18 +4802,19 @@ function iasState(i){ const it=iaItems()[i]; if(!it) return "none"; const v=IA.v
 function iasRender(m){
   Object.assign(IAS,{id:m.id,steps:iasSteps(m.id),k:0,tried:IAS.id===m.id?IAS.tried:{},fails:IAS.id===m.id?(IAS.fails||{}):{}}); if(IAS.id!==m.id){ IAS.tried={}; IAS.fails={}; }
   const first=IAS.steps.findIndex(s=>iasState(s.i)!=="ok"); IAS.k=first<0?0:first;
-  V.el.classList.add("ias-on");
-  V.body.innerHTML=`<div class="ias"><div class="ias-fix" id="ias-fix"><div class="ias-head"><div class="ias-top"><button type="button" class="ias-tb ias-x" data-iasx="1" title="Yopish" aria-label="Yopish">✕</button><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b><b class="ias-pbe hid" id="ias-pbe"></b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button><button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
+  V.el.classList.add("ias-on"); IAS.exSeen=new Set(); IAS.bspSeen=new Set(); IAS.force=null; IAS.scr=null;
+  /* planshetda Zurück/Prüfen/Überspringen javob maydoni bilan bir blokda — klaviatura ochilganda tepaga "suzib" ketmaydi (2026-10-19, Otabek) */
+  const NAV=`<div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" class="ias-go" id="ias-go" aria-label="Prüfen">✓ Prüfen</button><button type="button" data-ias="skip">Überspringen →</button></div>`;
+  V.body.innerHTML=`<div class="ias"><div class="ias-fix" id="ias-fix"><div class="ias-head"><div class="ias-top"><button type="button" class="ias-tb ias-x" data-iasx="1" title="Yopish" aria-label="Yopish">✕</button><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b><b class="ias-pbe hid" id="ias-pbe"></b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button>${IAS_EXPL[m.id]?`<button type="button" class="ias-tb ias-ib" data-ias="info" title="Regel" aria-label="Regel">i</button>`:""}<button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
     <div class="ias-secs" id="ias-secs"></div>
     <div class="ias-task" id="ias-task"></div></div><p class="ias-p" id="ias-p"></p>
-    <div class="ias-card" id="ias-card"></div><div class="ias-diff" id="ias-diff" hidden></div>
+    <div class="ias-card" id="ias-card"></div><div class="ias-diff" id="ias-diff" hidden></div><div class="ias-fb" id="ias-fb"></div>
     <button type="button" class="ias-pr" id="ias-pr">✓ Prüfen</button>
     <button type="button" class="ias-wb" id="ias-wb" hidden>Weiter →</button>
     <div class="ias-bank" id="ias-bank"></div>
     <div class="ias-in" id="ias-inw"><textarea rows="1" class="ia-in ias-input" id="ias-in" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="done"></textarea></div>
-    <div class="ias-opts" id="ias-opts"></div></div>
-    <div class="ias-fb" id="ias-fb"></div>
-    <div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" class="ias-go" id="ias-go" aria-label="Prüfen">✓ Prüfen</button><button type="button" data-ias="skip">Überspringen →</button></div>
+    <div class="ias-opts" id="ias-opts"></div>${iamTab()?NAV:""}</div>
+    ${iamTab()?"":NAV}
     <div class="ias-dots" id="ias-dots"></div></div>`;
   const inp=document.getElementById("ias-in");
   inp.addEventListener("focus",()=>V.body.querySelector(".ias")&&V.body.querySelector(".ias").classList.add("ias-foc"));
@@ -4866,11 +4886,18 @@ function iasSlot(st,cur){ const it=iaItems()[st.i], v=IA.vals[st.i];
   return `<span class="ias-slot ${cur?"cur":""} ${s}">${cur&&s!=="ok"?(txt?esc(txt):"&nbsp;?&nbsp;"):esc(txt||"…")}</span>`; }
 function iasShow(focus){ if(!document.getElementById("ias-card")) return;
   const st=IAS.steps[IAS.k]; if(!st){ iasEnd(); return; } const n=IAS.steps.length, it=iaItems()[st.i], uz=state.lang!=="ru";
+  { const ex=iasExplFor(st), EXS0=st.ex||((IAS.steps.find(s2=>s2.h===st.h&&s2.ex)||{}).ex); IAS.scr=null;
+    if(IAS.force==="x"&&ex) IAS.scr="x"; else if(IAS.force==="b"&&EXS0) IAS.scr="b";
+    else if(!IAS.force&&ex&&!(IAS.exSeen||new Set()).has(ex[1])) IAS.scr="x";
+    else if(!IAS.force&&st.ex&&st.exFirst&&!(IAS.bspSeen||new Set()).has(st.h)) IAS.scr="b"; }
   const okN=IAS.steps.filter(s=>iasState(s.i)==="ok").length;
-  document.getElementById("ias-pb").style.width=(okN/n*100)+"%"; document.getElementById("ias-cnt").textContent=`${IAS.k+1} / ${n}`; iasEmo(okN,n,false);
+  document.getElementById("ias-pb").style.width=(okN/n*100)+"%"; iasEmo(okN,n,false);
+  /* tepadagi sanoq — shu Aufgabe ichida nechanchi savol (Beispiel = 1) (2026-10-19, Otabek) */
+  { const G=iasSecs(), g=G.find(g=>g.ks.includes(IAS.k)), exN=g&&IAS.steps[g.ks[0]].ex?1:0; document.getElementById("ias-cnt").textContent=g?`${IAS.scr==="b"?1:g.ks.indexOf(IAS.k)+1+exN} / ${g.ks.length+exN}`:`${IAS.k+1} / ${n}`; }
   { const dfx=document.getElementById("ias-diff"); if(dfx){ dfx.hidden=true; dfx.innerHTML=""; } }
-  { const G=iasSecs(), gi=G.findIndex(g=>g.ks.includes(IAS.k)), g=G[gi], exN=g&&IAS.steps[g.ks[0]].ex?1:0, pos=g?g.ks.indexOf(IAS.k)+1+exN:0, ps=g&&g.ks.length+exN>1?` <em>· ${pos} / ${g.ks.length+exN}</em>`:"", /* Beispiel 1-raqam — sanoq varaqdagi raqam bilan bir xil */ of=x=>G.length<2?"":(x===String(gi+1)?` von ${G.length}`:` <em>(${gi+1} von ${G.length})</em>`);
+  { const G=iasSecs(), gi=G.findIndex(g=>g.ks.includes(IAS.k)), g=G[gi], exN=g&&IAS.steps[g.ks[0]].ex?1:0, pos=g?g.ks.indexOf(IAS.k)+1+exN:0, ps="", /* pozitsiya — tepada o'ngda (2026-10-19) */ of=x=>G.length<2?"":(x===String(gi+1)?` von ${G.length}`:` <em>(${gi+1} von ${G.length})</em>`);
     let th=st.h?esc(st.h).replace(/^(\d{1,2}|[A-H])\b\s*([—–-]\s*)?/,(m,x)=>`<span>Aufgabe ${x}${of(x)}${ps}</span>`):""; if(g&&!/<span>/.test(th)) th=`<span>Aufgabe ${gi+1}${of(String(gi+1))}${ps}</span>`+th;
+    if(exN&&IAS.scr!=="b") th+=`<button type="button" class="ias-bspb" data-ias="bsp">📌 Beispiel</button>`;
     document.getElementById("ias-task").innerHTML=th; }
   const pe=document.getElementById("ias-p"); const nw= st.kind==="o" || (st.kind==="g" && !st.b.s.some((x,xi)=>typeof x==="string"&&/[A-Za-zÄÖÜäöüß]{2}|\d/.test(xi===0?x.replace(/^\s*(\d{1,2}|[a-h])[.)]?\s+/,""):x))); pe.textContent=nw?"":(st.p||""); pe.hidden=nw||!st.p;
   let html="";
@@ -4884,16 +4911,15 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
     /* tanlash mashqi: tepadagi gap ichidagi variantni bosish ham ishlaydi (2026-10-19, Otabek) */
     if(i===st.i){ const on=IA.vals[i]===x.k, sc=on?(iasState(i)==="ok"?"ok":IAS.tried[i]?"bad":"sel"):""; return `<button type="button" class="ias-chip cur ${sc}" data-iaso="${x.k}">${esc(x.t)}</button>`; }
     return `<span class="ias-chip ${IA.vals[i]===x.k?"sel":""}">${esc(x.t)}</span>`; }).join("");
-  let bsp=""; if(st.ex&&st.exFirst){ const e0=st.ex[0], eb=e0.b, uzB=uz;
+  let bsp=""; const EXS=st.ex||((IAS.steps.find(s2=>s2.h===st.h&&s2.ex)||{}).ex); if(EXS&&IAS.scr==="b"){ const e0=EXS[0], eb=e0.b, uzB=uz;
     let eh=""; if(e0.kind==="o"){ const it0=iaItems()[e0.i], oT=((eb.opts.find(([k])=>k===it0.ans)||[])[1]||"").replace(/^[a-h]\)?\s+/,""); const pp=String(e0.p||""), cut=pp.lastIndexOf("\n\n"), qq=cut>0?pp.slice(cut+2):pp; let gi=0;
         eh=esc(qq).replace(/\n/g,"<br>").replace(/\*([^*]+)\*/g,"$1").replace(/_{3,}/g,()=>`<span class="ias-slot ok">${esc(oT.split(" … ")[gi++]||"")}</span>`); if(!/ias-slot/.test(eh)) eh+=` → <span class="ias-slot ok">${esc(oT)}</span>`; }
       else { const seen=new Set(); eh=eb.s.map(x=>{ if(typeof x==="string") return esc(x.replace(/\s*\(\d{1,2}\)\s*$/," ").replace(/^\s*\(\d{1,2}\)\s*/,"").replace(/^\s*(\d{1,2}|[a-h])[.)]?\s+/,"")).replace(/\n/g,"<br>").replace(/\*([^*]+)\*/g,"$1").replace(/\(([^)]*)\)/g,'<small class="ias-hint">($1)</small>');
           const i=x.g!=null?x.g:x.c; if(x.g!=null) return `<span class="ias-slot ok${iasAns(i).length>24?" lg":""}">${esc(iasAns(i))}</span>`; if(seen.has(i)) return ""; seen.add(i); const it=iaItems()[i], o=eb.s.find(y=>typeof y!=="string"&&y.c===i&&y.k===it.ans); return o?`<span class="ias-chip ok">${esc(String(o.t).replace(/^[a-h]\)\s*/,""))}</span>`:""; }).join("");
         if(!eb.s.some(x=>typeof x==="string"&&/[A-Za-zÄÖÜäöüß]{2}/.test(x))&&e0.p) eh=`<span>${esc(String(e0.p).replace(/\n/g," ").replace(/^\s*(\d{1,2}|[a-h])[.)]?\s+/,""))}</span> → `+eh; }
     bsp=`<div class="ias-bsp"><b>📌 Beispiel</b><div>${eh}</div></div>`;
-    /* savol matni (ias-p) namunadan KEYIN tursin — aks holda namuna savolga o'xshab qoladi */
-    if(!pe.hidden&&pe.textContent){ bsp+=`<p class="ias-pin">${esc(pe.textContent)}</p>`; pe.hidden=true; } }
-  document.getElementById("ias-card").innerHTML=bsp+(st.b.img?`<canvas class="iam-img" data-p="${st.b.img[0]}" data-y0="${st.b.img[1]}" data-y1="${st.b.img[2]}" data-x0="${st.b.img[3]||0}" data-x1="${st.b.img[4]||0}"></canvas>`:"")+`<div>${html}</div>`;
+  }
+  document.getElementById("ias-card").innerHTML=IAS.scr==="b"?bsp:(st.b.img?`<canvas class="iam-img" data-p="${st.b.img[0]}" data-y0="${st.b.img[1]}" data-y1="${st.b.img[2]}" data-x0="${st.b.img[3]||0}" data-x1="${st.b.img[4]||0}"></canvas>`:"")+`<div>${html}</div>`;
   if(st.b.img) iamStrips(IAS.my||V.token);
   const inw=document.getElementById("ias-inw"), opts=document.getElementById("ias-opts"), inp=document.getElementById("ias-in");
   const bankEl=document.getElementById("ias-bank"); const bw=st.kind==="g"&&st.bank? st.bank.replace(/\(\d+×\)/g,"").split("·").map(x=>x.trim()).filter(Boolean):[];
@@ -4915,15 +4941,24 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
     if(it.long) inp.placeholder="Schreiben Sie den ganzen Satz …"; else inp.placeholder="";
     /* gap ichidagi «?» katakning o'zi yozish joyi: pastdagi maydon ko'rinmaydi */
     const inl=!it.long&&!inw.hidden&&!!document.querySelector("#ias-card .ias-slot.cur"); V.body.querySelector(".ias").classList.toggle("ias-inl",inl);
-    if(focus&&(!bw.length||starters)){ const fo=()=>{ if(document.activeElement!==inp) inp.focus({preventScroll:true}); try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(e){} }; fo(); setTimeout(fo,30); } } /* iPhone: fokus bosish bilan bir vaqtda (sinxron) bo'lmasa klaviatura ochilmaydi */
+    if(focus&&!IAS.scr&&(!bw.length||starters)){ const fo=()=>{ if(document.activeElement!==inp) inp.focus({preventScroll:true}); try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(e){} }; fo(); setTimeout(fo,30); } } /* iPhone: fokus bosish bilan bir vaqtda (sinxron) bo'lmasa klaviatura ochilmaydi */
   else { inw.hidden=true; V.body.querySelector(".ias").classList.remove("ias-inl");
     const list= st.kind==="o"? st.b.opts : st.b.s.filter(x=>typeof x!=="string"&&x.c===st.i).map(x=>[x.k,x.t]);
     opts.innerHTML=list.map(([k,t])=>`<button type="button" class="ias-opt ${IA.vals[st.i]===k?(iasState(st.i)==="ok"?"ok":IAS.tried[st.i]?"bad":"sel"):""}" data-iaso="${k}">${esc(String(t||"").replace(/^[a-h]\)?\s+(?=\S)/,"")||"abcdefgh"[k])}</button>`).join(""); }
   const fb=document.getElementById("ias-fb"); const s=iasState(st.i);
   fb.className="ias-fb"; fb.innerHTML=""; /* to'g'ri bo'lsa: katak yashil + tepadagi chiziq oldinga, quti chiqmaydi */
   if(st.kind==="g"&&s==="ok"&&!iaItems()[st.i].free) inp.classList.add("ok"); /* to'g'ri — yozish maydoni yashil (2026-10-19, Otabek) */
-  iasSolBtn(); iasGoMode(); iasDots(); iasSecRender(); iasSecDone();
+  iasSolBtn(); iasGoMode(); iasDots(); iasSecRender(); iasSecDone(); iasScreen();
 }
+/* 📘/📌 ekran: mavzu tushuntirishi yoki Beispiel alohida — "Verstanden ✓" bosilsa keyingisi (2026-10-19, Otabek) */
+function iasExplFor(st){ const L=IAS_EXPL[IAS.id]; if(!L||!st) return null; const it=iaItems()[st.i], p=it?it.p:0; let e=L[0]; L.forEach(x=>{ if(x[0]<=p) e=x; }); return e; }
+function iasScreen(){ const root=V.body.querySelector(".ias"); if(!root) return; root.classList.toggle("ias-scr",!!IAS.scr); root.classList.toggle("ias-scr-x",IAS.scr==="x");
+  if(!IAS.scr) return; const st=IAS.steps[IAS.k], c=document.getElementById("ias-card");
+  root.classList.remove("ias-inl"); const a=document.activeElement; if(a&&a.id==="ias-in") a.blur();
+  if(IAS.scr==="x"){ const e=iasExplFor(st); c.innerHTML=`<div class="ias-expl"><div class="ias-expl-h">📘 Regel</div><div class="ias-expl-im"><img src="files/expl/${encodeURI(e[1])}" width="${e[2]}" height="${e[3]}" alt="Regel" data-iasz="1"></div><small class="ias-expl-z">🔍 Bild antippen = größer</small></div>`; }
+  const go=document.getElementById("ias-go"); if(go){ go.hidden=false; go.classList.remove("next"); go.classList.add("vst"); go.textContent="Verstanden ✓"; go.setAttribute("aria-label","Verstanden"); } }
+function iasScrMark(){ const st=IAS.steps[IAS.k]; if(IAS.scr==="x"){ const e=iasExplFor(st); if(e) IAS.exSeen.add(e[1]); } else if(IAS.scr==="b"&&st) IAS.bspSeen.add(st.h); IAS.force=null; IAS.scr=null; const go=document.getElementById("ias-go"); if(go) go.classList.remove("vst"); }
+function iasScrDone(){ iasScrMark(); try{ V.body.scrollTo({top:0}); }catch(e){} iasShow(true); }
 /* «💡 Lösung» faqat 2 marta xato urinishdan keyin chiqadi */
 /* xato: «Leider falsch» qutisi yo'q — faqat silkinadi; izoh bo'lsa kichik «?» chiqadi, bosilsa izoh ochiladi, «×» — yopiladi (2026-10-18) */
 function iasWhyQ(fb){ fb.className="ias-fb ias-fbq"; fb.innerHTML=IAS.why?`<button type="button" class="ias-qb" data-iasq="open" aria-label="Warum falsch?">?</button>`:""; }
@@ -4982,7 +5017,7 @@ function iasGoMode(){ const st=IAS.steps[IAS.k], go=document.getElementById("ias
   const ok=iasState(st.i)==="ok"; go.classList.toggle("next",ok); go.textContent=ok?"Weiter →":"✓ Prüfen"; go.setAttribute("aria-label",ok?"Weiter":"Prüfen"); go.hidden=!!inw.hidden;
   const pr=document.getElementById("ias-pr"); if(pr){ pr.classList.toggle("next",ok); pr.textContent=ok?"Weiter →":"✓ Prüfen"; }
   if(wb) wb.hidden=!(ok&&(inw.hidden||V.body.querySelector(".ias-bw")&&[...V.body.querySelectorAll(".ias-bw")].some(b=>/…\s*$/.test(b.dataset.iasw)))); }
-function iasCheck(){ const go=document.getElementById("ias-go"), st0=IAS.steps[IAS.k];
+function iasCheck(){ if(IAS.scr){ iasScrDone(); return; } const go=document.getElementById("ias-go"), st0=IAS.steps[IAS.k];
   if(go&&go.classList.contains("next")&&st0&&iasState(st0.i)==="ok"){ iasNext(true); return; } iasCheckOnly(); }
 function iasCheckOnly(){
   const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g") return; const inp=document.getElementById("ias-in");
@@ -5046,12 +5081,16 @@ document.addEventListener("click",e=>{ if(!V.body.querySelector(".ias")) return;
     inp.value=wv; inp.dispatchEvent(new Event("input",{bubbles:true})); iasCheckOnly(); return; }
   const o=e.target.closest("[data-iaso]"); if(o){ const st=IAS.steps[IAS.k]; IA.vals[st.i]=+o.dataset.iaso; iaSave(); IAS.tried[st.i]=true; iasAfter(st); return; }
   if(e.target.closest("[data-iasx]")){ sndOpen(); return; }
-  const sb=e.target.closest("[data-iassec]"); if(sb){ const g=iasSecs()[+sb.dataset.iassec]; if(g){ const k=g.ks.find(k=>iasState(IAS.steps[k].i)!=="ok"); IAS.k=k!=null?k:g.ks[0]; iasShow(true); } return; }
+  const zi=e.target.closest("[data-iasz]"); if(zi){ zi.closest(".ias-expl-im").classList.toggle("z"); return; }
+  const sb=e.target.closest("[data-iassec]"); if(sb){ if(IAS.scr) iasScrMark(); const g=iasSecs()[+sb.dataset.iassec]; if(g){ const k=g.ks.find(k=>iasState(IAS.steps[k].i)!=="ok"); IAS.k=k!=null?k:g.ks[0]; iasShow(true); } return; }
   const d=e.target.closest("[data-iasd]"); if(d){ if(!document.getElementById("ias-card")){ iasRender(V.cur); } IAS.k=+d.dataset.iasd; iasShow(true); return; }
   if(e.target.closest("#ias-go")||e.target.closest("#ias-pr")){ iasCheck(); return; }
   if(e.target.closest("#ias-card")&&V.body.querySelector(".ias-inl")){ const ii=document.getElementById("ias-in"); ii.focus({preventScroll:true}); try{ ii.setSelectionRange(ii.value.length,ii.value.length); }catch(er){} return; }
   if(e.target.closest("#ias-wb")){ iasNext(true); return; }
   const a=e.target.closest("[data-ias]"); if(!a) return; const k=a.dataset.ias;
+  if(k==="info"){ IAS.force="x"; iasShow(false); return; }
+  if(k==="bsp"){ IAS.force="b"; iasShow(false); return; }
+  if((k==="prev"||k==="skip")&&IAS.scr) iasScrMark();
   if(k==="prev"){ IAS.k=(IAS.k-1+IAS.steps.length)%IAS.steps.length; iasShow(true); }
   else if(k==="sol"){ iasSol(); }
   else if(k==="skip"){ IAS.k=(IAS.k+1)%IAS.steps.length; iasShow(true); }
