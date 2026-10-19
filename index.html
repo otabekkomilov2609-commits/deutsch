@@ -1424,7 +1424,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gw{position:relative;display:inline-block;vertical-align:baseline;margin:0 3px}
 .ex-gap{display:inline-block;min-width:60px;text-align:center;padding:0 8px;margin:0;border:0!important;border-bottom:3px solid var(--blue)!important;border-radius:8px 8px 0 0;background:var(--blue-soft);color:var(--blue);font:inherit;line-height:1.4;height:auto;outline:none;box-shadow:none}
 .ex-gap:focus{box-shadow:0 0 0 3px rgba(31,79,160,.25)}
-.ex-gap.ok{border-bottom-color:var(--green)!important;background:var(--green-soft);color:var(--green)}
+.ex-gap.ok{border-bottom-color:var(--green)!important;background:var(--green-soft);color:var(--green)}.ex-gap.lk{pointer-events:none;-webkit-text-fill-color:var(--green);opacity:1}
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
@@ -2661,8 +2661,8 @@ function exQ(s){ return esc(s).replace(/\n/g,"<br>"); }
 const EXR={
   mc:{auto:1, r:it=>`<div class="ex-q">${exQ(it.q).replace(/___/g,'<span class="ex-blank">___</span>')}</div><div class="ias-opts ex-opts">${it.o.map((o,k)=>`<button type="button" class="ex-opt" data-x="opt" data-k="${k}">${esc(o)}</button>`).join("")}</div>`,
     ans:it=>esc(it.o[it.a])},
-  gap:{r:it=>{ let k=0; return `<div class="ex-q ex-gs">${exQ(it.s).replace(/___/g,()=>{ const a=it.a[k][0]; return `<span class="ex-gw"><input class="ex-gap" data-g="${k++}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" lang="de" style="width:${Math.max(3,a.length+1.5)}ch"><span class="ex-dv" hidden></span></span>`; })}</div>`; },
-    c:it=>{ const ins=[...exEl().querySelectorAll(".ex-gap")]; let all=true; ins.forEach((i,k)=>{ const v=exNorm(i.value), ok=it.a[k].some(a=>exNorm(a)===v); i.classList.toggle("ok",ok); i.classList.toggle("bad",!ok); i.disabled=ok; if(!ok) all=false; }); return all; },
+  gap:{r:it=>{ let k=0; return `<div class="ex-q ex-gs">${exQ(it.s).replace(/___/g,()=>{ const a=it.a[k][0]; return `<span class="ex-gw"><input class="ex-gap" data-g="${k++}" data-ans="${esc(a)}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" lang="de" style="width:${Math.max(3,a.length+1.5)}ch"><span class="ex-dv" hidden></span></span>`; })}</div>`; },
+    c:it=>{ const ins=[...exEl().querySelectorAll(".ex-gap")]; let all=true; ins.forEach((i,k)=>{ const v=exNorm(i.value), ok=it.a[k].some(a=>exNorm(a)===v); i.classList.toggle("ok",ok); i.classList.toggle("bad",!ok); exGapLock(i,ok); if(!ok) all=false; }); return all; },
     ans:it=>{ let k=0; return exQ(it.s).replace(/___/g,()=>`<b class="ex-hl">${esc(it.a[k++][0])}</b>`); }},
   order:{r:it=>{ let w=it.w.map((x,i)=>i); const j=it.j??" ", tgt=it.a.replace(/[.?!]$/,""); for(let t=0;t<20;t++){ exShuffle(w); if(w.map(i=>it.w[i]).join(j)!==tgt) break; } EX.st.ord=[]; EX.st.pool=w;
       return `<div class="ex-line${j===""?" join":""}${it.dlg?" dlg":""}" id="ex-line"><span class="ex-ph">…</span></div><div class="ex-pool${it.dlg?" dlg":""}" id="ex-pool">${w.map(i=>`<button type="button" class="ex-tile" data-x="tile" data-i="${i}">${esc(it.w[i])}</button>`).join("")}</div>`; },
@@ -2705,9 +2705,9 @@ function exItem(){ const el=exEl(); el.classList.remove("has-fb"); EX.done=false
   if(solved){ exShowSolved(it); exGo("next"); EX.done=true; }
   else exGo(EXR[it.t].auto?"hide":"chk");
   if(it.say) setTimeout(()=>exSay(it.say),250);
-  const gp=el.querySelector(".ex-gap:not(:disabled)"); if(gp&&!it.say&&!solved) setTimeout(()=>gp.focus({preventScroll:true}),60); }
+  const gp=el.querySelector(".ex-gap:not(.lk)"); if(gp&&!it.say&&!solved) setTimeout(()=>gp.focus({preventScroll:true}),60); }
 /* oldin to'g'ri yechilgan savolga qaytilsa — javob ko'rinadi */
-function exShowSolved(it){ const R=exEl(); if(it.t==="gap") R.querySelectorAll(".ex-gap").forEach((i,k)=>{ i.value=it.a[k][0]; i.classList.add("ok"); i.disabled=true; exGapFit(i); });
+function exShowSolved(it){ const R=exEl(); if(it.t==="gap") R.querySelectorAll(".ex-gap").forEach((i,k)=>{ i.value=it.a[k][0]; i.classList.add("ok"); exGapFit(i); exGapLock(i,true); });
   else if(it.t==="mc") R.querySelectorAll(".ex-opt").forEach((x,i)=>{ x.disabled=true; if(i===it.a) x.classList.add("ok"); });
   else { const w=R.querySelector("#ex-w"); if(w) w.innerHTML=`<div class="ex-a ex-solved">${EXR[it.t].ans(it)}</div>`; } }
 function exScrDone(){ const gi=exGi(), info=exInfoFor(gi); if(EX.scr==="x"&&info) EX.xSeen.add(info); if(EX.scr==="b") EX.bSeen.add(gi); EX.force=null; EX.scr=null; exItem(); }
@@ -2786,17 +2786,20 @@ document.addEventListener("click",e=>{ const root=exEl(); if(!root||root.hidden|
     return; }
 });
 /* xato harflar katakning o'zida (qizil harf, tushib qolgan harf «_»), yozishdan to'xtaganda jonli ishora, to'g'ri yozilsa Prüfen → Weiter (grammatika varag'idagidek, 2026-10-20) */
-function exGapFit(i){ let m=document.getElementById("ex-mz"); if(!m){ m=document.createElement("span"); m.id="ex-mz"; m.style.cssText="position:absolute;visibility:hidden;white-space:pre;left:-9999px;top:0;pointer-events:none"; document.body.appendChild(m); }
-  const cs=getComputedStyle(i); m.style.fontFamily=cs.fontFamily; m.style.fontSize=cs.fontSize; m.style.fontWeight=cs.fontWeight; m.style.fontStyle=cs.fontStyle; m.style.letterSpacing=cs.letterSpacing; m.textContent=i.value||"000"; i.style.width=Math.max(60,m.offsetWidth+26)+"px"; }
+/* iOS Safari: disabled input matnni qirqib ko'rsatadi («Si») — o'rniga readOnly + .lk, scrollLeft=0 (2026-10-20) */
+function exGapLock(i,on){ i.readOnly=!!on; i.classList.toggle("lk",!!on); if(on){ i.tabIndex=-1; try{ i.blur(); }catch(e){} i.scrollLeft=0; } else i.removeAttribute("tabindex"); }
+function exGapFit(i){ try{ const cs=getComputedStyle(i), fs=parseFloat(cs.fontSize)||24; const cv=exGapFit._c||(exGapFit._c=document.createElement("canvas").getContext("2d")); cv.font=`${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  const mw=t=>{ try{ return cv.measureText(t).width; }catch(e){ return t.length*fs*.62; } };
+  const ans=i.dataset.ans||""; const w=Math.max(mw(i.value||""), mw(ans), (i.value||"").length*fs*.6, 2*fs); const nw=Math.ceil(w+34); if(nw>(parseFloat(i.style.width)||0)||!i.value) i.style.width=Math.max(64,nw)+"px"; }catch(e){} }
 function exGapDiff(i,alts,maxD){ const v=i.value, w=i.closest(".ex-gw"), d=w&&w.querySelector(".ex-dv"); if(!d) return false; const u=iaNorm(v);
   const art=alts.map(x=>iaNorm(x)).find(x=>/^(der|die|das|den|dem|des|ein|eine|einen|einem|einer) /.test(x)&&x.replace(/^\S+ /,"")===u); let h="";
   if(art){ const k=v.search(/\S/); h=esc(v.slice(0,Math.max(0,k)))+'<b class="dm">_</b> '+esc(v.slice(Math.max(0,k))); } else h=iasDiff(v,{a:alts[0],ok:alts.map(x=>iaNorm(x))},maxD);
   if(!h){ d.hidden=true; d.innerHTML=""; w.classList.remove("dv"); return false; } d.innerHTML=h; d.hidden=false; w.classList.add("dv"); errCaret(i,h); return true; }
-document.addEventListener("input",e=>{ const i=e.target; if(!i.classList||!i.classList.contains("ex-gap")) return; const R=exEl(); if(!R||R.hidden||EX.done) return; const it=exCur(); if(!it||it.t!=="gap") return;
+document.addEventListener("input",e=>{ const i=e.target; if(!i.classList||!i.classList.contains("ex-gap")||i.classList.contains("lk")) return; const R=exEl(); if(!R||R.hidden||EX.done) return; const it=exCur(); if(!it||it.t!=="gap") return;
   const w=i.closest(".ex-gw"); if(w){ w.classList.remove("dv"); const d=w.querySelector(".ex-dv"); if(d){ d.hidden=true; d.innerHTML=""; } } i.classList.remove("bad","shake"); R.querySelectorAll(".ex-qb").forEach(b=>b.remove());
   exGapFit(i); clearTimeout(EX.autoT); clearTimeout(EX.liveT); const k=+i.dataset.g, alts=it.a[k], same=v=>alts.some(a=>exNorm(a)===exNorm(v));
-  EX.autoT=setTimeout(()=>{ if(exCur()!==it||EX.done||!i.isConnected) return; const ins=[...R.querySelectorAll(".ex-gap")]; if(ins.every(x=>it.a[+x.dataset.g].some(a=>exNorm(a)===exNorm(x.value)))){ ins.forEach(x=>{ x.classList.remove("bad"); x.classList.add("ok"); x.disabled=true; }); exAfter(true); }
-    else if(same(i.value)){ i.classList.add("ok"); i.disabled=true; const nx=ins.find(x=>!x.disabled&&!x.value.trim())||ins.find(x=>!x.disabled); if(nx) nx.focus(); } },400);
+  EX.autoT=setTimeout(()=>{ if(exCur()!==it||EX.done||!i.isConnected) return; const ins=[...R.querySelectorAll(".ex-gap")]; if(ins.every(x=>it.a[+x.dataset.g].some(a=>exNorm(a)===exNorm(x.value)))){ ins.forEach(x=>{ x.classList.remove("bad"); x.classList.add("ok"); exGapFit(x); exGapLock(x,true); }); exAfter(true); }
+    else if(same(i.value)){ i.classList.add("ok"); exGapFit(i); exGapLock(i,true); const nx=ins.find(x=>!x.classList.contains("lk")&&!x.value.trim())||ins.find(x=>!x.classList.contains("lk")); if(nx) nx.focus(); } },400);
   EX.liveT=setTimeout(()=>{ if(exCur()!==it||EX.done||!i.isConnected||document.activeElement!==i) return; if(!i.value.trim()||same(i.value)) return; exGapDiff(i,alts,2); },1100); });
 /* umlaut tugmasi → oxirgi faol bo'sh joyga */
 let EX_LASTGAP=null;
@@ -2806,7 +2809,7 @@ document.addEventListener("click",e=>{ const k=e.target.closest("[data-exk]"); i
 document.addEventListener("keydown",e=>{ const root=exEl(); if(!root||root.hidden) return;
   if(e.key==="Escape"){ const c=root.querySelector('[data-x="close"]'); if(c) c.click(); return; }
   if(e.key==="Enter"){ const go=root.querySelector('#ex-go'); if(go&&!go.hidden&&go.dataset.x!=="chk"){ e.preventDefault(); go.click(); return; }
-    if(e.target.classList&&e.target.classList.contains("ex-gap")){ e.preventDefault(); const ins=[...root.querySelectorAll(".ex-gap:not(:disabled)")], i=ins.indexOf(e.target); const nx=ins.slice(i+1).find(x=>!x.value.trim()); if(nx) nx.focus(); else if(go&&!go.hidden) go.click(); } }
+    if(e.target.classList&&e.target.classList.contains("ex-gap")){ e.preventDefault(); const ins=[...root.querySelectorAll(".ex-gap:not(.lk)")], i=ins.indexOf(e.target); const nx=ins.slice(i+1).find(x=>!x.value.trim()); if(nx) nx.focus(); else if(go&&!go.hidden) go.click(); } }
   if(!EX.done&&/^[1-4]$/.test(e.key)&&!(e.target.classList&&e.target.classList.contains("ex-gap"))){ const o=root.querySelector(`.ex-opt[data-k="${+e.key-1}"]`); if(o) o.click(); } });
 
 function lrnShuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
