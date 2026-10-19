@@ -171,7 +171,7 @@ main{padding-block:6px 40px}
 #lrn .mu-ov{position:absolute;inset:0;padding:0 4px;font-weight:800;line-height:1.5;text-align:center;white-space:pre;pointer-events:none;display:none;color:var(--ink)}
 #lrn .mu-gw.mk .mu-in{color:transparent;caret-color:var(--ink)}#lrn .mu-gw.mk .mu-ov{display:block}
 #lrn .mu-gw.rdy .mu-in{color:var(--green);border-color:var(--green);background:var(--green-soft)}#lrn #mu-chk.ready{background:var(--green)!important;border-color:var(--green)!important;color:#fff}
-#lrn .mu-say{margin-left:8px;vertical-align:middle}#lrn .mu-rq{margin-top:6px;font-size:14px;color:var(--muted);text-align:center;font-weight:700}#lrn .mu-cont{font-style:normal;font-size:13px;color:var(--green);margin-left:6px;white-space:nowrap}
+#lrn .mu-say{margin-left:8px;vertical-align:middle}#lrn .mu-tot{margin:10px 0 4px}#lrn .mu-tot b{display:block;margin-top:6px;font-size:15px}#lrn .mu-left{color:var(--muted)}#lrn .mu-rq{margin-top:6px;font-size:14px;color:var(--muted);text-align:center;font-weight:700}#lrn .mu-cont{font-style:normal;font-size:13px;color:var(--green);margin-left:6px;white-space:nowrap}
 #lrn-inw.rdy input{border-color:var(--green)!important;background:var(--green-soft)!important;color:var(--green)!important;box-shadow:none!important}
 .ias:not(.ias-inl) .ias-input.ok{border-color:var(--green)!important;background:var(--green-soft)!important;color:var(--green)!important}
 #lrn .mu-gw.ok .mu-in{color:var(--green);border-color:var(--green)}#lrn .mu-gw.bad .mu-in{color:#c62828;border-color:#c62828}#lrn .mu-gw.shk{animation:lrnShake .35s}
@@ -4192,7 +4192,7 @@ function muSessLoad(o){ const by={}; muAll().forEach(x=>{ by[x.i]=x; }); const D
   if(steps.some(z=>!z)) return false;
   Object.assign(MU,{steps,k:o.k,okN:o.okN,rq:o.rq||0,first:o.first||{},tries:0,done:false,items:o.items.map(i=>by[i]).filter(Boolean),pool:muPool(),fns:D.fns}); return true; }
 /* ibora o'zlashtirildimi: shu sessiyada uning chat/yozish (A1 — juftlash ham) qadamlari birinchi urinishda to'g'ri */
-function muMastery(i){ const f=MU.first[i]||{}, need=[...new Set(MU.steps.filter(s=>!s.re&&(s.x&&s.x.i===i&&(s.t==="chat"||s.t==="gap")||s.t==="pair"&&s.xs.some(y=>y.i===i))).map(s=>s.t))];
+function muMastery(i){ const f=MU.first[i]||{}, need=[...new Set(MU.steps.filter(s=>!s.re&&s.x&&s.x.i===i&&(s.t==="chat"||s.t==="gap")).map(s=>s.t))];
   if(!need.length||!need.every(t=>f[t]===true)) return; const st=muStore(); if(!st[i]){ st[i]=1; muSave(st); MU.newM=(MU.newM||0)+1; } }
 /* talaffuz: suhbat bo'lsa — savol + javob, aks holda butun gap */
 function muSay(x){ return muDlg(x)?String(x.mt[0])+" "+String(x.mt[1]):muLine(x); }
@@ -4217,7 +4217,7 @@ function muStart(fresh0){ const D=lernData()[LR.id], pool=muPool(); if(pool.leng
   LR.mode="mu"; LR.chk=false; LR.emoL=null; LR.emoE=null; MU.newM=0;
   if(!fresh0){ const o=muSessGet(); if(o&&muSessLoad(o)){ muShow(); return; } }
   const A1=String(LR.id).startsWith("A1"); /* A1 — osonroq: Verbinden (kitobdagi "Wer sagt was? Verbinden Sie"), chat, so'z banki (2026-10-19, Otabek) */
-  const fresh=lrnShuffle(pool.filter(x=>!st[x.i])), old=lrnShuffle(pool.filter(x=>st[x.i])); const items=[...fresh,...old].slice(0,A1?6:8);
+  const fresh=lrnShuffle(pool.filter(x=>!st[x.i])), old=lrnShuffle(pool.filter(x=>st[x.i])); const lim=A1?6:8, take=(fresh.length>lim&&fresh.length-lim<=2)?fresh.length:lim; /* 1–2 ta ibora keyingi mashg‘ulotga qolib ketmasin */ const items=[...fresh,...old].slice(0,take);
   /* Sortieren: kamida 2 ta vazifa, har birida ≥2 ibora */
   const byF={}; pool.forEach(x=>{ (byF[x.fn]=byF[x.fn]||[]).push(x); });
   let fs=Object.keys(byF).map(Number).filter(f=>byF[f].length>=2); fs=lrnShuffle(fs).sort((a,b)=>items.filter(x=>x.fn===b).length-items.filter(x=>x.fn===a).length).slice(0,3);
@@ -4259,9 +4259,9 @@ function muShow(){ const st=MU.steps[MU.k]; if(!st){ muEnd(); return; } const uz
   if(st.t==="gap"&&!st.bank) setTimeout(()=>{ const i=document.getElementById("mu-in"); if(i) i.focus(); },60); }
 function muNext(){ MU.k++; muShow(); }
 function muMark(ok){ const st=MU.steps[MU.k], first=ok&&!MU.tries; if(first) MU.okN++; MU.rqNow=false;
-  if(st.t!=="sort"&&!st.re){ const f=MU.first[st.x.i]=MU.first[st.x.i]||{}; f[st.t]=first; if(first) muMastery(st.x.i); }
-  /* xato (yoki tuzatib topdi) — bu qadam sessiya oxirida yana keladi (Lernen'dagidek, 2026-10-19, Otabek) */
-  if(!first&&(MU.rq||0)<10){ MU.rq=(MU.rq||0)+1; MU.rqNow=true; const c={t:st.t,x:st.x,g:st.g,bank:st.bank,fs:st.fs,re:1}; if(st.t==="gap"&&st.bank) c.opts=lrnShuffle(st.opts.slice()); MU.steps.push(c); }
+  /* 2026-10-20 (Otabek: «oxirigacha bordim, 100% bo'lmadi»): xato qilingan qadam oxirida yana keladi — o'shanda to'g'ri topsa, ibora baribir o'zlashtirilgan hisoblanadi (Lernen'dagidek) */
+  if(st.t!=="sort"&&(!st.re||first)){ const f=MU.first[st.x.i]=MU.first[st.x.i]||{}; f[st.t]=first; if(first) muMastery(st.x.i); }
+  if(!first&&(MU.rq||0)<40){ MU.rq=(MU.rq||0)+1; MU.rqNow=true; const c={t:st.t,x:st.x,g:st.g,bank:st.bank,fs:st.fs,re:1}; if(st.t==="gap"&&st.bank) c.opts=lrnShuffle(st.opts.slice()); MU.steps.push(c); }
   muSessPut(); }
 function muAfter(ok){ const st=MU.steps[MU.k], uz=state.lang!=="ru", a=document.getElementById("mu-after"); MU.done=true; if(!a) return;
   a.innerHTML=`<div class="mu-tr${ok?"":" bad"}">${ok?"✓ ":""}${esc(muT(st.x))}</div>${MU.rqNow?`<div class="mu-rq">🔁 ${uz?"Bu ibora keyinroq yana so‘raladi.":"Эту фразу спросим ещё раз позже."}</div>`:""}<div class="lrn-row2"><span></span><button type="button" class="btn primary" data-mu="next">${esc(lt("next"))} →</button></div>`;
@@ -4301,10 +4301,13 @@ document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="mu-in") retu
   MU.liveT=setTimeout(()=>{ if(MU.done||!inp.isConnected||document.activeElement!==inp) return; const v=inp.value; if(!v.trim()||v.trim().toLowerCase()===st.g.w.toLowerCase()) return; const h=iasDiff(v,{a:st.g.w,ok:[st.g.w]},2); if(h){ ov.innerHTML=h; w.classList.add("mk"); } },1100); });
 function muEnd(){ const uz=state.lang!=="ru", n=MU.steps.length, r=n?MU.okN/n:0; const m=MU.newM||0; muSessPut();
   try{ const mm=byId[LR.id], all=muAll(), ms=muStore(); if(mm) accAuto("mu:"+LR.id, accLvl(mm), "💬 Muloqot · "+mm.title, all.filter(x=>ms[x.i]).length, all.length, 0); }catch(e){}
-  const E=r>=.9?"🏆":r>=.7?"🔥":r>=.5?"🤓":"💪";
+  const full=(()=>{ const P=muPool(), ms=muStore(); return P.length&&P.every(x=>ms[x.i]); })(), E=full||r>=.9?"🏆":r>=.7?"🔥":r>=.5?"🤓":"💪";
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">${E}</div><h3>${uz?"Muloqot mashg‘uloti tugadi!":"Тренировка диалогов окончена!"}</h3>
-    <p>${uz?`Birinchi urinishda to‘g‘ri: <b>${MU.okN} / ${n}</b>`:`С первой попытки: <b>${MU.okN} / ${n}</b>`}</p>${m?`<p>${uz?`Yangi o‘zlashtirilgan iboralar: <b>${m}</b>`:`Новых освоенных фраз: <b>${m}</b>`}</p>`:""}
-    <div class="lrn-row2"><button type="button" class="btn" data-mu="home">${uz?"Tugatish":"Готово"}</button><button type="button" class="btn primary" data-mu="again">${uz?"Yana bir marta":"Ещё раз"} →</button></div></div></div>`; }
+    ${(()=>{ const P=muPool(), ms=muStore(), d=P.filter(x=>ms[x.i]).length, left=P.length-d, pc=P.length?Math.round(d/P.length*100):0;
+      return `<p>${uz?`Yangi o‘zlashtirilgan iboralar: <b>${m}</b>`:`Новых освоенных фраз: <b>${m}</b>`}</p>
+      <div class="mu-tot"><div class="lrn-prog"><i class="d" style="width:${pc}%"></i></div><b>${uz?`Shu Lektion(lar): ${d} / ${P.length} ibora · ${pc}%`:`Эти уроки: ${d} / ${P.length} фраз · ${pc}%`}</b></div>
+      ${left?`<p class="mu-left">${uz?`Yana <b>${left}</b> ta ibora qoldi — keyingi mashg‘ulotda ular keladi.`:`Осталось ещё <b>${left}</b> фраз — они будут в следующей тренировке.`}</p>`:`<p class="mu-left">🎉 ${uz?"Hamma iboralar o‘zlashtirildi!":"Все фразы освоены!"}</p>`}
+      <div class="lrn-row2"><button type="button" class="btn" data-mu="home">${uz?"Tugatish":"Готово"}</button><button type="button" class="btn primary" data-mu="again">${left?(uz?`Davom etish (${left}) →`:`Дальше (${left}) →`):(uz?"Yana bir marta →":"Ещё раз →")}</button></div>`; })()}</div></div>`; }
 
 /* ---------- Lernen ---------- */
 /* Maqsad (2026-10-19, Otabek): o'quvchi nechta so'z yodlashini tanlaydi — sessiya shu so'zlar yashil bo'lguncha davom etadi */
