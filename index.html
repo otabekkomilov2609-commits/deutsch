@@ -213,6 +213,9 @@ main{padding-block:6px 40px}
 .lrn-inw.artw input{color:transparent;caret-color:var(--ink);border-color:#e3a1a1}.lrn-inw.artw .lrn-ov{display:block}
 .lrn-ov .lrn-artl{display:inline-block;font-weight:inherit;color:#d0021b;background:#fde2e2;border-radius:4px;text-decoration:underline wavy #d0021b;text-underline-offset:4px}
 .lrn-ov .lrn-artl.sh{animation:lrnArtShake .5s ease 2}
+.lrn-ov .dx{color:#d0021b;background:#fde2e2;border-radius:3px;padding:0 1px}.lrn-ov .dm{color:#d0021b;font-weight:800}
+.lrn-inw.shk{animation:lrnShake .35s}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lrn-ov .dx{background:#5a2020;color:#FF8A80}:root:not([data-theme="light"]) .lrn-ov .dm{color:#FF8A80}}:root[data-theme="dark"] .lrn-ov .dx{background:#5a2020;color:#FF8A80}:root[data-theme="dark"] .lrn-ov .dm{color:#FF8A80}
 .lrn-keys{display:flex;gap:6px}.lrn-keys.uk{position:relative;z-index:5}.uk .uk-p{display:none;position:absolute;left:0;top:calc(100% + 6px);gap:4px;padding:5px;border:1px solid var(--line);border-radius:12px;background:var(--card,var(--bg));box-shadow:0 8px 24px rgba(0,0,0,.18);white-space:nowrap}.uk .uk-p .lrn-key{width:38px}.uk.open .uk-p{display:flex;animation:ukIn .15s ease-out}.uk.open .uk-t{border-color:var(--blue);background:var(--blue-soft)}@keyframes ukIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}.lrn-key{width:42px;height:38px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font:inherit;font-size:17px;cursor:pointer}
 .lrn-row2{display:flex;justify-content:space-between;align-items:center;gap:10px}.lrn-row2 .btn{padding:10px 18px;font-size:15px;cursor:pointer}
 .lrn-fb:empty{display:none}.lrn-fb{position:fixed;left:0;right:0;bottom:0;z-index:5;margin:0 auto;max-width:640px;max-height:55vh;overflow:auto;border-radius:18px 18px 0 0;padding:16px 18px calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px;box-shadow:0 -6px 24px rgba(10,18,35,.18)}
@@ -1023,6 +1026,8 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-pbe.hid{opacity:0} .pctb{position:absolute;right:-9px;bottom:-9px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font:700 10px/1 system-ui,sans-serif;color:var(--ink);  background:radial-gradient(circle,#fff 0 11.5px,transparent 12.5px),conic-gradient(var(--green) calc(var(--p)*1%),#dfe6ee 0);box-shadow:0 1px 3px rgba(0,0,0,.18)} .pctb.hid{display:none}.pctb.full{background:radial-gradient(circle,var(--green) 0 11.5px,transparent 12.5px),conic-gradient(#f4b400 100%,#f4b400 0);color:#fff} .num[data-ring]{position:relative;background:radial-gradient(circle,var(--blue) 0 18px,var(--surface) 18.5px 19.5px,transparent 20px),conic-gradient(var(--green) calc(var(--r)*1%),#dde4ec 0)} .num[data-full]{background:radial-gradient(circle,var(--blue) 0 18px,var(--surface) 18.5px 19.5px,transparent 20px),conic-gradient(#f4b400 100%,#f4b400 0)} .num[data-full]::after{content:"★";position:absolute;right:-4px;top:-6px;font-size:15px;color:#f4b400;text-shadow:0 1px 1px rgba(0,0,0,.2)} .ias-head{position:relative} .ias-cheer{position:absolute;left:50%;top:44px;transform:translateX(-50%);background:#fff7e0;border:1.5px solid #f4c84a;color:#7a5200;border-radius:16px;padding:7px 14px;font-weight:600;font-size:15px;white-space:nowrap;z-index:5;box-shadow:0 4px 14px rgba(0,0,0,.12);animation:iasCheer .5s cubic-bezier(.3,1.5,.5,1)} .ias-cheer.out{opacity:0;transition:opacity .5s} @keyframes iasCheer{0%{transform:translateX(-50%) scale(.4);opacity:0}100%{transform:translateX(-50%) scale(1);opacity:1}} .ias-pbe.pop{animation:iasEmo .55s ease}
 @keyframes iasEmo{0%{transform:translate(-50%,-50%) scale(.2)}60%{transform:translate(-50%,-50%) scale(1.6)}100%{transform:translate(-50%,-50%) scale(1)}}
 .ias-diff{margin:10px 2px 0;font-size:21px;line-height:1.5;color:var(--ink);background:#fff;border:1.5px dashed #e3a1a1;border-radius:12px;padding:8px 12px;word-break:break-word}
+.ias-slot .dx{color:#d0021b;background:#fde2e2;border-radius:3px;padding:0 1px}.ias-slot .dm{color:#d0021b;font-weight:800;text-decoration:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ias-slot .dx{background:#5a2020;color:#FF8A80}:root:not([data-theme="light"]) .ias-slot .dm{color:#FF8A80}}:root[data-theme="dark"] .ias-slot .dx{background:#5a2020;color:#FF8A80}:root[data-theme="dark"] .ias-slot .dm{color:#FF8A80}
 .ias-diff[hidden]{display:none}.ias-diff .dx{color:#d0021b;background:#fde2e2;border-radius:3px;padding:0 1px;font-weight:700}.ias-diff .dm{color:#d0021b;font-weight:700}
 #lrn-wr .btn.ready{background:var(--green)!important;border-color:var(--green)!important;color:#fff}
 @keyframes iasOk{0%{opacity:0;transform:scale(.3)}25%{opacity:1;transform:scale(1.15)}40%{transform:scale(1)}75%{opacity:1}100%{opacity:0;transform:scale(1)}}
@@ -3650,7 +3655,7 @@ const LT={
       learn:"🧠 Lernen", learnD:"Test, keyingi raundda yozish. Ikkalasi to‘g‘ri — so‘z o‘rganildi.", learnDm:"🧩 Juftlash, keyingi raundda yozish. Ikkalasi to‘g‘ri — so‘z o‘rganildi.", goalQ:"Nechta so‘z yodlaysiz?", goalAll:n=>`Hammasi (${n})`, goalOf:n=>`ta so‘z (${n} tadan)`, goalDone:n=>`${n} ta so‘z yodlandi! 🎉`, goalMore:n=>`Yana ${n} ta so‘z`, goalLeft:(a,b)=>`Maqsad: ${b} ta so‘z · ${a} tasi yodlandi`, cards:"🃏 Karteikarten", cardsD:"Kartani bosing — tarjimasi chiqadi.",
       learned:(a,b)=>`${a} / ${b} o‘rganildi`, choose:"To‘g‘ri tarjimani tanlang", chooseP:"To‘g‘ri Perfekt shaklini tanlang", writeP:"Perfekt shaklini yozing", write:"Nemischa yozing", ph:"Nemischa…", check:"Prüfen", dunno:"Keine Ahnung",
       right:["Super!","Richtig!","Sehr gut!","Toll!","Prima!"], wrong:"Falsch", correct:"To‘g‘ri javob:", yours:"Sizning javobingiz:", next:"Weiter", override:"Ich habe es richtig geschrieben",
-      caseNote:"Katta-kichik harfga e’tibor bering.", artNote:"Artikl (der/die/das) ham kerak!", almost:"Bitta harf xato.", near:"Fast richtig!", umlNote:"ä / ö / ü / ß ga e’tibor bering.", artWrong:"Artikl xato (der / die / das).",
+      caseNote:"Katta-kichik harfga e’tibor bering.", artNote:"Artikl (der/die/das) ham kerak!", almost:"Bitta harf xato.", near:"Fast richtig!", umlNote:"ä / ö / ü / ß ga e’tibor bering.", artWrong:"Artikl xato (der / die / das).", again2:"Tuzatdingiz! Bu so‘z keyinroq yana so‘raladi.",
       roundDone:"Raund tugadi!", roundRes:(a,b)=>`${b} savoldan ${a} tasiga to‘g‘ri javob berdingiz.`, cont:"Nächste Runde", allDone:"Hamma so‘zlar o‘rganildi! 🎉", restart:"Neu starten", back:"Zurück",
       know:"Weiß ich ✓", dontknow:"Keine Ahnung ✗", tap:"Bosing — aylanadi", cardsDone:"Hammasini bilasiz! 🎉", cardsGoal:n=>`${n} ta karta tugadi! 🎉`, cardsMore:n=>`Yana ${n} ta karta`, left:n=>`${n} ta qoldi`, reset:"Natijani o‘chirish", sel0:"Kamida bitta Lektion tanlang", example:"Misol",
       knownN:n=>`🃏 Kartalarda ${n} ta so‘zni «Bilaman» degansiz`, chk:"✅ Bilganlarimni tekshirish", chkD:"Kartada «Bilaman» degan so‘zlar — test + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", chkDm:"Kartada «Bilaman» degan so‘zlar — 🧩 juftlash + yozish. Xato qilsangiz, so‘z kartalarga qaytadi.", cardsAll:"Bu Lektionlardagi hamma kartalarni «Bilaman» degansiz.", cardsReset:"Kartalarni boshidan boshlash", chkDone:"Bilgan so‘zlaringizni tekshirib bo‘ldingiz! 🎉"},
@@ -3658,7 +3663,7 @@ const LT={
       learn:"🧠 Заучивание", learnD:"Тест, в следующем раунде — письмо. Оба верно — слово выучено.", learnDm:"🧩 Пары, в следующем раунде — письмо. Оба верно — слово выучено.", goalQ:"Сколько слов будете учить?", goalAll:n=>`Все (${n})`, goalOf:n=>`слов (из ${n})`, goalDone:n=>`Выучено слов: ${n}! 🎉`, goalMore:n=>`Ещё ${n} слов`, goalLeft:(a,b)=>`Цель: ${b} слов · выучено ${a}`, cards:"🃏 Карточки", cardsD:"Нажмите на карточку — появится перевод.",
       learned:(a,b)=>`${a} / ${b} выучено`, choose:"Выберите правильный перевод", chooseP:"Выберите правильную форму Perfekt", writeP:"Напишите форму Perfekt", write:"Напишите по-немецки", ph:"По-немецки…", check:"Prüfen", dunno:"Keine Ahnung",
       right:["Super!","Richtig!","Sehr gut!","Toll!","Prima!"], wrong:"Falsch", correct:"Правильный ответ:", yours:"Ваш ответ:", next:"Weiter", override:"Ich habe es richtig geschrieben",
-      caseNote:"Обратите внимание на большие и маленькие буквы.", artNote:"Нужен ещё артикль (der/die/das)!", almost:"Ошибка в одной букве.", near:"Fast richtig!", umlNote:"Обратите внимание на ä / ö / ü / ß.", artWrong:"Неверный артикль (der / die / das).",
+      caseNote:"Обратите внимание на большие и маленькие буквы.", artNote:"Нужен ещё артикль (der/die/das)!", almost:"Ошибка в одной букве.", near:"Fast richtig!", umlNote:"Обратите внимание на ä / ö / ü / ß.", artWrong:"Неверный артикль (der / die / das).", again2:"Исправили! Это слово спросим ещё раз позже.",
       roundDone:"Раунд окончен!", roundRes:(a,b)=>`Верно: ${a} из ${b}.`, cont:"Nächste Runde", allDone:"Все слова выучены! 🎉", restart:"Neu starten", back:"Zurück",
       know:"Weiß ich ✓", dontknow:"Keine Ahnung ✗", tap:"Нажмите — перевернётся", cardsDone:"Вы знаете все! 🎉", cardsGoal:n=>`Готово: ${n} карточек! 🎉`, cardsMore:n=>`Ещё ${n} карточек`, left:n=>`Осталось: ${n}`, reset:"Сбросить прогресс", sel0:"Выберите хотя бы один урок", example:"Пример",
       knownN:n=>`🃏 На карточках вы отметили «Знаю»: ${n}`, chk:"✅ Проверить, что я знаю", chkD:"Слова с отметкой «Знаю» — тест + письмо. Ошибся — слово вернётся в карточки.", chkDm:"Слова с отметкой «Знаю» — 🧩 пары + письмо. Ошибся — слово вернётся в карточки.", cardsAll:"Все карточки этих уроков отмечены «Знаю».", cardsReset:"Начать карточки заново", chkDone:"Вы проверили все знакомые слова! 🎉"}
@@ -4003,7 +4008,7 @@ function lrnHint(x){
 function lrnAsk(){
   lrnEl().classList.remove("has-fb"); lrnEl().scrollTo({top:0});
   if(LR.qi>=LR.round.length){ lrnRoundEnd(); return; }
-  const x=LR.round[LR.qi]; LR.cur=x; LR.answered=false;
+  const x=LR.round[LR.qi]; LR.cur=x; LR.answered=false; LR.tryN=0;
   const written = LR.st[x.i]===1 && lrnTypable(x);
   if(!written && lrnMtOk(x) && lrnMatchStart()) return;
   const top=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card">
@@ -4171,6 +4176,13 @@ function lrnJudge(inp, x){
     if(va) return {ok:false, note:lt("artWrong"), close:true, art:{bad:u.slice(0,3), ok:va.slice(0,3), rest:u.slice(3)}}; } /* faqat artikl xato — artikl silkinadi (2026-10-19) */
   return {ok:false};
 }
+function lrnHintMark(i, v, x, j){ const w=document.getElementById("lrn-inw"), ov=document.getElementById("lrn-ov"); if(!w||!ov) return;
+  let h="";
+  if(j.art){ const k=v.search(/\S/); h=esc(v.slice(0,k))+`<b class="lrn-artl sh">${esc(v.slice(k,k+3))}</b>`+esc(v.slice(k+3)); }
+  else if(j.note===lt("artNote")){ const k=v.search(/\S/); h=esc(v.slice(0,k))+'<b class="dm">_</b> '+esc(v.slice(k)); }
+  else { const vs=lrnVariants(x.de); h=iasDiff(v,{a:vs[0],ok:vs}); }
+  if(h){ ov.innerHTML=h; w.classList.add("artw"); ov.scrollLeft=i.scrollLeft; } else { w.classList.remove("artw"); ov.innerHTML=""; }
+  w.classList.remove("shk"); void w.offsetWidth; w.classList.add("shk"); i.focus(); try{ i.setSelectionRange(v.length,v.length); }catch(e){} }
 function lrnFeedback(ok, x, extra){
   const fb=document.getElementById("lrn-fb"); LR.answered=true;
   const praise=lt("right")[Math.floor(Math.random()*lt("right").length)];
@@ -4271,8 +4283,13 @@ document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="lrn-in"||LR.
 document.addEventListener("submit",e=>{
   if(e.target.id!=="lrn-wr") return; e.preventDefault(); if(LR.answered) return;
   const i=document.getElementById("lrn-in"), v=i.value; if(!lrnNorm(v)){ i.focus(); return; }
-  { const b=e.target.querySelector('button[type="submit"]'), j0=lrnJudge(v, LR.cur); if(b&&b.classList.contains("ready")&&j0.ok&&!j0.note){ LR.answered=true; i.disabled=true; lrnMark(true); LR.qi++; lrnAsk(); return; } }
-  const j=lrnJudge(v, LR.cur); i.disabled=true; lrnMark(j.ok); lrnFeedback(j.ok, LR.cur, {note:j.note, yours:v, close:j.close, art:j.art});
+  { const b=e.target.querySelector('button[type="submit"]'), j0=lrnJudge(v, LR.cur); if(b&&b.classList.contains("ready")&&j0.ok&&!j0.note){ LR.answered=true; i.disabled=true; lrnMark(!LR.tryN); LR.qi++; lrnAsk(); return; } }
+  const j=lrnJudge(v, LR.cur);
+  /* 1-urinish xato: javob ko'rsatilmaydi — xato joyi inputning o'zida (qizil harf / "_"), katta xato bo'lsa faqat silkinadi (2026-10-19, Otabek) */
+  if(!j.ok && !LR.tryN){ LR.tryN=1; lrnHintMark(i, v, LR.cur, j); return; }
+  i.disabled=true;
+  if(j.ok && LR.tryN){ lrnMark(false); lrnFeedback(true, LR.cur, {note:lt("again2")}); return; } /* tuzatib yozdi — to'g'ri, lekin keyinroq yana so'raladi */
+  lrnMark(j.ok); lrnFeedback(j.ok, LR.cur, {note:j.note, yours:v, close:j.close, art:j.art});
 });
 document.addEventListener("keydown",e=>{
   const root=lrnEl(); if(!root||root.hidden) return;
@@ -4599,7 +4616,8 @@ function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document
   IAS.fails[st.i]=(IAS.fails[st.i]||0)+1; iasSolBtn();
   const why=iaWhyText(st.i);
   IAS.why=why; iasWhyQ(fb);
-  const inp=document.getElementById("ias-in"); if(st.kind==="g"){ const dfx=document.getElementById("ias-diff"), dh=iasDiff(inp.value, itA); if(dfx){ dfx.innerHTML=dh?`✗ ${dh}`:""; dfx.hidden=!dh; } inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); if(V.body.querySelector(".ias-inl")){ try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(er){} } else inp.select(); const sl=document.querySelector("#ias-card .ias-slot.cur"); if(sl){ sl.classList.remove("shake"); void sl.offsetWidth; sl.classList.add("shake","bad"); } }
+  const inp=document.getElementById("ias-in"); if(st.kind==="g"){ const dfx=document.getElementById("ias-diff"), dh=iasDiff(inp.value, itA); if(dfx){ dfx.innerHTML=""; dfx.hidden=true; } /* xato harflar / tushib qolgan harf — javob joyining o'zida (2026-10-19, Otabek) */
+    { const sl0=document.querySelector("#ias-card .ias-slot.cur"); if(sl0&&dh) sl0.innerHTML=dh; } inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); if(V.body.querySelector(".ias-inl")){ try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(er){} } else inp.select(); const sl=document.querySelector("#ias-card .ias-slot.cur"); if(sl){ sl.classList.remove("shake"); void sl.offsetWidth; sl.classList.add("shake","bad"); } }
   else { iasShow(false); IAS.why=why; iasWhyQ(fb); const cd=document.getElementById("ias-card"); if(cd){ cd.classList.remove("shake"); void cd.offsetWidth; cd.classList.add("shake"); } }
   iasDots(); }
 /* imlo xatosi: noto'g'ri harflar qizil (2026-10-18) */
