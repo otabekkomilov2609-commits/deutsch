@@ -1231,6 +1231,9 @@ mark.trm.bad sup{color:#C62828}
 :is(#lrn,#duel,#chal) .lrn-mrow .lrn-mt{box-shadow:none;opacity:1;animation:none;transform:none;color:var(--ink)}
 :is(#lrn,#duel,#chal) .lrn-mpair .lrn-mt:first-child{border-radius:16px 0 0 16px;border-right-width:0}:is(#lrn,#duel,#chal) .lrn-mpair .lrn-mt:last-child{border-radius:0 16px 16px 0}
 :is(#lrn,#duel,#chal) .lrn-mrow.tr .lrn-mpair .lrn-mt:first-child{border-radius:16px 0 0 0}:is(#lrn,#duel,#chal) .lrn-mrow.tr .lrn-mpair .lrn-mt:last-child{border-radius:0 16px 0 0}
+:is(#lrn,#duel,#chal) .lrn-mcard{border:2px solid var(--green);border-radius:16px;background:var(--green-soft);padding:11px 14px;text-align:center;gap:0}
+:is(#lrn,#duel,#chal) .lrn-mjoin{font-weight:700;font-size:17px;line-height:1.3;color:var(--ink)}
+:is(#lrn,#duel,#chal) .lrn-mtr2{margin-top:7px;padding-top:7px;border-top:1.5px dashed var(--green);font-weight:700;font-size:16px;line-height:1.3;color:var(--green);animation:lrnTrIn .25s ease-out}
 :is(#lrn,#duel,#chal) .lrn-mtr{border-width:2px;border-radius:0 0 16px 16px;font-weight:700;color:var(--green)}
 :is(#lrn,#duel,#chal) .lrn-kw{font-weight:900}
 /* variantlar */
@@ -4223,7 +4226,7 @@ function lrnMatchRender(){
   if(remR.length>1&&remR.some((k,r)=>remL[r]===k)){ remR=lrnDerange(remL,remR); M.R=[...remR,...M.R.filter(k=>M.done.has(k))]; }
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card">
     ${(()=>{ try{ if(localStorage.getItem("lrn:mthelp")) return ""; }catch(e){} return `<div class="lrn-ask">${uz?"🧩 Juftini toping: chapdan bittasini, o‘ngdan bittasini bosing":"🧩 Найдите пару: нажмите одно слева и одно справа"}</div>`; })()}
-    ${M.ord.length?`<div class="lrn-mts lrn-mdone">${M.ord.map(k=>{ const x=M.P[k].x; return `<div class="lrn-mrow${k===M.last?" pop":""}${all?" tr":""}"><div class="lrn-mpair">${tile("L",k)}${tile("R",k)}</div>${all?`<div class="lrn-mtr">${esc(x.mt[2]||x.ru)}</div>`:""}</div>`; } /* tarjima — hammasi topilgach (2026-10-19, Otabek) */).join("")}</div>`:""}
+    ${M.ord.length?`<div class="lrn-mts lrn-mdone">${M.ord.map(k=>{ const x=M.P[k].x; const ph=(String(x.mt[0])+(x.red?" — ":/^[,.!?;:]/.test(String(x.mt[1]))?"":" ")+String(x.mt[1])); /* Redemittel — dialog: savol — javob */ return `<div class="lrn-mrow lrn-mcard${k===M.last?" pop":""}${all?" tr":""}"><div class="lrn-mjoin" lang="de">${lrnKwHl(ph,x)}</div>${all?`<div class="lrn-mtr2">${esc(x.mt[2]||x.ru)}</div>`:""}</div>`; } /* tarjima — hammasi topilgach (2026-10-19, Otabek) */).join("")}</div>`:""}
     ${all?"":`<div class="lrn-mts">${remL.map((k,r)=>tile("L",k)+tile("R",remR[r])).join("")}</div>`}
     ${all?`<div class="lrn-row2"><span></span><button type="button" class="btn primary" data-l="mtnext">${esc(lt("next"))} →</button></div>`:""}
   </div></div>`;
@@ -4256,7 +4259,7 @@ function lrnVariants(de){
   const out=new Set(); base.forEach(b=>{ out.add(lrnNorm(b)); b.split(/\s\/\s/).forEach(p=>out.add(lrnNorm(p))); });
   out.delete(""); return [...out];
 }
-function lrnLev(a,b){ if(Math.abs(a.length-b.length)>1) return 9; const d=Array.from({length:a.length+1},(_,i)=>[i]); for(let j=1;j<=b.length;j++) d[0][j]=j;
+function lrnLev(a,b){ if(Math.abs(a.length-b.length)>2) return 9; const d=Array.from({length:a.length+1},(_,i)=>[i]); for(let j=1;j<=b.length;j++) d[0][j]=j;
   for(let i=1;i<=a.length;i++) for(let j=1;j<=b.length;j++) { d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1)); if(i>1&&j>1&&a[i-1]===b[j-2]&&a[i-2]===b[j-1]) d[i][j]=Math.min(d[i][j],d[i-2][j-2]+1); } return d[a.length][b.length]; }
 function lrnJudge(inp, x){
   const u=lrnNorm(inp); if(!u) return {ok:false};
@@ -4269,16 +4272,18 @@ function lrnJudge(inp, x){
   const fold=s=>s.toLowerCase().replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss").replace(/ae/g,"a").replace(/oe/g,"o").replace(/ue/g,"u");
   if(vs.some(v=>fold(v)===fold(u))) return {ok:false, note:lt("umlNote"), close:true};
   if(vs.some(v=>v.length>3 && lrnLev(v.toLowerCase(),u.toLowerCase())===1)) return {ok:false, note:lt("almost"), close:true};
+  if(vs.some(v=>v.length>6 && lrnLev(v.toLowerCase(),u.toLowerCase())===2)) return {ok:false, note:lt("near"), close:true}; /* 2 harf xato — ham ishora (2026-10-19) */
   { const va=vs.find(v=>/^(der|die|das) /.test(v) && /^(der|die|das) /i.test(u) && v.slice(4).toLowerCase()===u.slice(4).toLowerCase());
     if(va) return {ok:false, note:lt("artWrong"), close:true, art:{bad:u.slice(0,3), ok:va.slice(0,3), rest:u.slice(3)}}; } /* faqat artikl xato — artikl silkinadi (2026-10-19) */
   return {ok:false};
 }
-function lrnHintMark(i, v, x, j){ const w=document.getElementById("lrn-inw"), ov=document.getElementById("lrn-ov"); if(!w||!ov) return;
+function lrnHintMark(i, v, x, j, quiet){ const w=document.getElementById("lrn-inw"), ov=document.getElementById("lrn-ov"); if(!w||!ov) return;
   let h="";
   if(j.art){ const k=v.search(/\S/); h=esc(v.slice(0,k))+`<b class="lrn-artl sh">${esc(v.slice(k,k+3))}</b>`+esc(v.slice(k+3)); }
   else if(j.note===lt("artNote")){ const k=v.search(/\S/); h=esc(v.slice(0,k))+'<b class="dm">_</b> '+esc(v.slice(k)); }
   else { const vs=lrnVariants(x.de); h=iasDiff(v,{a:vs[0],ok:vs}); }
   if(h){ ov.innerHTML=h; w.classList.add("artw"); ov.scrollLeft=i.scrollLeft; } else { w.classList.remove("artw"); ov.innerHTML=""; }
+  if(quiet) return; /* yozayotganda — silkitmasdan, faqat belgi */
   w.classList.remove("shk"); void w.offsetWidth; w.classList.add("shk"); i.focus(); try{ i.setSelectionRange(v.length,v.length); }catch(e){} }
 function lrnFeedback(ok, x, extra){
   const fb=document.getElementById("lrn-fb"); LR.answered=true;
@@ -4374,7 +4379,10 @@ document.addEventListener("change",e=>{ if(e.target.matches('#lrn [data-l="redem
 document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="lrn-in") return; const w=document.getElementById("lrn-inw"), ov=document.getElementById("lrn-ov"); if(!w||!ov) return;
   const j=LR.answered||!LR.cur?{}:lrnJudge(e.target.value, LR.cur);
   if(j.art){ const v=e.target.value, k=v.search(/\S/), was=w.classList.contains("artw"); ov.innerHTML=esc(v.slice(0,k))+`<b class="lrn-artl${was?"":" sh"}">${esc(v.slice(k,k+3))}</b>`+esc(v.slice(k+3)); w.classList.add("artw"); ov.scrollLeft=e.target.scrollLeft; }
-  else { w.classList.remove("artw"); ov.innerHTML=""; } });
+  else { w.classList.remove("artw"); ov.innerHTML=""; }
+  clearTimeout(LR.liveT); const inp=e.target;
+  if(!j.art&&!j.ok) LR.liveT=setTimeout(()=>{ if(LR.answered||!inp.isConnected||document.activeElement!==inp) return; const v=inp.value, j2=lrnJudge(v, LR.cur);
+    if(!j2.ok&&!j2.art&&(j2.note===lt("artNote")||j2.close)) lrnHintMark(inp, v, LR.cur, j2, true); },1100); });
 document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="lrn-in"||LR.answered) return; const b=document.querySelector('#lrn-wr button[type="submit"]'); if(!b) return;
   const j=lrnJudge(e.target.value, LR.cur), rd=!!(j.ok&&!j.note); if(rd!==b.classList.contains("ready")){ b.classList.toggle("ready",rd); b.textContent=rd?lt("next")+" →":lt("check"); } });
 document.addEventListener("submit",e=>{
