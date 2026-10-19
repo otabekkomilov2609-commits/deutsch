@@ -979,6 +979,13 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias{max-width:560px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:12px;padding:2px 2px 40px}
 .ias-top{display:flex;align-items:center;gap:10px}.ias-top span{font-weight:800;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
 .ias-pb{flex:1;height:10px;border-radius:99px;background:var(--line);overflow:hidden}.ias-pb i{display:block;height:100%;width:0;background:var(--green);border-radius:99px;transition:width .4s}
+.ias-secs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px 1px 3px;margin:2px 0 0}.ias-secs::-webkit-scrollbar{display:none}.ias-secs[hidden]{display:none}
+.ias-sec{position:relative;flex:none;min-width:34px;height:30px;padding:0 10px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);color:var(--muted);font:800 13.5px/1 var(--sans);display:inline-flex;align-items:center;gap:6px;cursor:pointer;overflow:hidden}
+.ias-sec i{position:absolute;left:0;bottom:0;height:3px;background:var(--green);transition:width .4s}.ias-sec small{font-size:12px;font-weight:700;opacity:.85}
+.ias-sec.cur{border-color:var(--blue);background:var(--blue);color:#fff}.ias-sec.cur i{background:#8fe0b4}.ias-sec.ok{border-color:var(--green);background:var(--green-soft);color:var(--green)}.ias-sec.ok.cur{background:var(--green);color:#fff}
+.ias-sec.pop{animation:iasSecPop .6s cubic-bezier(.3,1.6,.5,1)}@keyframes iasSecPop{40%{transform:scale(1.25)}}
+.ias-tick{position:absolute;top:-2px;bottom:-2px;width:2px;margin-left:-1px;background:var(--bg);border-radius:1px;z-index:1}
+.ias-head .ias-cheer2{top:86px}.ias-task span em{font-style:normal;opacity:.7;font-weight:700}.ias-kb .ias-secs{display:none!important}
 .ias-task{font-size:17px;font-weight:700;line-height:1.3}.ias-task span{display:block;font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--blue);margin-bottom:2px}
 .ias-p{margin:0;font-size:16px;color:var(--muted);line-height:1.4}
 .ias-card{background:var(--surface);border-radius:20px;padding:22px 18px;box-shadow:0 2px 6px rgba(23,36,60,.06),0 10px 30px rgba(23,36,60,.08);font-size:27px;line-height:1.55;font-weight:600;color:var(--ink);word-break:break-word}
@@ -4747,6 +4754,7 @@ function iasRender(m){
   const first=IAS.steps.findIndex(s=>iasState(s.i)!=="ok"); IAS.k=first<0?0:first;
   V.el.classList.add("ias-on");
   V.body.innerHTML=`<div class="ias"><div class="ias-fix" id="ias-fix"><div class="ias-head"><div class="ias-top"><button type="button" class="ias-tb ias-x" data-iasx="1" title="Yopish" aria-label="Yopish">✕</button><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b><b class="ias-pbe hid" id="ias-pbe"></b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button><button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
+    <div class="ias-secs" id="ias-secs"></div>
     <div class="ias-task" id="ias-task"></div></div><p class="ias-p" id="ias-p"></p>
     <div class="ias-card" id="ias-card"></div><div class="ias-diff" id="ias-diff" hidden></div>
     <button type="button" class="ias-pr" id="ias-pr">✓ Prüfen</button>
@@ -4830,7 +4838,9 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
   const okN=IAS.steps.filter(s=>iasState(s.i)==="ok").length;
   document.getElementById("ias-pb").style.width=(okN/n*100)+"%"; document.getElementById("ias-cnt").textContent=`${IAS.k+1} / ${n}`; iasEmo(okN,n,false);
   { const dfx=document.getElementById("ias-diff"); if(dfx){ dfx.hidden=true; dfx.innerHTML=""; } }
-  document.getElementById("ias-task").innerHTML=st.h?esc(st.h).replace(/^(\d{1,2}|[A-H])\b\s*([—–-]\s*)?/,(m,x)=>`<span>Aufgabe ${x}</span>`):"";
+  { const G=iasSecs(), gi=G.findIndex(g=>g.ks.includes(IAS.k)), g=G[gi], exN=g&&IAS.steps[g.ks[0]].ex?1:0, pos=g?g.ks.indexOf(IAS.k)+1+exN:0, ps=g&&g.ks.length+exN>1?` <em>· ${pos} / ${g.ks.length+exN}</em>`:"", /* Beispiel 1-raqam — sanoq varaqdagi raqam bilan bir xil */ of=x=>G.length<2?"":(x===String(gi+1)?` von ${G.length}`:` <em>(${gi+1} von ${G.length})</em>`);
+    let th=st.h?esc(st.h).replace(/^(\d{1,2}|[A-H])\b\s*([—–-]\s*)?/,(m,x)=>`<span>Aufgabe ${x}${of(x)}${ps}</span>`):""; if(g&&!/<span>/.test(th)) th=`<span>Aufgabe ${gi+1}${of(String(gi+1))}${ps}</span>`+th;
+    document.getElementById("ias-task").innerHTML=th; }
   const pe=document.getElementById("ias-p"); const nw= st.kind==="o" || (st.kind==="g" && !st.b.s.some((x,xi)=>typeof x==="string"&&/[A-Za-zÄÖÜäöüß]{2}|\d/.test(xi===0?x.replace(/^\s*(\d{1,2}|[a-h])[.)]?\s+/,""):x))); pe.textContent=nw?"":(st.p||""); pe.hidden=nw||!st.p;
   let html="";
   const noWords= st.kind==="g" && !st.b.s.some((x,xi)=>typeof x==="string"&&/[A-Za-zÄÖÜäöüß]{2}|\d/.test(xi===0?x.replace(/^\s*(\d{1,2}|[a-h])[.)]?\s+/,""):x));
@@ -4881,7 +4891,7 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
   const fb=document.getElementById("ias-fb"); const s=iasState(st.i);
   fb.className="ias-fb"; fb.innerHTML=""; /* to'g'ri bo'lsa: katak yashil + tepadagi chiziq oldinga, quti chiqmaydi */
   if(st.kind==="g"&&s==="ok"&&!iaItems()[st.i].free) inp.classList.add("ok"); /* to'g'ri — yozish maydoni yashil (2026-10-19, Otabek) */
-  iasSolBtn(); iasGoMode(); iasDots();
+  iasSolBtn(); iasGoMode(); iasDots(); iasSecRender(); iasSecDone();
 }
 /* «💡 Lösung» faqat 2 marta xato urinishdan keyin chiqadi */
 /* xato: «Leider falsch» qutisi yo'q — faqat silkinadi; izoh bo'lsa kichik «?» chiqadi, bosilsa izoh ochiladi, «×» — yopiladi (2026-10-18) */
@@ -4905,6 +4915,21 @@ function iasSol(){ const st=IAS.steps[IAS.k]; if(!st) return; const it=iaItems()
 function iasSee(el){ requestAnimationFrame(()=>{ if(!el||!el.isConnected) return; const sc=V.body, sr=sc.getBoundingClientRect(), r=el.getBoundingClientRect(), fx=document.getElementById("ias-fix");
   const H=fx&&fx.classList.contains("stick")?fx.getBoundingClientRect().bottom:sr.top+70; if(r.top>=H-4&&r.top<sr.bottom-60) return;
   sc.scrollTo({top:Math.max(0,sc.scrollTop+(r.top-H)-8),behavior:"smooth"}); }); }
+/* 🚩 Bo'limlar (2026-10-19, Otabek): varaqda nechta Aufgabe bor, hozir qaysi biri va uning nechanchi savoli — tepada bekatlar qatori + chiziqdagi chegaralar */
+function iasSecs(){ if(IAS._g&&IAS._gs===IAS.steps) return IAS._g; const G=[]; IAS.steps.forEach((st,k)=>{ const L=G[G.length-1]; if(L&&L.h===st.h) L.ks.push(k); else G.push({h:st.h,ks:[k]}); });
+  const used=new Set(); G.forEach((g,j)=>{ const m=String(g.h||"").match(/^\s*(\d{1,2}|[A-H])\b/)||String(g.h||"").match(/(?:Übung|Aufgabe|Teil)\s*(\d{1,2}|[A-H])\b/); let l=m?m[1]:String(j+1); if(used.has(l)) l=String(j+1); used.add(l); g.lab=l; });
+  IAS._g=G; IAS._gs=IAS.steps; return G; }
+function iasSecRender(){ const el=document.getElementById("ias-secs"), G=iasSecs(); if(!el) return; if(G.length<2){ el.hidden=true; return; } el.hidden=false;
+  const gi=G.findIndex(g=>g.ks.includes(IAS.k));
+  el.innerHTML=G.map((g,j)=>{ const ok=g.ks.filter(k=>iasState(IAS.steps[k].i)==="ok").length, all=ok===g.ks.length, cur=j===gi;
+    return `<button type="button" class="ias-sec${all?" ok":""}${cur?" cur":""}" data-iassec="${j}" aria-label="Aufgabe ${esc(g.lab)}">${all?"✓ ":""}${esc(g.lab)}<i style="width:${(ok/g.ks.length*100).toFixed(1)}%"></i></button>`; }).join("");
+  const c=el.querySelector(".cur"); if(c&&el.scrollWidth>el.clientWidth) el.scrollLeft=Math.max(0,c.offsetLeft-el.clientWidth/2+c.offsetWidth/2);
+  const pb=document.querySelector(".ias-pb"); if(pb&&G.length<=12&&!pb.querySelector(".ias-tick")){ const n=IAS.steps.length; pb.insertAdjacentHTML("beforeend",G.slice(0,-1).map(g=>`<u class="ias-tick" style="left:${((g.ks[g.ks.length-1]+1)/n*100).toFixed(2)}%"></u>`).join("")); } }
+/* Aufgabe tugadi — bekat yashil bo'lib "sakraydi" + qisqa yozuv */
+function iasSecDone(){ const G=iasSecs(); if(G.length<2) return; IAS.secD=IAS.secD||{}; if(IAS.secId!==IAS.id){ IAS.secId=IAS.id; IAS.secD={}; G.forEach((g,j)=>{ if(g.ks.every(k=>iasState(IAS.steps[k].i)==="ok")) IAS.secD[j]=1; }); return; }
+  G.forEach((g,j)=>{ if(IAS.secD[j]||!g.ks.every(k=>iasState(IAS.steps[k].i)==="ok")) return; IAS.secD[j]=1; const dn=Object.keys(IAS.secD).length; if(dn>=G.length) return; /* hammasi — oxirgi ekran o'zi aytadi */
+    setTimeout(()=>{ const b=document.querySelector(`.ias-sec[data-iassec="${j}"]`); if(b){ b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop"); }
+      const h=document.querySelector(".ias-head"); if(!h) return; const t=document.createElement("div"); t.className="ias-cheer ias-cheer2"; t.textContent=`✅ Aufgabe ${g.lab} geschafft! (${dn} / ${G.length})`; h.appendChild(t); setTimeout(()=>t.classList.add("out"),1900); setTimeout(()=>t.remove(),2500); },350); }); }
 function iasDots(){ const st=IAS.steps[IAS.k]; const el=document.getElementById("ias-dots"); if(!el||!st) return;
   el.innerHTML=IAS.steps.map((x,k)=>({x,k})).filter(o=>o.x.h===st.h).map(({x,k})=>`<button type="button" class="${iasState(x.i)} ${k===IAS.k?"cur":""}" data-iasd="${k}" aria-label="${k+1}"></button>`).join(""); }
 /* ✓ tugmasi: to'g'ri bo'lgach «Weiter →» ga aylanadi */
@@ -4990,6 +5015,7 @@ document.addEventListener("click",e=>{ if(!V.body.querySelector(".ias")) return;
     inp.value=wv; inp.dispatchEvent(new Event("input",{bubbles:true})); iasCheckOnly(); return; }
   const o=e.target.closest("[data-iaso]"); if(o){ const st=IAS.steps[IAS.k]; IA.vals[st.i]=+o.dataset.iaso; iaSave(); IAS.tried[st.i]=true; iasAfter(st); return; }
   if(e.target.closest("[data-iasx]")){ sndOpen(); return; }
+  const sb=e.target.closest("[data-iassec]"); if(sb){ const g=iasSecs()[+sb.dataset.iassec]; if(g){ const k=g.ks.find(k=>iasState(IAS.steps[k].i)!=="ok"); IAS.k=k!=null?k:g.ks[0]; iasShow(true); } return; }
   const d=e.target.closest("[data-iasd]"); if(d){ if(!document.getElementById("ias-card")){ iasRender(V.cur); } IAS.k=+d.dataset.iasd; iasShow(true); return; }
   if(e.target.closest("#ias-go")||e.target.closest("#ias-pr")){ iasCheck(); return; }
   if(e.target.closest("#ias-card")&&V.body.querySelector(".ias-inl")){ const ii=document.getElementById("ias-in"); ii.focus({preventScroll:true}); try{ ii.setSelectionRange(ii.value.length,ii.value.length); }catch(er){} return; }
