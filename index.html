@@ -2717,7 +2717,9 @@ function exWhy(it){ const L=state.lang==="ru"?"ru":"uz", R=exEl(); let x="";
   else if(it.t==="order") x+=`<b>${esc(t("wO"))}</b>`;
   if(it.why&&it.why[L]) x+=`<span>${esc(it.why[L])}</span>`;
   const g=EX.G[exGi()]; if(g&&g.bsp) x+=`<span class="r"><i>📌 Beispiel:</i> ${g.bsp}</span>`;
-  const info=exInfoFor(exGi()); if(info) x+=`<div class="ex-rule">${info}</div>`;
+  /* «?» — faqat qisqa izoh (grammatika varag'idagidek): xato turi + qoida bir qatorda; to'liq tushuntirish — «i» (2026-10-20, Otabek) */
+  const info=exInfoFor(exGi()); if(info){ const d=document.createElement("div"); d.innerHTML=info; const hs=[...d.querySelectorAll("h4")].map(h=>h.textContent.trim()).filter(Boolean), ns=[...d.querySelectorAll(".ex-note")].map(h=>h.textContent.trim()).filter(Boolean);
+    const line=[hs.join(" · "), ns.join(" · ")].filter(Boolean).join(" — "); if(line) x+=`<span class="r"><i>${esc(t("wRule"))}:</i> ${esc(line)}</span>`; }
   return x||null; }
 function uzT(a,b){ return state.lang==="ru"?b:a; }
 function exWhyBtn(it){ exEl().querySelectorAll(".ex-qb").forEach(b=>b.remove()); if(!EX.why) return; const R=exEl(); let host=null;
