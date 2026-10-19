@@ -4564,7 +4564,8 @@ function iasRender(m){
         return; }
       if(v!==old){ IA.vals[i]=v; if(iasState(i)!=="ok"){ iaSave(); iasShow(false); } } }
     if(!inp.value.trim()) return;
-    IAS.autoT=setTimeout(()=>{ if(IAS.steps[IAS.k]!==st||!document.getElementById("ias-card")) return; IA.vals[i]=inp.value; const s2=iaState(i); if(s2==="ok"){ iaSave(); IAS.tried[i]=true; iasAfter(st); } },400); });
+    IAS.autoT=setTimeout(()=>{ if(IAS.steps[IAS.k]!==st||!document.getElementById("ias-card")) return; IA.vals[i]=inp.value; const s2=iaState(i); if(s2==="ok"){ iaSave(); IAS.tried[i]=true; iasAfter(st); } },400);
+    clearTimeout(IAS.liveT); IAS.liveT=setTimeout(()=>iasLive(st,inp),1100); });
   iasShow(true); iasFixInit();
 }
 /* Yuqori qism (chiziq, topshiriq, savol, yozish joyi) qotib turadi; «Leider falsch» va izoh uning tagidan suzadi.
@@ -4728,14 +4729,20 @@ function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document
   else { iasShow(false); IAS.why=why; iasWhyQ(fb); const cd=document.getElementById("ias-card"); if(cd){ cd.classList.remove("shake"); void cd.offsetWidth; cd.classList.add("shake"); } }
   iasDots(); }
 /* imlo xatosi: noto'g'ri harflar qizil (2026-10-18) */
-function iasDiff(stu, it){ const P=/[„“”"«».,!?;:…()]/; const keep=[]; [...String(stu)].forEach((ch,ix)=>{ if(!P.test(ch)) keep.push([ch.toLowerCase(),ix]); });
+/* yozishdan to'xtaganda — Prüfen'siz ishora: 1–2 harf xato yoki artikl yo'q bo'lsa, katak ichida belgi (Lernen'dagidek, 2026-10-19, Otabek) */
+function iasLive(st,inp){ if(IAS.steps[IAS.k]!==st||!inp.isConnected||document.activeElement!==inp) return; const it=iaItems()[st.i]; if(!it||it.long||it.free) return;
+  const v=inp.value; if(!v.trim()||iasState(st.i)==="ok") return; const s=V.body.querySelector("#ias-card .ias-slot.cur"); if(!s) return;
+  let h=""; const u=iaNorm(v); const art=[it.a,...(it.ok||[])].filter(Boolean).map(x=>iaNorm(x)).find(x=>/^(der|die|das|den|dem|des|ein|eine|einen|einem|einer) /.test(x)&&x.replace(/^\S+ /,"")===u);
+  if(art){ const k=v.search(/\S/); h=esc(v.slice(0,k))+'<b class="dm">_</b> '+esc(v.slice(k)); } else h=iasDiff(v,it,2);
+  if(h) s.innerHTML=h; }
+function iasDiff(stu, it, maxD){ const P=/[„“”"«».,!?;:…()]/; const keep=[]; [...String(stu)].forEach((ch,ix)=>{ if(!P.test(ch)) keep.push([ch.toLowerCase(),ix]); });
   const sq=a=>{ const o=[]; a.forEach(x=>{ if(x[0]===" "&&(!o.length||o[o.length-1][0]===" ")) return; o.push(x); }); while(o.length&&o[o.length-1][0]===" ") o.pop(); return o; };
   const A=sq(keep); const cands=[it.a,...(it.ok||[])].filter(Boolean).map(c=>[...String(c).toLowerCase()].filter(ch=>!P.test(ch)).join("").replace(/\s+/g," ").trim());
   let best=null;
   cands.forEach(c=>{ const B=[...c], n=A.length, m=B.length; const d=[]; for(let i=0;i<=n;i++){ d.push(new Array(m+1).fill(0)); d[i][0]=i; } for(let j=0;j<=m;j++) d[0][j]=j;
     for(let i=1;i<=n;i++) for(let j=1;j<=m;j++) d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(A[i-1][0]===B[j-1]?0:1));
     if(!best||d[n][m]<best.dist) best={dist:d[n][m],d,B}; });
-  if(!best||!best.dist) return ""; const len=best.B.length; if(best.dist>Math.max(2,Math.ceil(len*.34))) return "";
+  if(!best||!best.dist) return ""; const len=best.B.length; if(best.dist>Math.max(2,Math.ceil(len*.34))) return ""; if(maxD!=null&&best.dist>maxD) return "";
   /* orqaga yurib: har bir talaba harfi to'g'ri / noto'g'ri, tushib qolgan harf joyi */
   const bad=new Set(), miss=new Set(); let i=A.length, j=len; const d=best.d, B=best.B;
   while(i>0||j>0){ if(i>0&&j>0&&A[i-1][0]===B[j-1]&&d[i][j]===d[i-1][j-1]){ i--; j--; continue; }
