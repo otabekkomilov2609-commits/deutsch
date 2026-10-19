@@ -111,6 +111,8 @@ main{padding-block:6px 40px}
 .mat-act{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;gap:6px;margin-left:auto}
 .dlb{border:1px solid var(--line);background:none;border-radius:8px;font-size:15px;line-height:1;padding:5px 9px;color:var(--muted);cursor:pointer}@media (hover:hover){
 .dlb:hover{color:var(--ink,inherit);border-color:var(--muted)}}
+.lek-lrn{margin-left:auto;align-self:flex-start;flex:none;display:flex;flex-direction:column;align-items:center;gap:1px;border:1.5px solid var(--green);background:var(--green-soft);color:var(--green);border-radius:12px;font:inherit;font-size:13.5px;font-weight:800;padding:7px 10px;cursor:pointer;white-space:nowrap}
+.lek-lrn small{font-size:11.5px;font-weight:700;opacity:.8}.lek-lrn.full{background:var(--green);color:var(--on-fill)}
 .lrn-cb{border:1px solid var(--green);background:var(--green-soft);color:var(--green);border-radius:8px;font:inherit;font-size:12px;font-weight:700;padding:4px 8px;white-space:nowrap;cursor:pointer}
 .lrn{position:fixed;inset:0;z-index:70;background:var(--bg);color:var(--ink);display:flex;flex-direction:column;overflow:auto}
 .lrn[hidden]{display:none}
@@ -3171,6 +3173,12 @@ function matCard(m){
 const matchType = m => state.type==="all" || m.type===state.type;
 const visibleMats = (tab,key) => MATS.filter(m=>m.tab===tab && m.key===String(key) && (m.type!=="loesung"||m.href) && matchType(m));
 
+/* Har bir Lektion oldida — o'sha Lektion so'zlarini yodlash (2026-10-19, Otabek) */
+function lekLernId(tab,n){ const D=lernData(), ids=Object.keys(D).filter(id=>id.includes("-"+tab+"-")&&D[id].kind!=="perfekt"&&D[id].les&&D[id].les[n]);
+  if(!ids.length) return null; const pref=state.lang==="ru"?"-r-":"-u-"; return ids.find(id=>id.includes(pref))||ids[0]; }
+function lekLernBtn(tab,n){ const id=lekLernId(tab,n); if(!id) return ""; const D=lernData()[id]; let a=0,d=0, st=null;
+  D.it.forEach((r,i)=>{ if(+r[0]!==+n||!r[4]||r[6]) return; a++; if(st==null) st=lrnLoad(id); if(st[i]===2) d++; });
+  if(!a) return ""; return `<button type="button" class="lek-lrn${d>=a?" full":""}" data-lern="${id}" data-les="${n}" title="${esc(LT[state.lang].lern)}">🧠 ${esc(state.lang==="ru"?"Слова":"So‘zlar")}<small>${d}/${a}</small></button>`; }
 function lekCard(L, tab, withLvl){
   const [n,title,thema,kb,g,k,w] = L, lvl = TABS[tab].lvl;
   const mats = visibleMats(tab,n);
@@ -3178,6 +3186,7 @@ function lekCard(L, tab, withLvl){
   return `<article class="lek${mats.length?"":" empty"}" id="${lvl}-L${n}">
     <div class="lek-h"><div class="num"${numRing(lvl,n)}>${n}</div>
       <div>${String(n)===CURKEY[tab]?`<span class="cur">${t("cur")}</span>`:""}<h3>${esc(title)}</h3><div class="thema">${withLvl?`<b>${TABS[tab].lbl}</b> · `:""}${esc(thema)}${kb?` · <span class="kb">KB S. ${kb}</span>`:""}</div></div>
+      ${lekLernBtn(tab,n)}
     </div>
     <dl class="facts">
       <dt class="g">${t("g")}</dt><dd>${esc(g)}</dd>
@@ -4182,7 +4191,8 @@ function lrnCard(){
 }
 /* ---------- events ---------- */
 document.addEventListener("click",e=>{
-  const lb=e.target.closest("[data-lern]"); if(lb){ e.preventDefault(); lrnOpen(lb.dataset.lern); return; }
+  const lb=e.target.closest("[data-lern]"); if(lb){ e.preventDefault(); lrnOpen(lb.dataset.lern);
+    if(lb.dataset.les){ const n=+lb.dataset.les; LR.sel=new Set([n]); try{ store.set(lrnKey(lb.dataset.lern)+":sel",JSON.stringify([n])); }catch(err){} lrnSetup(); } return; }
   const root=lrnEl(); if(!root||root.hidden||!root.contains(e.target)) return;
   const say=e.target.closest("[data-say]"); if(say){ lrnSay(say.dataset.say); return; }
   const ch=e.target.closest("[data-ch]"); if(ch){ const i=document.getElementById("lrn-in"); if(i){ const p=i.selectionStart??i.value.length; i.value=i.value.slice(0,p)+ch.dataset.ch+i.value.slice(i.selectionEnd??p); i.focus(); i.setSelectionRange(p+1,p+1); } return; }
@@ -4267,7 +4277,8 @@ function pctBadge(id){ const p=(byId[id]&&byId[id].ex)?exPct(id):iaPctOf(id); re
 function lekWords(lvl,n){ const D=lernData(); let best=null; Object.keys(D).forEach(id=>{ if(id.split("-")[0]!==lvl||D[id].kind==="perfekt") return; let tot=0, ok=0, st=null;
     D[id].it.forEach((r,i)=>{ if(+r[0]!==+n||!r[4]||r[6]) return; tot++; if(st==null) st=lrnLoad(id); if(st[i]===2) ok++; }); if(tot){ const p=ok/tot; if(!best||p>best.p) best={p,ok,tot}; } }); return best; }
 function numRing(lvl,n){ const w=lekWords(lvl,n); if(!w) return ""; return ` data-ring="${lvl}|${n}" style="--r:${(w.p*100).toFixed(1)}" title="${w.ok} / ${w.tot}"${w.p>=1?' data-full="1"':""}`; }
-function progMarks(){ document.querySelectorAll("[data-pct]").forEach(e=>{ const p=iaPctOf(e.dataset.pct); e.classList.toggle("hid",p==null); e.classList.toggle("full",p>=100); e.style.setProperty("--p",p||0); e.textContent=p==null?"":p+"%"; });
+function progMarks(){ document.querySelectorAll(".lek-lrn[data-les]").forEach(b=>{ const tab=(Object.keys(TABS).find(k=>b.dataset.lern.includes("-"+k+"-"))); if(!tab) return; const h=lekLernBtn(tab,+b.dataset.les); if(h){ const w=document.createElement("div"); w.innerHTML=h; b.replaceWith(w.firstElementChild); } });
+  document.querySelectorAll("[data-pct]").forEach(e=>{ const p=(byId[e.dataset.pct]&&byId[e.dataset.pct].ex)?exPct(e.dataset.pct):iaPctOf(e.dataset.pct); e.classList.toggle("hid",p==null); e.classList.toggle("full",p>=100); e.style.setProperty("--p",p||0); e.textContent=p==null?"":p+"%"; });
   document.querySelectorAll("[data-ring]").forEach(e=>{ const [lvl,n]=e.dataset.ring.split("|"), w=lekWords(lvl,n); if(!w) return; e.style.setProperty("--r",(w.p*100).toFixed(1)); e.title=`${w.ok} / ${w.tot}`; if(w.p>=1) e.dataset.full="1"; else delete e.dataset.full; }); }
 function iaItems(){ return (IADATA[IA.id]||{}).items||[]; }
 function iaState(i){
