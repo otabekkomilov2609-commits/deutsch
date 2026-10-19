@@ -140,6 +140,8 @@ main{padding-block:6px 40px}
 #lrn .lrn-mode.mu{grid-column:1/-1;border-color:#0d9488;background:#e6f7f5;box-shadow:0 4px 0 #0d9488}#lrn .lrn-mode.mu b{color:#0d9488}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #lrn .lrn-mode.mu{background:#0f2f2c}}:root[data-theme="dark"] #lrn .lrn-mode.mu{background:#0f2f2c}
 #lrn .mu-c{gap:14px}
+#lrn .mu-cue{font-size:14.5px;font-weight:700;color:var(--muted);line-height:1.35;padding:8px 12px;border-radius:12px;background:var(--bg);border:1.5px dashed var(--line)}#lrn .mu-cue b{color:var(--ink);font-weight:800}
+#lrn .mu-in::placeholder{color:var(--muted);opacity:.55;font-weight:700}
 #lrn .mu-phrase{font-weight:800;font-size:21px;line-height:1.3;text-align:center;padding:18px 14px;border:2px dashed var(--line);border-radius:18px;background:var(--bg);transition:background .2s,border-color .2s}
 #lrn .mu-phrase.ok{border-style:solid;border-color:var(--green);background:var(--green-soft)}
 #lrn .mu-bks{display:grid;gap:10px}
@@ -4115,10 +4117,16 @@ function muAll(){ const D=lernData()[LR.id]; if(!D||!D.fn) return [];
   return D.it.map((r,i)=>({i,l:r[0],de:r[3],ru:r[4],red:r[6],mt:(D.mt&&D.mt[i])||null,fn:D.fn[i]})).filter(x=>x.red&&x.fn!=null&&x.mt&&x.mt[0]&&x.mt[1]); }
 function muPool(){ return muAll().filter(x=>LR.sel.has(x.l)); }
 const MU_STOP=new Set("ich du er sie es wir ihr mir dir mich dich uns euch ihm ihn ihnen der die das den dem des ein eine einen einem einer eines und oder aber auch noch schon so ja nein nicht doch mal bitte sehr ganz gern ist bin bist sind war hat habe haben was wie wo wer wann dass ob denn dann da hier für mit von zu im in am an auf aus bei nach vor um es man sein seine mein meine dein deine kein keine".split(" "));
-function muGap(x){ const s=String(x.mt[1]); const toks=[...s.matchAll(/[A-Za-zÄÖÜäöüß’']+/g)].map(m=>({w:m[0],i:m.index}));
-  const gen=new Set(String(x.de).toLowerCase().match(/[a-zäöüß’']+/g)||[]);
+/* juftlik — suhbatmi (savol → javob) yoki bitta gapning ikki bo'lagimi */
+function muDlg(x){ return /[.?!…]["“”»]?\s*$/.test(String(x.mt[0]).trim()); }
+function muLine(x){ return muDlg(x)?String(x.mt[1]):String(x.mt[0])+(/^[,.!?;:]/.test(String(x.mt[1]))?"":" ")+String(x.mt[1]); }
+function muCue(x){ const t=String(x.mt[2]||x.ru||""); if(!muDlg(x)) return t; const k=t.lastIndexOf(" — "); return k>0?t.slice(k+3):t; }
+function muGap(x){ const s=muLine(x); const toks=[...s.matchAll(/[A-Za-zÄÖÜäöüß’']+/g)].map(m=>({w:m[0],i:m.index}));
+  /* iboraning "qotgan" so'zlari: qavs ichidagi ixtiyoriy qism va "lustig / spannend" kabi muqobillar olinmaydi — ular almashadigan joy (2026-10-19, Otabek) */
+  const fixed=String(x.de).replace(/\([^)]*\)/g," ").replace(/[A-Za-zÄÖÜäöüß’'-]+(\s*\/\s*[A-Za-zÄÖÜäöüß’'-]+)+/g," ");
+  const gen=new Set(fixed.toLowerCase().match(/[a-zäöüß’']+/g)||[]);
   const ok=toks.filter(t=>t.w.length>=3&&!MU_STOP.has(t.w.toLowerCase())&&toks.filter(u=>u.w===t.w).length===1);
-  if(!ok.length) return null; const pref=ok.filter(t=>gen.has(t.w.toLowerCase())); const pick=(pref.length?pref:ok).sort((a,b)=>b.w.length-a.w.length)[0];
+  const pref=ok.filter(t=>gen.has(t.w.toLowerCase())); if(!pref.length) return null; const pick=pref.sort((a,b)=>b.w.length-a.w.length)[0];
   return {w:pick.w, pre:s.slice(0,pick.i), post:s.slice(pick.i+pick.w.length)}; }
 function muStart(){ const D=lernData()[LR.id], pool=muPool(); if(pool.length<3) return; const st=muStore();
   LR.mode="mu"; LR.chk=false; LR.emoL=null; LR.emoE=null;
@@ -4129,7 +4137,7 @@ function muStart(){ const D=lernData()[LR.id], pool=muPool(); if(pool.length<3) 
   const steps=[];
   if(fs.length>=2){ let srt=[]; fs.forEach(f=>{ const its=lrnShuffle(byF[f]); const inS=its.filter(x=>items.includes(x)); srt.push(...[...inS,...its.filter(x=>!inS.includes(x))].slice(0,Math.max(2,Math.min(3,inS.length||2)))); });
     lrnShuffle(srt).slice(0,8).forEach(x=>steps.push({t:"sort",x,fs})); }
-  lrnShuffle([...items]).forEach(x=>steps.push({t:"chat",x}));
+  lrnShuffle(items.filter(muDlg)).forEach(x=>steps.push({t:"chat",x}));
   lrnShuffle([...items]).forEach(x=>{ const g=muGap(x); if(g) steps.push({t:"gap",x,g}); });
   Object.assign(MU,{steps,k:0,okN:0,first:{},tries:0,done:false,items,pool,fns:D.fns});
   muShow(); }
@@ -4140,15 +4148,18 @@ function muShow(){ const st=MU.steps[MU.k]; if(!st){ muEnd(); return; } const uz
       <div class="mu-phrase" lang="de">${esc(x.de)}</div>
       <div class="mu-bks">${st.fs.map(f=>{ const F=MU.fns[f]; return `<button type="button" class="mu-bk" data-mu="bk" data-f="${f}"><b lang="de">${esc(F[0])}</b><small>${esc(uz?F[1]:F[2])}</small></button>`; }).join("")}</div></div>`; }
   else if(st.t==="chat"){ const others=MU.pool.concat(muAll()).filter(y=>y.i!==x.i&&String(y.mt[1])!==String(x.mt[1]));
-    const diff=lrnShuffle(others.filter(y=>y.fn!==x.fn)), same=lrnShuffle(others.filter(y=>y.fn===x.fn)); const ds=[]; [...diff,...same].forEach(y=>{ if(ds.length<2&&!ds.includes(String(y.mt[1]))) ds.push(String(y.mt[1])); });
+    /* ikki variant to'g'ri bo'lib qolmasin: noto'g'rilari faqat BOSHQA vazifadagi suhbat javoblari + to'g'ri javob ma'nosi ko'rsatiladi (2026-10-19, Otabek) */
+    const okY=y=>y.fn!==x.fn&&muDlg(y)&&muCue(y)!==muCue(x), near=lrnShuffle(MU.pool.filter(okY)), far=lrnShuffle(muAll().filter(okY)); const diff=[...near,...far]; const ds=[]; /* avval shu darslardan (o'xshash, lekin ma'nosi boshqa) */ diff.forEach(y=>{ if(ds.length<2&&!ds.includes(String(y.mt[1]))) ds.push(String(y.mt[1])); });
     st.opts=st.opts||lrnShuffle([String(x.mt[1]),...ds]);
     h=`<div class="lrn-card mu-c"><div class="lrn-ask">💬 ${uz?"Qaysi javob mos?":"Какой ответ подходит?"}</div>
       <div class="mu-th"><div class="mu-b in" lang="de">${esc(x.mt[0])}</div><div id="mu-out"></div></div>
+      <div class="mu-cue">🎯 ${uz?"Siz aytmoqchisiz:":"Вы хотите сказать:"} <b>«${esc(muCue(x))}»</b></div>
       <div class="mu-ops">${st.opts.map((o,k)=>`<button type="button" class="mu-op" data-mu="op" data-k="${k}" lang="de">${esc(o)}</button>`).join("")}</div><div id="mu-after"></div></div>`; }
   else { const g=st.g, wl=Math.max(4,g.w.length+1);
     h=`<div class="lrn-card mu-c"><div class="lrn-ask">✍️ ${uz?"Tushib qolgan so‘zni yozing":"Впишите пропущенное слово"}</div>
-      <div class="mu-th"><div class="mu-b in" lang="de">${esc(x.mt[0])}</div>
-      <div class="mu-b out gap" lang="de">${esc(g.pre)}<span class="mu-gw" id="mu-gw"><input id="mu-in" class="mu-in" style="width:${wl+1}ch" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-label="?"><span class="mu-ov" id="mu-ov"></span></span>${esc(g.post)}</div></div>
+      <div class="mu-th">${muDlg(x)?`<div class="mu-b in" lang="de">${esc(x.mt[0])}</div>`:""}
+      <div class="mu-b out gap" lang="de">${esc(g.pre)}<span class="mu-gw" id="mu-gw"><input id="mu-in" class="mu-in" style="width:${wl+1}ch" placeholder="${esc(g.w[0])}…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-label="?"><span class="mu-ov" id="mu-ov"></span></span>${esc(g.post)}</div></div>
+      <div class="mu-cue">💡 ${uz?"Ma’nosi:":"Значение:"} <b>«${esc(muCue(x))}»</b></div>
       <div class="mu-keys">${["ä","ö","ü","ß"].map(c=>`<button type="button" class="mu-key" data-mu="ch" data-c="${c}">${c}</button>`).join("")}</div>
       <div class="lrn-row2"><button type="button" class="lrn-link" data-mu="giveup">${esc(lt("dontknow"))}</button><button type="button" class="btn primary" data-mu="chk">${esc(lt("check"))}</button></div><div id="mu-after"></div></div>`; }
   lrnEl().innerHTML=`${lrnHead(`<span class="lrn-left">${MU.k+1} / ${MU.steps.length}</span>`)}<div class="lrn-body">${muProg()}${h}</div>`;
