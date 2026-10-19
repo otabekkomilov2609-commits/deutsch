@@ -3908,7 +3908,7 @@ function lrnMatchRender(){
   const remL=M.L.filter(k=>!M.done.has(k)); let remR=M.R.filter(k=>!M.done.has(k));
   if(remR.length>1&&remR.some((k,r)=>remL[r]===k)){ remR=lrnDerange(remL,remR); M.R=[...remR,...M.R.filter(k=>M.done.has(k))]; }
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${lrnProgress()}<div class="lrn-card">
-    <div class="lrn-ask">${uz?"🧩 Juftini toping: chapdan bittasini, o‘ngdan bittasini bosing":"🧩 Найдите пару: нажмите одно слева и одно справа"}</div>
+    ${(()=>{ try{ if(localStorage.getItem("lrn:mthelp")) return ""; }catch(e){} return `<div class="lrn-ask">${uz?"🧩 Juftini toping: chapdan bittasini, o‘ngdan bittasini bosing":"🧩 Найдите пару: нажмите одно слева и одно справа"}</div>`; })()}
     ${M.ord.length?`<div class="lrn-mts lrn-mdone">${M.ord.map(k=>{ const x=M.P[k].x; return `<div class="lrn-mrow${k===M.last?" pop":""}${all?" tr":""}"><div class="lrn-mpair">${tile("L",k)}${tile("R",k)}</div>${all?`<div class="lrn-mtr">${esc(x.mt[2]||x.ru)}</div>`:""}</div>`; } /* tarjima — hammasi topilgach (2026-10-19, Otabek) */).join("")}</div>`:""}
     ${all?"":`<div class="lrn-mts">${remL.map((k,r)=>tile("L",k)+tile("R",remR[r])).join("")}</div>`}
     ${all?`<div class="lrn-row2"><span></span><button type="button" class="btn primary" data-l="mtnext">${esc(lt("next"))} →</button></div>`:""}
@@ -3929,6 +3929,7 @@ function lrnMatchTap(side,k){
   [b1,b2].forEach(b=>{ if(b){ b.classList.add("bad"); setTimeout(()=>b.classList.remove("bad"),650); } });
 }
 function lrnMatchNext(){
+  try{ localStorage.setItem("lrn:mthelp","1"); }catch(e){} /* yo'riqnoma bir marta ko'rsatiladi (2026-10-19, Otabek) */
   const M=LR.mg; LR.mg=null; const g=M.P.slice(0,M.g);
   /* tezroq (2026-10-19): xatosiz juftlangan so'z darhol shu raundda yozdiriladi — bir raundda yashil bo'lishi mumkin */
   /* C (2026-10-19, Otabek): juftlangan so'z darhol emas, KEYINGI raundda yoziladi — xotiradan chiqarib olish uchun */
