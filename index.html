@@ -1440,9 +1440,28 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
+/* 🎧 Hören ro'yxat rejimi */
+.hl .ex-aud{position:sticky;top:0;z-index:6;box-shadow:0 6px 14px -8px rgba(0,0,0,.25)}
+.hl-tip{background:#FFF6DA;border:1.5px solid #F2D27A;color:#5A4300;border-radius:12px;padding:10px 12px;font-size:14.5px;margin:10px 0}
+.hl-res{font-size:20px;font-weight:800;text-align:center;margin:12px 0;color:var(--green)}
+.hl-l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.hl-h{font-weight:800;font-size:14.5px;color:var(--muted);margin:10px 2px 0}.hl-h b{color:var(--blue)}
+.hl-it{display:flex;gap:10px;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:12px}
+.hl-it.ok{border-color:var(--green);background:var(--green-soft)}.hl-it.bad{border-color:#C62828;background:#FDECEC}
+.hl-it.need{animation:exCrk .42s;border-color:var(--orange)}
+.hl-n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:13px;display:grid;place-items:center}
+.hl-c{flex:1;min-width:0}.hl-q{font-size:17px;font-weight:700;margin:2px 0 8px;line-height:1.45}
+.hl-o{display:flex;flex-direction:column;gap:6px}.hl-o.rf{flex-direction:row}.hl-o.rf .hl-b{flex:1;text-align:center}
+.hl-b{text-align:left;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:9px 12px;font:inherit;font-size:15.5px;cursor:pointer}
+.hl-b b{color:var(--blue);margin-right:4px}.hl-b.sel{border-color:var(--blue);background:var(--blue-soft);font-weight:700}
+.hl-b.right{border-color:var(--green);background:var(--green-soft);font-weight:800}.hl-b.wrong{border-color:#C62828;background:#FDECEC;text-decoration:line-through}
+.hl-in{border:0;border-bottom:3px solid var(--blue);background:transparent;font:inherit;font-weight:800;color:var(--blue);text-align:center;outline:none;padding:0 2px}
+.hl-in.ok{color:var(--green);border-color:var(--green)}.hl-in.bad{color:#C62828;border-color:#C62828;text-decoration:line-through}.hl-fix{color:var(--green);font-weight:800;margin-left:6px}
+.hl-nav{position:sticky;bottom:0;background:var(--bg,var(--surface-2));padding:10px 0 4px;margin-top:12px}
+
 .reg-cta{border:2px solid var(--green);background:var(--green-soft)}.reg-cta .reg-h{font-size:18px;font-weight:800;color:var(--green)}.reg-cta ul{margin:6px 0;padding-left:4px;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14.5px}.reg-cta .reg-free{font-weight:800;color:var(--orange);font-size:16px}.reg-cta .reg-go{align-self:stretch;font-size:17px;padding:12px}
 /* 👎 feedback + 🛠 admin */
-.fb-btn{position:fixed;right:0;top:58%;z-index:2147483000;width:40px;height:44px;border:1.5px solid var(--line);border-right:0;border-radius:14px 0 0 14px;background:var(--surface);box-shadow:0 2px 10px rgba(0,0,0,.12);font-size:19px;cursor:pointer;opacity:.82;padding:0 0 0 4px}
+.fb-btn{position:fixed;left:0;top:74%;z-index:2147483000;width:32px;height:40px;border:1.5px solid var(--line);border-left:0;border-radius:0 14px 14px 0;background:var(--surface);box-shadow:0 2px 10px rgba(0,0,0,.12);font-size:18px;cursor:pointer;opacity:.8;padding:0 4px 0 0}
 .fb-btn:hover{opacity:1;width:46px}.fb-btn.wait{animation:fbPulse .8s infinite}
 @keyframes fbPulse{50%{opacity:.4}}
 .fb-ov{position:fixed;inset:0;z-index:2147483001;background:rgba(15,23,42,.45);display:grid;place-items:center;padding:16px}.fb-ov[hidden]{display:none}
@@ -3067,7 +3086,7 @@ function exRegelDeco(h){ try{ const t=document.createElement("div"); t.innerHTML
 function exTipP(){ const m=byId[EX.id]||{}, D=exData()[EX.id]||{}, k0=(D.sec&&D.sec[0]&&D.sec[0].k)||""; return m.part||({hoer:"h",spre:"s",wort:"w",lesen:"l",ausspr:"a"}[k0])||((/-([GWKS])$/.exec(EX.id)||[])[1]||"").toLowerCase(); }
 function exTip(){ const p=exTipP(); const T=EX_TIPS[p]; if(!T) return "";
   const L=state.lang==="ru"?"ru":"uz", ru=L==="ru"; return `<div class="ex-tip"><div><b>🎯 ${ru?"Зачем?":"Nima uchun?"}</b> ${esc(T[L][0])}</div><div><b>💡 ${ru?"Стратегия":"Strategiya"}:</b> ${esc(T[L][1])}</div></div>`; }
-function exMenu(){ EX.si=-1; exAudStop(); const D=exData()[EX.id];
+function exMenu(){ EX.si=-1; EX.hl=null; exAudStop(); const D=exData()[EX.id];
   exEl().innerHTML=`${exHead()}<div class="lrn-body">${exTip()}<div class="ex-secs">${D.sec.map((s,si)=>{ const st=exStat(EX.id,si), p=st.n?Math.round(st.ok/st.n*100):0;
       return `<button type="button" class="ex-sec${st.d===st.n&&st.n?" full":""}" data-x="sec" data-si="${si}" style="--p:${p}%"><span class="ic">${s.ic||"✍"}</span><span class="tx"><b>${esc(s.t)}</b><small>${esc(ext("n")(st.n))}${st.d?` · ${st.ok}/${st.n} ✓`:""}</small></span><span class="pc">${st.d?p+"%":"→"}</span></button>`; }).join("")}</div>
     ${D.lern&&lernHas(D.lern[state.lang==="ru"?1:0])?`<button type="button" class="btn ex-yod" data-x="yod">${esc(ext("yod"))}</button>`:""}</div>`;
@@ -3087,12 +3106,44 @@ function askPop(el){ try{ if(!el) return; const src=el.querySelector(".ex-ask-t"
   const pw=el.clientWidth||(el.parentElement&&el.parentElement.clientWidth)||0, r=src.getBoundingClientRect(); let w=r.width; if(src===el&&chip) w-=chip.getBoundingClientRect().width+10;
   const dx=Math.max(0,(pw-1.2*w)/2); el.classList.add("ask-hold"); el.style.transition="none"; el.style.transformOrigin="left center"; el.style.transform=`translateX(${dx.toFixed(1)}px) scale(1.2)`; void el.offsetWidth;
   clearTimeout(el._pt); el._pt=setTimeout(()=>{ el.style.transition="transform .6s cubic-bezier(.3,.9,.3,1)"; el.style.transform="none"; setTimeout(()=>{ el.style.transition=""; el.style.transform=""; el.style.transformOrigin=""; el.classList.remove("ask-hold"); },650); },1000); }catch(e){} }
+
+/* 🎧 Hören — ro'yxat rejimi (2026-10-21, Otabek): audio tepada qotib turadi, hamma savollar pastda bitta ro'yxatda — tinglab turib ketma-ket belgilab boriladi; oxirida hammasi birga tekshiriladi */
+function exHLon(sec){ return sec&&sec.k==="hoer"&&sec.items.every(it=>it.t==="info"||it.t==="mc"||it.t==="gap"); }
+function exHL(){ const D=exData()[EX.id], sec=D.sec[EX.si], uz=state.lang!=="ru", r=exRes(), L="abcdefgh"; EX.hl=EX.hl||{sel:{},done:false};
+  const S=EX.hl, idx=EX.q, allAns=idx.every(i=>{ const it=sec.items[i]; return it.t==="mc"? S.sel[i]!=null : (S.sel[i]||[]).length===it.a.length&&(S.sel[i]||[]).every(v=>String(v||"").trim()); });
+  let lastH=null;
+  const li=idx.map((i,k)=>{ const it=sec.items[i], st=S.done?(S.ok[i]?"ok":"bad"):""; let hh=""; if(it.h&&it.h!==lastH){ hh=`<div class="hl-h">${esc(it.h).replace(/\*([^*]+)\*/g,"<b>$1</b>")}</div>`; lastH=it.h; }
+    let body="";
+    if(it.t==="mc"){ const rf=it.o.length===2&&/^richtig$/i.test(it.o[0]);
+      body=`<div class="hl-q" lang="de">${exQ(it.q||"")}</div><div class="hl-o${rf?" rf":""}">${it.o.map((o,j)=>{ let c=S.sel[i]===j?" sel":""; if(S.done){ if(j===it.a) c+=" right"; else if(S.sel[i]===j) c+=" wrong"; }
+        return `<button type="button" class="hl-b${c}" data-hlo="${i}:${j}"${S.done?" disabled":""}>${rf?"":`<b>${L[j]}</b> `}${esc(o)}</button>`; }).join("")}</div>`; }
+    else { let g=0; body=`<div class="hl-q" lang="de">${exQ(it.s||"").replace(/___/g,()=>{ const v=(S.sel[i]||[])[g]||"", a=it.a[g][0], cls=S.done?(exCanon(v,it.a[g])?" ok":" bad"):""; const h=`<input class="hl-in${cls}" data-hlg="${i}:${g}" value="${esc(v)}" autocomplete="off" autocapitalize="off" spellcheck="false" lang="de" style="width:${Math.max(4,a.length+2)}ch"${S.done?" disabled":""}>${S.done&&!exCanon(v,it.a[g])?`<span class="hl-fix">${esc(a)}</span>`:""}`; g++; return h; })}</div>`; }
+    return `${hh}<li class="hl-it ${st}" data-hi="${i}"><span class="hl-n">${k+1}</span><div class="hl-c">${body}</div></li>`; }).join("");
+  const nOk=S.done?idx.filter(i=>S.ok[i]).length:0;
+  exEl().innerHTML=`${exHead(sec.ic+" "+sec.t)}<div class="lrn-body ex2 hl">${exAudBar(sec)}
+    ${S.done?`<div class="hl-res">${nOk===idx.length?"🏆":"✅"} ${uz?`${idx.length} tadan ${nOk} tasi to‘g‘ri`:`Верно: ${nOk} из ${idx.length}`}</div>`:`<div class="hl-tip">👀 ${uz?"<b>Avval savollarni o‘qing</b>, keyin ▶ ni bosing. Tinglayotganda javoblarni ketma-ket belgilab boring.":"<b>Сначала прочитайте вопросы</b>, потом нажмите ▶. Отмечайте ответы по ходу прослушивания."}</div>`}
+    <ol class="hl-l">${li}</ol>
+    <div class="ias-nav ex-nav hl-nav"><span></span><button type="button" class="ias-go" id="ex-go" data-x="${S.done?"hlend":"hlchk"}">Weiter</button><span></span></div></div>`;
+  exAudSync(); const go=document.getElementById("ex-go"); if(S.done){ exGo("next"); go.dataset.x="hlend"; } else if(allAns){ go.classList.remove("lkb"); go.innerHTML=`Weiter <span class="ex-ar">→</span>`; go.dataset.x="hlchk"; } else { exGo("chk"); go.dataset.x="hlchk"; } }
+function exHLcheck(){ const D=exData()[EX.id], sec=D.sec[EX.si], S=EX.hl, r=exRes(); const go=document.getElementById("ex-go");
+  const miss=EX.q.find(i=>{ const it=sec.items[i]; return it.t==="mc"? S.sel[i]==null : !(S.sel[i]||[]).length||(S.sel[i]||[]).length<it.a.length||(S.sel[i]||[]).some(v=>!String(v||"").trim()); });
+  if(miss!=null){ if(go){ go.classList.remove("crk"); void go.offsetWidth; go.classList.add("crk"); } const li=exEl().querySelector(`.hl-it[data-hi="${miss}"]`); if(li){ li.scrollIntoView({block:"center",behavior:"smooth"}); li.classList.remove("need"); void li.offsetWidth; li.classList.add("need"); } return; }
+  S.ok={}; EX.q.forEach(i=>{ const it=sec.items[i]; const ok= it.t==="mc"? S.sel[i]===it.a : it.a.every((al,g)=>!!exCanon((S.sel[i]||[])[g]||"",al)); S.ok[i]=ok;
+    try{ if(ok){ if(r[i]!==1) actEv("ok",EX.id,{first:r[i]!==0}); } else actEv("wrong",EX.id,{i:EX.si+"."+i}); }catch(e){}
+    if(ok){ if(r[i]!==1){ EX.ok++; } r[i]=1; } else if(r[i]!==1) r[i]=0; EX.n++; });
+  S.done=true; exSave(); try{ exAudStop(); }catch(e){} exHL(); exEl().scrollTo({top:0,behavior:"smooth"}); }
+document.addEventListener("click",e=>{ const root=exEl(); if(!root||root.hidden||!EX.hl||!root.querySelector(".hl")) return;
+  const o=e.target.closest("[data-hlo]"); if(o&&!EX.hl.done){ const [i,j]=o.dataset.hlo.split(":").map(Number); EX.hl.sel[i]=j; const y=root.scrollTop; exHL(); root.scrollTop=y; return; }
+  const c=e.target.closest("[data-x]"); if(!c) return; if(c.dataset.x==="hlchk"){ e.stopImmediatePropagation(); exHLcheck(); } else if(c.dataset.x==="hlend"){ e.stopImmediatePropagation(); EX.hl=null; exEnd(); } },true);
+document.addEventListener("input",e=>{ const t=e.target; if(!t.classList||!t.classList.contains("hl-in")||!EX.hl||EX.hl.done) return; const [i,g]=t.dataset.hlg.split(":").map(Number); (EX.hl.sel[i]=EX.hl.sel[i]||[])[g]=t.value;
+  const D=exData()[EX.id], sec=D.sec[EX.si], all=EX.q.every(k=>{ const it=sec.items[k]; return it.t==="mc"? EX.hl.sel[k]!=null : (EX.hl.sel[k]||[]).length===it.a.length&&(EX.hl.sel[k]||[]).every(v=>String(v||"").trim()); });
+  const go=document.getElementById("ex-go"); if(go&&all&&go.classList.contains("lkb")){ go.classList.remove("lkb"); go.innerHTML=`Weiter <span class="ex-ar pop">→</span>`; } });
 function exStart(si,onlyWrong){ const D=exData()[EX.id], r=EX.res[si]||{}; EX.si=si; const its=D.sec[si].items;
   EX.q=its.map((it,i)=>i).filter(i=>its[i].t!=="info"&&(!onlyWrong||r[i]!==1));
   /* Aufgabe guruhlari: ketma-ket bir xil sarlavha; oldidagi "info" — shu guruhning qoidasi (2026-10-20, Otabek: «i» o'sha mashqning mavzusini tushuntirsin) */
   EX.G=[]; let info=null; its.forEach((it,i)=>{ if(it.t==="info"){ info=(state.lang==="ru"&&it.ru)||it.h; return; } /* info: h = o'zbekcha (yoki nemischa qoida), ru = ruscha — 2026-10-20 */ const k=EX.q.indexOf(i); if(k<0) return; const L=EX.G[EX.G.length-1]; if(L&&L.h===it.h&&L.info===info&&!it.bsp) L.ks.push(k); else EX.G.push({h:it.h,ks:[k],info,bsp:it.bsp||null}); });
   EX.G.forEach(g=>{ if(!g.info){ const t0=its[EX.q[g.ks[0]]]; if(t0&&t0.t==="say") g.info=exSayInfo(); } });
-  EX.qi=0; EX.ok=0; EX.n=0; EX.tipSeen=false; EX.pSeen=new Set(); EX.xSeen=new Set(); if(store.get("spinfo")) EX.xSeen.add(exSayInfo()); EX.bSeen=new Set(); EX.tried={}; EX.fails={}; EX.force=null; EX.lastG=-1; EX.secD={}; EX.why=null; exItem(); }
+  EX.hl=exHLon(D.sec[si])?{sel:{},done:false}:null; EX.qi=0; EX.ok=0; EX.n=0; EX.tipSeen=false; EX.pSeen=new Set(); EX.xSeen=new Set(); if(store.get("spinfo")) EX.xSeen.add(exSayInfo()); EX.bSeen=new Set(); EX.tried={}; EX.fails={}; EX.force=null; EX.lastG=-1; EX.secD={}; EX.why=null; exItem(); }
 function exShuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function exCur(){ const D=exData()[EX.id]; return D.sec[EX.si].items[EX.q[EX.qi]]; }
 function exGi(){ return EX.G.findIndex(g=>g.ks.includes(EX.qi)); }
@@ -3218,7 +3269,7 @@ const EXR={
     c:it=>{ const A=new Set(it.a); let all=A.size===EX.st.mk.size; exEl().querySelectorAll(".ex-mw").forEach(b=>{ const i=+b.dataset.i, on=EX.st.mk.has(i); if(on&&A.has(i)) b.classList.add("ok"); else if(on) { b.classList.add("bad"); all=false; } else if(A.has(i)){ b.classList.add("miss"); all=false; } }); if(all) exEl().querySelectorAll(".ex-mw").forEach(b=>b.disabled=true); return all; },
     ans:it=>{ const w=it.s.split(" "), A=new Set(it.a); return w.map((x,i)=>A.has(i)?`<b class="ex-hl">${esc(x)}</b>`:esc(x)).join(" "); }}
 };
-function exItem(){ const el=exEl(); el.classList.remove("has-fb"); EX.done=false; EX.why=null;
+function exItem(){ const el=exEl(); el.classList.remove("has-fb"); EX.done=false; EX.why=null; if(EX.hl&&EX.si>=0){ exHL(); return; }
   if(EX.qi>=EX.q.length){ exEnd(); return; }
   const it=exCur(), D=exData()[EX.id], sec=D.sec[EX.si], gi=exGi(), g=EX.G[gi], info=exInfoFor(gi), n=EX.q.length, uz=state.lang!=="ru";
   const anyInfo=EX.G.some(x=>x.info);
