@@ -1419,7 +1419,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-w{position:relative}.ex-gw{position:relative;display:inline-block}.ex-gw .ex-gap{padding-right:8px}
 .ex-qb.in{position:absolute;right:3px;top:50%;transform:translateY(-50%);width:28px;height:28px;font-size:16px;z-index:2}
 .ex-qb:not(.in){position:absolute;right:-8px;bottom:-10px;z-index:2}
-.ex-nav{margin-top:2px}.ex-nav.scr button:not(.ias-go){visibility:hidden}.ex-nav .ias-go.vst{background:var(--green);color:#fff}
+.ex-nav{margin-top:2px}.ex-nav.scr button[data-x="skip"]{visibility:hidden}.ex-nav .ias-go.vst{background:var(--green);color:#fff}
 #ex .lrn-fb{position:static;max-width:none;max-height:none;margin:0;padding:0;background:none;box-shadow:none}#ex .lrn-fb.sol{background:#FFF4D1;color:#5A4300;padding:12px 14px;border-radius:14px;font-weight:700;font-size:17px}#ex .lrn-fb.sol .ias-ans{display:block;margin-top:4px;font-size:20px;color:var(--ink)}
 #ex .lrn-fb.ias-fbw{position:relative;background:#FDECEC;color:#C62828;padding:12px 46px 12px 14px;border-radius:14px}
 .ex-sol{align-self:flex-end;font-weight:800;color:#7A5600;background:#FFF4D1;border-radius:999px;padding:8px 16px}
@@ -1440,6 +1440,17 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
+/* ❄ muzlagan «Weiter» */
+.ex-nav .ias-go.ice{position:relative;overflow:hidden;padding-left:40px;background:linear-gradient(135deg,#EEF8FF 0%,#CFE8FA 42%,#F6FBFF 58%,#B9DDF6 100%)!important;color:#2E6E99!important;border:2px solid #A9D6F5;box-shadow:inset 0 2px 6px rgba(255,255,255,.9),inset 0 -3px 8px rgba(110,175,225,.35),0 3px 10px rgba(80,150,210,.18);text-shadow:0 1px 0 rgba(255,255,255,.8)}
+.ex-nav .ias-go.ice::before{content:"❄";position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:18px;opacity:.75}
+.ex-nav .ias-go.ice::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(118deg,transparent 0 16px,rgba(255,255,255,.6) 16px 18px,transparent 18px 34px),radial-gradient(circle at 85% 20%,rgba(255,255,255,.9) 0 3px,transparent 4px),radial-gradient(circle at 70% 75%,rgba(255,255,255,.7) 0 2px,transparent 3px)}
+.ex-nav .ias-go.thaw{animation:exThaw .6s ease}
+@keyframes exThaw{0%{filter:brightness(1.7) saturate(.2);transform:scale(.94)}55%{transform:scale(1.07)}100%{filter:none;transform:scale(1)}}
+.ex-nav .ias-go.ice.crk{animation:exCrk .42s}
+@keyframes exCrk{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px) rotate(-1.5deg)}40%{transform:translateX(7px) rotate(1.5deg)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+:root[data-theme="dark"] .ex-nav .ias-go.ice{background:linear-gradient(135deg,#1b3245 0%,#25496a 45%,#1d3a52 60%,#2b5a80 100%)!important;color:#A9D8F8!important;border-color:#3f78a3;text-shadow:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ex-nav .ias-go.ice{background:linear-gradient(135deg,#1b3245 0%,#25496a 45%,#1d3a52 60%,#2b5a80 100%)!important;color:#A9D8F8!important;border-color:#3f78a3;text-shadow:none}}
+
 /* bo'laklardan so'z: qatordagi bo'laklar bir-biriga yopishadi — bitta so'z bo'lib ko'rinadi; to'g'ri bo'lsa — yaxlit so'z (2026-10-21) */
 .ex-line.join{gap:0}
 .ex-line.join .ex-tile{margin:0;border-radius:0;border-left-width:0;padding-left:3px;padding-right:3px}
@@ -3123,7 +3134,9 @@ function exSecDone(){ const G=EX.G, r=exRes(); if(G.length<2) return; G.forEach(
   setTimeout(()=>{ const b=document.querySelector(`#ex-secs [data-g="${j}"]`); if(b){ b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop"); } exCheer(`✅ Aufgabe ${j+1} geschafft! (${dn} / ${G.length})`); },350); }); }
 function exProgDraw(later){ const n=EX.q.length, okN=exOkN(), pb=document.getElementById("ex-pb"); if(pb) pb.style.width=(okN/n*100)+"%"; exEmo(okN,n,later);
   const gi=exGi(), g=EX.G[gi], c=document.getElementById("ex-cnt"); if(c) c.textContent=g?`${EX.scr==="b"?1:g.ks.indexOf(EX.qi)+1+(g.bsp?1:0)} / ${g.ks.length+(g.bsp?1:0)}`:`${EX.qi+1} / ${n}`; exSecRender(); }
-function exGo(mode,label){ const go=document.getElementById("ex-go"); if(!go) return; go.hidden=mode==="hide"; go.classList.toggle("next",mode==="next"); go.classList.toggle("vst",mode==="vst"); go.dataset.x=mode==="vst"?"vst":mode==="next"?"next":"chk"; go.textContent=label||(mode==="next"?"Weiter →":mode==="vst"?"Verstanden ✓":"✓ Prüfen");
+/* «Prüfen» yo'q (2026-10-21, Otabek): javob to'g'ri bo'lmaguncha tugma «muzlagan» ❄ Weiter; to'g'ri bo'lsa muz eriydi — yashil Weiter. Muzlagan tugma bosilsa — xato ko'rsatiladi */
+const EX_LOCKBTN=false; /* dizayn tasdiqlanguncha eski «Prüfen» */
+function exGo(mode,label){ const go=document.getElementById("ex-go"); if(!go) return; const wasIce=go.classList.contains("ice"); go.classList.toggle("ice",EX_LOCKBTN&&mode==="chk"); if(mode==="next"&&wasIce){ go.classList.remove("thaw"); void go.offsetWidth; go.classList.add("thaw"); } go.hidden=mode==="hide"; go.classList.toggle("next",mode==="next"); go.classList.toggle("vst",mode==="vst"); go.dataset.x=mode==="vst"?"vst":mode==="next"?"next":"chk"; go.textContent=label||(mode==="vst"?"Verstanden ✓":mode==="next"||EX_LOCKBTN?"Weiter →":"✓ Prüfen"); go.setAttribute("aria-label",mode==="chk"?"Weiter (erst richtig antworten)":go.textContent);
   const nav=document.getElementById("ex-nav"); if(nav) nav.classList.toggle("scr",mode==="vst"); }
 function exAudT(x){ x=Math.max(0,Math.floor(x||0)); return Math.floor(x/60)+":"+String(x%60).padStart(2,"0"); }
 function exAudStop(){ try{ if(EX.au) EX.au.pause(); }catch(e){} }
@@ -3234,6 +3247,7 @@ function exAfter(ok){ const it=exCur(), R=exEl(), i=EX.q[EX.qi], r=exRes(); try{
   if(ok){ EX.done=true; if(r[i]!==1){ if(!EX.fails[i]) EX.ok++; EX.n++; } r[i]=1; exSave(); R.querySelectorAll(".ex-qb").forEach(b=>b.remove());
     const fb=document.getElementById("ex-fb"); fb.className="lrn-fb"; fb.innerHTML="";
     exProgDraw(true); exSecDone(); exGo("next"); { const okb=document.getElementById("ex-pb"); } setTimeout(()=>{ const g=document.getElementById("ex-go"); if(g) g.focus({preventScroll:true}); },30); return; }
+  { const go=document.getElementById("ex-go"); if(go){ go.classList.remove("crk"); void go.offsetWidth; go.classList.add("crk"); } }
   EX.fails[i]=(EX.fails[i]||0)+1; if(r[i]!==1&&r[i]!==0){ r[i]=0; EX.n++; exSave(); }
   const card=document.getElementById("ex-card"); card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
   if(it.t==="gap"){ let f1=null; R.querySelectorAll(".ex-gap.bad").forEach(x=>{ const hd=exGapDiff(x,it.a[+x.dataset.g],null); x.classList.remove("shake"); void x.offsetWidth; x.classList.add("shake"); if(!f1) f1={x,hd}; });
@@ -3268,7 +3282,7 @@ document.addEventListener("click",e=>{ const root=exEl(); if(!root||root.hidden|
   if(a==="bsp"){ EX.force="b"; exItem(); return; }
   if(a==="jump"){ const g=EX.G[+b.dataset.g], r=exRes(); EX.qi=g.ks.find(k=>r[EX.q[k]]!==1)??g.ks[0]; EX.force=null; exItem(); return; }
   if(a==="next"||a==="skip"){ if(a==="skip"&&!EX.done&&!EX.scr) try{ actEv("skip",EX.id); }catch(e){} EX.qi++; EX.force=null; exItem(); return; }
-  if(a==="prev"){ if(EX.qi>0){ EX.qi--; EX.force=null; exItem(); } return; }
+  if(a==="prev"){ if(EX.qi>0){ EX.qi--; EX.force=null; exItem(); } else { const D=exData()[EX.id]; if(D&&D.sec.length>1) exMenu(); else exClose(); } return; } /* Zurück doim ishlaydi: birinchi savolda — bo'limlarga / Lektionga qaytadi (2026-10-21, Otabek) */
   if(a==="why"){ const fb=document.getElementById("ex-fb"); fb.className="lrn-fb ias-fbw"; fb.innerHTML=`<button type="button" class="ias-qx" data-x="whyx" aria-label="Schließen">×</button><div class="ias-why">${EX.why||""}</div>`; fb.scrollIntoView({block:"nearest",behavior:"smooth"}); return; }
   if(a==="whyx"){ const fb=document.getElementById("ex-fb"); fb.className="lrn-fb"; fb.innerHTML=EX.fails[EX.q[EX.qi]]>=2?`<button type="button" class="lrn-link ex-sol" data-x="sol">💡 Lösung</button>`:""; return; }
   if(a==="sol"){ if(!EX.done) exSol(); return; }
