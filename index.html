@@ -3331,7 +3331,15 @@ const EXR={
     c:it=>{ const A=new Set(it.a); let all=A.size===EX.st.mk.size; exEl().querySelectorAll(".ex-mw").forEach(b=>{ const i=+b.dataset.i, on=EX.st.mk.has(i); if(on&&A.has(i)) b.classList.add("ok"); else if(on) { b.classList.add("bad"); all=false; } else if(A.has(i)){ b.classList.add("miss"); all=false; } }); if(all) exEl().querySelectorAll(".ex-mw").forEach(b=>b.disabled=true); return all; },
     ans:it=>{ const w=it.s.split(" "), A=new Set(it.a); return w.map((x,i)=>A.has(i)?`<b class="ex-hl">${esc(x)}</b>`:esc(x)).join(" "); }}
 };
-function exItem(){ const el=exEl(); el.classList.remove("has-fb"); EX.done=false; EX.why=null; if(EX.hl&&EX.si>=0){ exHL(); return; }
+/* ⌨️ Android/telefon: mashqlar orasida klaviatura tushib-chiqmasin (2026-10-21, Otabek). Yozish katagi qayta chizilishidan oldin fokus
+   ko'rinmas «ushlab turuvchi» katakka o'tadi — klaviatura ochiq qoladi; yangi katak chiqsa fokus unga, chiqmasa (tanlash mashqi) klaviatura yopiladi. */
+function kbCoarse(){ return matchMedia("(pointer:coarse)").matches; }
+function kbKeep(){ let k=document.getElementById("kb-keep"); if(!k){ k=document.createElement("input"); k.id="kb-keep"; k.type="text"; k.tabIndex=-1; k.setAttribute("aria-hidden","true"); k.setAttribute("autocomplete","off"); k.setAttribute("autocapitalize","off"); k.setAttribute("autocorrect","off"); k.setAttribute("spellcheck","false"); k.setAttribute("lang","de");
+  k.style.cssText="position:fixed;top:40%;left:0;width:1px;height:1px;opacity:0;border:0;padding:0;margin:0;font-size:16px;z-index:-1;caret-color:transparent;background:transparent;color:transparent"; document.body.appendChild(k); } return k; }
+function kbHold(){ try{ if(!kbCoarse()) return; const a=document.activeElement; if(!a||!/^(INPUT|TEXTAREA)$/.test(a.tagName)) return; if(a.id!=="kb-keep"&&!a.closest("#ex,#lrn")) return; const k=kbKeep(); if(a!==k){ k.value=""; k.focus({preventScroll:true}); } }catch(e){} }
+function kbRel(){ setTimeout(()=>{ const k=document.getElementById("kb-keep"); if(k&&document.activeElement===k&&!(EX.done&&!exEl().hidden&&document.getElementById("ex-go")&&document.getElementById("ex-go").dataset.x==="next"&&exEl().querySelector(".ex-gap"))) k.blur(); },450); }
+["pointerdown","mousedown"].forEach(t=>document.addEventListener(t,e=>{ if(!e.target.closest||!e.target.closest("#ex-nav button,#ex .ex-qb,[data-exk]")) return; const a=document.activeElement; if(a&&/^(INPUT|TEXTAREA)$/.test(a.tagName)&&(a.id==="kb-keep"||exEl().contains(a))) e.preventDefault(); },true));
+function exItem(){ kbHold(); kbRel(); const el=exEl(); el.classList.remove("has-fb"); EX.done=false; EX.why=null; if(EX.hl&&EX.si>=0){ exHL(); return; }
   if(EX.qi>=EX.q.length){ exEnd(); return; }
   const it=exCur(), D=exData()[EX.id], sec=D.sec[EX.si], gi=exGi(), g=EX.G[gi], info=exInfoFor(gi), n=EX.q.length, uz=state.lang!=="ru";
   const anyInfo=EX.G.some(x=>x.info);
@@ -3397,7 +3405,7 @@ function exWhyBtn(it){ exEl().querySelectorAll(".ex-qb").forEach(b=>b.remove());
 function exAfter(ok){ const it=exCur(), R=exEl(), i=EX.q[EX.qi], r=exRes(); try{ if(ok){ if(r[i]!==1) actEv("ok",EX.id,{first:!EX.tried[i]&&r[i]!==0}); } else actEv("wrong",EX.id,{i:EX.si+"."+i}); }catch(e){} EX.tried[i]=true;
   if(ok){ EX.done=true; if(r[i]!==1){ if(!EX.fails[i]) EX.ok++; EX.n++; } r[i]=1; exSave(); R.querySelectorAll(".ex-qb").forEach(b=>b.remove());
     const fb=document.getElementById("ex-fb"); fb.className="lrn-fb"; fb.innerHTML="";
-    exProgDraw(true); exSecDone(); exGo("next"); { const okb=document.getElementById("ex-pb"); } setTimeout(()=>{ const g=document.getElementById("ex-go"); if(g) g.focus({preventScroll:true}); },30); return; }
+    exProgDraw(true); exSecDone(); exGo("next"); { const okb=document.getElementById("ex-pb"); } if(kbCoarse()) kbHold(); else setTimeout(()=>{ const g=document.getElementById("ex-go"); if(g) g.focus({preventScroll:true}); },30); return; }
   { const go=document.getElementById("ex-go"); if(go){ go.classList.remove("crk"); void go.offsetWidth; go.classList.add("crk"); } }
   EX.fails[i]=(EX.fails[i]||0)+1; if(r[i]!==1&&r[i]!==0){ r[i]=0; EX.n++; exSave(); }
   const card=document.getElementById("ex-card"); card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
@@ -3479,7 +3487,7 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-exc]"); i
   let v=b.dataset.exc.replace(/^[-–]\s*(?=\S)/,""); if(exGapCap(i)) v=v.charAt(0).toUpperCase()+v.slice(1); i.value=v; i.classList.remove("bad"); exGapFit(i);
   R.querySelectorAll(".ex-ch.sel").forEach(z=>z.classList.remove("sel")); b.classList.add("sel");
   if(ins.every(x=>x.value.trim())){ const go=document.getElementById("ex-go"); if(go&&!go.hidden) setTimeout(()=>go.click(),120); } else { const nx=ins.find(x=>!x.value.trim()); if(nx){ EX_LASTGAP=nx; nx.focus({preventScroll:true}); } } });
-function exGapLock(i,on){ i.readOnly=!!on; i.classList.toggle("lk",!!on); if(on){ i.tabIndex=-1; try{ i.blur(); }catch(e){} i.scrollLeft=0; } else i.removeAttribute("tabindex"); }
+function exGapLock(i,on){ i.readOnly=!!on; i.classList.toggle("lk",!!on); if(on){ i.tabIndex=-1; try{ if(document.activeElement===i&&kbCoarse()) kbHold(); else i.blur(); }catch(e){} i.scrollLeft=0; } else i.removeAttribute("tabindex"); }
 function exGapFit(i){ try{ const cs=getComputedStyle(i); if(!i.dataset.fs0) i.dataset.fs0=parseFloat(cs.fontSize)||19; const fs=+i.dataset.fs0; const cv=exGapFit._c||(exGapFit._c=document.createElement("canvas").getContext("2d")); cv.font=`${cs.fontStyle} ${cs.fontWeight} ${fs}px ${cs.fontFamily}`;
   const mw=t=>{ try{ return cv.measureText(t).width; }catch(e){ return t.length*fs*.62; } };
   /* "?" tugmasi endi katak tashqarisida (burchakda) — ichida 34px joy kerak emas; uzun so'z telefonda kartadan chiqsa — shrift kichrayadi (2026-10-20, Otabek: «so'z katakka sig'mayapti») */
@@ -3810,7 +3818,7 @@ function lrnHint(x){
   if(/\(|\+\s*(Akk|Dat)/.test(de)) h.push(uz?"Qavsdagi qism va + Akk./Dat. shart emas":"Часть в скобках и + Akk./Dat. писать не нужно");
   return h.length?`<div class="lrn-hint">💡 ${h.map(esc).join(" · ")}</div>`:"";
 }
-function lrnAsk(){
+function lrnAsk(){ kbRel();
   lrnEl().classList.remove("has-fb"); lrnEl().scrollTo({top:0});
   while(LR.qi<LR.round.length&&(LR.st[LR.round[LR.qi].i]===2||(String(LR.round[LR.qi]._g||"")[0]==="w"&&!LR.st[LR.round[LR.qi].i]))) LR.qi++; /* Match'da xato qilingan so'z yozish o'rnida emas — oxirida qayta Match bo'ladi */ /* allaqachon o'rganilgan (reja ichida takror) — o'tkazib yuboriladi */
   if(LR.qi>=LR.round.length){ lrnRoundEnd(); return; }
@@ -4107,7 +4115,7 @@ document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="lrn-in"||LR.
 document.addEventListener("submit",e=>{
   if(e.target.id!=="lrn-wr") return; e.preventDefault(); if(LR.answered) return;
   const i=document.getElementById("lrn-in"), v=i.value; if(!lrnNorm(v)){ i.focus(); return; }
-  { const b=e.target.querySelector('button[type="submit"]'), j0=lrnJudge(v, LR.cur); if(b&&b.classList.contains("ready")&&j0.ok&&!j0.note){ if(j0.fix) i.value=j0.fix; LR.answered=true; i.disabled=true; lrnMark(!LR.tryN); LR.qi++; lrnAsk(); return; } }
+  { const b=e.target.querySelector('button[type="submit"]'), j0=lrnJudge(v, LR.cur); if(b&&b.classList.contains("ready")&&j0.ok&&!j0.note){ if(j0.fix) i.value=j0.fix; LR.answered=true; kbHold(); i.disabled=true; lrnMark(!LR.tryN); LR.qi++; lrnAsk(); return; } }
   const j=lrnJudge(v, LR.cur);
   /* 1-urinish xato: javob ko'rsatilmaydi — xato joyi inputning o'zida (qizil harf / "_"), katta xato bo'lsa faqat silkinadi (2026-10-19, Otabek) */
   if(!j.ok && !LR.tryN){ LR.tryN=1; lrnHintMark(i, v, LR.cur, j); return; }
