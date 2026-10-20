@@ -1440,6 +1440,16 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
+/* 🔒 Weiter: qulf o'ngda, to'g'ri bo'lsa strelka */
+.ex-nav .ias-go .ex-lk,.ex-nav .ias-go .ex-ar{display:inline-flex;align-items:center;justify-content:center;width:18px;margin-left:6px;vertical-align:-2px}
+.ex-nav .ias-go .ex-lki{display:block}
+.ex-nav .ias-go .ex-ar.pop{animation:exArPop .45s cubic-bezier(.3,1.6,.5,1)}
+@keyframes exArPop{0%{transform:scale(.2) rotate(-90deg);opacity:0}100%{transform:none;opacity:1}}
+.ex-nav .ias-go.next.thaw,.ex-nav .ias-go.next{transition:background .25s}
+.ex-nav .ias-go.lkb.crk{animation:exCrk .42s}
+.ex-nav .ias-go.lkb.crk .ex-lk{animation:exLkW .5s}
+@keyframes exLkW{0%,100%{transform:none}25%{transform:rotate(-22deg) scale(1.25)}50%{transform:rotate(18deg) scale(1.25)}75%{transform:rotate(-10deg)}}
+
 /* ❄ muzlagan «Weiter» */
 .ex-nav .ias-go.ice{position:relative;overflow:hidden;padding-left:40px;background:linear-gradient(135deg,#EEF8FF 0%,#CFE8FA 42%,#F6FBFF 58%,#B9DDF6 100%)!important;color:#2E6E99!important;border:2px solid #A9D6F5;box-shadow:inset 0 2px 6px rgba(255,255,255,.9),inset 0 -3px 8px rgba(110,175,225,.35),0 3px 10px rgba(80,150,210,.18);text-shadow:0 1px 0 rgba(255,255,255,.8)}
 .ex-nav .ias-go.ice::before{content:"❄";position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:18px;opacity:.75}
@@ -3135,8 +3145,11 @@ function exSecDone(){ const G=EX.G, r=exRes(); if(G.length<2) return; G.forEach(
 function exProgDraw(later){ const n=EX.q.length, okN=exOkN(), pb=document.getElementById("ex-pb"); if(pb) pb.style.width=(okN/n*100)+"%"; exEmo(okN,n,later);
   const gi=exGi(), g=EX.G[gi], c=document.getElementById("ex-cnt"); if(c) c.textContent=g?`${EX.scr==="b"?1:g.ks.indexOf(EX.qi)+1+(g.bsp?1:0)} / ${g.ks.length+(g.bsp?1:0)}`:`${EX.qi+1} / ${n}`; exSecRender(); }
 /* «Prüfen» yo'q (2026-10-21, Otabek): javob to'g'ri bo'lmaguncha tugma «muzlagan» ❄ Weiter; to'g'ri bo'lsa muz eriydi — yashil Weiter. Muzlagan tugma bosilsa — xato ko'rsatiladi */
-const EX_LOCKBTN=false; /* dizayn tasdiqlanguncha eski «Prüfen» */
-function exGo(mode,label){ const go=document.getElementById("ex-go"); if(!go) return; const wasIce=go.classList.contains("ice"); go.classList.toggle("ice",EX_LOCKBTN&&mode==="chk"); if(mode==="next"&&wasIce){ go.classList.remove("thaw"); void go.offsetWidth; go.classList.add("thaw"); } go.hidden=mode==="hide"; go.classList.toggle("next",mode==="next"); go.classList.toggle("vst",mode==="vst"); go.dataset.x=mode==="vst"?"vst":mode==="next"?"next":"chk"; go.textContent=label||(mode==="vst"?"Verstanden ✓":mode==="next"||EX_LOCKBTN?"Weiter →":"✓ Prüfen"); go.setAttribute("aria-label",mode==="chk"?"Weiter (erst richtig antworten)":go.textContent);
+const EX_LOCK='<svg class="ex-lki" viewBox="0 0 26 30" width="15" height="17" aria-hidden="true"><path d="M6 13V9a7 7 0 0 1 14 0v4" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/><path d="M6 13V9a7 7 0 0 1 14 0v4" fill="none" stroke="#E53935" stroke-width="3.4" stroke-linecap="round"/><rect x="1" y="12" width="24" height="18" rx="5" fill="#fff"/><rect x="2.5" y="13.5" width="21" height="15" rx="4" fill="#E53935"/><circle cx="13" cy="20" r="2.3" fill="#fff"/><rect x="12" y="20" width="2" height="5" rx="1" fill="#fff"/></svg>';
+/* «Prüfen» yo'q (2026-10-21, Otabek): tugma doim «Weiter»; javob to'g'ri bo'lmaguncha o'ng tomonda kichik qizil qulf (tugma ko'k), to'g'ri bo'lsa qulf strelkaga aylanadi, tugma yashil. Qulfli tugma bosilsa — xato ko'rsatiladi */
+function exGo(mode,label){ const go=document.getElementById("ex-go"); if(!go) return; const wasLk=go.classList.contains("lkb"); go.classList.toggle("lkb",mode==="chk"); go.classList.remove("ice"); go.hidden=mode==="hide"; go.classList.toggle("next",mode==="next"); go.classList.toggle("vst",mode==="vst"); go.dataset.x=mode==="vst"?"vst":mode==="next"?"next":"chk";
+  if(label) go.textContent=label; else if(mode==="vst") go.textContent="Verstanden ✓"; else if(mode==="chk") go.innerHTML=`Weiter <span class="ex-lk">${EX_LOCK}</span>`; else go.innerHTML=`Weiter <span class="ex-ar${wasLk?" pop":""}">→</span>`;
+  go.setAttribute("aria-label",mode==="chk"?"Weiter (erst richtig antworten)":mode==="vst"?"Verstanden":"Weiter");
   const nav=document.getElementById("ex-nav"); if(nav) nav.classList.toggle("scr",mode==="vst"); }
 function exAudT(x){ x=Math.max(0,Math.floor(x||0)); return Math.floor(x/60)+":"+String(x%60).padStart(2,"0"); }
 function exAudStop(){ try{ if(EX.au) EX.au.pause(); }catch(e){} }
@@ -3204,7 +3217,7 @@ function exItem(){ const el=exEl(); el.classList.remove("has-fb"); EX.done=false
       <div class="lrn-ask ex-ask${EX.scr==="x"||EX.scr==="p"||EX.scr==="t"?" ex-ask-scr":""}"><span class="ex-ask-t">${EX.scr==="t"?(uz?"🎯 Nima uchun? · 💡 Strategiya":"🎯 Зачем? · 💡 Стратегия"):EX.scr==="x"?"📘 Regel":EX.scr==="p"?"📋 Erst die Fragen lesen":esc(g.h||it.h||"").replace(/\*([^*]+)\*/g,'<b class="ias-mark">$1</b>')}</span>${g.bsp&&!EX.scr?`<button type="button" class="ias-bspb" data-x="bsp">📌 Beispiel</button>`:""}</div></div>
     ${exAudBar(sec)}${sec.lt&&EX.scr!=="t"?exLtHTML(sec):""}<div class="lrn-card ex-card${EX.scr?" ex-scr":""}" id="ex-card">${EX.scr?"":say}${card}</div>
     <div class="lrn-fb" id="ex-fb"></div>
-    <div class="ias-nav ex-nav" id="ex-nav"><button type="button" data-x="prev">← Zurück</button><button type="button" class="ias-go" id="ex-go" data-x="chk">✓ Prüfen</button><button type="button" data-x="skip">Überspringen →</button></div></div>`;
+    <div class="ias-nav ex-nav" id="ex-nav"><button type="button" data-x="prev">← Zurück</button><button type="button" class="ias-go" id="ex-go" data-x="chk">Weiter</button><button type="button" data-x="skip">Überspringen →</button></div></div>`;
   el.scrollTo({top:0}); exAudSync(); exProgDraw(false); el.querySelectorAll(".ex-gap").forEach(exGapFit); if(pop) askPop(el.querySelector(".ex-ask"));
   if(EX.scr){ exGo("vst",EX.scr==="p"?(sec.aud?"▶ Jetzt hören":"Weiter →"):null); return; }
   const r=exRes(), solved=r[EX.q[EX.qi]]===1;
