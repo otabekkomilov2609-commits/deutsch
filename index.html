@@ -5774,7 +5774,7 @@ function cloudUser(){ const U=accUsers(); return ACC.cur&&U[ACC.cur]||null; }
 function cloudG(k){ try{ return localStorage.getItem("cloud:"+k+":"+ACC.cur); }catch(e){ return null; } }
 function cloudS(k,v){ try{ localStorage.setItem("cloud:"+k+":"+ACC.cur,String(v)); }catch(e){} }
 let CLOUD_T=null, CLOUD_BUSY=false;
-function cloudDirty(){ if(!CLOUD_ON||!ACC.cur) return; clearTimeout(CLOUD_T); CLOUD_T=setTimeout(()=>cloudPush(),12000); }
+function cloudDirty(){ if(!CLOUD_ON||!ACC.cur) return; clearTimeout(CLOUD_T); CLOUD_T=setTimeout(()=>cloudPush(),45000); } /* 12s→45s (2026-10-21): 1400+ o'quvchida bazaga yozish ~3 barobar kam; ilova yopilganda baribir darhol saqlanadi */
 async function cloudPush(ka){ const u=cloudUser(); if(!CLOUD_ON||!u||!u.c||CLOUD_BUSY||tchOk()) return; CLOUD_BUSY=true;
   try{ const d=JSON.stringify(cloudDump(ACC.cur)), h=await cloudSha(d);
     if(h!==cloudG("h")){ const t=Date.now(); await fsPut("p/"+u.c,{d:fsS(d),t:fsI(t)},ka&&d.length<60000); cloudS("h",h); cloudS("t",t); }
