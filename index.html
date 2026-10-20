@@ -1232,7 +1232,13 @@ mark.trm.bad sup{color:#C62828}
 .ex-sec .ic{font-size:28px;flex:none}.ex-sec .tx{flex:1;display:flex;flex-direction:column;gap:2px}.ex-sec .tx b{font-size:17px}.ex-sec .tx small{color:var(--muted);font-size:13px}.ex-sec .pc{font-weight:800;color:var(--muted)}
 .ex-sec.full{border-color:var(--green)}.ex-sec.full .pc{color:var(--green)}
 .ex-yod{margin-top:6px;padding:12px;font-size:15px}
-.ex-info h4{margin:4px 0 2px;font-size:17px}.ex-howto{margin:6px 0 4px;padding-left:22px;display:grid;gap:8px;line-height:1.45}.ex-info .btn{align-self:flex-end;padding:11px 20px}
+.ex-info h4{margin:4px 0 2px;font-size:17px}
+.ex-pv{display:flex;flex-direction:column;gap:10px}.ex-pv-tip{background:#FFF4D1;color:#5A4300;border-radius:12px;padding:10px 14px;font-size:15.5px;line-height:1.45}
+.ex-pv-l{margin:0;padding:4px 6px 4px 26px;max-height:min(56vh,520px);overflow-y:auto;overscroll-behavior:contain;display:grid;gap:12px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.ex-pv-l li{padding:8px 4px;border-bottom:1px dashed var(--line);font-size:17px;line-height:1.45}.ex-pv-l li:last-child{border-bottom:0}.ex-pv-l li::marker{font-weight:800;color:var(--blue)}
+.ex-pv-o{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:4px;font-size:15.5px;color:var(--muted)}.ex-pv-o b{color:var(--blue);margin-right:2px}
+.ex-pv-g{display:inline-block;width:56px;border-bottom:2px solid var(--blue);margin:0 3px;vertical-align:baseline}.ex-pv-hint{font-size:13.5px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ex-pv-tip{background:#3a3220;color:#F3E2B3}}:root[data-theme="dark"] .ex-pv-tip{background:#3a3220;color:#F3E2B3}.ex-howto{margin:6px 0 4px;padding-left:22px;display:grid;gap:8px;line-height:1.45}.ex-info .btn{align-self:flex-end;padding:11px 20px}
 .ex-tb{border-collapse:collapse;font-size:16px;width:100%}.ex-tb td,.ex-tb th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left}.ex-tb th{color:var(--muted);font-size:14px}
 .ex-note{margin:0;font-size:14px;color:var(--muted)}
 .ex-sk{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:18px}.ex-sk span{padding:4px 9px;border-radius:9px;background:var(--surface-2)}
@@ -2856,11 +2862,19 @@ function exStart(si,onlyWrong){ const D=exData()[EX.id], r=EX.res[si]||{}; EX.si
   /* Aufgabe guruhlari: ketma-ket bir xil sarlavha; oldidagi "info" — shu guruhning qoidasi (2026-10-20, Otabek: «i» o'sha mashqning mavzusini tushuntirsin) */
   EX.G=[]; let info=null; its.forEach((it,i)=>{ if(it.t==="info"){ info=it.h; return; } const k=EX.q.indexOf(i); if(k<0) return; const L=EX.G[EX.G.length-1]; if(L&&L.h===it.h&&L.info===info&&!it.bsp) L.ks.push(k); else EX.G.push({h:it.h,ks:[k],info,bsp:it.bsp||null}); });
   EX.G.forEach(g=>{ if(!g.info){ const t0=its[EX.q[g.ks[0]]]; if(t0&&t0.t==="say") g.info=exSayInfo(); } });
-  EX.qi=0; EX.ok=0; EX.n=0; EX.xSeen=new Set(); if(store.get("spinfo")) EX.xSeen.add(exSayInfo()); EX.bSeen=new Set(); EX.tried={}; EX.fails={}; EX.force=null; EX.lastG=-1; EX.secD={}; EX.why=null; exItem(); }
+  EX.qi=0; EX.ok=0; EX.n=0; EX.pSeen=new Set(); EX.xSeen=new Set(); if(store.get("spinfo")) EX.xSeen.add(exSayInfo()); EX.bSeen=new Set(); EX.tried={}; EX.fails={}; EX.force=null; EX.lastG=-1; EX.secD={}; EX.why=null; exItem(); }
 function exShuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function exCur(){ const D=exData()[EX.id]; return D.sec[EX.si].items[EX.q[EX.qi]]; }
 function exGi(){ return EX.G.findIndex(g=>g.ks.includes(EX.qi)); }
 /* 🗣 Sprechen — qanday ishlash (i tugmasi; birinchi marta o'zi ochiladi) — 2026-10-20, Otabek */
+/* 🎧 Hören: tinglashdan oldin hamma savollar ro'yxati (2026-10-20, Otabek: «eshitishdan oldin hamma savollarni ko'ra olsin, eslatma chiqsin») */
+function exPrevHTML(sec){ const uz=state.lang!=="ru", L="abcdefgh";
+  const li=sec.items.filter(it=>it.t!=="info").map((it,k)=>{ let q="", o="";
+    if(it.t==="mc"){ q=exQ(it.q||""); if(!(it.o.length===2&&/^richtig$/i.test(it.o[0]))) o=`<div class="ex-pv-o">${it.o.map((x,i)=>`<span><b>${L[i]}</b> ${esc(x)}</span>`).join("")}</div>`; else o=`<div class="ex-pv-o"><span>richtig</span><span>falsch</span></div>`; }
+    else if(it.t==="gap") q=exQ(it.s||"").replace(/___/g,'<u class="ex-pv-g"></u>');
+    else q=exQ(it.q||it.s||it.h||"");
+    return `<li><div class="ex-pv-q" lang="de">${q}</div>${o}</li>`; }).join("");
+  return `<div class="ex-pv"><div class="ex-pv-tip">👀 ${uz?"<b>Avval savollarni o‘qing, keyin tinglang!</b> Hammasini o‘qib chiqing — tinglayotganda nimaga e’tibor berishni bilasiz.":"<b>Сначала прочитайте вопросы, потом слушайте!</b> Прочитайте все — тогда при прослушивании вы будете знать, на что обратить внимание."}</div><ol class="ex-pv-l">${li}</ol><div class="ex-pv-hint">📋 ${uz?"Savollarni keyin ham yuqoridagi 📋 tugmasi bilan ochish mumkin.":"Вопросы можно открыть и потом — кнопкой 📋 сверху."}</div></div>`; }
 function exSayInfo(){ const uz=state.lang!=="ru";
   return uz? `<h4>🗣 Sprechen — qanday ishlaydi?</h4><ol class="ex-howto"><li><b>🔊 Savolni tinglang.</b> U o‘zi bir marta o‘qiladi, yana eshitish uchun 🔊 ni bosing.</li><li><b>🎙 «Jetzt sprechen …»</b> chiqqanda javobni <b>ovoz chiqarib, nemischa, to‘liq gap bilan</b> ayting. Sizda 7 soniya bor, chiziq to‘lib boradi. Sayt ovozingizni yozib olmaydi.</li><li><b>«Antwort hören →»</b> namunaviy javobni ko‘rsatadi va o‘qib beradi. 7 soniyadan keyin u o‘zi chiqadi.</li><li>Javobingizni namuna bilan solishtiring:<br><b>👍 Richtig gesagt</b> — to‘g‘ri aytdim, keyingisiga o‘taman.<br><b>🔁 Nochmal</b> — shu savolni yana bir bor aytaman.</li></ol><p class="ex-note">💡 Namunani eshitgach, uni bir marta baland ovozda takrorlang. Shunda gap tez yodda qoladi.</p>`
    : `<h4>🗣 Sprechen — как это работает?</h4><ol class="ex-howto"><li><b>🔊 Послушайте вопрос.</b> Он звучит один раз сам; чтобы послушать ещё, нажмите 🔊.</li><li>Когда появится <b>🎙 «Jetzt sprechen …»</b>, ответьте <b>вслух, по-немецки, полным предложением</b>. У вас 7 секунд, полоска заполняется. Сайт ваш голос не записывает.</li><li><b>«Antwort hören →»</b> показывает и озвучивает образец ответа. Через 7 секунд он появится сам.</li><li>Сравните свой ответ с образцом:<br><b>👍 Richtig gesagt</b> — сказал(а) правильно, дальше.<br><b>🔁 Nochmal</b> — скажу этот вопрос ещё раз.</li></ol><p class="ex-note">💡 Прослушав образец, повторите его один раз вслух — так фраза быстрее запоминается.</p>`; }
@@ -2927,23 +2941,24 @@ function exItem(){ const el=exEl(); el.classList.remove("has-fb"); EX.done=false
   const it=exCur(), D=exData()[EX.id], sec=D.sec[EX.si], gi=exGi(), g=EX.G[gi], info=exInfoFor(gi), n=EX.q.length, uz=state.lang!=="ru";
   const anyInfo=EX.G.some(x=>x.info);
   /* ekran: avval qoida (info), keyin Beispiel, keyin savol — «Verstanden ✓» bilan (2026-10-20, Otabek: grammatika mashqlaridagi tartib) */
-  EX.scr=null; if(EX.force==="x"&&info) EX.scr="x"; else if(EX.force==="b"&&g.bsp) EX.scr="b"; else if(!EX.force&&info&&!EX.xSeen.has(info)) EX.scr="x"; else if(!EX.force&&g.bsp&&!EX.bSeen.has(gi)) EX.scr="b";
+  EX.scr=null; if(EX.force==="p"&&sec.k==="hoer") EX.scr="p"; else if(!EX.force&&sec.k==="hoer"&&!(EX.pSeen&&EX.pSeen.has(EX.si))&&!(exRes()[EX.q[EX.qi]]===1)) EX.scr="p"; else if(EX.force==="x"&&info) EX.scr="x"; else if(EX.force==="b"&&g.bsp) EX.scr="b"; else if(!EX.force&&info&&!EX.xSeen.has(info)) EX.scr="x"; else if(!EX.force&&g.bsp&&!EX.bSeen.has(gi)) EX.scr="b";
   const pop=EX.lastG!==gi&&!EX.scr; if(!EX.scr) EX.lastG=gi; /* sarlavha birinchi ochilganda kattalashib kichrayadi (2026-10-20, Otabek) */
   EX.st={sel:null};
   const say=it.say?`<button type="button" class="ex-say" data-x="say" aria-label="${esc(ext("listen"))}">🔊</button>`:"";
   const ticks=EX.G.length>1&&EX.G.length<=12?EX.G.slice(0,-1).map(x=>`<u class="ias-tick" style="left:${((x.ks[x.ks.length-1]+1)/n*100).toFixed(2)}%"></u>`).join(""):"";
   let card;
-  if(EX.scr==="x") card=`<div class="ex-info ex-x">${info}</div>`;
+  if(EX.scr==="p") card=exPrevHTML(sec);
+  else if(EX.scr==="x") card=`<div class="ex-info ex-x">${info}</div>`;
   else if(EX.scr==="b") card=`<div class="ex-bsp"><span>📌 Beispiel</span><div>${g.bsp}</div></div>`;
   else card=`${it.q&&it.t!=="mc"&&it.t!=="say"?`<div class="ex-q ex-ctx">${exQ(it.q)}</div>`:""}<div class="ex-w" id="ex-w">${EXR[it.t].r(it)}</div>`;
-  el.innerHTML=`${exHead(sec.ic+" "+sec.t)}<div class="lrn-body ex2"><div class="ex-head" id="ex-head"><div class="ias-top ex-top"><div class="ias-pb"><i id="ex-pb"></i><b class="ias-pbe hid" id="ex-pbe"></b>${ticks}</div><span id="ex-cnt"></span>${anyInfo?`<button type="button" class="ias-tb ias-ib" data-x="info" title="Regel" aria-label="Regel">i</button>`:""}</div>
+  el.innerHTML=`${exHead(sec.ic+" "+sec.t)}<div class="lrn-body ex2"><div class="ex-head" id="ex-head"><div class="ias-top ex-top"><div class="ias-pb"><i id="ex-pb"></i><b class="ias-pbe hid" id="ex-pbe"></b>${ticks}</div><span id="ex-cnt"></span>${sec.k==="hoer"?`<button type="button" class="ias-tb ias-ib ex-qlb" data-x="qlist" title="Fragen" aria-label="Fragen">📋</button>`:""}${anyInfo?`<button type="button" class="ias-tb ias-ib" data-x="info" title="Regel" aria-label="Regel">i</button>`:""}</div>
       <div class="ias-secs" id="ex-secs"></div>
-      <div class="lrn-ask ex-ask"><span class="ex-ask-t">${esc(g.h||it.h||"").replace(/\*([^*]+)\*/g,'<b class="ias-mark">$1</b>')}</span>${g.bsp&&EX.scr!=="b"?`<button type="button" class="ias-bspb" data-x="bsp">📌 Beispiel</button>`:""}</div></div>
+      <div class="lrn-ask ex-ask${EX.scr==="x"||EX.scr==="p"?" ex-ask-scr":""}"><span class="ex-ask-t">${EX.scr==="x"?"📘 Regel":EX.scr==="p"?"📋 Erst die Fragen lesen":esc(g.h||it.h||"").replace(/\*([^*]+)\*/g,'<b class="ias-mark">$1</b>')}</span>${g.bsp&&!EX.scr?`<button type="button" class="ias-bspb" data-x="bsp">📌 Beispiel</button>`:""}</div></div>
     ${exAudBar(sec)}<div class="lrn-card ex-card${EX.scr?" ex-scr":""}" id="ex-card">${say}${card}</div>
     <div class="lrn-fb" id="ex-fb"></div>
     <div class="ias-nav ex-nav" id="ex-nav"><button type="button" data-x="prev">← Zurück</button><button type="button" class="ias-go" id="ex-go" data-x="chk">✓ Prüfen</button><button type="button" data-x="skip">Überspringen →</button></div></div>`;
   el.scrollTo({top:0}); exAudSync(); exProgDraw(false); el.querySelectorAll(".ex-gap").forEach(exGapFit); if(pop) askPop(el.querySelector(".ex-ask"));
-  if(EX.scr){ exGo("vst"); return; }
+  if(EX.scr){ exGo("vst",EX.scr==="p"?(sec.aud?"▶ Jetzt hören":"Weiter →"):null); return; }
   const r=exRes(), solved=r[EX.q[EX.qi]]===1;
   if(solved){ exShowSolved(it); exGo("next"); EX.done=true; }
   else exGo(EXR[it.t].auto?"hide":"chk");
@@ -2961,7 +2976,8 @@ function exShowSolved(it){ const R=exEl(); if(it.t==="gap") R.querySelectorAll("
   else if(it.t==="mc") R.querySelectorAll(".ex-opt").forEach((x,i)=>{ x.disabled=true; if(i===it.a) x.classList.add("ok"); });
   else if(it.t==="say"){ const m=R.querySelector("#ex-sp-mic"), a=R.querySelector("#ex-sp-a"); EX.st.sp="a"; if(m) m.hidden=true; if(a){ a.hidden=false; a.querySelectorAll(".ex-sp-self .ex-opt").forEach(x=>x.disabled=true); } }
   else { const w=R.querySelector("#ex-w"); if(w) w.innerHTML=`<div class="ex-a ex-solved">${EXR[it.t].ans(it)}</div>`; } }
-function exScrDone(){ const gi=exGi(), info=exInfoFor(gi); if(EX.scr==="x"&&info){ EX.xSeen.add(info); if(info===exSayInfo()) store.set("spinfo","1"); } if(EX.scr==="b") EX.bSeen.add(gi); EX.force=null; EX.scr=null; exItem(); }
+function exScrDone(){ if(EX.scr==="p"){ EX.pSeen.add(EX.si); const pl=EX.force!=="p"; EX.force=null; EX.scr=null; exItem(); if(pl&&EX.au&&EX.au.paused){ try{ EX.au.currentTime=0; const pr=EX.au.play(); if(pr&&pr.catch) pr.catch(()=>{}); }catch(e){} } return; }
+  const gi=exGi(), info=exInfoFor(gi); if(EX.scr==="x"&&info){ EX.xSeen.add(info); if(info===exSayInfo()) store.set("spinfo","1"); } if(EX.scr==="b") EX.bSeen.add(gi); EX.force=null; EX.scr=null; exItem(); }
 /* "Nega xato?" — javob katagining ichida, birinchi xatodan keyin (2026-10-20, Otabek) */
 function exWhy(it){ const L=state.lang==="ru"?"ru":"uz", R=exEl(); let x="";
   if(it.t==="gap"){ const ins=[...R.querySelectorAll(".ex-gap")]; const bad=ins.find(i=>i.classList.contains("bad")); if(bad){ const k=+bad.dataset.g, a=iaAuto({ok:it.a[k].map(z=>iaNorm(z))},bad.value); if(a) x+=`<b>${esc(t(a))}</b>`; } }
@@ -3009,6 +3025,7 @@ document.addEventListener("click",e=>{ const root=exEl(); if(!root||root.hidden|
   if(!it) return;
   if(a==="vst"){ exScrDone(); return; }
   if(a==="info"){ EX.force="x"; exItem(); return; }
+  if(a==="qlist"){ EX.force="p"; exItem(); return; }
   if(a==="bsp"){ EX.force="b"; exItem(); return; }
   if(a==="jump"){ const g=EX.G[+b.dataset.g], r=exRes(); EX.qi=g.ks.find(k=>r[EX.q[k]]!==1)??g.ks[0]; EX.force=null; exItem(); return; }
   if(a==="next"||a==="skip"){ EX.qi++; EX.force=null; exItem(); return; }
