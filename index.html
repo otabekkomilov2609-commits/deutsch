@@ -1440,6 +1440,15 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
+/* yig'iladigan Lektion kartalari */
+.lek.bt .lek-h{cursor:pointer;align-items:center;user-select:none}
+.lek.bt .lek-ht{flex:1;min-width:0}
+.lek.bt:not(.open)>.sx,.lek.bt:not(.open)>.lek-hw,.lek.bt:not(.open)>:not(.lek-h){display:none}
+.lek.bt:not(.open){padding-bottom:14px}
+.lek-pc{font-weight:800;font-size:14px;color:var(--green);white-space:nowrap}.lek-pc:empty{display:none}
+.lek-chev{font-size:20px;color:var(--muted);transition:transform .2s;flex:none}
+.lek.bt.open .lek-chev{transform:rotate(180deg)}
+
 /* 🎧 Hören ro'yxat rejimi */
 .hl .ex-aud{position:sticky;top:0;z-index:6;box-shadow:0 6px 14px -8px rgba(0,0,0,.25)}
 .hl-tip{background:#FFF6DA;border:1.5px solid #F2D27A;color:#5A4300;border-radius:12px;padding:10px 12px;font-size:14.5px;margin:10px 0}
@@ -2452,15 +2461,22 @@ function lekCardStu(L, tab, withLvl){
   if(ls) by.w.unshift({_h:bAct("🧠",uz?"So‘zlarni yodlash":"Учить слова",uz?"Kartochka · Match · yozish":"Карточки · пары · письмо",ls[1]+"/"+ls[2],`data-lern="${ls[0]}" data-les="${n}"`,ls[1]>=ls[2])});
   const ms=ls&&muLesStat(ls[0],n);
   if(ms) by.k.unshift({_h:bAct("💬",uz?"Iboralar · Muloqot":"Фразы · Диалоги",uz?"Mini-chat · bo‘sh joyni to‘ldirish":"Мини-чат · пропуски",Math.round(ms[0]/ms[1]*100)+"%",`data-mulern="${ls[0]}" data-les="${n}"`,ms[0]>=ms[1])});
+  if(ms&&by.s.length) by.s.unshift({_h:bAct("💬",uz?"Avval iboralarni mashq qiling":"Сначала потренируйте фразы",uz?"Muloqot: Redemittel — keyin gapirish oson":"Диалоги: Redemittel — потом говорить легче",Math.round(ms[0]/ms[1]*100)+"%",`data-mulern="${ls[0]}" data-les="${n}"`,ms[0]>=ms[1])}); /* Sprechen → Muloqot (2026-10-21, Otabek) */
   const subs={g,w,k,h:"",l:"",s:"",a:""};
   const sec=(c,ic,name,sub,arr)=>`<div class="sx ${c}"><div class="sx-h"><b>${ic} ${name}</b>${sub?`<span lang="de">${esc(sub)}</span>`:""}</div>${arr.length?`<div class="sxg">${arr.map(x=>x._h||bMatAct(x)).join("")}</div>`:`<div class="sx-empty">${uz?"Tez orada":"Скоро"}</div>`}</div>`;
-  return `<article class="lek bt" id="${lvl}-L${n}">
+  return `<article class="lek bt${lekIsOpen(lvl,n)?" open":""}" id="${lvl}-L${n}" data-lek="${lvl}|${n}">
     <div class="lek-h"><div class="num"${numRing(lvl,n)}>${n}</div>
-      <div>${String(n)===CURKEY[tab]?`<span class="cur">${t("cur")}</span>`:""}<h3>${esc(title)}</h3><div class="thema">${withLvl?`<b>${TABS[tab].lbl}</b> · `:""}${esc(thema)}</div></div></div>
+      <div class="lek-ht">${String(n)===CURKEY[tab]?`<span class="cur">${t("cur")}</span>`:""}<h3>${esc(title)}</h3><div class="thema">${withLvl?`<b>${TABS[tab].lbl}</b> · `:""}${esc(thema)}</div></div>
+      <span class="lek-pc">${(()=>{ const w=lekAll(lvl,n); return w?Math.round(w.p*100)+"%":""; })()}</span><span class="lek-chev" aria-hidden="true">▾</span></div>
     ${BP.filter(([c])=>(f==="all"||f===c)&&!((c==="l"||c==="a")&&!by[c].length)).map(([c,ic,name])=>sec(c,ic,name.toUpperCase(),subs[c],by[c])).join("")}${by.t.length&&f==="all"?sec("t","✅","TEST","",by.t):""}
     ${lekHw(tab,n)}
   </article>`;
 }
+/* Lektion kartalari yig'ilgan holda — bosilganda ochiladi (2026-10-21, Otabek: «uzun scrolling oldini olish uchun») */
+function lekOpenSet(){ try{ return new Set(JSON.parse(localStorage.getItem("lek:open")||"[]")); }catch(e){ return new Set(); } }
+function lekIsOpen(lvl,n){ return lekOpenSet().has(lvl+"|"+n); }
+document.addEventListener("click",e=>{ const h=e.target.closest(".lek.bt .lek-h"); if(!h||e.target.closest("button,a,[data-lern],[data-open]")) return; const a=h.closest(".lek"); const k=a.dataset.lek; const S=lekOpenSet();
+  if(a.classList.toggle("open")) S.add(k); else S.delete(k); try{ localStorage.setItem("lek:open",JSON.stringify([...S].slice(-40))); }catch(er){} });
 function lekCardOld(L, tab, withLvl){
   const [n,title,thema,kb,g,k,w] = L, lvl = TABS[tab].lvl;
   const mats = visibleMats(tab,n);
@@ -4098,10 +4114,14 @@ function iaPctOf(id){ const D=IADATA[id]; if(!D||!D.items||!D.items.length) retu
 function pctBadge(id){ const p=(byId[id]&&byId[id].ex)?exPct(id):iaPctOf(id); return `<span class="pctb${p==null?" hid":""}${p>=100?" full":""}" data-pct="${id}" style="--p:${p||0}">${p==null?"":p+"%"}</span>`; }
 function lekWords(lvl,n){ const D=lernData(); let best=null; Object.keys(D).forEach(id=>{ if(id.split("-")[0]!==lvl||D[id].kind==="perfekt") return; let tot=0, ok=0, st=null;
     D[id].it.forEach((r,i)=>{ if(+r[0]!==+n||!r[4]||r[6]) return; tot++; if(st==null) st=lrnLoad(id); if(st[i]===2) ok++; }); if(tot){ const p=ok/tot; if(!best||p>best.p) best={p,ok,tot}; } }); return best; }
-function numRing(lvl,n){ const w=lekWords(lvl,n); if(!w) return ""; return ` data-ring="${lvl}|${n}" style="--r:${(w.p*100).toFixed(1)}" title="${w.ok} / ${w.tot}"${w.p>=1?' data-full="1"':""}`; }
+/* Lektion halqasi = butun Lektion (barcha mashqlar + so'zlar) bajarilgani (2026-10-21, Otabek: «butun mashqdan hisoblab, Lektion raqami aylana bilan o'raladi») */
+function lekAll(lvl,n){ const tab=Object.keys(TABS).find(k=>TABS[k].lvl===lvl&&+n>=TABS[k].lo&&+n<=TABS[k].hi); let tot=0, ok=0;
+  if(tab){ MATS.filter(m=>m.tab===tab&&m.key===String(n)&&m.ex&&exData()[m.id]).forEach(m=>{ exData()[m.id].sec.forEach((_,si)=>{ const s=exStat(m.id,si); tot+=s.n; ok+=s.ok; }); }); }
+  const w=lekWords(lvl,n); if(w){ tot+=w.tot; ok+=w.ok; } return tot?{p:ok/tot,ok,tot}:null; }
+function numRing(lvl,n){ const w=lekAll(lvl,n); if(!w) return ""; return ` data-ring="${lvl}|${n}" style="--r:${(w.p*100).toFixed(1)}" title="${w.ok} / ${w.tot}"${w.p>=1?' data-full="1"':""}`; }
 function progMarks(){ document.querySelectorAll(".lek-lrn[data-les]").forEach(b=>{ const tab=(Object.keys(TABS).find(k=>b.dataset.lern.includes("-"+k+"-"))); if(!tab) return; const h=lekLernBtn(tab,+b.dataset.les); if(h){ const w=document.createElement("div"); w.innerHTML=h; b.replaceWith(w.firstElementChild); } });
   document.querySelectorAll("[data-pct]").forEach(e=>{ const p=(byId[e.dataset.pct]&&byId[e.dataset.pct].ex)?exPct(e.dataset.pct):iaPctOf(e.dataset.pct); e.classList.toggle("hid",p==null); e.classList.toggle("full",p>=100); e.style.setProperty("--p",p||0); e.textContent=p==null?"":p+"%"; });
-  document.querySelectorAll("[data-ring]").forEach(e=>{ const [lvl,n]=e.dataset.ring.split("|"), w=lekWords(lvl,n); if(!w) return; e.style.setProperty("--r",(w.p*100).toFixed(1)); e.title=`${w.ok} / ${w.tot}`; if(w.p>=1) e.dataset.full="1"; else delete e.dataset.full; }); }
+  document.querySelectorAll("[data-ring]").forEach(e=>{ const [lvl,n]=e.dataset.ring.split("|"), w=lekAll(lvl,n); const pc=e.closest(".lek")&&e.closest(".lek").querySelector(".lek-pc"); if(pc&&w) pc.textContent=Math.round(w.p*100)+"%"; if(!w) return; e.style.setProperty("--r",(w.p*100).toFixed(1)); e.title=`${w.ok} / ${w.tot}`; if(w.p>=1) e.dataset.full="1"; else delete e.dataset.full; }); }
 function iaItems(){ return (IADATA[IA.id]||{}).items||[]; }
 function iaState(i){
   const it=iaItems()[i];
