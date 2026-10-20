@@ -699,3 +699,10 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 ## 🚀 Beta hammaga ochiq — 2026-10-21
 - Yangi o‘quvchi paneli (interaktiv mashqlar) hamma uchun ochiq; kod kerak emas. Ustoz panelida eski ko‘rinishni yoqib ko‘rish mumkin.
 - Ro‘yxat majburiy emas: mehmon avval aylanib ko‘radi. Tepada «👤 Kirish» tugmasi. Har bo‘lim/mashg‘ulot oxirida «💾 Natijangizni saqlab qo‘ying» kartasi; 3-tugatishda bir marta (3 kunda ko‘pi bilan bir) ro‘yxat oynasi, ✕ bilan yopiladi. Mehmon natijalari birinchi ro‘yxatda akkauntga ko‘chadi.
+
+## 📱 2026-10-21 (kech) — telefon va yangi o‘quvchi
+- Regel jadvallari telefonda sig‘adi: uzun «a · b · c» ro‘yxatlar katakda alohida qatorlarga bo‘linadi; faqat qisqa birinchi katak bir qatorda.
+- Bosh sahifa: sarlavha — logo + «by Otabek Komilov» (Patrick Hand); «Deutsch A1·A2·B1» yozuvi yo‘q. Telefonda tepadagi qotgan qism ixcham: pastga aylantirilganda qidiruv yashirinadi, filtrlar bir qatorda suriladi.
+- Ro‘yxatdan o‘tgan o‘quvchidan bir marta «Qaysi darajadasiz?» so‘raladi — tanlangan daraja ochiladi.
+- Ikki javobli yozuvlar («Worauf? – darauf», «der Lehrer / die Lehrerin») so‘z yozishda va Live testda so‘ralmaydi (faqat juftlash/tanlashda qoladi).
+- Har bir rejim (juftlash, tanlash, yozish, kartochka, mashq, muloqot) birinchi marta ochilganda sariq qisqa tushuntirish chiqadi; «Tushunarli» bosilgach boshqa chiqmaydi.

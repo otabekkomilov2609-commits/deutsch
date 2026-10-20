@@ -1180,7 +1180,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .snd .btn.primary{padding:11px;font-size:15px;cursor:pointer}
 .snd-img{width:100%;max-height:46vh;object-fit:contain;border-radius:12px;background:var(--bg);-webkit-touch-callout:default;user-select:auto}
 .snd-send{width:100%;padding:12px;font-size:16px;cursor:pointer}.snd-send[hidden]{display:none}.snd-st{font-size:14px;text-align:center}.snd-st:empty{display:none}.snd-st.ok{color:var(--green);font-weight:700}.snd-st.err{color:#C62828}
-.snd-btns{display:flex;gap:8px}.snd-btns .btn{flex:1;min-width:0;white-space:normal;padding:11px 6px;font-size:15px;cursor:pointer}.snd-btns .btn[hidden]{display:none}
+.snd-btns{display:flex;gap:8px}.lvl-g{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:6px 0 10px}.lvl-b{display:flex;flex-direction:column;align-items:center;gap:2px;border:2px solid var(--blue-soft);background:var(--surface);color:var(--blue);border-radius:14px;padding:12px 8px;font:inherit;cursor:pointer}.lvl-b b{font-size:22px;font-weight:900}.lvl-b small{font-size:12px;color:var(--muted);font-weight:600}.lvl-b:hover,.lvl-b:focus-visible{border-color:var(--blue);background:var(--blue-soft)}.snd-btns .btn{flex:1;min-width:0;white-space:normal;padding:11px 6px;font-size:15px;cursor:pointer}.snd-btns .btn[hidden]{display:none}
 .snd-box{max-height:calc(100vh - 32px);overflow:auto}
 .snd-ok{text-align:center;padding:6px 0 2px}.snd-ok div{font-size:46px}.snd-ok p{margin:6px 0 0;font-size:16px;font-weight:700}
 .ia-act.tg{font-family:inherit;background:var(--green);border-color:var(--green);color:var(--surface);text-decoration:none}.ia-act.tg small{color:var(--surface);opacity:.95;white-space:normal;overflow:visible;text-overflow:clip;-webkit-hyphens:manual;hyphens:manual;text-align:center;line-height:1.1;font-weight:700}.ia-act.tg{padding:5px 2px}.ia-act[hidden]{display:none}
@@ -1483,7 +1483,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .hl-in.ok{color:var(--green);border-color:var(--green)}.hl-in.bad{color:#C62828;border-color:#C62828;text-decoration:line-through}.hl-fix{color:var(--green);font-weight:800;margin-left:6px}
 .hl-nav{position:sticky;bottom:0;background:var(--bg,var(--surface-2));padding:10px 0 4px;margin-top:12px}
 
-.reg-cta{border:2px solid var(--green);background:var(--green-soft)}.reg-save p{margin:4px 0 8px;line-height:1.45}.reg-cta .reg-h{font-size:18px;font-weight:800;color:var(--green)}.reg-cta ul{margin:6px 0;padding-left:4px;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14.5px}.reg-cta .reg-free{font-weight:800;color:var(--orange);font-size:16px}.reg-cta .reg-go{align-self:stretch;font-size:17px;padding:12px}
+.reg-cta{border:2px solid var(--green);background:var(--green-soft)}.reg-save p{margin:4px 0 8px;line-height:1.45}.coach{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;background:#FFF4D1;color:#3D2E00;border:2px solid #F2C94C;border-radius:14px;padding:10px 12px;margin:0 0 12px;font-size:15px;line-height:1.45;box-shadow:0 3px 10px rgba(122,86,0,.12);animation:appIn .35s ease-out;transition:opacity .2s,transform .2s}.coach.bye{opacity:0;transform:translateY(-6px)}.coach-t{flex:1 1 220px}.coach-t b{color:#7A4F00}.coach-ok{flex:none;margin-left:auto;border:0;border-radius:999px;background:#7A5600;color:#fff;font:inherit;font-size:14px;font-weight:800;padding:7px 14px;cursor:pointer}.reg-cta .reg-h{font-size:18px;font-weight:800;color:var(--green)}.reg-cta ul{margin:6px 0;padding-left:4px;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14.5px}.reg-cta .reg-free{font-weight:800;color:var(--orange);font-size:16px}.reg-cta .reg-go{align-self:stretch;font-size:17px;padding:12px}
 /* 👎 feedback + 🛠 admin */
 .fb-btn{position:fixed;left:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:2147483000;width:48px;height:48px;border-radius:50%;border:2px solid #F2B8B8;background:var(--surface);box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}
 .lrn-body,#v-body,main{padding-bottom:max(70px,var(--pb,0px))}
@@ -3812,7 +3812,8 @@ function lrnNewRound(){
   LR.round=[...half.slice(0,6),...fresh].slice(0,12); if(LR.round.length<12) LR.round=[...LR.round,...half.slice(6)].slice(0,12); /* raund = 12 so'z (2026-10-19, Otabek) */
   lrnShuffle(LR.round); LR.rid=(LR.rid||0)+1; LR.qi=0; LR.okN=0; LR.qN=0; lrnAsk();
 }
-function lrnTypable(x){ return x.de.length<=40 && !/[…·]/.test(x.de) && !x.red; }
+const LRN_PAIR=/\s[–—-]\s|\s\/\s/; /* «Worauf? – darauf», «der Lehrer / die Lehrerin» — ikki javobli yozuvlar yozdirilmaydi (2026-10-21, Otabek: «ikkita so'zliklar qolmasin, live testda ham adashtiradi») */
+function lrnTypable(x){ return x.de.length<=40 && !/[…·]/.test(x.de) && !LRN_PAIR.test(x.de) && !x.red; }
 function lrnProgress(){ const tot=LR.pool.length, d=LR.pool.filter(x=>LR.st[x.i]===2).length, h=LR.pool.filter(x=>LR.st[x.i]===1).length;
   /* grammatika mashqlaridagidek: chiziq ustida yuradigan emoji 🤩 → 😍 → 🤓 → 🔥 → 🏆 (2026-10-19, Otabek) */
   const r=tot?(d+h*.5)/tot:0, edge=tot?(d+h)/tot:0, E=r>=1?"🏆":r>=.75?"🔥":r>=.5?"🤓":r>=.25?"😍":"🤩", from=LR.emoL==null?edge:LR.emoL;
@@ -5014,6 +5015,17 @@ function accLern(){
 }
 const ACC_OK=(()=>{ try{ localStorage.setItem("acc:t","1"); localStorage.removeItem("acc:t"); return true; }catch(e){ return false; } })();
 accChip();
+/* 🎚 Daraja: ro'yxatdan o'tgan o'quvchidan bir marta so'raladi — tanlangan daraja ochiladi (2026-10-21, Otabek) */
+function lvlAsk(){ const f=document.getElementById("acc-f"), ru=state.lang==="ru";
+  const L=[["a11","A1.1",ru?"Только начинаю":"Endi boshlayapman"],["a12","A1.2",""],["a21","A2.1",""],["a22","A2.2",""],["b11","B1.1",""],["b12","B1.2",""]];
+  f.innerHTML=`<div class="snd-h"><h2>🎚 ${ru?"Какой у вас уровень?":"Qaysi darajadasiz?"}</h2></div>
+    <p class="acc-lead">${ru?"Выберите уровень, на котором вы сейчас учитесь, — откроем именно его. Позже можно переключить вверху.":"Hozir qaysi darajada o‘qiyotganingizni tanlang — o‘sha daraja ochiladi. Keyin tepada almashtirsa bo‘ladi."}</p>
+    <div class="lvl-g">${L.map(([k,l,d])=>`<button type="button" class="lvl-b" data-lvl="${k}"><b>${l}</b>${d?`<small>${esc(d)}</small>`:""}</button>`).join("")}</div>
+    <button type="button" class="lrn-link" data-lvl="a11">${ru?"Не знаю — начну с A1.1":"Bilmayman — A1.1 dan boshlayman"}</button>`;
+  accEl().hidden=false; document.body.style.overflow="hidden"; }
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-lvl]"); if(!b) return; const k=b.dataset.lvl; if(!TABS[k]) return;
+  store.set("lvl",k); store.set("tab2",k); state.tab=k; state.q=""; try{ document.getElementById("q").value=""; }catch(er){} accEl().hidden=true; document.body.style.overflow=""; try{ render(); }catch(er){} try{ actEv("lvl",k); }catch(er){} });
+if(ACC.cur && !tchOk() && !store.get("lvl") && !IN_ARTIFACT) setTimeout(()=>{ if(accEl().hidden) lvlAsk(); },700);
 if(!ACC.cur && ACC_OK && !new URLSearchParams(location.search).get("ch") && !new URLSearchParams(location.search).get("lt") && !new URLSearchParams(location.search).get("kg") && !new URLSearchParams(location.search).get("kgd") && !new URLSearchParams(location.search).get("du") && !tchOk() && false) accLogin(); /* 2026-10-21: majburiy ro'yxat o'chirildi — mehmon avval aylanadi, keyin yumshoq taklif (regSoft) */
 /* ===== ⚡ Challenge (Kahoot challenge'ga o'xshash) — 2026-10-17 =====
    Havola ?ch=<kod>: ro'yxat + Lektionlar + seed. Hamma bir xil savollarni oladi.
@@ -5285,7 +5297,7 @@ function mqMulti(onConn, onMsg, optsFor){
 function ltFmt(ms){ ms=Math.max(0,ms|0); const s=Math.round(ms/1000); return Math.floor(s/60)+":"+String(s%60).padStart(2,"0"); }
 function ltListId(h){ return Object.keys(lernData()).find(k=>chHash(k)===h); }
 function ltPool(c){ const id=ltListId(c.l), D=id&&lernData()[id]; if(!D) return [];
-  const seen=new Set(); return D.it.map((r,i)=>({i,l:r[0],de:r[3],q:r[4],red:r[6]})).filter(x=>{ if(!x.q||x.red||!c.s.includes(x.l)||x.de.length>40||/[…·]/.test(x.de)||seen.has(x.de)) return false; seen.add(x.de); return true; }); }
+  const seen=new Set(); return D.it.map((r,i)=>({i,l:r[0],de:r[3],q:r[4],red:r[6]})).filter(x=>{ if(!x.q||x.red||!c.s.includes(x.l)||x.de.length>40||/[…·]/.test(x.de)||LRN_PAIR.test(x.de)||seen.has(x.de)) return false; seen.add(x.de); return true; }); }
 function ltQs(c){ return chShuf(ltPool(c),chRng(c.r)).slice(0,c.n); }
 function ltTitle(c){ const id=ltListId(c.l), m=byId[id], D=lernData()[id]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:"")+" · "+c.s.map(lab).join(", "); }
 function ltLink(code){ return (/github\.io$/.test(location.hostname)||!/claude/.test(location.hostname)&&location.protocol!=="file:" ? location.origin+location.pathname : CH_SITE)+"?lt="+code; }
@@ -5439,6 +5451,22 @@ function regCta(){ if(typeof ACC!=="undefined"&&ACC.cur||IN_ARTIFACT) return "";
     <ul>${L.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
     <div class="reg-free">🎁 ${ru?"Сейчас всё бесплатно":"Hozircha hammasi bepul"}</div>
     <button type="button" class="btn primary reg-go" data-reg="go">${ru?"Зарегистрироваться →":"Ro‘yxatdan o‘tish →"}</button></div>`; }
+/* 🧭 Birinchi marta — bir martalik qisqa tushuntirish (2026-10-21, Otabek: «birinchi marta mashqni yoki yangi narsani qilayotganda muhim narsalarni bir marta tushuntir») */
+const COACH={
+  mt:{uz:"👀 <b>Sariq bilan belgilangan so‘zlarga</b> e’tibor bering — shularni o‘rganasiz. Gapning ikki qismini juftlang. Keyingi bosqichda bu so‘zlarni <b>o‘zingiz yozasiz</b>.",ru:"👀 Обратите внимание на <b>слова, выделенные жёлтым</b>, — их вы учите. Соедините две части предложения. На следующем этапе эти слова вы <b>напишете сами</b>."},
+  mc:{uz:"👆 To‘g‘ri tarjimani tanlang. Topgan so‘zingiz keyinroq yana chiqadi — u safar uni <b>yozasiz</b>.",ru:"👆 Выберите правильный перевод. Это слово потом появится снова — тогда вы его <b>напишете</b>."},
+  wr:{uz:"✍️ So‘zni <b>nemischa yozing</b>. Otlarda <b>artiklni ham</b> yozing (der / die / das). Xato harf qizil bo‘lib ko‘rinadi — tuzatib, yana urinib ko‘ring. To‘g‘ri bo‘lsa, tugma yashil bo‘ladi.",ru:"✍️ Напишите слово <b>по-немецки</b>. У существительных пишите и <b>артикль</b> (der / die / das). Ошибочная буква станет красной — исправьте и попробуйте ещё раз. Если верно — кнопка станет зелёной."},
+  fc:{uz:"🃏 Tarjimani o‘qing va nemischasini eslang. Kartani bosing — orqasida javob. Keyin halol belgilang: <b>«Weiß ich»</b> yoki <b>«Keine Ahnung»</b>.",ru:"🃏 Прочитайте перевод и вспомните немецкое слово. Нажмите на карточку — на обороте ответ. Затем честно отметьте: <b>«Weiß ich»</b> или <b>«Keine Ahnung»</b>."},
+  ex:{uz:"🔒 Javob to‘g‘ri bo‘lmaguncha <b>Weiter</b> qulflangan. Xato qilsangiz <b>«?»</b> ni bosing — sababini tushuntiradi. Tepada: 💡 — maslahat, <b>i</b> — qoida.",ru:"🔒 Пока ответ неверный, <b>Weiter</b> заблокирована. Ошиблись — нажмите <b>«?»</b>, там объяснение. Вверху: 💡 — подсказка, <b>i</b> — правило."},
+  mu:{uz:"💬 Bu yerda <b>muloqot iboralari</b>ni mashq qilasiz: vaziyatga mos iborani tanlang yoki to‘ldiring. Aynan shu iboralar gapirishda kerak bo‘ladi.",ru:"💬 Здесь вы тренируете <b>фразы для общения</b>: выберите или дополните подходящую фразу. Именно они нужны, чтобы говорить."}};
+function coachKey(root){ if(root.id==="ex"){ const g=root.querySelector("#ex-go"); return root.querySelector(".ex-card")&&g&&g.classList.contains("lkb")?"ex":null; }
+  if(root.querySelector("[data-mu]")) return "mu"; if(root.querySelector(".lrn-mts")) return "mt"; if(root.querySelector("#lrn-wr")) return "wr"; if(root.querySelector(".lrn-opts")) return "mc"; if(root.querySelector(".lrn-flash")) return "fc"; return null; }
+function coachShow(root){ try{ if(root.hidden||root.querySelector(".coach")) return; const k=coachKey(root); if(!k) return; try{ if(localStorage.getItem("coach:"+k)) return; }catch(e){ return; }
+  const body=root.querySelector(".lrn-body"); if(!body) return; const ru=state.lang==="ru";
+  body.insertAdjacentHTML("afterbegin",`<div class="coach" data-coach="${k}"><div class="coach-t">${COACH[k][ru?"ru":"uz"]}</div><button type="button" class="coach-ok" data-coachok="${k}">${ru?"Понятно":"Tushunarli"} ✓</button></div>`); }catch(e){} }
+["ex","lrn"].forEach(id=>{ const el=document.getElementById(id); if(el) new MutationObserver(()=>coachShow(el)).observe(el,{childList:true}); });
+document.addEventListener("pointerdown",e=>{ if(e.target.closest&&e.target.closest("[data-coachok]")) e.preventDefault(); },true);
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-coachok]"); if(!b) return; try{ localStorage.setItem("coach:"+b.dataset.coachok,"1"); }catch(er){} const c=b.closest(".coach"); if(c){ c.classList.add("bye"); setTimeout(()=>c.remove(),220); } });
 function regSave(){ if(typeof ACC!=="undefined"&&ACC.cur||IN_ARTIFACT||tchOk()) return ""; const ru=state.lang==="ru";
   return `<div class="lrn-card reg-cta reg-save"><div class="reg-h">💾 ${ru?"Сохраните свой результат!":"Natijangizni saqlab qo‘ying!"}</div>
     <p>${ru?"Без регистрации прогресс хранится только в этом браузере. Зарегистрируйтесь — результаты сохранятся навсегда, на любом телефоне, и вы попадёте в рейтинг.":"Ro‘yxatdan o‘tmasangiz, natijalar faqat shu brauzerda qoladi. Ro‘yxatdan o‘ting — natijalar har qanday telefonda saqlanadi va reytingga kirasiz."}</p>
