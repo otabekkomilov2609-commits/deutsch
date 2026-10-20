@@ -2884,7 +2884,10 @@ function lrnSay(text){
   }catch(e){} }
   ttsSay(t);
 }
-function ttsSay(t){ try{
+/* Ovoz: telefon ovozi o'rniga Azure neural ovozi (de-DE Seraphina) — 2026-10-20, Otabek: «audioni har doim Azure'dan ishlat, oddiy narsa ishlatma».
+   Azure ishlamasa (internet/kalit) — zaxira sifatida telefon ovozi. */
+function ttsSay(t){ try{ if(!AZ.dead&&AZ_URL&&!IN_ARTIFACT){ azSpeak(t).catch(()=>ttsLocal(t)); return; } }catch(e){} ttsLocal(t); }
+function ttsLocal(t){ try{
   const ss=window.speechSynthesis; if(!ss) return;
   const busy=ss.speaking||ss.pending; if(busy) ss.cancel();
   clearTimeout(lrnSayT);
@@ -2985,7 +2988,16 @@ const AZ={tok:null,reg:null,t:0,sdk:null,ok:false};
 /* token xizmati ishlayotganini bir marta tekshiramiz — ishlamasa tugma ko'rinmaydi */
 setTimeout(()=>{ if(!AZ_URL||IN_ARTIFACT) return; azToken().then(()=>{ AZ.ok=true; document.querySelectorAll(".ex-az-b").forEach(b=>b.hidden=false); }).catch(()=>{}); },2500);
 function azSdk(){ if(AZ.sdk) return AZ.sdk; AZ.sdk=new Promise((ok,bad)=>{ if(window.SpeechSDK) return ok(window.SpeechSDK); const sc=document.createElement("script"); sc.src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@1.40.0/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle-min.js"; sc.onload=()=>window.SpeechSDK?ok(window.SpeechSDK):bad(new Error("sdk")); sc.onerror=()=>{ AZ.sdk=null; bad(new Error("sdk")); }; document.head.appendChild(sc); }); return AZ.sdk; }
-async function azToken(){ if(AZ.tok&&Date.now()-AZ.t<8*60e3) return AZ; const r=await fetch(AZ_URL,{cache:"no-store"}); if(!r.ok) throw new Error("token"); const j=await r.json(); AZ.tok=j.token; AZ.reg=j.region; AZ.t=Date.now(); return AZ; }
+async function azToken(){ if(AZ.tok&&Date.now()-AZ.t<8*60e3) return AZ; let r; try{ r=await fetch(AZ_URL,{cache:"no-store"}); }catch(e){ AZ.dead=true; throw e; } if(!r.ok){ AZ.dead=true; throw new Error("token"); } const j=await r.json(); AZ.tok=j.token; AZ.reg=j.region; AZ.t=Date.now(); return AZ; }
+const AZTTS={};
+function azXml(t){ return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+async function azSpeak(t){ let url=AZTTS[t];
+  if(!url){ const [SDK,T]=await Promise.all([azSdk(),azToken()]); const cfg=SDK.SpeechConfig.fromAuthorizationToken(T.tok,T.reg);
+    cfg.speechSynthesisOutputFormat=SDK.SpeechSynthesisOutputFormat.Audio24Khz48KBitRateMonoMp3; const syn=new SDK.SpeechSynthesizer(cfg,null);
+    const ssml=`<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="de-DE"><voice name="de-DE-SeraphinaMultilingualNeural"><prosody rate="-6%">${azXml(t)}</prosody></voice></speak>`;
+    const res=await new Promise((ok,bad)=>syn.speakSsmlAsync(ssml,ok,bad)); try{ syn.close(); }catch(e){}
+    if(!res||!res.audioData||!res.audioData.byteLength) throw new Error("tts"); url=AZTTS[t]=URL.createObjectURL(new Blob([res.audioData],{type:"audio/mpeg"})); }
+  try{ if(lrnAud&&lrnAud.pause) lrnAud.pause(); wkStop(); }catch(e){} const a=new Audio(url); lrnAud=a; await a.play(); }
 function azCol(v){ return v>=80?"ok":v>=60?"mid":"bad"; }
 async function azRec(it,btn){ const R=exEl(), box=R.querySelector("#ex-az"), uz=state.lang!=="ru"; if(!box) return; EX.st.sp="rec"; EX.st.tok=(EX.st.tok||0)+1; const bar=R.querySelector("#ex-sp-i"); if(bar){ bar.style.transition="none"; bar.style.width="0%"; }
   const ref=String(it.a).replace(/\s*\([^)]*\)\s*/g," ").trim(); box.hidden=false; btn.disabled=true; box.innerHTML=`<div class="ex-az-st">⏳ ${uz?"Tayyorlanmoqda…":"Подготовка…"}</div>`;
@@ -5725,7 +5737,7 @@ function kgSnd(type,board){ if(!kgSndOn(board)) return; try{ kgUnlock(); const C
 const KG_AUD=[[/^Neuer Spitzenreiter/,"kg-lead"],[/^Platz drei/,"kg-p3"],[/^Platz zwei/,"kg-p2"],[/^Und Platz eins/,"kg-p1"]];
 let KG_AU=null;
 function kgSay(txt){ if(!kgSndOn(true)) return; const m=KG_AUD.find(([r])=>r.test(txt)); if(m){ try{ if(KG_AU) KG_AU.pause(); KG_AU=new Audio(AUD_BASE+m[1]+".mp3?v=3"); KG_AU.play().catch(()=>{}); return; }catch(e){} } kgSayTTS(txt); }
-function kgSayTTS(txt){ if(!window.speechSynthesis) return; try{ const u=new SpeechSynthesisUtterance(txt); u.lang="de-DE"; const v=speechSynthesis.getVoices().find(x=>/^de/i.test(x.lang)); if(v) u.voice=v; speechSynthesis.speak(u); }catch(e){} }
+function kgSayTTS(txt){ try{ if(!AZ.dead&&AZ_URL&&!IN_ARTIFACT){ ttsSay(txt); return; } }catch(e){} if(!window.speechSynthesis) return; try{ const u=new SpeechSynthesisUtterance(txt); u.lang="de-DE"; const v=speechSynthesis.getVoices().find(x=>/^de/i.test(x.lang)); if(v) u.voice=v; speechSynthesis.speak(u); }catch(e){} }
 function kgToast(html,cls){ const t=document.getElementById("kg-toast"); if(!t) return; t.className="kg-toast "+(cls||""); t.innerHTML=html; void t.offsetWidth; t.classList.add("show"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),3400); }
 /* i-savolgacha ketma-ket to'g'ri javoblar (savolma-savol) */
 function kgStreak(K,id,i){ let s=0; for(let j=i;j>=0;j--){ const f=K.fz[j]; if(!f) break; const a=f[id]; if(a&&kgJudge(K.qs[j],a[0])) s++; else break; } return s; }
