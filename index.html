@@ -3217,7 +3217,11 @@ document.addEventListener("click",e=>{ const root=exEl(); if(!root||root.hidden|
 /* bo'sh joy uchun tanlov tugmalari: topshiriqda *variantlar* sanalgan bo'lsa (2026-10-20, Otabek: «tanlash imkoniyati bo'lsin») */
 function exGapChoices(it){ const o=[...new Set(((it.h||"").match(/\*([^*]+)\*/g)||[]).map(x=>x.slice(1,-1).trim()).filter(Boolean))];
   if(o.length<2||o.length>6) return null; const low=o.map(x=>x.toLowerCase());
-  if(!it.a.every(al=>al.some(v=>low.includes(String(v).toLowerCase())))) return null; return o; }
+  const fits=x=>(x.a||[]).every(al=>al.some(v=>low.includes(String(v).toLowerCase())));
+  if(!fits(it)) return null;
+  /* guruhda bir xil: biror item javobi tugmalarda bo'lmasa — butun guruh yoziladi (tugma bor/yo'qligi javobni oshkor qilmasin) 2026-10-20 */
+  try{ const sec=exData()[EX.id].sec[EX.si]; if(sec&&sec.items.some(x=>x!==it&&x.t==="gap"&&x.h===it.h&&!fits(x))) return null; }catch(e){}
+  return o; }
 function exGapCap(i){ const q=i.closest(".ex-gs"); if(!q) return false; let t=""; for(const n of q.childNodes){ if(n.contains&&n.contains(i)) break; t+=n.textContent||""; } t=t.replace(/[\s"„“»«]+$/,""); return !t||/[.!?:–—]$/.test(t)||/^[■●▪•]$/.test(t.slice(-1)); }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-exc]"); if(!b) return; const R=exEl(); if(!R||R.hidden||EX.done) return;
   const ins=[...R.querySelectorAll(".ex-gap:not(.lk)")]; if(!ins.length) return; let i=EX_LASTGAP&&ins.includes(EX_LASTGAP)&&(!EX_LASTGAP.value.trim()||ins.length===1)?EX_LASTGAP:(ins.find(x=>!x.value.trim())||ins[0]);
