@@ -3161,7 +3161,9 @@ function exMenu(){ EX.si=-1; EX.hl=null; exAudStop(); const D=exData()[EX.id];
 /* Aufgabe sarlavhasi animatsiyasi: ekran o'rtasida katta + silkinish → joyiga kichrayib uchadi (2026-10-20, Otabek: «diqqatni jalb qilsin, o'rtada turib kattalashib silkinsin») */
 /* imlo xatosida kursor xato harfdan keyin (yoki tushib qolgan harf joyida) turadi — bitta Backspace yetarli (2026-10-20, Otabek: butun saytda) */
 function errCaret(inp,h){ try{ if(!inp||!h) return false; let pos=-1,n=0; const re=/<b class="(dx|dm)">([^<]*)<\/b>|<[^>]+>|&[a-z#0-9]+;|[\s\S]/g; let m;
-  while((m=re.exec(h))){ if(m[1]==="dx"){ n+=[...m[2]].length; pos=n; /* ketma-ket xato harflar bitta blok: kursor oxirgisidan keyin */ while((m=re.exec(h))){ if(m[1]==="dx"){ n+=[...m[2]].length; pos=n; continue; } if(m[0][0]==="<"&&!m[1]) continue; break; } break; } if(m[1]==="dm"){ pos=n; break; } if(m[0][0]==="<") continue; n++; }
+  while((m=re.exec(h))){ if(m[1]==="dx"||m[1]==="dm"){ /* birinchi xato bloki (tushib qolgan «_» + xato harflar birga): kursor blokdagi oxirgi xato harfdan keyin; faqat «_» bo'lsa — o'sha joyda (2026-10-21, Otabek: «kursor yana e dan keyin turibdi») */
+      let anyDx=false; pos=n; do{ if(m[1]==="dx"){ n+=[...m[2]].length; pos=n; anyDx=true; continue; } if(m[1]==="dm"){ if(!anyDx) pos=n; continue; } if(m[0][0]==="<") continue; break; } while((m=re.exec(h))); break; }
+    if(m[0][0]==="<") continue; n++; }
   if(pos<0) return false; pos=Math.min(pos,inp.value.length); if(document.activeElement!==inp) inp.focus({preventScroll:true}); inp.setSelectionRange(pos,pos); return {pos}; }catch(e){ return false; } }
 /* ko'rinadigan (soxta) kursor — diff HTML ichida real kursor joyiga qo'yiladi (IAS inline, 2026-10-20, Otabek) */
 function crtInsert(h,pos){ const re=/<b class="(dx|dm)">([^<]*)<\/b>|<[^>]+>|&[a-z#0-9]+;|[\s\S]/g; let m,n=0,out="",done=false; const C='<i class="ias-crt"></i>';
