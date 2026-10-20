@@ -1440,6 +1440,14 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
+/* bo'laklardan so'z: qatordagi bo'laklar bir-biriga yopishadi — bitta so'z bo'lib ko'rinadi; to'g'ri bo'lsa — yaxlit so'z (2026-10-21) */
+.ex-line.join{gap:0}
+.ex-line.join .ex-tile{margin:0;border-radius:0;border-left-width:0;padding-left:3px;padding-right:3px}
+.ex-line.join .ex-tile:first-of-type{border-left-width:2px;border-radius:12px 0 0 12px;padding-left:12px}
+.ex-line.join .ex-tile:last-of-type{border-radius:0 12px 12px 0;padding-right:12px}
+.ex-line.join .ex-tile:only-of-type{border-radius:12px}
+.ex-word{font-size:24px;font-weight:800;color:var(--green);padding:4px 10px;letter-spacing:.01em}
+
 /* 📊 Tahlil (ustoz paneli) */
 .an h4{margin:0 0 8px;font-size:15px}.an h4 small,.an h5 small{font-weight:600;color:var(--muted);font-size:12px;margin-left:6px}
 .an-kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:10px 0 14px}
@@ -3143,7 +3151,7 @@ const EXR={
     ans:it=>{ let k=0; return exQ(it.s).replace(/___/g,()=>`<b class="ex-hl">${esc(it.a[k++][0])}</b>`); }},
   order:{r:it=>{ let w=it.w.map((x,i)=>i); const j=it.j??" ", tgt=it.a.replace(/[.?!]$/,""); for(let t=0;t<20;t++){ exShuffle(w); if(w.map(i=>it.w[i]).join(j)!==tgt) break; } EX.st.ord=[]; EX.st.pool=w;
       return `<div class="ex-line${j===""?" join":""}${it.dlg?" dlg":""}" id="ex-line"><span class="ex-ph">…</span></div><div class="ex-pool${it.dlg?" dlg":""}" id="ex-pool">${w.map(i=>`<button type="button" class="ex-tile" data-x="tile" data-i="${i}">${esc(it.w[i])}</button>`).join("")}</div>`; },
-    c:it=>{ const j=it.j??" ", v=EX.st.ord.map(i=>it.w[i]).join(j), tgt=it.a.replace(/[.?!]$/,""); const ok=exNorm(v)===exNorm(tgt)||exNorm(v)===exNorm(it.a); exEl().querySelector("#ex-line").classList.add(ok?"ok":"bad"); if(ok) exEl().querySelectorAll(".ex-tile").forEach(b=>b.disabled=true); return ok; },
+    c:it=>{ const j=it.j??" ", v=EX.st.ord.map(i=>it.w[i]).join(j), tgt=it.a.replace(/[.?!]$/,""); const ok=exNorm(v)===exNorm(tgt)||exNorm(v)===exNorm(it.a); const ln=exEl().querySelector("#ex-line"); ln.classList.add(ok?"ok":"bad"); if(ok){ exEl().querySelectorAll(".ex-tile").forEach(b=>b.disabled=true); if(j==="") ln.innerHTML=`<span class="ex-word">${esc(v)}</span>`; } return ok; }, /* so'z yasash: to'g'ri bo'lsa bo'laklar bitta so'zga aylanadi (2026-10-21, Otabek) */
     ans:it=>esc(it.a)},
   match:{auto:1, r:it=>{ const n=it.p.length, L=exShuffle([...Array(n).keys()]); let R; for(let t=0;t<50;t++){ R=exShuffle([...Array(n).keys()]); if(R.every((k,i)=>k!==L[i])) break; } EX.st.m={L,R,done:new Set(),bad:0,sel:null};
       return `<div class="lrn-mts ex-mts">${L.map((k,i)=>`<button type="button" class="lrn-mt" data-x="mt" data-s="L" data-k="${k}">${esc(it.p[k][0])}</button><button type="button" class="lrn-mt" data-x="mt" data-s="R" data-k="${R[i]}">${esc(it.p[R[i]][1])}</button>`).join("")}</div>`; },
