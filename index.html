@@ -1435,7 +1435,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-qb.in{position:absolute;right:3px;top:50%;transform:translateY(-50%);width:28px;height:28px;font-size:16px;z-index:2}
 .ex-qb:not(.in){position:absolute;right:-8px;bottom:-10px;z-index:2}
 .ex-nav{margin-top:2px}.ex-nav.scr button[data-x="skip"]{visibility:hidden}.ex-nav .ias-go.vst{background:var(--green);color:#fff}
-#ex .lrn-fb{position:static;max-width:none;max-height:none;margin:0;padding:0;background:none;box-shadow:none}#ex .lrn-fb.sol{background:#FFF4D1;color:#5A4300;padding:12px 14px;border-radius:14px;font-weight:700;font-size:17px}#ex .lrn-fb.sol .ias-ans{display:block;margin-top:4px;font-size:20px;color:var(--ink)}
+#ex .lrn-fb{position:static;max-width:none;max-height:none;margin:0;padding:0;background:none;box-shadow:none}#ex .lrn-fb.sol{background:#FFF4D1;color:#5A4300;padding:12px 14px;border-radius:14px;font-weight:700;font-size:17px}#ex .lrn-fb.sol .ias-ans{display:block;margin-top:4px;font-size:20px;color:var(--ink)}#ex .lrn-fb.sol{display:block;white-space:normal;overflow:visible}#ex .lrn-fb.sol .ias-ans{white-space:normal;overflow-wrap:anywhere}
 #ex .lrn-fb.ias-fbw{position:relative;background:#FDECEC;color:#C62828;padding:12px 46px 12px 14px;border-radius:14px}
 .ex-sol{align-self:flex-end;font-weight:800;color:#7A5600;background:#FFF4D1;border-radius:999px;padding:8px 16px}
 .ex-a.ex-solved{font-size:20px;color:var(--green);font-weight:700;line-height:1.5}
@@ -1603,7 +1603,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-x .ex-note{margin:8px 0 0;padding:9px 12px 9px 38px;border-radius:12px;background:#FFF6DA;border:1.5px solid #F2D27A;color:#5A4300;font-size:15px;line-height:1.5;position:relative}
 .ex-x .ex-note::before{content:"💡";position:absolute;left:11px;top:8px}
 .ex-x .ex-note b{color:var(--orange)}
-.ex-x .ex-sk{margin:6px 0}
+.ex-x .ex-sk{margin:6px 0}.ex-sk{flex-wrap:nowrap;white-space:nowrap;gap:.25em}.ex-sk.sk-w{flex-wrap:wrap}.ex-sk span{padding:.18em .38em;border-radius:.45em;flex:none}@media (max-width:480px){.ex-card.ex-scr{padding-left:10px;padding-right:10px}.ex-sk{gap:.18em}.ex-sk span{padding:.14em .3em}} /* Satzklammer: har gap bitta qatorda — sig'masa shrift kichrayadi (2026-10-21, Otabek) */
 .ex-x .ex-sk span{border:1.5px solid var(--line)}
 .ex-x .ex-sk .v{border-color:var(--blue)}
 .ex-x .ex-sk .e{border-color:var(--orange)}
@@ -3289,6 +3289,13 @@ const EX_LOCK='<svg class="ex-lki" viewBox="0 0 26 30" width="15" height="17" ar
 function lkHTML(ok,pop){ return ok?`Weiter <span class="ex-ar${pop?" pop":""}">→</span>`:`Weiter <span class="ex-lk">${EX_LOCK}</span>`; }
 function lkSet(b,ok,cls){ if(!b) return; cls=cls||"ready"; const was=b.classList.contains("lkb"); b.classList.toggle("lkb",!ok); b.classList.toggle(cls,ok); b.innerHTML=lkHTML(ok,was&&ok); b.setAttribute("aria-label",ok?"Weiter":"Weiter (erst richtig antworten)"); }
 /* «Prüfen» yo'q (2026-10-21, Otabek): tugma doim «Weiter»; javob to'g'ri bo'lmaguncha o'ng tomonda kichik qizil qulf (tugma ko'k), to'g'ri bo'lsa qulf strelkaga aylanadi, tugma yashil. Qulfli tugma bosilsa — xato ko'rsatiladi */
+/* hamma narsa to'g'ri tanlangach — o'zi tekshiradi (gap kabi), 2026-10-21 */
+function skFit(root){ const groups=new Map(); (root||document).querySelectorAll(".ex-sk").forEach(el=>{ if(!el.clientWidth) return; el.classList.remove("sk-w"); el.style.fontSize=""; let fs=parseFloat(getComputedStyle(el).fontSize)||18, n=0; while(el.scrollWidth>el.clientWidth+1&&fs>11&&n++<30){ fs-=0.5; el.style.fontSize=fs+"px"; }
+    if(el.scrollWidth>el.clientWidth+1){ el.style.fontSize=""; el.classList.add("sk-w"); return; } /* juda uzun murakkab gap — ikki qatorga o'tadi */
+    const g=groups.get(el.parentElement)||[]; g.push([el,fs]); groups.set(el.parentElement,g); });
+  groups.forEach(g=>{ const m=Math.min(...g.map(x=>x[1])); g.forEach(([el])=>{ el.style.fontSize=m+"px"; }); }); } /* bitta qoidadagi hamma gaplar bir xil o'lchamda */
+(function(){ let raf=0; const run=()=>{ raf=0; skFit(document); }; const mo=new MutationObserver(()=>{ if(!raf) raf=requestAnimationFrame(run); }); ["ex","v-body"].forEach(id=>{ const el=document.getElementById(id); if(el) mo.observe(el,{childList:true,subtree:true}); }); addEventListener("resize",()=>{ if(!raf) raf=requestAnimationFrame(run); }); })();
+function exAutoGo(){ const g=document.getElementById("ex-go"); if(g&&!g.hidden&&g.dataset.x==="chk"&&!EX.done) setTimeout(()=>{ if(g.isConnected&&g.dataset.x==="chk") g.click(); },180); }
 function exGo(mode,label){ const go=document.getElementById("ex-go"); if(!go) return; const wasLk=go.classList.contains("lkb"); go.classList.toggle("lkb",mode==="chk"); go.classList.remove("ice"); go.hidden=mode==="hide"; go.classList.toggle("next",mode==="next"); go.classList.toggle("vst",mode==="vst"); go.dataset.x=mode==="vst"?"vst":mode==="next"?"next":"chk";
   if(label) go.textContent=label; else if(mode==="vst") go.textContent="Verstanden ✓"; else if(mode==="chk") go.innerHTML=`Weiter <span class="ex-lk">${EX_LOCK}</span>`; else go.innerHTML=`Weiter <span class="ex-ar${wasLk?" pop":""}">→</span>`;
   go.setAttribute("aria-label",mode==="chk"?"Weiter (erst richtig antworten)":mode==="vst"?"Verstanden":"Weiter");
@@ -3336,7 +3343,7 @@ const EXR={
     ans:it=>esc(it.a)},
   mark:{r:it=>{ EX.st.mk=new Set(); return `<div class="ex-mk">${it.s.split(" ").map((w,i)=>`<button type="button" class="ex-mw" data-x="mw" data-i="${i}">${esc(w)}</button>`).join("")}</div>`; },
     c:it=>{ const A=new Set(it.a); let all=A.size===EX.st.mk.size; exEl().querySelectorAll(".ex-mw").forEach(b=>{ const i=+b.dataset.i, on=EX.st.mk.has(i); if(on&&A.has(i)) b.classList.add("ok"); else if(on) { b.classList.add("bad"); all=false; } else if(A.has(i)){ b.classList.add("miss"); all=false; } }); if(all) exEl().querySelectorAll(".ex-mw").forEach(b=>b.disabled=true); return all; },
-    ans:it=>{ const w=it.s.split(" "), A=new Set(it.a); return w.map((x,i)=>A.has(i)?`<b class="ex-hl">${esc(x)}</b>`:esc(x)).join(" "); }}
+    ans:it=>{ const w=it.s.split(" "), A=new Set(it.a); return w.map((x,i)=>A.has(i)?`<b class="ex-hl">${esc(x)}</b>`:esc(x)).join(" ").replace(/ ([.,!?;:])(?=\s|$)/g,"$1"); }}
 };
 /* ⌨️ Android/telefon: mashqlar orasida klaviatura tushib-chiqmasin (2026-10-21, Otabek). Yozish katagi qayta chizilishidan oldin fokus
    ko'rinmas «ushlab turuvchi» katakka o'tadi — klaviatura ochiq qoladi; yangi katak chiqsa fokus unga, chiqmasa (tanlash mashqi) klaviatura yopiladi. */
@@ -3468,9 +3475,13 @@ document.addEventListener("click",e=>{ const root=exEl(); if(!root||root.hidden|
   if(a==="tile"){ const i=+b.dataset.i, line=root.querySelector("#ex-line"), inLine=b.parentElement===line; line.classList.remove("bad");
     if(inLine){ EX.st.ord.splice(EX.st.ord.indexOf(i),1); root.querySelector("#ex-pool").appendChild(b); }
     else { EX.st.ord.push(i); const ph=line.querySelector(".ex-ph"); if(ph) ph.remove(); line.appendChild(b); }
-    if(!EX.st.ord.length&&!line.querySelector(".ex-ph")) line.innerHTML='<span class="ex-ph">…</span>'; return; }
-  if(a==="cat"){ const k=+b.dataset.k, c=+b.dataset.c; EX.st.cat[k]=c; b.parentElement.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false")); const row=b.closest(".ex-cr"); row.classList.remove("need","bad"); row.querySelectorAll("button").forEach(x=>x.disabled=false); return; }
-  if(a==="mw"){ const i=+b.dataset.i; if(EX.st.mk.has(i)) EX.st.mk.delete(i); else EX.st.mk.add(i); b.classList.toggle("on"); b.classList.remove("bad","miss"); return; }
+    if(!EX.st.ord.length&&!line.querySelector(".ex-ph")) line.innerHTML='<span class="ex-ph">…</span>';
+    /* hamma bo'lak qo'yilgach — o'zi tekshiradi: to'g'ri bo'lsa darhol yashil (2026-10-21, Otabek: «wörter ordnen'da o'zi tekshirmayapti») */
+    if(!root.querySelector("#ex-pool .ex-tile")){ const it=exCur(), j=it.j??" ", v=EX.st.ord.map(k=>it.w[k]).join(j), tgt=it.a.replace(/[.?!]$/,"");
+      if(exNorm(v)===exNorm(tgt)||exNorm(v)===exNorm(it.a)) exAutoGo(); }
+    return; }
+  if(a==="cat"){ const k=+b.dataset.k, c=+b.dataset.c; EX.st.cat[k]=c; b.parentElement.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false")); const row=b.closest(".ex-cr"); row.classList.remove("need","bad"); row.querySelectorAll("button").forEach(x=>x.disabled=false); { const it=exCur(); if(it.i.every((x,kk)=>EX.st.cat[kk]===x[1])) exAutoGo(); } return; }
+  if(a==="mw"){ const i=+b.dataset.i; if(EX.st.mk.has(i)) EX.st.mk.delete(i); else EX.st.mk.add(i); b.classList.toggle("on"); b.classList.remove("bad","miss"); { const it=exCur(), A=new Set(it.a); if(A.size===EX.st.mk.size&&[...A].every(k=>EX.st.mk.has(k))) exAutoGo(); } return; }
   if(a==="mt"){ const M=EX.st.m, s=b.dataset.s, k=+b.dataset.k; if(M.done.has(k)) return;
     if(!M.sel||M.sel[0]===s){ root.querySelectorAll(".lrn-mt.sel").forEach(x=>x.classList.remove("sel")); M.sel=[s,k,b]; b.classList.add("sel"); return; }
     const [s0,k0,b0]=M.sel; M.sel=null; b0.classList.remove("sel");
@@ -3491,7 +3502,7 @@ function exGapChoices(it){ const o=[...new Set(((it.h||"").match(/\*([^*]+)\*/g)
 function exGapCap(i){ const q=i.closest(".ex-gs"); if(!q) return false; let t=""; for(const n of q.childNodes){ if(n.contains&&n.contains(i)) break; t+=n.textContent||""; } t=t.replace(/[\s"„“»«]+$/,""); return !t||/[.!?:–—]$/.test(t)||/^[■●▪•]$/.test(t.slice(-1)); }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-exc]"); if(!b) return; const R=exEl(); if(!R||R.hidden||EX.done) return;
   const ins=[...R.querySelectorAll(".ex-gap:not(.lk)")]; if(!ins.length) return; let i=EX_LASTGAP&&ins.includes(EX_LASTGAP)&&(!EX_LASTGAP.value.trim()||ins.length===1)?EX_LASTGAP:(ins.find(x=>!x.value.trim())||ins[0]);
-  let v=b.dataset.exc.replace(/^[-–]\s*(?=\S)/,""); if(exGapCap(i)) v=v.charAt(0).toUpperCase()+v.slice(1); i.value=v; i.classList.remove("bad"); exGapFit(i);
+  let v=b.dataset.exc.replace(/^[-–]\s*(?=\S)/,""); if(exGapCap(i)) v=v.charAt(0).toUpperCase()+v.slice(1); i.value=v; i.classList.remove("bad","shake"); { const w=i.closest(".ex-gw"); if(w){ w.classList.remove("dv"); const d=w.querySelector(".ex-dv"); if(d){ d.hidden=true; d.innerHTML=""; delete d.dataset.h; } } } R.querySelectorAll(".ex-qb").forEach(z=>z.remove()); exGapFit(i); /* eski xato belgilari (qizil harf, «_») tozalanadi — ustma-ust tushmasin (2026-10-21) */
   R.querySelectorAll(".ex-ch.sel").forEach(z=>z.classList.remove("sel")); b.classList.add("sel");
   if(ins.every(x=>x.value.trim())){ const go=document.getElementById("ex-go"); if(go&&!go.hidden) setTimeout(()=>go.click(),120); } else { const nx=ins.find(x=>!x.value.trim()); if(nx){ EX_LASTGAP=nx; nx.focus({preventScroll:true}); } } });
 function exGapLock(i,on){
