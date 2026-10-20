@@ -1447,7 +1447,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gw{position:relative;display:inline-block;vertical-align:baseline;margin:0 3px}
 .ex-gap{display:inline-block;min-width:60px;text-align:center;padding:0 8px;margin:0;border:0!important;border-bottom:3px solid var(--blue)!important;border-radius:8px 8px 0 0;background:var(--blue-soft);color:var(--blue);font:inherit;line-height:1.4;height:auto;outline:none;box-shadow:none}
 .ex-gap:focus{box-shadow:0 0 0 3px rgba(31,79,160,.25)}
-.ex-gap.ok{border-bottom-color:var(--green)!important;background:var(--green-soft);color:var(--green)}.ex-gap.lk{pointer-events:none;-webkit-text-fill-color:var(--green);opacity:1}
+.ex-gap.ok{border-bottom-color:var(--green)!important;background:var(--green-soft);color:var(--green)}.ex-gap.kbk{caret-color:transparent}.ex-gap.lk{pointer-events:none;-webkit-text-fill-color:var(--green);opacity:1}
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
@@ -3405,7 +3405,7 @@ function exWhyBtn(it){ exEl().querySelectorAll(".ex-qb").forEach(b=>b.remove());
 function exAfter(ok){ const it=exCur(), R=exEl(), i=EX.q[EX.qi], r=exRes(); try{ if(ok){ if(r[i]!==1) actEv("ok",EX.id,{first:!EX.tried[i]&&r[i]!==0}); } else actEv("wrong",EX.id,{i:EX.si+"."+i}); }catch(e){} EX.tried[i]=true;
   if(ok){ EX.done=true; if(r[i]!==1){ if(!EX.fails[i]) EX.ok++; EX.n++; } r[i]=1; exSave(); R.querySelectorAll(".ex-qb").forEach(b=>b.remove());
     const fb=document.getElementById("ex-fb"); fb.className="lrn-fb"; fb.innerHTML="";
-    exProgDraw(true); exSecDone(); exGo("next"); { const okb=document.getElementById("ex-pb"); } if(kbCoarse()) kbHold(); else setTimeout(()=>{ const g=document.getElementById("ex-go"); if(g) g.focus({preventScroll:true}); },30); return; }
+    exProgDraw(true); exSecDone(); exGo("next"); { const okb=document.getElementById("ex-pb"); } if(!kbCoarse()) setTimeout(()=>{ const g=document.getElementById("ex-go"); if(g) g.focus({preventScroll:true}); },30); return; }
   { const go=document.getElementById("ex-go"); if(go){ go.classList.remove("crk"); void go.offsetWidth; go.classList.add("crk"); } }
   EX.fails[i]=(EX.fails[i]||0)+1; if(r[i]!==1&&r[i]!==0){ r[i]=0; EX.n++; exSave(); }
   const card=document.getElementById("ex-card"); card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
@@ -3487,7 +3487,12 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-exc]"); i
   let v=b.dataset.exc.replace(/^[-–]\s*(?=\S)/,""); if(exGapCap(i)) v=v.charAt(0).toUpperCase()+v.slice(1); i.value=v; i.classList.remove("bad"); exGapFit(i);
   R.querySelectorAll(".ex-ch.sel").forEach(z=>z.classList.remove("sel")); b.classList.add("sel");
   if(ins.every(x=>x.value.trim())){ const go=document.getElementById("ex-go"); if(go&&!go.hidden) setTimeout(()=>go.click(),120); } else { const nx=ins.find(x=>!x.value.trim()); if(nx){ EX_LASTGAP=nx; nx.focus({preventScroll:true}); } } });
-function exGapLock(i,on){ i.readOnly=!!on; i.classList.toggle("lk",!!on); if(on){ i.tabIndex=-1; try{ if(document.activeElement===i&&kbCoarse()) kbHold(); else i.blur(); }catch(e){} i.scrollLeft=0; } else i.removeAttribute("tabindex"); }
+function exGapLock(i,on){
+  /* telefonda: to'g'ri javobdan keyin fokus katakda qoladi (readOnly/blur klaviaturani yopadi) — katak «qulflanadi», yozilgan narsa qaytariladi (2026-10-21, Otabek: «to'g'ri javobni topsam klaviatura pastga tushib ketyapti») */
+  if(on&&document.activeElement===i&&kbCoarse()){ i.classList.add("lk","kbk"); i.dataset.lv=i.value; i.scrollLeft=0; return; }
+  i.classList.remove("kbk"); delete i.dataset.lv; i.readOnly=!!on; i.classList.toggle("lk",!!on); if(on){ i.tabIndex=-1; try{ i.blur(); }catch(e){} i.scrollLeft=0; } else i.removeAttribute("tabindex"); }
+document.addEventListener("beforeinput",e=>{ const t=e.target; if(t&&t.classList&&t.classList.contains("kbk")&&e.cancelable) e.preventDefault(); },true);
+document.addEventListener("input",e=>{ const t=e.target; if(t&&t.classList&&t.classList.contains("kbk")&&t.dataset.lv!=null&&t.value!==t.dataset.lv){ t.value=t.dataset.lv; e.stopImmediatePropagation(); } },true);
 function exGapFit(i){ try{ const cs=getComputedStyle(i); if(!i.dataset.fs0) i.dataset.fs0=parseFloat(cs.fontSize)||19; const fs=+i.dataset.fs0; const cv=exGapFit._c||(exGapFit._c=document.createElement("canvas").getContext("2d")); cv.font=`${cs.fontStyle} ${cs.fontWeight} ${fs}px ${cs.fontFamily}`;
   const mw=t=>{ try{ return cv.measureText(t).width; }catch(e){ return t.length*fs*.62; } };
   /* "?" tugmasi endi katak tashqarisida (burchakda) — ichida 34px joy kerak emas; uzun so'z telefonda kartadan chiqsa — shrift kichrayadi (2026-10-20, Otabek: «so'z katakka sig'mayapti») */
