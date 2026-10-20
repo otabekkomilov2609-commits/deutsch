@@ -1514,6 +1514,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .app-go{flex:none;border:0;border-radius:999px;background:#DA1F26;color:#fff;font:inherit;font-size:14px;font-weight:800;padding:10px 16px;cursor:pointer}
 .app-x{flex:none;border:0;background:none;color:var(--muted);font-size:24px;line-height:1;cursor:pointer;padding:4px 6px}
 
+.ex-gwc{background:#EAF7EE;border:2px solid #9BD3AE;border-radius:14px;padding:12px 14px;margin:0 0 12px;color:#17402A;font-size:16px;line-height:1.5}.ex-gwc-h{font-weight:800;color:#2B7653;margin-bottom:4px}.ex-gwc-h i{font-weight:700;color:#3d5a48}.ex-gwc-t b{color:#1F4FA0}
 .ex-gw-t{line-height:1.55}.ex-gw-t b{color:var(--blue)}
 /* 🔒 Weiter: qulf o'ngda, to'g'ri bo'lsa strelka */
 .ex-nav .ias-go .ex-lk,.ex-nav .ias-go .ex-ar{display:inline-flex;align-items:center;justify-content:center;width:18px;margin-left:6px;vertical-align:-2px}
@@ -3268,6 +3269,8 @@ async function azRec(it,btn){ const R=exEl(), box=R.querySelector("#ex-az"), uz=
 function exSayInfo(){ const uz=state.lang!=="ru";
   return uz? `<h4>🗣 Sprechen — qanday ishlaydi?</h4><ol class="ex-howto"><li><b>🔊 Savolni tinglang.</b> U o‘zi bir marta o‘qiladi, yana eshitish uchun 🔊 ni bosing.</li><li><b>🎙 «Jetzt sprechen …»</b> chiqqanda javobni <b>ovoz chiqarib, nemischa, to‘liq gap bilan</b> ayting. Sizda 7 soniya bor, chiziq to‘lib boradi. Sayt ovozingizni yozib olmaydi.</li><li><b>«Antwort hören →»</b> namunaviy javobni ko‘rsatadi va o‘qib beradi. 7 soniyadan keyin u o‘zi chiqadi.</li><li>Javobingizni namuna bilan solishtiring:<br><b>👍 Richtig gesagt</b> — to‘g‘ri aytdim, keyingisiga o‘taman.<br><b>🔁 Nochmal</b> — shu savolni yana bir bor aytaman.</li></ol><p class="ex-note">💡 Namunani eshitgach, uni bir marta baland ovozda takrorlang. Shunda gap tez yodda qoladi.</p>`
    : `<h4>🗣 Sprechen — как это работает?</h4><ol class="ex-howto"><li><b>🔊 Послушайте вопрос.</b> Он звучит один раз сам; чтобы послушать ещё, нажмите 🔊.</li><li>Когда появится <b>🎙 «Jetzt sprechen …»</b>, ответьте <b>вслух, по-немецки, полным предложением</b>. У вас 7 секунд, полоска заполняется. Сайт ваш голос не записывает.</li><li><b>«Antwort hören →»</b> показывает и озвучивает образец ответа. Через 7 секунд он появится сам.</li><li>Сравните свой ответ с образцом:<br><b>👍 Richtig gesagt</b> — сказал(а) правильно, дальше.<br><b>🔁 Nochmal</b> — скажу этот вопрос ещё раз.</li></ol><p class="ex-note">💡 Прослушав образец, повторите его один раз вслух — так фраза быстрее запоминается.</p>`; }
+/* «i» — o'quvchi turgan mashqning o'z qoidasi (2026-10-21, Otabek: «qaysi mashqda turgan bo'lsa, i o'sha mashqning qoidasini tushuntirsin») */
+function exGwCur(){ try{ const its=exData()[EX.id].sec[EX.si].items; for(let j=EX.q[EX.qi];j>=0;j--){ if(its[j].t==="info") break; if(its[j].gw) return its[j].gw; } }catch(e){} return null; }
 function exInfoFor(gi){ for(let j=gi;j>=0;j--) if(EX.G[j]&&EX.G[j].info) return EX.G[j].info; return null; }
 function exRes(){ return EX.res[EX.si]||(EX.res[EX.si]={}); }
 function exOkN(){ const r=exRes(); return EX.q.filter(i=>r[i]===1).length; }
@@ -3356,9 +3359,9 @@ function kbRel(){ setTimeout(()=>{ const k=document.getElementById("kb-keep"); i
 function exItem(){ kbHold(); kbRel(); const el=exEl(); el.classList.remove("has-fb"); EX.done=false; EX.why=null; if(EX.hl&&EX.si>=0){ exHL(); return; }
   if(EX.qi>=EX.q.length){ exEnd(); return; }
   const it=exCur(), D=exData()[EX.id], sec=D.sec[EX.si], gi=exGi(), g=EX.G[gi], info=exInfoFor(gi), n=EX.q.length, uz=state.lang!=="ru";
-  const anyInfo=EX.G.some(x=>x.info);
+  const gwx=exGwCur(), anyInfo=EX.G.some(x=>x.info)||sec.items.some(x=>x.gw);
   /* ekran: avval qoida (info), keyin Beispiel, keyin savol — «Verstanden ✓» bilan (2026-10-20, Otabek: grammatika mashqlaridagi tartib) */
-  const tp=exTipP(); EX.scr=null; if(EX.force==="t") EX.scr="t"; else if(!EX.force&&EX.qi===0&&EX_TIPS[tp]&&tp!=="s"&&!EX.tipSeen&&!store.get("tip:"+tp)&&!(exRes()[EX.q[EX.qi]]===1)) EX.scr="t"; else if(EX.force==="p"&&sec.k==="hoer") EX.scr="p"; else if(!EX.force&&sec.k==="hoer"&&!(EX.pSeen&&EX.pSeen.has(EX.si))&&!(exRes()[EX.q[EX.qi]]===1)) EX.scr="p"; else if(EX.force==="x"&&info) EX.scr="x"; else if(EX.force==="b"&&g.bsp) EX.scr="b"; else if(!EX.force&&info&&!EX.xSeen.has(info)) EX.scr="x"; else if(!EX.force&&g.bsp&&!EX.bSeen.has(gi)) EX.scr="b";
+  const tp=exTipP(); EX.scr=null; if(EX.force==="t") EX.scr="t"; else if(!EX.force&&EX.qi===0&&EX_TIPS[tp]&&tp!=="s"&&!EX.tipSeen&&!store.get("tip:"+tp)&&!(exRes()[EX.q[EX.qi]]===1)) EX.scr="t"; else if(EX.force==="p"&&sec.k==="hoer") EX.scr="p"; else if(!EX.force&&sec.k==="hoer"&&!(EX.pSeen&&EX.pSeen.has(EX.si))&&!(exRes()[EX.q[EX.qi]]===1)) EX.scr="p"; else if(EX.force==="x"&&(info||gwx)) EX.scr="x"; else if(EX.force==="b"&&g.bsp) EX.scr="b"; else if(!EX.force&&info&&!EX.xSeen.has(info)) EX.scr="x"; else if(!EX.force&&g.bsp&&!EX.bSeen.has(gi)) EX.scr="b";
   const pop=EX.lastG!==gi&&!EX.scr; if(!EX.scr) EX.lastG=gi; /* sarlavha birinchi ochilganda kattalashib kichrayadi (2026-10-20, Otabek) */
   EX.st={sel:null};
   const say=it.say?`<button type="button" class="ex-say" data-x="say" aria-label="${esc(ext("listen"))}">🔊</button>`:"";
@@ -3366,7 +3369,7 @@ function exItem(){ kbHold(); kbRel(); const el=exEl(); el.classList.remove("has-
   let card;
   if(EX.scr==="t") card=exTip();
   else if(EX.scr==="p") card=exPrevHTML(sec);
-  else if(EX.scr==="x") card=`<div class="ex-info ex-x">${exRegelDeco(info)}</div>`;
+  else if(EX.scr==="x"){ const L=state.lang==="ru"?"ru":"uz", gt=EX.force==="x"&&gwx&&gwx[L]?`<div class="ex-gwc"><div class="ex-gwc-h">📝 ${L==="ru"?"В этом упражнении":"Shu mashqda"}: <i>${esc((g&&g.h||"").replace(/\*/g,""))}</i></div><div class="ex-gwc-t">${gwx[L]}</div></div>`:""; card=gt+(info?`<div class="ex-info ex-x">${exRegelDeco(info)}</div>`:""); }
   else if(EX.scr==="b") card=`<div class="ex-bsp"><span>📌 Beispiel</span><div>${g.bsp}</div></div>`;
   else card=`${it.q&&it.t!=="mc"&&it.t!=="say"?`${exCtx(it.q)}`:""}<div class="ex-w" id="ex-w">${EXR[it.t].r(it)}</div>`;
   el.innerHTML=`${exHead(sec.ic+" "+sec.t)}<div class="lrn-body ex2"><div class="ex-head" id="ex-head"><div class="ias-top ex-top"><div class="ias-pb"><i id="ex-pb"></i><b class="ias-pbe hid" id="ex-pbe"></b>${ticks}</div><span id="ex-cnt"></span>${EX_TIPS[tp]?`<button type="button" class="ias-tb ias-ib ex-qlb" data-x="tip" title="Tipp" aria-label="Tipp">💡</button>`:""}${sec.k==="hoer"?`<button type="button" class="ias-tb ias-ib ex-qlb" data-x="qlist" title="Fragen" aria-label="Fragen">📋</button>`:""}${anyInfo?`<button type="button" class="ias-tb ias-ib" data-x="info" title="Regel" aria-label="Regel">i</button>`:""}</div>

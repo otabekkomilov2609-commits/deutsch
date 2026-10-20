@@ -706,3 +706,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Ro‘yxatdan o‘tgan o‘quvchidan bir marta «Qaysi darajadasiz?» so‘raladi — tanlangan daraja ochiladi.
 - Ikki javobli yozuvlar («Worauf? – darauf», «der Lehrer / die Lehrerin») so‘z yozishda va Live testda so‘ralmaydi (faqat juftlash/tanlashda qoladi).
 - Har bir rejim (juftlash, tanlash, yozish, kartochka, mashq, muloqot) birinchi marta ochilganda sariq qisqa tushuntirish chiqadi; «Tushunarli» bosilgach boshqa chiqmaydi.
+- «i» tugmasi o‘quvchi turgan mashqning o‘z qoidasini ko‘rsatadi: tepada yashil «📝 Shu mashqda: <topshiriq>» kartasi (shu guruhning uz/ru tushuntirishi), ostida shu qismning Regel jadvali.
