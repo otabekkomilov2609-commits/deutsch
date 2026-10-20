@@ -4926,8 +4926,11 @@ document.addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target&&e.target.
 function accChip(){ const c=document.getElementById("acc-chip"); if(!c) return; c.hidden=!ACC.cur; c.textContent="👤 "+ACC.name.split(" ")[0]; c.title=ACC.name; }
 /* Ustozga avtomatik yuborish (Google Forma → "Deutsch" jadvali). Faqat natija oshganda. */
 function accLvl(m){ return !m||!m.tab?"":m.tab==="list"?(m.lvl||""):(TABS[m.tab]?TABS[m.tab].lbl:""); }
+/* Google Sheets (Apps Script): har o'quvchi × mashq — bitta qator, faqat eng yaxshi natija (2026-10-21, Otabek). URL bo'lmasa — eski Google Forma */
+const SHEET_API="";
+function sheetPost(o){ if(!SHEET_API) return false; const q=new URLSearchParams(); Object.entries(o).forEach(([k,v])=>q.set(k,String(v??""))); fetch(SHEET_API,{method:"POST",mode:"no-cors",body:q}).catch(()=>{}); return true; }
 function accPost(lvl,ttl,ok,n){
-  if(!CAN_POST||!ACC.name) return;
+  if(!CAN_POST||!ACC.name) return; if(sheetPost({type:"res",nm:ACC.name,lvl,ttl,ok,n})) return;
   const q=new URLSearchParams(); q.set("entry.333560556",ACC.name); q.set("entry.533107657",lvl); q.set("entry.1278451255",ttl); q.set("entry.1453781659",`${ok}/${n}`);
   fetch(GFORM,{method:"POST",mode:"no-cors",body:q}).catch(()=>{});
 }
@@ -5852,6 +5855,7 @@ async function fbSend(){ const st=document.getElementById("fb-st"), tx=(document
   st.className="fb-st"; st.textContent=fbT("sending"); document.querySelectorAll("#fb-ov [data-fb]").forEach(b=>b.disabled=true);
   try{ const enc=await fbEnc({c:FB.ctx, tx:tx.slice(0,1000), ch, img:FB.img||""}), fid=fbHex().slice(0,12), N=Math.ceil(enc.length/17000);
     for(let k=0;k<N;k++){ const part="FB1:"+fid+":"+k+"/"+N+":"+enc.slice(k*17000,(k+1)*17000); await fsPut("s/"+fbHex(),{e:fsS(part),t:fsI(Date.now())}); }
+    try{ sheetPost({type:"fb",nm:FB.ctx.nm||"",ch:ch.join(" · "),tx:tx.slice(0,1000),where:admWhere(FB.ctx),img:FB.img||"",dev:(FB.ctx.w||"")+" "+(FB.ctx.ua||"").replace(/^Mozilla\/5\.0 \(([^)]*)\).*/,"$1").slice(0,60)}); }catch(e){}
     document.querySelector("#fb-ov .fb-box").innerHTML=`<div class="fb-thx"><div class="big">🙏</div><p>${esc(fbT("ok"))}</p><button type="button" class="btn primary" data-fb="x">OK</button></div>`;
   }catch(e){ st.className="fb-st err"; st.textContent=fbT("err"); document.querySelectorAll("#fb-ov [data-fb]").forEach(b=>b.disabled=false); } }
 function fbClose(){ const o=document.getElementById("fb-ov"); if(o){ o.hidden=true; o.innerHTML=""; } }
