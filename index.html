@@ -3087,15 +3087,16 @@ document.addEventListener("click",e=>{ if(!e.target.closest("#thm-btn")) return;
 setTimeout(thmIcon,0);
 /* ===== 📲 Ilova (PWA), 2026-10-21 (Otabek): telefonga o'rnatiladigan ilova ===== */
 const APP={ev:null};
-const APP_T={uz:{t:"Streber’ni telefoningizga o‘rnating",s:"Ilova kabi ochiladi — brauzer kerak emas",b:"O‘rnatish",ios:"Pastdagi <b>Ulashish</b> ⬆️ tugmasi → <b>«Bosh ekranga qo‘shish»</b>"},
-  ru:{t:"Установите Streber на телефон",s:"Открывается как приложение — без браузера",b:"Установить",ios:"Кнопка <b>Поделиться</b> ⬆️ внизу → <b>«На экран „Домой“»</b>"}};
+const APP_T={uz:{t:"Streber’ni telefoningizga o‘rnating",tp:"Streber’ni planshetingizga o‘rnating",s:"Ilova kabi ochiladi — brauzer kerak emas",b:"O‘rnatish",ios:"Pastdagi <b>Ulashish</b> ⬆️ tugmasi → <b>«Bosh ekranga qo‘shish»</b>",ipad:"Yuqoridagi <b>Ulashish</b> ⬆️ tugmasi → <b>«Bosh ekranga qo‘shish»</b>"},
+  ru:{t:"Установите Streber на телефон",tp:"Установите Streber на планшет",s:"Открывается как приложение — без браузера",b:"Установить",ios:"Кнопка <b>Поделиться</b> ⬆️ внизу → <b>«На экран „Домой“»</b>",ipad:"Кнопка <b>Поделиться</b> ⬆️ вверху → <b>«На экран „Домой“»</b>"}};
 function appStandalone(){ return matchMedia("(display-mode: standalone)").matches||navigator.standalone===true; }
 function appIOS(){ return /iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1); }
+function appIPad(){ return /ipad/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1); }
 function appOff(){ try{ const t=+localStorage.getItem("app:off")||0; return Date.now()-t<14*864e5; }catch(e){ return false; } }
 function appShow(){ const el=document.getElementById("app-inst"); if(!el) return;
   const can=!IN_ARTIFACT&&!appStandalone()&&!appOff()&&!!(APP.ev||appIOS()); el.hidden=!can; if(!can){ el.innerHTML=""; return; }
   const T=APP_T[state.lang]||APP_T.uz;
-  el.innerHTML=`<img src="/icons/icon-192.png" alt="" class="app-ic"><div class="app-tx"><b>${T.t}</b><span>${APP.ev?T.s:T.ios}</span></div>${APP.ev?`<button type="button" class="app-go" data-appgo>${T.b}</button>`:""}<button type="button" class="app-x" data-appx aria-label="×">×</button>`; }
+  el.innerHTML=`<img src="/icons/icon-192.png" alt="" class="app-ic"><div class="app-tx"><b>${appIPad()?T.tp:T.t}</b><span>${APP.ev?T.s:(appIPad()?T.ipad:T.ios)}</span></div>${APP.ev?`<button type="button" class="app-go" data-appgo>${T.b}</button>`:""}<button type="button" class="app-x" data-appx aria-label="×">×</button>`; }
 window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); APP.ev=e; appShow(); });
 window.addEventListener("appinstalled",()=>{ APP.ev=null; appShow(); try{ actEv("app","install"); }catch(e){} });
 document.addEventListener("click",async e=>{
