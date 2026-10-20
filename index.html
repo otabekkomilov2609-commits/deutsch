@@ -1074,6 +1074,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias-inl .ias-pr.next{background:var(--green)} .ias-inl .ias-nav .ias-go{display:none!important}
 .ias-inl #ias-inw{position:fixed;left:0;bottom:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}
 .ias-inl #ias-in{font-size:16px}
+.ias-crt{display:inline-block;width:2px;height:.85em;background:currentColor;margin:0 1px;vertical-align:-.08em;animation:iasBlink 1s steps(2,start) infinite}.ias-slot:not(.cur) .ias-crt,.ias-slot.ok .ias-crt,.ias:not(.ias-foc) .ias-crt{display:none}.ias-inl.ias-foc .ias-slot.cur:not(.ok):has(.ias-crt)::after{display:none}
 .ias-inl #ias-card{cursor:text}
 .ias-inl.ias-foc .ias-slot.cur:not(.ok){box-shadow:0 0 0 3px rgba(31,79,160,.25)}
 .ias-inl.ias-foc .ias-slot.cur:not(.ok)::after{content:"";display:inline-block;width:2px;height:.85em;background:currentColor;margin-left:3px;vertical-align:-.08em;animation:iasBlink 1s steps(2,start) infinite}
@@ -1994,7 +1995,7 @@ function lekCardStu(L, tab, withLvl){
   const [n,title,thema,kb,g,k,w]=L, lvl=TABS[tab].lvl, uz=state.lang!=="ru", f=state.type;
   const by={g:[],w:[],k:[],h:[],t:[]}; MATS.filter(m=>m.tab===tab&&m.key===String(n)&&bOnline(m)).forEach(m=>{ (by[bPart(m)]||by.g).push(m); });
   /* yangi mashq to'plami (ex) bor qismda eski qog'ozdan olingan varaq ko'rsatilmaydi — takror bo'lmasin (2026-10-20, Otabek) */
-  ["g","w","k"].forEach(c=>{ if(by[c].some(m=>m.ex)) by[c]=by[c].filter(m=>m.ex); });
+  ["g","w","k"].forEach(c=>{ if(by[c].some(m=>m.ex&&m.part)) by[c]=by[c].filter(m=>m.ex&&m.part); });
   const ls=lekLernStat(tab,n);
   if(ls) by.w.unshift({_h:bAct("🧠",uz?"So‘zlarni yodlash":"Учить слова",uz?"Kartochka · Match · yozish":"Карточки · пары · письмо",ls[1]+"/"+ls[2],`data-lern="${ls[0]}" data-les="${n}"`,ls[1]>=ls[2])});
   const ms=ls&&muLesStat(ls[0],n);
@@ -2618,7 +2619,13 @@ function exMenu(){ EX.si=-1; exAudStop(); const D=exData()[EX.id];
 /* imlo xatosida kursor xato harfdan keyin (yoki tushib qolgan harf joyida) turadi — bitta Backspace yetarli (2026-10-20, Otabek: butun saytda) */
 function errCaret(inp,h){ try{ if(!inp||!h) return false; let pos=-1,n=0; const re=/<b class="(dx|dm)">([^<]*)<\/b>|<[^>]+>|&[a-z#0-9]+;|[\s\S]/g; let m;
   while((m=re.exec(h))){ if(m[1]==="dx"){ pos=n+[...m[2]].length; break; } if(m[1]==="dm"){ pos=n; break; } if(m[0][0]==="<") continue; n++; }
-  if(pos<0) return false; pos=Math.min(pos,inp.value.length); if(document.activeElement!==inp) inp.focus({preventScroll:true}); inp.setSelectionRange(pos,pos); return true; }catch(e){ return false; } }
+  if(pos<0) return false; pos=Math.min(pos,inp.value.length); if(document.activeElement!==inp) inp.focus({preventScroll:true}); inp.setSelectionRange(pos,pos); return {pos}; }catch(e){ return false; } }
+/* ko'rinadigan (soxta) kursor — diff HTML ichida real kursor joyiga qo'yiladi (IAS inline, 2026-10-20, Otabek) */
+function crtInsert(h,pos){ const re=/<b class="(dx|dm)">([^<]*)<\/b>|<[^>]+>|&[a-z#0-9]+;|[\s\S]/g; let m,n=0,out="",done=false; const C='<i class="ias-crt"></i>';
+  while((m=re.exec(h))){ if(!done&&m[0][0]!=="<"&&n===pos){ out+=C; done=true; } if(m[1]==="dx"){ if(!done&&n+[...m[2]].length>pos){ out+=m[0]; n+=[...m[2]].length; continue; } out+=m[0]; n+=[...m[2]].length; if(!done&&n===pos){ out+=C; done=true; } continue; }
+    if(m[1]==="dm"){ if(!done&&n===pos){ out+=C; done=true; } out+=m[0]; continue; } out+=m[0]; if(m[0][0]!=="<") n++; }
+  if(!done) out+=C; return out; }
+function iasMirror(inp,s){ if(!inp||!s) return; const v=inp.value; if(!v.trim()){ s.innerHTML="&nbsp;?&nbsp;"; return; } let p=v.length; try{ p=inp.selectionStart; if(p==null) p=v.length; }catch(e){} s.innerHTML=esc(v.slice(0,p))+'<i class="ias-crt"></i>'+esc(v.slice(p)); }
 function askPop(el){ try{ if(!el) return; const src=el.querySelector(".ex-ask-t")||el; if(!src.textContent.trim()) return; const chip=el.querySelector(".ias-bspb");
   const pw=el.clientWidth||(el.parentElement&&el.parentElement.clientWidth)||0, r=src.getBoundingClientRect(); let w=r.width; if(src===el&&chip) w-=chip.getBoundingClientRect().width+10;
   const dx=Math.max(0,(pw-1.2*w)/2); el.classList.add("ask-hold"); el.style.transition="none"; el.style.transformOrigin="left center"; el.style.transform=`translateX(${dx.toFixed(1)}px) scale(1.2)`; void el.offsetWidth;
@@ -3592,7 +3599,8 @@ function iasRender(m){
   inp.addEventListener("focus",()=>V.body.querySelector(".ias")&&V.body.querySelector(".ias").classList.add("ias-foc"));
   inp.addEventListener("blur",()=>V.body.querySelector(".ias")&&V.body.querySelector(".ias").classList.remove("ias-foc"));
   inp.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); e.stopPropagation(); iasCheck(); } });
-  inp.addEventListener("input",()=>{ const dfx=document.getElementById("ias-diff"); if(dfx) dfx.hidden=true; const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) s.innerHTML=inp.value.trim()?esc(inp.value):"&nbsp;?&nbsp;"; if(s) s.classList.remove("bad"); inp.classList.remove("bad");
+  inp.addEventListener("keyup",e=>{ if(/^(Arrow|Home|End)/.test(e.key||"")){ const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")&&!s.querySelector(".dw,.dm,.dx")) iasMirror(inp,s); } });
+  inp.addEventListener("input",()=>{ const dfx=document.getElementById("ias-diff"); if(dfx) dfx.hidden=true; const s=V.body.querySelector(".ias-slot.cur"); if(s&&!s.classList.contains("ok")) iasMirror(inp,s); if(s) s.classList.remove("bad"); inp.classList.remove("bad");
     /* to'g'ri yozilsa — Enter'siz «Richtig» chiqadi, keyingisiga «Weiter →» bilan o'tiladi */
     clearTimeout(IAS.autoT); const st=IAS.steps[IAS.k]; if(!st||st.kind!=="g") return; const i=st.i;
     if(iasState(i)==="ok"){ const old=String(IA.vals[i]||""), v=inp.value;
@@ -3814,7 +3822,7 @@ function iasAfter(st){ const s=iasState(st.i), uz=state.lang!=="ru", fb=document
   const why=iaWhyText(st.i);
   IAS.why=why; iasWhyQ(fb);
   const inp=document.getElementById("ias-in"); if(st.kind==="g"){ const dfx=document.getElementById("ias-diff"), dh=iasDiff(inp.value, itA); if(dfx){ dfx.innerHTML=""; dfx.hidden=true; } /* xato harflar / tushib qolgan harf — javob joyining o'zida (2026-10-19, Otabek) */
-    { const sl0=document.querySelector("#ias-card .ias-slot.cur"); if(sl0&&dh){ sl0.innerHTML=dh; iasWhyQ(fb); } } inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); if(!(dh&&errCaret(inp,dh))){ if(V.body.querySelector(".ias-inl")){ try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(er){} } else inp.select(); } const sl=document.querySelector("#ias-card .ias-slot.cur"); if(sl){ sl.classList.remove("shake"); void sl.offsetWidth; sl.classList.add("shake","bad"); } }
+    { const sl0=document.querySelector("#ias-card .ias-slot.cur"); if(sl0&&dh){ const rc=errCaret(inp,dh); sl0.innerHTML=rc?crtInsert(dh,rc.pos):dh; iasWhyQ(fb); } } inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake","bad"); if(!(dh&&errCaret(inp,dh))){ if(V.body.querySelector(".ias-inl")){ try{ inp.setSelectionRange(inp.value.length,inp.value.length); }catch(er){} } else inp.select(); } const sl=document.querySelector("#ias-card .ias-slot.cur"); if(sl){ sl.classList.remove("shake"); void sl.offsetWidth; sl.classList.add("shake","bad"); } }
   else { iasShow(false); IAS.why=why; iasWhyQ(fb); const cd=document.getElementById("ias-card"); if(cd){ cd.classList.remove("shake"); void cd.offsetWidth; cd.classList.add("shake"); } }
   iasDots(); }
 /* imlo xatosi: noto'g'ri harflar qizil (2026-10-18) */
@@ -3823,7 +3831,7 @@ function iasLive(st,inp){ if(IAS.steps[IAS.k]!==st||!inp.isConnected||document.a
   const v=inp.value; if(!v.trim()||iasState(st.i)==="ok") return; const s=V.body.querySelector("#ias-card .ias-slot.cur"); if(!s) return;
   let h=""; const u=iaNorm(v); const art=[it.a,...(it.ok||[])].filter(Boolean).map(x=>iaNorm(x)).find(x=>/^(der|die|das|den|dem|des|ein|eine|einen|einem|einer) /.test(x)&&x.replace(/^\S+ /,"")===u);
   if(art){ const k=v.search(/\S/); h=esc(v.slice(0,k))+'<b class="dm">_</b> '+esc(v.slice(k)); } else h=iasDiff(v,it,2);
-  if(h){ s.innerHTML=h; errCaret(inp,h); } }
+  if(h){ const rc=errCaret(inp,h); s.innerHTML=rc?crtInsert(h,rc.pos):h; } }
 function iasDiff(stu, it, maxD){ const P=/[„“”"«».,!?;:…()]/; const keep=[]; [...String(stu)].forEach((ch,ix)=>{ if(!P.test(ch)) keep.push([ch.toLowerCase(),ix]); });
   const sq=a=>{ const o=[]; a.forEach(x=>{ if(x[0]===" "&&(!o.length||o[o.length-1][0]===" ")) return; o.push(x); }); while(o.length&&o[o.length-1][0]===" ") o.pop(); return o; };
   const A=sq(keep); const cands=[it.a,...(it.ok||[])].filter(Boolean).map(c=>[...String(c).toLowerCase()].filter(ch=>!P.test(ch)).join("").replace(/\s+/g," ").trim());
