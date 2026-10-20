@@ -1479,7 +1479,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .hl-in.ok{color:var(--green);border-color:var(--green)}.hl-in.bad{color:#C62828;border-color:#C62828;text-decoration:line-through}.hl-fix{color:var(--green);font-weight:800;margin-left:6px}
 .hl-nav{position:sticky;bottom:0;background:var(--bg,var(--surface-2));padding:10px 0 4px;margin-top:12px}
 
-.reg-cta{border:2px solid var(--green);background:var(--green-soft)}.reg-cta .reg-h{font-size:18px;font-weight:800;color:var(--green)}.reg-cta ul{margin:6px 0;padding-left:4px;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14.5px}.reg-cta .reg-free{font-weight:800;color:var(--orange);font-size:16px}.reg-cta .reg-go{align-self:stretch;font-size:17px;padding:12px}
+.reg-cta{border:2px solid var(--green);background:var(--green-soft)}.reg-save p{margin:4px 0 8px;line-height:1.45}.reg-cta .reg-h{font-size:18px;font-weight:800;color:var(--green)}.reg-cta ul{margin:6px 0;padding-left:4px;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14.5px}.reg-cta .reg-free{font-weight:800;color:var(--orange);font-size:16px}.reg-cta .reg-go{align-self:stretch;font-size:17px;padding:12px}
 /* 👎 feedback + 🛠 admin */
 .fb-btn{position:fixed;left:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:2147483000;width:48px;height:48px;border-radius:50%;border:2px solid #F2B8B8;background:var(--surface);box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}
 .lrn-body,#v-body,main{padding-bottom:max(70px,var(--pb,0px))}
@@ -2285,7 +2285,7 @@ const MATS = [
 ];
 /* 🧪 Beta — yangi o'quvchi paneli (2026-10-20, Otabek): faqat ustoz kodi bilan + Ustoz paneli → 📄 Varaqlar → 🧪 yoqilganda. O'quvchilar eski ko'rinishni ko'radi; beta:true materiallar ularga umuman yuklanmaydi */
 function betaStu(){ try{ return localStorage.getItem("betaS")==="6956f488efcc243466dc09fadc44cee60a6670414d895380f6051dcd4902db03"; }catch(e){ return false; } } /* o'quvchi beta: profil tugmasini bosib turib, ustoz kodini kiritadi (2026-10-20) */
-function betaOn(){ try{ return (tchOk() && localStorage.getItem("beta")==="1") || betaStu(); }catch(e){ return false; } }
+function betaOn(){ try{ return tchOk() ? localStorage.getItem("beta")!=="0" : true; }catch(e){ return true; } } /* 2026-10-21 (Otabek): beta hammaga ochildi; ustoz panelda eski ko'rinishni yoqib ko'rishi mumkin */
 if(!betaOn()){ for(let i=MATS.length-1;i>=0;i--) if(MATS[i].beta) MATS.splice(i,1); } else document.documentElement.classList.add("beta");
 
 const LEKS = {
@@ -2372,7 +2372,7 @@ const TABS = {a11:{lvl:"A1",lbl:"A1.1",lo:1,hi:12}, a12:{lvl:"A1",lbl:"A1.2",lo:
 const tabOf = (lvl,n) => lvl==="A1" ? (n<=12?"a11":"a12") : lvl==="B1" ? (n<=12?"b11":"b12") : (n<=12?"a21":"a22");
 function ruDays(n){const a=n%10,b=n%100; return (a===1&&b!==11)?"день":(a>=2&&a<=4&&(b<12||b>14))?"дня":"дней";}
 const T = {
- uz:{lead:"Darsga kela olmadingizmi? Har bir <b>Lektionda nima o‘tilgani</b> va darsda ishlatilgan <b>barcha varaqlar</b> shu yerda. Varaqni bosing — ochiladi.",
+ uz:{lead:"Har bir Lektion uchun <b>interaktiv mashqlar</b>: grammatika, so‘zlar, muloqot, tinglash va gapirish. Xato qilsangiz — <b>tushuntirib beradi</b>. Hozircha <b>bepul</b>.",
    search:"Qidirish: Lektion raqami, mavzu, grammatika…", lists:"Ro‘yxatlar",
    all:"Hammasi", grammatik:"Grammatika", uebung:"📱 Mashqlar", wortschatz:"So‘zlar", sprechen:"Gapirish", liste:"Ro‘yxat", test:"Test", loesung:"Javoblar", plan:"Dars rejasi 🔒",
    recent:"Yangi qo‘shilganlar", recentSub:"oxirgi darslardan", modul:"Modul", review:"Modul takrori",
@@ -2385,7 +2385,7 @@ const T = {
    openLink:"ochish", audLoad:"Audioni yuklash", audWait:"Audio yuklanmoqda…", audErr:"Audio yuklanmadi — qayta bosing", whyBtn:"Nega xato?", wU:"Umlautni tekshiring: ä ö ü yoki ß.", wO:"So‘zlar to‘g‘ri, faqat tartibi xato.", wA:"Artikl xato — kelishikni o‘ylang: Nominativ, Akkusativ yoki Dativ?", wE:"So‘z to‘g‘ri, oxiri (qo‘shimchasi) xato.", wT:"Deyarli to‘g‘ri — bitta harfni tekshiring.", wM:"Bitta so‘z tushib qolgan.", wX:"Ortiqcha so‘z bor.", wP:"Gap belgisi yoki bo‘sh joyni tekshiring.", wEmpty:"Bu joy bo‘sh qoldi.", wRule:"Qoida", trH:"Audio transkripti", trSub:"Belgilangan joyda javob eshitiladi. Qizil — siz xato qilgan joy.", trYour:"Sizning javobingiz", trRight:"to‘g‘ri javob", trNone:"javob yo‘q", later:"Keyingi mavzular", cur:"Oxirgi o‘tilgan mavzu", hw:"Topshiriqlar", hwEmpty:"Hozircha ochiq topshiriq yo‘q. Yangi topshiriq va uning muddati shu yerda paydo bo‘ladi.", hwOld:"Muddati tugaganlar", today:"bugun", yest:"kecha", given:"Berildi", dueL:"Muddat", hwLekShort:"Topshiriq", group:"Guruh",
    lastDay:"Bugun — oxirgi kun", tomorrow:"Ertaga topshiriladi", over:"Muddati tugadi", leftN:n=>`${n} kun qoldi`, daysN:n=>`${n} kun`,
    wd:["yakshanba","dushanba","seshanba","chorshanba","payshanba","juma","shanba"]},
- ru:{lead:"Пропустили урок? Здесь — <b>что прошли на каждом уроке</b> и <b>все листы</b> с занятий. Нажмите на лист — он откроется.",
+ ru:{lead:"<b>Интерактивные упражнения</b> к каждому уроку: грамматика, слова, диалоги, аудирование и говорение. Ошиблись — <b>объяснение</b> сразу. Пока <b>бесплатно</b>.",
    search:"Поиск: номер урока, тема, грамматика…", lists:"Списки",
    all:"Все", grammatik:"Грамматика", uebung:"📱 Упражнения", wortschatz:"Лексика", sprechen:"Говорение", liste:"Список", test:"Тест", loesung:"Ответы", plan:"План урока 🔒",
    recent:"Новые материалы", recentSub:"с последних уроков", modul:"Модуль", review:"Повторение модуля",
@@ -4832,7 +4832,7 @@ function accEl(){ return document.getElementById("acc"); }
 function accLangRow(){ return `<div class="acc-lang">${["uz","ru"].map(l=>`<button type="button" data-acclang="${l}" aria-pressed="${state.lang===l}">${l.toUpperCase()}</button>`).join("")}</div>`; }
 function accLogin(){
   const f=document.getElementById("acc-f");
-  f.innerHTML=`<div class="snd-h"><h2>${esc(at("title"))}</h2>${accLangRow()}</div>
+  f.innerHTML=`<div class="snd-h"><h2>${esc(at("title"))}</h2>${accLangRow()}${ACC.cur?"":`<button type="button" class="snd-x" data-acc="close" aria-label="✕">✕</button>`}</div>
     <p class="acc-lead">${esc(at("lead"))}</p>
     ${(()=>{ const U=accUsers(), ns=Object.values(U).map(u=>u.name).filter(Boolean).sort((a,b)=>a.localeCompare(b)); return ns.length?`<div class="acc-here"><small>${esc(at("here"))}</small><div>${ns.map(n=>`<button type="button" class="acc-nm" data-accnm="${esc(n)}">👤 ${esc(n)}</button>`).join("")}</div></div>`:""; })()}
     <label class="acc-lb">${esc(at("name"))}<input id="acc-name" maxlength="40" autocomplete="name" placeholder="${esc(at("namePh"))}"><span class="acc-hint">${esc(at("loginIs"))}</span></label>
@@ -4938,7 +4938,7 @@ document.addEventListener("click",e=>{
   const an=e.target.closest("[data-accnm]"); if(an){ const i=document.getElementById("acc-name"); if(i){ i.value=an.dataset.accnm; const st=document.getElementById("acc-st"); if(st){ st.textContent=""; } const pw=document.getElementById("acc-pw"); if(pw) pw.focus(); } return; }
   const a=e.target.closest("[data-acc]"); if(a){ const k=a.dataset.acc;
     if(k==="eye"){ const p=document.getElementById("acc-pw"); p.type=p.type==="password"?"text":"password"; }
-    else if(k==="close"){ accEl().hidden=true; }
+    else if(k==="close"){ accEl().hidden=true; document.body.style.overflow=document.querySelector(".lrn:not([hidden])")?"hidden":""; }
     else if(k==="newok"){ ACC_NEWOK=true; document.getElementById("acc-f").requestSubmit(); }
     else if(k==="forgot") accForgot(); else if(k==="rback") accLogin(); else if(k==="rgo") accReset();
     else if(k==="cgo") cloudAskGo(); else if(k==="ceye"){ const p=document.getElementById("acc-cpw"); if(p) p.type=p.type==="password"?"text":"password"; }
@@ -4947,7 +4947,8 @@ document.addEventListener("click",e=>{
     else if(k==="ccopy"){ const t=a.dataset.t; (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{ a.textContent=at("copied"); }).catch(()=>{ prompt("",t); }); }
     else if(k==="out"){ try{ localStorage.removeItem("acc:cur"); }catch(err){} location.reload(); }
     return; }
-  if(e.target.closest("#acc-chip")){ if(BLP.fired){ BLP.fired=false; return; } accMenu(); }
+  if(e.target.closest("#acc-chip")){ if(BLP.fired){ BLP.fired=false; return; } if(ACC.cur) accMenu(); else accLogin(); }
+  if(e.target.closest("[data-lang]")) setTimeout(()=>{ try{ accChip(); }catch(er){} },0);
 });
 /* 🧪 Beta eshigi: profil tugmasini ~1 soniya bosib turish → ustoz bergan kod */
 const BLP={t:null,fired:false};
@@ -4966,7 +4967,7 @@ document.addEventListener("click",async e=>{ const b=e.target.closest("[data-bd]
     if(h==="6956f488efcc243466dc09fadc44cee60a6670414d895380f6051dcd4902db03"){ try{ localStorage.setItem("betaS",h); }catch(err){} location.reload(); }
     else document.getElementById("bd-st").textContent=uz?"Kod noto‘g‘ri.":"Неверный код."; } });
 document.addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target&&e.target.id==="bd-code"){ e.preventDefault(); const g=document.querySelector('[data-bd="go"]'); if(g) g.click(); } });
-function accChip(){ const c=document.getElementById("acc-chip"); if(!c) return; c.hidden=!ACC.cur; c.textContent="👤 "+ACC.name.split(" ")[0]; c.title=ACC.name; }
+function accChip(){ const c=document.getElementById("acc-chip"); if(!c) return; if(!ACC.cur){ const ru=state.lang==="ru"; c.hidden=IN_ARTIFACT||(typeof ACC_OK!=="undefined"&&!ACC_OK); c.textContent=ru?"👤 Войти":"👤 Kirish"; c.title=ru?"Регистрация / вход":"Ro‘yxatdan o‘tish / kirish"; c.classList.add("guest"); return; } c.classList.remove("guest"); c.hidden=false; c.textContent="👤 "+ACC.name.split(" ")[0]; c.title=ACC.name; }
 /* Ustozga avtomatik yuborish (Google Forma → "Deutsch" jadvali). Faqat natija oshganda. */
 function accLvl(m){ return !m||!m.tab?"":m.tab==="list"?(m.lvl||""):(TABS[m.tab]?TABS[m.tab].lbl:""); }
 /* Google Sheets (Apps Script): har o'quvchi × mashq — bitta qator, faqat eng yaxshi natija (2026-10-21, Otabek). URL bo'lmasa — eski Google Forma */
@@ -4990,7 +4991,7 @@ function accLern(){
 }
 const ACC_OK=(()=>{ try{ localStorage.setItem("acc:t","1"); localStorage.removeItem("acc:t"); return true; }catch(e){ return false; } })();
 accChip();
-if(!ACC.cur && ACC_OK && !new URLSearchParams(location.search).get("ch") && !new URLSearchParams(location.search).get("lt") && !new URLSearchParams(location.search).get("kg") && !new URLSearchParams(location.search).get("kgd") && !new URLSearchParams(location.search).get("du") && !tchOk()) accLogin();
+if(!ACC.cur && ACC_OK && !new URLSearchParams(location.search).get("ch") && !new URLSearchParams(location.search).get("lt") && !new URLSearchParams(location.search).get("kg") && !new URLSearchParams(location.search).get("kgd") && !new URLSearchParams(location.search).get("du") && !tchOk() && false) accLogin(); /* 2026-10-21: majburiy ro'yxat o'chirildi — mehmon avval aylanadi, keyin yumshoq taklif (regSoft) */
 /* ===== ⚡ Challenge (Kahoot challenge'ga o'xshash) — 2026-10-17 =====
    Havola ?ch=<kod>: ro'yxat + Lektionlar + seed. Hamma bir xil savollarni oladi.
    Natijalar jonli: ochiq MQTT broker (WebSocket), har o'yinchi o'z natijasini "retained" xabar qilib yuboradi. */
@@ -5415,6 +5416,15 @@ function regCta(){ if(typeof ACC!=="undefined"&&ACC.cur||IN_ARTIFACT) return "";
     <ul>${L.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
     <div class="reg-free">🎁 ${ru?"Сейчас всё бесплатно":"Hozircha hammasi bepul"}</div>
     <button type="button" class="btn primary reg-go" data-reg="go">${ru?"Зарегистрироваться →":"Ro‘yxatdan o‘tish →"}</button></div>`; }
+function regSave(){ if(typeof ACC!=="undefined"&&ACC.cur||IN_ARTIFACT||tchOk()) return ""; const ru=state.lang==="ru";
+  return `<div class="lrn-card reg-cta reg-save"><div class="reg-h">💾 ${ru?"Сохраните свой результат!":"Natijangizni saqlab qo‘ying!"}</div>
+    <p>${ru?"Без регистрации прогресс хранится только в этом браузере. Зарегистрируйтесь — результаты сохранятся навсегда, на любом телефоне, и вы попадёте в рейтинг.":"Ro‘yxatdan o‘tmasangiz, natijalar faqat shu brauzerda qoladi. Ro‘yxatdan o‘ting — natijalar har qanday telefonda saqlanadi va reytingga kirasiz."}</p>
+    <div class="reg-free">🎁 ${ru?"Сейчас всё бесплатно":"Hozircha hammasi bepul"}</div>
+    <button type="button" class="btn primary reg-go" data-reg="go">${ru?"Зарегистрироваться →":"Ro‘yxatdan o‘tish →"}</button></div>`; }
+function regSoft(el){ try{ if(!el||el.hidden||el.querySelector(".reg-cta")) return; const h=regSave(); if(!h) return; const c=el.querySelector(".lrn-end"); if(!c) return; c.insertAdjacentHTML("afterend",h);
+  let n=0, t=0; try{ n=(+localStorage.getItem("reg:n")||0)+1; t=+localStorage.getItem("reg:t")||0; localStorage.setItem("reg:n",String(n)); }catch(e){}
+  if(n>=3&&Date.now()-t>3*864e5){ try{ localStorage.setItem("reg:t",String(Date.now())); }catch(e){} setTimeout(()=>{ if(!ACC.cur&&!el.hidden) accLogin(); },1600); } }catch(e){} }
+["ex","lrn"].forEach(id=>{ const el=document.getElementById(id); if(!el) return; new MutationObserver(()=>{ if(!ACC.cur&&el.querySelector(".lrn-end")&&!el.querySelector(".reg-cta")) regSoft(el); }).observe(el,{childList:true}); });
 function regAdd(el){ try{ if(!el||el.hidden) return; const h=regCta(); if(!h||el.querySelector(".reg-cta")) return; const c=el.querySelector(".lrn-end"); if(c) c.insertAdjacentHTML("afterend",h); }catch(e){} }
 document.addEventListener("click",e=>{ if(!e.target.closest("[data-reg]")) return;
   ["chal","duel","ltp","kgp","lrn"].forEach(id=>{ const el=document.getElementById(id); if(el) el.hidden=true; }); document.body.style.overflow="";

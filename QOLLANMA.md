@@ -695,3 +695,7 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Sayt telefonga ilova sifatida o‘rnatiladi: manifest.webmanifest, sw.js, icons/ (Otabekning logosi — qizil-sariq lola, icons/logo.svg). Nomi «Streber».
 - Bosh sahifada «Streber’ni telefoningizga o‘rnating» kartasi: Android — «O‘rnatish» tugmasi, iPhone — Ulashish → «Bosh ekranga qo‘shish». × bosilsa 14 kun ko‘rsatilmaydi.
 - Service worker: sahifa har doim avval internetdan (eng yangi versiya), internet yo‘q bo‘lsa saqlangan nusxa. Ilova sayt bilan birga o‘zi yangilanadi.
+
+## 🚀 Beta hammaga ochiq — 2026-10-21
+- Yangi o‘quvchi paneli (interaktiv mashqlar) hamma uchun ochiq; kod kerak emas. Ustoz panelida eski ko‘rinishni yoqib ko‘rish mumkin.
+- Ro‘yxat majburiy emas: mehmon avval aylanib ko‘radi. Tepada «👤 Kirish» tugmasi. Har bo‘lim/mashg‘ulot oxirida «💾 Natijangizni saqlab qo‘ying» kartasi; 3-tugatishda bir marta (3 kunda ko‘pi bilan bir) ro‘yxat oynasi, ✕ bilan yopiladi. Mehmon natijalari birinchi ro‘yxatda akkauntga ko‘chadi.
