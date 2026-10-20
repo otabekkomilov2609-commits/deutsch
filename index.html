@@ -1440,14 +1440,15 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
-/* so'z ichidagi bo'shliq (Neffe___ → Neffen): katak yo'q, so'z yaxlit o'qiladi — faqat tagida chiziq, harf rangli (2026-10-21, Otabek) */
-.ex-nw .ex-gw{margin:0!important}
-.ex-nw .ex-gap{background:transparent!important;border-radius:0!important;padding:0 1px!important;margin:0!important;min-width:0!important;font-size:inherit;font-weight:800;color:var(--blue);border-bottom:3px solid var(--blue)!important;text-align:left}
-.ex-nw .ex-gap:focus,.ex-nw .ex-gap:focus-visible{background:transparent!important;border-bottom-color:var(--orange)!important;outline:none!important;box-shadow:none!important}
-.ex-nw .ex-gw:focus-within,.ex-nw .ex-gw{outline:none!important;box-shadow:none!important;background:transparent!important}
-.ex-nw .ex-gap.ok{color:var(--green);border-bottom-color:var(--green)!important;background:transparent!important}
-.ex-nw .ex-gap.bad{color:#C62828;border-bottom-color:#C62828!important;background:transparent!important}
-.ex-nw .ex-dv{justify-content:flex-start;padding:0 1px!important;font-weight:800}
+/* bo'shliqlar (gapda ham, so'z ichida ham): katak yo'q — gap yaxlit o'qiladi, faqat tagida chiziq, yozilgan harflar rangli (2026-10-21, Otabek: butun saytda) */
+.ex-gs .ex-gw{margin:0 2px!important}
+.ex-gs .ex-nw .ex-gw{margin:0!important}
+.ex-gs .ex-gap{background:transparent!important;border-radius:0!important;padding:0 1px!important;margin:0!important;min-width:0!important;font-size:inherit;font-weight:800;color:var(--blue);border-bottom:3px solid var(--blue)!important;text-align:left}
+.ex-gs .ex-gap:focus,.ex-gs .ex-gap:focus-visible{background:transparent!important;border-bottom-color:var(--orange)!important;outline:none!important;box-shadow:none!important}
+.ex-gs .ex-gw:focus-within,.ex-gs .ex-gw{outline:none!important;box-shadow:none!important;background:transparent!important}
+.ex-gs .ex-gap.ok{color:var(--green);border-bottom-color:var(--green)!important;background:transparent!important}
+.ex-gs .ex-gap.bad{color:#C62828;border-bottom-color:#C62828!important;background:transparent!important}
+.ex-gs .ex-dv{justify-content:flex-start;padding:0 1px!important;font-weight:800}
 
 /* Regel ekrani — Muster dizayni (Otabek, 2026-10-21: «chiroyli, ranglar ko'p, muster dizaynda»): ko'k sarlavha-lenta, rangli kelishik belgilari, qo'shimchalar to'q sariq, eslatma — sariq karta */
 .ex-x h4{display:flex;align-items:center;gap:8px;margin:0 0 12px;padding:10px 14px;border-radius:14px;background:var(--blue);color:#fff;font-size:18px;font-weight:800;line-height:1.3}
@@ -3281,12 +3282,12 @@ function exGapLock(i,on){ i.readOnly=!!on; i.classList.toggle("lk",!!on); if(on)
 function exGapFit(i){ try{ const cs=getComputedStyle(i); if(!i.dataset.fs0) i.dataset.fs0=parseFloat(cs.fontSize)||19; const fs=+i.dataset.fs0; const cv=exGapFit._c||(exGapFit._c=document.createElement("canvas").getContext("2d")); cv.font=`${cs.fontStyle} ${cs.fontWeight} ${fs}px ${cs.fontFamily}`;
   const mw=t=>{ try{ return cv.measureText(t).width; }catch(e){ return t.length*fs*.62; } };
   /* "?" tugmasi endi katak tashqarisida (burchakda) — ichida 34px joy kerak emas; uzun so'z telefonda kartadan chiqsa — shrift kichrayadi (2026-10-20, Otabek: «so'z katakka sig'mayapti») */
-  const ans=i.dataset.ans||""; const w=Math.max(mw(i.value||""), mw(ans), (i.value||"").length*fs*.6, 1.2*fs); let nw=Math.ceil(w+8+8+12);
+  const ans=i.dataset.ans||""; const w=Math.max(mw(i.value||""), mw(ans), (i.value||"").length*fs*.6, 1.6*fs); let nw=Math.ceil(w+10);
   if(i.closest(".ex-nw")){ const tw=Math.ceil(Math.max(mw(i.value||""),mw(ans),.55*fs)+3); i.style.width=tw+"px"; return; } /* so'z ichida — tor, katak yo'q */
   const host=i.closest(".ex-q")||i.closest(".ex-w"), avail=host?host.clientWidth-8:0; let f=fs;
   if(avail>80&&nw>avail){ f=Math.max(12,Math.floor(fs*avail/nw)); nw=avail; }
   i.style.fontSize=f<fs?f+"px":"";
-  if(nw>(parseFloat(i.style.width)||0)||!i.value||f<fs) i.style.width=Math.max(40,nw)+"px";
+  if(nw>(parseFloat(i.style.width)||0)||!i.value||f<fs) i.style.width=Math.max(Math.round(1.6*fs),nw)+"px";
   const sp=i.closest(".ex-nw"); if(sp&&host) { const big=sp.getBoundingClientRect().width>host.clientWidth; sp.style.whiteSpace=big?"normal":""; sp.style.overflowWrap=big?"anywhere":""; } }catch(e){} }
 function exGapDiff(i,alts,maxD){ const v=i.value, w=i.closest(".ex-gw"), d=w&&w.querySelector(".ex-dv"); if(!d) return false; const u=iaNorm(v);
   const art=alts.map(x=>iaNorm(x)).find(x=>/^(der|die|das|den|dem|des|ein|eine|einen|einem|einer) /.test(x)&&x.replace(/^\S+ /,"")===u); let h="";
