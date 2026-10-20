@@ -264,7 +264,7 @@ main{padding-block:6px 40px}
 .lrn-inw.artw input{color:transparent;caret-color:var(--ink);border-color:#e3a1a1}.lrn-inw.artw .lrn-ov{display:block}
 .lrn-ov .lrn-artl{display:inline-block;font-weight:inherit;color:#d0021b;background:#fde2e2;border-radius:4px;text-decoration:underline wavy #d0021b;text-underline-offset:4px}
 .lrn-ov .lrn-artl.sh{animation:lrnArtShake .5s ease 2}
-.lrn-ov .dx{color:#d0021b;background:#fde2e2;border-radius:3px;padding:0 1px}.lrn-ov .dm{color:#d0021b;font-weight:800}
+.lrn-ov .dx{color:#d0021b;background:#fde2e2;border-radius:3px;padding:0 1px}.lrn-ov .dm{color:#d0021b;font-weight:800}.gm-df .dx{color:#d0021b;background:#fde2e2;border-radius:3px;padding:0 1px}.gm-df .dm{color:#d0021b;font-weight:800}.gm-df .lrn-artl{color:#d0021b;background:#fde2e2;border-radius:4px;text-decoration:underline wavy #d0021b;text-underline-offset:4px}
 .lrn-inw.shk{animation:lrnShake .35s}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lrn-ov .dx{background:#5a2020;color:#FF8A80}:root:not([data-theme="light"]) .lrn-ov .dm{color:#FF8A80}}:root[data-theme="dark"] .lrn-ov .dx{background:#5a2020;color:#FF8A80}:root[data-theme="dark"] .lrn-ov .dm{color:#FF8A80}
 .lrn-keys{display:flex;gap:6px}.lrn-keys.uk{position:relative;z-index:5}.uk .uk-p{display:none;position:absolute;left:0;top:calc(100% + 6px);gap:4px;padding:5px;border:1px solid var(--line);border-radius:12px;background:var(--card,var(--bg));box-shadow:0 8px 24px rgba(0,0,0,.18);white-space:nowrap}.uk .uk-p .lrn-key{width:38px}.uk.open .uk-p{display:flex;animation:ukIn .15s ease-out}.uk.open .uk-t{border-color:var(--blue);background:var(--blue-soft)}@keyframes ukIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}.lrn-key{width:42px;height:38px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font:inherit;font-size:17px;cursor:pointer}
@@ -3509,6 +3509,17 @@ function lrnHintMark(i, v, x, j, quiet){ const w=document.getElementById("lrn-in
   if(h){ ov.innerHTML=h; w.classList.add("artw"); ov.scrollLeft=i.scrollLeft; } else { w.classList.remove("artw"); ov.innerHTML=""; }
   if(quiet){ if(h) errCaret(i,h); return; } /* yozayotganda — silkitmasdan, faqat belgi; kursor xato joyiga */
   w.classList.remove("shk"); void w.offsetWidth; w.classList.add("shk"); i.focus(); if(!(h&&errCaret(i,h))){ try{ i.setSelectionRange(v.length,v.length); }catch(e){} } }
+/* O'yinlarda ham: artikl yetishmasa «_», harf xato bo'lsa — qizil tagiga chizish (Yodlashdagidek). 2026-10-20 */
+function gmMark(pre,v,de,j){ const w=document.getElementById(pre+"-inw"), ov=document.getElementById(pre+"-ov"), i=document.getElementById(pre+"-in"); if(!w||!ov||!i) return false;
+  let h=""; j=j||lrnJudge(v,{de});
+  if(j.art){ const k=v.search(/\S/); h=esc(v.slice(0,k))+`<b class="lrn-artl sh">${esc(v.slice(k,k+3))}</b>`+esc(v.slice(k+3)); }
+  else if(j.note===lt("artNote")){ const k=v.search(/\S/); h=esc(v.slice(0,k))+'<b class="dm">_</b> '+esc(v.slice(k)); }
+  else if(j.close){ const vs=lrnVariants(de); h=iasDiff(v,{a:vs[0],ok:vs}); }
+  if(!h){ gmMarkClear(pre); return false; }
+  ov.innerHTML=h; w.classList.add("artw"); ov.scrollLeft=i.scrollLeft; try{ errCaret(i,h); }catch(e){} return true; }
+function gmDiff(v,de){ try{ const j=lrnJudge(v,{de}); if(j.ok||!j.close) return ""; if(j.art){ const k=v.search(/\S/); return esc(v.slice(0,k))+`<b class="lrn-artl">${esc(v.slice(k,k+3))}</b>`+esc(v.slice(k+3)); }
+  if(j.note===lt("artNote")){ const k=v.search(/\S/); return esc(v.slice(0,k))+'<b class="dm">_</b> '+esc(v.slice(k)); } const vs=lrnVariants(de); return iasDiff(v,{a:vs[0],ok:vs})||""; }catch(e){ return ""; } }
+function gmMarkClear(pre){ const w=document.getElementById(pre+"-inw"), ov=document.getElementById(pre+"-ov"); if(w) w.classList.remove("artw"); if(ov) ov.innerHTML=""; }
 function lrnFeedback(ok, x, extra){
   const fb=document.getElementById("lrn-fb"); LR.answered=true;
   const praise=lt("right")[Math.floor(Math.random()*lt("right").length)];
@@ -4845,7 +4856,7 @@ function ltpQ(){
     <div class="ch-top"><span class="ch-score">✓ ${ltSc(sc)} / ${n} · ${esc(lz("left")(LTP.q.length))}</span><span class="ch-rank" id="lt-place"></span></div>
     <div class="lrn-card"><div class="ch-q">${esc(x.q)}</div><div class="lrn-ask">${esc(lz("write"))}${LTP.best[k]===.5?` · <span class="lt-half">≈ 0,5</span>`:""}</div>
       ${LTP.hw[k]?`<div class="lt-mask" lang="de">${esc(ltpMask(x.de))}</div>`:""}
-      <form class="lrn-wr" id="lt-wr" autocomplete="off"><input id="lt-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(lz("ph"))}">
+      <form class="lrn-wr" id="lt-wr" autocomplete="off"><div class="lrn-inw" id="lt-inw"><input id="lt-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(lz("ph"))}"><div class="lrn-ov" id="lt-ov" aria-hidden="true"></div></div>
       ${umKeys("data-ltk")}
         <button type="button" class="lt-help" data-lt="help"${LTP.hl>0&&!LTP.hw[k]?"":" disabled"}>${esc(LTP.hl>0?lz("help")(LTP.hl):lz("helpNo"))}</button></div>
       ${noun?`<div class="lrn-hint">💡 ${esc(lz("art"))}</div>`:""}
@@ -4856,7 +4867,7 @@ function ltpQ(){
     <button type="button" class="lrn-link lt-fin" data-lt="fin">${esc(lz("fin"))}</button></div>`;
   ltpTick(); ltpBoard(); setTimeout(()=>{ const i=document.getElementById("lt-in"); if(i) i.focus(); },30);
   /* to'g'ri yozilishi bilan — «Tekshirish»siz keyingisiga (2026-10-18) */
-  const inp=document.getElementById("lt-in"); if(inp) inp.addEventListener("input",()=>{ clearTimeout(LTP.autoT); const kk=LTP.q[0], xx=LTP.qs[kk];
+  const inp=document.getElementById("lt-in"); if(inp) inp.addEventListener("input",()=>{ clearTimeout(LTP.autoT); gmMarkClear("lt"); const kk=LTP.q[0], xx=LTP.qs[kk];
     LTP.autoT=setTimeout(()=>{ if(LTP.st!=="play"||LTP.lock||LTP.q[0]!==kk||!inp.isConnected) return; if(lrnJudge(inp.value,xx).ok) ltpAnswer(false); },350); });
 }
 /* «Bilmayman»: to'g'ri javob ko'rsatiladi, so'z 0 ball bilan o'tadi (qaytmaydi). «← Orqaga»: oxirgi o'tkazib yuborilgan so'zga qaytadi. */
@@ -4879,7 +4890,7 @@ function ltpAnswer(skip){
     const fb=document.getElementById("lt-fb");
     if(fb){ if(near){ fb.className="lrn-fb near"; fb.innerHTML=`<div class="lrn-v">≈ ${esc(lz("near"))} +0,5</div>${j.note?`<div class="lrn-note">${esc(j.note)}</div>`:""}`; } else { fb.className="lrn-fb"; fb.innerHTML=""; } }
     const sc=document.querySelector(".ch-score"); if(sc) sc.textContent=`✓ ${ltSc(LTP.ok)} / ${LTP.qs.length} · ${lz("left")(LTP.q.length)}`;
-    if(i){ i.classList.remove("lt-shake","lt-near"); void i.offsetWidth; i.classList.add("lt-shake"); if(near) i.classList.add("lt-near"); i.select(); i.focus(); }
+    if(i){ i.classList.remove("lt-shake","lt-near"); void i.offsetWidth; i.classList.add("lt-shake"); if(near) i.classList.add("lt-near"); i.focus(); if(!gmMark("lt",v,x.de,j)) i.select(); }
     if(navigator.vibrate) try{ navigator.vibrate(near?60:[40,40,40]); }catch(err){}
     return; }
   LTP.lock=true; if(i) i.disabled=true;
@@ -5659,7 +5670,7 @@ function kgpJoin(){ const i=document.getElementById("kg-name"), nm=(i.value||"")
 function kgpQCard(q){ const one=q.o&&q.o.some(o=>o.length>22||o.split(/\s+/).some(w=>w.length>11)); /* uzun so'z ikki qatorga bo'linmasin */
   return `<div class="lrn-card"><div class="ch-q" lang="de">${kgQtx(q.q)}</div>
   ${q.o?`<div class="kgp-opts${one?" one":""}">${q.o.map((o,j)=>`<button type="button" class="kg-o" style="--c:${KG_COL[j][0]}" data-kgo="${j}"><i>${KG_COL[j][1]}</i><span lang="de">${esc(o)}</span></button>`).join("")}</div>`
-    :`<form class="lrn-wr" id="kg-wr" autocomplete="off"><div class="lrn-ask">${esc(kz("write"))}</div><input id="kg-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(kz("ph"))}">
+    :`<form class="lrn-wr" id="kg-wr" autocomplete="off"><div class="lrn-ask">${esc(kz("write"))}</div><div class="lrn-inw" id="kg-inw"><input id="kg-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(kz("ph"))}"><div class="lrn-ov" id="kg-ov" aria-hidden="true"></div></div>
       ${umKeys("data-kgk")}
       <div class="lt-nav"><button type="button" class="lrn-link lt-dn" data-kgp="dunno">${esc(kz("dunno"))}</button></div>
       <button type="submit" class="btn primary lt-chk">${esc(kz("send"))}</button></form>`}</div>`; }
@@ -5691,7 +5702,7 @@ function kgpAns(v,late){ if(KGP.lock||KGP.st!=="play"||!KGP.qs) return;
     KGP.a[i]=[v,Math.min(ms,T)]; KGP.lock=true; kgpSave(); kgpPub(true); if(navigator.vibrate) try{ navigator.vibrate(30); }catch(e){} kgpRender(); return; }
   const k=KGP.cur, q=KGP.qs[k]; if(!q||KGP.a[k]) return; KGP.lock=true; KGP.a[k]=[v,Date.now()-KGP.t0]; const good=kgJudge(q,v); kgpSave(); kgpPub(false);
   kgpEl().querySelectorAll("[data-kgo]").forEach(b=>{ const j=+b.dataset.kgo; b.disabled=true; b.classList.add(q.c.includes(j)?"ok":(v!==""&&j===+v)?"bad":"no"); });
-  const inp=document.getElementById("kg-in"); if(inp) inp.disabled=true;
+  const inp=document.getElementById("kg-in"); if(inp){ inp.disabled=true; if(!good&&!q.o&&v) gmMark("kg",String(v),String(q.a||"")); }
   const fb=document.getElementById("kg-fb"); if(fb) fb.innerHTML=`<div class="kgp-res ${good?"ok":"bad"}">${good?"✓ "+esc(kz("ok")):late?"⏰ "+esc(kz("late")):"✗ "+esc(kz("no"))}${good?"":`<div><small>${esc(kz("corr"))}</small> <b lang="de">${esc(kgCor(q))}</b></div>`}</div>`;
   if(navigator.vibrate) try{ navigator.vibrate(good?30:[40,40,40]); }catch(e){}
   kgpFx(good); kgSnd(good?"ok":"bad",0); KGP.stk=good?(KGP.stk||0)+1:0; if(good&&KGP.stk>=3){ kgpToast(kz("streak")(KGP.stk),"","fire"); setTimeout(()=>kgSnd("streak",0),250); }
@@ -5699,7 +5710,7 @@ function kgpAns(v,late){ if(KGP.lock||KGP.st!=="play"||!KGP.qs) return;
 /* oxirida barcha savollar: ✓/✗, o'quvchi javobi, xato bo'lsa — to'g'ri javob (2026-10-18) */
 function kgpMissHTML(L){ const ok=L.filter(x=>x[2]).length;
   return `<div class="lrn-card"><div class="tp-lbh"><h3>${esc(kz("review"))}</h3><span class="kgp-cnt"><b class="y">✓ ${ok}</b> <b class="n">✗ ${L.length-ok}</b></span></div><ol class="kgp-all">${L.map(([q,a,g],i)=>{ const has=a&&a[0]!==""&&a[0]!=null;
-    return `<li class="${g?"ok":"bad"}"><span class="ic">${g?"✓":"✗"}</span><div><div class="q"><small>${i+1}.</small> <span lang="de">${esc(q.q)}</span></div><div class="a">${g?`<b lang="de">${esc(kgVal(q,a[0]))}</b>`:`${has?`<s lang="de">${esc(kgVal(q,a[0]))}</s>`:`<em>—</em>`} <b lang="de">→ ${esc(kgCor(q))}</b>`}</div></div></li>`; }).join("")}</ol></div>`; }
+    return `<li class="${g?"ok":"bad"}"><span class="ic">${g?"✓":"✗"}</span><div><div class="q"><small>${i+1}.</small> <span lang="de">${esc(q.q)}</span></div><div class="a">${g?`<b lang="de">${esc(kgVal(q,a[0]))}</b>`:`${has?(!q.o&&gmDiff(String(a[0]),String(q.a||""))?`<span class="gm-df" lang="de">${gmDiff(String(a[0]),String(q.a||""))}</span>`:`<s lang="de">${esc(kgVal(q,a[0]))}</s>`):`<em>—</em>`} <b lang="de">→ ${esc(kgCor(q))}</b>`}</div></div></li>`; }).join("")}</ol></div>`; }
 function kgpDone(){ const n=KGP.qs.length, me=kgpStat(KGP.a), miss=KGP.qs.map((q,i)=>{ const x=KGP.a[i]; return [q,x,!!x&&kgJudge(q,x[0])]; });
   kgpEl().innerHTML=kgpHead()+`<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">🏁</div><h3>${esc(kz("done"))}</h3><p class="ch-big"><b>${esc(kz("score")(me.ok,n))}</b> · ⏱ ${ltFmt(me.tie)}</p><p class="ch-big" id="kg-place"></p></div>
     ${kgpMissHTML(miss)}<div class="lrn-card"><h3>${esc(kz("board"))}</h3><div id="kg-board"></div></div></div>`; kgpBoard(); }
