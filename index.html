@@ -1040,7 +1040,9 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .ias .ias-head{position:static!important;margin:0!important;padding:0!important;box-shadow:none!important;background:none!important}
 .ias-fix{display:flex;flex-direction:column;gap:12px;margin:-16px -12px 0;padding:14px 12px 12px;background:var(--bg)}
 /* telefonda bittalab rejimida yuqori panel (−/+, Javoblar, yuklab olish) kerak emas — joy savolga (2026-10-18) */
-.v-body,.lrn{overflow-anchor:none} /* brauzer o'zi surmasin (scroll anchoring) — savol sakramasin */
+.v-body,.lrn{overflow-anchor:none}
+/* iPad/iPhone: tez scroll yoki klaviatura ochilganda orqadagi sahifa ko'rinmasin (2026-10-21) */
+.lrn{overscroll-behavior:contain;box-shadow:0 0 0 100vmax var(--bg)}.snd{overscroll-behavior:contain;box-shadow:0 0 0 100vmax rgba(10,18,35,.55)}html:has(body[style*="overflow: hidden"]){overflow:hidden;overscroll-behavior:none} /* brauzer o'zi surmasin (scroll anchoring) — savol sakramasin */
 .ias-fb.ias-fbq{display:flex;justify-content:flex-end;padding:0!important;margin:-4px 0 0;background:none!important;border:0!important;box-shadow:none!important;min-height:0}
 .ias-qb{width:40px;height:40px;border-radius:50%;border:2px solid #C62828;background:var(--surface);color:#C62828;font:800 22px/1 inherit;cursor:pointer;display:grid;place-items:center;animation:iasPop .45s ease;box-shadow:0 2px 8px rgba(198,40,40,.18)}
 .ias-fb.ias-fbw{position:relative;padding-right:46px!important}.ias-fbw .ias-why{margin-top:0}
