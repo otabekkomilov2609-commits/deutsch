@@ -179,7 +179,7 @@ main{padding-block:6px 40px}
 #lrn .mu-in{font:inherit;font-weight:800;color:var(--blue);background:var(--surface);border:0;border-bottom:2.5px solid var(--blue);border-radius:8px 8px 0 0;padding:0 4px;min-width:4ch;outline:none;text-align:center;line-height:1.5}
 #lrn .mu-ov{position:absolute;inset:0;padding:0 4px;font-weight:800;line-height:1.5;text-align:center;white-space:pre;pointer-events:none;display:none;color:var(--ink)}
 #lrn .mu-gw.mk .mu-in{color:transparent;caret-color:var(--ink)}#lrn .mu-gw.mk .mu-ov{display:block}
-#lrn .mu-gw.rdy .mu-in{color:var(--green);border-color:var(--green);background:var(--green-soft)}#lrn #mu-chk.ready{background:var(--green)!important;border-color:var(--green)!important;color:#fff}
+#lrn .mu-gw.rdy .mu-in{color:var(--green);border-color:var(--green);background:var(--green-soft)}#lrn #mu-chk.ready{background:var(--green)!important;border-color:var(--green)!important;color:#fff}#lrn .btn.primary.ready{box-shadow:0 4px 0 #1d5a3e!important}
 #lrn .mu-say{margin-left:8px;vertical-align:middle}#lrn .mu-tot{margin:10px 0 4px}#lrn .mu-tot b{display:block;margin-top:6px;font-size:15px}#lrn .mu-left{color:var(--muted)}#lrn .mu-rq{margin-top:6px;font-size:14px;color:var(--muted);text-align:center;font-weight:700}#lrn .mu-cont{font-style:normal;font-size:13px;color:var(--green);margin-left:6px;white-space:nowrap}
 #lrn-inw.rdy input{border-color:var(--green)!important;background:var(--green-soft)!important;color:var(--green)!important;box-shadow:none!important}
 .ias:not(.ias-inl) .ias-input.ok{border-color:var(--green)!important;background:var(--green-soft)!important;color:var(--green)!important}
@@ -1517,7 +1517,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-nav .ias-go .ex-ar.pop{animation:exArPop .45s cubic-bezier(.3,1.6,.5,1)}
 @keyframes exArPop{0%{transform:scale(.2) rotate(-90deg);opacity:0}100%{transform:none;opacity:1}}
 .ex-nav .ias-go.next.thaw,.ex-nav .ias-go.next{transition:background .25s}
-.ex-nav .ias-go.lkb.crk{animation:exCrk .42s}
+.ex-nav .ias-go.lkb.crk{animation:exCrk .42s}.lkb .ex-lk,.ias-pr .ex-lk,.ias-go .ex-lk{display:inline-flex;align-items:center;justify-content:center;width:18px;margin-left:6px;vertical-align:-2px}.ias-pr .ex-ar,.ias-go .ex-ar,#lrn .btn .ex-ar{display:inline-block;margin-left:4px}
 .ex-nav .ias-go.lkb.crk .ex-lk{animation:exLkW .5s}
 @keyframes exLkW{0%,100%{transform:none}25%{transform:rotate(-22deg) scale(1.25)}50%{transform:rotate(18deg) scale(1.25)}75%{transform:rotate(-10deg)}}
 
@@ -3278,6 +3278,9 @@ function exProgDraw(later){ const n=EX.q.length, okN=exOkN(), pb=document.getEle
   const gi=exGi(), g=EX.G[gi], c=document.getElementById("ex-cnt"); if(c) c.textContent=g?`${EX.scr==="b"?1:g.ks.indexOf(EX.qi)+1+(g.bsp?1:0)} / ${g.ks.length+(g.bsp?1:0)}`:`${EX.qi+1} / ${n}`; exSecRender(); }
 /* «Prüfen» yo'q (2026-10-21, Otabek): javob to'g'ri bo'lmaguncha tugma «muzlagan» ❄ Weiter; to'g'ri bo'lsa muz eriydi — yashil Weiter. Muzlagan tugma bosilsa — xato ko'rsatiladi */
 const EX_LOCK='<svg class="ex-lki" viewBox="0 0 26 30" width="15" height="17" aria-hidden="true"><path d="M6 13V9a7 7 0 0 1 14 0v4" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/><path d="M6 13V9a7 7 0 0 1 14 0v4" fill="none" stroke="#E53935" stroke-width="3.4" stroke-linecap="round"/><rect x="1" y="12" width="24" height="18" rx="5" fill="#fff"/><rect x="2.5" y="13.5" width="21" height="15" rx="4" fill="#E53935"/><circle cx="13" cy="20" r="2.3" fill="#fff"/><rect x="12" y="20" width="2" height="5" rx="1" fill="#fff"/></svg>';
+/* Bir xil «qulfli Weiter» — Lernen, Muloqot va grammatika varaqlarida ham (2026-10-21, Otabek: «prüfen uchit slovada qulfli weiterga o'xshamapti») */
+function lkHTML(ok,pop){ return ok?`Weiter <span class="ex-ar${pop?" pop":""}">→</span>`:`Weiter <span class="ex-lk">${EX_LOCK}</span>`; }
+function lkSet(b,ok,cls){ if(!b) return; cls=cls||"ready"; const was=b.classList.contains("lkb"); b.classList.toggle("lkb",!ok); b.classList.toggle(cls,ok); b.innerHTML=lkHTML(ok,was&&ok); b.setAttribute("aria-label",ok?"Weiter":"Weiter (erst richtig antworten)"); }
 /* «Prüfen» yo'q (2026-10-21, Otabek): tugma doim «Weiter»; javob to'g'ri bo'lmaguncha o'ng tomonda kichik qizil qulf (tugma ko'k), to'g'ri bo'lsa qulf strelkaga aylanadi, tugma yashil. Qulfli tugma bosilsa — xato ko'rsatiladi */
 function exGo(mode,label){ const go=document.getElementById("ex-go"); if(!go) return; const wasLk=go.classList.contains("lkb"); go.classList.toggle("lkb",mode==="chk"); go.classList.remove("ice"); go.hidden=mode==="hide"; go.classList.toggle("next",mode==="next"); go.classList.toggle("vst",mode==="vst"); go.dataset.x=mode==="vst"?"vst":mode==="next"?"next":"chk";
   if(label) go.textContent=label; else if(mode==="vst") go.textContent="Verstanden ✓"; else if(mode==="chk") go.innerHTML=`Weiter <span class="ex-lk">${EX_LOCK}</span>`; else go.innerHTML=`Weiter <span class="ex-ar${wasLk?" pop":""}">→</span>`;
@@ -3695,7 +3698,7 @@ function muShow(){ const st=MU.steps[MU.k]; if(!st){ muEnd(); return; } const uz
       <div class="mu-b out gap" lang="de">${esc(g.pre)}${st.bank?`<span class="mu-slot" id="mu-slot">${"&nbsp;".repeat(Math.max(4,g.w.length))}</span>`:`<span class="mu-gw" id="mu-gw"><input id="mu-in" class="mu-in" style="width:${wl+1}ch" placeholder="${esc(g.w[0])}…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-label="?"><span class="mu-ov" id="mu-ov"></span></span>`}${esc(g.post)}</div></div>
       <div class="mu-cue">💡 ${uz?"Ma’nosi:":"Значение:"} <b>«${esc(muCue(x))}»</b></div>
       ${st.bank?`<div class="mu-wb">${st.opts.map((w,k)=>`<button type="button" class="mu-w" data-mu="wb" data-k="${k}" lang="de">${esc(w)}</button>`).join("")}</div><div id="mu-after"></div></div>`:`<div class="mu-keys">${["ä","ö","ü","ß"].map(c=>`<button type="button" class="mu-key" data-mu="ch" data-c="${c}">${c}</button>`).join("")}</div>
-      <div class="lrn-row2"><button type="button" class="lrn-link" data-mu="giveup">${esc(lt("dontknow"))}</button><button type="button" class="btn primary" data-mu="chk" id="mu-chk">${esc(lt("check"))}</button></div><div id="mu-after"></div></div>`}`; }
+      <div class="lrn-row2"><button type="button" class="lrn-link" data-mu="giveup">${esc(lt("dontknow"))}</button><button type="button" class="btn primary lkb" data-mu="chk" id="mu-chk">${lkHTML(false)}</button></div><div id="mu-after"></div></div>`}`; }
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${muProg()}${h}</div>`;
   if(st.t==="gap"&&!st.bank) setTimeout(()=>{ const i=document.getElementById("mu-in"); if(i) i.focus(); },60); }
 function muNext(){ MU.k++; muShow(); }
@@ -3740,7 +3743,7 @@ document.addEventListener("keydown",e=>{ if(e.target&&e.target.id==="mu-in"&&e.k
 /* yozayotganda: belgi o'chadi; to'xtasa (1,1 s) — 1–2 harf xato bo'lsa "iloncha" (Lernen'dagidek) */
 document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="mu-in") return; const w=document.getElementById("mu-gw"), ov=document.getElementById("mu-ov"), inp=e.target; if(!w) return; w.classList.remove("mk","shk"); ov.innerHTML="";
   inp.style.width=Math.max(parseFloat(inp.style.width)||4,inp.value.length+2)+"ch"; clearTimeout(MU.liveT); const st=MU.steps[MU.k]; if(!st||st.t!=="gap") return;
-  { const rd=!MU.done&&!MU.tries&&inp.value.trim().toLowerCase()===st.g.w.toLowerCase(), b=document.getElementById("mu-chk"); w.classList.toggle("rdy",rd); if(b){ b.classList.toggle("ready",rd); b.textContent=rd?lt("next")+" →":lt("check"); } }
+  { const rd=!MU.done&&!MU.tries&&inp.value.trim().toLowerCase()===st.g.w.toLowerCase(), b=document.getElementById("mu-chk"); w.classList.toggle("rdy",rd); if(b&&rd!==b.classList.contains("ready")) lkSet(b,rd); }
   MU.liveT=setTimeout(()=>{ if(MU.done||!inp.isConnected||document.activeElement!==inp) return; const v=inp.value; if(!v.trim()||v.trim().toLowerCase()===st.g.w.toLowerCase()) return; const h=iasDiff(v,{a:st.g.w,ok:[st.g.w]},2); if(h){ ov.innerHTML=h; w.classList.add("mk"); errCaret(inp,h); } },1100); });
 function muEnd(){ const uz=state.lang!=="ru", n=MU.steps.length, r=n?MU.okN/n:0; const m=MU.newM||0; muSessPut();
   try{ const mm=byId[LR.id], all=muAll(), ms=muStore(); if(mm) accAuto("mu:"+LR.id, accLvl(mm), "💬 Muloqot · "+mm.title, all.filter(x=>ms[x.i]).length, all.length, 0); }catch(e){}
@@ -3829,7 +3832,7 @@ function lrnAsk(){
     lrnEl().innerHTML=top+`<div class="lrn-ask">${esc(lt(lernData()[LR.id].kind==="perfekt"?"writeP":"write"))}</div>
       <form class="lrn-wr" id="lrn-wr" autocomplete="off"><div class="lrn-inw" id="lrn-inw"><input id="lrn-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(lt("ph"))}"><div class="lrn-ov" id="lrn-ov" aria-hidden="true"></div></div>
       ${umKeys("data-ch")}${lrnHint(x)}
-      <div class="lrn-row2"><button type="button" class="lrn-link" data-l="dunno">${esc(lt("dunno"))}</button><button type="submit" class="btn primary">${esc(lt("check"))}</button></div></form>
+      <div class="lrn-row2"><button type="button" class="lrn-link" data-l="dunno">${esc(lt("dunno"))}</button><button type="submit" class="btn primary lkb">${lkHTML(false)}</button></div></form>
       <div class="lrn-fb" id="lrn-fb"></div></div></div>`;
     LR.kind="wr"; setTimeout(()=>{ const i=document.getElementById("lrn-in"); if(i) i.focus(); },30);
   }
@@ -4100,7 +4103,7 @@ document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="lrn-in") ret
   if(!j.art&&!j.ok) LR.liveT=setTimeout(()=>{ if(LR.answered||!inp.isConnected||document.activeElement!==inp) return; const v=inp.value, j2=lrnJudge(v, LR.cur);
     if(!j2.ok&&!j2.art&&(j2.note===lt("artNote")||j2.close)) lrnHintMark(inp, v, LR.cur, j2, true); },1100); });
 document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="lrn-in"||LR.answered) return; const b=document.querySelector('#lrn-wr button[type="submit"]'); if(!b) return;
-  const j=lrnJudge(e.target.value, LR.cur), rd=!!(j.ok&&!j.note); { const w=document.getElementById("lrn-inw"); if(w) w.classList.toggle("rdy",rd); } if(rd!==b.classList.contains("ready")){ b.classList.toggle("ready",rd); b.textContent=rd?lt("next")+" →":lt("check"); } });
+  const j=lrnJudge(e.target.value, LR.cur), rd=!!(j.ok&&!j.note); { const w=document.getElementById("lrn-inw"); if(w) w.classList.toggle("rdy",rd); } if(rd!==b.classList.contains("ready")) lkSet(b,rd); });
 document.addEventListener("submit",e=>{
   if(e.target.id!=="lrn-wr") return; e.preventDefault(); if(LR.answered) return;
   const i=document.getElementById("lrn-in"), v=i.value; if(!lrnNorm(v)){ i.focus(); return; }
@@ -4296,12 +4299,12 @@ function iasRender(m){
   const first=IAS.steps.findIndex(s=>iasState(s.i)!=="ok"); IAS.k=first<0?0:first;
   V.el.classList.add("ias-on"); IAS.exSeen=new Set(); IAS.bspSeen=new Set(); IAS.force=null; IAS.scr=null;
   /* planshetda Zurück/Prüfen/Überspringen javob maydoni bilan bir blokda — klaviatura ochilganda tepaga "suzib" ketmaydi (2026-10-19, Otabek) */
-  const NAV=`<div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" class="ias-go" id="ias-go" aria-label="Prüfen">✓ Prüfen</button><button type="button" data-ias="skip">Überspringen →</button></div>`;
+  const NAV=`<div class="ias-nav"><button type="button" data-ias="prev">← Zurück</button><button type="button" class="ias-go lkb" id="ias-go" aria-label="Weiter">${lkHTML(false)}</button><button type="button" data-ias="skip">Überspringen →</button></div>`;
   V.body.innerHTML=`<div class="ias"><div class="ias-fix" id="ias-fix"><div class="ias-head"><div class="ias-top"><button type="button" class="ias-tb ias-x" data-iasx="1" title="Yopish" aria-label="Yopish">✕</button><div class="ias-pb"><i id="ias-pb"></i><b class="ias-pbok" id="ias-pbok">✓</b><b class="ias-pbe hid" id="ias-pbe"></b></div><span id="ias-cnt"></span><button type="button" class="ias-tb ias-solb" id="ias-solb" data-ias="sol" title="Lösung" aria-label="Lösung" hidden>💡</button>${IAS_EXPL[m.id]||(typeof HINTS!=="undefined"&&HINTS[m.id])?`<button type="button" class="ias-tb ias-ib" data-ias="info" title="Regel" aria-label="Regel">i</button>`:""}<button type="button" class="ias-tb" data-iam="page" title="Ganzes Arbeitsblatt" aria-label="Ganzes Arbeitsblatt">📄</button></div>
     <div class="ias-secs" id="ias-secs"></div>
     <div class="ias-task" id="ias-task"></div></div><p class="ias-p" id="ias-p"></p>
     <div class="ias-card" id="ias-card"></div><div class="ias-diff" id="ias-diff" hidden></div><div class="ias-fb" id="ias-fb"></div>
-    <button type="button" class="ias-pr" id="ias-pr">✓ Prüfen</button>
+    <button type="button" class="ias-pr lkb" id="ias-pr">${lkHTML(false)}</button>
     <button type="button" class="ias-wb" id="ias-wb" hidden>Weiter →</button>
     <div class="ias-bank" id="ias-bank"></div>
     <div class="ias-pre" id="ias-pre" hidden></div>
@@ -4518,8 +4521,8 @@ function iasOkFlash(){ const pb=document.getElementById("ias-pb"), ok=document.g
   ok.style.left=`calc(${pb.style.width} - 14px)`; ok.classList.remove("on"); void ok.offsetWidth; ok.classList.add("on");
   const sl=document.querySelector("#ias-card .ias-slot.cur.ok, #ias-card .ias-slot.ok"); if(sl){ sl.classList.remove("pop"); void sl.offsetWidth; sl.classList.add("pop"); } }
 function iasGoMode(){ const st=IAS.steps[IAS.k], go=document.getElementById("ias-go"), wb=document.getElementById("ias-wb"), inw=document.getElementById("ias-inw"); if(!st||!go) return;
-  const ok=iasState(st.i)==="ok"; go.classList.toggle("next",ok); go.textContent=ok?"Weiter →":"✓ Prüfen"; go.setAttribute("aria-label",ok?"Weiter":"Prüfen"); go.hidden=!!inw.hidden;
-  const pr=document.getElementById("ias-pr"); if(pr){ pr.classList.toggle("next",ok); pr.textContent=ok?"Weiter →":"✓ Prüfen"; }
+  const ok=iasState(st.i)==="ok"; if(ok!==go.classList.contains("next")||!go.querySelector(".ex-lk,.ex-ar")) lkSet(go,ok,"next"); go.hidden=!!inw.hidden;
+  const pr=document.getElementById("ias-pr"); if(pr&&(ok!==pr.classList.contains("next")||!pr.querySelector(".ex-lk,.ex-ar"))) lkSet(pr,ok,"next");
   if(wb) wb.hidden=!(ok&&(inw.hidden||V.body.querySelector(".ias-bw")&&[...V.body.querySelectorAll(".ias-bw")].some(b=>/…\s*$/.test(b.dataset.iasw)))); }
 function iasCheck(){ if(IAS.scr){ iasScrDone(); return; } const go=document.getElementById("ias-go"), st0=IAS.steps[IAS.k];
   if(go&&go.classList.contains("next")&&st0&&iasState(st0.i)==="ok"){ iasNext(true); return; } iasCheckOnly(); }
