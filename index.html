@@ -2413,7 +2413,9 @@ function progCount(){
   const D=lernData(), L=new Set(), K=new Set();
   Object.keys(D).forEach(id=>{ let st={}, kk=[]; try{ st=JSON.parse(store.get("lern:"+id)||"{}")||{}; }catch(e){} try{ kk=JSON.parse(store.get("lern:"+id+":kk")||"[]")||[]; }catch(e){}
     const kn=new Set(kk);
-    D[id].it.forEach((r,i)=>{ if(!r[4]||r[6]) return; if(st[i]===2) L.add(r[3]); else if(kn.has(i)) K.add(r[3]); }); });
+    let mu={}; try{ mu=JSON.parse(store.get("lern:"+id+":mu")||"{}")||{}; }catch(e){}
+    D[id].it.forEach((r,i)=>{ if(r[6]){ if(st[i]===2||mu[i]) L.add("R:"+r[3]); return; } /* Muloqot (Redemittel) yodlansa ham reytingga qo'shiladi — 2026-10-20, Otabek */
+      if(!r[4]) return; if(st[i]===2) L.add(r[3]); else if(kn.has(i)) K.add(r[3]); }); });
   return {n:L.size, k:[...K].filter(w=>!L.has(w)).length};
 }
 function progLv(n){ let i=0; PROG_LV.forEach((l,k)=>{ if(n>=l.n) i=k; }); return i; }
@@ -2424,7 +2426,7 @@ function progLevelUp(){ const n=progCount().n, i=progLv(n); let was=-1; try{ was
 function progUpHtml(){ const l=progLevelUp(); if(!l) return "";
   const uz=state.lang!=="ru"; return `<div class="lrn-up">${uz?"🎉 Yangi daraja!":"🎉 Новый уровень!"}<b>${esc(progLvName(l))}</b><small>${esc(uz?l.uz:l.ru)}</small></div>`; }
 function progRank(){ const n=progCount().n, l=PROG_LV[progLv(n)], uz=state.lang!=="ru";
-  return `<div class="lrn-rank">${l.e} <b>${esc(l.de)}</b> · ${uz?`jami ${n} ta so‘z o‘rganildi`:`всего выучено: ${n}`}</div>`; }
+  return `<div class="lrn-rank">${l.e} <b>${esc(l.de)}</b> · ${uz?`jami ${n} ta so‘z va ibora o‘rganildi`:`всего выучено слов и фраз: ${n}`}</div>`; }
 function progRender(){
   const el=document.getElementById("prog"); if(!el) return;
   let c; try{ c=progCount(); }catch(e){ el.hidden=true; return; }
@@ -2434,7 +2436,7 @@ function progRender(){
   el.innerHTML=`<div class="prog-badge" aria-hidden="true">${l.e}</div>
     <div class="prog-k">${uz?"Mening darajam":"Мой уровень"}</div>
     <div class="prog-name">${esc(l.de)}<small>${esc(uz?l.uz:l.ru)}</small></div>
-    <div class="prog-n"><b>${c.n}</b><span>${uz?"ta so‘z o‘rganildi":"слов выучено"}</span></div>
+    <div class="prog-n"><b>${c.n}</b><span>${uz?"ta so‘z va ibora o‘rganildi":"слов и фраз выучено"}</span></div>
     <div class="prog-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pc}"><i style="width:${Math.max(3,pc)}%"></i></div>
     <div class="prog-next">${nx? (uz?`Keyingi daraja <b>${esc(progLvName(nx))}</b> — yana <b>${nx.n-c.n}</b> ta so‘z`:`Следующий уровень <b>${esc(progLvName(nx))}</b> — ещё <b>${nx.n-c.n}</b> слов`) : (uz?"Eng yuqori daraja! 🏆":"Высший уровень! 🏆")}${c.k? ` · 🃏 ${uz?`${c.k} ta «Bilaman» so‘zni tekshirsangiz — hisobga qo‘shiladi`:`проверьте ${c.k} слов с «Знаю» — они засчитаются`}`:""}</div>
     <div class="prog-msg">${esc(uz?l.mu:l.mr)}</div>
