@@ -672,3 +672,8 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - **Sprechen — o'chirmaslik qoidasi (2026-10-20, Otabek: «sprechen mashqlarini olib tashlama, yangilik ko'rsang ham faqat yangi bo'lsa qo'sh; ko'rib chiqib nimani olib tashlashni o'zim aytaman»):** Sprechen to'plamlaridan item o'chirilmaydi/almashtirilmaydi — faqat yangisi qo'shiladi. A2.2 qayta ko'rib chiqishda almashtirilgan 68 ta eski item qaytarildi (to'plam oxirida, `old:1`, audiosiz — TTS).
 - **📋 Übersicht (2026-10-20, Otabek):** har modul (3 Lektion) uchun Grammatik + Kommunikation + barcha Redemittel to'liq; almashtiriladigan joy tagiga chizilgan (`<u>`); iborani bosganda ovozi. Modul «Wiederholung» blokida (`key:"m<n>"`, `doc:true`, doc-data).
 - **🎯 Nima uchun? + 💡 Strategiya (2026-10-20, Otabek):** har mashq turi (G/W/K/H/S/Lesen/Aussprache) birinchi ochilganda maqsad va strategiya ekrani; keyin 💡 tugmasi bilan.
+
+### 2026-10-20 (kech) — Aussprache, reyting, tugmalar
+- **Aussprache:** har guruh (mashq turi o'zgarganda) oldidan «📘 Regel» ekrani — nimani eshitish, qanday aytish, qoida, o'zbek/rus o'quvchisiga xos xato (info item: `h` o'zbekcha, `ru` ruscha, ≤70 so'z). O'ylab topilgan so'zli variantlar yo'q — imlo savoli harf yozish (`___iosk` → K) shaklida. So'zlar Wiktionary native yozuvlari bilan o'qiladi; gaplar — Azure.
+- **Reyting:** yodlangan muloqot iboralari (Redemittel) ham so'zlar qatori hisoblanadi.
+- **Tanlash tugmalari:** guruhdagi biror javob tugmalarda bo'lmasa — butun guruh yoziladi (tugma bor/yo'qligi javobni oshkor qilmasin).

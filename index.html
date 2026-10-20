@@ -1416,7 +1416,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-x h4{margin:4px 0 2px;font-size:17px}.ex-x .ex-note{margin-top:4px}
 .ex-bsp{border:2px dashed var(--green);border-radius:14px;padding:12px 14px;background:color-mix(in srgb,var(--green-soft) 55%,transparent);font-size:22px;line-height:1.5}.ex-bsp span{display:block;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:4px}.ex-bsp div b{color:var(--green);background:var(--green-soft);border-bottom:2px solid var(--green);padding:0 6px;border-radius:6px 6px 0 0}
 .ex-ctx{font-size:17px;opacity:.9}
-.ex-w{position:relative}.ex-gw{position:relative;display:inline-block}.ex-gw .ex-gap{padding-right:34px}
+.ex-w{position:relative}.ex-gw{position:relative;display:inline-block}.ex-gw .ex-gap{padding-right:8px}
 .ex-qb.in{position:absolute;right:3px;top:50%;transform:translateY(-50%);width:28px;height:28px;font-size:16px;z-index:2}
 .ex-qb:not(.in){position:absolute;right:-8px;bottom:-10px;z-index:2}
 .ex-nav{margin-top:2px}.ex-nav.scr button:not(.ias-go){visibility:hidden}.ex-nav .ias-go.vst{background:var(--green);color:#fff}
@@ -1440,6 +1440,8 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
+.ex-info .rg{border:2px solid var(--blue);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--blue-soft);line-height:1.7}.ex-info .lg{text-decoration:underline;text-decoration-thickness:2.5px;text-underline-offset:4px;text-decoration-color:var(--blue)}.ex-info .kz{text-emphasis:"•";-webkit-text-emphasis:"•";text-emphasis-position:under right;-webkit-text-emphasis-position:under;text-emphasis-color:var(--orange);-webkit-text-emphasis-color:var(--orange)}.ex-info .ak{font-weight:800;color:var(--orange)}.ex-info .ach{color:#C62828;font-weight:700}
+
 .ex-dv b.dx{color:#d0021b}.ex-dv .dm{color:#d0021b;font-weight:800}.ex-dv .dw{text-decoration:underline wavy #e5484d;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-skip-ink:none}
 .ex-gap.shake{animation:iasShake .35s}
 .ex-qb.in{position:absolute;right:-13px;top:-13px;bottom:auto;transform:none;width:26px;height:26px;font-size:15px;z-index:3}
@@ -3062,7 +3064,7 @@ function exCtx(q){ const parts=String(q).split(/\s*\|\s*/), isBank=p=>/ · /.tes
 const EXR={
   mc:{auto:1, r:it=>`<div class="ex-q">${exQ(it.q).replace(/___/g,'<span class="ex-blank">___</span>')}</div><div class="ias-opts ex-opts">${it.o.map((o,k)=>`<button type="button" class="ex-opt" data-x="opt" data-k="${k}">${esc(o)}</button>`).join("")}</div>`,
     ans:it=>esc(it.o[it.a])},
-  gap:{r:it=>{ let k=0; const ch=exGapChoices(it); return `<div class="ex-q ex-gs">${exQ(it.s).replace(/([^\s>]*)___([^\s<]*)/g,(m0,pre,post)=>{ const a=it.a[k][0]; const g=`<span class="ex-gw"><input class="ex-gap" data-g="${k++}" data-ans="${esc(a)}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" lang="de" style="width:${Math.max(3,a.length+1.5)}ch"><span class="ex-dv" hidden></span></span>`; return pre||post?`<span class="ex-nw">${pre}${g}${post}</span>`:g; })}</div>${ch?`<div class="ex-chs">${ch.map(o=>`<button type="button" class="ex-ch" data-exc="${esc(o)}" lang="de">${esc(o)}</button>`).join("")}</div>`:""}`; },
+  gap:{r:it=>{ let k=0; const ch=exGapChoices(it); return `<div class="ex-q ex-gs">${exQ(it.s).replace(/([^\s>_]*)___([^\s<_]*)/g,(m0,pre,post)=>{ const a=it.a[k][0]; const g=`<span class="ex-gw"><input class="ex-gap" data-g="${k++}" data-ans="${esc(a)}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" lang="de" style="width:${Math.max(3,a.length+1.5)}ch"><span class="ex-dv" hidden></span></span>`; return pre||post?`<wbr><span class="ex-nw">${pre}${g}${post}</span>`:g; })}</div>${ch?`<div class="ex-chs">${ch.map(o=>`<button type="button" class="ex-ch" data-exc="${esc(o)}" lang="de">${esc(o)}</button>`).join("")}</div>`:""}`; },
     c:it=>{ const ins=[...exEl().querySelectorAll(".ex-gap")]; let all=true; ins.forEach((i,k)=>{ const cv=exCanon(i.value,it.a[k]), ok=!!cv; if(ok&&i.value!==cv){ i.value=cv; exGapFit(i); } i.classList.toggle("ok",ok); i.classList.toggle("bad",!ok); exGapLock(i,ok); if(!ok) all=false; }); return all; },
     ans:it=>{ let k=0; return exQ(it.s).replace(/___/g,()=>`<b class="ex-hl">${esc(it.a[k++][0])}</b>`); }},
   order:{r:it=>{ let w=it.w.map((x,i)=>i); const j=it.j??" ", tgt=it.a.replace(/[.?!]$/,""); for(let t=0;t<20;t++){ exShuffle(w); if(w.map(i=>it.w[i]).join(j)!==tgt) break; } EX.st.ord=[]; EX.st.pool=w;
@@ -3115,7 +3117,8 @@ function exItem(){ const el=exEl(); el.classList.remove("has-fb"); EX.done=false
   else exGo(EXR[it.t].auto?"hide":"chk");
   if(it.say) setTimeout(()=>exSay(it.say),250);
   if(it.t==="say"&&!solved){ setTimeout(()=>exSpPlay(it,"q"),250); exSpStart(it); }
-  const gp=el.querySelector(".ex-gap:not(.lk)"); if(gp&&!it.say&&!solved) setTimeout(()=>gp.focus({preventScroll:true}),60); }
+  const gp=el.querySelector(".ex-gap:not(.lk)"); if(gp&&!solved){ const fo=()=>{ if(exCur()===it&&!EX.done&&document.activeElement!==gp) gp.focus({preventScroll:true}); }; fo(); setTimeout(fo,60); } /* kursor doim yoziladigan joyda (2026-10-20, Otabek: butun saytda) */
+  if(document.fonts&&document.fonts.status!=="loaded") document.fonts.ready.then(()=>{ try{ exEl().querySelectorAll(".ex-gap").forEach(exGapFit); }catch(e){} }); }
 /* oldin to'g'ri yechilgan savolga qaytilsa — javob ko'rinadi */
 /* 🗣️ Sprechen (DW «Deutsch lernen» / Grammatik aktiv Audiotraining uslubi, 2026-10-20, Otabek): savol eshitiladi → o'quvchi ovoz chiqarib javob beradi → to'g'ri javobni eshitadi → o'zi baholaydi. Audio fayl (aq/aa) bo'lmasa — brauzer TTS. */
 function exSpPlay(it,which){ const f=which==="q"?it.aq:it.aa, t=which==="q"?it.q:it.a; try{ if(EX.spAu){ EX.spAu.pause(); EX.spAu=null; } }catch(e){}
@@ -3151,7 +3154,8 @@ function exAfter(ok){ const it=exCur(), R=exEl(), i=EX.q[EX.qi], r=exRes(); EX.t
     exProgDraw(true); exSecDone(); exGo("next"); { const okb=document.getElementById("ex-pb"); } setTimeout(()=>{ const g=document.getElementById("ex-go"); if(g) g.focus({preventScroll:true}); },30); return; }
   EX.fails[i]=(EX.fails[i]||0)+1; if(r[i]!==1&&r[i]!==0){ r[i]=0; EX.n++; exSave(); }
   const card=document.getElementById("ex-card"); card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
-  if(it.t==="gap") R.querySelectorAll(".ex-gap.bad").forEach(x=>{ exGapDiff(x,it.a[+x.dataset.g],null); x.classList.remove("shake"); void x.offsetWidth; x.classList.add("shake"); });
+  if(it.t==="gap"){ let f1=null; R.querySelectorAll(".ex-gap.bad").forEach(x=>{ const hd=exGapDiff(x,it.a[+x.dataset.g],null); x.classList.remove("shake"); void x.offsetWidth; x.classList.add("shake"); if(!f1) f1={x,hd}; });
+    if(f1){ const x=f1.x, d=x.closest(".ex-gw")&&x.closest(".ex-gw").querySelector(".ex-dv"); x.focus({preventScroll:true}); if(!(f1.hd&&d&&errCaret(x,d.innerHTML))){ try{ x.select(); }catch(e){} } } } /* xatodan keyin: kursor birinchi xato bo'shliqda, xato harfdan keyin; diff bo'lmasa — hammasi belgilanadi */
   EX.why=exWhy(it); exWhyBtn(it);
   const fb=document.getElementById("ex-fb"); fb.className="lrn-fb"; fb.innerHTML=EX.fails[i]>=2?`<button type="button" class="lrn-link ex-sol" data-x="sol">💡 Lösung</button>`:""; }
 function exSol(){ const it=exCur(), i=EX.q[EX.qi], r=exRes(); if(r[i]!==1) r[i]=0; exSave(); EX.done=true; exShowSolved(it); exEl().querySelectorAll(".ex-qb").forEach(b=>b.remove());
@@ -3229,13 +3233,22 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-exc]"); i
   R.querySelectorAll(".ex-ch.sel").forEach(z=>z.classList.remove("sel")); b.classList.add("sel");
   if(ins.every(x=>x.value.trim())){ const go=document.getElementById("ex-go"); if(go&&!go.hidden) setTimeout(()=>go.click(),120); } else { const nx=ins.find(x=>!x.value.trim()); if(nx){ EX_LASTGAP=nx; nx.focus({preventScroll:true}); } } });
 function exGapLock(i,on){ i.readOnly=!!on; i.classList.toggle("lk",!!on); if(on){ i.tabIndex=-1; try{ i.blur(); }catch(e){} i.scrollLeft=0; } else i.removeAttribute("tabindex"); }
-function exGapFit(i){ try{ const cs=getComputedStyle(i), fs=parseFloat(cs.fontSize)||24; const cv=exGapFit._c||(exGapFit._c=document.createElement("canvas").getContext("2d")); cv.font=`${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+function exGapFit(i){ try{ const cs=getComputedStyle(i); if(!i.dataset.fs0) i.dataset.fs0=parseFloat(cs.fontSize)||19; const fs=+i.dataset.fs0; const cv=exGapFit._c||(exGapFit._c=document.createElement("canvas").getContext("2d")); cv.font=`${cs.fontStyle} ${cs.fontWeight} ${fs}px ${cs.fontFamily}`;
   const mw=t=>{ try{ return cv.measureText(t).width; }catch(e){ return t.length*fs*.62; } };
-  const ans=i.dataset.ans||""; const w=Math.max(mw(i.value||""), mw(ans), (i.value||"").length*fs*.6, 2*fs); const nw=Math.ceil(w+34+8+12); if(nw>(parseFloat(i.style.width)||0)||!i.value) i.style.width=Math.max(64,nw)+"px"; }catch(e){} }
+  /* "?" tugmasi endi katak tashqarisida (burchakda) — ichida 34px joy kerak emas; uzun so'z telefonda kartadan chiqsa — shrift kichrayadi (2026-10-20, Otabek: «so'z katakka sig'mayapti») */
+  const ans=i.dataset.ans||""; const w=Math.max(mw(i.value||""), mw(ans), (i.value||"").length*fs*.6, 1.2*fs); let nw=Math.ceil(w+8+8+12);
+  const host=i.closest(".ex-q")||i.closest(".ex-w"), avail=host?host.clientWidth-8:0; let f=fs;
+  if(avail>80&&nw>avail){ f=Math.max(12,Math.floor(fs*avail/nw)); nw=avail; }
+  i.style.fontSize=f<fs?f+"px":"";
+  if(nw>(parseFloat(i.style.width)||0)||!i.value||f<fs) i.style.width=Math.max(40,nw)+"px";
+  const sp=i.closest(".ex-nw"); if(sp&&host) { const big=sp.getBoundingClientRect().width>host.clientWidth; sp.style.whiteSpace=big?"normal":""; sp.style.overflowWrap=big?"anywhere":""; } }catch(e){} }
 function exGapDiff(i,alts,maxD){ const v=i.value, w=i.closest(".ex-gw"), d=w&&w.querySelector(".ex-dv"); if(!d) return false; const u=iaNorm(v);
   const art=alts.map(x=>iaNorm(x)).find(x=>/^(der|die|das|den|dem|des|ein|eine|einen|einem|einer) /.test(x)&&x.replace(/^\S+ /,"")===u); let h="";
   if(art){ const k=v.search(/\S/); h=esc(v.slice(0,Math.max(0,k)))+'<b class="dm">_</b> '+esc(v.slice(Math.max(0,k))); } else h=iasDiff(v,{a:alts[0],ok:alts.map(x=>iaNorm(x))},maxD);
-  if(!h){ d.hidden=true; d.innerHTML=""; w.classList.remove("dv"); return false; } d.innerHTML=h; d.hidden=false; w.classList.add("dv"); errCaret(i,h); return true; }
+  if(!h){ d.hidden=true; d.innerHTML=""; w.classList.remove("dv"); return false; } d.innerHTML=h; d.hidden=false; w.classList.add("dv"); exDvFit(i,d); errCaret(i,h); return true; }
+/* diff qatlami input matni bilan bir joyda tursin va katakka sig'sin (2026-10-20) */
+function exDvFit(i,d){ try{ const cs=getComputedStyle(i); d.style.paddingLeft=cs.paddingLeft; d.style.paddingRight=cs.paddingRight; const s=document.createElement("span"); s.style.cssText="position:absolute;visibility:hidden;white-space:pre;font:inherit"; s.innerHTML=d.innerHTML; d.appendChild(s); const need=s.getBoundingClientRect().width; s.remove();
+  const pad=(parseFloat(cs.paddingLeft)||0)+(parseFloat(cs.paddingRight)||0)+6; if(need+pad>i.getBoundingClientRect().width) i.style.width=Math.ceil(need+pad)+"px"; }catch(e){} }
 document.addEventListener("input",e=>{ const i=e.target; if(!i.classList||!i.classList.contains("ex-gap")||i.classList.contains("lk")) return; const R=exEl(); if(!R||R.hidden||EX.done) return; const it=exCur(); if(!it||it.t!=="gap") return;
   const w=i.closest(".ex-gw"); if(w){ w.classList.remove("dv"); const d=w.querySelector(".ex-dv"); if(d){ d.hidden=true; d.innerHTML=""; } } i.classList.remove("bad","shake"); R.querySelectorAll(".ex-qb").forEach(b=>b.remove());
   exGapFit(i); clearTimeout(EX.autoT); clearTimeout(EX.liveT); const k=+i.dataset.g, alts=it.a[k], same=v=>!!exCanon(v,alts);
@@ -3246,7 +3259,7 @@ document.addEventListener("input",e=>{ const i=e.target; if(!i.classList||!i.cla
 let EX_LASTGAP=null;
 document.addEventListener("focusin",e=>{ if(e.target.classList&&e.target.classList.contains("ex-gap")) EX_LASTGAP=e.target; });
 document.addEventListener("click",e=>{ const k=e.target.closest("[data-exk]"); if(!k) return; const i=EX_LASTGAP&&!EX_LASTGAP.disabled&&document.body.contains(EX_LASTGAP)?EX_LASTGAP:exEl().querySelector(".ex-gap:not(:disabled)"); if(!i) return;
-  const p=i.selectionStart??i.value.length; i.value=i.value.slice(0,p)+k.dataset.exk+i.value.slice(i.selectionEnd??p); i.focus(); i.setSelectionRange(p+1,p+1); });
+  const p=i.selectionStart??i.value.length; i.value=i.value.slice(0,p)+k.dataset.exk+i.value.slice(i.selectionEnd??p); i.focus(); i.setSelectionRange(p+1,p+1); i.dispatchEvent(new Event("input",{bubbles:true})); });
 document.addEventListener("keydown",e=>{ const root=exEl(); if(!root||root.hidden) return;
   if(e.key==="Escape"){ const c=root.querySelector('[data-x="close"]'); if(c) c.click(); return; }
   if(e.key==="Enter"){ const go=root.querySelector('#ex-go'); if(go&&!go.hidden&&go.dataset.x!=="chk"){ e.preventDefault(); go.click(); return; }
