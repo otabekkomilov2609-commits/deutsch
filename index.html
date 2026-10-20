@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
 <title>Deutsch A1 · A2 · B1</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1F4FA0">
+<link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Streber">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Neucha&family=Nunito:wght@400;500;600;700;800;900&display=swap">
@@ -1489,6 +1498,14 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .adm-img{max-width:180px;border-radius:10px;border:1.5px solid var(--line);cursor:zoom-in}.adm-img.big{max-width:100%;cursor:zoom-out}
 .adm-row{display:flex;justify-content:space-between;align-items:center;gap:8px}.adm-row small{color:var(--muted);font-size:11.5px}
 @media print{.fb-btn{display:none}}
+/* 📲 Ilova (PWA) o'rnatish kartasi */
+.app-inst{display:flex;align-items:center;gap:12px;margin:16px 0 4px;padding:12px 10px 12px 14px;background:var(--surface);border:1.5px solid var(--blue-soft);border-radius:16px;box-shadow:0 2px 10px rgba(31,79,160,.08)}
+.app-inst[hidden]{display:none}
+.app-ic{width:46px;height:46px;border-radius:12px;flex:none;background:#fff;box-shadow:0 1px 5px rgba(0,0,0,.14)}
+.app-tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;font-size:14px;line-height:1.35}
+.app-tx b{font-size:15px;color:var(--ink)}.app-tx span{color:var(--muted)}.app-tx span b{font-size:14px}
+.app-go{flex:none;border:0;border-radius:999px;background:var(--fill);color:var(--on-fill);font:inherit;font-size:14px;font-weight:800;padding:10px 16px;cursor:pointer}
+.app-x{flex:none;border:0;background:none;color:var(--muted);font-size:24px;line-height:1;cursor:pointer;padding:4px 6px}
 
 .ex-gw-t{line-height:1.55}.ex-gw-t b{color:var(--blue)}
 /* 🔒 Weiter: qulf o'ngda, to'g'ri bo'lsa strelka */
@@ -1660,6 +1677,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
     </div>
     <h1>Deutsch A1 · A2 · B1</h1>
     <p class="lead" data-i="lead"></p>
+    <div id="app-inst" class="app-inst" hidden></div>
   </header>
   <section class="prog" id="prog" hidden aria-live="polite"></section>
 
@@ -3067,6 +3085,25 @@ document.addEventListener("click",e=>{ if(!e.target.closest("#thm-btn")) return;
   if(n) r.setAttribute("data-theme",n); else r.removeAttribute("data-theme"); try{ if(n) localStorage.setItem("theme",n); else localStorage.removeItem("theme"); }catch(err){}
   const mc=document.querySelector('meta[name="theme-color"]'); thmIcon(); });
 setTimeout(thmIcon,0);
+/* ===== 📲 Ilova (PWA), 2026-10-21 (Otabek): telefonga o'rnatiladigan ilova ===== */
+const APP={ev:null};
+const APP_T={uz:{t:"Streber’ni telefoningizga o‘rnating",s:"Ilova kabi ochiladi — brauzer kerak emas",b:"O‘rnatish",ios:"Pastdagi <b>Ulashish</b> ⬆️ tugmasi → <b>«Bosh ekranga qo‘shish»</b>"},
+  ru:{t:"Установите Streber на телефон",s:"Открывается как приложение — без браузера",b:"Установить",ios:"Кнопка <b>Поделиться</b> ⬆️ внизу → <b>«На экран „Домой“»</b>"}};
+function appStandalone(){ return matchMedia("(display-mode: standalone)").matches||navigator.standalone===true; }
+function appIOS(){ return /iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1); }
+function appOff(){ try{ const t=+localStorage.getItem("app:off")||0; return Date.now()-t<14*864e5; }catch(e){ return false; } }
+function appShow(){ const el=document.getElementById("app-inst"); if(!el) return;
+  const can=!IN_ARTIFACT&&!appStandalone()&&!appOff()&&!!(APP.ev||appIOS()); el.hidden=!can; if(!can){ el.innerHTML=""; return; }
+  const T=APP_T[state.lang]||APP_T.uz;
+  el.innerHTML=`<img src="/icons/icon-192.png" alt="" class="app-ic"><div class="app-tx"><b>${T.t}</b><span>${APP.ev?T.s:T.ios}</span></div>${APP.ev?`<button type="button" class="app-go" data-appgo>${T.b}</button>`:""}<button type="button" class="app-x" data-appx aria-label="×">×</button>`; }
+window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); APP.ev=e; appShow(); });
+window.addEventListener("appinstalled",()=>{ APP.ev=null; appShow(); try{ actEv("app","install"); }catch(e){} });
+document.addEventListener("click",async e=>{
+  if(e.target.closest("[data-lang]")){ setTimeout(appShow,0); return; }
+  if(e.target.closest("[data-appx]")){ try{ localStorage.setItem("app:off",String(Date.now())); }catch(er){} appShow(); return; }
+  if(e.target.closest("[data-appgo]")&&APP.ev){ const ev=APP.ev; APP.ev=null; ev.prompt(); try{ await ev.userChoice; }catch(er){} appShow(); } });
+if("serviceWorker" in navigator&&!IN_ARTIFACT&&(location.protocol==="https:"||location.hostname==="localhost")) addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));
+setTimeout(appShow,0);
 /* ===== 📱 Mashq paneli (2026-10-19, Otabek): Arbeitsbuch turlaridagi interaktiv mashqlar =====
    Turlar: info · mc (a/b/c, richtig/falsch) · gap (bo'sh joy) · order (so'zlardan gap / bo'g'indan so'z) · match · cat (guruhlash) · mark (belgilash).
    Har qanday mashqda "say" bo'lsa — 🔊 tinglash (Hören). Natija: store "ex:<id>" → bulutga ham saqlanadi. */

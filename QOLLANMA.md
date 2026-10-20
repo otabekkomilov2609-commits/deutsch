@@ -690,3 +690,8 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - **Sprechen = Kommunikation'ni gapirtirish (2026-10-21, Otabek):** A2 har Lektion Sprechen to'plami oxiriga KB Kommunikation ro'yxatidagi har Redemittel uchun 2 tadan `say` item (nuqtalar o'rniga aniq so'z, "/" variantlarining ikkalasi) + 1 dialog guruhi («Ein Gespräch: Antworten Sie.», 4–5 qadam, telefon suhbati kabi). Faqat qo'shiladi (append), eski itemlar tegilmaydi. Sprechen bo'limi boshida «💬 Avval iboralarni mashq qiling» → Muloqot.
 - **👎 Fikr va admin (2026-10-21):** har ekranda chap chetda 👎 → ekran rasmi + sabab/izoh → shifrlangan, Firestore `s/` ga «FB1:» bo'laklar bilan. Admin: 🐣 belgini 1,5 s bosib turish → kod → muammolar ro'yxati, «📍» bosilsa o'sha joy ochiladi. Ro'yxatdan o'tmaganlarga o'yin oxirida — sayt afzalliklari + «hozircha bepul» + ro'yxatdan o'tish.
 - **Hören ro'yxat rejimi, yig'iladigan Lektion kartalari (2026-10-21):** Hören'da audio tepada qotadi, hamma savollar bitta ro'yxatda, oxirida birga tekshiriladi. Lektion kartalari yopiq turadi (bosilsa ochiladi), raqam halqasi — butun Lektion foizi.
+
+## 📲 Ilova (PWA) — 2026-10-21
+- Sayt telefonga ilova sifatida o‘rnatiladi: manifest.webmanifest, sw.js, icons/ (Otabekning logosi — qizil-sariq lola, icons/logo.svg). Nomi «Streber».
+- Bosh sahifada «Streber’ni telefoningizga o‘rnating» kartasi: Android — «O‘rnatish» tugmasi, iPhone — Ulashish → «Bosh ekranga qo‘shish». × bosilsa 14 kun ko‘rsatilmaydi.
+- Service worker: sahifa har doim avval internetdan (eng yangi versiya), internet yo‘q bo‘lsa saqlangan nusxa. Ilova sayt bilan birga o‘zi yangilanadi.
