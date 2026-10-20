@@ -3774,7 +3774,7 @@ document.addEventListener("keydown",e=>{ if(e.target&&e.target.id==="mu-in"&&e.k
 /* yozayotganda: belgi o'chadi; to'xtasa (1,1 s) — 1–2 harf xato bo'lsa "iloncha" (Lernen'dagidek) */
 document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="mu-in") return; const w=document.getElementById("mu-gw"), ov=document.getElementById("mu-ov"), inp=e.target; if(!w) return; w.classList.remove("mk","shk"); ov.innerHTML="";
   inp.style.width=Math.max(parseFloat(inp.style.width)||4,inp.value.length+2)+"ch"; clearTimeout(MU.liveT); const st=MU.steps[MU.k]; if(!st||st.t!=="gap") return;
-  { const rd=!MU.done&&!MU.tries&&inp.value.trim().toLowerCase()===st.g.w.toLowerCase(), b=document.getElementById("mu-chk"); w.classList.toggle("rdy",rd); if(b&&rd!==b.classList.contains("ready")) lkSet(b,rd); }
+  { const rd=!MU.done&&!MU.tries&&inp.value.trim().toLowerCase()===st.g.w.toLowerCase(), b=document.getElementById("mu-chk"); if(rd&&inp.value!==st.g.w){ inp.value=st.g.w; try{ inp.setSelectionRange(st.g.w.length,st.g.w.length); }catch(er){} } w.classList.toggle("rdy",rd); if(b&&rd!==b.classList.contains("ready")) lkSet(b,rd); }
   MU.liveT=setTimeout(()=>{ if(MU.done||!inp.isConnected||document.activeElement!==inp) return; const v=inp.value; if(!v.trim()||v.trim().toLowerCase()===st.g.w.toLowerCase()) return; const h=iasDiff(v,{a:st.g.w,ok:[st.g.w]},2); if(h){ ov.innerHTML=h; w.classList.add("mk"); errCaret(inp,h); } },1100); });
 function muEnd(){ const uz=state.lang!=="ru", n=MU.steps.length, r=n?MU.okN/n:0; const m=MU.newM||0; muSessPut();
   try{ const mm=byId[LR.id], all=muAll(), ms=muStore(); if(mm) accAuto("mu:"+LR.id, accLvl(mm), "💬 Muloqot · "+mm.title, all.filter(x=>ms[x.i]).length, all.length, 0); }catch(e){}
@@ -4135,7 +4135,7 @@ document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="lrn-in") ret
   if(!j.art&&!j.ok) LR.liveT=setTimeout(()=>{ if(LR.answered||!inp.isConnected||document.activeElement!==inp) return; const v=inp.value, j2=lrnJudge(v, LR.cur);
     if(!j2.ok&&!j2.art&&(j2.note===lt("artNote")||j2.close)) lrnHintMark(inp, v, LR.cur, j2, true); },1100); });
 document.addEventListener("input",e=>{ if(!e.target||e.target.id!=="lrn-in"||LR.answered) return; const b=document.querySelector('#lrn-wr button[type="submit"]'); if(!b) return;
-  const j=lrnJudge(e.target.value, LR.cur), rd=!!(j.ok&&!j.note); { const w=document.getElementById("lrn-inw"); if(w) w.classList.toggle("rdy",rd); } if(rd!==b.classList.contains("ready")) lkSet(b,rd); });
+  const j=lrnJudge(e.target.value, LR.cur), rd=!!(j.ok&&!j.note); if(rd&&j.fix&&e.target.value!==j.fix){ e.target.value=j.fix; try{ e.target.setSelectionRange(j.fix.length,j.fix.length); }catch(er){} } /* katta-kichik harf xato emas, lekin to'g'ri bo'lishi bilan to'g'ri yozuvga aylanadi: «DAS treppenhaus» → «das Treppenhaus» (2026-10-21, Otabek) */ { const w=document.getElementById("lrn-inw"); if(w) w.classList.toggle("rdy",rd); } if(rd!==b.classList.contains("ready")) lkSet(b,rd); });
 document.addEventListener("submit",e=>{
   if(e.target.id!=="lrn-wr") return; e.preventDefault(); if(LR.answered) return;
   const i=document.getElementById("lrn-in"), v=i.value; if(!lrnNorm(v)){ i.focus(); return; }
