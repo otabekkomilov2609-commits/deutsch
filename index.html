@@ -1440,6 +1440,26 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
+/* 👎 feedback + 🛠 admin */
+.fb-btn{position:fixed;right:0;top:58%;z-index:2147483000;width:40px;height:44px;border:1.5px solid var(--line);border-right:0;border-radius:14px 0 0 14px;background:var(--surface);box-shadow:0 2px 10px rgba(0,0,0,.12);font-size:19px;cursor:pointer;opacity:.82;padding:0 0 0 4px}
+.fb-btn:hover{opacity:1;width:46px}.fb-btn.wait{animation:fbPulse .8s infinite}
+@keyframes fbPulse{50%{opacity:.4}}
+.fb-ov{position:fixed;inset:0;z-index:2147483001;background:rgba(15,23,42,.45);display:grid;place-items:center;padding:16px}.fb-ov[hidden]{display:none}
+.fb-box{width:min(460px,100%);max-height:92vh;overflow:auto;background:var(--surface);border-radius:20px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.25);display:flex;flex-direction:column;gap:10px}
+.fb-box h3{margin:0;font-size:20px}.fb-lead{margin:0;color:var(--muted);font-size:14px}
+.fb-img{width:100%;max-height:220px;object-fit:contain;border-radius:12px;border:1.5px solid var(--line);background:var(--surface-2)}
+.fb-chips{display:flex;flex-wrap:wrap;gap:6px}.fb-chip{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer;color:var(--ink)}.fb-chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+#fb-tx{width:100%;box-sizing:border-box;border:1.5px solid var(--line);border-radius:12px;padding:10px;font:inherit;font-size:15px;background:var(--surface);color:var(--ink);resize:vertical}#fb-tx.need{animation:exCrk .42s;border-color:#C62828}
+.fb-st{font-size:13px;color:var(--muted);min-height:1em}.fb-st.err{color:#C62828;font-weight:700}
+.fb-row{display:flex;justify-content:flex-end;gap:8px}.fb-thx{text-align:center;padding:10px}.fb-thx .big{font-size:48px}.fb-thx p{font-size:17px;font-weight:700;line-height:1.45}
+.adm-body{max-width:760px;margin:0 auto}.adm-l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.adm-l>li{border:1.5px solid var(--line);border-radius:14px;padding:12px;background:var(--surface);display:flex;flex-direction:column;gap:6px}.adm-l>li.done{opacity:.55}
+.adm-h{display:flex;justify-content:space-between;gap:8px;align-items:baseline}.adm-h small{color:var(--muted);font-size:12px;white-space:nowrap}
+.adm-tx{margin:0;font-size:15px;white-space:pre-wrap}.adm-go{align-self:flex-start;text-align:left;border:0;background:var(--blue-soft);color:var(--blue);font:inherit;font-weight:700;font-size:13.5px;padding:7px 10px;border-radius:10px;cursor:pointer}
+.adm-img{max-width:180px;border-radius:10px;border:1.5px solid var(--line);cursor:zoom-in}.adm-img.big{max-width:100%;cursor:zoom-out}
+.adm-row{display:flex;justify-content:space-between;align-items:center;gap:8px}.adm-row small{color:var(--muted);font-size:11.5px}
+@media print{.fb-btn{display:none}}
+
 .ex-gw-t{line-height:1.55}.ex-gw-t b{color:var(--blue)}
 /* 🔒 Weiter: qulf o'ngda, to'g'ri bo'lsa strelka */
 .ex-nav .ias-go .ex-lk,.ex-nav .ias-go .ex-ar{display:inline-flex;align-items:center;justify-content:center;width:18px;margin-left:6px;vertical-align:-2px}
@@ -5591,7 +5611,7 @@ if(CLOUD_ON){
 /* ustoz paneli: bazadagi natijalarni o'qish */
 async function tpCloudLoad(){ if(!CLOUD_ON) return; try{ let tok="", n=0;
   do{ const r=await fetch(FS_BASE+"s?pageSize=300"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok) break; const j=await r.json();
-    for(const doc of (j.documents||[])){ const id=doc.name.split("/").pop(), e=doc.fields&&doc.fields.e&&doc.fields.e.stringValue; if(!e||TP.stRaw["c:"+id]===e) continue; TP.stRaw["c:"+id]=e;
+    for(const doc of (j.documents||[])){ const id=doc.name.split("/").pop(), e=doc.fields&&doc.fields.e&&doc.fields.e.stringValue; if(!e||e.startsWith("FB1:")||TP.stRaw["c:"+id]===e) continue; TP.stRaw["c:"+id]=e;
       try{ const d=await stDec(e); if(d&&d.nm){ const kk=d.ak||("c:"+id), o=TP.stu[kk]; if(!o||(d.t||0)>=(o.t||0)){ if(!d.a&&o&&o.a) d.a=o.a; TP.stu[kk]=d; } else if(o&&!o.a&&d.a) o.a=d.a; } }catch(err){ TP.stLocked=true; } }
     tok=j.nextPageToken||""; }while(tok&&++n<30);
   tpStDrawSoon(); }catch(e){} }
@@ -5709,6 +5729,94 @@ function anCsv(){ const P=TP.anP||7, rows=[["Ism","Oxirgi kirish","Faol kunlar",
   Object.values(TP.stu||{}).filter(d=>d&&d.a).forEach(d=>{ const x=anStu(d,P); rows.push([d.nm,x.last,x.days,x.min,x.ans,x.acc??"",x.solp??"",x.skp??"",x.wg,d.w|0,d.a.dev==="📱"?"telefon":"kompyuter"]); });
   const csv="﻿"+rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(";")).join("\n");
   const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"})); a.download="tahlil-"+actDay()+".csv"; document.body.appendChild(a); a.click(); a.remove(); }
+/* ===== 👎 Fikr-mulohaza (feedback) — har ekranda (2026-10-21, Otabek: «eng muhim narsa: har doim har joyda dislayk tugmasi; bosilsa ekran rasmga olinib izoh so'ralsin; yashirin admin») =====
+   Rasm + izoh + qayerdaligi → feedback kaliti bilan shifrlanadi (ochiq kalit shu yerda, maxfiy kalit faqat admin kodi bilan ochiladi)
+   → Firestore s/ ga ≤18 KB bo'laklar bilan ("FB1:" belgisi bilan; ustoz natijalari o'quvchisi bularni o'tkazib yuboradi). */
+const FB_KEY={"pub":{"kty":"EC","crv":"P-256","x":"QW66iCTQjFjs_t-OfWDsmxiAlU0J06HhPxkcxZE6T1Q","y":"BSSABlK9oBSdYLMu343oOIagSb-Nx1BwEXRgTRwtnso"},"enc":{"s":"Y3xffw/I7lO4QI2xSJ1Tcg==","i":"ZCp1pwcQYeuVTyib","c":"J7SXxRkWg6KBui6Dw8fxMlNkP7ua+vZXhsm/f9j4AJxWaRjCFrD1TWoeJI+uEJwpEbkVm1Pd5/ReQ7dSsItykElw/4PfOvWrEn2BGiWZvelsC5FPNYkL9aJXFquSmBhjrramRdCxB4XRzg3tTpsYKl6QMRCuLwd8nZwztXLc8OKr4/X7Jn4F5Fadd2BA2moT3GyvVVaK7cQ8mXXwIFBtEdsNKnZ2Q9tWcgrWwc3PVdDg5zh0wilQtdUnUWwheXabWQBTtAGTYz/X8g3XUev5KHJkbgdRnr+BJTiZq9Zez7+hYbI="}};
+const FB={img:null,busy:false};
+function fbCtx(){ const c={t:Date.now(), tab:state.tab, lang:state.lang, nm:(typeof ACC!=="undefined"&&ACC.name)||"", w:innerWidth+"×"+innerHeight, ua:navigator.userAgent.slice(0,140)};
+  try{ const xe=exEl(); if(xe&&!xe.hidden&&EX.id){ c.ex={id:EX.id, si:EX.si}; if(EX.si>=0&&EX.q&&EX.qi<EX.q.length){ c.ex.i=EX.q[EX.qi]; const it=exCur(); c.ex.q=String(it.s||it.q||it.h||"").replace(/<[^>]+>/g," ").slice(0,160); c.ex.scr=EX.scr||""; } } }catch(e){}
+  try{ if(V&&V.el&&!V.el.hidden&&V.cur) c.mat=V.cur.id; }catch(e){}
+  try{ const l=document.getElementById("lrn"); if(l&&!l.hidden&&typeof LR!=="undefined"&&LR.id) c.lrn=LR.id; }catch(e){}
+  try{ const tp=document.getElementById("tch"); if(tp&&!tp.hidden) c.tp=TP.tab||""; }catch(e){}
+  return c; }
+function fbLib(cb){ if(window.html2canvas) return cb(); const s=document.createElement("script"); s.src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"; s.onload=cb; s.onerror=()=>cb(); document.head.appendChild(s); }
+async function fbShot(){ return new Promise(res=>fbLib(async()=>{ try{ if(!window.html2canvas) return res(null);
+  const W=innerWidth,H=innerHeight, sc=Math.min(1,520/W);
+  const cv=await window.html2canvas(document.body,{x:scrollX,y:scrollY,width:W,height:H,windowWidth:document.documentElement.clientWidth,windowHeight:H,scale:sc,useCORS:true,logging:false,backgroundColor:getComputedStyle(document.body).backgroundColor||"#fff",ignoreElements:el=>el.id==="fb-btn"||el.id==="fb-ov"});
+  let q=.62, d=cv.toDataURL("image/jpeg",q); while(d.length>60000&&q>.25){ q-=.1; d=cv.toDataURL("image/jpeg",q); } res(d); }catch(e){ res(null); } })); }
+function fbT(k){ const uz={btn:"Fikr bildirish",h:"Nima yoqmadi?",lead:"Ekran rasmi olindi. Nima noto‘g‘ri yoki noqulay — qisqacha yozing.",ph:"Masalan: javob to‘g‘ri edi, lekin xato dedi…",c:["Javob xato deb chiqdi","Tushunarsiz","Ovoz / audio","Dizayn / ko‘rinish","Boshqa"],send:"Yuborish",cancel:"Bekor qilish",ok:"Rahmat! Siz menga katta yordam qildingiz. Baraka toping! 🙏",err:"Yuborilmadi — internetni tekshirib, qayta urinib ko‘ring.",sending:"Yuborilmoqda…",noimg:"(rasm olinmadi)"};
+  const ru={btn:"Сообщить",h:"Что не понравилось?",lead:"Снимок экрана сделан. Коротко напишите, что не так или неудобно.",ph:"Например: ответ был верный, а показало ошибку…",c:["Верный ответ засчитан как ошибка","Непонятно","Звук / аудио","Дизайн / вид","Другое"],send:"Отправить",cancel:"Отмена",ok:"Спасибо! Вы мне очень помогли. 🙏",err:"Не отправлено — проверьте интернет и попробуйте ещё раз.",sending:"Отправляем…",noimg:"(без снимка)"};
+  return (state.lang==="ru"?ru:uz)[k]; }
+function fbEl(){ let o=document.getElementById("fb-ov"); if(!o){ o=document.createElement("div"); o.id="fb-ov"; o.className="fb-ov"; o.hidden=true; document.body.appendChild(o); } return o; }
+async function fbOpen(){ if(FB.busy) return; FB.busy=true; const b=document.getElementById("fb-btn"); if(b) b.classList.add("wait"); FB.ctx=fbCtx(); FB.img=await fbShot(); if(b) b.classList.remove("wait"); FB.busy=false;
+  const o=fbEl(); o.innerHTML=`<div class="fb-box" role="dialog" aria-modal="true"><h3>👎 ${esc(fbT("h"))}</h3><p class="fb-lead">${esc(FB.img?fbT("lead"):fbT("lead").replace(/^[^.]*\.\s*/,""))}</p>
+    ${FB.img?`<img class="fb-img" src="${FB.img}" alt="">`:`<p class="fb-lead">${esc(fbT("noimg"))}</p>`}
+    <div class="fb-chips">${fbT("c").map((c,i)=>`<button type="button" class="fb-chip" data-fbc="${i}">${esc(c)}</button>`).join("")}</div>
+    <textarea id="fb-tx" rows="3" maxlength="1000" placeholder="${esc(fbT("ph"))}"></textarea>
+    <div class="fb-st" id="fb-st"></div>
+    <div class="fb-row"><button type="button" class="btn" data-fb="x">${esc(fbT("cancel"))}</button><button type="button" class="btn primary" data-fb="send">${esc(fbT("send"))}</button></div></div>`;
+  o.hidden=false; setTimeout(()=>{ const t=document.getElementById("fb-tx"); if(t) t.focus(); },60); }
+async function fbEnc(obj){ const S=crypto.subtle; const tp=await S.importKey("jwk",Object.assign({ext:true},FB_KEY.pub),{name:"ECDH",namedCurve:"P-256"},false,[]);
+  const ep=await S.generateKey({name:"ECDH",namedCurve:"P-256"},true,["deriveKey"]); const k=await S.deriveKey({name:"ECDH",public:tp},ep.privateKey,{name:"AES-GCM",length:256},false,["encrypt"]);
+  const iv=crypto.getRandomValues(new Uint8Array(12)), ct=await S.encrypt({name:"AES-GCM",iv},k,new TextEncoder().encode(JSON.stringify(obj))); const ej=await S.exportKey("jwk",ep.publicKey);
+  return JSON.stringify({x:ej.x,y:ej.y,i:stB64e(iv),c:stB64e(ct)}); }
+function fbHex(){ return [...crypto.getRandomValues(new Uint8Array(32))].map(x=>x.toString(16).padStart(2,"0")).join(""); }
+async function fbSend(){ const st=document.getElementById("fb-st"), tx=(document.getElementById("fb-tx")||{}).value||"", ch=[...document.querySelectorAll(".fb-chip.on")].map(b=>b.textContent);
+  if(!tx.trim()&&!ch.length){ const t=document.getElementById("fb-tx"); if(t){ t.classList.remove("need"); void t.offsetWidth; t.classList.add("need"); t.focus(); } return; }
+  st.className="fb-st"; st.textContent=fbT("sending"); document.querySelectorAll("#fb-ov [data-fb]").forEach(b=>b.disabled=true);
+  try{ const enc=await fbEnc({c:FB.ctx, tx:tx.slice(0,1000), ch, img:FB.img||""}), fid=fbHex().slice(0,12), N=Math.ceil(enc.length/17000);
+    for(let k=0;k<N;k++){ const part="FB1:"+fid+":"+k+"/"+N+":"+enc.slice(k*17000,(k+1)*17000); await fsPut("s/"+fbHex(),{e:fsS(part),t:fsI(Date.now())}); }
+    document.querySelector("#fb-ov .fb-box").innerHTML=`<div class="fb-thx"><div class="big">🙏</div><p>${esc(fbT("ok"))}</p><button type="button" class="btn primary" data-fb="x">OK</button></div>`;
+  }catch(e){ st.className="fb-st err"; st.textContent=fbT("err"); document.querySelectorAll("#fb-ov [data-fb]").forEach(b=>b.disabled=false); } }
+function fbClose(){ const o=document.getElementById("fb-ov"); if(o){ o.hidden=true; o.innerHTML=""; } }
+(function(){ if(IN_ARTIFACT) return; const b=document.createElement("button"); b.type="button"; b.id="fb-btn"; b.className="fb-btn"; b.setAttribute("aria-label","👎 "+fbT("btn")); b.title=fbT("btn"); b.textContent="👎"; document.body.appendChild(b); })();
+document.addEventListener("click",e=>{ if(e.target.closest("#fb-btn")){ fbOpen(); return; }
+  const c=e.target.closest("[data-fbc]"); if(c){ c.classList.toggle("on"); return; }
+  const f=e.target.closest("[data-fb]"); if(f){ if(f.dataset.fb==="send") fbSend(); else fbClose(); return; }
+  if(e.target.id==="fb-ov") fbClose(); });
+
+/* ===== 🛠 Yashirin admin: 🐣 belgini 1.5 s bosib turish → kod → muammolar ro'yxati ===== */
+const ADM={pk:null,list:[]};
+async function admUnlock(code){ const S=crypto.subtle, e=FB_KEY.enc; const base=await S.importKey("raw",new TextEncoder().encode(code),"PBKDF2",false,["deriveKey"]);
+  const k=await S.deriveKey({name:"PBKDF2",salt:stB64d(e.s),iterations:150000,hash:"SHA-256"},base,{name:"AES-GCM",length:256},false,["decrypt"]);
+  const jwk=JSON.parse(new TextDecoder().decode(await S.decrypt({name:"AES-GCM",iv:stB64d(e.i)},k,stB64d(e.c))));
+  ADM.pk=await S.importKey("jwk",jwk,{name:"ECDH",namedCurve:"P-256"},false,["deriveKey"]); }
+async function admDec(s){ const d=JSON.parse(s), S=crypto.subtle; const ep=await S.importKey("jwk",{kty:"EC",crv:"P-256",x:d.x,y:d.y,ext:true},{name:"ECDH",namedCurve:"P-256"},false,[]);
+  const k=await S.deriveKey({name:"ECDH",public:ep},ADM.pk,{name:"AES-GCM",length:256},false,["decrypt"]); return JSON.parse(new TextDecoder().decode(await S.decrypt({name:"AES-GCM",iv:stB64d(d.i)},k,stB64d(d.c)))); }
+async function admLoad(){ const parts={}; let tok="",n=0;
+  do{ const r=await fetch(FS_BASE+"s?pageSize=300"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok) break; const j=await r.json();
+    for(const doc of (j.documents||[])){ const e=doc.fields&&doc.fields.e&&doc.fields.e.stringValue; if(!e||!e.startsWith("FB1:")) continue; const m=/^FB1:([0-9a-f]+):(\d+)\/(\d+):([\s\S]*)$/.exec(e); if(!m) continue; const o=parts[m[1]]||(parts[m[1]]={n:+m[3],p:{}}); o.p[+m[2]]=m[4]; }
+    tok=j.nextPageToken||""; }while(tok&&++n<40);
+  const out=[]; for(const [id,o] of Object.entries(parts)){ if(Object.keys(o.p).length<o.n) continue; try{ const d=await admDec([...Array(o.n).keys()].map(k=>o.p[k]).join("")); d.id=id; out.push(d); }catch(e){} }
+  let done={}; try{ done=JSON.parse(localStorage.getItem("adm:done")||"{}")||{}; }catch(e){}
+  out.forEach(d=>d.done=!!done[d.id]); out.sort((a,b)=>(a.done-b.done)||((b.c&&b.c.t||0)-(a.c&&a.c.t||0))); ADM.list=out; }
+function admWhere(c){ if(!c) return "—"; if(c.ex){ const D=exData()[c.ex.id]; return "✍️ "+(D?(D.lv?D.lv+" · ":"")+D.title:c.ex.id)+(c.ex.i!=null?` · №${c.ex.i+1}`:"")+(c.ex.q?` — „${c.ex.q.slice(0,80)}“`:""); }
+  if(c.mat){ const m=byId[c.mat]; return "📄 "+(m?m.title:c.mat); } if(c.lrn) return "🧠 Lernen · "+c.lrn; if(c.tp!=null) return "🎓 Ustoz paneli"; return "🏠 Bosh sahifa · "+(TABS[c.tab]?TABS[c.tab].lbl:c.tab||""); }
+function admEl(){ let o=document.getElementById("adm"); if(!o){ o=document.createElement("div"); o.id="adm"; o.className="lrn"; o.hidden=true; document.body.appendChild(o); } return o; }
+function admRender(msg){ const o=admEl(), L=ADM.list; const ago=t=>{ const m=Math.round((Date.now()-t)/60000); return m<60?m+" daq oldin":m<1440?Math.round(m/60)+" soat oldin":Math.round(m/1440)+" kun oldin"; };
+  o.innerHTML=`<div class="lrn-bar"><button class="btn" data-adm="close" aria-label="✕">✕</button><div class="lrn-tt"><b>🛠 Admin — muammolar</b><small>${L.filter(d=>!d.done).length} ta yangi · jami ${L.length}</small></div><button type="button" class="lrn-link" data-adm="reload">↻ Yangilash</button></div>
+    <div class="lrn-body adm-body">${msg?`<p class="ch-net">${esc(msg)}</p>`:""}${L.length?`<ul class="adm-l">${L.map((d,i)=>`<li class="${d.done?"done":""}"><div class="adm-h"><b>${esc((d.ch||[]).join(" · ")||"Izoh")}</b><small>${esc(d.c&&d.c.nm||"mehmon")} · ${d.c&&d.c.t?ago(d.c.t):""} · ${esc(d.c&&d.c.lang||"")}</small></div>
+      ${d.tx?`<p class="adm-tx">${esc(d.tx)}</p>`:""}<button type="button" class="adm-go" data-admgo="${i}">📍 ${esc(admWhere(d.c))} →</button>
+      ${d.img?`<img class="adm-img" src="${d.img}" alt="" data-admimg="${i}">`:""}
+      <div class="adm-row"><small>${esc(d.c&&d.c.w||"")} · ${esc((d.c&&d.c.ua||"").replace(/^Mozilla\/5\.0 \(([^)]*)\).*/,"$1").slice(0,60))}</small><button type="button" class="lrn-link" data-admdone="${i}">${d.done?"↩ Qaytarish":"✓ Hal qilindi"}</button></div></li>`).join("")}</ul>`:`<p class="tp-empty">Hozircha muammo yuborilmagan.</p>`}</div>`;
+  o.hidden=false; document.body.style.overflow="hidden"; }
+async function admOpen(){ const code=prompt("Admin misiz? Kodni kiriting:"); if(!code) return;
+  try{ await admUnlock(code.trim()); }catch(e){ alert("Kod noto‘g‘ri."); return; }
+  ADM.list=[]; admRender("Yuklanmoqda…"); try{ await admLoad(); admRender(); }catch(e){ admRender("Yuklab bo‘lmadi."); } }
+function admGo(d){ const c=d&&d.c; if(!c) return; admEl().hidden=true; document.body.style.overflow="";
+  try{ if(c.tab&&TABS[c.tab]&&state.tab!==c.tab){ state.tab=c.tab; try{ render(); }catch(e){} } }catch(e){}
+  if(c.ex&&exData()[c.ex.id]){ exOpen(c.ex.id); if(c.ex.si>=0){ exStart(c.ex.si,false); const k=EX.q.indexOf(c.ex.i); if(k>=0){ EX.qi=k; EX.force=null; exItem(); } } return; }
+  if(c.mat&&byId[c.mat]){ openViewer(byId[c.mat]); return; }
+  if(c.lrn&&typeof lrnOpen==="function"){ try{ lrnOpen(c.lrn); }catch(e){} } }
+document.addEventListener("click",e=>{ const a=e.target.closest("[data-adm]"); if(a){ if(a.dataset.adm==="close"){ admEl().hidden=true; document.body.style.overflow=""; } else { admRender("Yuklanmoqda…"); admLoad().then(()=>admRender()).catch(()=>admRender("Yuklab bo‘lmadi.")); } return; }
+  const g=e.target.closest("[data-admgo]"); if(g){ admGo(ADM.list[+g.dataset.admgo]); return; }
+  const im=e.target.closest("[data-admimg]"); if(im){ im.classList.toggle("big"); return; }
+  const dn=e.target.closest("[data-admdone]"); if(dn){ const d=ADM.list[+dn.dataset.admdone]; let done={}; try{ done=JSON.parse(localStorage.getItem("adm:done")||"{}")||{}; }catch(er){} if(done[d.id]) delete done[d.id]; else done[d.id]=Date.now(); try{ localStorage.setItem("adm:done",JSON.stringify(done)); }catch(er){} d.done=!d.done; admRender(); return; } });
+(function(){ let tm=null; const start=e=>{ const b=e.target.closest&&e.target.closest(".prog-badge"); if(!b) return; clearTimeout(tm); tm=setTimeout(()=>{ tm=null; try{ navigator.vibrate&&navigator.vibrate(30); }catch(er){} admOpen(); },1500); };
+  const stop=()=>{ clearTimeout(tm); tm=null; };
+  document.addEventListener("pointerdown",start); ["pointerup","pointercancel","pointerleave"].forEach(ev=>document.addEventListener(ev,stop,true));
+  document.addEventListener("contextmenu",e=>{ if(e.target.closest&&e.target.closest(".prog-badge")) e.preventDefault(); }); })();
 /* --- hodisalar --- */
 document.addEventListener("click",e=>{
   if(e.target.closest("#tch-btn")){ tpOpen(); return; }
