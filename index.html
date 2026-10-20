@@ -1440,6 +1440,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-gap.bad{border-bottom-color:#C62828!important;background:rgba(198,40,40,.08);color:#C62828}
 .ex-gw.dv .ex-gap{color:transparent;caret-color:var(--ink)}.ex-gw.dv .ex-gap.bad{caret-color:#C62828}
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
+.reg-cta{border:2px solid var(--green);background:var(--green-soft)}.reg-cta .reg-h{font-size:18px;font-weight:800;color:var(--green)}.reg-cta ul{margin:6px 0;padding-left:4px;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14.5px}.reg-cta .reg-free{font-weight:800;color:var(--orange);font-size:16px}.reg-cta .reg-go{align-self:stretch;font-size:17px;padding:12px}
 /* 👎 feedback + 🛠 admin */
 .fb-btn{position:fixed;right:0;top:58%;z-index:2147483000;width:40px;height:44px;border:1.5px solid var(--line);border-right:0;border-radius:14px 0 0 14px;background:var(--surface);box-shadow:0 2px 10px rgba(0,0,0,.12);font-size:19px;cursor:pointer;opacity:.82;padding:0 0 0 4px}
 .fb-btn:hover{opacity:1;width:46px}.fb-btn.wait{animation:fbPulse .8s infinite}
@@ -5290,6 +5291,19 @@ function ltpDone(){
 function ltpClose(){ clearInterval(LTP.tick); if(LTP.mq) LTP.mq.end(); LTP.mq=null; ltpEl().hidden=true; document.body.style.overflow="";
   if(new URLSearchParams(location.search).get("lt")){ history.replaceState(null,"",location.pathname); } presTick(); }
 
+/* O'yindan keyin (challenge · duel · live test · sinf o'yini) ro'yxatdan o'tmaganlarga — sayt afzalliklari va «hozircha bepul» (2026-10-21, Otabek) */
+function regCta(){ if(typeof ACC!=="undefined"&&ACC.cur||IN_ARTIFACT) return ""; const ru=state.lang==="ru";
+  const L=ru?["📘 Упражнения к каждому уроку: грамматика, слова, диалоги, аудирование, чтение, произношение","🧠 Карточки и тренировка слов — с голосом носителей языка","📈 Ваши результаты сохраняются — с любого телефона","🏆 Рейтинг, челленджи и игры с друзьями","💡 Каждая ошибка объясняется — на русском"]:["📘 Har Lektion uchun mashqlar: grammatika, so‘z, muloqot, Hören, Lesen, talaffuz","🧠 So‘z yodlash kartalari — nemis tili egalari ovozi bilan","📈 Natijalaringiz saqlanadi — istalgan telefondan","🏆 Reyting, challenge va do‘stlar bilan o‘yinlar","💡 Har bir xato o‘zbekcha tushuntiriladi"];
+  return `<div class="lrn-card reg-cta"><div class="reg-h">🎓 ${ru?"Понравилось? Учитесь дальше на сайте!":"Yoqdimi? Saytda o‘rganishni davom ettiring!"}</div>
+    <ul>${L.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+    <div class="reg-free">🎁 ${ru?"Сейчас всё бесплатно":"Hozircha hammasi bepul"}</div>
+    <button type="button" class="btn primary reg-go" data-reg="go">${ru?"Зарегистрироваться →":"Ro‘yxatdan o‘tish →"}</button></div>`; }
+function regAdd(el){ try{ if(!el||el.hidden) return; const h=regCta(); if(!h||el.querySelector(".reg-cta")) return; const c=el.querySelector(".lrn-end"); if(c) c.insertAdjacentHTML("afterend",h); }catch(e){} }
+document.addEventListener("click",e=>{ if(!e.target.closest("[data-reg]")) return;
+  ["chal","duel","ltp","kgp","lrn"].forEach(id=>{ const el=document.getElementById(id); if(el) el.hidden=true; }); document.body.style.overflow="";
+  try{ history.replaceState(null,"",location.pathname); }catch(er){} try{ accLogin(); }catch(er){} });
+setTimeout(()=>{ try{ const W=(name,getEl,cond)=>{ const f=window[name]; if(typeof f!=="function") return; window[name]=function(){ const r=f.apply(this,arguments); try{ if(!cond||cond()) regAdd(getEl()); }catch(e){} return r; }; };
+  W("chEnd",()=>chEl()); W("ltpDone",()=>ltpEl()); W("kgpDone",()=>kgpEl()); W("kgpKEnd",()=>kgpEl()); W("duRender",()=>duEl(),()=>DU.phase==="end"); }catch(e){} },0);
 /* ---------- Ustoz paneli ---------- */
 const TP={tab:"kg", lid:null, sel:new Set(), n:30, tm:10, on:{}, mqOn:null, b:null};
 function tpEl(){ let e=document.getElementById("tch"); if(!e){ e=document.createElement("div"); e.id="tch"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
