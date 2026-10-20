@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
-<title>Deutsch A1 · A2 · B1</title>
+<title>Streber — by Otabek Komilov</title>
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#1F4FA0">
 <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
@@ -57,6 +57,7 @@ header{padding-block:28px 8px}
 @media (max-width:560px){.top{flex-wrap:wrap;row-gap:10px;gap:6px}.top .eyebrow{flex-basis:100%}.top .acc-chip,.top .tch-btn{margin-right:0}.top .thm-btn{flex-shrink:0}}@media (max-width:360px){.top .acc-chip{max-width:27vw;padding:5px 8px}}
 .lang button{border:0;background:none;padding:5px 12px;font-size:13px;font-weight:600;color:var(--muted)}
 .lang button[aria-pressed="true"]{background:var(--fill);color:var(--on-fill)}
+h1.brand{display:flex;align-items:center;gap:.28em;font-size:clamp(30px,8vw,56px);white-space:nowrap}h1.brand .brand-ic{width:1.25em;height:1.25em;flex:none;margin-left:-.12em}
 h1{font-family:var(--hand);font-weight:400;font-size:clamp(44px,9vw,64px);line-height:1;margin:14px 0 6px;color:var(--blue);letter-spacing:.01em}
 .lead{margin:0;max-width:56ch;color:var(--muted);font-size:17px;text-wrap:pretty}
 .lead b{color:var(--ink);font-weight:600}
@@ -72,6 +73,9 @@ h1{font-family:var(--hand);font-weight:400;font-size:clamp(44px,9vw,64px);line-h
 .tabs button{border:0;background:none;padding:6px 12px;border-radius:9px;font-weight:600;font-size:14px;color:var(--muted);white-space:nowrap}
 .tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
+/* telefonda tepadagi qotgan qism ixcham (2026-10-21, Otabek: «tepasi peshonasi juda katta, ko'p joyni yopib qo'yyapti») */
+@media (max-width:640px){.controls{padding-block:8px 6px}.controls .row{gap:6px}.chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-inline:-2px;padding:1px 2px}.chips::-webkit-scrollbar{display:none}.chip{flex:none}
+ .controls.stuck .search{display:none}.controls.stuck{box-shadow:0 8px 12px -10px rgba(23,36,60,.35)}}
 .chip{border:1px solid var(--line);background:var(--surface);padding:5px 11px;border-radius:999px;font-size:13px;font-weight:600;color:var(--muted)}
 .chip[aria-pressed="true"]{border-color:var(--ink);color:var(--ink)}
 .chip .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
@@ -1586,7 +1590,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-x .ex-tb td,.ex-x .ex-tb th{padding:9px 12px;border-bottom:1px solid var(--line)}
 .ex-x .ex-tb tr:last-child td{border-bottom:0}
 .ex-x .ex-tb tr:nth-child(even) td{background:var(--surface-2)}
-.ex-x .ex-tb td:first-child{font-weight:800;color:var(--blue);white-space:nowrap}
+.ex-x .ex-tb td:first-child{font-weight:800;color:var(--blue)}.ex-x .ex-tb td.lbl{white-space:nowrap}.ex-x .ex-tb td,.ex-x .ex-tb th{overflow-wrap:anywhere;vertical-align:top}.ex-x .ex-tb .li{display:block;padding:1px 0}
 .ex-x .ex-tb b{color:var(--orange);font-weight:800}
 .ex-x .ex-tb td.cs-n:first-child,.ex-x .cs-n{color:#1E5BB8}
 .ex-x .ex-tb td.cs-a:first-child,.ex-x .cs-a{color:#C62828}
@@ -1679,7 +1683,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
         <button id="lang-ru" data-lang="ru" aria-pressed="false">RU</button>
       </div>
     </div>
-    <h1>Deutsch A1 · A2 · B1</h1>
+    <h1 class="brand"><svg class="brand-ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="190 190 620 620"> <style type="text/css"> .st0{fill:#DA1F26;} .st1{fill:#BB2026;} .st2{fill:#FFC200;} </style> <g> <path class="st0" d="M500,791.4c-25.8,10.8-54.1,16.7-83.9,16.7c-119.3,0-216.1-95.9-217.6-214.8c0-1,0-1.9,0-2.8V194.9 c15.8-2,32-3,48.3-3c4.2,0,8.4,0.1,12.6,0.2c39,1.2,76.6,8.3,111.8,20.2c45.7,15.5,87.6,39.3,123.8,69.7c1.7,1.4,3.3,2.8,4.9,4.2 c-82,70.9-133.8,175.7-133.8,292.6c0,2.2,0,4.3,0.1,6.5c0.2,13.4,1.1,26.7,2.7,39.8C381,700.4,431.6,762.8,500,791.4z"/> <path class="st1" d="M633.8,578.8c0,2.2,0,4.3-0.1,6.5c-0.2,13.4-1.1,26.7-2.7,39.8c-12,75.3-62.7,137.7-131,166.3 c-68.4-28.6-119-91-131-166.3c-1.6-13.1-2.5-26.4-2.7-39.8c-0.1-2.2-0.1-4.3-0.1-6.5c0-116.9,51.8-221.7,133.8-292.6 C582,357.1,633.8,461.9,633.8,578.8z"/> <path class="st2" d="M801.5,194.9v395.6c0,0.9,0,1.9,0,2.8c-1.5,118.9-98.4,214.8-217.6,214.8c-29.7,0-58.1-6-83.9-16.7 c68.4-28.6,119-91,131-166.3c1.6-13.1,2.5-26.4,2.7-39.8c0.1-2.2,0.1-4.3,0.1-6.5c0-116.9-51.8-221.7-133.8-292.6 c1.6-1.4,3.3-2.8,4.9-4.2c67.2-56.2,153.8-90.1,248.2-90.1C769.5,191.9,785.7,192.9,801.5,194.9z"/> <path d="M371.2,212.3v162.1l-55.9-51.2l-55.9,51.2V192.1C298.4,193.3,336,200.3,371.2,212.3z"/> </g> </svg><span>by Otabek Komilov</span></h1>
     <p class="lead" data-i="lead"></p>
     <div id="app-inst" class="app-inst" hidden></div>
   </header>
@@ -3140,6 +3144,9 @@ const EX_TIPS={
 function exRegelDeco(h){ try{ const t=document.createElement("div"); t.innerHTML=h;
   t.querySelectorAll(".ex-tb tr").forEach(tr=>{ const c=tr.querySelector("td,th"); if(!c||c.tagName!=="TD") return; const x=c.textContent.trim();
     if(/^(Nom|N\b|Nominativ)/i.test(x)) c.classList.add("cs-n"); else if(/^(Akk|A\b|Akkusativ)/i.test(x)) c.classList.add("cs-a"); else if(/^(Dat|D\b|Dativ)/i.test(x)) c.classList.add("cs-d"); else if(/^(Gen|G\b|Genitiv)/i.test(x)) c.classList.add("cs-g"); else if(/^[+→\-–]/.test(x)&&x.length<=6) c.classList.add("cs-x"); else if(/\(Pl\.?\)|Plural/.test(x)) c.classList.add("ar-p"); else if(/^der\b/.test(x)) c.classList.add("ar-m"); else if(/^das\b/.test(x)) c.classList.add("ar-n"); else if(/^die\b/.test(x)) c.classList.add("ar-f"); });
+  /* telefonda sig'sin (2026-10-21): qisqa birinchi katak — bir qatorda; uzun «a · b · c» ro'yxatlar — har biri alohida qatorda */
+  t.querySelectorAll(".ex-tb td").forEach(td=>{ const x=td.textContent.trim(); if(td===td.parentElement.firstElementChild&&x.length<=16) td.classList.add("lbl");
+    if(x.length>26&&td.innerHTML.includes(" · ")) td.innerHTML=td.innerHTML.split(" · ").map(z=>`<span class="li">${z}</span>`).join(""); });
   t.querySelectorAll(".ex-tb th").forEach(th=>{ const x=th.textContent.trim(); const m={maskulin:"art-m",der:"art-m",neutral:"art-n",das:"art-n",feminin:"art-f",die:"art-f",plural:"art-p","pl.":"art-p"}[x.toLowerCase()]; if(m) th.classList.add(m); });
   return t.innerHTML; }catch(e){ return h; } }
 function exTipP(){ const m=byId[EX.id]||{}, D=exData()[EX.id]||{}, k0=(D.sec&&D.sec[0]&&D.sec[0].k)||""; return m.part||({hoer:"h",spre:"s",wort:"w",lesen:"l",ausspr:"a"}[k0])||((/-([GWKS])$/.exec(EX.id)||[])[1]||"").toLowerCase(); }
@@ -6713,5 +6720,12 @@ document.addEventListener("keydown",e=>{ const el=document.getElementById("chal"
 (function(){ const code=new URLSearchParams(location.search).get("ch"); if(code) setTimeout(()=>chOpen(code),50); })();
 </script>
 
+<script>/* qotgan qism: pastga aylantirilganda qidiruv yashirinadi (ixcham) */
+(function(){ const c=document.querySelector(".controls"); if(!c) return; let top0=null, on=false, raf=0; const sn=document.createElement("div"); sn.style.height="0"; c.parentNode.insertBefore(sn,c);
+  const upd=()=>{ raf=0; if(!matchMedia("(max-width:640px)").matches){ if(on){ on=false; c.classList.remove("stuck"); } return; }
+    top0=sn.getBoundingClientRect().top+scrollY; const y=scrollY;
+    if(!on&&y>top0+80&&!c.contains(document.activeElement)){ on=true; c.classList.add("stuck"); } else if(on&&y<top0+10){ on=false; c.classList.remove("stuck"); } };
+  addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(upd); },{passive:true}); addEventListener("resize",upd); })();
+</script>
 </body>
 </html>
