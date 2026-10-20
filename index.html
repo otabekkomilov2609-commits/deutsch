@@ -1442,7 +1442,9 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ex-dv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;pointer-events:none;white-space:pre;color:var(--ink);font:inherit;line-height:1.4}.ex-dv[hidden]{display:none}
 .ex-info .rg{border:2px solid var(--blue);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--blue-soft);line-height:1.7}.ex-info .lg{text-decoration:underline;text-decoration-thickness:2.5px;text-underline-offset:4px;text-decoration-color:var(--blue)}.ex-info .kz{text-emphasis:"•";-webkit-text-emphasis:"•";text-emphasis-position:under right;-webkit-text-emphasis-position:under;text-emphasis-color:var(--orange);-webkit-text-emphasis-color:var(--orange)}.ex-info .ak{font-weight:800;color:var(--orange)}.ex-info .ach{color:#C62828;font-weight:700}
 
-.ex-dv b.dx{color:#d0021b}.ex-dv .dm{color:#d0021b;font-weight:800}.ex-dv .dw{text-decoration:underline wavy #e5484d;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-skip-ink:none}
+.ex-dv b.dx{color:#d0021b;font-weight:inherit}
+.ex-gw.dv .ex-gap,.ex-gw.dv .ex-gap.bad{caret-color:transparent!important}
+.ex-dv .ias-crt{color:var(--ink);margin:0 -1px;width:2px}.ex-dv .dm{color:#d0021b;font-weight:800}.ex-dv .dw{text-decoration:underline wavy #e5484d;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-skip-ink:none}
 .ex-gap.shake{animation:iasShake .35s}
 .ex-qb.in{position:absolute;right:-13px;top:-13px;bottom:auto;transform:none;width:26px;height:26px;font-size:15px;z-index:3}
 .ex-qb:not(.in){position:absolute;right:-10px;top:-12px;bottom:auto;width:30px;height:30px;font-size:17px;z-index:3}
@@ -2950,7 +2952,7 @@ function exMenu(){ EX.si=-1; exAudStop(); const D=exData()[EX.id];
 /* Aufgabe sarlavhasi animatsiyasi: ekran o'rtasida katta + silkinish → joyiga kichrayib uchadi (2026-10-20, Otabek: «diqqatni jalb qilsin, o'rtada turib kattalashib silkinsin») */
 /* imlo xatosida kursor xato harfdan keyin (yoki tushib qolgan harf joyida) turadi — bitta Backspace yetarli (2026-10-20, Otabek: butun saytda) */
 function errCaret(inp,h){ try{ if(!inp||!h) return false; let pos=-1,n=0; const re=/<b class="(dx|dm)">([^<]*)<\/b>|<[^>]+>|&[a-z#0-9]+;|[\s\S]/g; let m;
-  while((m=re.exec(h))){ if(m[1]==="dx"){ pos=n+[...m[2]].length; break; } if(m[1]==="dm"){ pos=n; break; } if(m[0][0]==="<") continue; n++; }
+  while((m=re.exec(h))){ if(m[1]==="dx"){ n+=[...m[2]].length; pos=n; /* ketma-ket xato harflar bitta blok: kursor oxirgisidan keyin */ while((m=re.exec(h))){ if(m[1]==="dx"){ n+=[...m[2]].length; pos=n; continue; } if(m[0][0]==="<"&&!m[1]) continue; break; } break; } if(m[1]==="dm"){ pos=n; break; } if(m[0][0]==="<") continue; n++; }
   if(pos<0) return false; pos=Math.min(pos,inp.value.length); if(document.activeElement!==inp) inp.focus({preventScroll:true}); inp.setSelectionRange(pos,pos); return {pos}; }catch(e){ return false; } }
 /* ko'rinadigan (soxta) kursor — diff HTML ichida real kursor joyiga qo'yiladi (IAS inline, 2026-10-20, Otabek) */
 function crtInsert(h,pos){ const re=/<b class="(dx|dm)">([^<]*)<\/b>|<[^>]+>|&[a-z#0-9]+;|[\s\S]/g; let m,n=0,out="",done=false; const C='<i class="ias-crt"></i>';
@@ -3245,9 +3247,13 @@ function exGapFit(i){ try{ const cs=getComputedStyle(i); if(!i.dataset.fs0) i.da
 function exGapDiff(i,alts,maxD){ const v=i.value, w=i.closest(".ex-gw"), d=w&&w.querySelector(".ex-dv"); if(!d) return false; const u=iaNorm(v);
   const art=alts.map(x=>iaNorm(x)).find(x=>/^(der|die|das|den|dem|des|ein|eine|einen|einem|einer) /.test(x)&&x.replace(/^\S+ /,"")===u); let h="";
   if(art){ const k=v.search(/\S/); h=esc(v.slice(0,Math.max(0,k)))+'<b class="dm">_</b> '+esc(v.slice(Math.max(0,k))); } else h=iasDiff(v,{a:alts[0],ok:alts.map(x=>iaNorm(x))},maxD);
-  if(!h){ d.hidden=true; d.innerHTML=""; w.classList.remove("dv"); return false; } d.innerHTML=h; d.hidden=false; w.classList.add("dv"); exDvFit(i,d); errCaret(i,h); return true; }
+  if(!h){ d.hidden=true; d.innerHTML=""; w.classList.remove("dv"); return false; } d.innerHTML=h; d.dataset.h=h; d.hidden=false; w.classList.add("dv"); exDvFit(i,d); errCaret(i,h); exDvCaret(i); return true; }
+/* xato ko'rsatilganda haqiqiy kursor ko'rinmaydi — qizil harflar orasida soxta kursor aynan xato harfdan keyin turadi (2026-10-20, Otabek: «kursor das dan keyin turishi kerak») */
+function exDvCaret(i){ try{ const w=i.closest(".ex-gw"), d=w&&w.querySelector(".ex-dv"); if(!d||!w.classList.contains("dv")||!d.dataset.h) return; d.innerHTML=document.activeElement===i&&i.selectionStart===i.selectionEnd?crtInsert(d.dataset.h,i.selectionStart??i.value.length):d.dataset.h; }catch(e){} }
+document.addEventListener("selectionchange",()=>{ const i=document.activeElement; if(i&&i.classList&&i.classList.contains("ex-gap")) exDvCaret(i); });
+document.addEventListener("focusout",e=>{ const i=e.target; if(i&&i.classList&&i.classList.contains("ex-gap")) setTimeout(()=>exDvCaret(i),0); });
 /* diff qatlami input matni bilan bir joyda tursin va katakka sig'sin (2026-10-20) */
-function exDvFit(i,d){ try{ const cs=getComputedStyle(i); d.style.paddingLeft=cs.paddingLeft; d.style.paddingRight=cs.paddingRight; const s=document.createElement("span"); s.style.cssText="position:absolute;visibility:hidden;white-space:pre;font:inherit"; s.innerHTML=d.innerHTML; d.appendChild(s); const need=s.getBoundingClientRect().width; s.remove();
+function exDvFit(i,d){ try{ const cs=getComputedStyle(i); d.style.paddingLeft=cs.paddingLeft; d.style.paddingRight=cs.paddingRight; d.style.fontSize=cs.fontSize; d.style.fontWeight=cs.fontWeight; d.style.fontFamily=cs.fontFamily; d.style.letterSpacing=cs.letterSpacing; const s=document.createElement("span"); s.style.cssText="position:absolute;visibility:hidden;white-space:pre;font:inherit"; s.innerHTML=d.innerHTML; d.appendChild(s); const need=s.getBoundingClientRect().width; s.remove();
   const pad=(parseFloat(cs.paddingLeft)||0)+(parseFloat(cs.paddingRight)||0)+6; if(need+pad>i.getBoundingClientRect().width) i.style.width=Math.ceil(need+pad)+"px"; }catch(e){} }
 document.addEventListener("input",e=>{ const i=e.target; if(!i.classList||!i.classList.contains("ex-gap")||i.classList.contains("lk")) return; const R=exEl(); if(!R||R.hidden||EX.done) return; const it=exCur(); if(!it||it.t!=="gap") return;
   const w=i.closest(".ex-gw"); if(w){ w.classList.remove("dv"); const d=w.querySelector(".ex-dv"); if(d){ d.hidden=true; d.innerHTML=""; } } i.classList.remove("bad","shake"); R.querySelectorAll(".ex-qb").forEach(b=>b.remove());
