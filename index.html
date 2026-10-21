@@ -3080,13 +3080,21 @@ let lrnAud=null;
 /* 🎙 Ovoz tanlash (2026-10-21, Otabek): o'quvchi ona tili egalarini eshitib, 1-2-3-4 o'ringa qo'yadi; har so'zda eng yuqori o'rindagi, bazada bor ovoz ishlatiladi */
 const VOICES=(()=>{ try{ return JSON.parse(document.getElementById("vo-data").textContent); }catch(e){ return {}; } })();
 const VO_SPK={J:"Jeuwre",N:"Natschoba",S:"Sebastian",K:"Kampy"};
-const VO_SAMP=[["jaad9v","Gesundheit"],["1y82bbs","Bleistift"],["193c9xu","Kalender"]]; /* har ovozda bir xil 3 so‘z — solishtirish oson (2026-10-21, Otabek) */
+const VO_SAMP=[["jaad9v","Gesundheit"],["1y82bbs","Bleistift"],["193c9xu","Kalender"]];
+/* 👩 Forvo (2026-10-21, Otabek: «30 euroligini olamiz»): nemis ayollari ovozi Apps Script vositachi orqali (kalit saytda yo'q).
+   URL bo'sh — o'chiq. Forvo qoidasi: audio saqlanmaydi, har eshitish = so'rov; limit tugasa o'z ovozlarimiz. */
+const FORVO_PROXY="";
+if(FORVO_PROXY) VO_SPK.F="Forvo 👩";
+function fvGet(text){ if(!FORVO_PROXY) return Promise.resolve(null); const ac=new AbortController(), tm=setTimeout(()=>ac.abort(),6000);
+  return fetch(FORVO_PROXY+"?w="+encodeURIComponent(text),{signal:ac.signal}).then(r=>r.json()).then(j=>{ clearTimeout(tm); return j&&j.ok&&j.items&&j.items[0]?j.items[0]:null; }).catch(()=>null); }
+function fvWant(id){ if(!FORVO_PROXY) return false; const r=voRank()||["F"], i=r.indexOf("F"); if(i<0) return false; const o=VOICES[id]||{}; return !r.slice(0,i).some(k=>o[k]); }
+function fvPlay(w){ fvGet(w).then(it=>{ if(it){ try{ wkStop(); }catch(e){} const a=new Audio(it.u); a.play().catch(()=>{}); } }); } /* har ovozda bir xil 3 so‘z — solishtirish oson (2026-10-21, Otabek) */
 function voRank(){ try{ const r=JSON.parse(localStorage.getItem("voice:rank")||"null"); return Array.isArray(r)?r:null; }catch(e){ return null; } }
 function voPick(id){ const r=voRank(), o=VOICES[id]; if(!r||!o) return null; for(const k of r){ if(o[k]) return o[k]; } return null; }
 function voSample(k){ const f=VO_SAMP.find(([id])=>VOICES[id]&&typeof VOICES[id][k]==="string"); if(f) return VOICES[f[0]][k]; const ids=Object.keys(VOICES).filter(id=>typeof VOICES[id][k]==="string"); const pref=ids.find(id=>Object.keys(VOICES[id]).length>=4)||ids.find(id=>Object.keys(VOICES[id]).length>=3)||ids[0]; return pref?VOICES[pref][k]:null; }
 function voPlay(paths){ try{ const L=[].concat(paths).map(p=>"https://upload.wikimedia.org/wikipedia/commons/transcoded/"+p+"/"+p.split("/").pop()+".mp3"); let i=0; const nx=()=>{ if(i>=L.length) return; const a=new Audio(L[i++]); a.onended=()=>setTimeout(nx,180); a.play().catch(()=>{}); }; wkStop&&wkStop(); nx(); }catch(e){} }
 function voOpen(){ const f=document.getElementById("acc-f"), ru=state.lang==="ru"; const cur=voRank()||[]; VO_TMP=cur.slice();
-  const row=k=>{ const n=VO_TMP.indexOf(k); return `<div class="vo-r${n>=0?" on":""}" data-vok="${k}"><span class="vo-n">${n>=0?n+1:"–"}</span><b>${VO_SPK[k]}</b><span class="vo-ss">${VO_SAMP.filter(([id])=>VOICES[id]&&typeof VOICES[id][k]==="string").map(([id,w])=>`<button type="button" class="vo-s" data-vopl="${k}" data-voi="${id}" lang="de">▶ ${w}</button>`).join("")}</span></div>`; };
+  const row=k=>{ const n=VO_TMP.indexOf(k); return `<div class="vo-r${n>=0?" on":""}" data-vok="${k}"><span class="vo-n">${n>=0?n+1:"–"}</span><b>${VO_SPK[k]}</b><span class="vo-ss">${VO_SAMP.filter(([id])=>k==="F"||(VOICES[id]&&typeof VOICES[id][k]==="string")).map(([id,w])=>`<button type="button" class="vo-s" data-vopl="${k}" data-voi="${id}" data-w="${w}" lang="de">▶ ${w}</button>`).join("")}</span></div>`; };
   f.innerHTML=`<div class="snd-h"><h2>🎙 ${ru?"Выберите голос":"Ovozni tanlang"}</h2><button type="button" class="snd-x" data-acc="close" aria-label="✕">✕</button></div>
     <p class="acc-lead">${ru?"Это настоящие носители языка. Послушайте слова ▶, затем нажимайте на имена по порядку: кто нравится больше — 1, потом 2, 3, 4.":"Bular — haqiqiy ona tili egalari. So‘zlarni ▶ bilan eshitib ko‘ring, keyin ismini yoqqan tartibda bosing: eng yoqqani — 1, keyin 2, 3, 4."}</p>
     <div class="vo-l">${Object.keys(VO_SPK).map(row).join("")}</div>
@@ -3094,8 +3102,9 @@ function voOpen(){ const f=document.getElementById("acc-f"), ru=state.lang==="ru
     <div class="snd-btns"><button type="button" class="btn" data-vo="reset">${ru?"Сбросить":"Qaytadan"}</button><button type="button" class="btn primary" data-vo="save">${ru?"Сохранить":"Saqlash"}</button></div>`;
   accEl().hidden=false; document.body.style.overflow="hidden"; }
 let VO_TMP=[];
-document.addEventListener("click",e=>{ const pl=e.target.closest("[data-vopl]"); if(pl){ const k=pl.dataset.vopl, s=pl.dataset.voi&&VOICES[pl.dataset.voi]?VOICES[pl.dataset.voi][k]:voSample(k); if(s) voPlay(s); document.querySelectorAll(".vo-s.on").forEach(b=>b.classList.remove("on")); pl.classList.add("on"); setTimeout(()=>pl.classList.remove("on"),1600); return; }
-  const r=e.target.closest("[data-vok]"); if(r){ const k=r.dataset.vok, i=VO_TMP.indexOf(k); if(i>=0) VO_TMP.splice(i,1); else VO_TMP.push(k); const s=voSample(k); if(i<0&&s) voPlay(s); const keep=VO_TMP.slice(); voOpenKeep(keep); return; }
+document.addEventListener("click",e=>{ const pl=e.target.closest("[data-vopl]"); if(pl&&pl.dataset.vopl==="F"){ fvPlay(pl.dataset.w||"Gesundheit"); document.querySelectorAll(".vo-s.on").forEach(b=>b.classList.remove("on")); pl.classList.add("on"); setTimeout(()=>pl.classList.remove("on"),1600); return; }
+  if(pl){ const k=pl.dataset.vopl, s=pl.dataset.voi&&VOICES[pl.dataset.voi]?VOICES[pl.dataset.voi][k]:voSample(k); if(s) voPlay(s); document.querySelectorAll(".vo-s.on").forEach(b=>b.classList.remove("on")); pl.classList.add("on"); setTimeout(()=>pl.classList.remove("on"),1600); return; }
+  const r=e.target.closest("[data-vok]"); if(r){ const k=r.dataset.vok, i=VO_TMP.indexOf(k); if(i>=0) VO_TMP.splice(i,1); else VO_TMP.push(k); const s=voSample(k); if(i<0){ if(k==="F") fvPlay("Gesundheit"); else if(s) voPlay(s); } const keep=VO_TMP.slice(); voOpenKeep(keep); return; }
   const b=e.target.closest("[data-vo]"); if(!b) return; if(b.dataset.vo==="reset"){ VO_TMP=[]; voOpenKeep([]); return; }
   if(b.dataset.vo==="save"){ const all=VO_TMP.concat(Object.keys(VO_SPK).filter(k=>!VO_TMP.includes(k))); try{ localStorage.setItem("voice:rank",JSON.stringify(all)); }catch(er){} accEl().hidden=true; document.body.style.overflow=document.querySelector(".lrn:not([hidden])")?"hidden":""; try{ if(lrnEl()&&!lrnEl().hidden&&!LR.mode) lrnSetup(); }catch(er){} } });
 function voOpenKeep(k){ const save=k; voOpen(); VO_TMP=save; const f=document.getElementById("acc-f"); f.querySelectorAll("[data-vok]").forEach(r=>{ const n=VO_TMP.indexOf(r.dataset.vok); r.classList.toggle("on",n>=0); r.querySelector(".vo-n").textContent=n>=0?n+1:"–"; }); }
@@ -3119,7 +3128,13 @@ function wkBuf(u){
     .catch(err=>{ delete WKBUF[u]; throw err; });
   return WKBUF[u];
 }
-function lrnSay(text){
+function lrnSay(text){ const t=lrnSayText(text); if(!t) return; const id=audId(t);
+  if(!fvWant(id)) return lrnSay0(text);
+  try{ const ss=window.speechSynthesis; if(ss&&(ss.speaking||ss.pending)) ss.cancel(); }catch(e){} if(lrnAud&&lrnAud.pause){ lrnAud.pause(); } wkStop();
+  const tok={}; lrnAud=tok;
+  fvGet(t).then(it=>{ if(lrnAud!==tok) return; if(!it){ lrnAud=null; lrnSay0(text); return; }
+    const a=new Audio(it.u); lrnAud=a; const bk=()=>{ if(lrnAud===a){ lrnAud=null; lrnSay0(text); } }; a.onerror=bk; a.play().catch(bk); }); }
+function lrnSay0(text){
   const t=lrnSayText(text); if(!t) return;
   const id=audId(t), WKP=voPick(id)||WKAUD[id];
   if(WKP){ try{
@@ -3128,7 +3143,7 @@ function lrnSay(text){
     wkStop();
     const L=[].concat(WKP).map(s=>{ const p=s.replace(/^\+/,""); return {u:"https://upload.wikimedia.org/wikipedia/commons/transcoded/"+p+"/"+p.split("/").pop()+".mp3",gap:s[0]==="+"?25:180}; });
     const tok={}; lrnAud=tok; wkStop();
-    const fb=()=>{ if(lrnAud!==tok) return; lrnAud=null; if(SAYAUD.has(id)){ const b=new Audio(AUD_BASE+id+".mp3?v=3"); lrnAud=b; b.play().catch(()=>ttsSay(t)); } else ttsSay(t); };
+    const fb=()=>{ if(lrnAud!==tok) return; lrnAud=null; if(SAYAUD.has(id)){ const b=new Audio(AUD_BASE+id+".mp3?v=4"); lrnAud=b; b.play().catch(()=>ttsSay(t)); } else ttsSay(t); };
     const ac=wkCtx(); if(!ac){ fb(); return; }
     Promise.all(L.map(x=>wkBuf(x.u))).then(bs=>{ if(lrnAud!==tok) return;
       const sr=ac.sampleRate; let n=0; bs.forEach((b,i)=>{ n+=b.e-b.s+(i<bs.length-1?Math.round(sr*(L[i].gap/1000)):0); });
@@ -6513,7 +6528,7 @@ function kgSnd(type,board){ if(!kgSndOn(board)) return; try{ kgUnlock(); const C
 /* Kahoot ovozi: ElevenLabs Leni (oldindan yozilgan iboralar, ism aytilmaydi — ekranda ko'rinadi). 2026-10-20 */
 const KG_AUD=[[/^Neuer Spitzenreiter/,"kg-lead"],[/^Platz drei/,"kg-p3"],[/^Platz zwei/,"kg-p2"],[/^Und Platz eins/,"kg-p1"]];
 let KG_AU=null;
-function kgSay(txt){ if(!kgSndOn(true)) return; const m=KG_AUD.find(([r])=>r.test(txt)); if(m){ try{ if(KG_AU) KG_AU.pause(); KG_AU=new Audio(AUD_BASE+m[1]+".mp3?v=3"); KG_AU.play().catch(()=>{}); return; }catch(e){} } kgSayTTS(txt); }
+function kgSay(txt){ if(!kgSndOn(true)) return; const m=KG_AUD.find(([r])=>r.test(txt)); if(m){ try{ if(KG_AU) KG_AU.pause(); KG_AU=new Audio(AUD_BASE+m[1]+".mp3?v=4"); KG_AU.play().catch(()=>{}); return; }catch(e){} } kgSayTTS(txt); }
 function kgSayTTS(txt){ try{ if(!AZ.dead&&AZ_URL&&!IN_ARTIFACT){ ttsSay(txt); return; } }catch(e){} if(!window.speechSynthesis) return; try{ const u=new SpeechSynthesisUtterance(txt); u.lang="de-DE"; const v=speechSynthesis.getVoices().find(x=>/^de/i.test(x.lang)); if(v) u.voice=v; speechSynthesis.speak(u); }catch(e){} }
 function kgToast(html,cls){ const t=document.getElementById("kg-toast"); if(!t) return; t.className="kg-toast "+(cls||""); t.innerHTML=html; void t.offsetWidth; t.classList.add("show"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),3400); }
 /* i-savolgacha ketma-ket to'g'ri javoblar (savolma-savol) */
