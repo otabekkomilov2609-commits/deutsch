@@ -4312,13 +4312,20 @@ function wpDone(x){ const uz=state.lang!=="ru"; WP.rec=null; if(wpCur()!==x) ret
   const q=document.querySelector(".lrn-intro .lrn-q"); if(q&&q.dataset.raw) q.textContent=q.dataset.raw;
   if(az) wpAssess(x,blob,tok); }
 async function wpAssess(x,blob,tok){ const uz=state.lang!=="ru", L=uz?"uz":"ru";
-  let r=null; try{ const ref=lrnSayText(x.say||x.de); const [SDK,T,wav]=await Promise.all([azSdk(),azToken(),spWav(blob)]); r=await Promise.race([spAzOnce(SDK,T,wav,ref,false),new Promise(z=>setTimeout(()=>z(null),9000))]); }catch(e){ r=null; }
+  let r=null; try{ const ref=lrnSayText(x.say||x.de); const [SDK,T,wav]=await Promise.all([azSdk(),azToken(),spWav(blob)]); const [u,sc]=await Promise.race([Promise.all([spAzOnce(SDK,T,wav,"",false),spAzOnce(SDK,T,wav,ref,false)]),new Promise(z=>setTimeout(()=>z([null,null]),9000))]); r=sc||u; if(r&&u){ r.heard=u.txt||""; r.conf=u.conf; } }catch(e){ r=null; }
   if(tok!==WP.tok||wpCur()!==x) return; const row=document.querySelector("#wp-res .wp-row"), tip=document.getElementById("wp-tip"); if(!row) return; const wt=row.querySelector(".sp2-wt"); if(wt) wt.remove(); const ach=row.querySelector(".sp2-ach");
   const quiet=WP.lv.length>3&&Math.max(...WP.lv)<.06;
   if(!r||!(r.acc||r.pron)||quiet||(r.conf!=null&&r.conf<.4)||(r.pron||r.acc)<35){ const ph=document.getElementById("wp-ph"); if(ph){ ph.className="wp-ph u"; ph.textContent=spUnclT(uz); } const tt=row.querySelector('[data-l="wptt"]'); if(tt) tt.remove(); wpLbl(uz?"Qayta ayting — bosib turing…":"Повторите — нажмите и держите…"); return; }
   const sc=r.pron||r.acc, P=spPhrase(sc), ph=document.getElementById("wp-ph"); if(ph){ ph.className="wp-ph "+P.k; ph.innerHTML=`<b>${esc(P.t)}</b>${P.tier===3?`<small>${uz?"Eshiting va takrorlang":"Послушайте и повторите"}</small>`:""}`; }
   if(P.tier===3){ const c=row.querySelector(".sp2-cmp"); if(c) c.classList.add("on"); }
-  WP.heard=r.txt||""; WP.ref=lrnSayText(x.say||x.de);
+  WP.heard=r.heard||r.txt||""; WP.ref=lrnSayText(x.say||x.de);
+  /* artikl yoki so'zning o'zi boshqacha aytilgan bo'lsa — «Klasse!» emas (2026-10-22, Otabek: «artikelni xato aytsam ham zo'r deyapti») */
+  { const H=spNorm(WP.heard), R=spNorm(WP.ref), art=w=>/^(der|die|das)$/.test(w||""), rA=art(R[0])?R[0]:null, hA=art(H[0])?H[0]:null, rW=R.filter(w=>!art(w)), hW=H.filter(w=>!art(w));
+    const wordOk=rW.length&&rW.every(w=>hW.some(h=>spLike(w,h)||(w.length>3&&spLev(spFold(w),spFold(h))<=1))), artBad=rA&&hA&&hA!==rA, artMiss=rA&&!hA&&H.length>0;
+    if(H.length&&(!wordOk||artBad||artMiss)){ const ph2=document.getElementById("wp-ph"); if(ph2){ ph2.className="wp-ph r"; ph2.innerHTML=`<b>${!wordOk?"Das war ein anderes Wort 🤔":"Der Artikel stimmt nicht 🤔"}</b><small>${!wordOk?(uz?`Eshitildi: «${esc(WP.heard)}» — bosing →A`:`Услышано: «${esc(WP.heard)}» — нажмите →A`):(uz?`«${esc(hA||"")}» emas — <b>${esc(WP.ref)}</b>`:`не «${esc(hA||"")}», а <b>${esc(WP.ref)}</b>`)}</small>`; }
+      const c=row.querySelector(".sp2-cmp"); if(c) c.classList.add("on"); const q0=document.querySelector(".lrn-intro .lrn-q"); if(q0){ if(!q0.dataset.raw) q0.dataset.raw=q0.textContent; const raw=q0.dataset.raw; q0.innerHTML=artBad||artMiss?raw.replace(/^(der|die|das)\b/i,m=>`<span class="wp-w r">${m}</span>`):`<span class="wp-w r">${esc(raw)}</span>`; }
+      const h=document.getElementById("wp-heard"); if(h&&!wordOk){ h.hidden=false; h.innerHTML=`<small>→A · ${uz?"siz aytdingiz":"вы сказали"}</small><span lang="de">${wpDiff(WP.heard,WP.ref)[0]}</span><em>${uz?"namuna":"образец"}: <span lang="de">${wpDiff(WP.heard,WP.ref)[1]}</span></em>`; }
+      return; } }
   /* so'z rangi + eng zaif tovush */
   const q=document.querySelector(".lrn-intro .lrn-q"); let worst=null;
   (r.W||[]).forEach((w,wi)=>{ (w.Phonemes||[]).forEach(p=>{ const a=(p.PronunciationAssessment||{}).AccuracyScore; if(a==null||a>=60) return; const t=WP_TIPS.find(T=>T[0].test(String(p.Phoneme||"").trim())); if(t&&(!worst||a<worst.a)) worst={a,t,w:String(w.Word||"")}; }); });
@@ -4658,7 +4665,7 @@ document.addEventListener("click",e=>{
   else if(a==="none"){ LR.sel.clear(); store.set(lrnKey(LR.id)+":sel","[]"); lrnSetup(); }
   else if(a==="learn"||a==="cards"){ lrnGoalAsk(a); } /* so'z soni — keyingi oynada so'raladi (2026-10-21, Otabek: «orqaga qaytarmasin, keyingi oyna ochilib nechtaligini so'rasin») */
   else if(a==="goal"){ lrnGoalRun(+b.dataset.n); }
-  else if(a==="goalgo"){ const gi=document.getElementById("lrn-goal"), n=Math.round(+(gi&&gi.value)); if(!(n>=1)){ const w=gi&&gi.closest(".lrn-gown"); if(w){ w.classList.remove("need"); void w.offsetWidth; w.classList.add("need"); gi.focus(); } return; } lrnGoalRun(n); }
+  else if(a==="goalgo"){ const gi=document.getElementById("lrn-goal"); let n=Math.round(+(gi&&gi.value)); if(!(n>=1)){ const on=document.querySelector("#lrn .lrn-gb.on"); if(on) n=+on.dataset.n; } /* son yozilmagan bo'lsa — belgilangan (oxirgi) son bilan boshlanadi (2026-10-22, Otabek) */ if(!(n>=1)){ const w=gi&&gi.closest(".lrn-gown"); if(w){ w.classList.remove("need"); void w.offsetWidth; w.classList.add("need"); gi.focus(); } return; } lrnGoalRun(n); }
   else if(a==="reset"){ lrnItems().forEach(x=>delete LR.st[x.i]); lrnSave(); const KN=lrnKnown(); lrnItems().forEach(x=>KN.delete(x.i)); lrnKnownSet(KN); lrnSetup(); }
   else if(a==="next"){ LR.qi++; lrnAsk(); }
   else if(a==="cont") lrnNewRound();
