@@ -3910,7 +3910,7 @@ document.addEventListener("click",e=>{ const root=exEl(); if(!root||root.hidden|
   if(a==="whyx"){ const fb=document.getElementById("ex-fb"); fb.className="lrn-fb"; fb.innerHTML=EX.fails[EX.q[EX.qi]]>=2?`<button type="button" class="lrn-link ex-sol" data-x="sol">💡 Lösung</button>`:""; return; }
   if(a==="sol"){ if(!EX.done) exSol(); return; }
   if(a==="say"){ exSay(it.say); return; }
-  if(EX.done&&!(it.t==="say"&&/^(vmplay|vmtt|spans|spnomic|spscd|bspq|bspa|sptb|sptk|spq|spme|sptt)$/.test(a))) return; /* Sprechen: javobdan keyin ham ▶, →A, 🔊 javob, 🎯 ishlaydi (2026-10-22) */
+  if(EX.done&&!(it.t==="say"&&/^(vmplay|vmtt|spans|spcmp|spnomic|spscd|bspq|bspa|sptb|sptk|spq|spme|sptt)$/.test(a))) return; /* Sprechen: javobdan keyin ham ▶, →A, 🔊 javob, 🎯 ishlaydi (2026-10-22) */
   if(a==="chk"){ if(it.t==="order"&&!EX.st.ord.length) return; if(it.t==="cat"&&Object.keys(EX.st.cat).length<it.i.length){ root.querySelectorAll(".ex-cr").forEach(r=>{ if(EX.st.cat[r.dataset.k]==null){ r.classList.remove("need"); void r.offsetWidth; r.classList.add("need"); } }); return; }
     if(it.t==="gap"&&[...root.querySelectorAll(".ex-gap")].some(i=>!i.value.trim())){ const i=[...root.querySelectorAll(".ex-gap")].find(i=>!i.value.trim()); i.focus(); return; }
     if(it.t==="mark"&&!EX.st.mk.size) return;
