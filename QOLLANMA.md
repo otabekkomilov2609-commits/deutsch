@@ -711,3 +711,6 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - 🧭 Sayt bo‘ylab sayohat (Clash of Clans uslubi): ekran qorayadi, kerakli tugma yorug‘ va miltillaydi, «👆 Bosing»; Yodlash → juftlash, Lektion → Grammatik (qoida → 1 mashq), 💡/i, Hören/Aussprache, Prüfungstraining, Reyting, 👎, ilova. Xush kelibsiz oynasidan yoki bosh sahifadagi «🧭 Sayt bo‘ylab sayohat» tugmasidan boshlanadi.
 - 👎 tugmasini surib istalgan joyga qo‘yish mumkin (chetga yopishadi, joyi eslab qolinadi); fikr yozish maydoni katta.
 - Variantlar savolda «a · b · c» bo‘lib takrorlansa — savolda faqat raqam qoladi (65 ta mashq).
+- Lug‘at ovozi: Jeuwre (qo‘pol ovoz) o‘rniga 329 ta so‘zga boshqa ona tili egalari (Natschoba, Sebastian Wallroth va b., Wikimedia/Lingua Libre, SNR tekshirilgan); Thorsten (sun’iy) o‘rniga 74 ta so‘zga tabiiy ovoz. Qolganlari keyin ElevenLabs.
+- Tushuntirishlarda nemischa tugmalar tarjimasi: Weiß ich (= bilaman), Keine Ahnung (= bilmayman), Weiter (= keyingisi), Verstanden (= tushundim), Zurück, Überspringen.
+- Ilova o‘rnatilgach «✅ Ilova o‘rnatildi — bosh ekrandagi Streber’dan oching» oynasi; sayohatda «O‘tkazib yuborish» yo‘q; 👎 ramkasiz.
