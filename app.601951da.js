@@ -1409,6 +1409,8 @@ const APP_T={uz:{t:"Streber’ni telefoningizga o‘rnating",tp:"Streber’ni pl
 /* iPhone menyusidagi nom telefon tiliga qarab — hammasi ko'rsatiladi (2026-10-21, Otabek: «ko'pchilik bilmaydi») */
 const APP_IOS=["На экран «Домой»","Zum Home-Bildschirm","Add to Home Screen"];
 function appStandalone(){ return matchMedia("(display-mode: standalone)").matches||navigator.standalone===true; }
+/* ilova splash: logo + by Otabek Komilov + shior, 1.6 s (2026-10-21, Otabek) */
+(()=>{ try{ if(!appStandalone()||IN_ARTIFACT) return; const b=document.querySelector(".brand-ic"); const d=document.createElement("div"); d.className="splash"; d.innerHTML=`${b?b.outerHTML.replace('class="brand-ic"','class="splash-ic"'):""}<div class="by">by Otabek Komilov</div><div class="mo" lang="de">Ich kämpfe für deinen Erfolg und lasse dich niemals im Stich.</div><small>streber.uz</small>`; document.body.appendChild(d); setTimeout(()=>{ d.classList.add("out"); setTimeout(()=>d.remove(),450); },1600); }catch(e){} })();
 function appIOS(){ return /iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1); }
 function appIPad(){ return /ipad/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1); }
 function appOff(){ try{ const t=+localStorage.getItem("app:off")||0; return Date.now()-t<14*864e5; }catch(e){ return false; } }
@@ -4055,7 +4057,7 @@ const TOUR_S=[ /* 2026-10-21 (Otabek: «20 ta juda ko'p — eng kuchli joylarimi
     return "done"; }},
  {sel:"#ex .ex-card", free:"#ex", until:()=>EX.done, coach:"ex", t:{uz:"✍️ Bitta mashqni ishlang. Xato bo‘lsa <b>?</b> sababini aytadi, <b>i</b> — shu mashqning qoidasi. To‘g‘ri bo‘lsa <b>Weiter</b> yashil bo‘ladi 🔓<br><small>Bilmasangiz — <b>💡 Javobni ko‘rsat</b>.</small>",ru:"✍️ Сделайте одно задание. Ошибка — <b>?</b> объяснит почему, <b>i</b> — правило упражнения. Верно — <b>Weiter</b> станет зелёной 🔓<br><small>Не знаете — <b>💡 Показать ответ</b>.</small>"}},
  {sel:()=>TOUR.lek&&TOUR.lek.querySelector(".sx.s"), enter:()=>{ try{ if(!exEl().hidden) exClose(); }catch(e){} }, next:1, t:{uz:"🗣️ <b>Sprechen</b> — gapirish: savolni eshitasiz, <b>ovoz chiqarib</b> javob berasiz, keyin to‘g‘ri javobni eshitib solishtirasiz.",ru:"🗣️ <b>Sprechen</b> — говорение: слушаете вопрос, отвечаете <b>вслух</b>, затем сравниваете с правильным ответом."}},
- {center:1, next:1, btn:{uz:"Boshladik! 🚀",ru:"Начинаем! 🚀"}, t:{uz:"🎉 <b>Tayyor!</b> Har kuni 10–15 daqiqa yetarli. Omad!",ru:"🎉 <b>Готово!</b> Достаточно 10–15 минут в день. Удачи!"}}
+ {center:1, next:1, btn:{uz:"Boshladik! 🚀",ru:"Начинаем! 🚀"}, t:{uz:"🎉 <b>Tayyor!</b> Har kuni 10–15 daqiqa yetarli. Omad!<br><i lang=\"de\">„Ich kämpfe für deinen Erfolg und lasse dich niemals im Stich.“</i>",ru:"🎉 <b>Готово!</b> Достаточно 10–15 минут в день. Удачи!<br><i lang=\"de\">„Ich kämpfe für deinen Erfolg und lasse dich niemals im Stich.“</i>"}}
 ];
 function tourLinkT(){ const b=document.getElementById("tour-link"); if(!b) return; let d=false; try{ d=localStorage.getItem("tour")==="1"; }catch(e){} b.hidden=d; b.textContent=state.lang==="ru"?"🧭 Экскурсия по сайту":"🧭 Sayt bo‘ylab sayohat"; } /* bir marta o‘tilgandan keyin tugma yashiriladi (2026-10-21, Otabek) */
 document.addEventListener("click",e=>{ if(e.target.closest("[data-lang]")) setTimeout(tourLinkT,0); }); setTimeout(tourLinkT,0);

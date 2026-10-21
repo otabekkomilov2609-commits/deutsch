@@ -59,7 +59,8 @@ header{padding-block:28px 8px}
 .lang button[aria-pressed="true"]{background:var(--fill);color:var(--on-fill)}
 h1.brand{display:flex;align-items:center;gap:.28em;font-size:clamp(30px,8vw,56px);white-space:nowrap}h1.brand .brand-ic{width:1.25em;height:1.25em;flex:none;margin-left:-.12em}
 h1{font-family:var(--hand);font-weight:400;font-size:clamp(44px,9vw,64px);line-height:1;margin:14px 0 6px;color:var(--blue);letter-spacing:.01em}
-.lead{margin:0;max-width:56ch;color:var(--muted);font-size:17px;text-wrap:pretty}
+.lead{margin:0;max-width:56ch;color:var(--muted);font-size:17px;text-wrap:pretty}.motto{font-family:var(--hand);font-weight:400;font-size:clamp(19px,4.6vw,24px);line-height:1.25;color:var(--ink);margin:-2px 0 10px;max-width:34ch;text-wrap:balance} /* shior (2026-10-21, Otabek) */
+.splash{position:fixed;inset:0;z-index:2147483300;background:#fff;display:grid;align-content:center;justify-items:center;gap:4px;text-align:center;padding:24px;transition:opacity .4s}.splash.out{opacity:0;pointer-events:none}.splash svg{width:120px;height:120px}.splash .by{font-family:var(--hand);font-size:36px;color:#1E4FA3;margin:8px 0 6px}.splash .mo{font-family:var(--hand);font-size:21px;color:#14213D;max-width:260px;margin:0 auto;line-height:1.3}.splash small{display:block;margin-top:28px;color:#9aa3b2;font-size:12px}
 .lead b{color:var(--ink);font-weight:600}
 
 /* controls */
@@ -1706,6 +1707,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
       </div>
     </div>
     <h1 class="brand"><svg class="brand-ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="190 190 620 620"> <style type="text/css"> .st0{fill:#DA1F26;} .st1{fill:#BB2026;} .st2{fill:#FFC200;} </style> <g> <path class="st0" d="M500,791.4c-25.8,10.8-54.1,16.7-83.9,16.7c-119.3,0-216.1-95.9-217.6-214.8c0-1,0-1.9,0-2.8V194.9 c15.8-2,32-3,48.3-3c4.2,0,8.4,0.1,12.6,0.2c39,1.2,76.6,8.3,111.8,20.2c45.7,15.5,87.6,39.3,123.8,69.7c1.7,1.4,3.3,2.8,4.9,4.2 c-82,70.9-133.8,175.7-133.8,292.6c0,2.2,0,4.3,0.1,6.5c0.2,13.4,1.1,26.7,2.7,39.8C381,700.4,431.6,762.8,500,791.4z"/> <path class="st1" d="M633.8,578.8c0,2.2,0,4.3-0.1,6.5c-0.2,13.4-1.1,26.7-2.7,39.8c-12,75.3-62.7,137.7-131,166.3 c-68.4-28.6-119-91-131-166.3c-1.6-13.1-2.5-26.4-2.7-39.8c-0.1-2.2-0.1-4.3-0.1-6.5c0-116.9,51.8-221.7,133.8-292.6 C582,357.1,633.8,461.9,633.8,578.8z"/> <path class="st2" d="M801.5,194.9v395.6c0,0.9,0,1.9,0,2.8c-1.5,118.9-98.4,214.8-217.6,214.8c-29.7,0-58.1-6-83.9-16.7 c68.4-28.6,119-91,131-166.3c1.6-13.1,2.5-26.4,2.7-39.8c0.1-2.2,0.1-4.3,0.1-6.5c0-116.9-51.8-221.7-133.8-292.6 c1.6-1.4,3.3-2.8,4.9-4.2c67.2-56.2,153.8-90.1,248.2-90.1C769.5,191.9,785.7,192.9,801.5,194.9z"/> <path d="M371.2,212.3v162.1l-55.9-51.2l-55.9,51.2V192.1C298.4,193.3,336,200.3,371.2,212.3z"/> </g> </svg><span>by Otabek Komilov</span></h1>
+    <p class="motto" lang="de">„Ich kämpfe für deinen Erfolg und lasse dich niemals im Stich.“</p>
     <p class="lead" data-i="lead"></p>
     <div id="app-inst" class="app-inst" hidden></div>
     <button type="button" class="tour-link" id="tour-link" data-tourgo>🧭 Sayt bo‘ylab sayohat</button>
@@ -3192,6 +3194,8 @@ const APP_T={uz:{t:"Streber’ni telefoningizga o‘rnating",tp:"Streber’ni pl
 /* iPhone menyusidagi nom telefon tiliga qarab — hammasi ko'rsatiladi (2026-10-21, Otabek: «ko'pchilik bilmaydi») */
 const APP_IOS=["На экран «Домой»","Zum Home-Bildschirm","Add to Home Screen"];
 function appStandalone(){ return matchMedia("(display-mode: standalone)").matches||navigator.standalone===true; }
+/* ilova splash: logo + by Otabek Komilov + shior, 1.6 s (2026-10-21, Otabek) */
+(()=>{ try{ if(!appStandalone()||IN_ARTIFACT) return; const b=document.querySelector(".brand-ic"); const d=document.createElement("div"); d.className="splash"; d.innerHTML=`${b?b.outerHTML.replace('class="brand-ic"','class="splash-ic"'):""}<div class="by">by Otabek Komilov</div><div class="mo" lang="de">Ich kämpfe für deinen Erfolg und lasse dich niemals im Stich.</div><small>streber.uz</small>`; document.body.appendChild(d); setTimeout(()=>{ d.classList.add("out"); setTimeout(()=>d.remove(),450); },1600); }catch(e){} })();
 function appIOS(){ return /iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1); }
 function appIPad(){ return /ipad/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1); }
 function appOff(){ try{ const t=+localStorage.getItem("app:off")||0; return Date.now()-t<14*864e5; }catch(e){ return false; } }
@@ -5838,7 +5842,7 @@ const TOUR_S=[ /* 2026-10-21 (Otabek: «20 ta juda ko'p — eng kuchli joylarimi
     return "done"; }},
  {sel:"#ex .ex-card", free:"#ex", until:()=>EX.done, coach:"ex", t:{uz:"✍️ Bitta mashqni ishlang. Xato bo‘lsa <b>?</b> sababini aytadi, <b>i</b> — shu mashqning qoidasi. To‘g‘ri bo‘lsa <b>Weiter</b> yashil bo‘ladi 🔓<br><small>Bilmasangiz — <b>💡 Javobni ko‘rsat</b>.</small>",ru:"✍️ Сделайте одно задание. Ошибка — <b>?</b> объяснит почему, <b>i</b> — правило упражнения. Верно — <b>Weiter</b> станет зелёной 🔓<br><small>Не знаете — <b>💡 Показать ответ</b>.</small>"}},
  {sel:()=>TOUR.lek&&TOUR.lek.querySelector(".sx.s"), enter:()=>{ try{ if(!exEl().hidden) exClose(); }catch(e){} }, next:1, t:{uz:"🗣️ <b>Sprechen</b> — gapirish: savolni eshitasiz, <b>ovoz chiqarib</b> javob berasiz, keyin to‘g‘ri javobni eshitib solishtirasiz.",ru:"🗣️ <b>Sprechen</b> — говорение: слушаете вопрос, отвечаете <b>вслух</b>, затем сравниваете с правильным ответом."}},
- {center:1, next:1, btn:{uz:"Boshladik! 🚀",ru:"Начинаем! 🚀"}, t:{uz:"🎉 <b>Tayyor!</b> Har kuni 10–15 daqiqa yetarli. Omad!",ru:"🎉 <b>Готово!</b> Достаточно 10–15 минут в день. Удачи!"}}
+ {center:1, next:1, btn:{uz:"Boshladik! 🚀",ru:"Начинаем! 🚀"}, t:{uz:"🎉 <b>Tayyor!</b> Har kuni 10–15 daqiqa yetarli. Omad!<br><i lang=\"de\">„Ich kämpfe für deinen Erfolg und lasse dich niemals im Stich.“</i>",ru:"🎉 <b>Готово!</b> Достаточно 10–15 минут в день. Удачи!<br><i lang=\"de\">„Ich kämpfe für deinen Erfolg und lasse dich niemals im Stich.“</i>"}}
 ];
 function tourLinkT(){ const b=document.getElementById("tour-link"); if(!b) return; let d=false; try{ d=localStorage.getItem("tour")==="1"; }catch(e){} b.hidden=d; b.textContent=state.lang==="ru"?"🧭 Экскурсия по сайту":"🧭 Sayt bo‘ylab sayohat"; } /* bir marta o‘tilgandan keyin tugma yashiriladi (2026-10-21, Otabek) */
 document.addEventListener("click",e=>{ if(e.target.closest("[data-lang]")) setTimeout(tourLinkT,0); }); setTimeout(tourLinkT,0);
