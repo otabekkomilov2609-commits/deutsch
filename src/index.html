@@ -3626,7 +3626,8 @@ function spMode(it){ const h=String(it.h||""); if(/sprechen Sie (die Sätze )?na
 const SP_STOP=new Set("der die das den dem des ein eine einen einem einer eines und oder aber ich du er sie es wir ihr mir dir mich dich uns euch ihm ihn ihnen mit zu zum zur in im am an auf aus bei von vom für ist sind bin bist seid hat habe hast haben sehr so noch auch".split(" "));
 function spFold(w){ return String(w).replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss"); }
 function spLev(a,b){ const d=Array.from({length:b.length+1},(_,j)=>j); for(let i=1;i<=a.length;i++){ let p=d[0]; d[0]=i; for(let j=1;j<=b.length;j++){ const t=d[j]; d[j]=Math.min(d[j]+1,d[j-1]+1,p+(a[i-1]===b[j-1]?0:1)); p=t; } } return d[b.length]; }
-function spLike(a,b){ a=spFold(a); b=spFold(b); if(a===b) return true; const n=Math.min(a.length,b.length); if(n<4) return false; const k=Math.max(4,n-2); return a.slice(0,k)===b.slice(0,k); }
+function spLike(a,b){ a=spFold(a); b=spFold(b); if(a===b) return true; const n=Math.min(a.length,b.length); if(n<3) return false; if(a.startsWith(b)||b.startsWith(a)) return true; /* alt→alte, gut→guten */
+  if(n<4) return false; const k=Math.max(4,n-2); if(a.slice(0,k)===b.slice(0,k)) return true; return a.slice(0,2)===b.slice(0,2)&&spLev(a,b)<=2; /* gehen→geht */ }
 /* matnni so'zlarga bo'lish: ko'rsatiladigan so'z + uning normal shakllari (indeks bilan) */
 function spToks(txt){ const out=[]; let k=0; String(txt||"").split(/\s+/).filter(Boolean).forEach(w=>{ const n=spNorm(w); out.push({w,n,ix:n.map(()=>k++)}); }); return out; }
 function spLcsPairs(A,B){ const L=Array.from({length:A.length+1},()=>new Array(B.length+1).fill(0));
@@ -3649,9 +3650,12 @@ function spJudge(it,heard){ const uz=spUz(), mode=spMode(it); if(!heard) return 
     return {mode,v:"no",chip:kind==="o"?(uz?"❌ tartib xato":"❌ порядок слов"):kind==="f"?(uz?"❌ shakl xato":"❌ форма"):(uz?"❌ so‘z yetishmaydi":"❌ не хватает слова"),note:["no",note],html:spWordsHTML(HT,cls)}; }
   /* 💬 Redemittel / 💡 Mazmun — qavsdagi kalit ibora yoki ma'lumot; qolgan so'zlar erkin */
   const parts=spCue(it.q); let miss=[];
+  /* namunadagi gapni (deyarli) aynan aytgan bo'lsa — kalit so'z qavsdagidan boshqa shaklda bo'lsa ham to'g'ri (16:15 → Viertel nach vier, spielen → gespielt) (2026-10-22, Otabek) */
+  const AC=A.filter(w=>w.length>2&&!SP_STOP.has(w)), covOk=AC.length>0&&AC.filter(t=>H.some(h=>spLike(t,h))).length>=Math.ceil(AC.length*.75);
   const mark=toks=>{ let hit=0; toks.forEach(t=>{ const j=H.findIndex(h=>spLike(t,h)); if(j>=0){ hit++; cls[j]="g t"; } }); return hit; };
   if(parts.length){ parts.forEach(p=>{ const all=spNorm(p); let c=all.filter(w=>!SP_STOP.has(w)); if(!c.length) c=all; if(!c.length) return; const hit=mark(c); if(hit<Math.ceil(c.length*.6)) miss.push(p); }); }
   else { const c=A.filter(w=>w.length>2&&!SP_STOP.has(w)); if(c.length&&mark(c)<Math.ceil(c.length*.5)) miss.push("…"); }
+  if(covOk&&miss.length){ miss=[]; AC.forEach(t=>{ const j=H.findIndex(h=>spLike(t,h)); if(j>=0) cls[j]="g t"; }); }
   if(miss.length){ const what=parts.length?parts.map(p=>`<b>${esc(p)}</b>`).join(" · "):"";
     return {mode,v:"tip",chip:mode==="k"?(uz?"💡 kalit ibora yo‘q":"💡 нет ключевой фразы"):(uz?"💡 kalit so‘z yo‘q":"💡 нет ключевого слова"),
       note:["tip",(what?(uz?`Ishlating: ${what}. `:`Используйте: ${what}. `):"")+(uz?`Masalan: <b>${esc(ansTxt)}</b>`:`Например: <b>${esc(ansTxt)}</b>`)],html:spWordsHTML(HT,cls)}; }
