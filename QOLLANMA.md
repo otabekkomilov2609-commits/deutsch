@@ -724,3 +724,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Wörter ordnen: to'g'ri tartiblanganda gap oxiridagi «?» yoki «.» plitkalardan keyin ko'rinadi (509 ta mashq).
 - 👀 Tanishuv (So'z yodlash): so'z soni tanlangach yangi so'zlar avval kartada (nemischa, tarjima, misol, ovoz avtomatik), baholashsiz; «Weiter» yoki «⏭ Mashqqa o'tish» → juftlash → yozish. Sariq/yashil so'zlar tanishuvda chiqmaydi; sayohat paytida tanishuv o'tkaziladi.
 - Sayohat qisqartirildi (2026-10-21, Otabek: «20 ta juda ko'p»): 9 qadam — 🧠 So'z yodlash (Lektion ranglari, tanishuv→juftlash→yozish) · 📘 Grammatik (Regel/Beispiel + bitta mashq) · 🗣️ Sprechen · Tayyor. Lernen/mashq oynalari keyingi qadamda o'zi yopiladi; mashq paytida pufakcha ekran pastida.
+- 🎙 Ovoz oynasi: har ovozda bir xil 3 ta uzunroq so'z (▶ Gesundheit · Bleistift · Kalender) — to'rttala odamda ham bor; ismini bosish = tartib raqami.
