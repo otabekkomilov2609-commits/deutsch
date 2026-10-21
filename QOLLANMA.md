@@ -714,3 +714,9 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Lug‘at ovozi: Jeuwre (qo‘pol ovoz) o‘rniga 329 ta so‘zga boshqa ona tili egalari (Natschoba, Sebastian Wallroth va b., Wikimedia/Lingua Libre, SNR tekshirilgan); Thorsten (sun’iy) o‘rniga 74 ta so‘zga tabiiy ovoz. Qolganlari keyin ElevenLabs.
 - Tushuntirishlarda nemischa tugmalar tarjimasi: Weiß ich (= bilaman), Keine Ahnung (= bilmayman), Weiter (= keyingisi), Verstanden (= tushundim), Zurück, Überspringen.
 - Ilova o‘rnatilgach «✅ Ilova o‘rnatildi — bosh ekrandagi Streber’dan oching» oynasi; sayohatda «O‘tkazib yuborish» yo‘q; 👎 ramkasiz.
+
+### 🎙 Ovoz tanlash (2026-10-21)
+- Lug'atda o'quvchi 4 ona tili egasini (Jeuwre, Natschoba, Sebastian, Kampy — Wikimedia Commons / Lingua Libre) ▶ eshitib 1-2-3-4 o'ringa qo'yadi (localStorage `voice:rank`). Har so'zda tartibdagi birinchi, bazada bor ovoz aytiladi; hech kim bo'lmasa — eski tanlov (WKAUD), keyin Thorsten.
+- `vo-data`: 858 so'z, kamida 2 ovoz bor, shovqin (SNR) ≥ 15 dB. Jeuwre o'chirilmaydi — u faqat tanlovlardan biri.
+- Footer: «Ovoz manbalari» havolasi qoladi — CC BY-SA litsenziyasi muallifni ko'rsatishni talab qiladi.
+- Sayohat: «👆 Bosing» tugmasi yoritilgan tugmani bosadi; sayohat bir marta o'tilgandan keyin «🧭 Sayt bo'ylab sayohat» tugmasi yashiriladi.
