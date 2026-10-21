@@ -296,7 +296,7 @@ main{padding-block:6px 40px}
 .lrn-flash .lrn-ex{font-size:22px;color:var(--ink)}
 .lrn-say{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:2px 8px;font-size:15px;cursor:pointer}
 .lrn-end{align-items:center;text-align:center}.lrn-end .big{font-size:52px}.lrn-end p{margin:0;color:var(--muted)}.lrn-end .btn{padding:11px 22px;font-size:15px;cursor:pointer}
-.lrn-intro-h{text-align:center;font-weight:800;color:var(--muted);margin:0 0 10px}.lrn-intro{cursor:default;min-height:260px}.lrn-itr{font-size:19px;color:var(--muted);font-weight:700}.lrn-flash{min-height:300px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;font:inherit;cursor:pointer}
+.lrn-gq h3{margin:0 0 4px;font-size:22px;text-align:center}.lrn-gq .lrn-count{text-align:center}.lrn-gopts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.lrn-gb{font:inherit;font-size:24px;font-weight:800;padding:16px 4px;border:2px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);box-shadow:0 4px 0 var(--line);cursor:pointer}.lrn-gb.all{font-size:18px}.lrn-gb.on{border-color:var(--blue);background:var(--blue-soft);box-shadow:0 4px 0 var(--blue)}.lrn-gb:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}.lrn-gown{display:flex;gap:8px}.lrn-gown input{flex:1;min-width:0;font:inherit;font-size:17px;padding:12px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}.lrn-gown.need input{border-color:#C62828;animation:lrnShake .35s}.lrn-gtip{text-align:center;color:var(--muted);margin:14px 0 0}.lrn-intro-h{text-align:center;font-weight:800;color:var(--muted);margin:0 0 10px}.lrn-intro{cursor:default;min-height:260px}.lrn-itr{font-size:19px;color:var(--muted);font-weight:700}.lrn-flash{min-height:300px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;font:inherit;cursor:pointer}
 .lrn-flash.flip{background:var(--blue-soft)}.lrn-fm{display:inline-block;font-size:15px;font-weight:600;color:var(--muted);letter-spacing:.01em}.lrn-flash .lrn-fm{font-size:17px;margin-top:-6px}.lrn-flash .lrn-q.de{color:var(--blue)}.lrn-tap{font-size:13px;color:var(--muted)}
 .lrn-say-row{display:flex;justify-content:center}
 .lrn-kn{display:grid;grid-template-columns:1fr 1fr;gap:10px}.lrn-kn .btn{padding:14px;font-size:16px;cursor:pointer}
@@ -1480,7 +1480,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .lek.bt:not(.open)>.sx,.lek.bt:not(.open)>.lek-hw,.lek.bt:not(.open)>:not(.lek-h){display:none}
 .lek.bt:not(.open){padding-bottom:14px}
 .lek-pc{font-weight:800;font-size:14px;color:var(--green);white-space:nowrap}.lek-pc:empty{display:none}
-.lek-chev{font-size:20px;color:var(--muted);transition:transform .2s;flex:none}
+.lek-chev{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:24px;line-height:1;color:var(--blue);background:var(--blue-soft);border:2px solid var(--line);transition:transform .2s;flex:none} /* kattaroq, bosish oson (2026-10-21, Otabek) */
 .lek.bt.open .lek-chev{transform:rotate(180deg)}
 
 /* 🎧 Hören ro'yxat rejimi */
@@ -3142,7 +3142,7 @@ function lrnSay(text){
     wkStop();
     try{ const ss=window.speechSynthesis; if(ss&&(ss.speaking||ss.pending)) ss.cancel(); }catch(e){}
     if(lrnAud&&lrnAud.pause){ lrnAud.pause(); }
-    const a=new Audio("files/audio/"+id+".mp3?v=3"); lrnAud=a;
+    const a=new Audio("files/audio/"+id+".mp3?v=4"); lrnAud=a;
     a.play().catch(()=>{ if(lrnAud===a) ttsSay(t); }); return;
   }catch(e){} }
   ttsSay(t);
@@ -3726,8 +3726,6 @@ function lrnSetup(){
 </div>
     <p class="lrn-count">${its.length? esc(lt("words")(its.length))+" · "+esc(lt("learned")(done,its.length)) : esc(lt("sel0"))}</p>
     ${kn?`<p class="lrn-kc">${esc(lt("knownN")(kn))}</p>`:""}
-    ${(()=>{ const lf=its.length-done; if(!lf) return "";
-      return `<label class="lrn-goal" for="lrn-goal"><span>${esc(lt("goalQ"))}</span><span class="lrn-gin"><input id="lrn-goal" type="number" inputmode="numeric" min="1" max="${lf}" placeholder="1–${lf}" autocomplete="off"><small>${esc(lt("goalOf")(lf))}</small></span></label>`; })()}
     <div class="lrn-modes">
       <button type="button" class="lrn-mode" data-l="learn"${its.length?"":" disabled"}><b>${esc(lt("learn"))}</b><span>${esc(lt((lernData()[LR.id]||{}).mt?"learnDm":"learnD"))}</span></button>
       <button type="button" class="lrn-mode" data-l="cards"${its.length?"":" disabled"}><b>${esc(lt("cards"))}</b><span>${esc(lt("cardsD"))}</span></button>
@@ -3885,6 +3883,17 @@ function muEnd(){ const uz=state.lang!=="ru", n=MU.steps.length, r=n?MU.okN/n:0;
 /* Maqsad (2026-10-19, Otabek): o'quvchi nechta so'z yodlashini tanlaydi — sessiya shu so'zlar yashil bo'lguncha davom etadi */
 /* son oldindan berilmaydi — o'quvchi o'zi yozadi (2026-10-19, Otabek) */
 function lrnGoal(){ return LR.goalWant||0; }
+function lrnGoalLeft(){ const its=lrnItems(); return its.length-its.filter(x=>LR.st[x.i]===2).length; }
+function lrnGoalAsk(a){ const lf=lrnGoalLeft(); LR.goalA=a; if(lf<=0){ LR.goalWant=0; if(a==="learn") lrnStartLearn(); else lrnStartCards(); return; }
+  LR.mode="goal"; const uz=state.lang!=="ru", last=+store.get("lern:goal")||0, opts=[5,10,15,20,30].filter(n=>n<lf);
+  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body"><div class="lrn-card lrn-gq"><h3>${uz?"Nechta so‘z o‘rganasiz?":"Сколько слов будете учить?"}</h3>
+    <p class="lrn-count">${uz?`Tanlangan Lektionlarda ${lf} ta o‘rganilmagan so‘z`:`В выбранных уроках невыученных слов: ${lf}`}</p>
+    <div class="lrn-gopts">${opts.map(n=>`<button type="button" class="lrn-gb${n===last?" on":""}" data-l="goal" data-n="${n}">${n}</button>`).join("")}<button type="button" class="lrn-gb all${last>=lf?" on":""}" data-l="goal" data-n="${lf}">${uz?"Hammasi":"Все"} · ${lf}</button></div>
+    <div class="lrn-gown"><input id="lrn-goal" type="number" inputmode="numeric" min="1" max="${lf}" placeholder="${uz?"boshqa son":"другое число"}" autocomplete="off"><button type="button" class="btn primary" data-l="goalgo">${uz?"Boshlash →":"Начать →"}</button></div>
+    <p class="lrn-gtip">💡 ${uz?"Kuniga 10–20 ta so‘z yetarli.":"В день достаточно 10–20 слов."}</p></div></div>`;
+  lrnEl().scrollTo({top:0}); }
+function lrnGoalRun(n){ const lf=lrnGoalLeft(); n=Math.max(1,Math.min(Math.round(n)||1,lf)); LR.goalWant=n; try{ store.set("lern:goal",String(n)); }catch(e){} if(LR.goalA==="cards") lrnStartCards(); else lrnStartLearn(); }
+document.addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target&&e.target.id==="lrn-goal"){ e.preventDefault(); const b=document.querySelector('#lrn [data-l="goalgo"]'); if(b) b.click(); } });
 function lrnStartLearn(){ LR.chk=false; LR.mode="learn"; LR.emoL=null; LR.emoE=null; const left=lrnItems().filter(x=>LR.st[x.i]!==2), N=lrnGoal()||left.length;
   const half=lrnShuffle(left.filter(x=>LR.st[x.i]===1)), fresh=lrnShuffle(left.filter(x=>!LR.st[x.i])), k=Math.ceil(N/2);
   let S=[...half.slice(0,k),...fresh].slice(0,N); if(S.length<N) S=[...S,...half.slice(k)].slice(0,N);
@@ -4213,9 +4222,9 @@ document.addEventListener("click",e=>{
   else if(a==="wlgo"){ lrnSetup(); }
   else if(a==="all"){ Object.keys(lernData()[LR.id].les).forEach(n=>LR.sel.add(+n)); store.set(lrnKey(LR.id)+":sel",JSON.stringify([...LR.sel])); lrnSetup(); }
   else if(a==="none"){ LR.sel.clear(); store.set(lrnKey(LR.id)+":sel","[]"); lrnSetup(); }
-  else if(a==="learn"||a==="cards"){ const gi=document.getElementById("lrn-goal"); /* son Lernen'ga ham, kartalarga ham ta'sir qiladi */
-    if(gi){ const n=Math.round(+gi.value); if(!gi.value||!(n>=1)){ const w=gi.closest(".lrn-goal"); w.classList.remove("need"); void w.offsetWidth; w.classList.add("need"); gi.focus(); return; } LR.goalWant=n; }
-    if(a==="learn") lrnStartLearn(); else lrnStartCards(); }
+  else if(a==="learn"||a==="cards"){ lrnGoalAsk(a); } /* so'z soni — keyingi oynada so'raladi (2026-10-21, Otabek: «orqaga qaytarmasin, keyingi oyna ochilib nechtaligini so'rasin») */
+  else if(a==="goal"){ lrnGoalRun(+b.dataset.n); }
+  else if(a==="goalgo"){ const gi=document.getElementById("lrn-goal"), n=Math.round(+(gi&&gi.value)); if(!(n>=1)){ const w=gi&&gi.closest(".lrn-gown"); if(w){ w.classList.remove("need"); void w.offsetWidth; w.classList.add("need"); gi.focus(); } return; } lrnGoalRun(n); }
   else if(a==="reset"){ lrnItems().forEach(x=>delete LR.st[x.i]); lrnSave(); const KN=lrnKnown(); lrnItems().forEach(x=>KN.delete(x.i)); lrnKnownSet(KN); lrnSetup(); }
   else if(a==="next"){ LR.qi++; lrnAsk(); }
   else if(a==="cont") lrnNewRound();

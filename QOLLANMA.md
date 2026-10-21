@@ -726,3 +726,6 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Sayohat qisqartirildi (2026-10-21, Otabek: «20 ta juda ko'p»): 9 qadam — 🧠 So'z yodlash (Lektion ranglari, tanishuv→juftlash→yozish) · 📘 Grammatik (Regel/Beispiel + bitta mashq) · 🗣️ Sprechen · Tayyor. Lernen/mashq oynalari keyingi qadamda o'zi yopiladi; mashq paytida pufakcha ekran pastida.
 - 🎙 Ovoz oynasi: har ovozda bir xil 3 ta uzunroq so'z (▶ Gesundheit · Bleistift · Kalender) — to'rttala odamda ham bor; ismini bosish = tartib raqami.
 - Sayohatdagi grammatika namoyishi har doim eng oson mashqda: A1.1 · Lektion 1 · Grammatik («Woher komm___ du?»); sayohat tugagach o'quvchi turgan bo'lim (masalan A2.2) qaytariladi.
+- ElevenLabs (Leni) so'z audiolari 0.8 tezlikka sekinlashtirildi (2468 fayl, `?v=4`; asl nusxalar /tmp/claude-0/w20/aud_orig). Otabek: «labdan olgan ovoz juda tez».
+- «So'z yodlash»: so'z soni sozlama sahifasida so'ralmaydi — Lernen/Karteikarten bosilgach alohida oyna: 5 · 10 · 15 · 20 · 30 · Hammasi yoki o'z soni; oxirgi tanlov belgilanadi.
+- Lektion kartasidagi ochish/yopish uchburchagi kattalashtirildi (42 px doira).
