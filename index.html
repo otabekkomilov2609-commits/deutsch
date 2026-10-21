@@ -1675,9 +1675,9 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .dc-n{margin:0 0 8px;font-size:14.5px;color:var(--muted);line-height:1.45}
 .dc-tb{width:100%;border-collapse:collapse;font-size:15px;margin:4px 0 8px}.dc-tb th{text-align:left;font-size:13px;color:var(--muted);font-weight:800;padding:6px 6px;border-bottom:2px solid var(--line)}.dc-tb td{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.4}
 .dc-ex,.dc-rm{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
-.dc-ex li,.dc-rm li{padding:7px 10px 7px 26px;border-radius:10px;font-size:16.5px;line-height:1.45;position:relative;cursor:pointer}
-.dc-ex li::before{content:"›";position:absolute;left:10px;color:var(--muted);font-weight:800}.dc-rm li::before{content:"🔈";position:absolute;left:4px;font-size:13px;top:9px;opacity:.55}
-.dc-ex li:hover,.dc-rm li:hover,.dc-pair td:hover,.dc-on{background:var(--blue-soft)}.dc-pair td{cursor:pointer}
+.dc-ex li,.dc-rm li{padding:7px 10px 7px 26px;border-radius:10px;font-size:16.5px;line-height:1.45;position:relative}
+.dc-ex li::before{content:"›";position:absolute;left:10px;color:var(--muted);font-weight:800}.dc-rm li::before{content:"";position:absolute;left:10px;top:.95em;width:7px;height:7px;border-radius:50%;background:var(--green)}
+.dc-rm li+li{border-top:1px dashed var(--line);border-radius:0}
 .doc-wrap u{text-decoration:none;border-bottom:2.5px solid var(--orange,#E8833A);padding-bottom:1px}.doc-wrap b{color:var(--blue)}
 .ex-nw{white-space:nowrap}.ex-bank{display:flex;flex-direction:column;gap:8px;background:var(--surface-2);border-radius:14px;padding:10px 12px;margin-bottom:14px}.ex-bank-r{display:flex;flex-wrap:wrap;gap:6px}.ex-bank-r+.ex-bank-r{border-top:1px dashed var(--line);padding-top:8px}
 .ex-bank span{background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:3px 11px;font-size:16px;font-weight:600;color:var(--ink);line-height:1.4}
@@ -5405,11 +5405,11 @@ function rankDraw(){
 let DOCD=null; function docData(){ if(!DOCD){ try{ DOCD=JSON.parse(document.getElementById("doc-data").textContent||"{}"); }catch(e){ DOCD={}; } } return DOCD; }
 function docEl(){ let e=document.getElementById("doc"); if(!e){ e=document.createElement("div"); e.id="doc"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
 function docOpen(id){ const D=docData()[id]; if(!D) return; const uz=state.lang!=="ru", el=docEl();
-  el.innerHTML=`<div class="lrn-bar"><button class="btn" data-doc="close" aria-label="✕">✕</button><div class="lrn-tt"><b lang="de">${esc(D.title)}</b><small>${uz?"Iborani bosing — ovozini eshitasiz. Tagiga chizilgan joy o‘zgaradi.":"Нажмите на фразу — услышите её. Подчёркнутое можно заменить."}</small></div></div><div class="doc-wrap" lang="de">${D.html}</div>`;
+  el.innerHTML=`<div class="lrn-bar"><button class="btn" data-doc="close" aria-label="✕">✕</button><div class="lrn-tt"><b lang="de">${esc(D.title)}</b><small>${uz?"Tagiga chizilgan joy o‘zgaradi":"Подчёркнутое можно заменить"}</small></div></div><div class="doc-wrap" lang="de">${D.html}</div>`;
   el.hidden=false; el.scrollTop=0; document.body.style.overflow="hidden"; }
 function docClose(){ const e=document.getElementById("doc"); if(e) e.hidden=true; document.body.style.overflow=""; try{ speechSynthesis.cancel(); }catch(e){} }
 document.addEventListener("click",e=>{ const el=document.getElementById("doc"); if(!el||el.hidden) return; if(e.target.closest('[data-doc="close"]')){ docClose(); return; }
-  const li=e.target.closest(".dc-rm li,.dc-ex li,.dc-pair td"); if(li&&el.contains(li)){ el.querySelectorAll(".dc-on").forEach(x=>x.classList.remove("dc-on")); li.classList.add("dc-on"); try{ lrnSay(li.textContent.replace(/^[▪●]\s*/,"").trim()); }catch(err){} } });
+ }); /* Übersicht'da ovoz yo'q (2026-10-21, Otabek) */
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ const el=document.getElementById("doc"); if(el&&!el.hidden) docClose(); } });
 function rankClose(){ RK.open=false; RK.cli.forEach(c=>{ try{ c.end(true); }catch(e){} }); RK.cli=[]; rkEl().hidden=true; document.body.style.overflow=""; }
 document.addEventListener("click",e=>{ if(e.target.closest("[data-rank]")){ rankOpen(); return; }

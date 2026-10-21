@@ -729,3 +729,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - ElevenLabs (Leni) so'z audiolari 0.8 tezlikka sekinlashtirildi (2468 fayl, `?v=4`; asl nusxalar /tmp/claude-0/w20/aud_orig). Otabek: «labdan olgan ovoz juda tez».
 - «So'z yodlash»: so'z soni sozlama sahifasida so'ralmaydi — Lernen/Karteikarten bosilgach alohida oyna: 5 · 10 · 15 · 20 · 30 · Hammasi yoki o'z soni; oxirgi tanlov belgilanadi.
 - Lektion kartasidagi ochish/yopish uchburchagi kattalashtirildi (42 px doira).
+- Übersicht (modul konspekti)da ovoz yo'q: bosilganda o'qilmaydi, 🔈 belgisi o'rniga yashil nuqta, qatorlar orasida chiziq (2026-10-21, Otabek).
