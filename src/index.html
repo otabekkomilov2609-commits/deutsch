@@ -4134,6 +4134,8 @@ const MU_STOP=new Set("ich du er sie es wir ihr mir dir mich dich uns euch ihm i
 /* juftlik — suhbatmi (savol → javob) yoki bitta gapning ikki bo'lagimi */
 function muDlg(x){ return /[.?!…]["“”»]?\s*$/.test(String(x.mt[0]).trim()); }
 function muLine(x){ return muDlg(x)?String(x.mt[1]):String(x.mt[0])+(/^[,.!?;:]/.test(String(x.mt[1]))?"":" ")+String(x.mt[1]); }
+/* Muloqot: tarjima o'rniga vazifa — nemischa (2026-10-22, Otabek: «nemischa qilaver»): kitobdagi Redemittel sarlavhasi, masalan «Hilfe ablehnen» */
+function muFnDe(x){ try{ const F=lernData()[LR.id].fns[x.fn]; let t=String(F&&F[0]||"").trim(); if(t.length>42&&t.includes(" / ")) t=t.split(" / ")[0]; return t||muCue(x); }catch(e){ return muCue(x); } }
 function muCue(x){ const t=muT(x); if(!muDlg(x)) return t; const k=t.lastIndexOf(" — "); return k>0?t.slice(k+3):t; }
 function muGap(x){ const s=muLine(x); const toks=[...s.matchAll(/[A-Za-zÄÖÜäöüß’']+/g)].map(m=>({w:m[0],i:m.index}));
   /* iboraning "qotgan" so'zlari: qavs ichidagi ixtiyoriy qism va "lustig / spannend" kabi muqobillar olinmaydi — ular almashadigan joy (2026-10-19, Otabek) */
@@ -4171,11 +4173,11 @@ function muShow(){ const st=MU.steps[MU.k]; if(!st){ muEnd(); return; } const uz
       <div class="mu-bks">${st.fs.map(f=>{ const F=MU.fns[f]; return `<button type="button" class="mu-bk" data-mu="bk" data-f="${f}"><b lang="de">${esc(F[0])}</b><small>${esc(uz?F[1]:F[2])}</small></button>`; }).join("")}</div></div>`; }
   else if(st.t==="chat"){ const others=MU.pool.concat(muAll()).filter(y=>y.i!==x.i&&String(y.mt[1])!==String(x.mt[1]));
     /* ikki variant to'g'ri bo'lib qolmasin: noto'g'rilari faqat BOSHQA vazifadagi suhbat javoblari + to'g'ri javob ma'nosi ko'rsatiladi (2026-10-19, Otabek) */
-    const okY=y=>y.fn!==x.fn&&muDlg(y)&&muCue(y)!==muCue(x), near=lrnShuffle(MU.pool.filter(okY)), far=lrnShuffle(muAll().filter(okY)); const diff=[...near,...far]; const ds=[]; /* avval shu darslardan (o'xshash, lekin ma'nosi boshqa) */ diff.forEach(y=>{ if(ds.length<2&&!ds.includes(String(y.mt[1]))) ds.push(String(y.mt[1])); });
+    const okY=y=>y.fn!==x.fn&&muDlg(y)&&muCue(y)!==muCue(x)&&!/^(Ich weiß (es )?nicht|Wie bitte|Keine Ahnung|Noch einmal)/i.test(String(y.mt[1])), near=lrnShuffle(MU.pool.filter(okY)), far=lrnShuffle(muAll().filter(okY)); const diff=[...near,...far]; const ds=[]; /* avval shu darslardan (o'xshash, lekin ma'nosi boshqa) */ diff.forEach(y=>{ if(ds.length<2&&!ds.includes(String(y.mt[1]))) ds.push(String(y.mt[1])); });
     st.opts=st.opts||lrnShuffle([String(x.mt[1]),...ds]);
     h=`<div class="lrn-card mu-c"><div class="lrn-ask">💬 ${uz?"Qaysi javob mos?":"Какой ответ подходит?"}</div>
       <div class="mu-th"><div class="mu-b in" lang="de">${esc(x.mt[0])}</div><div id="mu-out"></div></div>
-      <div class="mu-cue">🎯 ${uz?"Siz aytmoqchisiz:":"Вы хотите сказать:"} <b>«${esc(muCue(x))}»</b></div>
+      <div class="mu-cue">🎯 <b lang="de">${esc(muFnDe(x))}</b></div>
       <div class="mu-ops">${st.opts.map((o,k)=>`<button type="button" class="mu-op" data-mu="op" data-k="${k}" lang="de">${esc(o)}</button>`).join("")}</div><div id="mu-after"></div></div>`; }
   else { const g=st.g, wl=Math.max(4,g.w.length+1);
     h=`<div class="lrn-card mu-c"><div class="lrn-ask">${st.bank?`🧩 ${uz?"Mos so‘zni tanlang":"Выберите подходящее слово"}`:`✍️ ${uz?"Tushib qolgan so‘zni yozing":"Впишите пропущенное слово"}`}</div>
