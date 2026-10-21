@@ -3615,7 +3615,8 @@ async function spRecStart(){ if(SPR.busy) return; SPR.busy=true; SPR.want=true; 
   SPR.rec.ondataavailable=e=>{ if(e.data&&e.data.size) SPR.chunks.push(e.data); };
   SPR.rec.onstop=()=>spRecDone(it); SPR.rec.start(); SPR.t0=Date.now();
   try{ const ac=wkCtx&&wkCtx(); if(ac){ if(ac.state==="suspended") ac.resume(); SPR.src=ac.createMediaStreamSource(st); SPR.an=ac.createAnalyser(); SPR.an.fftSize=512; SPR.src.connect(SPR.an); } }catch(e){ SPR.an=null; }
-  const SRc=window.SpeechRecognition||window.webkitSpeechRecognition; if(SRc){ try{ const r=new SRc(); r.lang="de-DE"; r.continuous=true; r.interimResults=false; r.maxAlternatives=1;
+  /* Azure ishlayotganda brauzerning SpeechRecognition'i ishga tushirilmaydi — Android'dagi boshlash/tugash «ding» ovozi shundan chiqardi; matnni Azure beradi (2026-10-22, Otabek: «ovoz chiqmaydigan qilib bo'lmaydimi») */
+  const SRc=window.SpeechRecognition||window.webkitSpeechRecognition; if(SRc&&!(azOn()&&AZ.ok)){ try{ const r=new SRc(); r.lang="de-DE"; r.continuous=true; r.interimResults=false; r.maxAlternatives=1;
       r.onresult=e=>{ SPR.txt=Array.from(e.results).map(x=>x[0].transcript).join(" ").trim(); }; r.onerror=()=>{}; r.start(); SPR.sr=r; }catch(e){ SPR.sr=null; } }
   if(bar) bar.classList.add("on"); const lv=document.getElementById("sp2-live"), cn=document.getElementById("sp2-cnl"); if(lv) lv.innerHTML=""; if(cn){ cn.style.transform=""; cn.style.opacity=""; }
   const tm=document.getElementById("sp2-tm"); clearInterval(SPR.iv); SPR.iv=setInterval(()=>{ const s=(Date.now()-SPR.t0)/1000; if(tm) tm.textContent=spT10(s); if(s>=20) spRecStop(); },100);
