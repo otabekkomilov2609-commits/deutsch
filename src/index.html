@@ -3630,7 +3630,7 @@ function spRecDone(it){ const uz=spUz(); SPR.rec=null; if(exCur()!==it) return;
   try{ if(SPR.url) URL.revokeObjectURL(SPR.url); }catch(e){} const blob=new Blob(SPR.chunks,{type:(SPR.chunks[0]&&SPR.chunks[0].type)||"audio/webm"}); SPR.url=URL.createObjectURL(blob);
   const box=document.getElementById("sp2-mine"); if(!box) return; const mx=Math.max(.05,...SPR.lv), lv=SPR.lv.map(v=>Math.max(.12,v/mx));
   SPR.J=null; SPR.az=null; const tok=++SPR.tok;
-  box.innerHTML=`<div class="sp2-b me mine">${spVm("me","",{cls:"mine",lv,t:spT(SPR.dur)})}<div class="sp2-meta" id="sp2-meta"><small>🎙 ${uz?"Siz":"Вы"}</small><span class="sp2-wt">⏳</span><button type="button" class="sp2-ach" data-x="spans">${uz?"🔊 javob":"🔊 ответ"}</button></div><div class="sp2-scd" id="sp2-scd" hidden></div><div class="sp2-tx" id="sp2-tx" hidden></div></div>`;
+  box.innerHTML=`<div class="sp2-b me mine">${spVm("me","",{cls:"mine",lv,t:spT(SPR.dur)})}<div class="sp2-meta" id="sp2-meta"><small>🎙 ${uz?"Siz":"Вы"}</small><span class="sp2-wt">⏳</span></div><div class="sp2-scd" id="sp2-scd" hidden></div><div class="sp2-tx" id="sp2-tx" hidden></div></div>`;
   spLbl(uz?"Yana aytmoqchi bo‘lsangiz — bosib turing…":"Ещё раз — нажмите и держите…");
   /* to'g'ri javob o'zi yangraydi — faqat ovoz (2026-10-22, Otabek: «uchinchi audio bo'lib tushmaydi») */
   spJudgeRun(it,blob,tok); }
@@ -3701,7 +3701,7 @@ function cmpStHTML(uz){ return `<div class="cmp-st"><span data-k="me">🎙 ${uz?
 function spScC(v){ return v>=70?"g":v>=50?"y":"r"; }
 function spMetaDraw(it){ const m=document.getElementById("sp2-meta"); if(!m) return; const uz=spUz(), J=SPR.J, az=SPR.az, w=m.querySelector(".sp2-wt"); if(w) w.remove();
   m.querySelectorAll(".sp2-vd,.sp2-scb").forEach(x=>x.remove()); const ach=m.querySelector(".sp2-ach");
-  if(J&&J.chip){ const s=document.createElement("span"); s.className="sp2-vd "+J.v; s.textContent=J.chip; m.insertBefore(s,ach); }
+  if(J&&J.chip&&(J.v!=="ok"||!(az&&az.sc!=null))){ const s=document.createElement("span"); s.className="sp2-vd "+J.v; s.textContent=J.chip; m.insertBefore(s,ach); } /* ✅ chip yo'q — «Sehr gut!» o'zi aytadi; ❌/tip qoladi (2026-10-22, Otabek) */
   if(az&&az.sc!=null){ const P=az.ph||(az.ph=spPhrase(az.sc)); const b=document.createElement("button"); b.type="button"; b.className="sp2-scb "+P.k; b.dataset.x="spscd"; b.setAttribute("aria-label",uz?"Talaffuz bahosi":"Оценка произношения"); b.textContent=P.t; m.insertBefore(b,ach);
     const d=document.getElementById("sp2-scd"); if(d) d.textContent=`🎯 ${az.sc} · ${uz?"aniqlik":"точность"} ${az.acc}${az.mode==="n"?` · ${uz?"to‘liqlik":"полнота"} ${az.com}`:""} · ${uz?"ravonlik":"беглость"} ${az.flu}`; }
   if(!m.querySelector('[data-x="spcmp"]')){ const c=document.createElement("button"); c.type="button"; c.className="sp2-ach sp2-cmp"; c.dataset.x="spcmp"; c.textContent=uz?"🔁 Solishtirish":"🔁 Сравнить"; m.insertBefore(c,ach); }
