@@ -172,7 +172,7 @@ main{padding-block:6px 40px}
 #lrn .mu-bk{display:flex;flex-direction:column;gap:2px;padding:12px 14px}#lrn .mu-bk b{font-size:17px;font-weight:800;color:var(--blue)}#lrn .mu-bk small{font-size:13.5px;color:var(--muted);font-weight:600}
 #lrn .mu-bk.ok,#lrn .mu-op.ok{border-color:var(--green);background:var(--green-soft);box-shadow:0 4px 0 var(--green)}#lrn .mu-bk.ok b{color:var(--green)}
 #lrn .mu-bk.bad,#lrn .mu-op.bad{border-color:#e5484d;background:#FDECEC;box-shadow:0 4px 0 #e5484d;animation:lrnShake .35s}
-#lrn .mu-op{padding:12px 14px;font-weight:700;font-size:16.5px;line-height:1.3}#lrn .mu-op.bad{opacity:.75}#lrn .mu-op.dim{opacity:.4}
+#lrn .mu-op{padding:12px 14px;font-weight:700;font-size:16.5px;line-height:1.3}#lrn .mu-op.bad{opacity:.75}#lrn .mu-op.dim,.mu-bk.dim{opacity:.4}
 #lrn .mu-ops{display:flex;flex-direction:column;gap:9px}
 #lrn .mu-th{display:flex;flex-direction:column;gap:8px;padding:2px}
 #lrn .mu-b{max-width:88%;padding:10px 14px;border-radius:18px;font-weight:700;font-size:17px;line-height:1.35}
@@ -4171,11 +4171,11 @@ function muProg(){ const n=MU.steps.length, d=MU.k+(MU.done?1:0), r=n?d/n:0, E=r
   return `<div class="lrn-pw"><div class="lrn-prog"><i class="d" style="width:${r*100}%"></i></div><b class="ias-pbe lrn-pbe${LR.emoE&&from>0?"":" hid"}" id="lrn-pbe" style="left:${lrnEmoX(from)}">${LR.emoE||E}</b></div><div class="lrn-pt">${Math.min(d,n)} / ${n}</div>`; }
 function muShow(){ const st=MU.steps[MU.k]; if(!st){ muEnd(); return; } const uz=state.lang!=="ru", x=st.x; MU.tries=0; MU.done=false; MU.psel=null; muSessPut(); let h="";
   if(st.t==="pair"){ st.R=st.R||lrnShuffle(st.xs.map((_,k)=>k)); st.done=st.done||{};
-    h=`<div class="lrn-card mu-c${st.hint?" hint":""}">${muAsk(`🧩 ${uz?"Savol va javobni juftlang":"Соедините вопрос и ответ"}`,1)}
-      <div class="mu-pr">${st.xs.map((y,k)=>`<button type="button" class="mu-pt L${st.done[k]?" ok":""}" data-mu="pl" data-k="${k}" lang="de"${st.done[k]?" disabled":""}>${esc(y.mt[0])}<small class="mu-hx">${esc(muQT(y))}</small></button><button type="button" class="mu-pt R${st.done[st.R[k]]?" ok":""}" data-mu="pr" data-k="${st.R[k]}" lang="de"${st.done[st.R[k]]?" disabled":""}>${esc(st.xs[st.R[k]].mt[1])}</button>`).join("")}</div></div>`; }
-  else if(st.t==="sort"){ h=`<div class="lrn-card mu-c${st.hint?" hint":""}">${muAsk(`🧺 ${uz?"Bu ibora qaysi savatga tushadi?":"В какую корзину эта фраза?"}`,1)}
+    h=`<div class="lrn-card mu-c${st.hint?" hint":""}">${muAsk(`🧩 ${uz?"Savol va javobni juftlang":"Соедините вопрос и ответ"}`)}
+      <div class="mu-pr">${st.xs.map((y,k)=>`<button type="button" class="mu-pt L${st.done[k]?" ok":""}" data-mu="pl" data-k="${k}" lang="de"${st.done[k]?" disabled":""}>${esc(y.mt[0])}<small class="mu-hx">${esc(muQT(y))}</small></button><button type="button" class="mu-pt R${st.done[st.R[k]]?" ok":""}" data-mu="pr" data-k="${st.R[k]}" lang="de"${st.done[st.R[k]]?" disabled":""}>${esc(st.xs[st.R[k]].mt[1])}</button>`).join("")}</div><div id="mu-after"></div></div>`; }
+  else if(st.t==="sort"){ h=`<div class="lrn-card mu-c${st.hint?" hint":""}">${muAsk(`🧺 ${uz?"Bu ibora qaysi savatga tushadi?":"В какую корзину эта фраза?"}`)}
       <div class="mu-phrase" lang="de">${esc(x.de)}<div class="mu-hx">${esc(muCue(x))}</div></div>
-      <div class="mu-bks">${st.fs.map(f=>{ const F=MU.fns[f]; return `<button type="button" class="mu-bk" data-mu="bk" data-f="${f}"><b lang="de">${esc(F[0])}</b><small class="mu-hx">${esc(uz?F[1]:F[2])}</small></button>`; }).join("")}</div></div>`; }
+      <div class="mu-bks">${st.fs.map(f=>{ const F=MU.fns[f]; return `<button type="button" class="mu-bk" data-mu="bk" data-f="${f}"><b lang="de">${esc(F[0])}</b><small class="mu-hx">${esc(uz?F[1]:F[2])}</small></button>`; }).join("")}</div><div id="mu-after"></div></div>`; }
   else if(st.t==="chat"){ const others=MU.pool.concat(muAll()).filter(y=>y.i!==x.i&&String(y.mt[1])!==String(x.mt[1]));
     /* ikki variant to'g'ri bo'lib qolmasin: noto'g'rilari faqat BOSHQA vazifadagi suhbat javoblari + to'g'ri javob ma'nosi ko'rsatiladi (2026-10-19, Otabek) */
     const okY=y=>y.fn!==x.fn&&muDlg(y)&&muCue(y)!==muCue(x)&&!/^(Ich weiß (es )?nicht|Wie bitte|Keine Ahnung|Noch einmal)/i.test(String(y.mt[1])), near=lrnShuffle(MU.pool.filter(okY)), far=lrnShuffle(muAll().filter(okY)); const diff=[...near,...far]; const ds=[]; /* avval shu darslardan (o'xshash, lekin ma'nosi boshqa) */ diff.forEach(y=>{ if(ds.length<2&&!ds.includes(String(y.mt[1]))) ds.push(String(y.mt[1])); });
@@ -4223,12 +4223,12 @@ document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closes
     let [s0,k0,b0]=MU.psel; MU.psel=null; b0.classList.remove("sel");
     { const Lk=s0==="L"?k0:k, Rk=s0==="L"?k:k0, bR=s0==="L"?b:b0; /* bir xil javob matni — ikkalasi ham to'g'ri (2026-10-20) */
       if(Lk!==Rk&&String(st.xs[Lk].mt[1]).trim()===String(st.xs[Rk].mt[1]).trim()&&!st.done[Lk]){ const ot=lrnEl().querySelector(`.mu-pt.R[data-k="${Lk}"]`); if(ot) ot.dataset.k=Rk; bR.dataset.k=Lk; const a1=st.R.indexOf(Lk), a2=st.R.indexOf(Rk); if(a1>=0&&a2>=0){ st.R[a1]=Rk; st.R[a2]=Lk; } if(s0==="L") k=Lk; else k0=Lk; } }
-    if(k0===k){ st.done[k]=1; [b,b0].forEach(z=>{ z.classList.add("ok"); z.disabled=true; }); if(Object.keys(st.done).length===st.xs.length){ if(!MU.tries) MU.okN++; MU.done=true; if(!st.re) st.xs.forEach(y=>{ const f=MU.first[y.i]=MU.first[y.i]||{}; f.pair=!MU.tries; if(!MU.tries) muMastery(y.i); }); muSessPut(); setTimeout(muNext,700); } }
+    if(k0===k){ st.done[k]=1; [b,b0].forEach(z=>{ z.classList.add("ok"); z.disabled=true; }); if(Object.keys(st.done).length===st.xs.length){ if(!MU.tries) MU.okN++; MU.done=true; if(!st.re) st.xs.forEach(y=>{ const f=MU.first[y.i]=MU.first[y.i]||{}; f.pair=!MU.tries; if(!MU.tries) muMastery(y.i); }); muSessPut(); muAfter(!MU.tries); } }
     else { MU.tries++; [b,b0].forEach(z=>{ z.classList.remove("bad"); void z.offsetWidth; z.classList.add("bad"); setTimeout(()=>z.classList.remove("bad"),650); }); } return; }
   if(a==="wb"){ const w=st.opts[+b.dataset.k], ok=w===st.g.w, sl=document.getElementById("mu-slot");
     if(ok){ muMark(true); b.classList.add("ok"); if(sl){ sl.textContent=w; sl.classList.add("ok"); } lrnEl().querySelectorAll(".mu-w").forEach(z=>{ z.disabled=true; if(z!==b) z.classList.add("dim"); }); muAfter(!MU.tries); }
     else { MU.tries++; b.classList.add("bad"); b.disabled=true; if(MU.tries>=2){ muMark(false); if(sl){ sl.textContent=st.g.w; sl.classList.add("bad"); } lrnEl().querySelectorAll(".mu-w").forEach(z=>z.disabled=true); muAfter(false); } } return; }
-  if(a==="bk"){ const ok=+b.dataset.f===st.x.fn; if(ok){ muMark(true); MU.done=true; b.classList.add("ok"); const p=lrnEl().querySelector(".mu-phrase"); if(p) p.classList.add("ok"); setTimeout(muNext,650); }
+  if(a==="bk"){ const ok=+b.dataset.f===st.x.fn; if(ok){ muMark(true); MU.done=true; b.classList.add("ok"); const p=lrnEl().querySelector(".mu-phrase"); if(p) p.classList.add("ok"); lrnEl().querySelectorAll(".mu-bk").forEach(z=>{ z.disabled=true; if(z!==b) z.classList.add("dim"); }); muAfter(!MU.tries); }
     else { MU.tries++; b.classList.remove("bad"); void b.offsetWidth; b.classList.add("bad"); setTimeout(()=>b.classList.remove("bad"),700); } return; }
   if(a==="op"){ const o=st.opts[+b.dataset.k], ok=o===String(st.x.mt[1]);
     if(ok){ muMark(true); b.classList.add("ok"); lrnEl().querySelectorAll(".mu-op").forEach(z=>{ z.disabled=true; if(z!==b) z.classList.add("dim"); }); const out=document.getElementById("mu-out"); if(out) out.innerHTML=`<div class="mu-b out" lang="de">${esc(o)}</div>`; muAfter(true); }
