@@ -1198,7 +1198,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .tour-tap{font:inherit;font-weight:900;color:#5a3d00;background:#FFC200;border:0;border-radius:999px;padding:7px 14px;cursor:pointer;box-shadow:0 3px 0 #B07800;animation:tourPulse 1.1s infinite}
 .tour-link[hidden]{display:none}.tour-link{display:inline-flex;align-items:center;gap:6px;margin:10px 0 0;border:1.5px dashed var(--blue);background:var(--blue-soft);color:var(--blue);border-radius:999px;padding:7px 14px;font:inherit;font-size:14px;font-weight:800;cursor:pointer}
 html.touring .coach{display:none!important}
-.vo-bar{display:flex;justify-content:flex-end;margin:-4px 0 8px}.vo-btn{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13.5px;cursor:pointer}.vo-btn b{color:var(--blue)}.vo-l{display:flex;flex-direction:column;gap:8px;margin:6px 0}.vo-r{display:flex;align-items:center;gap:12px;border:2px solid var(--line);border-radius:14px;padding:10px 12px;cursor:pointer;background:var(--surface)}.vo-r.on{border-color:var(--blue);background:var(--blue-soft)}.vo-n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);font-weight:900;color:var(--muted)}.vo-r.on .vo-n{background:var(--blue);color:#fff}.vo-r b{flex:1;font-size:16px}.vo-pl{border:0;width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;font-size:15px;cursor:pointer}.vo-note{font-size:13px;color:var(--muted);line-height:1.45;margin:4px 0 10px}
+.vo-bar{flex-wrap:wrap;gap:8px;display:flex;justify-content:flex-end;margin:-4px 0 8px}.vo-btn{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13.5px;cursor:pointer}.vo-btn b{color:var(--blue)}.vo-l{display:flex;flex-direction:column;gap:8px;margin:6px 0}.vo-r{display:flex;align-items:center;gap:12px;border:2px solid var(--line);border-radius:14px;padding:10px 12px;cursor:pointer;background:var(--surface)}.vo-r.on{border-color:var(--blue);background:var(--blue-soft)}.vo-n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);font-weight:900;color:var(--muted)}.vo-r.on .vo-n{background:var(--blue);color:#fff}.vo-r b{flex:1;font-size:16px}.vo-pl{border:0;width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;font-size:15px;cursor:pointer}.vo-note{font-size:13px;color:var(--muted);line-height:1.45;margin:4px 0 10px}
 .lvl-g{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:6px 0 10px}.lvl-b{display:flex;flex-direction:column;align-items:center;gap:2px;border:2px solid var(--blue-soft);background:var(--surface);color:var(--blue);border-radius:14px;padding:12px 8px;font:inherit;cursor:pointer}.lvl-b b{font-size:22px;font-weight:900}.lvl-b small{font-size:12px;color:var(--muted);font-weight:600}.lvl-b:hover,.lvl-b:focus-visible{border-color:var(--blue);background:var(--blue-soft)}.snd-btns .btn{flex:1;min-width:0;white-space:normal;padding:11px 6px;font-size:15px;cursor:pointer}.snd-btns .btn[hidden]{display:none}
 .snd-box{max-height:calc(100vh - 32px);overflow:auto}
 .snd-ok{text-align:center;padding:6px 0 2px}.snd-ok div{font-size:46px}.snd-ok p{margin:6px 0 0;font-size:16px;font-weight:700}
@@ -2501,7 +2501,7 @@ function bMatAct(m){ const p=(m.ex?exPct(m.id):iaPctOf(m.id)), part=bPart(m), ic
   const ttl=(m.stitle||m.title).replace(/^(Arbeitsblatt|Hören|Übungen) · /,"");
   const sub=m.doc?(ru?"Грамматика и фразы — шпаргалка":"Grammatika va iboralar — qisqa konspekt"):m.ex?(ru?`${exCount(m.id)} заданий`:`${exCount(m.id)} ta mashq`):(ru?"Онлайн-упражнение":"Online mashq");
   return bAct(ic,ttl,sub,p==null?"":p+"%",`data-open="${m.id}"`,p>=100); }
-function muLesStat(id,n){ const D=lernData()[id]; if(!D||!D.fn) return null; let a=0,d=0,st={}; try{ st=JSON.parse(store.get(lrnKey(id)+":mu")||"{}"); }catch(e){}
+function muLesStat(id,n){ const D=lernData()[id]; if(!D||!D.fn) return null; let a=0,d=0,st=lrnGetMap(id,":mu");
   D.it.forEach((r,i)=>{ const mt=D.mt&&D.mt[i]; if(+r[0]!==+n||!r[6]||D.fn[i]==null||!mt||!mt[0]||!mt[1]) return; a++; if(st[i]) d++; }); return a>=3?[d,a]:null; }
 function lekLernStat(tab,n){ const id=lekLernId(tab,n); if(!id) return null; const D=lernData()[id]; let a=0,d=0,st=null;
   D.it.forEach((r,i)=>{ if(+r[0]!==+n||!r[4]||r[6]) return; a++; if(st==null) st=lrnLoad(id); if(st[i]===2) d++; }); return a?[id,d,a]:null; }
@@ -2622,7 +2622,7 @@ const PROG_LV=[
 ];
 function progCount(){
   const D=lernData(), L=new Set(), K=new Set();
-  Object.keys(D).forEach(id=>{ let st={}, kk=[]; try{ st=JSON.parse(store.get("lern:"+id)||"{}")||{}; }catch(e){} try{ kk=JSON.parse(store.get("lern:"+id+":kk")||"[]")||[]; }catch(e){}
+  Object.keys(D).forEach(id=>{ if(D[id].parts) return; let st={}, kk=[]; try{ st=JSON.parse(store.get("lern:"+id)||"{}")||{}; }catch(e){} try{ kk=JSON.parse(store.get("lern:"+id+":kk")||"[]")||[]; }catch(e){}
     const kn=new Set(kk);
     let mu={}; try{ mu=JSON.parse(store.get("lern:"+id+":mu")||"{}")||{}; }catch(e){}
     D[id].it.forEach((r,i)=>{ if(r[6]){ if(st[i]===2||mu[i]) L.add("R:"+r[3]); return; } /* Muloqot (Redemittel) yodlansa ham reytingga qo'shiladi — 2026-10-20, Otabek */
@@ -2656,7 +2656,7 @@ function progRender(){
   el.hidden=false;
 }
 function progGo(){
-  const D=lernData(), sfx=state.lang==="ru"?"-r-":"-u-";
+  const D=lernData(), sfx=state.lang==="ru"?"-r-":"-u-"; { const T0=TABS[state.tab], a=T0&&lrnAllId(T0.lvl,state.lang); if(a){ lrnOpen(a); return; } }
   let id=store.get("lern:last"); if(!id||!D[id]){ const ids=Object.keys(D);
     id=ids.find(k=>byId[k]&&byId[k].tab===state.tab&&k.includes(sfx)) || ids.find(k=>byId[k]&&byId[k].tab===state.tab) || ids.find(k=>k.includes(sfx)) || ids[0]; }
   if(id) lrnOpen(id);
@@ -2691,7 +2691,7 @@ function render(){
     if(state.type==="all") html += hwBlock(tab);
     const rv = visibleMats(tab,"r");
     if(BT){ const rw=MATS.filter(m=>m.tab===tab&&m.key==="r"&&lernHas(m.id)), ru=state.lang==="ru";
-      if(rw.length&&(state.type==="all"||state.type==="w")) html += `<div class="review rv-top"><h4>${t("whole")} · L${T0.lo}–${T0.hi}</h4><div class="sxg">${rw.map(m=>bAct("🧠",m.title,ru?"Учить слова":"So‘zlarni yodlash","",`data-lern="${m.id}"`)).join("")}</div></div>`; }
+      const aid=lrnAllId(T0.lvl,state.lang); if(aid&&(state.type==="all"||state.type==="w")) html += `<div class="review rv-top wz-all">${bAct("🧠","Wortschatz "+T0.lvl,ru?`Все слова ${T0.lvl} · уроки 1–24`:`${T0.lvl} ning hamma so‘zlari · 1–24-Lektion`,"",`data-lern="${aid}"`)}</div>`; else if(rw.length&&(state.type==="all"||state.type==="w")) html += `<div class="review rv-top"><h4>${t("whole")} · L${T0.lo}–${T0.hi}</h4><div class="sxg">${rw.map(m=>bAct("🧠",m.title,ru?"Учить слова":"So‘zlarni yodlash","",`data-lern="${m.id}"`)).join("")}</div></div>`; }
     else if(rv.length) html += `<div class="review rv-top"><h4>${t("whole")} · L${T0.lo}–${T0.hi}</h4><div class="mats">${rv.map(matCard).join("")}</div></div>`;
     /* 🎓 Prüfungstraining — imtihon mashqlari (Goethe/telc Modellsatz) Modul takroridan ajratilib, alohida bo'limda (2026-10-21, Otabek) */
     if(BT&&state.type==="all"){ const pt=MATS.filter(m=>m.lvl===T0.lvl&&PT_RE.test(m.id)&&bOnline(m)), ru=state.lang==="ru";
@@ -3015,7 +3015,19 @@ document.addEventListener("click",e=>{
    Ma'lumot: <script id="lern-data"> — Wortschatzliste PDF'laridan olingan so'zlar.
    Lernen: avval 4 variantli test (RU → DE), keyin yozish. Ikkalasi to'g'ri bo'lsa — "o'rganildi".
    Karteikarten: kartani aylantirish, "Bilaman / Bilmayman". Natija telefonda saqlanadi (localStorage). */
-function lernData(){ if(!window.__LERN){ try{ window.__LERN=JSON.parse(document.getElementById("lern-data").textContent); }catch(e){ window.__LERN={}; } } return window.__LERN; }
+function lernData(){ if(!window.__LERN){ try{ window.__LERN=JSON.parse(document.getElementById("lern-data").textContent); }catch(e){ window.__LERN={}; } try{ lrnAllBuild(window.__LERN); }catch(e){} } return window.__LERN; }
+/* 🧠 Butun daraja bitta ro'yxatda: A1 = L1–24, A2 = L1–24, tilga mos (ru/uz). Progress eski ro'yxatlarda saqlanadi (2026-10-21, Otabek: «bitta tugma — A1 bo'lsa to'liq A1, A2 bo'lsa to'liq A2, tiliga mos») */
+function lrnAllBuild(D){ const G={};
+  Object.keys(D).forEach(id=>{ const d=D[id]; if(d.kind==="perfekt"||d.parts) return; const m=id.match(/^(A1|A2|B1)-\w+-([ru])-/); if(!m) return; (G[m[1]+"-"+m[2]]=G[m[1]+"-"+m[2]]||[]).push(id); });
+  Object.keys(G).forEach(k=>{ const ids=G[k].sort((a,b)=>Math.min(...Object.keys(D[a].les).map(Number))-Math.min(...Object.keys(D[b].les).map(Number))); if(ids.length<2) return;
+    const [lv,ln]=k.split("-"), o={les:{},sec:[],it:[],mt:{},fns:[],fn:{},mtu:{},parts:[],all:lv,lang:ln,title:"Wortschatz "+lv+" · "+(ln==="r"?"Deutsch–Russisch":"Deutsch–O‘zbekcha")};
+    ids.forEach(id=>{ const d=D[id], off=o.it.length, so=o.sec.length, fo=o.fns.length; Object.assign(o.les,d.les); (d.sec||[]).forEach(x=>o.sec.push(x)); (d.fns||[]).forEach(x=>o.fns.push(x));
+      d.it.forEach(r=>{ const c=r.slice(); c[1]=r[1]+so; o.it.push(c); });
+      ["mt","mtu"].forEach(f=>{ if(d[f]) for(const i in d[f]) o[f][+i+off]=d[f][i]; }); if(d.fn) for(const i in d.fn) o.fn[+i+off]=d.fn[i]+fo;
+      o.parts.push({id,off,n:d.it.length}); });
+    D[lv+"-all-"+ln+"-Wortschatz-"+lv]=o; }); }
+function lrnPerfLink(lvl){ const D=lernData(), id=Object.keys(D).find(k=>k.startsWith(lvl+"-")&&D[k].kind==="perfekt"); return id?`<button type="button" class="vo-btn" data-lern="${id}">📗 Verben mit Perfekt →</button>`:""; }
+function lrnAllId(lvl,lang){ const D=lernData(), want=lang==="ru"?"r":"u", a=lvl+"-all-"+want+"-Wortschatz-"+lvl, b=lvl+"-all-r-Wortschatz-"+lvl; return D[a]?a:(D[b]?b:null); }
 function lernHas(id){ return !!lernData()[id]; }
 const LT={
   uz:{lern:"Yodlash", title:"So‘z yodlash", pick:"Qaysi Lektionlar?", all:"Hammasi", none:"Tozalash", redem:"Redemittel (iboralar) ham", words:n=>`${n} ta so‘z`,
@@ -3038,11 +3050,20 @@ const LT={
 const lt = k => LT[state.lang][k];
 const LR={id:null, sel:new Set(), redem:false, mode:null, pool:[], st:{}, round:[], qi:0, okN:0, qN:0, cur:null, answered:false, cards:[], flip:false};
 function lrnKey(id){ return "lern:"+id; }
-function lrnLoad(id){ try{ return JSON.parse(store.get(lrnKey(id))||"{}")||{}; }catch(e){ return {}; } }
-function lrnSave(){ store.set(lrnKey(LR.id), JSON.stringify(LR.st)); clearTimeout(window.__pmT); window.__pmT=setTimeout(progMarks,300); }
+function lrnParts(id){ const d=lernData()[id]; return d&&d.parts||null; }
+function lrnGetMap(id,suf){ const P=lrnParts(id), rd=k=>{ try{ return JSON.parse(store.get(lrnKey(k)+suf)||"{}")||{}; }catch(e){ return {}; } }; if(!P) return rd(id);
+  const o={}; P.forEach(p=>{ const s=rd(p.id); for(const k in s) o[+k+p.off]=s[k]; }); return o; }
+function lrnPutMap(id,suf,o){ const P=lrnParts(id); if(!P){ store.set(lrnKey(id)+suf,JSON.stringify(o)); return; }
+  P.forEach(p=>{ const s={}; for(const k in o){ const i=+k; if(i>=p.off&&i<p.off+p.n) s[i-p.off]=o[k]; } store.set(lrnKey(p.id)+suf,JSON.stringify(s)); }); }
+function lrnGetArr(id,suf){ const P=lrnParts(id), rd=k=>{ try{ return JSON.parse(store.get(lrnKey(k)+suf)||"[]")||[]; }catch(e){ return []; } }; if(!P) return rd(id);
+  const a=[]; P.forEach(p=>rd(p.id).forEach(i=>a.push(+i+p.off))); return a; }
+function lrnPutArr(id,suf,a){ const P=lrnParts(id); if(!P){ store.set(lrnKey(id)+suf,JSON.stringify(a)); return; }
+  P.forEach(p=>store.set(lrnKey(p.id)+suf,JSON.stringify(a.map(Number).filter(i=>i>=p.off&&i<p.off+p.n).map(i=>i-p.off)))); }
+function lrnLoad(id){ return lrnGetMap(id,""); }
+function lrnSave(){ lrnPutMap(LR.id,"",LR.st); clearTimeout(window.__pmT); window.__pmT=setTimeout(progMarks,300); }
 /* Karteikarten: «Bilaman» degan so'zlar saqlanadi — qayta kirganda so'ralmaydi. 2026-10-18 */
-function lrnKnown(){ try{ return new Set(JSON.parse(store.get(lrnKey(LR.id)+":kk")||"[]")); }catch(e){ return new Set(); } }
-function lrnKnownSet(s){ store.set(lrnKey(LR.id)+":kk", JSON.stringify([...s])); }
+function lrnKnown(){ return new Set(lrnGetArr(LR.id,":kk")); }
+function lrnKnownSet(s){ lrnPutArr(LR.id,":kk",[...s]); }
 /* Talaffuz uchun matnni tozalash: belgilar (/ ↔ · … + Akk.) o'qilmasin, pauza bo'lsin. 2026-10-17 */
 function lrnSayText(text){
   return String(text).replace(/\(.*?\)/g," ").replace(/\+\s*(Akk|Dat|Gen|Nom)\b\.?/g," ")
@@ -3687,7 +3708,7 @@ function lrnList(n){ LR.mode="list"; LR.fromList=n; LR.one=+n; LR.chk=false; con
 function lrnHead(sub){
   lrnEl().classList.remove("has-fb");
   const m=byId[LR.id];
-  return `<div class="lrn-bar"><button class="btn" data-l="close" aria-label="${LR.mode?"←":"✕"}">${LR.mode?"←":"✕"}</button><div class="lrn-tt"><b>${esc(lt("title"))}</b><small>${esc(m?m.title:"")}</small></div>${sub||""}</div>`;
+  return `<div class="lrn-bar"><button class="btn" data-l="close" aria-label="${LR.mode?"←":"✕"}">${LR.mode?"←":"✕"}</button><div class="lrn-tt"><b>${esc(lt("title"))}</b><small>${esc(m?m.title:((lernData()[LR.id]||{}).title||""))}</small></div>${sub||""}</div>`;
 }
 function lrnSetup(){
   LR.chk=false; LR.mode=null; LR.goalWant=0;
@@ -3695,7 +3716,7 @@ function lrnSetup(){
   const D=lernData()[LR.id], one=LR.one&&D.les[LR.one]!=null?LR.one:null, les=one?[one]:Object.keys(D.les).map(Number);
   if(one) LR.sel=new Set([one]);
   const its=lrnItems(), done=its.filter(x=>LR.st[x.i]===2).length, KN=lrnKnown(), kn=its.filter(x=>KN.has(x.i)).length, kq=its.filter(x=>KN.has(x.i)&&LR.st[x.i]!==2).length;
-  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${progRank()}${Object.keys(VOICES).length?`<div class="vo-bar">${voBtn()}</div>`:""}<div class="lrn-card lrn-setup">
+  lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body">${progRank()}${Object.keys(VOICES).length||D.parts?`<div class="vo-bar">${Object.keys(VOICES).length?voBtn():""}${D.parts?lrnPerfLink(D.all):""}</div>`:""}<div class="lrn-card lrn-setup">
     ${one?"":`<h3>${esc(lt("pick"))}</h3>`}${(()=>{ try{ return localStorage.getItem("coach:ls"); }catch(e){ return 1; } })()?"":`<div class="lrn-lg">${state.lang==="ru"?`<span><i style="background:var(--lrn-fill2)"></i>зелёный — выучено (написали сами)</span><span><i style="background:var(--lrn-yel)"></i>жёлтый — узнали, осталось написать</span>`:`<span><i style="background:var(--lrn-fill2)"></i>yashil — o‘rganildi (o‘zingiz yozdingiz)</span><span><i style="background:var(--lrn-yel)"></i>sariq — tanidingiz, endi yozish qoldi</span>`}</div>`}
     <div class="lrn-les${one?" one":""}">${les.map(n=>{ let a=0,d=0,h=0; D.it.forEach((r,i)=>{ if(r[0]!==n||!r[4]||(r[6]&&!LR.redem)) return; a++; if(LR.st[i]===2) d++; else if(LR.st[i]===1) h++; });
       const pc=a?Math.round(d/a*100):0, pq=a?Math.round((d+h)/a*100):0;
@@ -3723,8 +3744,8 @@ function lrnSetup(){
 }
 /* 💬 Muloqot — Redemittel'ni o'rganish (2026-10-19, Otabek): 1) Sortieren (vazifa savati) → 2) Mini-chat (javob tanlash) → 3) Lückendialog (kalit so'zni yozish) */
 const MU={};
-function muStore(){ try{ return JSON.parse(store.get(lrnKey(LR.id)+":mu")||"{}"); }catch(e){ return {}; } }
-function muSave(o){ store.set(lrnKey(LR.id)+":mu", JSON.stringify(o)); }
+function muStore(){ return lrnGetMap(LR.id,":mu"); }
+function muSave(o){ lrnPutMap(LR.id,":mu",o); }
 /* 🧠 eslab qolish (2026-10-19, Otabek): sessiya har qadamda saqlanadi — chiqib ketsa, keyin shu joydan davom etadi; o'zlashtirilgan ibora darhol saqlanadi */
 function muSessKey(){ return lrnKey(LR.id)+":mus"; }
 function muSessGet(){ try{ const o=JSON.parse(store.get(muSessKey())||"null"); if(!o||!o.steps||o.k>=o.steps.length||Date.now()-(o.t||0)>14*864e5) return null;
@@ -4263,7 +4284,7 @@ function iaPctOf(id){ const D=IADATA[id]; if(!D||!D.items||!D.items.length) retu
   let ok=0, nn=0; const EXS=iasSkip(id); D.items.forEach((it,i)=>{ if(EXS.has(i)) return; nn++; const x=v[i]; if(it.t==="c"){ if(x===it.ans) ok++; return; } const s=String(x||"").trim(); if(!s){ if((it.ok||[]).includes("")) ok++; return; } if(it.free){ ok++; return; } const nv=iaNorm(s).replace(/ /g,""); if((it.ok||[]).some(o=>o.replace(/ /g,"")===nv)) ok++; });
   return nn?Math.round(ok/nn*100):null; }
 function pctBadge(id){ const p=(byId[id]&&byId[id].ex)?exPct(id):iaPctOf(id); return `<span class="pctb${p==null?" hid":""}${p>=100?" full":""}" data-pct="${id}" style="--p:${p||0}">${p==null?"":p+"%"}</span>`; }
-function lekWords(lvl,n){ const D=lernData(); let best=null; Object.keys(D).forEach(id=>{ if(id.split("-")[0]!==lvl||D[id].kind==="perfekt") return; let tot=0, ok=0, st=null;
+function lekWords(lvl,n){ const D=lernData(); let best=null; Object.keys(D).forEach(id=>{ if(id.split("-")[0]!==lvl||D[id].kind==="perfekt"||D[id].parts) return; let tot=0, ok=0, st=null;
     D[id].it.forEach((r,i)=>{ if(+r[0]!==+n||!r[4]||r[6]) return; tot++; if(st==null) st=lrnLoad(id); if(st[i]===2) ok++; }); if(tot){ const p=ok/tot; if(!best||p>best.p) best={p,ok,tot}; } }); return best; }
 /* Lektion halqasi = butun Lektion (barcha mashqlar + so'zlar) bajarilgani (2026-10-21, Otabek: «butun mashqdan hisoblab, Lektion raqami aylana bilan o'raladi») */
 function lekAll(lvl,n){ const tab=Object.keys(TABS).find(k=>TABS[k].lvl===lvl&&+n>=TABS[k].lo&&+n<=TABS[k].hi); let tot=0, ok=0;
@@ -5889,7 +5910,7 @@ function stCollect(){ const pre="u:"+ACC.cur+":", sent={}, best={}, D=lernData()
     if((m=kk.match(/^best:ia:(.+)$/))){ try{ const b=JSON.parse(localStorage.getItem(k)); if(b) best[m[1]]=[b.ok|0,b.n|0]; }catch(e){} }
     else if((m=kk.match(/^sent:ia:(.+)$/))) sent[m[1]]=[+localStorage.getItem(k)||0,0]; }
   const g=Object.entries(Object.assign(sent,best)).map(([id,v])=>{ const mm=byId[id]; return [mm?mm.title:id, mm?accLvl(mm):"", v[0], v[1]]; });
-  const y=Object.keys(D).map(id=>{ let st={}; try{ st=JSON.parse(store.get("lern:"+id)||"{}")||{}; }catch(e){} let ok=0,n=0;
+  const y=Object.keys(D).filter(id=>!D[id].parts).map(id=>{ let st={}; try{ st=JSON.parse(store.get("lern:"+id)||"{}")||{}; }catch(e){} let ok=0,n=0;
     D[id].it.forEach((r,i)=>{ if(!r[4]||r[6]) return; n++; if(st[i]===2) ok++; }); const mm=byId[id]; return ok?[mm?mm.title:id, mm?accLvl(mm):"", ok, n]:null; }).filter(Boolean);
   const c=progCount(); let a=null; try{ a=actSummary(); }catch(e){} return {nm:ACC.name, ak:ACC.cur, w:c.n, k:c.k, g, y, a, t:Date.now()}; }
 function stSync(force){ if(!ACC.cur||IN_ARTIFACT||tchOk()||!(window.crypto&&crypto.subtle)) return;
