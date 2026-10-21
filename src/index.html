@@ -6520,7 +6520,7 @@ function actSummary(){ const o=actGet(); if(!o) return null; const ks=Object.key
   const ss=Object.entries(o.s).sort((a,b)=>(b[1][7]+b[1][1]*20+b[1][0]*5)-(a[1][7]+a[1][1]*20+a[1][0]*5)).slice(0,40).map(([id,v])=>[id,...v]);
   const hh=Object.entries(o.h).sort((a,b)=>b[1]-a[1]).slice(0,25).map(([k,v])=>{ const j=k.lastIndexOf("#"); return [k.slice(0,j),k.slice(j+1),v]; });
   return {f:o.f, dd:ks.map(k=>[k,...o.d[k]]), ss, hh, p:o.p, hr:o.hr.map(x=>Math.round(x/60)), mm:Object.entries(o.m).sort((a,b)=>b[1]-a[1]).slice(0,15),
-    dev:/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)?"📱":"💻", lg:state.lang}; }
+    dev:/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)?"📱":"💻", lg:state.lang, app:(()=>{ try{ if(appStandalone()) localStorage.setItem("pwa:on","1"); return localStorage.getItem("pwa:on")==="1"?1:0; }catch(e){ return 0; } })()}; } /* 📲 ilova sifatida ochilganmi — ustoz paneli uchun (2026-10-22) */
 /* o'quvchi tomoni: natijalarni yig'ish va yuborish */
 function stCollect(){ const pre="u:"+ACC.cur+":", sent={}, best={}, D=lernData();
   for(let i=0;i<localStorage.length;i++){ const k=localStorage.key(i); if(!k||!k.startsWith(pre)) continue; const kk=k.slice(pre.length); let m;
@@ -6700,6 +6700,7 @@ function tpAn(){ const body=document.getElementById("tp-body"); if(!body) return
     ${all.length?"":`<p class="tp-empty">Hozircha faollik ma’lumoti yo‘q. O‘quvchilar saytda mashq qilgach (yangi versiyadan boshlab) shu yerda ko‘rinadi.</p>`}
     <div class="an-kpis">
       <div class="an-k"><b>${act.length}<small> / ${all.length}</small></b><span>faol o‘quvchi</span></div>
+      <div class="an-k"><b>${all.filter(([,d])=>d.a&&d.a.app).length}<small> / ${all.length}</small></b><span>📲 ilova o‘rnatgan</span></div>
       <div class="an-k"><b>${mins>=120?Math.round(mins/60)+" soat":mins+" daq"}</b><span>jami faol vaqt</span></div>
       <div class="an-k"><b>${act.length?Math.round(mins/act.length):0} daq</b><span>o‘rtacha (faol o‘quvchi)</span></div>
       <div class="an-k"><b>${ans}</b><span>yechilgan savol</span></div>
@@ -6718,7 +6719,7 @@ function tpAn(){ const body=document.getElementById("tp-body"); if(!body) return
       ${hl.length?`<ol class="an-hard">${hl.map(o=>{ const I=anItem(o.id,o.i); return `<li><div class="an-hq"><b>${esc(I.q)}</b>${I.a?` <span class="an-ha">→ ${esc(I.a)}</span>`:""}</div><small>${esc(anTitle(o.id))}${I.h?" · "+esc(I.h):""}</small><span class="an-hn">👥 ${o.st.size} · ✗ ${o.n}</span></li>`; }).join("")}</ol>`:"<p class='ch-net'>—</p>"}</div>
     <div class="an-c"><div class="tp-lbh"><h4>👤 O‘quvchilar <small>${P} kun</small></h4><div class="tp-seg">${[["m","Vaqt"],["l","Oxirgi kirish"],["a","1-urinish ↑"],["n","Ism"]].map(([k,t])=>`<button type="button" data-tpanu="${k}" aria-pressed="${ss===k}">${t}</button>`).join("")}</div></div>
       <ul class="an-us">${ul.map(([id,d,x])=>{ const op=TP.anOpen===id, A=d.a; const lastTxt=x.last?(x.last===today?"bugun":x.last===actDay(Date.now()-864e5)?"kecha":x.last.slice(5).split("-").reverse().join(".")):"—";
-        return `<li class="${op?"open":""}"><button type="button" class="an-uh" data-tpanopen="${esc(id)}"><span class="an-un"><b>${esc(String(d.nm).slice(0,40))}</b> ${A.dev||""}<small>oxirgi: ${lastTxt} · ${x.days} kun faol · ${x.wg?"+"+x.wg+" so‘z":"so‘z: "+(d.w|0)}</small></span>
+        return `<li class="${op?"open":""}"><button type="button" class="an-uh" data-tpanopen="${esc(id)}"><span class="an-un"><b>${esc(String(d.nm).slice(0,40))}</b> ${A.dev||""}${A.app?"📲":""}<small>oxirgi: ${lastTxt} · ${x.days} kun faol · ${x.wg?"+"+x.wg+" so‘z":"so‘z: "+(d.w|0)}</small></span>
           <span class="an-uv"><b>${x.min}</b><small>daq</small></span><span class="an-uv"><b>${x.ans}</b><small>savol</small></span><span class="an-uv ${x.acc!=null&&x.acc<60?"bad":""}"><b>${x.acc==null?"—":x.acc+"%"}</b><small>1-urinish</small></span></button>
           ${flag(x).length?`<div class="an-fl">${flag(x).map(f=>`<span>${esc(f)}</span>`).join("")}</div>`:""}
           ${op?anStuDetail(d,P):""}</li>`; }).join("")}</ul>
