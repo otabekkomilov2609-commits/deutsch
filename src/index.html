@@ -3658,7 +3658,7 @@ function spScC(v){ return v>=70?"g":v>=50?"y":"r"; }
 function spMetaDraw(it){ const m=document.getElementById("sp2-meta"); if(!m) return; const uz=spUz(), J=SPR.J, az=SPR.az, w=m.querySelector(".sp2-wt"); if(w) w.remove();
   m.querySelectorAll(".sp2-vd,.sp2-scb").forEach(x=>x.remove()); const ach=m.querySelector(".sp2-ach");
   if(J&&J.chip){ const s=document.createElement("span"); s.className="sp2-vd "+J.v; s.textContent=J.chip; m.insertBefore(s,ach); }
-  if(az){ const b=document.createElement("button"); b.type="button"; b.className="sp2-scb "+spScC(az.sc); b.dataset.x="spscd"; b.setAttribute("aria-label",uz?"Talaffuz bahosi":"Оценка произношения"); b.textContent="🎯 "+az.sc; m.insertBefore(b,ach);
+  if(az&&az.sc!=null){ const b=document.createElement("button"); b.type="button"; b.className="sp2-scb "+spScC(az.sc); b.dataset.x="spscd"; b.setAttribute("aria-label",uz?"Talaffuz bahosi":"Оценка произношения"); b.textContent="🎯 "+az.sc; m.insertBefore(b,ach);
     const d=document.getElementById("sp2-scd"); if(d) d.textContent=`${uz?"aniqlik":"точность"} ${az.acc}${az.mode==="n"?` · ${uz?"to‘liqlik":"полнота"} ${az.com}`:""} · ${uz?"ravonlik":"беглость"} ${az.flu}`; } }
 async function spJudgeRun(it,blob,tok){ let az=null;
   if(azOn()&&AZ.ok){ try{ az=await Promise.race([spAzRun(it,blob),new Promise(r=>setTimeout(()=>r(null),9000))]); }catch(e){ az=null; } }
@@ -3667,7 +3667,7 @@ async function spJudgeRun(it,blob,tok){ let az=null;
   if(!az&&!SPR.txt) await new Promise(r=>setTimeout(r,600));
   if(tok!==SPR.tok||exCur()!==it) return;
   const heard=(az&&az.txt)||SPR.txt||""; SPR.az=az; SPR.J=spJudge(it,heard); spMetaDraw(it);
-  const i=EX.q[EX.qi]; if(az){ EX.spSc=EX.spSc||{}; EX.spSc[EX.si+"."+i]=az.sc; }
+  const i=EX.q[EX.qi]; if(az&&az.sc!=null){ EX.spSc=EX.spSc||{}; EX.spSc[EX.si+"."+i]=az.sc; }
   if(!EX.done){ if(SPR.J&&SPR.J.v==="no") EX.fails[i]=(EX.fails[i]||0)+1; exAfter(true); }
   const tx=document.getElementById("sp2-tx"); if(tx&&!tx.hidden) spShowText(it,true); }
 /* →A */
@@ -3717,16 +3717,22 @@ function spWav(blob){ return blob.arrayBuffer().then(ab=>{ const ac=wkCtx&&wkCtx
   .then(r=>{ const d=r.getChannelData(0), out=new ArrayBuffer(44+d.length*2), v=new DataView(out); const w=(o,s)=>{ for(let i=0;i<s.length;i++) v.setUint8(o+i,s.charCodeAt(i)); };
     w(0,"RIFF"); v.setUint32(4,36+d.length*2,true); w(8,"WAVE"); w(12,"fmt "); v.setUint32(16,16,true); v.setUint16(20,1,true); v.setUint16(22,1,true); v.setUint32(24,16000,true); v.setUint32(28,32000,true); v.setUint16(32,2,true); v.setUint16(34,16,true); w(36,"data"); v.setUint32(40,d.length*2,true);
     for(let i=0;i<d.length;i++){ const s=Math.max(-1,Math.min(1,d[i])); v.setInt16(44+i*2,s<0?s*0x8000:s*0x7FFF,true); } return new Blob([out],{type:"audio/wav"}); }); }
-async function spAzRun(it,blob){ const mode=spMode(it), ref=mode==="n"?String(it.a).replace(/\s*\([^)]*\)\s*/g," ").trim():"";
-  const [SDK,T,wav]=await Promise.all([azSdk(),azToken(),spWav(blob)]);
-  const cfg=SDK.SpeechConfig.fromAuthorizationToken(T.tok,T.reg); cfg.speechRecognitionLanguage="de-DE";
+async function spAzOnce(SDK,T,wav,ref,miscue){ const cfg=SDK.SpeechConfig.fromAuthorizationToken(T.tok,T.reg); cfg.speechRecognitionLanguage="de-DE";
   const audio=SDK.AudioConfig.fromWavFileInput(new File([wav],"a.wav",{type:"audio/wav"})); const rec=new SDK.SpeechRecognizer(cfg,audio);
-  const pa=new SDK.PronunciationAssessmentConfig(ref,SDK.PronunciationAssessmentGradingSystem.HundredMark,SDK.PronunciationAssessmentGranularity.Phoneme,mode==="n"); try{ pa.enableProsodyAssessment=true; }catch(e){} pa.applyTo(rec);
+  const pa=new SDK.PronunciationAssessmentConfig(ref,SDK.PronunciationAssessmentGradingSystem.HundredMark,SDK.PronunciationAssessmentGranularity.Phoneme,miscue); pa.applyTo(rec); /* prosodiya faqat en-US — de-DE'da ballni 0 qilib qo'yadi */
   const res=await new Promise((ok,bad)=>rec.recognizeOnceAsync(ok,bad)); try{ rec.close(); }catch(e){}
   if(res.reason!==SDK.ResultReason.RecognizedSpeech) return null;
-  const p=SDK.PronunciationAssessmentResult.fromResult(res); let J={}; try{ J=JSON.parse(res.properties.getProperty(SDK.PropertyId.SpeechServiceResponse_JsonResult)); }catch(e){}
-  const W=((J.NBest||[])[0]||{}).Words||[];
-  return {mode,sc:Math.round(p.pronunciationScore||0),acc:Math.round(p.accuracyScore||0),com:Math.round(p.completenessScore||0),flu:Math.round(p.fluencyScore||0),W,txt:res.text||""}; }
+  let J={}; try{ J=JSON.parse(res.properties.getProperty(SDK.PropertyId.SpeechServiceResponse_JsonResult)); }catch(e){}
+  const nb=(J.NBest||[])[0]||{}, pj=nb.PronunciationAssessment||{}; let p={}; try{ p=SDK.PronunciationAssessmentResult.fromResult(res)||{}; }catch(e){}
+  const n=v=>Math.round(+v||0);
+  return {txt:res.text||nb.Display||"",W:nb.Words||[],acc:n(p.accuracyScore||pj.AccuracyScore),flu:n(p.fluencyScore||pj.FluencyScore),com:n(p.completenessScore||pj.CompletenessScore),pron:n(p.pronunciationScore||pj.PronScore)}; }
+/* 🎯 = faqat talaffuz. Nachsprechen: javob matni bilan. Qolganlari: avval matnsiz (unscripted); de-DE'da ball chiqmasa — o'quvchi aytgan matn bilan ikkinchi marta (2026-10-22: «🎯 0» xatosi) */
+async function spAzRun(it,blob){ const mode=spMode(it); const [SDK,T,wav]=await Promise.all([azSdk(),azToken(),spWav(blob)]);
+  if(mode==="n"){ const r=await spAzOnce(SDK,T,wav,String(it.a).replace(/\s*\([^)]*\)\s*/g," ").trim(),true); if(!r) return null;
+    const sc=r.pron||(r.acc?Math.round(r.acc*.5+r.flu*.25+r.com*.25):null); return {mode,sc:r.acc||r.pron?sc:null,acc:r.acc,com:r.com,flu:r.flu,W:r.W,txt:r.txt}; }
+  let r=await spAzOnce(SDK,T,wav,"",false); if(!r) return null; const txt=r.txt;
+  if(!r.acc&&txt){ const r2=await spAzOnce(SDK,T,wav,txt,false); if(r2&&r2.acc) r=r2; }
+  return {mode,sc:r.acc?Math.round(r.acc*.6+r.flu*.4):null,acc:r.acc,com:r.com,flu:r.flu,W:r.W,txt}; }
 /* bosib turish (Telegram'dagidek): chapga surilsa — bekor */
 document.addEventListener("pointerdown",e=>{ const b=e.target.closest&&e.target.closest("#sp2-mic"); if(!b||b.disabled) return; e.preventDefault(); try{ b.setPointerCapture(e.pointerId); }catch(er){} SPR.x0=e.clientX||0; spRecStart(); });
 document.addEventListener("pointermove",e=>{ if(!SPR.want) return; const dx=Math.min(0,(e.clientX||0)-SPR.x0), cn=document.getElementById("sp2-cnl"); if(cn){ cn.style.transform=`translateX(${Math.round(dx*.6)}px)`; cn.style.opacity=String(Math.max(.2,1+dx/140)); } if(dx<-90){ SPR.cancel=true; spRecStop(); } });
