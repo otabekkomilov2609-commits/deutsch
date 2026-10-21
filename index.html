@@ -1191,7 +1191,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .tour-spot.tap::after{border-color:#FFC200;box-shadow:0 0 18px 4px rgba(255,194,0,.7)}
 @keyframes tourPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.04)}}
 .tour-bub{position:fixed;pointer-events:auto;background:#fff;color:#17243C;border-radius:16px;padding:14px 14px 10px;box-shadow:0 10px 30px rgba(0,0,0,.35);border:3px solid #FFC200;font-size:15.5px;line-height:1.45;transition:opacity .2s}
-.tour-bub b{color:#1F4FA0}.tour-f{display:flex;align-items:center;gap:10px;margin-top:10px}
+.tour-bub b{color:#1F4FA0}.tour-f{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}.tour-x{float:right;margin:-6px -6px 4px 8px;border:1.5px solid #D6DEEA;background:#fff;color:#5B6B86;border-radius:999px;font:inherit;font-weight:800;font-size:13px;padding:4px 10px;cursor:pointer}.tour-sol{border:2px solid #FFC200;background:#FFF6D8;color:#6E5200;border-radius:999px;font:inherit;font-weight:800;font-size:14px;padding:7px 12px;cursor:pointer}
 .tour-sk{border:0;background:none;color:#6b778c;font:inherit;font-size:13px;cursor:pointer;padding:4px 0;text-decoration:underline}
 .tour-n{font-size:12px;color:#9aa3b2;margin-left:auto}
 .tour-nx{border:0;border-radius:999px;background:#1F4FA0;color:#fff;font:inherit;font-weight:800;font-size:15px;padding:9px 16px;cursor:pointer}
@@ -5760,7 +5760,7 @@ const TOUR_S=[ /* 2026-10-21 (Otabek: «20 ta juda ko'p — eng kuchli joylarimi
     if(EX.scr==="x") return {sel:"#ex-go", tap:1, t:uz?"📘 Qisqa <b>qoida</b> — keyin <b>Verstanden</b> (= tushundim).":"📘 Короткое <b>правило</b> — затем <b>Verstanden</b> (= понял)."};
     if(EX.scr) return {sel:"#ex-go", tap:1, t:uz?"📌 <b>Beispiel</b> — namuna.":"📌 <b>Beispiel</b> — пример."};
     return "done"; }},
- {sel:"#ex .ex-card", free:"#ex", until:()=>EX.done, coach:"ex", t:{uz:"✍️ Bitta mashqni ishlang. Xato bo‘lsa <b>?</b> sababini aytadi, <b>i</b> — shu mashqning qoidasi. To‘g‘ri bo‘lsa <b>Weiter</b> yashil bo‘ladi 🔓",ru:"✍️ Сделайте одно задание. Ошибка — <b>?</b> объяснит почему, <b>i</b> — правило упражнения. Верно — <b>Weiter</b> станет зелёной 🔓"}},
+ {sel:"#ex .ex-card", free:"#ex", until:()=>EX.done, coach:"ex", t:{uz:"✍️ Bitta mashqni ishlang. Xato bo‘lsa <b>?</b> sababini aytadi, <b>i</b> — shu mashqning qoidasi. To‘g‘ri bo‘lsa <b>Weiter</b> yashil bo‘ladi 🔓<br><small>Bilmasangiz — <b>💡 Javobni ko‘rsat</b>.</small>",ru:"✍️ Сделайте одно задание. Ошибка — <b>?</b> объяснит почему, <b>i</b> — правило упражнения. Верно — <b>Weiter</b> станет зелёной 🔓<br><small>Не знаете — <b>💡 Показать ответ</b>.</small>"}},
  {sel:()=>TOUR.lek&&TOUR.lek.querySelector(".sx.s"), enter:()=>{ try{ if(!exEl().hidden) exClose(); }catch(e){} }, next:1, t:{uz:"🗣️ <b>Sprechen</b> — gapirish: savolni eshitasiz, <b>ovoz chiqarib</b> javob berasiz, keyin to‘g‘ri javobni eshitib solishtirasiz.",ru:"🗣️ <b>Sprechen</b> — говорение: слушаете вопрос, отвечаете <b>вслух</b>, затем сравниваете с правильным ответом."}},
  {center:1, next:1, btn:{uz:"Boshladik! 🚀",ru:"Начинаем! 🚀"}, t:{uz:"🎉 <b>Tayyor!</b> Har kuni 10–15 daqiqa yetarli. Omad!",ru:"🎉 <b>Готово!</b> Достаточно 10–15 минут в день. Удачи!"}}
 ];
@@ -5789,7 +5789,8 @@ function tourShow(){ if(!document.querySelector(".lrn:not([hidden]),.viewer:not(
     if(++tries>(s0.dyn?40:14)){ clearInterval(TOUR.poll); tourNext(); } },250); }
 function tourDraw(s,el){ const spot=document.getElementById("tour-spot"), bub=document.getElementById("tour-bub"), ru=state.lang==="ru";
   const nx=s.next?`<button type="button" class="tour-nx" data-tour="next">${tourTx(s.btn||{uz:"Keyingi →",ru:"Далее →"})}</button>`:(s.tap?`<button type="button" class="tour-tap" data-tour="tap">👆 ${ru?"Нажмите":"Bosing"}</button>`:"");
-  bub.innerHTML=`<div class="tour-t">${tourTx(s.t)}</div><div class="tour-f"><span class="tour-n">${TOUR.i+1}/${TOUR_S.length}</span>${nx}</div>`;
+  const sol=s.until?`<button type="button" class="tour-sol" data-tour="sol">💡 ${ru?"Показать ответ":"Javobni ko‘rsat"}</button>`:"";
+  bub.innerHTML=`<button type="button" class="tour-x" data-tour="skip" aria-label="${ru?"Выйти из экскурсии":"Sayohatdan chiqish"}">${ru?"Выйти":"Chiqish"} ✕</button><div class="tour-t">${tourTx(s.t)}</div><div class="tour-f"><span class="tour-n">${TOUR.i+1}/${TOUR_S.length}</span>${sol}${nx}</div>`;
   spot.classList.toggle("tap",!!s.tap); spot.classList.toggle("ctr",!!s.center);
   const place=()=>{ if(el&&!el.isConnected){ const e2=tourFind(s.sel); if(e2) el=e2; } const vw=innerWidth, vh=(window.visualViewport&&visualViewport.height)||innerHeight; let r=el?el.getBoundingClientRect():{left:vw/2,top:vh/2,width:0,height:0,right:vw/2,bottom:vh/2};
     const pad=6, L=Math.max(4,r.left-pad), T=Math.max(4,r.top-pad), W=Math.min(vw-8,r.width+pad*2), H=Math.min(vh-8,r.height+pad*2);
@@ -5800,7 +5801,7 @@ function tourDraw(s,el){ const spot=document.getElementById("tour-spot"), bub=do
   cancelAnimationFrame(TOUR.raf); place(); }
 /* sayohat paytida faqat yoritilgan joy bosiladi */
 ["pointerdown","click"].forEach(tp=>document.addEventListener(tp,e=>{ if(!TOUR.on) return; const s=TOUR.cur; const tb=e.target.closest&&e.target.closest("[data-tour]");
-  if(tb){ if(tp==="click"){ e.preventDefault(); const a=tb.dataset.tour; if(a==="skip") tourEnd(false); else if(a==="next") tourNext(); else if(a==="tap") tourTap(); } return; }
+  if(tb){ if(tp==="click"){ e.preventDefault(); const a=tb.dataset.tour; if(a==="skip"){ try{ if(!exEl().hidden) exClose(); }catch(er){} try{ if(!lrnEl().hidden) lrnClose(); }catch(er){} tourEnd(false); } else if(a==="next") tourNext(); else if(a==="tap") tourTap(); else if(a==="sol"){ try{ if(!EX.done) exSol(); }catch(er){} } } return; }
   if(e.target.closest&&e.target.closest("#tour-bub")){ if(tp==="click"&&s&&s.tap) tourTap(); return; }
   const el=s&&!s.center?tourFind(s.sel):null, fr=s&&s.free?document.querySelector(s.free):null;
   if((s&&s.tap&&el&&el.contains(e.target))||(fr&&fr.contains(e.target))){ if(tp==="click"&&s.tap&&!s._dyn&&!TOUR.adv){ TOUR.adv=true; setTimeout(tourNext,450); } return; }
