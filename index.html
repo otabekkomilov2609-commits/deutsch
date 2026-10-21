@@ -5603,35 +5603,20 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-coachok]"
 const TOUR={on:false,i:0,el:null,raf:0,poll:0,lek:null,adv:false};
 function tourLek(){ const c=document.querySelector(".lek.bt .cur"); return (c&&c.closest(".lek"))||document.querySelector(".lek.bt"); }
 function tourTx(o){ return (state.lang==="ru"?o.ru:o.uz)||o.uz; }
-const TOUR_S=[
- {sel:()=>document.getElementById("prog"), next:1, t:{uz:"🐣 Bu — <b>darajangiz</b>. So‘z va iboralarni o‘rgangan sari <b>Neuling</b>dan <b>👑</b> gacha o‘sasiz.",ru:"🐣 Это ваш <b>уровень</b>. Чем больше слов и фраз выучите, тем выше: от <b>Neuling</b> до <b>👑</b>."}},
- {sel:"[data-proggo]", tap:1, t:{uz:"👆 <b>Yodlashga</b>ni bosing — so‘z yodlash shu yerda.",ru:"👆 Нажмите <b>«Учить слова»</b> — здесь учат слова."}},
- {sel:"#lrn .lrn-les", next:1, coach:"ls", t:{uz:"Bu yerda <b>Lektion</b>larni tanlaysiz.<br>🟨 <b>sariq</b> — so‘zni tanidingiz, endi yozish qoldi<br>🟩 <b>yashil</b> — o‘zingiz yozib o‘rgandingiz",ru:"Здесь выбираете <b>уроки</b>.<br>🟨 <b>жёлтый</b> — слово узнали, осталось написать<br>🟩 <b>зелёный</b> — написали сами, выучено"}},
- {sel:"#lrn .lrn-setup .lrn-modes", next:1, t:{uz:"Usullar: <b>O‘rganish</b> (juftlash → yozish), <b>Kartochka</b>, <b>💬 Muloqot</b> — gaplashish iboralari.",ru:"Режимы: <b>Учить</b> (пары → письмо), <b>Карточки</b>, <b>💬 Диалоги</b> — фразы для разговора."}},
- {sel:"#lrn .lrn-games", next:1, t:{uz:"🎮 Do‘stlar bilan: <b>⚡ Challenge</b> — 1 daqiqada kim ko‘p so‘z topadi, va <b>Duel</b>.",ru:"🎮 С друзьями: <b>⚡ Челлендж</b> — кто за минуту найдёт больше слов, и <b>Дуэль</b>."}},
- {sel:"#lrn-goal", next:1, enter:()=>{ const i=document.getElementById("lrn-goal"); if(i&&!i.value){ i.value="5"; i.dispatchEvent(new Event("input",{bubbles:true})); i.dispatchEvent(new Event("change",{bubbles:true})); } }, t:{uz:"🔢 Bugun <b>nechta so‘z</b> o‘rganasiz — shu yerga yozasiz. Hozir 5 ta qo‘ydik.",ru:"🔢 Сколько <b>слов</b> учить сегодня — пишете здесь. Сейчас поставили 5."}},
- {sel:"#lrn [data-l=learn]", tap:1, t:{uz:"👆 Sinab ko‘ramiz: <b>O‘rganish</b>ni bosing.",ru:"👆 Попробуем: нажмите <b>«Учить»</b>."}},
- {sel:"#lrn .lrn-mts, #lrn .lrn-opts, #lrn #lrn-wr, #lrn .lrn-flash", free:"#lrn", next:1, coach:"mt", btn:{uz:"Tushunarli →",ru:"Понятно →"}, t:{uz:"<b>Lernen</b> = o‘rganish. Juftini toping: chapdan bittasini, o‘ngdan bittasini bosing. <b>Sariq</b> so‘zlarga e’tibor bering — keyingi bosqichda ularni <b>o‘zingiz yozasiz</b>. Bir-ikkitasini sinab ko‘ring.",ru:"Найдите пары: одно слева, одно справа. Обратите внимание на <b>жёлтые</b> слова — дальше вы <b>напишете их сами</b>. Попробуйте пару."}},
- {dyn:()=>{ const L=lrnEl(); if(!L||L.hidden) return "done"; return {sel:"#lrn .lrn-bar .btn", tap:1, t:state.lang==="ru"?"👆 Пока выйдем — нажмите.":"👆 Hozircha chiqamiz — bosing."}; }},
- {sel:".controls .tabs", next:1, t:{uz:"Darajani shu yerdan tanlaysiz: <b>A1.1 … B1.2</b>.",ru:"Уровень выбирается здесь: <b>A1.1 … B1.2</b>."}},
- {sel:()=>{ const l=TOUR.lek||(TOUR.lek=tourLek()); return l&&l.querySelector(".lek-h"); }, enter:()=>{ const l=TOUR.lek||(TOUR.lek=tourLek()); if(l) l.classList.remove("open"); }, tap:1, t:{uz:"👆 <b>Lektion</b>ni bosing — ichida hamma mashqlar.",ru:"👆 Нажмите на <b>урок</b> — внутри все упражнения."}},
- {sel:()=>TOUR.lek, next:1, t:{uz:"Har Lektionda: 📘 Grammatik · 🔤 Wortschatz · 💬 Kommunikation · 🎧 Hören · 📖 Lesen · 🗣️ Sprechen · 👄 Aussprache. Foiz — qanchasini bajarganingiz.",ru:"В каждом уроке: 📘 Grammatik · 🔤 Wortschatz · 💬 Kommunikation · 🎧 Hören · 📖 Lesen · 🗣️ Sprechen · 👄 Aussprache. Процент — сколько сделано."}},
- {sel:()=>TOUR.lek&&(TOUR.lek.querySelector(".sx.g .sx-act[data-open]")||TOUR.lek.querySelector(".sx-act[data-open]")), tap:1, t:{uz:"👆 <b>Grammatika</b>ni sinab ko‘ramiz.",ru:"👆 Попробуем <b>грамматику</b>."}},
+const TOUR_S=[ /* 2026-10-21 (Otabek: «20 ta juda ko'p — eng kuchli joylarimiz: Wortschatz, Grammatik, Sprechen») — 8 qadam */
+ {sel:"[data-proggo]", tap:1, t:{uz:"🧠 <b>So‘z yodlash</b> — bosing, ko‘rsataman.",ru:"🧠 <b>Учить слова</b> — нажмите, покажу."}},
+ {sel:"#lrn .lrn-les", next:1, coach:"ls", t:{uz:"<b>Lektion</b>ni tanlaysiz.<br>🟨 <b>sariq</b> — so‘zni tanidingiz, endi yozish qoldi<br>🟩 <b>yashil</b> — o‘zingiz yozib o‘rgandingiz",ru:"Выбираете <b>урок</b>.<br>🟨 <b>жёлтый</b> — узнали, осталось написать<br>🟩 <b>зелёный</b> — написали сами, выучено"}},
+ {sel:"#lrn [data-l=learn]", next:1, t:{uz:"Har bir so‘z 3 bosqichda: 👀 <b>tanishuv</b> (ovozi bilan) → 🧩 <b>juftlash</b> → ✍️ <b>o‘zingiz yozasiz</b>. Yozib o‘rgangan so‘z reytingga qo‘shiladi 🏆",ru:"Каждое слово в 3 шага: 👀 <b>знакомство</b> (с озвучкой) → 🧩 <b>пары</b> → ✍️ <b>пишете сами</b>. Выученные слова идут в рейтинг 🏆"}},
+ {sel:()=>{ const l=TOUR.lek||(TOUR.lek=tourLek()); return l&&l.querySelector(".lek-h"); }, enter:()=>{ try{ if(!lrnEl().hidden) lrnClose(); }catch(e){} const l=TOUR.lek||(TOUR.lek=tourLek()); if(l) l.classList.remove("open"); }, tap:1, t:{uz:"📘 Endi <b>grammatika</b>. Lektionni bosing.",ru:"📘 Теперь <b>грамматика</b>. Нажмите на урок."}},
+ {sel:()=>TOUR.lek&&(TOUR.lek.querySelector(".sx.g .sx-act[data-open]")||TOUR.lek.querySelector(".sx-act[data-open]")), tap:1, t:{uz:"👆 <b>Grammatik</b>ni bosing.",ru:"👆 Нажмите <b>Grammatik</b>."}},
  {dyn:()=>{ const R=exEl(); if(!R||R.hidden) return null; const uz=state.lang!=="ru";
     if(EX.si<0) return {sel:"#ex .ex-sec", tap:1, t:uz?"👆 Bo‘limni tanlang.":"👆 Выберите раздел."};
-    if(EX.scr==="t") return {sel:"#ex-go", tap:1, t:uz?"🎯 Avval: <b>nima uchun</b> va <b>qanday</b> ishlash kerak. O‘qing va bosing.":"🎯 Сначала: <b>зачем</b> и <b>как</b>. Прочитайте и нажмите."};
-    if(EX.scr==="x") return {sel:"#ex-go", tap:1, t:uz?"📘 Avval <b>qoida</b> — o‘qing, keyin <b>Verstanden</b> (= tushundim) ni bosing.":"📘 Сначала <b>правило</b> — прочитайте и нажмите <b>Verstanden</b> (= понял)."};
-    if(EX.scr) return {sel:"#ex-go", tap:1, t:uz?"📌 <b>Beispiel</b> — namuna: qanday bajarilishini ko‘ring.":"📌 <b>Beispiel</b> — пример: как это делается."};
+    if(EX.scr==="t") return {sel:"#ex-go", tap:1, t:uz?"🎯 Avval: <b>nima uchun</b> va <b>qanday</b>.":"🎯 Сначала: <b>зачем</b> и <b>как</b>."};
+    if(EX.scr==="x") return {sel:"#ex-go", tap:1, t:uz?"📘 Qisqa <b>qoida</b> — keyin <b>Verstanden</b> (= tushundim).":"📘 Короткое <b>правило</b> — затем <b>Verstanden</b> (= понял)."};
+    if(EX.scr) return {sel:"#ex-go", tap:1, t:uz?"📌 <b>Beispiel</b> — namuna.":"📌 <b>Beispiel</b> — пример."};
     return "done"; }},
- {sel:"#ex .ex-card", free:"#ex", until:()=>EX.done, coach:"ex", t:{uz:"✍️ Endi o‘zingiz: javobni yozing yoki tanlang. Xato bo‘lsa <b>?</b> sababini aytadi. To‘g‘ri bo‘lsa <b>Weiter</b> yashil bo‘ladi 🔓",ru:"✍️ Теперь вы: впишите или выберите ответ. Ошибка — <b>?</b> объяснит почему. Верно — <b>Weiter</b> станет зелёной 🔓"}},
- {sel:"#ex-go", tap:1, t:{uz:"🎉 Barakalla! 👆 <b>Weiter</b> (= keyingisi) — keyingi mashq.",ru:"🎉 Отлично! 👆 <b>Weiter</b> — следующее упражнение."}},
- {sel:"#ex .ex-top", next:1, t:{uz:"💡 — maslahat, <b>i</b> — shu mashqning qoidasi. Qiynalsangiz bosing.",ru:"💡 — подсказка, <b>i</b> — правило этого упражнения. Если трудно — нажмите."}},
- {dyn:()=>{ const R=exEl(); if(!R||R.hidden) return "done"; return {sel:"#ex .lrn-bar .btn", tap:1, t:state.lang==="ru"?"👆 Выходим.":"👆 Chiqamiz."}; }},
- {sel:()=>TOUR.lek&&(TOUR.lek.querySelector(".sx.a")||TOUR.lek.querySelector(".sx.h")), next:1, t:{uz:"🎧 <b>Hören</b> va 👄 <b>Aussprache</b>: tinglang va takrorlang. 🗣️ <b>Sprechen</b>da o‘zingiz gapirasiz.",ru:"🎧 <b>Hören</b> и 👄 <b>Aussprache</b>: слушайте и повторяйте. В 🗣️ <b>Sprechen</b> говорите сами."}},
- {sel:".pt-box", next:1, t:{uz:"🎓 <b>Prüfungstraining</b> — Goethe imtihoniga tayyorgarlik testlari.",ru:"🎓 <b>Prüfungstraining</b> — тесты для подготовки к экзамену Goethe."}},
- {sel:"[data-rank]", next:1, t:{uz:"🏆 <b>Reyting</b> — o‘rgangan so‘zlaringiz bo‘yicha boshqalar bilan bellashing.",ru:"🏆 <b>Рейтинг</b> — соревнуйтесь по числу выученных слов."}},
- {sel:"#fb-btn", next:1, t:{uz:"👎 Xato yoki muammo topsangiz — shu tugma. Ekran rasmi bilan menga yetib keladi.",ru:"👎 Нашли ошибку — эта кнопка. Снимок экрана придёт мне."}},
- {sel:"#app-inst:not([hidden])", next:1, opt:1, t:{uz:"📲 Saytni telefonga <b>ilova</b> qilib qo‘ysangiz, ancha qulay: bir bosishda ochiladi, butun ekranda.",ru:"📲 Удобнее заниматься в <b>приложении</b>: открывается одним нажатием, на весь экран."}},
+ {sel:"#ex .ex-card", free:"#ex", until:()=>EX.done, coach:"ex", t:{uz:"✍️ Bitta mashqni ishlang. Xato bo‘lsa <b>?</b> sababini aytadi, <b>i</b> — shu mashqning qoidasi. To‘g‘ri bo‘lsa <b>Weiter</b> yashil bo‘ladi 🔓",ru:"✍️ Сделайте одно задание. Ошибка — <b>?</b> объяснит почему, <b>i</b> — правило упражнения. Верно — <b>Weiter</b> станет зелёной 🔓"}},
+ {sel:()=>TOUR.lek&&TOUR.lek.querySelector(".sx.s"), enter:()=>{ try{ if(!exEl().hidden) exClose(); }catch(e){} }, next:1, t:{uz:"🗣️ <b>Sprechen</b> — gapirish: savolni eshitasiz, <b>ovoz chiqarib</b> javob berasiz, keyin to‘g‘ri javobni eshitib solishtirasiz.",ru:"🗣️ <b>Sprechen</b> — говорение: слушаете вопрос, отвечаете <b>вслух</b>, затем сравниваете с правильным ответом."}},
  {center:1, next:1, btn:{uz:"Boshladik! 🚀",ru:"Начинаем! 🚀"}, t:{uz:"🎉 <b>Tayyor!</b> Har kuni 10–15 daqiqa yetarli. Omad!",ru:"🎉 <b>Готово!</b> Достаточно 10–15 минут в день. Удачи!"}}
 ];
 function tourLinkT(){ const b=document.getElementById("tour-link"); if(!b) return; let d=false; try{ d=localStorage.getItem("tour")==="1"; }catch(e){} b.hidden=d; b.textContent=state.lang==="ru"?"🧭 Экскурсия по сайту":"🧭 Sayt bo‘ylab sayohat"; } /* bir marta o‘tilgandan keyin tugma yashiriladi (2026-10-21, Otabek) */
@@ -5665,7 +5650,7 @@ function tourDraw(s,el){ const spot=document.getElementById("tour-spot"), bub=do
     const pad=6, L=Math.max(4,r.left-pad), T=Math.max(4,r.top-pad), W=Math.min(vw-8,r.width+pad*2), H=Math.min(vh-8,r.height+pad*2);
     Object.assign(spot.style,{left:L+"px",top:T+"px",width:(el?W:0)+"px",height:(el?H:0)+"px",opacity:"1"});
     const bw=Math.min(340,vw-24); bub.style.width=bw+"px"; const bh=bub.offsetHeight||120; let bx=Math.min(Math.max(12,r.left+r.width/2-bw/2),vw-bw-12), by;
-    if(!el) by=vh/2-bh/2; else if(r.bottom+bh+18<vh) by=Math.min(r.bottom+14,vh-bh-12); else if(r.top-bh-18>0) by=r.top-bh-14; else by=Math.max(12,vh-bh-12);
+    if(!el) by=vh/2-bh/2; else if(s.free) by=vh-bh-12; /* mashq paytida pufakcha pastda — Prüfen/Weiter yopilmasin */ else if(r.bottom+bh+18<vh) by=Math.min(r.bottom+14,vh-bh-12); else if(r.top-bh-18>0) by=r.top-bh-14; else by=Math.max(12,vh-bh-12);
     Object.assign(bub.style,{left:bx+"px",top:by+"px",opacity:"1"}); TOUR.raf=requestAnimationFrame(place); };
   cancelAnimationFrame(TOUR.raf); place(); }
 /* sayohat paytida faqat yoritilgan joy bosiladi */
