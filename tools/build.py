@@ -42,9 +42,10 @@ js = js.replace('addEventListener("load",()=>navigator.serviceWorker.register("/
 jsb = js.encode("utf-8"); app = "app.%s.js" % h8(jsb)
 open(os.path.join(ROOT, app), "wb").write(jsb); keep.add(app)
 loader = ('<script>(async()=>{const F=%s,A=%s;const st=document.getElementById("ld-st");'
+          '/* eski index.html (CDN keshi) yangi fayllarni topolmasa — bir marta o\'zini yangilaydi */const heal=async()=>{try{if(sessionStorage.getItem("ld:heal"))return false;sessionStorage.setItem("ld:heal","1");const r=await fetch(location.pathname,{cache:"reload"});if(r.ok){location.reload();return true;}}catch(e){}return false;};'
           'try{await Promise.all(Object.entries(F).map(async([id,u])=>{const r=await fetch(u);if(!r.ok)throw new Error(u);document.getElementById(id).textContent=await r.text();}));}'
-          'catch(e){if(st)st.textContent="Yuklanmadi — internetni tekshirib, sahifani yangilang · Не загрузилось — проверьте интернет и обновите страницу";return;}'
-          'const sc=document.createElement("script");sc.src=A;sc.onerror=()=>{if(st)st.textContent="Yuklanmadi — sahifani yangilang";};document.body.appendChild(sc);})();</script>'
+          'catch(e){if(await heal())return;if(st)st.textContent="Yuklanmadi — internetni tekshirib, sahifani yangilang · Не загрузилось — проверьте интернет и обновите страницу";return;}'
+          'const sc=document.createElement("script");sc.src=A;sc.onerror=async()=>{if(await heal())return;if(st)st.textContent="Yuklanmadi — sahifani yangilang";};document.body.appendChild(sc);})();</script>'
           ) % (json.dumps(files, ensure_ascii=False), json.dumps(app))
 s = s[:mm.start()] + loader + s[mm.end():]
 # yuklanish belgisi
@@ -52,10 +53,14 @@ s = s.replace('<main id="main"></main>', '<main id="main"><div id="ld-st" class=
 s = s.replace('</style>', '.ld-st{text-align:center;color:var(--muted);padding:40px 16px;font-weight:700}</style>', 1)
 open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(s)
 
-# eski hash'li fayllarni tozalash
+# eski hash'li fayllar 2 kun saqlanadi: GitHub Pages CDN index.html'ni 10 daqiqagacha eski holda beradi — darhol o'chirilsa «Yuklanmadi» (2026-10-21)
+import subprocess, time
 for f in glob.glob(os.path.join(ROOT, "data", "*.json")) + glob.glob(os.path.join(ROOT, "app.*.js")):
     rel = os.path.relpath(f, ROOT)
-    if rel not in keep: os.remove(rel if os.path.isabs(rel) else f)
+    if rel in keep: continue
+    try: ts = int(subprocess.run(["git", "log", "-1", "--format=%ct", "--", rel], cwd=ROOT, capture_output=True, text=True).stdout.strip() or 0)
+    except Exception: ts = 0
+    if ts and time.time() - ts > 2 * 86400: os.remove(f)
 # SW: hash'li fayllar ro'yxati (cache-first)
 sw = os.path.join(ROOT, "sw.js"); w = open(sw, encoding="utf-8").read()
 w = re.sub(r"const V = '[^']*'", "const V = 'streber-%s'" % h8((app + "".join(sorted(files.values()))).encode()), w, count=1)
