@@ -721,3 +721,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Footer: «Ovoz manbalari» havolasi qoladi — CC BY-SA litsenziyasi muallifni ko'rsatishni talab qiladi.
 - Sayohat: «👆 Bosing» tugmasi yoritilgan tugmani bosadi; sayohat bir marta o'tilgandan keyin «🧭 Sayt bo'ylab sayohat» tugmasi yashiriladi.
 - 🧠 Wortschatz: bosh sahifada eski «Butun bo'lim uchun» ro'yxat kartalari o'rniga bitta «Wortschatz A1/A2» tugmasi — butun daraja (L1–24), sayt tiliga mos (RU → Deutsch–Russisch, UZ → Deutsch–O'zbekcha; A2 da o'zbekcha bo'lmasa — ruscha). «Учить слова / Yodlashga» ham shuni ochadi. Progress eski ro'yxatlar kalitida saqlanadi (`lrnGetMap/lrnPutMap`), «Verben mit Perfekt» — Lernen ichida havola.
+- Wörter ordnen: to'g'ri tartiblanganda gap oxiridagi «?» yoki «.» plitkalardan keyin ko'rinadi (509 ta mashq).

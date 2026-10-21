@@ -1293,7 +1293,7 @@ mark.trm.bad sup{color:#C62828}
 .ex-aud .tm{flex:none;font-variant-numeric:tabular-nums;font-size:14px;opacity:.75;min-width:76px;text-align:right}
 .ex-txt{text-align:left;margin:14px 0 4px;line-height:1.5}.ex-txt p{margin:0 0 6px}.ex-txt b{display:inline-block;min-width:52px}
 .ex-opts{display:flex;flex-direction:column;gap:8px}.ex-opts.two{display:grid;grid-template-columns:1fr 1fr}
-.ex-line{min-height:56px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:8px;border:2px dashed var(--line);border-radius:14px}
+.ex-pu{align-self:center;font-size:28px;font-weight:800;color:var(--green);margin-left:-4px;line-height:1}.ex-line{min-height:56px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:8px;border:2px dashed var(--line);border-radius:14px}
 .ex-line.join{gap:2px}.ex-ph{color:var(--muted);padding:0 6px}
 .ex-line.ok{border-style:solid;border-color:var(--green);background:var(--green-soft)}.ex-line.bad{border-style:solid;border-color:#C62828;background:#FDECEC}
 .ex-pool{display:flex;flex-wrap:wrap;gap:8px;min-height:48px}.ex-pool:empty{display:none}.ex-card .ex-ctx+.ex-w .ex-line{margin-top:0}
@@ -3420,7 +3420,7 @@ const EXR={
     ans:it=>{ let k=0; return exQ(it.s).replace(/___/g,()=>`<b class="ex-hl">${esc(it.a[k++][0])}</b>`); }},
   order:{r:it=>{ let w=it.w.map((x,i)=>i); const j=it.j??" ", tgt=it.a.replace(/[.?!]$/,""); for(let t=0;t<20;t++){ exShuffle(w); if(w.map(i=>it.w[i]).join(j)!==tgt) break; } EX.st.ord=[]; EX.st.pool=w;
       return `<div class="ex-line${j===""?" join":""}${it.dlg?" dlg":""}" id="ex-line"><span class="ex-ph">…</span></div><div class="ex-pool${it.dlg?" dlg":""}" id="ex-pool">${w.map(i=>`<button type="button" class="ex-tile" data-x="tile" data-i="${i}">${esc(it.w[i])}</button>`).join("")}</div>`; },
-    c:it=>{ const j=it.j??" ", v=EX.st.ord.map(i=>it.w[i]).join(j), tgt=it.a.replace(/[.?!]$/,""); const ok=exNorm(v)===exNorm(tgt)||exNorm(v)===exNorm(it.a); const ln=exEl().querySelector("#ex-line"); ln.classList.add(ok?"ok":"bad"); if(ok){ exEl().querySelectorAll(".ex-tile").forEach(b=>b.disabled=true); if(j==="") ln.innerHTML=`<span class="ex-word">${esc(v)}</span>`; } return ok; }, /* so'z yasash: to'g'ri bo'lsa bo'laklar bitta so'zga aylanadi (2026-10-21, Otabek) */
+    c:it=>{ const j=it.j??" ", v=EX.st.ord.map(i=>it.w[i]).join(j), tgt=it.a.replace(/[.?!]$/,""); const ok=exNorm(v)===exNorm(tgt)||exNorm(v)===exNorm(it.a); const ln=exEl().querySelector("#ex-line"); ln.classList.add(ok?"ok":"bad"); if(ok){ exEl().querySelectorAll(".ex-tile").forEach(b=>b.disabled=true); if(j==="") ln.innerHTML=`<span class="ex-word">${esc(v)}</span>`; const pu=(String(it.a).trim().match(/[.?!]$/)||[""])[0]; if(pu&&!/[.?!]$/.test(v.trim())&&!ln.querySelector(".ex-pu")) ln.insertAdjacentHTML("beforeend",`<span class="ex-pu">${pu}</span>`); } return ok; } /* gap oxiridagi «?» / «.» to‘g‘ri javobda ko‘rinadi (2026-10-21, Otabek) */, /* so'z yasash: to'g'ri bo'lsa bo'laklar bitta so'zga aylanadi (2026-10-21, Otabek) */
     ans:it=>esc(it.a)},
   match:{auto:1, r:it=>{ const n=it.p.length, L=exShuffle([...Array(n).keys()]); let R; for(let t=0;t<50;t++){ R=exShuffle([...Array(n).keys()]); if(R.every((k,i)=>k!==L[i])) break; } EX.st.m={L,R,done:new Set(),bad:0,sel:null};
       return `<div class="lrn-mts ex-mts">${L.map((k,i)=>`<button type="button" class="lrn-mt" data-x="mt" data-s="L" data-k="${k}">${esc(it.p[k][0])}</button><button type="button" class="lrn-mt" data-x="mt" data-s="R" data-k="${R[i]}">${esc(it.p[R[i]][1])}</button>`).join("")}</div>`; },
