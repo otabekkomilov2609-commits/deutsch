@@ -1739,7 +1739,7 @@ function exItem(){ kbHold(); kbRel(); const el=exEl(); el.classList.remove("has-
    💡 yordam yo'q; Beispiel ekrani = qoida (i dagi) + misol suhbat (so'zlar javobga tushadi) + 📊 Grammatik-Tabelle; i bosilsa — shu ekran. */
 const SPR={stream:null,rec:null,chunks:[],url:null,t0:0,iv:0,sr:null,txt:"",want:false,busy:false,dur:0,lv:[],raf:0,an:null,src:null,au:null,cur:null};
 function spRecOK(){ return !!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia&&window.MediaRecorder); }
-function spUz(){ return state.lang!=="ru"; }
+function spUz(){ return state.lang!=="ru"; } function uz2(){ return spUz(); }
 function spCue(q){ const m=String(q||"").match(/\(([^)]*)\)\s*$/); return m?m[1].split(/\s*\/\s*/).map(s=>s.trim()).filter(Boolean):[]; }
 function spBare(q){ return String(q||"").replace(/\s*\([^)]*\)\s*$/,"").replace(/^[▪●]\s*/,"").trim(); }
 function spHash(t){ let h=7; for(const c of String(t)) h=(h*31+c.charCodeAt(0))>>>0; return h; }
@@ -1773,7 +1773,7 @@ function spCard(it){ const uz=spUz(), ok=spRecOK(), cue=spCue(it.q);
       ${cue.length?`<div class="sp2-cues">${cue.map(c=>`<span class="sp2-cue" lang="de">${esc(c)}</span>`).join("")}</div>`:""}
       <div id="sp2-mine"></div>
       <div class="sp2-ans" id="sp2-ans" hidden></div>
-      <div class="ex-sp-a" id="ex-sp-a" hidden><div class="ex-sp-self"><button type="button" class="ex-opt" data-x="spok">👍 Richtig gesagt</button><button type="button" class="ex-opt" data-x="spre">🔁 Nochmal</button></div></div></div>
+      <div class="ex-sp-a" id="ex-sp-a" hidden><div class="ex-sp-self"><button type="button" class="ex-opt" data-x="spok">👍 Richtig gesagt</button><button type="button" class="ex-opt" data-x="sprerec">🎙 ${uz?"Qayta yozish":"Записать заново"}</button></div></div></div>
     <div class="ex-sp-mic sp2-rec" id="ex-sp-mic">${ok?`<div class="sp2-recbar" id="sp2-recbar" hidden><span class="sp2-dot"></span><span class="sp2-tm" id="sp2-tm">0:00</span><span class="sp2-live" id="sp2-live"></span></div><button type="button" class="sp2-mic" id="sp2-mic" aria-label="🎙 ${uz?"Bosib turib gapiring":"Держите и говорите"}">🎙</button><b class="sp2-lb" id="sp2-lb">${uz?"Bosib turing":"Держите"}</b>`
       :`<b class="sp2-lb">${uz?"🎙 Javobni ovoz chiqarib ayting":"🎙 Ответьте вслух"}</b>`}
       ${azOn()?`<button type="button" class="btn primary ex-az-b" data-x="azrec"${AZ.ok?"":" hidden"}>🎙 Sprechen &amp; bewerten</button>`:""}
@@ -1819,7 +1819,7 @@ function spRecDone(it){ const uz=spUz(); SPR.rec=null; if(exCur()!==it) return;
   try{ if(SPR.url) URL.revokeObjectURL(SPR.url); }catch(e){} const blob=new Blob(SPR.chunks,{type:(SPR.chunks[0]&&SPR.chunks[0].type)||"audio/webm"}); SPR.url=URL.createObjectURL(blob);
   const box=document.getElementById("sp2-mine"); if(!box) return; const mx=Math.max(.05,...SPR.lv), lv=SPR.lv.map(v=>Math.max(.12,v/mx));
   box.innerHTML=`<div class="sp2-b me mine">${spVm("me","",{cls:"mine",ok:true,lv,t:spT(SPR.dur)})}<small>🎙 ${uz?"Sizning ovozingiz":"Ваш голос"}</small><div class="sp2-tx" id="sp2-tx" hidden></div></div>`;
-  const sk=document.querySelector(".sp2-skip"); if(sk) sk.hidden=true; spLbl(uz?"Qayta yozish — yana bosib turing":"Перезаписать — держите снова");
+  const sk=document.querySelector(".sp2-skip"); if(sk) sk.hidden=true; const mp=document.getElementById("ex-sp-mic"); if(mp) mp.hidden=true; /* yozib bo‘lgach mikrofon paneli yig‘iladi — qayta yozish 🎙 tugmasida (2026-10-21, Otabek) */
   const sa=document.getElementById("ex-sp-a"); if(sa) sa.hidden=false;
   const ans=document.getElementById("sp2-ans"); if(ans&&!ans.hidden){ ans.hidden=true; const ok=document.querySelector(".sp2-ok"); if(ok) ok.classList.remove("on"); } }
 /* →A */
@@ -1959,6 +1959,7 @@ document.addEventListener("click",e=>{ const root=exEl(); if(!root||root.hidden|
   if(a==="vmplay"){ vmPlay(b.dataset.vm); return; }
   if(a==="vmtt"){ vmTT(b.dataset.vm,it); return; }
   if(a==="spans"){ spAnsToggle(it); return; }
+  if(a==="sprerec"){ spStop(); const mn=document.getElementById("sp2-mine"); if(mn) mn.innerHTML=""; const an=document.getElementById("sp2-ans"); if(an){ an.hidden=true; } const sa=document.getElementById("ex-sp-a"); if(sa) sa.hidden=true; const mp=document.getElementById("ex-sp-mic"); if(mp){ mp.hidden=false; } spLbl(uz2()?"Bosib turing":"Держите"); EX.st.sp="q"; const i=EX.q[EX.qi]; EX.fails[i]=(EX.fails[i]||0)+1; return; }
   if(a==="sptb"){ const t=document.getElementById("sp2-tbl"); if(t){ t.hidden=!t.hidden; b.setAttribute("aria-expanded",String(!t.hidden)); if(!t.hidden){ SPR.tk=0; spTbDraw(); } } return; }
   if(a==="sptk"){ SPR.tk=+b.dataset.k; spTbDraw(); return; }
   if(a==="bspfly"){ spFly(); return; }
