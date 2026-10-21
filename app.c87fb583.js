@@ -1776,7 +1776,6 @@ function spCard(it){ const uz=spUz(), ok=spRecOK(), cue=spCue(it.q);
       <div class="ex-sp-a" id="ex-sp-a" hidden><div class="ex-sp-self"><button type="button" class="ex-opt" data-x="spok">👍 Richtig gesagt</button><button type="button" class="ex-opt" data-x="sprerec">🎙 ${uz?"Qayta yozish":"Записать заново"}</button></div></div></div>
     <div class="ex-sp-mic sp2-rec" id="ex-sp-mic">${ok?`<div class="sp2-recbar" id="sp2-recbar" hidden><span class="sp2-dot"></span><span class="sp2-tm" id="sp2-tm">0:00</span><span class="sp2-live" id="sp2-live"></span></div><button type="button" class="sp2-mic" id="sp2-mic" aria-label="🎙 ${uz?"Bosib turib gapiring":"Держите и говорите"}">🎙</button><b class="sp2-lb" id="sp2-lb">${uz?"Bosib turing":"Держите"}</b>`
       :`<b class="sp2-lb">${uz?"🎙 Javobni ovoz chiqarib ayting":"🎙 Ответьте вслух"}</b>`}
-      ${azOn()?`<button type="button" class="btn primary ex-az-b" data-x="azrec"${AZ.ok?"":" hidden"}>🎙 Sprechen &amp; bewerten</button>`:""}
       <button type="button" class="sp2-skip" data-x="spans">${ok?(uz?"✓ Javobni ko‘rish":"✓ Показать ответ"):(uz?"✓ To‘g‘ri javob":"✓ Правильный ответ")}</button></div>${azOn()?`<div class="ex-az" id="ex-az" hidden></div>`:""}</div>`; }
 function spAfterRender(it){ spDur("q",spSrc("q",it)); }
 /* ✓ — to'g'ri javob (o'z xabari ostida) */
@@ -1799,7 +1798,7 @@ async function spRecStart(){ if(SPR.busy) return; SPR.busy=true; SPR.want=true; 
   let st; try{ st=await spStream(); }catch(e){ SPR.busy=false; SPR.want=false; spLbl(uz?"🎙 Mikrofonga ruxsat berilmadi — ovoz chiqarib ayting, keyin ✓":"🎙 Нет доступа к микрофону — скажите вслух, затем ✓"); if(btn) btn.disabled=true; return; }
   if(!SPR.want||exCur()!==it){ SPR.busy=false; return; }
   const mt=["audio/webm;codecs=opus","audio/mp4","audio/webm"].find(t=>{ try{ return MediaRecorder.isTypeSupported(t); }catch(e){ return false; } });
-  SPR.chunks=[]; SPR.txt=""; SPR.lv=[]; try{ SPR.rec=new MediaRecorder(st,mt?{mimeType:mt}:undefined); }catch(e){ SPR.rec=new MediaRecorder(st); }
+  SPR.chunks=[]; SPR.txt=""; SPR.lv=[]; SPR.az=null; try{ SPR.rec=new MediaRecorder(st,mt?{mimeType:mt}:undefined); }catch(e){ SPR.rec=new MediaRecorder(st); }
   SPR.rec.ondataavailable=e=>{ if(e.data&&e.data.size) SPR.chunks.push(e.data); };
   SPR.rec.onstop=()=>spRecDone(it); SPR.rec.start(); SPR.t0=Date.now();
   try{ const ac=wkCtx&&wkCtx(); if(ac){ if(ac.state==="suspended") ac.resume(); SPR.src=ac.createMediaStreamSource(st); SPR.an=ac.createAnalyser(); SPR.an.fftSize=512; SPR.src.connect(SPR.an); } }catch(e){ SPR.an=null; }
@@ -1821,14 +1820,18 @@ function spRecDone(it){ const uz=spUz(); SPR.rec=null; if(exCur()!==it) return;
   box.innerHTML=`<div class="sp2-b me mine">${spVm("me","",{cls:"mine",ok:true,lv,t:spT(SPR.dur)})}<small>🎙 ${uz?"Sizning ovozingiz":"Ваш голос"}</small><div class="sp2-tx" id="sp2-tx" hidden></div></div>`;
   const sk=document.querySelector(".sp2-skip"); if(sk) sk.hidden=true; const mp=document.getElementById("ex-sp-mic"); if(mp) mp.hidden=true; /* yozib bo‘lgach mikrofon paneli yig‘iladi — qayta yozish 🎙 tugmasida (2026-10-21, Otabek) */
   const sa=document.getElementById("ex-sp-a"); if(sa) sa.hidden=false;
-  const ans=document.getElementById("sp2-ans"); if(ans&&!ans.hidden){ ans.hidden=true; const ok=document.querySelector(".sp2-ok"); if(ok) ok.classList.remove("on"); } }
+  const ans=document.getElementById("sp2-ans"); if(ans&&!ans.hidden){ ans.hidden=true; const ok=document.querySelector(".sp2-ok"); if(ok) ok.classList.remove("on"); }
+  /* yuborilgach to'g'ri javob o'zi yangraydi (2026-10-21, Otabek); Azure baholash — kalit ishlasa */
+  setTimeout(()=>{ if(exCur()===it) spAns(it,true); },500); try{ spAzAssess(it,blob); }catch(e){} }
 /* →A */
 function spNorm(s){ return String(s).toLowerCase().replace(/[’']/g,"").replace(/[^a-zäöüß0-9\s-]/g," ").split(/\s+/).filter(Boolean); }
 function spDiff(ref,hyp){ const A=spNorm(ref), B=spNorm(hyp), L=Array.from({length:A.length+1},()=>new Array(B.length+1).fill(0));
   for(let i=A.length-1;i>=0;i--) for(let j=B.length-1;j>=0;j--) L[i][j]=A[i]===B[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
   const hit=new Set(); let i=0,j=0; while(i<A.length&&j<B.length){ if(A[i]===B[j]){ hit.add(i); i++; j++; } else if(L[i+1][j]>=L[i][j+1]) i++; else j++; }
   return {hit,n:A.length}; }
-function spShowText(it){ const uz=spUz(), tx=document.getElementById("sp2-tx"); if(!tx) return; if(!tx.hidden){ tx.hidden=true; return; } tx.hidden=false;
+function spShowText(it,keep){ const uz=spUz(), tx=document.getElementById("sp2-tx"); if(!tx) return; if(!tx.hidden&&!keep){ tx.hidden=true; return; } tx.hidden=false;
+  if(SPR.az&&SPR.az.W&&SPR.az.W.length){ const words=SPR.az.W.map(w=>{ const a=w.PronunciationAssessment||{}, et=a.ErrorType||"None", v=Math.round(a.AccuracyScore||0); return `<span class="az-w ${et==="Omission"?"om":et==="Insertion"?"ins":azCol(v)}" title="${v}">${esc(w.Word)}</span>`; }).join(" ");
+    tx.innerHTML=`<div class="sp2-heard" lang="de">«${esc(SPR.az.txt||SPR.txt||"")}»</div><div class="ex-az-ws" lang="de">${words}</div><div class="sp2-sc">🟢 ${uz?"yaxshi":"хорошо"} · 🟡 ${uz?"o‘rtacha":"средне"} · 🔴 ${uz?"qayta mashq qiling":"потренируйтесь"}${SPR.az.W.some(w=>(w.PronunciationAssessment||{}).ErrorType==="Omission")?` · <s>${uz?"aytilmadi":"пропущено"}</s>`:""}</div>`; return; }
   if(!SPR.txt){ tx.innerHTML=`<span class="sp2-no">${uz?"Matnga aylantirib bo‘lmadi — bu telefon/brauzer nemischa nutqni tanimadi yoki ovoz past edi.":"Не удалось распознать — браузер не поддерживает немецкую речь или было тихо."}</span>`; return; }
   const ref=String(it.a).replace(/\s*\([^)]*\)\s*/g," ").trim(), D=spDiff(ref,SPR.txt), words=ref.split(/\s+/); let k=0;
   const col=words.map(w=>{ const ks=spNorm(w).map(()=>k++); const on=ks.every(x=>D.hit.has(x)); return `<span class="${on?"y":"n"}">${esc(w)}</span>`; }).join(" ");
@@ -1865,6 +1868,27 @@ function spBspPlay(which,chain){ const g=EX.G[exGi()], p=g&&spBspParse(g.bsp); i
   try{ if(EX.spAu) EX.spAu.pause(); }catch(e){}
   if(f){ const a=new Audio(AUD_BASE+f); EX.spAu=a; a.onended=next; a.play().catch(()=>{ exSay(t); setTimeout(next,1800); }); }
   else { exSay(t); setTimeout(next,Math.min(4000,900+t.length*70)); } }
+
+/* 🎯 Azure talaffuz baholash — o'quvchining yozib olingan ovozidan (2026-10-21, Otabek: «ovozni tekshirishni qo'shamizmi azuredan»). Kalit ishlasa (AZ.ok) o'zi ishlaydi. */
+function spWav(blob){ return blob.arrayBuffer().then(ab=>{ const ac=wkCtx&&wkCtx(); if(!ac) throw new Error("ctx"); return ac.decodeAudioData(ab); }).then(buf=>{ const sr=16000, n=Math.round(buf.duration*sr), off=new OfflineAudioContext(1,n,sr), src=off.createBufferSource(); src.buffer=buf; src.connect(off.destination); src.start(); return off.startRendering(); })
+  .then(r=>{ const d=r.getChannelData(0), out=new ArrayBuffer(44+d.length*2), v=new DataView(out); const w=(o,s)=>{ for(let i=0;i<s.length;i++) v.setUint8(o+i,s.charCodeAt(i)); };
+    w(0,"RIFF"); v.setUint32(4,36+d.length*2,true); w(8,"WAVE"); w(12,"fmt "); v.setUint32(16,16,true); v.setUint16(20,1,true); v.setUint16(22,1,true); v.setUint32(24,16000,true); v.setUint32(28,32000,true); v.setUint16(32,2,true); v.setUint16(34,16,true); w(36,"data"); v.setUint32(40,d.length*2,true);
+    for(let i=0;i<d.length;i++){ const s=Math.max(-1,Math.min(1,d[i])); v.setInt16(44+i*2,s<0?s*0x8000:s*0x7FFF,true); } return new Blob([out],{type:"audio/wav"}); }); }
+async function spAzAssess(it,blob){ if(!azOn()||!AZ.ok) return; const uz=spUz(), ref=String(it.a).replace(/\s*\([^)]*\)\s*/g," ").trim(), host=document.querySelector("#sp2-mine .sp2-b"); if(!host) return;
+  let pill=host.querySelector(".sp2-az"); if(!pill){ pill=document.createElement("div"); pill.className="sp2-az"; host.appendChild(pill); } pill.innerHTML=`<span class="sp2-azw">⏳ ${uz?"Talaffuz tekshirilmoqda…":"Проверяю произношение…"}</span>`;
+  try{ const [SDK,T,wav]=await Promise.all([azSdk(),azToken(),spWav(blob)]); if(exCur()!==it) return;
+    const cfg=SDK.SpeechConfig.fromAuthorizationToken(T.tok,T.reg); cfg.speechRecognitionLanguage="de-DE";
+    const audio=SDK.AudioConfig.fromWavFileInput(new File([wav],"a.wav",{type:"audio/wav"})); const rec=new SDK.SpeechRecognizer(cfg,audio);
+    const pa=new SDK.PronunciationAssessmentConfig(ref,SDK.PronunciationAssessmentGradingSystem.HundredMark,SDK.PronunciationAssessmentGranularity.Phoneme,true); try{ pa.enableProsodyAssessment=true; }catch(e){} pa.applyTo(rec);
+    const res=await new Promise((ok,bad)=>rec.recognizeOnceAsync(ok,bad)); try{ rec.close(); }catch(e){}
+    if(res.reason!==SDK.ResultReason.RecognizedSpeech){ pill.innerHTML=`<span class="sp2-azw">🤷 ${uz?"Ovoz tanilmadi — mikrofonga yaqinroq, balandroq ayting":"Речь не распознана — говорите ближе и громче"}</span>`; return; }
+    const p=SDK.PronunciationAssessmentResult.fromResult(res); let J={}; try{ J=JSON.parse(res.properties.getProperty(SDK.PropertyId.SpeechServiceResponse_JsonResult)); }catch(e){}
+    const W=((J.NBest||[])[0]||{}).Words||[], sc=Math.round(p.pronunciationScore||0), acc=Math.round(p.accuracyScore||0), com=Math.round(p.completenessScore||0), flu=Math.round(p.fluencyScore||0);
+    SPR.az={sc,W,txt:res.text}; if(!SPR.txt&&res.text) SPR.txt=res.text;
+    pill.innerHTML=`<span class="sp2-azs ${azCol(sc)}">🎯 ${sc}</span><span class="sp2-azm">${uz?"aniqlik":"точность"} ${acc} · ${uz?"to‘liqlik":"полнота"} ${com} · ${uz?"ravonlik":"беглость"} ${flu}</span>`;
+    const tx=document.getElementById("sp2-tx"); if(tx&&!tx.hidden) spShowText(it,true);
+    if(sc>=75&&com>=80){ const ok=document.querySelector('[data-x="spok"]'); if(ok) ok.classList.add("ok"); }
+  }catch(e){ pill.innerHTML=""; } }
 /* bosib turish (Telegram'dagidek) */
 document.addEventListener("pointerdown",e=>{ const b=e.target.closest&&e.target.closest("#sp2-mic"); if(!b||b.disabled) return; e.preventDefault(); try{ b.setPointerCapture(e.pointerId); }catch(er){} spRecStart(); });
 ["pointerup","pointercancel"].forEach(tp=>document.addEventListener(tp,e=>{ if(SPR.want||(SPR.rec&&SPR.rec.state==="recording")) spRecStop(); }));
