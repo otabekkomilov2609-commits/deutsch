@@ -3684,7 +3684,7 @@ function lrnForms(de){
   return [er?"er/sie "+er:"", P?P.p:""].filter(Boolean).join(" · ");
 }
 function lrnFm(de,full){ const f=String(full||""); return lrnForms(de).split(" · ").filter(x=>x&&!f.includes(x.replace(/^er\/sie /,""))).join(" · "); }
-function lrnItems(){ const D=lernData()[LR.id]; return D.it.map((r,i)=>({i,l:r[0],s:D.sec[r[1]],full:r[2],de:r[3],ru:r[4],ex:r[5],red:r[6],dis:r[7],say:r[8],mt:(D.mt&&D.mt[i])||null,fm:D.kind==="perfekt"?"":lrnFm(r[3],r[2])})).filter(x=>x.ru && LR.sel.has(x.l) && (LR.redem||!x.red)); }
+function lrnItems(){ const D=lernData()[LR.id]; return D.it.map((r,i)=>({i,l:r[0],s:D.sec[r[1]],full:r[2],de:r[3],ru:r[4],ex:r[5],red:r[6],dis:r[7],say:r[8],mt:(D.mt&&D.mt[i])||null,fm:D.kind==="perfekt"?"":lrnFm(r[3],r[2])})).filter(x=>x.ru && /[A-Za-zÄÖÜäöüß]/.test(x.de) && LR.sel.has(x.l) && (LR.redem||!x.red)); }
 function lrnLab(n){ const D=lernData()[LR.id]; return (D&&D.lab&&D.lab[n])||("L"+n); }
 /* 📋 Bitta Lektion so'zlari ro'yxati (Lektion oldidagi tugma) → ichidan Yodlashga (2026-10-19, Otabek) */
 function lrnList(n){ LR.mode="list"; LR.fromList=n; LR.one=+n; LR.chk=false; const D=lernData()[LR.id], uz=state.lang!=="ru";
