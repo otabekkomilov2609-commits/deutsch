@@ -5602,7 +5602,9 @@ document.addEventListener("pointerdown",e=>{ if(e.target.closest&&e.target.close
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-coachok]"); if(!b) return; try{ localStorage.setItem("coach:"+b.dataset.coachok,"1"); }catch(er){} const c=b.closest(".coach"); if(c){ c.classList.add("bye"); setTimeout(()=>c.remove(),220); } if(b.dataset.coachok==="ls") document.querySelectorAll(".lrn-lg").forEach(x=>x.remove()); });
 /* 🧭 Sayt bo'ylab sayohat — Clash of Clans'dagidek: ekran qorayadi, kerakli tugma yorug' qoladi va miltillaydi (2026-10-21, Otabek) */
 const TOUR={on:false,i:0,el:null,raf:0,poll:0,lek:null,adv:false};
-function tourLek(){ const c=document.querySelector(".lek.bt .cur"); return (c&&c.closest(".lek"))||document.querySelector(".lek.bt"); }
+/* namoyish uchun eng oson mashq: A1.1 · Lektion 1 · Grammatik (Woher komm___ du?) — sayohatdan keyin oldingi bo'lim qaytariladi (2026-10-21, Otabek) */
+function tourLek(){ try{ if(TABS.a11&&(state.tab!=="a11"||state.type!=="all"||state.q)){ if(!TOUR.prev) TOUR.prev={tab:state.tab,type:state.type}; state.tab="a11"; state.type="all"; state.q=""; const q=document.getElementById("q"); if(q) q.value=""; render(); } }catch(e){}
+  const l=document.getElementById("A1-L1"); if(l) return l; const c=document.querySelector(".lek.bt .cur"); return (c&&c.closest(".lek"))||document.querySelector(".lek.bt"); }
 function tourTx(o){ return (state.lang==="ru"?o.ru:o.uz)||o.uz; }
 const TOUR_S=[ /* 2026-10-21 (Otabek: «20 ta juda ko'p — eng kuchli joylarimiz: Wortschatz, Grammatik, Sprechen») — 8 qadam */
  {sel:"[data-proggo]", tap:1, t:{uz:"🧠 <b>So‘z yodlash</b> — bosing, ko‘rsataman.",ru:"🧠 <b>Учить слова</b> — нажмите, покажу."}},
@@ -5624,8 +5626,8 @@ function tourLinkT(){ const b=document.getElementById("tour-link"); if(!b) retur
 document.addEventListener("click",e=>{ if(e.target.closest("[data-lang]")) setTimeout(tourLinkT,0); }); setTimeout(tourLinkT,0);
 function tourBox(){ let b=document.getElementById("tour"); if(!b){ b=document.createElement("div"); b.id="tour"; b.innerHTML=`<div class="tour-spot" id="tour-spot"></div><div class="tour-bub" id="tour-bub" role="dialog" aria-live="polite"></div>`; document.body.appendChild(b); } return b; }
 function tourFind(s){ try{ const e=typeof s==="function"?s():document.querySelector(s); return e&&e.getClientRects().length?e:null; }catch(e){ return null; } }
-function tourStart(){ TOUR.on=true; TOUR.i=0; TOUR.lek=null; document.documentElement.classList.add("touring"); tourBox().hidden=false; try{ actEv("tour","start"); }catch(e){} tourShow(); }
-function tourEnd(done){ setTimeout(()=>{ try{ if(ACC.cur&&!tchOk()&&!store.get("lvl")&&accEl().hidden) lvlAsk(); }catch(e){} },400); TOUR.on=false; cancelAnimationFrame(TOUR.raf); clearInterval(TOUR.poll); const b=document.getElementById("tour"); if(b) b.hidden=true; document.documentElement.classList.remove("touring"); try{ localStorage.setItem("tour","1"); actEv("tour",done?"done":"skip"); }catch(e){} tourLinkT(); }
+function tourStart(){ TOUR.on=true; TOUR.i=0; TOUR.lek=null; TOUR.prev=null; document.documentElement.classList.add("touring"); tourBox().hidden=false; try{ actEv("tour","start"); }catch(e){} tourShow(); }
+function tourEnd(done){ try{ if(TOUR.prev){ const p=TOUR.prev; TOUR.prev=null; if(p.tab!==state.tab||p.type!==state.type){ state.tab=p.tab; state.type=p.type; render(); } } }catch(e){} setTimeout(()=>{ try{ if(ACC.cur&&!tchOk()&&!store.get("lvl")&&accEl().hidden) lvlAsk(); }catch(e){} },400); TOUR.on=false; cancelAnimationFrame(TOUR.raf); clearInterval(TOUR.poll); const b=document.getElementById("tour"); if(b) b.hidden=true; document.documentElement.classList.remove("touring"); try{ localStorage.setItem("tour","1"); actEv("tour",done?"done":"skip"); }catch(e){} tourLinkT(); }
 function tourNext(){ TOUR.i++; tourShow(); }
 /* «Bosing» yoki pufakchani bosish = yoritilgan tugmani bosish (2026-10-21, Otabek: «нажмите deganda qo‘li bilan ko‘rsatib turgan narsa bosilsin») */
 function tourTap(){ const s=TOUR.cur; if(!s||!s.tap) return; const el=tourFind(s.sel); if(!el) return; const t=el.matches("button,a,input,[data-open],[data-l],[role=button]")?el:(el.querySelector("button,a,[data-open],[role=button]")||el); t.click(); }
