@@ -767,3 +767,5 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Chat qadamida «🎯 Siz aytmoqchisiz: «tarjima»» o'rniga kitobdagi Redemittel sarlavhasi nemischa chiqadi: **🎯 Hilfe anbieten** / *Hilfe ablehnen* / *Gäste begrüßen* … (Otabek: «ha nemischa qilaver»).
 - Noto'g'ri variantlar boshqa funksiyadan olinadi; universal javoblar (Ich weiß nicht / Wie bitte? / Keine Ahnung / Noch einmal) distraktor bo'lmaydi → bitta gapga ikkita to'g'ri javob chiqmaydi.
 - Mashq butunlay nemischa; o'zbekcha tarjima faqat «💡 Ma'nosi» bosilganda.
+
+- Wortschatz Tanishuv: diktafon paneli ekranning eng pastida (fixed), kontent qanchalik qisqa bo‘lmasin (2026-10-22, Otabek: «diktafon pasda bo‘lsin»).
