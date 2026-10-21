@@ -3559,7 +3559,7 @@ function spVm(id,txt,opt){ opt=opt||{}; const uz=spUz();
 function spSrc(id,it){ if(id==="q") return it.aq?AUD_BASE+it.aq:null; if(id==="a") return it.aa?AUD_BASE+it.aa:null; if(id==="me") return SPR.url; return null; }
 function spTxt(id,it){ return id==="q"?spBare(it.q):id==="a"?String(it.a):""; }
 /* «🔊 javob» chipi — to'g'ri javob yangrayotganini ko'rsatadi */
-function spChip(on){ const uz=spUz(); document.querySelectorAll(".sp2-ach").forEach(c=>{ c.classList.toggle("on",!!on); c.textContent=on?(uz?"🔊 javob yangrayapti":"🔊 звучит ответ"):(uz?"🔊 javob":"🔊 ответ"); }); }
+function spChip(on){ const uz=spUz(); document.querySelectorAll(".sp2-ach:not(.sp2-cmp)").forEach(c=>{ c.classList.toggle("on",!!on); c.textContent=on?(uz?"🔊 javob yangrayapti":"🔊 звучит ответ"):(uz?"🔊 javob":"🔊 ответ"); }); }
 function spStop(){ try{ if(SPR.au){ SPR.au.pause(); } }catch(e){} cancelAnimationFrame(SPR.raf); if(SPR.cur){ const b=document.querySelector(`[data-x="vmplay"][data-vm="${SPR.cur}"]`); if(b) b.textContent="▶"; spFill(SPR.cur,0); if(SPR.cur==="a") spChip(false); } SPR.au=null; SPR.cur=null; try{ if(EX.spAu){ EX.spAu.pause(); EX.spAu=null; } }catch(e){} }
 function spFill(id,r){ const bs=document.getElementById("spb-"+id); if(!bs) return; const k=bs.children.length; [...bs.children].forEach((x,i)=>x.classList.toggle("on",r>0&&i/k<r)); }
 function vmPlay(id){ const it=exCur(); if(!it||it.t!=="say") return; const was=SPR.cur===id&&SPR.au&&!SPR.au.paused; spStop(); if(was) return;
