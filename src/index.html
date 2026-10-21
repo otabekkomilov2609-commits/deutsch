@@ -3651,7 +3651,9 @@ function spLcsPairs(A,B){ const L=Array.from({length:A.length+1},()=>new Array(B
 function spWordsHTML(T,cls){ return T.map(t=>{ const c=t.ix.map(x=>cls[x]).find(Boolean)||"n"; return `<span class="sp2-w ${c}">${esc(t.w)}</span>`; }).join(" "); }
 function spJudge(it,heard){ const uz=spUz(), mode=spMode(it); if(!heard) return null;
   const HT=spToks(heard), H=HT.flatMap(t=>t.n), ansTxt=String(it.a).replace(/\s*\([^)]*\)\s*/g," ").trim(), A=spNorm(ansTxt), AT=spToks(ansTxt), cls={};
-  if(mode==="n") return {mode};
+  if(mode==="n"){ /* takrorlash: aytilgani namunaga mos kelishi kerak — so'zlarning ≥85% */ const P=spLcsPairs(A,H); A.forEach((w,i)=>{ if(P.has(i)) cls[P.get(i)]="g"; }); H.forEach((h,j)=>{ if(cls[j]==null) cls[j]="r"; });
+    const cov=A.length?P.size/A.length:0; if(cov>=.85) return {mode,v:"ok",chip:uz?"✅ to‘g‘ri":"✅ верно",html:spWordsHTML(HT,cls)};
+    return {mode,v:"no",chip:uz?"❌ boshqacha aytildi":"❌ сказано иначе",note:["no",(uz?"Namuna: ":"Образец: ")+`<b>${esc(ansTxt)}</b>`],html:spWordsHTML(HT,cls)}; }
   if(mode==="g"){ /* nishon so'zlar — javobda bor, savolda (va qavsda) yo'q; aynan shu shakl va shu tartibda */
     const known=new Set(spNorm(spBare(it.q)+" "+spCue(it.q).join(" "))); let T=A.map((w,i)=>i).filter(i=>!known.has(A[i])); if(!T.length) T=A.map((w,i)=>i);
     const P=spLcsPairs(A,H), bad=T.filter(i=>!P.has(i)); T.forEach(i=>{ if(P.has(i)) cls[P.get(i)]="g t"; });
@@ -3716,7 +3718,7 @@ function spNorm(s){ return String(s).toLowerCase().replace(/[’']/g,"").replace
 function spDiff(ref,hyp){ const A=spNorm(ref), B=spNorm(hyp), P=spLcsPairs(A,B); return {hit:new Set(P.keys()),n:A.length}; }
 function spShowText(it,keep){ const uz=spUz(), tx=document.getElementById("sp2-tx"); if(!tx) return; if(!tx.hidden&&!keep){ tx.hidden=true; return; } tx.hidden=false;
   const hd=`<span class="sp2-txh">→A · ${uz?"siz aytdingiz":"вы сказали"}</span>`, J=SPR.J, az=SPR.az;
-  if(J&&J.mode!=="n"&&J.html){ tx.innerHTML=`${hd}<div class="sp2-ws" lang="de">${J.html}</div>${J.note?`<div class="sp2-note ${J.note[0]}">${J.note[1]}</div>`:""}`; return; }
+  if(J&&J.html){ tx.innerHTML=`${hd}<div class="sp2-ws" lang="de">${J.html}</div>${J.note?`<div class="sp2-note ${J.note[0]}">${J.note[1]}</div>`:""}`; return; }
   if(az&&az.W&&az.W.length){ const words=az.W.map(w=>{ const a=w.PronunciationAssessment||{}, et=a.ErrorType||"None", v=Math.round(a.AccuracyScore||0); return `<span class="az-w ${et==="Omission"?"om":et==="Insertion"?"ins":azCol(v)}" title="${v}">${esc(w.Word)}</span>`; }).join(" ");
     tx.innerHTML=`${hd}<div class="ex-az-ws" lang="de">${words}</div><div class="sp2-sc">🟢 ${uz?"yaxshi":"хорошо"} · 🟡 ${uz?"o‘rtacha":"средне"} · 🔴 ${uz?"qayta mashq qiling":"потренируйтесь"}${az.W.some(w=>(w.PronunciationAssessment||{}).ErrorType==="Omission")?` · <s>${uz?"aytilmadi":"пропущено"}</s>`:""}</div>`; return; }
   const heard=(az&&az.txt)||SPR.txt;
@@ -3805,8 +3807,8 @@ async function spAzOnce(SDK,T,wav,ref,miscue){ const cfg=SDK.SpeechConfig.fromAu
   return {conf:nb.Confidence!=null?+nb.Confidence:null,txt:res.text||nb.Display||"",W:nb.Words||[],acc:n(p.accuracyScore||pj.AccuracyScore),flu:n(p.fluencyScore||pj.FluencyScore),com:n(p.completenessScore||pj.CompletenessScore),pron:n(p.pronunciationScore||pj.PronScore)}; }
 /* 🎯 = faqat talaffuz. Nachsprechen: javob matni bilan. Qolganlari: avval matnsiz (unscripted); de-DE'da ball chiqmasa — o'quvchi aytgan matn bilan ikkinchi marta (2026-10-22: «🎯 0» xatosi) */
 async function spAzRun(it,blob){ const mode=spMode(it); const [SDK,T,wav]=await Promise.all([azSdk(),azToken(),spWav(blob)]);
-  if(mode==="n"){ const r=await spAzOnce(SDK,T,wav,String(it.a).replace(/\s*\([^)]*\)\s*/g," ").trim(),true); if(!r) return null;
-    const sc=r.pron||(r.acc?Math.round(r.acc*.5+r.flu*.25+r.com*.25):null); return {mode,conf:r.conf,sc:r.acc||r.pron?sc:null,acc:r.acc,com:r.com,flu:r.flu,W:r.W,txt:r.txt}; }
+  if(mode==="n"){ /* takrorlash: matnsiz so'rov ham — nima eshitilganini bilish uchun (2026-10-22) */ const ref=String(it.a).replace(/\s*\([^)]*\)\s*/g," ").trim(); const [u,r]=await Promise.all([spAzOnce(SDK,T,wav,"",false).catch(()=>null),spAzOnce(SDK,T,wav,ref,true)]); if(!r&&!u) return null; const R=r||u;
+    const sc=R.pron||(R.acc?Math.round(R.acc*.5+R.flu*.25+R.com*.25):null); return {mode,conf:u?u.conf:R.conf,sc:R.acc||R.pron?sc:null,acc:R.acc,com:R.com,flu:R.flu,W:R.W,txt:(u&&u.txt)||R.txt}; }
   let r=await spAzOnce(SDK,T,wav,"",false); if(!r) return null; const txt=r.txt, conf=r.conf;
   if(!r.acc&&txt){ const r2=await spAzOnce(SDK,T,wav,txt,false); if(r2&&r2.acc) r=r2; }
   return {mode,conf,sc:r.acc?Math.round(r.acc*.6+r.flu*.4):null,acc:r.acc,com:r.com,flu:r.flu,W:r.W,txt}; }
@@ -4274,6 +4276,11 @@ const WP_TIPS=[[/^(y|yː|ʏ|Y|yy|uy|ue)$/,"ü",{uz:"<b>ü</b> — lablarni «u»
   [/^(aɪ|aI|ai)$/,"ei",{uz:"<b>ei</b> — «ay» deb aytiladi.",ru:"<b>ei</b> — читается как «ай»."}],
   [/^(ɔʏ|OY|oy)$/,"eu",{uz:"<b>eu / äu</b> — «oy» deb aytiladi.",ru:"<b>eu / äu</b> — читается как «ой»."}]];
 function wpOn(){ return spRecOK(); }
+function wpPlay(btn){ if(!WP.url) return; if(WP.au&&!WP.au.paused){ WP.au.pause(); WP.au=null; cancelAnimationFrame(WP.raf); if(btn) btn.textContent="▶"; spFill("wp",0); return; }
+  const a=new Audio(WP.url); WP.au=a; if(btn) btn.textContent="⏸"; const vt=document.getElementById("spt-wp");
+  const tick=()=>{ if(WP.au!==a) return; const d=a.duration&&isFinite(a.duration)?a.duration:WP.dur; spFill("wp",d?a.currentTime/d:0); if(vt) vt.textContent=spT(a.currentTime); if(!a.paused) WP.raf=requestAnimationFrame(tick); };
+  a.onplay=()=>{ WP.raf=requestAnimationFrame(tick); }; a.onended=()=>{ if(WP.au!==a) return; if(btn) btn.textContent="▶"; spFill("wp",0); if(vt) vt.textContent=spT(WP.dur); WP.au=null; };
+  a.play().catch(()=>{ if(btn) btn.textContent="▶"; WP.au=null; }); }
 /* harf-harf solishtirish: eshitilganida noto'g'ri harf qizil, namunada o'sha joy yashil */
 function wpDiff(h,r){ const A=[...String(h)], B=[...String(r)], la=A.length, lb=B.length, L=Array.from({length:la+1},()=>new Array(lb+1).fill(0));
   for(let i=la-1;i>=0;i--) for(let j=lb-1;j>=0;j--) L[i][j]=A[i].toLowerCase()===B[j].toLowerCase()?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
@@ -4307,7 +4314,7 @@ function wpDone(x){ const uz=state.lang!=="ru"; WP.rec=null; if(wpCur()!==x) ret
   try{ if(WP.url) URL.revokeObjectURL(WP.url); }catch(e){} const blob=new Blob(WP.chunks,{type:(WP.chunks[0]&&WP.chunks[0].type)||"audio/webm"}); WP.url=URL.createObjectURL(blob);
   const res=document.getElementById("wp-res"); if(!res) return; const tok=++WP.tok, az=azOn()&&AZ.ok;
   const mx=Math.max(.05,...WP.lv), lv=WP.lv.map(v=>Math.max(.12,v/mx));
-  res.innerHTML=`<div class="sp2-b me mine wp-bub"><div class="sp2-vm mine"><button type="button" class="sp2-vp" data-l="wpme" aria-label="${uz?"Ovozimni eshitish":"Мой голос"}">▶</button><div class="sp2-vw"><span class="sp2-bars">${spBars(1,22,lv)}</span><span class="sp2-vt">${spT(WP.dur)}</span></div>${az?`<button type="button" class="sp2-tt" data-l="wptt" aria-label="→A">→A</button>`:""}</div></div><div class="wp-row"><span class="wp-me">🎙 ${uz?"Siz":"Вы"}</span>${az?`<span class="sp2-wt">⏳</span>`:""}<button type="button" class="sp2-ach sp2-cmp" data-l="wpcmp">${uz?"🔁 Solishtirish":"🔁 Сравнить"}</button></div><div class="wp-heard" id="wp-heard" hidden></div><div class="wp-ph" id="wp-ph"></div>${cmpStHTML(uz)}<div class="sp2-note tip wp-tip" id="wp-tip" hidden></div>`;
+  res.innerHTML=`<div class="sp2-b me mine wp-bub"><div class="sp2-vm mine"><button type="button" class="sp2-vp" data-l="wpme" aria-label="${uz?"Ovozimni eshitish":"Мой голос"}">▶</button><div class="sp2-vw"><span class="sp2-bars" id="spb-wp">${spBars(1,22,lv)}</span><span class="sp2-vt" id="spt-wp">${spT(WP.dur)}</span></div>${az?`<button type="button" class="sp2-tt" data-l="wptt" aria-label="→A">→A</button>`:""}</div></div><div class="wp-row"><span class="wp-me">🎙 ${uz?"Siz":"Вы"}</span>${az?`<span class="sp2-wt">⏳</span>`:""}<button type="button" class="sp2-ach sp2-cmp" data-l="wpcmp">${uz?"🔁 Solishtirish":"🔁 Сравнить"}</button></div><div class="wp-heard" id="wp-heard" hidden></div><div class="wp-ph" id="wp-ph"></div>${cmpStHTML(uz)}<div class="sp2-note tip wp-tip" id="wp-tip" hidden></div>`;
   wpLbl(uz?"Yana aytmoqchi bo‘lsangiz — bosib turing…":"Ещё раз — нажмите и держите…");
   const q=document.querySelector(".lrn-intro .lrn-q"); if(q&&q.dataset.raw) q.textContent=q.dataset.raw;
   if(az) wpAssess(x,blob,tok); }
@@ -4674,7 +4681,7 @@ document.addEventListener("click",e=>{
   else if(a==="dunno"){ if(LR.answered) return; const i=document.getElementById("lrn-in"); if(i) i.disabled=true; lrnMark(false); lrnFeedback(false, LR.cur, {yours:i?i.value:""}); }
   else if(a==="override"){ const x=LR.cur; LR.round.pop(); LR.qN; LR.okN++; LR.st[x.i]=2; lrnSave(); LR.qi++; lrnAsk(); }
   else if(a==="intronext"){ LR.ii++; lrnIntro(); }
-  else if(a==="wpme"){ if(WP.url){ try{ const au=new Audio(WP.url); au.play().catch(()=>{}); }catch(e){} } }
+  else if(a==="wpme"){ wpPlay(b); }
   else if(a==="wpnam"){ const x=wpCur(); if(x) lrnSay(x.say||x.de); }
   else if(a==="wpcmp"){ const x=wpCur(); if(!WP.url||!x) return; const st=document.querySelector("#wp-res .cmp-st"); cmpPlay(WP.url,done=>{ lrnSay(x.say||x.de); setTimeout(done,Math.min(4000,800+String(x.de).length*90)); },st); }
   else if(a==="wptt"){ const h=document.getElementById("wp-heard"); if(!h) return; if(!h.hidden){ h.hidden=true; return; } h.hidden=false; const uz=state.lang!=="ru"; h.innerHTML=`<small>→A · ${uz?"siz aytdingiz":"вы сказали"}</small><span lang="de">${wpDiff(WP.heard||"",WP.ref||"")[0]}</span><em>${uz?"namuna":"образец"}: <span lang="de">${wpDiff(WP.heard||"",WP.ref||"")[1]}</span></em>`; }
