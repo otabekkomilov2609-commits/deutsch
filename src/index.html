@@ -5947,18 +5947,25 @@ function rankOpen(){
   el.innerHTML=`<div class="lrn-bar"><button class="btn" data-rk="close" aria-label="✕">✕</button><div class="lrn-tt"><b>🏆 ${uz?"Umumiy reyting":"Общий рейтинг"}</b><small>${uz?"o‘rganilgan so‘zlar bo‘yicha":"по выученным словам"}</small></div></div>
     <div class="rk-wrap"><div class="rk-head"><h2>${uz?"Kim ko‘proq so‘z biladi?":"Кто знает больше слов?"}</h2><p>${uz?"Saytda ro‘yxatdan o‘tgan o‘quvchilar. Yodlash’da so‘z o‘rgansangiz — o‘rningiz ko‘tariladi.":"Ученики, зарегистрированные на сайте. Учите слова в «Учить» — и поднимайтесь выше."}</p></div>
     <div id="rk-me"></div><ol class="rk-list" id="rk-list"><li class="rk-empty">${uz?"Yuklanmoqda…":"Загрузка…"}</li></ol><div class="rk-net" id="rk-net"></div></div>`;
-  rankSync(true);
-  chLib(()=>{ if(!window.mqtt||!RK.open){ rkNet("bad"); return; } let okN=0, done=0;
+  rankSync(true); rankCloud();
+  chLib(()=>{ if(!window.mqtt||!RK.open){ if(!RK.fs) rkNet("bad"); return; } let okN=0, done=0;
     CH_BROKERS.forEach(u=>{ try{ const cli=window.mqtt.connect(u,{clientId:"rkv_"+Math.random().toString(36).slice(2,9),clean:true,connectTimeout:8000,reconnectPeriod:4000});
       RK.cli.push(cli);
       cli.on("connect",()=>{ okN++; rkNet("ok"); cli.subscribe(RK_NS+"+",{qos:1}); setTimeout(rankDraw,1500); });
       cli.on("message",(tp,buf)=>{ const id=tp.split("/").pop(); if(!buf.length){ delete RK.list[id]; rankDrawSoon(); return; } try{ const d=JSON.parse(buf.toString());
         if(d && typeof d.n==="number" && d.n>=0 && d.n<5000 && typeof d.nm==="string"){ const o=RK.list[id]; if(!o||(d.t||0)>=(o.t||0)) RK.list[id]={nm:d.nm.slice(0,30), n:d.n|0, t:d.t||0}; } }catch(e){} rankDrawSoon(); });
       cli.on("error",()=>{});
-      setTimeout(()=>{ done++; if(!okN && done>=1 && RK.open) rkNet("bad"); },9000);
+      setTimeout(()=>{ done++; if(!okN && done>=1 && RK.open && !RK.fs) rkNet("bad"); },9000);
     }catch(e){} }); });
 }
-function rkNet(s){ RK.net=s; const e=document.getElementById("rk-net"), uz=state.lang!=="ru"; if(e) e.textContent= s==="ok"?(uz?"🟢 Jonli — natijalar o‘zi yangilanadi":"🟢 Онлайн — обновляется само"): s==="bad"?(uz?"🔴 Internetga ulanib bo‘lmadi. Keyinroq urinib ko‘ring.":"🔴 Нет соединения. Попробуйте позже."):(uz?"⏳ Ulanmoqda…":"⏳ Подключение…");
+/* Reyting bazadan (Firestore "s" hujjatlari — har o'quvchi o'z natijasini yozadi, yo'qolmaydi) */
+async function rankCloud(){ if(!CLOUD_ON) return; try{ let tok="", n=0, got=0;
+  do{ const r=await fetch(FS_BASE+"s?pageSize=300&mask.fieldPaths=rk&mask.fieldPaths=nm&mask.fieldPaths=n&mask.fieldPaths=lv&mask.fieldPaths=t"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok) break; const j=await r.json();
+    for(const doc of (j.documents||[])){ const F=doc.fields||{}; if(!F.nm||!F.n) continue; const id=(F.rk&&F.rk.stringValue)||("c:"+doc.name.split("/").pop()), nm=String(F.nm.stringValue||"").slice(0,30), nn=+(F.n.integerValue||0), t=+((F.t||{}).integerValue||0);
+      if(!nm||!(nn>=0&&nn<5000)) continue; const o=RK.list[id]; if(!o||t>=(o.t||0)) RK.list[id]={nm,n:nn|0,t,fs:1}; got++; }
+    tok=j.nextPageToken||""; }while(tok&&++n<30);
+  RK.fs=got; if(RK.open){ rkNet(RK.net==="ok"?"ok":"fs"); rankDrawSoon(); } }catch(e){} }
+function rkNet(s){ RK.net=s; const e=document.getElementById("rk-net"), uz=state.lang!=="ru"; if(e) e.textContent= s==="ok"?(uz?"🟢 Jonli — natijalar o‘zi yangilanadi":"🟢 Онлайн — обновляется само"): s==="fs"?(uz?"☁️ Bazadan yuklandi":"☁️ Загружено из базы"): s==="bad"?(uz?"🔴 Internetga ulanib bo‘lmadi. Keyinroq urinib ko‘ring.":"🔴 Нет соединения. Попробуйте позже."):(uz?"⏳ Ulanmoqda…":"⏳ Подключение…");
   if(s==="bad"){ const l=document.getElementById("rk-list"); if(l&&!Object.keys(RK.list).length) l.innerHTML=`<li class="rk-empty">—</li>`; } }
 let rkT=null; function rankDrawSoon(){ clearTimeout(rkT); rkT=setTimeout(rankDraw,250); }
 function rankDraw(){
@@ -6579,7 +6586,8 @@ async function cloudPush(ka){ const u=cloudUser(); if(!CLOUD_ON||!u||!u.c||CLOUD
     if(h!==cloudG("h")){ const t=Date.now(); await fsPut("p/"+u.c,{d:fsS(d),t:fsI(t)},ka&&d.length<60000); cloudS("h",h); cloudS("t",t); }
     if(!cloudG("n")){ await fsPut("n/"+await cloudNameId(ACC.cur),{t:fsI(Date.now())}).catch(()=>{}); cloudS("n",1); }
     const sm=stCollect(); sm.ak=ACC.cur; sm.c=u.c; /* c — tiklash kaliti, faqat ustoz ocha oladi */ const sh=await cloudSha(JSON.stringify([sm.nm,sm.w,sm.k,sm.g,sm.y,sm.c]));
-    const ah=sm.a?JSON.stringify((sm.a.dd||[]).slice(-1)):""; if(sh!==cloudG("sh")||Date.now()-(+cloudG("st")||0)>864e5||(ah!==cloudG("ah")&&Date.now()-(+cloudG("st")||0)>180000)){ cloudS("ah",ah); await fsPut("s/"+await cloudSumId(u.c),{e:fsS(await stEnc(sm)),t:fsI(Date.now())}); cloudS("sh",sh); cloudS("st",Date.now()); }
+    const ah=sm.a?JSON.stringify((sm.a.dd||[]).slice(-1)):""; if(sh!==cloudG("sh")||cloudG("rkv")!=="2"||Date.now()-(+cloudG("st")||0)>864e5||(ah!==cloudG("ah")&&Date.now()-(+cloudG("st")||0)>180000)){ cloudS("ah",ah); cloudS("rkv","2"); /* ochiq reyting maydonlari ham shu hujjatda: ism qisqa, so'z soni, daraja, 📲 — reyting MQTT'ga emas, bazaga tayanadi (2026-10-22, Otabek: «Azizbek reytingda yo'q») */
+      await fsPut("s/"+await cloudSumId(u.c),{e:fsS(await stEnc(sm)),t:fsI(Date.now()),rk:fsS(rkId()||""),nm:fsS(rkName()),n:fsI(sm.w|0),lv:fsS(progLv(sm.w|0)),app:fsI(sm.a&&sm.a.app?1:0)}); cloudS("sh",sh); cloudS("st",Date.now()); }
   }catch(e){} CLOUD_BUSY=false; }
 async function cloudPull(){ const u=cloudUser(); if(!CLOUD_ON||!u||!u.c) return;
   try{ const f=await fsGet("p/"+u.c);
