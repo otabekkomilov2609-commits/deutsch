@@ -769,3 +769,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Mashq butunlay nemischa; o'zbekcha tarjima faqat «💡 Ma'nosi» bosilganda.
 
 - Wortschatz Tanishuv: diktafon paneli ekranning eng pastida (fixed), kontent qanchalik qisqa bo‘lmasin (2026-10-22, Otabek: «diktafon pasda bo‘lsin»).
+- Muloqot 💡 Ma'nosi (2026-10-22): har kartada (chat · juftlash · savat · bo'shliq) o'ng yuqorida kichik «💡 Ma'nosi» tugmasi; bosilmasa hamma narsa nemischa, bosilsa kulrang tarjima ochiladi — faqat shu karta uchun. Juftlashda faqat savollar (chap ustun) tarjima qilinadi — javoblar nemischa qoladi. Savat ostidagi doimiy o'zbekcha yashirildi.
