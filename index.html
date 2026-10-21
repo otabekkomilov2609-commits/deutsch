@@ -1182,6 +1182,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .snd-img{width:100%;max-height:46vh;object-fit:contain;border-radius:12px;background:var(--bg);-webkit-touch-callout:default;user-select:auto}
 .snd-send{width:100%;padding:12px;font-size:16px;cursor:pointer}.snd-send[hidden]{display:none}.snd-st{font-size:14px;text-align:center}.snd-st:empty{display:none}.snd-st.ok{color:var(--green);font-weight:700}.snd-st.err{color:#C62828}
 .snd-btns{display:flex;gap:8px}.wl-lg{display:flex;gap:4px}.wl-lg button{border:1.5px solid var(--line);background:var(--surface);color:var(--muted);border-radius:99px;padding:4px 10px;font:inherit;font-size:13px;font-weight:800;cursor:pointer}.wl-lg button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}.wl-l{display:flex;flex-direction:column;gap:8px;margin:4px 0 10px;font-size:14.5px;line-height:1.4}.wl-r{display:flex;gap:10px;align-items:flex-start}.wl-i{flex:none;min-width:34px;text-align:center;font-size:18px}.wl-r b{color:var(--blue)}
+.pt-box{margin:14px 0;border:2px solid #7A4FB3;border-radius:16px;background:linear-gradient(120deg,rgba(122,79,179,.12),transparent 70%),var(--surface);overflow:hidden}.pt-box>summary{display:flex;align-items:center;gap:12px;padding:12px 14px;cursor:pointer;list-style:none}.pt-box>summary::-webkit-details-marker{display:none}.pt-box>summary::after{content:"▾";margin-left:auto;color:#7A4FB3;font-size:18px;transition:transform .2s}.pt-box[open]>summary::after{transform:rotate(180deg)}.pt-ic{font-size:26px}.pt-box summary b{display:block;color:#5B3591;font-size:17px}.pt-box summary small{color:var(--muted);font-size:13px}.pt-box .sxg{padding:0 12px 12px}
 .lvl-g{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:6px 0 10px}.lvl-b{display:flex;flex-direction:column;align-items:center;gap:2px;border:2px solid var(--blue-soft);background:var(--surface);color:var(--blue);border-radius:14px;padding:12px 8px;font:inherit;cursor:pointer}.lvl-b b{font-size:22px;font-weight:900}.lvl-b small{font-size:12px;color:var(--muted);font-weight:600}.lvl-b:hover,.lvl-b:focus-visible{border-color:var(--blue);background:var(--blue-soft)}.snd-btns .btn{flex:1;min-width:0;white-space:normal;padding:11px 6px;font-size:15px;cursor:pointer}.snd-btns .btn[hidden]{display:none}
 .snd-box{max-height:calc(100vh - 32px);overflow:auto}
 .snd-ok{text-align:center;padding:6px 0 2px}.snd-ok div{font-size:46px}.snd-ok p{margin:6px 0 0;font-size:16px;font-weight:700}
@@ -1487,9 +1488,9 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 
 .reg-cta{border:2px solid var(--green);background:var(--green-soft)}.reg-save p{margin:4px 0 8px;line-height:1.45}.coach{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;background:#FFF4D1;color:#3D2E00;border:2px solid #F2C94C;border-radius:14px;padding:10px 12px;margin:0 0 12px;font-size:15px;line-height:1.45;box-shadow:0 3px 10px rgba(122,86,0,.12);animation:appIn .35s ease-out;transition:opacity .2s,transform .2s}.coach.bye{opacity:0;transform:translateY(-6px)}.coach-t{flex:1 1 220px}.coach-t b{color:#7A4F00}.coach-ok{flex:none;margin-left:auto;border:0;border-radius:999px;background:#7A5600;color:#fff;font:inherit;font-size:14px;font-weight:800;padding:7px 14px;cursor:pointer}.reg-cta .reg-h{font-size:18px;font-weight:800;color:var(--green)}.reg-cta ul{margin:6px 0;padding-left:4px;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14.5px}.reg-cta .reg-free{font-weight:800;color:var(--orange);font-size:16px}.reg-cta .reg-go{align-self:stretch;font-size:17px;padding:12px}
 /* 👎 feedback + 🛠 admin */
-.fb-btn{position:fixed;left:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:2147483000;width:48px;height:48px;border-radius:50%;border:2px solid #F2B8B8;background:var(--surface);box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}
+.fb-btn{position:fixed;left:0;top:42%;z-index:2147483000;width:40px;height:46px;border-radius:0 14px 14px 0;border:2px solid #F2B8B8;border-left:0;background:var(--surface);box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}
 .lrn-body,#v-body,main{padding-bottom:max(70px,var(--pb,0px))}
-.fb-btn:hover{transform:scale(1.08)}.fb-btn.wait{animation:fbPulse .8s infinite}
+.fb-btn:hover{transform:translateX(3px)} /* 👎 chap chetda, ekran o'rtasidan biroz tepada — doim ko'rinadi (2026-10-21, Otabek) */.fb-btn.wait{animation:fbPulse .8s infinite}
 @keyframes fbPulse{50%{opacity:.4}}
 .fb-ov{position:fixed;inset:0;z-index:2147483001;background:rgba(15,23,42,.45);display:grid;place-items:center;padding:16px}.fb-ov[hidden]{display:none}
 .fb-box{width:min(460px,100%);max-height:92vh;overflow:auto;background:var(--surface);border-radius:20px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.25);display:flex;flex-direction:column;gap:10px}
@@ -2560,7 +2561,8 @@ function hwEntry(h){
     ${bar}
   </div>`;
 }
-function hwBlock(tab){
+const PT_RE=/Goethe|telc|Modellsatz|Uebungssatz/i;
+function hwBlock(tab){ if(!tchOk()) return ""; /* 2026-10-21 (Otabek): sayt endi hamma uchun — «Topshiriqlar» faqat ustozga ko'rinadi */
   const mine = HW.filter(h=>!h.tab || h.tab===tab);
   const active = mine.filter(h=>!h.due || dDiff(h.due)>=0).sort((a,b)=>(a.due||"9").localeCompare(b.due||"9"));
   const old = mine.filter(h=>h.due && dDiff(h.due)<0).sort((a,b)=>b.due.localeCompare(a.due));
@@ -2668,9 +2670,13 @@ function render(){
     if(BT){ const rw=MATS.filter(m=>m.tab===tab&&m.key==="r"&&lernHas(m.id)), ru=state.lang==="ru";
       if(rw.length&&(state.type==="all"||state.type==="w")) html += `<div class="review rv-top"><h4>${t("whole")} · L${T0.lo}–${T0.hi}</h4><div class="sxg">${rw.map(m=>bAct("🧠",m.title,ru?"Учить слова":"So‘zlarni yodlash","",`data-lern="${m.id}"`)).join("")}</div></div>`; }
     else if(rv.length) html += `<div class="review rv-top"><h4>${t("whole")} · L${T0.lo}–${T0.hi}</h4><div class="mats">${rv.map(matCard).join("")}</div></div>`;
+    /* 🎓 Prüfungstraining — imtihon mashqlari (Goethe/telc Modellsatz) Modul takroridan ajratilib, alohida bo'limda (2026-10-21, Otabek) */
+    if(BT&&state.type==="all"){ const pt=MATS.filter(m=>m.lvl===T0.lvl&&PT_RE.test(m.id)&&bOnline(m)), ru=state.lang==="ru";
+      if(pt.length){ let open=false; try{ open=localStorage.getItem("pt:open")==="1"; }catch(e){}
+        html += `<details class="pt-box"${open?" open":""}><summary><span class="pt-ic">🎓</span><span><b>Prüfungstraining · Goethe ${T0.lvl}</b><small>${ru?`Тренировка экзамена: ${pt.length} онлайн-тестов (Hören, Lesen)`:`Imtihonga tayyorgarlik: ${pt.length} ta onlayn test (Hören, Lesen)`}</small></span></summary><div class="sxg">${pt.map(bMatAct).join("")}</div></details>`; } }
     const modHtml = (md, onlyN, asc) => {
       const ls = LS.filter(L=>Math.ceil(L[0]/3)===md);
-      const rev = BT? (state.type==="all"||state.type==="g"? MATS.filter(m=>m.tab===tab&&m.key==="m"+md&&bOnline(m)) : []) : visibleMats(tab,"m"+md);
+      const rev = BT? (state.type==="all"||state.type==="g"? MATS.filter(m=>m.tab===tab&&m.key==="m"+md&&bOnline(m)&&!PT_RE.test(m.id)) : []) : visibleMats(tab,"m"+md);
       const cards = ls.filter(L=>onlyN(L[0]) && (state.type==="all"||visibleMats(tab,L[0]).length));
       if(!asc) cards.reverse();
       const showRev = rev.length && onlyN(ls[2][0]);
@@ -5056,6 +5062,7 @@ function welcomeShow(){ const f=document.getElementById("acc-f"), ru=state.lang=
     <button type="button" class="btn primary" data-wl="ok" style="width:100%;margin-top:6px">${ru?"Начнём! →":"Boshladik! →"}</button>`;
   accEl().hidden=false; document.body.style.overflow="hidden"; }
 document.addEventListener("click",e=>{ const lg=e.target.closest("[data-wllang]"); if(lg){ const b=document.getElementById("lang-"+lg.dataset.wllang); if(b) b.click(); setTimeout(welcomeShow,0); return; } });
+document.addEventListener("toggle",e=>{ const d=e.target; if(d&&d.classList&&d.classList.contains("pt-box")) try{ localStorage.setItem("pt:open",d.open?"1":"0"); }catch(er){} },true);
 document.addEventListener("click",e=>{ if(!e.target.closest("[data-wl]")) return; try{ localStorage.setItem("welcome","1"); }catch(er){} accEl().hidden=true; document.body.style.overflow=""; if(ACC.cur&&!tchOk()&&!store.get("lvl")) setTimeout(lvlAsk,200); });
 (function(){ let seen=true; try{ seen=!!localStorage.getItem("welcome"); }catch(e){} const q=new URLSearchParams(location.search); if(seen||IN_ARTIFACT||tchOk()||["ch","lt","kg","kgd","du"].some(k=>q.get(k))) return; setTimeout(()=>{ if(accEl().hidden) welcomeShow(); },600); })();
 if(ACC.cur && !tchOk() && !store.get("lvl") && !IN_ARTIFACT) setTimeout(()=>{ if(accEl().hidden) lvlAsk(); },900);
