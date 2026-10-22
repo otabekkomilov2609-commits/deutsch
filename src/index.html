@@ -6215,7 +6215,7 @@ function duPub(){ if(!DU.mq||!DU.joined) return; DU.mq.pub(DU_NS+DU.id+"/p/"+DU.
 function duOpen(code,creator){
   let c=null; try{ c=JSON.parse(chB64d(code)); }catch(e){}
   const el=duEl(); el.hidden=false; document.body.style.overflow="hidden";
-  if(!c||!(c.x?exData()[c.x]:lernData()[c.l])||chQuestions(c).length===0){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-du="close">✕</button><div class="lrn-tt"><b>${esc(dt("t"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(dt("bad"))}</p></div></div>`; return; }
+  if(!c||!(c.xs?c.xs.length:c.x?exData()[c.x]:lernData()[c.l])||chQuestions(c).length===0){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-du="close">✕</button><div class="lrn-tt"><b>${esc(dt("t"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(dt("bad"))}</p></div></div>`; return; }
   let me=store.get("chme"); if(!me){ me=Math.random().toString(36).slice(2,10); store.set("chme",me); }
   Object.assign(DU,{c,code,id:chHash("du:"+code),me,P:{},ctl:{},joined:false,name:ACC.name||store.get("chname")||"",j:0,r:1,rd:false,s:0,lt:0,st:"lobby",phase:"lobby",h:{},creator:!!creator});
   if(DU.mq) DU.mq.end();
@@ -6829,15 +6829,24 @@ function blzFile(m){ if(!window.BLITZ||!m||!m.file) return m&&m.file; const n=m.
 function blzHide(m){ return !!(window.BLITZ&&m&&m.file&&BLZ_SKIP.has(m.file.split("/").pop())); }
 if(window.BLITZ) setTimeout(()=>{ try{ tpOpen(); }catch(e){} },0); /* Blitz: sayt = ustoz paneli */
 /* ⚡ Challenge ustoz panelidan (Blitz uchun) — daraja + Lektionlar → link (2026-10-22, Otabek) */
-function tpCh(){ const b=document.getElementById("tp-body"); if(!b) return; TP.chLv=TP.chLv||"A2"; TP.chSel=TP.chSel||new Set();
-  const half=TP.chH||1, ls=[...Array(12)].map((_,i)=>i+1+(half===2?12:0));
-  b.innerHTML=`<div class="lrn-card"><h3>⚡ Challenge</h3><p class="ch-net">Daraja va Lektionlarni tanlang → link o‘quvchilarga yuboriladi: 1 daqiqada kim ko‘p so‘z topadi.</p>
+function tpCh(){ const b=document.getElementById("tp-body"); if(!b) return; TP.chLv=TP.chLv||"A2"; TP.chSel=TP.chSel||new Set(); TP.chK=TP.chK||"w";
+  const half=TP.chH||1, ls=[...Array(12)].map((_,i)=>i+1+(half===2?12:0)), gr=TP.chK==="g", has=n=>!gr||tpGrSecs(TP.chLv,[n]).length>0, any=ls.some(has);
+  b.innerHTML=`<div class="lrn-card"><h3>⚡ Challenge</h3><p class="ch-net">Daraja va Lektionlarni tanlang → link o‘quvchilarga yuboriladi: 1 daqiqada kim ko‘p ${TP.chK==="g"?"savolga to‘g‘ri javob beradi":"so‘z topadi"}.</p>
     <div class="tp-row"><span>Daraja</span><div class="tp-seg">${["A1","A2","B1"].map(l=>`<button type="button" data-tpch="lv" data-v="${l}" aria-pressed="${TP.chLv===l}">${l}</button>`).join("")}</div></div>
+    <div class="tp-row"><span>Nima bo‘yicha</span><div class="tp-seg"><button type="button" data-tpch="k" data-v="w" aria-pressed="${!gr}">🧠 Wortschatz</button><button type="button" data-tpch="k" data-v="g" aria-pressed="${gr}">📘 Grammatik</button></div></div>
     <div class="tp-row"><span>Lektionlar</span><div class="tp-seg">${[1,2].map(h=>`<button type="button" data-tpch="h" data-v="${h}" aria-pressed="${half===h}">${TP.chLv}.${h} · L${h===1?"1–12":"13–24"}</button>`).join("")}</div></div>
-    <div class="lrn-les" style="margin-top:10px">${ls.map(n=>`<button type="button" class="lrn-chip" data-tpch="l" data-v="${n}" aria-pressed="${TP.chSel.has(n)}"><b>L${n}</b></button>`).join("")}</div>
+    ${gr&&!any?`<p class="ch-net">📘 ${TP.chLv}.${half} uchun grammatika savollari hali yo‘q.</p>`:""}
+    <div class="lrn-les" style="margin-top:10px">${ls.map(n=>`<button type="button" class="lrn-chip" data-tpch="l" data-v="${n}" aria-pressed="${TP.chSel.has(n)}"${has(n)?"":" disabled"}><b>L${n}</b></button>`).join("")}</div>
     <button type="button" class="btn primary" data-tpch="go" ${TP.chSel.size?"":"disabled"} style="margin-top:12px;width:100%">⚡ Challenge yaratish (${TP.chSel.size} Lektion)</button></div>`; }
 document.addEventListener("click",e=>{ const x=e.target.closest("#tch [data-tpch]"); if(!x) return; const k=x.dataset.tpch, v=x.dataset.v;
-  if(k==="lv"){ TP.chLv=v; TP.chSel=new Set(); TP.chH=1; tpCh(); } else if(k==="h"){ TP.chH=+v; TP.chSel=new Set(); tpCh(); } else if(k==="l"){ const n=+v; TP.chSel.has(n)?TP.chSel.delete(n):TP.chSel.add(n); tpCh(); }
+  if(k==="lv"){ TP.chLv=v; TP.chSel=new Set(); TP.chH=1; tpCh(); } else if(k==="k"){ TP.chK=v; TP.chSel=new Set(); tpCh(); } else if(k==="h"){ TP.chH=+v; TP.chSel=new Set(); tpCh(); } else if(k==="l"){ const n=+v; TP.chSel.has(n)?TP.chSel.delete(n):TP.chSel.add(n); tpCh(); }
+  else if(k==="go"&&TP.chK==="g"){ const ls=[...TP.chSel].sort((a,b)=>a-b), xs=tpGrSecs(TP.chLv,ls); if(!xs.length) return;
+    const c={v:2,xs,lv:TP.chLv,ls,r:Math.floor(Math.random()*2147483647),c:window.BLITZ?"Blitz":((ACC.name||"").split(" ")[0]||""),t:Date.now()};
+    const code=chB64e(JSON.stringify(c)), url=chLink(code), txt=ct("tgText")(c.c||"⚡",chTitle(c));
+    document.getElementById("tp-body").innerHTML=`<div class="lrn-card"><h3>${esc(ct("made"))}</h3><p class="ch-big">${esc(ct("share"))}</p><div class="ch-link">${esc(url)}</div><p class="ch-net">${esc(chTitle(c))} · ${chXQs(c).length} savol</p>
+      <div class="ch-btns"><a class="btn primary" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(txt)}">${esc(ct("tg"))}</a><button type="button" class="btn" data-ch="copy" data-url="${esc(url)}">${esc(ct("copy"))}</button></div>
+      <button type="button" class="lrn-link" data-tpch="back">← Orqaga</button></div>`; }
+  else if(k==="back"){ tpCh(); }
   else if(k==="go"){ const id=lrnAllId(TP.chLv,state.lang); if(!id||!TP.chSel.size) return; lrnOpen(id); LR.sel=new Set(TP.chSel); try{ lrnSetup(); }catch(err){} chCreate(); } });
 function tpVq(){ const body=document.getElementById("tp-body"); if(!body) return; const tab=TP.vqTab||(TABS[state.tab]?state.tab:"a11"); TP.vqTab=tab;
   const T0=TABS[tab], LS=LEKS[T0.lvl].filter(L=>L[0]>=T0.lo&&L[0]<=T0.hi), beta=betaOn();
@@ -7994,11 +8003,14 @@ document.addEventListener("toggle",e=>{ const d=e.target; if(d&&d.dataset&&d.dat
 (function(){ const u=new URLSearchParams(location.search), id=u.get("kg"), d=u.get("kgd"); if(id||d) setTimeout(()=>kgOpen(id,d),60); })();
 
 function chEl(){ let e=document.getElementById("chal"); if(!e){ e=document.createElement("div"); e.id="chal"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
-function chPool(c){ if(c.x) return exGameQs(c.x,c.si); const D=lernData()[c.l]; if(!D) return []; return D.it.map((r,i)=>({i,l:r[0],de:r[3],ru:r[4],red:r[6],dis:r[7]})).filter(x=>x.ru && !x.red && c.s.includes(x.l)); }
-function chTitle(c){ if(c.x){ try{ const D=exData()[c.x], sc=D.sec[c.si]; return (D.title||"")+(D.sec.length>1?" · "+(sc.ic||"")+" "+(sc.t||""):""); }catch(e){ return ""; } } const m=byId[c.l]; const D=lernData()[c.l]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:"")+" · "+c.s.map(lab).join(", "); }
+/* Grammatik challenge (2026-10-22): c.xs=[[mashq id, bo'lim],…] — tanlangan Lektionlarning Grammatik bo'limlari birga */
+function chXQs(c){ if(c.xs){ const seen=new Set(); return c.xs.flatMap(([id,si])=>exGameQs(id,si)).filter(q=>!seen.has(q.q)&&seen.add(q.q)); } return c.x?exGameQs(c.x,c.si):[]; }
+function tpGrSecs(lv,ls){ const D=exData(), out=[]; for(const id in D){ const m=byId[id]; if(!m||m.lvl!==lv||!ls.includes(+m.key)) continue; (D[id].sec||[]).forEach((s,si)=>{ if(/Grammatik/i.test(s.t||"")&&exGameQs(id,si).length>=4) out.push([id,si]); }); } return out; }
+function chPool(c){ if(c.x||c.xs) return chXQs(c); const D=lernData()[c.l]; if(!D) return []; return D.it.map((r,i)=>({i,l:r[0],de:r[3],ru:r[4],red:r[6],dis:r[7]})).filter(x=>x.ru && !x.red && c.s.includes(x.l)); }
+function chTitle(c){ if(c.xs) return "📘 Grammatik "+(c.lv||"")+" · "+(c.ls||[]).map(n=>"L"+n).join(", "); if(c.x){ try{ const D=exData()[c.x], sc=D.sec[c.si]; return (D.title||"")+(D.sec.length>1?" · "+(sc.ic||"")+" "+(sc.t||""):""); }catch(e){ return ""; } } const m=byId[c.l]; const D=lernData()[c.l]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:"")+" · "+c.s.map(lab).join(", "); }
 function chPts(){ return !!(CHS.c&&CHS.c.v>=2); }
 function chQuestions(c){
-  if(c.x){ const base=exGameQs(c.x,c.si); if(base.length<4) return []; const r=chRng(c.r), qs=[]; while(qs.length<160){ for(const x of chShuf(base.slice(),r)){ const o=x.gp?[x.a,...chShuf(x.gp.slice(),r).slice(0,3)]:x.o.slice(); qs.push({q:x.q,a:x.a,o:chShuf(o,r)}); if(qs.length>=160) break; } } return qs; }
+  if(c.x||c.xs){ const base=chXQs(c); if(base.length<4) return []; const r=chRng(c.r), qs=[]; while(qs.length<160){ for(const x of chShuf(base.slice(),r)){ const o=x.gp?[x.a,...chShuf(x.gp.slice(),r).slice(0,3)]:x.o.slice(); qs.push({q:x.q,a:x.a,o:chShuf(o,r)}); if(qs.length>=160) break; } } return qs; }
   const pool=chPool(c); if(pool.length<4) return []; const r=chRng(c.r); const qs=[];
   while(qs.length<160){ for(const x of chShuf(pool.slice(),r)){
     let opts;
@@ -8067,7 +8079,7 @@ function chHead(sub){ return `<div class="lrn-bar"><button class="btn" data-ch="
 function chOpen(code){
   let c=null; try{ c=JSON.parse(chB64d(code)); }catch(e){}
   const el=chEl(); el.hidden=false; document.body.style.overflow="hidden";
-  if(!c||!(c.x?exData()[c.x]:lernData()[c.l])||chQuestions(c).length===0){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-ch="close">✕</button><div class="lrn-tt"><b>${esc(ct("title"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(ct("bad"))}</p></div></div>`; return; }
+  if(!c||!(c.xs?c.xs.length:c.x?exData()[c.x]:lernData()[c.l])||chQuestions(c).length===0){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-ch="close">✕</button><div class="lrn-tt"><b>${esc(ct("title"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(ct("bad"))}</p></div></div>`; return; }
   Object.assign(CHS,{c,id:chHash(code),qs:chQuestions(c),players:{},phase:"lobby",score:0,ans:0,qi:0});
   let me=store.get("chme"); if(!me){ me=Math.random().toString(36).slice(2,10); store.set("chme",me); } CHS.me=me;
   const prev=store.get("chdone:"+CHS.id); if(prev){ try{ const p=JSON.parse(prev); Object.assign(CHS,{name:p.n,score:p.s,ans:p.a||0,tEnd:p.t,phase:"end"}); }catch(e){} }
@@ -8077,7 +8089,7 @@ function chOpen(code){
 function chLobby(){
   const c=CHS.c, n=chPool(c).length;
   chEl().innerHTML=chHead()+`<div class="lrn-body"><div class="lrn-card">
-    ${c.c?`<h3>${esc(ct("from")(c.c))}</h3>`:""}<p class="ch-big"><b>${esc(chTitle(c))}</b> · ${esc(ct("words")(n))}</p><p class="ch-big">⏱ ${esc(ct(c.v>=2?"rulesP":"rules"))}</p>
+    ${c.c?`<h3>${esc(ct("from")(c.c))}</h3>`:""}<p class="ch-big"><b>${esc(chTitle(c))}</b> · ${esc(c.x||c.xs?(state.lang==="ru"?n+" вопросов":n+" ta savol"):ct("words")(n))}</p><p class="ch-big">⏱ ${esc(ct(c.v>=2?"rulesP":"rules"))}</p>
     <label class="acc-lb">${esc(ct("name"))}<input class="ch-in" id="ch-name" maxlength="30" placeholder="${esc(ct("namePh"))}" value="${esc(CHS.name)}"></label>
     <div class="acc-st err" id="ch-err"></div>
     <button type="button" class="btn primary" data-ch="start">${esc(ct("start"))} →</button>
@@ -8118,7 +8130,7 @@ function chPlay(){
 function chQ(){
   const q=CHS.qs[CHS.qi%CHS.qs.length]; CHS.cur=q; CHS.lock=false; CHS.qT=performance.now();
   const card=document.getElementById("ch-card"); if(!card) return;
-  card.innerHTML=`<div class="ch-q">${esc(q.q)}</div><div class="lrn-ask">${esc(CHS.c.x?(state.lang==="ru"?"Выберите правильный ответ":"To‘g‘ri javobni tanlang"):ct("choose"))}</div><div class="lrn-opts">${q.o.map((o,k)=>`<button type="button" class="lrn-opt" data-cho="${k}"><span class="k">${k+1}</span>${esc(o)}</button>`).join("")}</div>`;
+  card.innerHTML=`<div class="ch-q">${esc(q.q)}</div><div class="lrn-ask">${esc(CHS.c.x||CHS.c.xs?(state.lang==="ru"?"Выберите правильный ответ":"To‘g‘ri javobni tanlang"):ct("choose"))}</div><div class="lrn-opts">${q.o.map((o,k)=>`<button type="button" class="lrn-opt" data-cho="${k}"><span class="k">${k+1}</span>${esc(o)}</button>`).join("")}</div>`;
 }
 function chAnswer(k){
   if(CHS.phase!=="play"||CHS.lock) return; CHS.lock=true;
