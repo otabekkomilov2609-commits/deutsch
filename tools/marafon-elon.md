@@ -5,10 +5,10 @@
 📣 **STREBER.UZ — TARQATUVCHI MARAFONI**
 23-oktabr → 15-noyabr · 10 ta sovrin
 
-Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — har bir do'stingiz uchun 100 ming so'mgacha yutib oling:
-🥇 1 mln so'mgacha
-🥈 600 ming so'mgacha
-🥉 400 ming so'mgacha
+Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — va yutib oling:
+🥇 1 mln so'm
+🥈 600 ming so'm
+🥉 400 ming so'm
 4–10-o'rinlar — 100 ming so'mdan
 (Click/Payme + saytda doimiy 🏆 belgi)
 
@@ -20,7 +20,7 @@ Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — har bir
 ⚡ Challenge'ingizda yangi odam o'ynadi — +2
 👎 Saytdagi xatoni topdingiz (ustoz tasdiqlasa) — +1
 
-**Sovrin:** har bir haqiqiy do'st (100 so'z yoki grammatika) uchun 100 ming so'm, yuqoridagi chegaragacha. Eng kami: 🥇 60 · 🥈 45 · 🥉 35 · 4–10: 20 ball. Soxta akkauntlar tekshiriladi. E'lon — 18-noyabr.
+**Eng kami:** 🥇 60 · 🥈 45 · 🥉 35 · 4–10: 20 ball. Soxta akkauntlar tekshiriladi. E'lon — 18-noyabr.
 
 Linkingiz va kodingiz: saytda 👤 → 🏅 Saytga hissa → «Do'stga yuborish».
 To'liq qoidalar: bosh sahifadagi 📣 karta → «Qoidalar».
@@ -32,10 +32,10 @@ To'liq qoidalar: bosh sahifadagi 📣 karta → «Qoidalar».
 📣 **STREBER.UZ — МАРАФОН РАСПРОСТРАНИТЕЛЕЙ**
 23 октября → 15 ноября · 10 призов
 
-Расскажите друзьям о бесплатном сайте для изучения немецкого — до 100 тыс. сум за каждого друга:
-🥇 до 1 млн сум
-🥈 до 600 тыс. сум
-🥉 до 400 тыс. сум
+Расскажите друзьям о бесплатном сайте для изучения немецкого — и выиграйте:
+🥇 1 млн сум
+🥈 600 тыс. сум
+🥉 400 тыс. сум
 4–10 места — по 100 тыс. сум
 (Click/Payme + постоянный значок 🏆 на сайте)
 
@@ -47,7 +47,7 @@ To'liq qoidalar: bosh sahifadagi 📣 karta → «Qoidalar».
 ⚡ Новый игрок в вашем Challenge — +2
 👎 Нашли ошибку на сайте (подтвердил учитель) — +1
 
-**Приз:** 100 тыс. сум за каждого настоящего друга (100 слов или грамматика), до указанного предела. Минимум: 🥇 60 · 🥈 45 · 🥉 35 · 4–10: 20 баллов. Фейковые аккаунты проверяются. Объявление — 18 ноября.
+**Минимум:** 🥇 60 · 🥈 45 · 🥉 35 · 4–10: 20 баллов. Фейковые аккаунты проверяются. Объявление — 18 ноября.
 
 Ваша ссылка и код: на сайте 👤 → 🏅 Вклад в сайт → «Отправить другу».
 Полные правила: карточка 📣 на главной → «Правила».

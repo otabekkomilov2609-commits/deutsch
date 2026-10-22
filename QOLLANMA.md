@@ -881,5 +881,5 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 
 ### Marafon qoidalari v2 (2026-10-23 02:05, Otabek tasdiqladi)
 - Ballar: link/QR/kod ochildi +1 (jami ≤20) · ro'yxatdan o'tdi +1 · 100 so'z YOKI 5 ta grammatika mashqi (onlayn mashqlardagi «gram» bo'limi topshiriqlari, ≥80%) +6 · o'zi ilova o'rnatdi +10 (1 marta) · do'stning ilova o'rnatishi 0 · challenge'da yangi odam +2 (jami ≤20) · 👎 tasdiqlangan xato +1 (cheklovsiz). Ustoz rahmati hisoblanmaydi.
-- Sovrin «gacha»: har bir haqiqiy do'st (100 so'z yoki grammatika) uchun 100 ming; 🥇 ≤1 mln, 🥈 ≤600 ming, 🥉 ≤400 ming, 4–10: 100 ming. Eng kami 60 / 45 / 35 / 20. Eng ko'p xarajat 2,7 mln.
+- Sovrin QAT'IY (02:13 da «gacha» bekor qilindi): 🥇 1 mln · 🥈 600 ming · 🥉 400 ming · 4–10: 100 ming. Eng kami 60 / 45 / 35 / 20. Jami 2,7 mln.
 - Avvalgi (40/30/25, +2/+6, do'st ilovasi +4, o'zi +2) bekor.
