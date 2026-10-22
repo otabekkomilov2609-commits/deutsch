@@ -837,3 +837,10 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Reytinglarda ilova foydalanuvchisi ismi yonida 📲.
 - Ustoz paneli → Varaqlar: "📲 Ilovani o'rnating — sinf plakati" → A4 QR-plakat (print oynasi), Android/iPhone 2 qadam; Blitzda blitzdeutsch.uz, streberda streber.uz.
 - Tahlil: `app:install` hodisasi kunlik hisobga tushadi.
+
+## 🏅 Unvonlar — tushuntirish va «nega u bunday unvonga ega» (2026-10-22, Otabek)
+- Nomlar hamma joyda bir xil: 🔧 Xato tuzatuvchi (1) → 🤝 Yordamchi (10) → 📣 Tarqatuvchi (25) → 👑 Afsonaviy yordamchi (60); ruscha: Исправитель ошибок → Помощник → Распространитель → Легендарный помощник (sayt tili bo'yicha).
+- Birinchi kirganda (ro'yxatdan o'tgan, bir marta, `hp:intro`) pastdan oyna: unvonlar + qanday ball olinadi + «Mening linkim». Xush kelibsiz/👎 tip/ilova bannerи yopilgandan keyin chiqadi. Keyin: Profil → 🏅 Saytga hissa → «Unvon qanday olinadi?».
+- Har bir unvonga (reyting, profil, ustoz paneli) bosganda oyna: ism, ball, nima uchun (👥 do'st · ⚡ challenge · 📤 ulashish · 👎 xato · 🎓 ustoz · 📲 ilova — soni va balli), keyingi unvongacha chiziq, «Men ham xohlayman → Qanday olinadi?».
+- Buning uchun har kim o'z hissa ballarini turlar bo'yicha (`hb`) ommaviy summary'ga yozadi (faqat sonlar). Doskalarda (Live test/Kahoot/Duel) faqat daraja keladi — u yerda bosganda umumiy tavsif.
+- Keyingi reja (Otabek): eng yuqori darajaga yetganlarga rag'batlantirish tizimi.
