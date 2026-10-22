@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
 <title>Streber — by Otabek Komilov</title>
 <script>/* 🟦 Blitz rejimi — alohida link: streber.uz/?blitz (2026-10-22, Otabek). Sahifa boshida, hamma narsadan oldin. */
-(function(){ try{ const q=new URLSearchParams(location.search); if(q.has("blitz")){ if(q.get("blitz")==="0") localStorage.removeItem("blitz"); else localStorage.setItem("blitz","1"); q.delete("blitz"); history.replaceState(null,"",location.pathname+(q.toString()?"?"+q:"")+location.hash); }
-  window.BLITZ=localStorage.getItem("blitz")==="1"; if(window.BLITZ){ document.documentElement.classList.add("blitz"); document.title="Blitz · Deutsch"; } }catch(e){ window.BLITZ=false; } })();</script>
+(function(){ try{ /* faqat link ichida ?blitz bo'lsa — qurilmada eslab qolinmaydi, oddiy streber.uz doim o'z sayti (2026-10-22, Otabek: «o'zimni saytim qani») */ localStorage.removeItem("blitz"); const q=new URLSearchParams(location.search);
+  window.BLITZ=q.has("blitz")&&q.get("blitz")!=="0"; if(window.BLITZ){ document.documentElement.classList.add("blitz"); document.title="Blitz · Deutsch"; } }catch(e){ window.BLITZ=false; } })();</script>
 
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#1F4FA0">
