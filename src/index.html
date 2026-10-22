@@ -6518,7 +6518,7 @@ function ltListId(h){ return Object.keys(lernData()).find(k=>chHash(k)===h); }
 function ltPool(c){ const id=ltListId(c.l), D=id&&lernData()[id]; if(!D) return [];
   const seen=new Set(); return D.it.map((r,i)=>({i,l:r[0],de:r[3],q:r[4],red:r[6]})).filter(x=>{ if(!x.q||x.red||!c.s.includes(x.l)||x.de.length>40||/[…·]/.test(x.de)||LRN_PAIR.test(x.de)||seen.has(x.de)) return false; seen.add(x.de); return true; }); }
 function ltQs(c){ return chShuf(ltPool(c),chRng(c.r)).slice(0,c.n); }
-function ltNameOf(k){ const m=/^(A\d)-([ab]\d)(\d)-([ru])-(.+?)-Deutsch-(\w+?)(?:-L[\d-]+)?$/.exec(k); if(!m) return k; const L=m[5].replace(/-/g," ").replace(/L(\d+) (\d+)/,"L$1–$2"); return `${m[1]}.${m[3]} · ${L} · Deutsch–${m[4]==="u"?"O‘zbekcha":"Russisch"}`; } /* MATS'da yo'q ro'yxatlar uchun nom */
+function ltNameOf(k){ try{ const T=lernData()[k]; if(T&&T.title) return T.title; }catch(e){} const m=/^(A\d)-([ab]\d)(\d)-([ru])-(.+?)-Deutsch-(\w+?)(?:-L[\d-]+)?$/.exec(k); if(!m) return k; const L=m[5].replace(/-/g," ").replace(/L(\d+) (\d+)/,"L$1–$2"); return `${m[1]}.${m[3]} · ${L} · Deutsch–${m[4]==="u"?"O‘zbekcha":"Russisch"}`; } /* MATS'da yo'q ro'yxatlar uchun nom */
 function ltTitle(c){ const id=ltListId(c.l), m=byId[id], D=lernData()[id]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:ltNameOf(id))+" · "+c.s.map(lab).join(", "); }
 function ltLink(code){ return (/github\.io$/.test(location.hostname)||!/claude/.test(location.hostname)&&location.protocol!=="file:" ? location.origin+location.pathname : CH_SITE)+"?lt="+code; }
 function ltSc(v){ v=+v||0; return (Math.round(v*2)/2).toString().replace(".",","); }
@@ -6846,22 +6846,26 @@ function tpVq(){ const body=document.getElementById("tp-body"); if(!body) return
   h+=`<div class="tp-vq-tabs">${Object.keys(TABS).map(k=>`<button type="button" data-tpvq="${k}" aria-pressed="${k===tab}">${TABS[k].lbl}</button>`).join("")}</div>`;
   const whole=MATS.filter(m=>pdf(m)&&m.key==="r"); if(whole.length) h+=`<article class="lek"><div class="lek-h"><div><h3>${esc(t("whole"))} · L${T0.lo}–${T0.hi}</h3></div></div>${grp(whole)}</article>`;
   let any=false;
-  for(const L of LS.slice().reverse()){ const n=L[0];
-    if(n%3===0){ const rv=MATS.filter(m=>pdf(m)&&m.key==="m"+(n/3)); if(rv.length){ any=true; h+=`<div class="review"><h4>${esc(t("review"))} · L${n-2}–${n}</h4><div class="mats">${rv.map(matCard).join("")}</div></div>`; } }
-    const ms=MATS.filter(m=>pdf(m)&&m.key===String(n)); if(!ms.length) continue; any=true;
+  /* ustoz panelida Lektionlar tabiiy tartibda: 1 → 12, har 3 Lektiondan keyin Modul takrori (2026-10-22, Otabek) */
+  for(const L of LS.slice().sort((a,b)=>a[0]-b[0])){ const n=L[0];
+    const ms=MATS.filter(m=>pdf(m)&&m.key===String(n)); if(ms.length){ any=true;
     h+=`<article class="lek"><div class="lek-h"><div class="num">${n}</div><div><h3>${esc(L[1])}</h3><div class="thema">${esc(L[2])}</div></div></div>${grp(ms)}</article>`; }
+    if(n%3===0){ const rv=MATS.filter(m=>pdf(m)&&m.key==="m"+(n/3)); if(rv.length){ any=true; h+=`<div class="review"><h4>${esc(t("review"))} · L${n-2}–${n}</h4><div class="mats">${rv.map(matCard).join("")}</div></div>`; } } }
   if(!any&&!whole.length) h+=`<p class="lrn-count">Bu bo‘limda hali varaq yo‘q.</p>`;
   body.innerHTML=h; }
 function tpRender(){ if(window.BLITZ&&!/^(vq|kg|lt|ch)$/.test(TP.tab||"")) TP.tab="vq"; if(TP.kgR){ kgRepDraw(); return; } if(TP.k){ kgBoard(); return; } if(TP.b){ tpBoard(); return; } const el=tpEl(); el.innerHTML=tpHead()+`<div class="lrn-body tp-body" id="tp-body"></div>`; TP.tab==="vq"? tpVq() : TP.tab==="ch"? tpCh() : TP.tab==="kg"? kgPanel() : TP.tab==="lt"? tpLt() : TP.tab==="st"? tpSt() : TP.tab==="an"? tpAn() : tpOn(); }
 /* --- Live test yaratish --- */
 function tpLt(){
-  const D=lernData(), ids=Object.keys(D);
-  if(!TP.lid||!D[TP.lid]){ TP.lid=store.get("lern:last"); if(!TP.lid||!D[TP.lid]) TP.lid=ids.find(k=>byId[k]&&byId[k].tab===state.tab)||ids[0]; TP.sel=new Set(); }
-  const L=D[TP.lid], les=Object.keys(L.les).map(Number); if(!TP.sel.size) TP.sel.add(les[0]);
+  /* faqat daraja + til + Lektion — ro'yxatlar ko'rsatilmaydi (2026-10-22, Otabek: «faqat Lektion, daraja so'rasin va til, hamma list chiqib kelishi xato») */
+  const D=lernData(); TP.ltLv=TP.ltLv||(TABS[state.tab]&&/^A[12]$/.test(TABS[state.tab].lvl)?TABS[state.tab].lvl:"A2"); TP.ltLang=TP.ltLang||(state.lang==="ru"?"ru":"uz");
+  TP.lid=lrnAllId(TP.ltLv,TP.ltLang); const L=D[TP.lid]; TP.ltH=TP.ltH||1;
+  const les=Object.keys(L.les).map(Number).filter(n=>TP.ltH===2?n>12:n<=12); [...TP.sel].forEach(n=>{ if(!les.includes(n)) TP.sel.delete(n); }); if(!TP.sel.size&&les.length) TP.sel.add(les[0]);
   const lab=n=>(L.lab&&L.lab[n])||("L"+n), c={l:chHash(TP.lid),s:[...TP.sel],n:TP.n,r:1}, avail=ltPool(c).length;
   const games=(()=>{ try{ return JSON.parse(localStorage.getItem("tch:games")||"[]"); }catch(e){ return []; } })();
   document.getElementById("tp-body").innerHTML=`<div class="lrn-card"><h3>Yangi live test</h3>
-    <label class="acc-lb">Ro‘yxat<select class="ch-in" id="tp-list">${ids.map(k=>{ const m=byId[k]; return `<option value="${esc(k)}"${k===TP.lid?" selected":""}>${esc((m&&m.tab&&TABS[m.tab]?TABS[m.tab].lbl+" · ":"")+(m?m.title:ltNameOf(k)))}</option>`; }).join("")}</select></label>
+    <div class="tp-row"><span>Daraja</span><div class="tp-seg">${["A1","A2"].map(v=>`<button type="button" data-tplt="lv" data-v="${v}" aria-pressed="${TP.ltLv===v}">${v}</button>`).join("")}</div></div>
+    <div class="tp-row"><span>Til</span><div class="tp-seg">${[["uz","O‘zbekcha"],["ru","Русский"]].map(([v,t])=>`<button type="button" data-tplt="lang" data-v="${v}" aria-pressed="${TP.ltLang===v}">${t}</button>`).join("")}</div></div>
+    <div class="tp-row"><span>Lektionlar</span><div class="tp-seg">${[1,2].map(h=>`<button type="button" data-tplt="h" data-v="${h}" aria-pressed="${TP.ltH===h}">${TP.ltLv}.${h} · L${h===1?"1–12":"13–24"}</button>`).join("")}</div></div>
     <div class="lrn-les">${les.map(n=>`<button type="button" class="lrn-chip" aria-pressed="${TP.sel.has(n)}" data-tples="${n}"><b>${esc(lab(n))}</b><span>${esc(L.les[n])}</span></button>`).join("")}</div>
     <div class="tp-row"><span>So‘zlar soni</span><div class="tp-seg">${[10,20,30,40].map(v=>`<button type="button" data-tpn="${v}" aria-pressed="${TP.n===v}">${v}</button>`).join("")}</div></div>
     <div class="tp-row"><span>Vaqt</span><div class="tp-seg">${[[0,"Cheksiz"],[5,"5 daq"],[10,"10 daq"],[15,"15 daq"]].map(([v,t])=>`<button type="button" data-tptm="${v}" aria-pressed="${TP.tm===v}">${t}</button>`).join("")}</div></div>
@@ -7434,6 +7438,7 @@ document.addEventListener("click",e=>{
   const vq=e.target.closest("[data-tpvq]"); if(vq){ TP.vqTab=vq.dataset.tpvq; tpVq(); return; }
   const vo=e.target.closest("#tch [data-open]"); if(vo){ V.el.classList.add("over"); openViewer(byId[vo.dataset.open]); return; }
   const vd=e.target.closest("#tch [data-dl]"); if(vd){ downloadMat(byId[vd.dataset.dl]); return; }
+  const lt=e.target.closest("#tch [data-tplt]"); if(lt){ const k=lt.dataset.tplt, v=lt.dataset.v; if(k==="lv"){ TP.ltLv=v; TP.sel=new Set(); TP.ltH=1; } else if(k==="lang") TP.ltLang=v; else { TP.ltH=+v; TP.sel=new Set(); } tpLt(); return; }
   const ls=e.target.closest("[data-tples]"); if(ls){ const n=+ls.dataset.tples; TP.sel.has(n)?TP.sel.delete(n):TP.sel.add(n); tpLt(); return; }
   const tn=e.target.closest("[data-tpn]"); if(tn){ TP.n=+tn.dataset.tpn; tpLt(); return; }
   const tt=e.target.closest("[data-tptm]"); if(tt){ TP.tm=+tt.dataset.tptm; tpLt(); return; }

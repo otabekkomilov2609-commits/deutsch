@@ -788,3 +788,5 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Blitz'ga 🎮 O'yinlar (Sinf o'yini) qaytarildi (2026-10-22, Otabek: «o'yinlar qismini ham qo'sh»): ikki bo'lim — 📄 Varaqlar · 🎮 O'yinlar.
 - Kahoot'lar (2026-10-22, Otabek: «hamma kahootlarni o'tqaz»): Kahoot akkauntidagi 72 ta Kahoot (1095 savol) Sinf o'yinida — A1.1 16 · A1.2 16 · A2.1 22 · A2.2 18; yangi 38 tasi akkauntdan o'qildi (True/False → Richtig/Falsch).
 - Blitz o'yinlar (2026-10-22): 📄 Varaqlar · 🎮 Sinf o'yini · 🎯 Live test · ⚡ Challenge (ustoz panelidan: daraja + Lektionlar → link).
+- Live test (2026-10-22, Otabek): ro'yxat tanlanmaydi — faqat Daraja (A1/A2) · Til (O'zbekcha/Русский) · Lektionlar (x.1 L1–12 / x.2 L13–24); butun daraja ro'yxati ishlatiladi.
+- Ustoz paneli Varaqlar: Lektionlar tabiiy tartibda 1 → 12 (13 → 24), har 3 Lektiondan keyin Modul takrori.
