@@ -853,3 +853,13 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 
 ## 👎 Xato uchun ball — faqat ustoz tasdiqlasa (2026-10-23, Otabek)
 - 👎 yuborilganda ball avtomatik berilmaydi. Admin → muammolar ro'yxatida har jalobada "🏅 +1 ball" tugmasi; ustoz ko'rib bossa — o'quvchiga th/ orqali +1 (kind=fb) va "Xatoni topganing uchun rahmat! 🔧" xabari. Bir jalobaga bir marta (`adm:hp`). Mehmon (akkauntsiz) yuborsa — tugma yo'q.
+
+## 👥 Jamoa (2026-10-23, Otabek: «community gefühl»)
+- **pid** — har foydalanuvchining ommaviy id'si (maxfiy kalitdan sha, 16 hex). `s/` hujjatiga `pid`, `g` (guruh id), `nw` (shu hafta o'rganilgan so'zlar; hafta boshidagi baza `u:<acc>:nwb`) qo'shildi; `rkv=3`.
+- **Onlayn**: presence (`ON_NS`) payload'ida `p` (pid), `lv`, `hl`. O'quvchi (mehmon ham) 6 s dan keyin `ON_NS/+` ga obuna bo'ladi → bosh sahifada `#on-bar` "🟢 N kishi hozir o'qiyapti · ismlar". Bosilsa — 👥 panel (`#cm`): Onlayn (Hammasi/Guruhim/O'rtoqlar) · 📬 Xabarlar · 👥 Guruhim · 👥 O'rtoqlar. Ustoz (tchOk), Blitz va artifactda ko'rinmaydi.
+- **Shaxs kartasi** (hpSheet): ism, unvon, daraja, so'zlar, hafta, onlayn; tugmalar ⚔️ Duel · ⚡ Challenge · 👋 Salom · ➕ O'rtoq · 👥 Guruhga taklif. Reytingda ism ustiga bosganda ham ochiladi (`data-rkid`). Mehmonga tugmalar yo'q.
+- **Chaqiruvlar** (`ib/<pid>` {l: ≤30 xabar, t} + jonli MQTT `streber/ib/v1/<pid>`): turlari du, ch, hi, fr, fr_ok, g, g_ok, nudge. Jonli bo'lsa — yuqorida toast (Qabul/Keyin), aks holda 📬 (👤 yonida qizil "📬 N"). Ko'rilganlar `u:<acc>:ibseen`, o'chirilganlar `u:<acc>:ibdel`. Limit: bir odamga kuniga 1 turtish, 5 chaqiruv (`u:<acc>:iblim`). Duel/Challenge kodi: joriy daraja (TABS[state.tab]) ning barcha Lektionlari, `lrnAllId`.
+- **Guruh** (`g/<gid>` {nm, m:[[pid,ism]], o, t}, `u:<acc>:grp`=gid — bulutga o'zi sinxron): kod yo'q — ism bilan qidirib (RK ro'yxati) yoki onlaynlardan "Taklif"; birinchi taklifda guruh o'zi yaratiladi ("<Ism> guruhi"); qabul qilgan a'zo o'zini qo'shadi (g_ok egasiga). Panel: hafta maqsadi (Σnw / 250×a'zo), a'zolar (so'z, 🎮 hafta, unvon, onlayn, oxirgi), "👋 Turt", "⚡ Guruhga Challenge" (hammaga ch chaqiruv + link clipboard), egasi nomni o'zgartiradi, "Chiqish".
+- **O'rtoqlar** (`u:<acc>:fr` {pid:[ism,t]}): fr → fr_ok bilan ikki tomonlama; hafta reytingi (nw), Turt, ism bilan qo'shish.
+- Firestore qoidalari `tools/firestore.rules` da yangilandi (s/ pid,g,nw; g/; ib/) — konsolda nashr qilish kerak.
+- Qilinmadi: Lernraum (birga o'qish xonasi); ref-link bilan kelganlarni avtomatik o'rtoq qilish.
