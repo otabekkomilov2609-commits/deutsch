@@ -6,9 +6,9 @@
 23-oktabr → 15-noyabr
 
 Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — va yutib oling:
-🥇 1 000 000 so'm
-🥈 600 000 so'm
-🥉 400 000 so'm
+🥇 1 mln so'm
+🥈 600 ming so'm
+🥉 400 ming so'm
 (Click/Payme + saytda doimiy 🏆 belgi)
 
 **Qanday ball yig'iladi:**
@@ -33,9 +33,9 @@ Qoidalar to'liq: bosh sahifadagi 📣 karta → «Qoidalar».
 23 октября → 15 ноября
 
 Расскажите друзьям о бесплатном сайте для изучения немецкого — и выиграйте:
-🥇 1 000 000 сум
-🥈 600 000 сум
-🥉 400 000 сум
+🥇 1 млн сум
+🥈 600 тыс. сум
+🥉 400 тыс. сум
 (Click/Payme + постоянный значок 🏆 на сайте)
 
 **Как набрать баллы:**

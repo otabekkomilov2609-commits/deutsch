@@ -870,7 +870,7 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 
 ## 📣 Tarqatuvchi marafoni (2026-10-23, Otabek)
 - Muddat: 23.10.2026 00:00 → 15.11.2026 23:59 (Toshkent). Faqat shu oraliqdagi hissa ballari. Ro'yxatdan o'tgan hamma avtomatik qatnashadi (o'z o'quvchilar ham).
-- Sovrin: 🥇 1 000 000 · 🥈 600 000 · 🥉 400 000 so'm (Click/Payme) + doimiy "🏆 Marafon g'olibi · noyabr 2026" belgisi. **Eng kami** (marra emas): 🥇 ≥40 · 🥈 ≥30 · 🥉 ≥25 — yetmasa sovrin keyingi marafonga o'tadi. Teng bo'lsa — oldinroq yetgan yuqori.
+- Sovrin: 🥇 1 mln · 🥈 600 ming · 🥉 400 ming so'm (Click/Payme) + doimiy "🏆 Marafon g'olibi · noyabr 2026" belgisi. **Eng kami** (marra emas): 🥇 ≥40 · 🥈 ≥30 · 🥉 ≥25 — yetmasa sovrin keyingi marafonga o'tadi. Teng bo'lsa — oldinroq yetgan yuqori.
 - Ballar: do'st link/kod bilan ro'yxatdan o'tdi +2 · o'sha do'st 100 so'z +6 · kimdir link/QR/kodni ochdi +1 (jami ≤20, bir qurilma bir marta) · o'sha odam ilova o'rnatdi +4 · o'zi ilova +2 (1 marta) · Challenge'da yangi odam +2 · 👎 ustoz tasdiqlagan xato +1 (jami ≤10). 🎓 Ustoz rahmati hisoblanmaydi. O'z linkini ochish = 0.
 - Tekshiruv 16–18.11 (ustoz): soxta akkaunt, bir qurilmadan bir nechta akkaunt, cheater — chetlatiladi. E'lon 18.11, to'lov 7 kun ichida. Yakuniy qaror — sayt egasiniki.
 - **Do'st kodi** endi 6 belgi (A–Z, 2–9, masalan DIL7K2) — `hpRefCode()`; eski 8-hex linklar ham ishlaydi (`HP_REF8`). Ro'yxat formasida "Do'stingiz kodi" maydoni (?ref= dan o'zi to'ladi). Natija rasmida pastki o'ng burchakda QR + "kod: XXXXXX" (akkaunt bo'lsa).
