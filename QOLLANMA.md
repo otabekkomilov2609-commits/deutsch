@@ -889,3 +889,11 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - 🌙 Qorong'u rejim: yangi komponentlar (marafon, jamoa, unvon oynalari, Karteikarten 🎙) uchun --card/--soft/--ylw/--red-soft/--ok-ink o'zgaruvchilari :root'da (light/dark). Yangi CSS'da qattiq #fff/#E3F6EA ishlatilmaydi (2026-10-23).
 - 02:36 (Otabek): atama «haqiqiy do'st» → «jonli odam» (ru «живой человек»). Shart matni: «Sovrin — eng ko'p ball yig'gan va kamida 4 ta jonli odam olib kelganlarga».
 - 02:51 (Otabek): «Linkimni yuborish» tugmalari bitta global delegatsiyaga o'tkazildi (bosh sahifa kartasi, Qoidalar, «Men orqali kelganlar», profil). «Unvonlar» birinchi-kirish oynasi vaqtincha o'chirildi — fokus marafonda.
+
+### Oson ro'yxatdan o'tish *(2026-10-23, Otabek)*
+- Bitta ekran: **Ism** (familiya ixtiyoriy) + **4 ta raqamli PIN** (raqam klaviaturasi, 4 katak). Sarlavha «Natijalaringiz saqlansin 💾».
+- Do'st linki bilan kelganda kod maydoni ko'rinmaydi — yashil «🎁 Do'stingiz taklifi bilan keldingiz»; link bo'lmasa «Do'stingiz kodi bormi?» yig'ma qatori.
+- Ism band bo'lsa yozayotganda (0,6 s) sariq yozuv: «Bu siz bo'lsangiz — PIN; yangi bo'lsangiz — familiyani qo'shing» (n/ tekshiruvi).
+- Ikki rejim: ro'yxat (PIN) va «Kirish» (PIN yoki eski parol — eski akkauntlar o'zgarmaydi). Telefonda akkaunt bo'lsa — avtomatik «Kirish» rejimi.
+- Ro'yxatdan keyin: «✅ Tayyor, Ism!» + ism/PIN kartasi + «📸 Skrinshot olish uchun bosing» → 1080×1080 PNG (iPhone: ulashish menyusi → «Rasmni saqlash»; boshqalar: yuklab olinadi) → «✅ Rasm saqlandi» yoki «saqlanmadi — skrinshot qiling»; rasm ekranda qoladi. «Davom etish» rasm tugmasidan keyin faollashadi; «Eslab qoldim →» ham davom ettiradi. Nusxalash va Telegram tugmalari olib tashlandi.
+- Kichik harf bilan yozilgan ism avtomatik Bosh harf bilan saqlanadi. Ro'yxat oynasi ochiqligida 👎 tugmasi yashiriladi.

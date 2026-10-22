@@ -396,8 +396,9 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .acc-cred div{display:flex;flex-direction:column}.acc-cred small{font-size:12px;color:var(--muted);font-weight:600}.acc-cred b{font-size:20px;word-break:break-all}.acc-cred .mono{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:.06em}
 .acc-chk{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;cursor:pointer}.acc-chk input{width:20px;height:20px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .acc-warn{background:#3a3110;color:#F5D98A}}:root[data-theme="dark"] .acc-warn{background:#3a3110;color:#F5D98A}
-.acc-st{font-size:13.5px;min-height:1px}.acc-st.err{color:#C62828}
+.acc-st{font-size:13.5px;min-height:1px}.acc-st.err{color:#C62828}.acc-pin{position:relative;display:flex;gap:10px}.acc-pin i{width:54px;height:58px;border:1.5px solid var(--line);border-radius:14px;display:grid;place-items:center;font-style:normal;font-size:26px;font-weight:800;color:var(--ink);background:var(--blue-soft);transition:border-color .15s}.acc-pin i.on{background:var(--surface);border-color:var(--blue)}.acc-pin:focus-within i.cur{border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,79,160,.2)}.acc-pin input{position:absolute;inset:0;width:100%;height:100%;opacity:0;font-size:16px;border:0;padding:0;margin:0;caret-color:transparent;cursor:pointer}.acc-gift{align-self:flex-start;background:var(--green-soft);color:var(--ok-ink);border-radius:99px;padding:5px 12px;font-size:13.5px;font-weight:700}.acc-sw{margin:0;text-align:center;font-size:14px;color:var(--muted)}.acc-sw .lrn-link{font-weight:800}.acc-refd summary{font-size:13px;color:var(--muted);cursor:pointer;font-weight:600}.acc-refd .acc-lb{margin-top:6px}.acc-hint.warn{color:var(--ylw-ink);background:var(--ylw);border-radius:10px;padding:6px 9px;font-weight:600;font-size:12.5px}.acc-save{background:var(--ylw);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:10px}.acc-save>p{margin:0;font-size:14.5px;font-weight:700;color:var(--ylw-ink)}.acc-save .acc-cred{background:var(--surface);border-style:solid;border-width:1px;border-color:var(--line)}.acc-shst{font-size:14px;font-weight:700}.acc-shst:empty{display:none}.acc-shst.ok{color:var(--ok-ink)}.acc-shst.no{color:var(--red-ink)}#acc-shimg{width:100%;border-radius:12px;border:1px solid var(--line);display:block}#acc-shimg[hidden]{display:none}
 .acc-who{font-size:16px;margin:0}.acc-who b{color:var(--blue)}
+body:has(#acc:not([hidden])) #fb-btn{display:none}
 /* challenge */
 /* Umumiy progress + darajalar — 2026-10-18 */
 .prog{margin:18px 0 4px;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:16px 18px;display:grid;grid-template-columns:auto 1fr auto;gap:6px 16px;align-items:center}
@@ -6102,9 +6103,13 @@ initDl(10);
 
 /* ===== Akkaunt oynasi ===== */
 const ACCT={
-  uz:{title:"Ro‘yxatdan o‘tish", lead:"Ma’lumotlar saqlanishi uchun ismingiz va parolingizni kiriting.", name:"Ism va familiya", pw:"Parol", namePh:"Masalan: Jamila Jamilova", pwPh:"Kamida 4 ta belgi", go:"Kirish",
-      note:"Natijalaringiz (Yodlash, varaqlardagi javoblar) internetda saqlanadi: boshqa telefondan ham shu ism va parol bilan kirsangiz, natijalaringiz qaytadi. Ustoz ham ularni ko‘radi. Parolni eslab qoling.", cT:"☁️ Natijalaringizni saqlab qo‘yamiz", cL:"Endi natijalaringiz internetda ham saqlanadi — telefon almashsa yoki sayt manzili o‘zgarsa ham yo‘qolmaydi. Buning uchun parolingizni bir marta kiriting.", cGo:"Saqlash", cLater:"Keyinroq", cBad:"Parol noto‘g‘ri. Esingizda bo‘lmasa — «Parolni unutdim»ni bosing va ustozga ayting.", cChk:"☁️ Tekshirilmoqda…", eCloudPw:"Bu ism bilan ro‘yxatdan o‘tilgan, lekin parol noto‘g‘ri. Parolni unutgan bo‘lsangiz — ustozga ayting.", rNoCloud:"Bunday ism bilan ro‘yxatdan o‘tilmagan.",
-      eName:"Ism va familiyangizni to‘liq yozing", ePw:"Parol kamida 4 ta belgidan iborat bo‘lsin", eWrong:"Parol noto‘g‘ri. Qaytadan urinib ko‘ring.",
+  uz:{title:"Natijalaringiz saqlansin 💾", lead:"Ism va 4 ta raqam — tamom.", name:"Ismingiz", pw:"Parol", namePh:"Masalan: Jamila", pwPh:"Kamida 4 ta belgi", go:"Davom etish →",
+      pin:"4 ta raqamli PIN", pinHint:"Raqamlarni eslab qoling.", ePin:"PIN — 4 ta raqam bo‘lsin", lT:"👤 Kirish", lLead:"Ismingiz va PIN (yoki eski parolingiz).", lPw:"PIN yoki parol", lGo:"Kirish",
+      haveAcc:"Avval ro‘yxatdan o‘tganmisiz?", newAcc:"Yangi o‘quvchimisiz?", reg:"Ro‘yxatdan o‘tish", refChip:"🎁 Do‘stingiz taklifi bilan keldingiz", refAsk:"Do‘stingiz kodi bormi?",
+      taken:n=>`«${n}» band. Bu siz bo‘lsangiz — PIN’ingizni kiriting. Yangi o‘quvchi bo‘lsangiz — familiyani qo‘shing: «${n} A.»`,
+      done:n=>`✅ Tayyor, ${n}!`, keep:"📌 Boshqa telefondan kirish uchun shu ikkisi kerak:", pinL:"PIN", shotB:"📸 Skrinshot olish uchun bosing", shotOk:"✅ Rasm saqlandi — Galereya / «Yuklanmalar»da", shotNo:"Rasm saqlanmadi — shu ekranni o‘zingiz skrinshot qiling.", shotHint:"Saqlanmagan bo‘lsa ham rasm ekranda qoladi — o‘zingiz skrinshot olasiz.", skip:"Eslab qoldim →", imgT:"streber.uz · kirish ma’lumotlari", imgName:"Ism", imgHow:"Boshqa telefondan: streber.uz → 👤 Kirish",
+      note:"Natijalaringiz (Yodlash, varaqlardagi javoblar) internetda saqlanadi: boshqa telefondan ham shu ism va parol bilan kirsangiz, natijalaringiz qaytadi. Ustoz ham ularni ko‘radi. Parolni eslab qoling.", cT:"☁️ Natijalaringizni saqlab qo‘yamiz", cL:"Endi natijalaringiz internetda ham saqlanadi — telefon almashsa yoki sayt manzili o‘zgarsa ham yo‘qolmaydi. Buning uchun parolingizni bir marta kiriting.", cGo:"Saqlash", cLater:"Keyinroq", cBad:"Parol noto‘g‘ri. Esingizda bo‘lmasa — «Parolni unutdim»ni bosing va ustozga ayting.", cChk:"☁️ Tekshirilmoqda…", eCloudPw:"Bu ism band, PIN/parol mos kelmadi. Bu siz bo‘lsangiz — qayta urinib ko‘ring yoki ustozga ayting. Yangi o‘quvchi bo‘lsangiz — familiyani qo‘shing.", rNoCloud:"Bunday ism bilan ro‘yxatdan o‘tilmagan.",
+      eName:"Ismingizni yozing", ePw:"Parol kamida 4 ta belgidan iborat bo‘lsin", eWrong:"Parol noto‘g‘ri. Qaytadan urinib ko‘ring.",
       you:"Siz:", out:"Chiqish", close:"Yopish", other:"Boshqa o‘quvchi bo‘lib kirish uchun «Chiqish»ni bosing.",
       warn:"⚠️ Ism va parolingizni albatta yozib oling! Parolni unutsangiz, uni faqat ustoz tiklay oladi.", forgot:"Parolni unutdim",
       saveT:"⚠️ Login va parolingizni yozib oling!", saveL:"Bu ma’lumotlarni daftaringizga yozing yoki saqlab qo‘ying. Parolni unutsangiz — faqat ustoz orqali tiklanadi, natijalaringizga kira olmay qolasiz.",
@@ -6114,9 +6119,13 @@ const ACCT={
       rNoUser:"Bu telefonda bunday ism bilan ro‘yxatdan o‘tilmagan.", rBadCode:"Ustoz kodi noto‘g‘ri.", back:"← Orqaga",
       here:"Bu telefonda ro‘yxatdan o‘tganlar — ismingizni bosing:", loginIs:"Login — bu ism va familiyangiz (katta-kichik harf farqi yo‘q).",
       sim:n=>`Siz avval «${n}» deb ro‘yxatdan o‘tgansiz shekilli. Bu sizmisiz?`, simYes:"Ha, bu men", simNo:"Yo‘q, men yangi o‘quvchiman"},
-  ru:{title:"Регистрация", lead:"Чтобы данные сохранялись, введите имя и пароль.", name:"Имя и фамилия", pw:"Пароль", namePh:"Например: Jamila Jamilova", pwPh:"Минимум 4 символа", go:"Войти",
-      note:"Ваши результаты (заучивание, ответы в листах) сохраняются в интернете: войдёте с другого телефона с тем же именем и паролем — результаты вернутся. Учитель тоже их видит. Запомните пароль.", cT:"☁️ Сохраним ваши результаты", cL:"Теперь результаты сохраняются и в интернете — не пропадут, даже если смените телефон или адрес сайта. Для этого один раз введите пароль.", cGo:"Сохранить", cLater:"Позже", cBad:"Неверный пароль. Если не помните — нажмите «Забыл пароль» и скажите учителю.", cChk:"☁️ Проверяем…", eCloudPw:"Ученик с таким именем уже есть, но пароль неверный. Если забыли пароль — скажите учителю.", rNoCloud:"Ученика с таким именем нет.",
-      eName:"Напишите имя и фамилию полностью", ePw:"Пароль — минимум 4 символа", eWrong:"Неверный пароль. Попробуйте ещё раз.",
+  ru:{title:"Сохраним ваши результаты 💾", lead:"Имя и 4 цифры — и всё.", name:"Ваше имя", pw:"Пароль", namePh:"Например: Jamila", pwPh:"Минимум 4 символа", go:"Продолжить →",
+      pin:"PIN из 4 цифр", pinHint:"Запомните цифры.", ePin:"PIN — 4 цифры", lT:"👤 Вход", lLead:"Ваше имя и PIN (или старый пароль).", lPw:"PIN или пароль", lGo:"Войти",
+      haveAcc:"Уже регистрировались?", newAcc:"Новый ученик?", reg:"Регистрация", refChip:"🎁 Вы пришли по приглашению друга", refAsk:"Есть код друга?",
+      taken:n=>`Имя «${n}» занято. Если это вы — введите свой PIN. Если вы новый ученик — добавьте фамилию: «${n} A.»`,
+      done:n=>`✅ Готово, ${n}!`, keep:"📌 Чтобы войти с другого телефона, нужны эти две вещи:", pinL:"PIN", shotB:"📸 Нажмите, чтобы сохранить картинку", shotOk:"✅ Картинка сохранена — в Галерее / «Загрузках»", shotNo:"Картинка не сохранилась — сделайте скриншот этого экрана.", shotHint:"Даже если не сохранилось, картинка остаётся на экране — сделайте скриншот сами.", skip:"Я запомнил(а) →", imgT:"streber.uz · данные для входа", imgName:"Имя", imgHow:"С другого телефона: streber.uz → 👤 Войти",
+      note:"Ваши результаты (заучивание, ответы в листах) сохраняются в интернете: войдёте с другого телефона с тем же именем и паролем — результаты вернутся. Учитель тоже их видит. Запомните пароль.", cT:"☁️ Сохраним ваши результаты", cL:"Теперь результаты сохраняются и в интернете — не пропадут, даже если смените телефон или адрес сайта. Для этого один раз введите пароль.", cGo:"Сохранить", cLater:"Позже", cBad:"Неверный пароль. Если не помните — нажмите «Забыл пароль» и скажите учителю.", cChk:"☁️ Проверяем…", eCloudPw:"Это имя занято, PIN/пароль не подходит. Если это вы — попробуйте ещё раз или скажите учителю. Если вы новый ученик — добавьте фамилию.", rNoCloud:"Ученика с таким именем нет.",
+      eName:"Напишите своё имя", ePw:"Пароль — минимум 4 символа", eWrong:"Неверный пароль. Попробуйте ещё раз.",
       you:"Вы:", out:"Выйти", close:"Закрыть", other:"Чтобы войти как другой ученик, нажмите «Выйти».",
       warn:"⚠️ Обязательно запишите имя и пароль! Если забудете пароль, восстановить его сможет только учитель.", forgot:"Забыл(а) пароль",
       saveT:"⚠️ Запишите логин и пароль!", saveL:"Запишите эти данные в тетрадь или сохраните. Если забудете пароль — восстановить можно только через учителя, иначе вы не войдёте к своим результатам.",
@@ -6136,22 +6145,40 @@ async function accHash(s){
 }
 function accEl(){ return document.getElementById("acc"); }
 function accLangRow(){ return `<div class="acc-lang">${["uz","ru"].map(l=>`<button type="button" data-acclang="${l}" aria-pressed="${state.lang===l}">${l.toUpperCase()}</button>`).join("")}</div>`; }
-function accLogin(){ if(window.BLITZ) return; /* Blitz saytida ro‘yxatdan o‘tish so‘ralmaydi (2026-10-22) */
-  const f=document.getElementById("acc-f");
-  f.innerHTML=`<div class="snd-h"><h2>${esc(at("title"))}</h2>${accLangRow()}${ACC.cur?"":`<button type="button" class="snd-x" data-acc="close" aria-label="✕">✕</button>`}</div>
-    <p class="acc-lead">${esc(at("lead"))}</p>
-    ${(()=>{ const U=accUsers(), ns=Object.values(U).map(u=>u.name).filter(Boolean).sort((a,b)=>a.localeCompare(b)); return ns.length?`<div class="acc-here"><small>${esc(at("here"))}</small><div>${ns.map(n=>`<button type="button" class="acc-nm" data-accnm="${esc(n)}">👤 ${esc(n)}</button>`).join("")}</div></div>`:""; })()}
-    <label class="acc-lb">${esc(at("name"))}<input id="acc-name" maxlength="40" autocomplete="name" placeholder="${esc(at("namePh"))}"><span class="acc-hint">${esc(at("loginIs"))}</span></label>
-    <label class="acc-lb">${esc(at("pw"))}<span class="acc-pw"><input id="acc-pw" type="password" maxlength="40" autocomplete="current-password" placeholder="${esc(at("pwPh"))}"><button type="button" class="acc-eye" data-acc="eye" aria-label="👁">👁</button></span></label>
-    ${mrOn()?`<label class="acc-lb acc-ref">${state.lang==="ru"?"Код друга (необязательно)":"Do‘stingiz kodi (ixtiyoriy)"}<input id="acc-ref" maxlength="8" autocomplete="off" autocapitalize="characters" placeholder="DIL7K2" value="${esc(localStorage.getItem("ref:by")||"")}"><span class="acc-hint" id="acc-refst">${hpRefOk(localStorage.getItem("ref:by"))?"✓":""}</span></label>`:""}
-    <div class="acc-warn">${esc(at("warn"))}</div>
+let ACC_MODE="reg";
+function accLogin(mode){ if(window.BLITZ) return; /* Blitz saytida ro‘yxatdan o‘tish so‘ralmaydi (2026-10-22) · 2026-10-23: oson ro‘yxat — ism + 4 raqamli PIN */
+  const f=document.getElementById("acc-f"), U=accUsers(), ns=Object.values(U).map(u=>u.name).filter(Boolean).sort((a,b)=>a.localeCompare(b));
+  ACC_MODE=mode||(ns.length?"in":"reg"); const reg=ACC_MODE==="reg", rb=hpRefOk(localStorage.getItem("ref:by")||"");
+  f.innerHTML=`<div class="snd-h"><h2>${esc(at(reg?"title":"lT"))}</h2>${accLangRow()}${ACC.cur?"":`<button type="button" class="snd-x" data-acc="close" aria-label="✕">✕</button>`}</div>
+    ${reg&&mrOn()&&rb?`<div class="acc-gift">${esc(at("refChip"))}</div>`:""}
+    <p class="acc-lead">${esc(at(reg?"lead":"lLead"))}</p>
+    ${ns.length?`<div class="acc-here"><small>${esc(at("here"))}</small><div>${ns.map(n=>`<button type="button" class="acc-nm" data-accnm="${esc(n)}">👤 ${esc(n)}</button>`).join("")}</div></div>`:""}
+    <label class="acc-lb">${esc(at("name"))}<input id="acc-name" maxlength="40" autocomplete="username" autocapitalize="words" placeholder="${esc(at("namePh"))}"><span class="acc-hint" id="acc-nst"></span></label>
+    ${reg?`<label class="acc-lb">${esc(at("pin"))}<span class="acc-pin"><i></i><i></i><i></i><i></i><input id="acc-pw" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="new-password" aria-label="PIN"></span><span class="acc-hint">${esc(at("pinHint"))}</span></label>`
+      :`<label class="acc-lb">${esc(at("lPw"))}<span class="acc-pw"><input id="acc-pw" type="password" maxlength="40" autocomplete="current-password" placeholder="••••"><button type="button" class="acc-eye" data-acc="eye" aria-label="👁">👁</button></span></label>`}
+    ${reg&&mrOn()?(rb?`<input type="hidden" id="acc-ref" value="${esc(rb)}">`:`<details class="acc-refd"><summary>${esc(at("refAsk"))}</summary><label class="acc-lb acc-ref"><input id="acc-ref" maxlength="8" autocomplete="off" autocapitalize="characters" placeholder="DIL7K2"><span class="acc-hint" id="acc-refst"></span></label></details>`):""}
     <div class="acc-st" id="acc-st"></div>
-    <button type="submit" class="btn primary">${esc(at("go"))}</button>
-    <button type="button" class="lrn-link acc-forgot" data-acc="forgot">🔑 ${esc(at("forgot"))}</button>
-    <p class="acc-note">${esc(at("note"))}</p>`;
+    <button type="submit" class="btn primary">${esc(at(reg?"go":"lGo"))}</button>
+    ${reg?`<p class="acc-sw">${esc(at("haveAcc"))} <button type="button" class="lrn-link" data-acc="min">${esc(at("lGo"))}</button></p>`
+      :`<p class="acc-sw">${esc(at("newAcc"))} <button type="button" class="lrn-link" data-acc="mreg">${esc(at("reg"))}</button></p><button type="button" class="lrn-link acc-forgot" data-acc="forgot">🔑 ${esc(at("forgot"))}</button>`}`;
   accEl().hidden=false; document.body.style.overflow="hidden";
   setTimeout(()=>{ const i=document.getElementById("acc-name"); if(i) i.focus(); },50);
 }
+/* PIN kataklari: 4 ta raqam, oxirgisi bir lahza ko‘rinadi */
+let ACC_PIN_T=null;
+function accPinPaint(show){ const w=document.querySelector("#acc-f .acc-pin"); if(!w) return; const v=w.querySelector("input").value; clearTimeout(ACC_PIN_T);
+  w.querySelectorAll("i").forEach((el,i)=>{ el.textContent=i<v.length?(show&&i===v.length-1?v[i]:"•"):""; el.classList.toggle("on",i<v.length); el.classList.toggle("cur",i===Math.min(v.length,3)); });
+  if(show) ACC_PIN_T=setTimeout(()=>accPinPaint(false),700); }
+document.addEventListener("input",e=>{ if(e.target.id!=="acc-pw"||!e.target.closest(".acc-pin")) return; const v=e.target.value.replace(/\D/g,"").slice(0,4); if(v!==e.target.value) e.target.value=v; accPinPaint(true);
+  if(v.length===4){ const st=document.getElementById("acc-st"); if(st&&st.className.includes("err")) st.textContent=""; } });
+/* Ism band-mi — yozayotganda tekshiramiz (faqat ro‘yxat rejimida) */
+let ACC_NT=null, ACC_NQ=0;
+function accNice(n){ return n===n.toLowerCase()?n.replace(/(^|\s)(\S)/g,(m,a,b)=>a+b.toUpperCase()):n; }
+document.addEventListener("input",e=>{ if(e.target.id!=="acc-name"||ACC_MODE!=="reg") return; clearTimeout(ACC_NT); const ns=document.getElementById("acc-nst"); if(ns){ ns.textContent=""; ns.className="acc-hint"; }
+  const name=accNice(e.target.value.replace(/\s+/g," ").trim()); if(name.length<2) return; const q=++ACC_NQ;
+  ACC_NT=setTimeout(async()=>{ const key=accKeyOf(name); let taken=!!accUsers()[key];
+    if(!taken&&CLOUD_ON){ try{ taken=!!(await fsGet("n/"+await cloudNameId(key))); }catch(er){} }
+    const n2=document.getElementById("acc-nst"); if(q!==ACC_NQ||!n2) return; if(taken){ n2.textContent=at("taken")(name); n2.className="acc-hint warn"; } },600); });
 function accMenu(){
   const f=document.getElementById("acc-f");
   f.innerHTML=`<div class="snd-h"><h2>👤</h2><button type="button" class="snd-x" data-acc="close" aria-label="✕">✕</button></div>
@@ -6170,10 +6197,10 @@ document.addEventListener("submit",async e=>{
   if(e.target.id!=="acc-f") return; e.preventDefault();
   if(document.getElementById("acc-cpw")){ cloudAskGo(); return; }
   const st=document.getElementById("acc-st"); if(!st) return;
-  const name=(document.getElementById("acc-name").value||"").replace(/\s+/g," ").trim(), pw=document.getElementById("acc-pw").value||"";
+  const name=accNice((document.getElementById("acc-name").value||"").replace(/\s+/g," ").trim()), pw=document.getElementById("acc-pw").value||"", isPin=!!document.querySelector("#acc-f .acc-pin");
   st.className="acc-st err";
-  if(name.length<3||!/\s/.test(name)){ st.textContent=at("eName"); document.getElementById("acc-name").focus(); return; }
-  if(pw.length<4){ st.textContent=at("ePw"); document.getElementById("acc-pw").focus(); return; }
+  if(name.length<2){ st.textContent=at("eName"); document.getElementById("acc-name").focus(); return; }
+  if(isPin?!/^\d{4}$/.test(pw):pw.length<4){ st.textContent=at(isPin?"ePin":"ePw"); document.getElementById("acc-pw").focus(); return; }
   try{ const ri=document.getElementById("acc-ref"); if(ri){ const rc=hpRefOk(ri.value); if(ri.value.trim()&&!rc){ st.textContent=state.lang==="ru"?"Код друга: 6 символов (например DIL7K2)":"Do‘st kodi 6 belgi bo‘ladi (masalan DIL7K2)"; ri.focus(); return; } if(rc) localStorage.setItem("ref:by",rc); } }catch(err){}
   const U=accUsers(), key=accKeyOf(name), first=!Object.keys(U).length;
   if(U[key]){ const hh=await accHash(U[key].s+":"+pw); if(hh!==U[key].h){ st.textContent=at("eWrong"); document.getElementById("acc-pw").select(); return; }
@@ -6203,16 +6230,41 @@ document.addEventListener("submit",async e=>{
 let ACC_SAVE=null, ACC_NEWOK=false;
 function accLev(a,b){ const d=Array.from({length:a.length+1},(_,i)=>[i]); for(let j=1;j<=b.length;j++) d[0][j]=j;
   for(let i=1;i<=a.length;i++) for(let j=1;j<=b.length;j++) d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1)); return d[a.length][b.length]; }
-function accSaveScreen(name,pw,done){ ACC_SAVE=done; const f=document.getElementById("acc-f");
-  f.innerHTML=`<div class="snd-h"><h2>${esc(at("saveT"))}</h2></div>
-    <p class="acc-lead">${esc(at("saveL"))}</p>
-    <div class="acc-cred"><div><small>${esc(at("login"))}</small><b>${esc(name)}</b></div><div><small>${esc(at("pw"))}</small><b class="mono">${esc(pw)}</b></div></div>
-    <div class="ch-btns"><button type="button" class="btn" data-acc="ccopy" data-t="${esc(at("tgText")(name,pw))}">${esc(at("copy"))}</button>
-      <a class="btn" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(CH_SITE)}&text=${encodeURIComponent(at("tgText")(name,pw))}">${esc(at("tg"))}</a></div>
-    <p class="acc-note">${esc(at("shot"))}</p>
-    <label class="acc-chk"><input type="checkbox" id="acc-ok"> ${esc(at("chk"))}</label>
-    <button type="button" class="btn primary" data-acc="saved" id="acc-cont" disabled>${esc(at("cont"))}</button>`;
-  accEl().hidden=false; document.body.style.overflow="hidden"; }
+let ACC_SHOT=null;
+function accSaveScreen(name,pw,done){ ACC_SAVE=done; ACC_SHOT=null; const f=document.getElementById("acc-f"), pin=/^\d{4}$/.test(pw), pv=pin?pw.split("").join(" "):pw;
+  f.innerHTML=`<div class="snd-h"><h2>${esc(at("done")(name.split(" ")[0]))}</h2></div>
+    <div class="acc-save"><p>${esc(at("keep"))}</p>
+      <div class="acc-cred"><div><small>${esc(at("login"))}</small><b>${esc(name)}</b></div><div><small>${esc(pin?at("pinL"):at("pw"))}</small><b class="mono">${esc(pv)}</b></div></div>
+      <button type="button" class="btn primary acc-shot" data-acc="shot">${esc(at("shotB"))}</button>
+      <div class="acc-shst" id="acc-shst"></div>
+      <img id="acc-shimg" alt="" hidden>
+      <p class="acc-note">${esc(at("shotHint"))}</p></div>
+    <button type="button" class="btn" data-acc="saved" id="acc-cont" disabled>${esc(at("cont"))}</button>
+    <button type="button" class="lrn-link acc-forgot" data-acc="skip">${esc(at("skip"))}</button>`;
+  accEl().hidden=false; document.body.style.overflow="hidden";
+  accShotMake(name,pv,pin).then(r=>{ ACC_SHOT=r; }).catch(()=>{}); }
+/* Kirish ma’lumotlari rasmi (PNG) — oldindan tayyorlanadi, chunki iPhone’da ulashish bosilgan zahoti chaqirilishi kerak */
+async function accShotMake(name,pv,pin){ try{ await document.fonts.load('800 80px Nunito'); }catch(e){}
+  const c=document.createElement("canvas"); c.width=1080; c.height=1080; const x=c.getContext("2d"), F="Nunito,system-ui,sans-serif";
+  const g=x.createLinearGradient(0,0,1080,1080); g.addColorStop(0,"#1F4FA0"); g.addColorStop(1,"#12305F"); x.fillStyle=g; x.fillRect(0,0,1080,1080);
+  x.fillStyle="#fff"; x.beginPath(); if(x.roundRect) x.roundRect(90,250,900,560,48); else x.rect(90,250,900,560); x.fill();
+  x.textAlign="center"; x.fillStyle="#fff"; x.font="700 44px "+F; x.fillText("🔑 "+at("imgT"),540,165);
+  const fit=(t,max,px,w)=>{ let p=px; do{ x.font=w+" "+p+"px "+F; p-=4; }while(x.measureText(t).width>max&&p>30); };
+  x.fillStyle="#667085"; x.font="700 40px "+F; x.fillText(at("imgName"),540,350);
+  x.fillStyle="#1d2433"; fit(name,800,92,"800"); x.fillText(name,540,450);
+  x.fillStyle="#667085"; x.font="700 40px "+F; x.fillText(pin?at("pinL"):at("pw"),540,560);
+  x.fillStyle="#1F4FA0"; fit(pv,800,130,"900"); x.fillText(pv,540,700);
+  x.fillStyle="rgba(255,255,255,.9)"; x.font="600 36px "+F; x.fillText(at("imgHow"),540,900); x.font="600 32px "+F; x.fillText(new Date().toLocaleDateString("ru-RU"),540,960);
+  const blob=await new Promise(r=>c.toBlob(r,"image/png")); return {blob,url:URL.createObjectURL(blob),file:new File([blob],"streber-kirish.png",{type:"image/png"})}; }
+async function accShot(btn){ const st=document.getElementById("acc-shst"), im=document.getElementById("acc-shimg"), cont=document.getElementById("acc-cont");
+  let r=ACC_SHOT; let ok=false;
+  if(r&&appIOS()&&navigator.canShare&&navigator.canShare({files:[r.file]})){ try{ await navigator.share({files:[r.file]}); ok=true; }catch(e){ ok=false; } }
+  else{ if(!r){ const c=document.querySelector("#acc-f .acc-cred"), b=c?c.querySelectorAll("b"):[]; try{ r=ACC_SHOT=await accShotMake(b[0].textContent,b[1].textContent,/^\d( \d){3}$/.test(b[1].textContent)); }catch(e){} }
+    if(r){ try{ const a=document.createElement("a"); a.href=r.url; a.download="streber-kirish.png"; document.body.appendChild(a); a.click(); a.remove(); ok=true; }catch(e){} } }
+  if(r&&im){ im.src=r.url; im.hidden=false; }
+  if(st){ st.textContent=at(ok?"shotOk":"shotNo"); st.className="acc-shst "+(ok?"ok":"no"); }
+  if(cont){ cont.disabled=false; cont.classList.add("primary"); } btn.classList.remove("primary");
+  try{ actEv("reg","shot"+(ok?"":"0")); }catch(e){} }
 function accForgot(){ const f=document.getElementById("acc-f"), nm=(document.getElementById("acc-name")||{}).value||"";
   f.innerHTML=`<div class="snd-h"><h2>${esc(at("rT"))}</h2></div><p class="acc-lead">${esc(at("rL"))}</p>
     <label class="acc-lb">${esc(at("name"))}<input id="acc-rname" maxlength="40" value="${esc(nm)}" placeholder="${esc(at("namePh"))}"></label>
@@ -6243,16 +6295,18 @@ async function accReset(){ const st=document.getElementById("acc-rst"), name=(do
     if(CLOUD_ON){ try{ U2[key].c=await cloudCap(key,pw); localStorage.removeItem("cloud:h:"+key); }catch(err){} }
     try{ localStorage.setItem("acc:users",JSON.stringify(U2)); localStorage.setItem("acc:cur",key); }catch(err){} location.reload(); }); }
 document.addEventListener("click",e=>{
-  const lg=e.target.closest("[data-acclang]"); if(lg){ const b=document.getElementById("lang-"+lg.dataset.acclang); if(b) b.click(); const nm=document.getElementById("acc-name"), v=nm?nm.value:""; accLogin(); const n2=document.getElementById("acc-name"); if(n2) n2.value=v; return; }
-  const an=e.target.closest("[data-accnm]"); if(an){ const i=document.getElementById("acc-name"); if(i){ i.value=an.dataset.accnm; const st=document.getElementById("acc-st"); if(st){ st.textContent=""; } const pw=document.getElementById("acc-pw"); if(pw) pw.focus(); } return; }
+  const lg=e.target.closest("[data-acclang]"); if(lg){ const b=document.getElementById("lang-"+lg.dataset.acclang); if(b) b.click(); const nm=document.getElementById("acc-name"), v=nm?nm.value:""; accLogin(document.getElementById("acc-cont")?undefined:ACC_MODE); const n2=document.getElementById("acc-name"); if(n2) n2.value=v; return; }
+  const an=e.target.closest("[data-accnm]"); if(an){ if(ACC_MODE==="reg") accLogin("in"); const i=document.getElementById("acc-name"); if(i){ i.value=an.dataset.accnm; const st=document.getElementById("acc-st"); if(st){ st.textContent=""; } const pw=document.getElementById("acc-pw"); if(pw) pw.focus(); } return; }
   const a=e.target.closest("[data-acc]"); if(a){ const k=a.dataset.acc;
     if(k==="eye"){ const p=document.getElementById("acc-pw"); p.type=p.type==="password"?"text":"password"; }
     else if(k==="close"){ accEl().hidden=true; document.body.style.overflow=document.querySelector(".lrn:not([hidden])")?"hidden":""; }
     else if(k==="newok"){ ACC_NEWOK=true; document.getElementById("acc-f").requestSubmit(); }
-    else if(k==="forgot") accForgot(); else if(k==="rback") accLogin(); else if(k==="rgo") accReset();
+    else if(k==="forgot") accForgot(); else if(k==="rback") accLogin("in"); else if(k==="rgo") accReset();
     else if(k==="cgo") cloudAskGo(); else if(k==="ceye"){ const p=document.getElementById("acc-cpw"); if(p) p.type=p.type==="password"?"text":"password"; }
     else if(k==="clater"){ try{ sessionStorage.setItem("cloud:later","1"); }catch(err){} accEl().hidden=true; document.body.style.overflow=""; }
-    else if(k==="saved"){ if(document.getElementById("acc-ok").checked && ACC_SAVE) ACC_SAVE(); }
+    else if(k==="saved"||k==="skip"){ if(ACC_SAVE){ const d=ACC_SAVE; ACC_SAVE=null; d(); } }
+    else if(k==="shot") accShot(a);
+    else if(k==="min"||k==="mreg"){ const v=(document.getElementById("acc-name")||{}).value||""; accLogin(k==="min"?"in":"reg"); const n2=document.getElementById("acc-name"); if(n2){ n2.value=v; if(v) (document.getElementById("acc-pw")||n2).focus(); } }
     else if(k==="ccopy"){ const t=a.dataset.t; (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{ a.textContent=at("copied"); }).catch(()=>{ prompt("",t); }); }
     else if(k==="out"){ try{ localStorage.removeItem("acc:cur"); }catch(err){} location.reload(); }
     return; }
