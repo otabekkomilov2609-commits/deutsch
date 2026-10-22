@@ -303,7 +303,7 @@ main{padding-block:6px 40px}
 .lrn-end{align-items:center;text-align:center}.lrn-end .big{font-size:52px}.lrn-end p{margin:0;color:var(--muted)}.lrn-end .btn{padding:11px 22px;font-size:15px;cursor:pointer}
 .lrn-gq h3{margin:0 0 4px;font-size:22px;text-align:center}.lrn-gq .lrn-count{text-align:center}.lrn-gopts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.lrn-gb{font:inherit;font-size:24px;font-weight:800;padding:16px 4px;border:2px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);box-shadow:0 4px 0 var(--line);cursor:pointer}.lrn-gb.all{font-size:18px}.lrn-gb.on{border-color:var(--blue);background:var(--blue-soft);box-shadow:0 4px 0 var(--blue)}.lrn-gb:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}.lrn-gown{display:flex;gap:8px}.lrn-gown input{flex:1;min-width:0;font:inherit;font-size:17px;padding:12px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}.lrn-gown.need input{border-color:#C62828;animation:lrnShake .35s}.lrn-gtip{text-align:center;color:var(--muted);margin:14px 0 0}.lrn-intro-h{text-align:center;font-weight:800;color:var(--muted);margin:0 0 10px}.lrn-intro{cursor:default;min-height:260px}.lrn-itr{font-size:19px;color:var(--muted);font-weight:700}.lrn-flash{min-height:300px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;font:inherit;cursor:pointer}
 .lrn-flash.flip{background:var(--blue-soft)}.lrn-fm{display:inline-block;font-size:15px;font-weight:600;color:var(--muted);letter-spacing:.01em}.lrn-flash .lrn-fm{font-size:17px;margin-top:-6px}.lrn-flash .lrn-q.de{color:var(--blue)}.lrn-tap{font-size:13px;color:var(--muted)}
-.lrn-say-row{display:flex;justify-content:center}.kc-tg{margin-top:0}.kc-next{flex:1;font-size:17px}.kc-tg .tg-ph{font-size:14px}.lrn-flash{position:relative}.lrn-flash .kc-bn{position:absolute;left:0;right:0;bottom:0;border-radius:0 0 18px 18px;padding:6px 12px;font-size:13px;line-height:1.3;text-align:center;border-top:1px solid rgba(0,0,0,.06)}.lrn-flash:has(.kc-bn){padding-bottom:44px}.kc-bn.ok{background:#E3F6EA;color:#1E8E4E}.kc-bn.bad{background:#FFE4E4;color:#B42318}.kc-bn.mid{background:var(--ylw,#FFF3C4);color:#7a5a00}
+.lrn-say-row{display:flex;justify-content:center}.kc-tg{margin-top:0}.kc-next{flex:1;font-size:17px}.kc-tg .tg-ph{font-size:14px}.lrn-flash{position:relative}.kc-spk{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;font-size:18px;box-shadow:0 2px 8px rgba(0,0,0,.08);cursor:pointer;transition:all .2s}.kc-spk.play{background:var(--blue,#1F4FA0);color:#fff;border-color:var(--blue,#1F4FA0);box-shadow:0 0 0 6px rgba(31,79,160,.15);animation:kcSpk 1s infinite}@keyframes kcSpk{50%{box-shadow:0 0 0 10px rgba(31,79,160,.08)}}.lrn-flash .kc-bn{position:absolute;left:0;right:0;bottom:0;border-radius:0 0 18px 18px;padding:6px 12px;font-size:13px;line-height:1.3;text-align:center;border-top:1px solid rgba(0,0,0,.06)}.lrn-flash:has(.kc-bn){padding-bottom:44px}.kc-bn.ok{background:#E3F6EA;color:#1E8E4E}.kc-bn.bad{background:#FFE4E4;color:#B42318}.kc-bn.mid{background:var(--ylw,#FFF3C4);color:#7a5a00}
 .lrn-kn{display:grid;grid-template-columns:1fr 1fr;gap:10px}.lrn-kn .btn{padding:14px;font-size:16px;cursor:pointer}
 .lrn-no{border-color:#E3B6B6;color:#C62828}.lrn-yes{border-color:var(--green);color:var(--green)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lrn-fb.bad,:root:not([data-theme="light"]) .lrn-opt.bad{background:#3a1d1d;color:inherit}}
@@ -5262,7 +5262,7 @@ function kcMicRow(){ if(!kcCan()) return ""; const uz=state.lang!=="ru"; return 
 function kcBanner(x){ const r=KC.res; if(!r||r.i!==x.i) return ""; const uz=state.lang!=="ru";
   if(r.unclear) return `<span class="kc-bn mid">🎙 ${uz?"Yaxshi eshitmadim — yana urinib ko‘ring":"Плохо слышно — попробуйте ещё"}</span>`;
   const low=r.ok&&r.sc!=null&&r.sc<60;
-  return `<span class="kc-bn ${r.ok?(low?"mid":"ok"):"bad"}">🎙 ${uz?"Siz":"Вы"}: <b>${esc(r.heard||"—")}</b> ${r.ok?"✅":"❌"}${r.sc!=null?` 🎯 ${r.sc}%`:""}${r.art?` · ${uz?"artikel":"артикль"}: <b>${esc(r.art)}</b>`:""}${low?` · ${uz?"aniqroq ayting":"чётче"}`:""}</span>`; }
+  return `<span class="kc-bn ${r.ok?(low?"mid":"ok"):"bad"}">🎙 Sie: <b>${esc(r.heard||"—")}</b> ${r.ok?"✅":"❌"}${r.sc!=null?` 🎯 ${r.sc}%`:""}${r.art?` · ${uz?"artikel":"артикль"}: <b>${esc(r.art)}</b>`:""}${low?` · ${uz?"aniqroq ayting":"чётче"}`:""}</span>`; }
 function kcRef(x){ return String(x.full||x.de||"").replace(/\([^)]*\)/g," ").replace(/,.*$/,"").replace(/\s+/g," ").trim(); } /* «das Paar, -e» → «das Paar» */
 function kcWords(s){ return String(s).toLowerCase().replace(/\([^)]*\)/g," ").replace(/[^a-zäöüß0-9\s-]/g," ").split(/[\s-]+/).filter(Boolean); }
 function kcMatch(expect,heard){ const E=kcWords(expect), H=kcWords(heard); if(!E.length||!H.length) return false;
@@ -5299,7 +5299,8 @@ async function kcDone(x){ const dur=(Date.now()-KC.t0)/1000; let heard="", sc=nu
   KC.res={i:x.i,heard,sc,ok,unclear,art}; try{ actEv("kc",ok?"ok":unclear?"unclear":"bad"); }catch(e){}
   if(unclear){ lrnCard(); return; }
   /* to'g'ri aytsa: karta aylanadi, so'z yangraydi, tugma «Weiter →» bo'ladi (2026-10-23, Otabek) */
-  LR.flip=true; lrnCard(); if(ok){ setTimeout(()=>{ try{ if(LR.mode==="cards"&&LR.cards[0]===x) lrnSay(x.say||x.de); }catch(e){} },350); } }
+  LR.flip=true; lrnCard(); if(ok){ setTimeout(()=>{ try{ if(LR.mode==="cards"&&LR.cards[0]===x){ lrnSay(x.say||x.de); kcSpkPulse(); } }catch(e){} },350); } }
+function kcSpkPulse(){ const el=document.querySelector(".kc-spk"); if(!el) return; el.classList.add("play"); clearTimeout(KC.pt); KC.pt=setTimeout(()=>el.classList.remove("play"),1800); }
 function kcRelease(){ clearTimeout(KC.tm); clearTimeout(KC.lt); KC.on=false; KC.busy=false; try{ if(KC.sr) KC.sr.abort(); }catch(e){} try{ if(KC.rec&&KC.rec.state==="recording"){ KC.rec.onstop=null; KC.rec.stop(); } }catch(e){} try{ if(KC.st) KC.st.getTracks().forEach(t=>t.stop()); }catch(e){} KC.st=null; KC.rec=null; KC.sr=null; }
 function lrnStartCards(){ LR.mode="cards"; LR.cHist=[]; const KN=lrnKnown(), all=lrnItems(); const un=lrnShuffle(all.filter(x=>!KN.has(x.i))); LR.cards=un.slice(0,lrnGoal()||un.length); LR.cardsN=LR.cards.length; LR.cardsRest=un.length-LR.cards.length; LR.allKnown=!un.length&&all.length>0; LR.flip=false; lrnCard(); }
 function lrnCard(){
@@ -5307,9 +5308,9 @@ function lrnCard(){
   const x=LR.cards[0];
   lrnEl().innerHTML=`${lrnHead(`<span class="lrn-left">${esc(lt("left")(LR.cards.length))}</span>`)}<div class="lrn-body">
     <button type="button" class="lrn-flash${LR.flip?" flip":""}" data-l="flip" aria-live="polite">
-      ${LR.flip?`<span class="lrn-q de">${esc(x.full)}</span>${x.fm?`<span class="lrn-fm">${esc(x.fm)}</span>`:""}${x.ex?`<span class="lrn-ex">${esc(x.ex)}</span>`:""}${kcBanner(x)}`:`<span class="lrn-q">${esc(x.ru)}</span>`}
+      ${LR.flip?`<span class="kc-spk" role="button" aria-label="🔊" data-say="${esc(x.say||x.de)}">🔊</span><span class="lrn-q de">${esc(x.full)}</span>${x.fm?`<span class="lrn-fm">${esc(x.fm)}</span>`:""}${x.ex?`<span class="lrn-ex">${esc(x.ex)}</span>`:""}${kcBanner(x)}`:`<span class="lrn-q">${esc(x.ru)}</span>`}
     </button>
-    ${LR.flip?`<div class="lrn-say-row"><button type="button" class="lrn-say" data-say="${esc(x.say||x.de)}">🔊</button></div>`:kcMicRow()}
+    ${LR.flip?``:kcMicRow()}
     ${KC.res&&KC.res.i===x.i&&KC.res.ok&&LR.flip?`<div class="lrn-kn"><button type="button" class="btn lrn-yes kc-next" data-l="yes">Weiter →</button></div>`:`<div class="lrn-kn"><button type="button" class="btn lrn-no" data-l="no">${esc(lt("dontknow"))}</button><button type="button" class="btn lrn-yes" data-l="yes">${esc(lt("know"))}</button></div>`}
     ${LR.cHist&&LR.cHist.length?`<div class="lrn-back"><button type="button" class="lrn-link" data-l="cundo">← Zurück</button></div>`:""}
   </div>`;
@@ -5320,7 +5321,7 @@ document.addEventListener("click",e=>{
   const lb=e.target.closest("[data-lern]"); if(lb){ e.preventDefault(); lrnOpen(lb.dataset.lern);
     if(lb.dataset.les){ const n=+lb.dataset.les; LR.sel=new Set([n]); try{ store.set(lrnKey(lb.dataset.lern)+":sel",JSON.stringify([n])); }catch(err){} lrnList(n); } return; }
   const root=lrnEl(); if(!root||root.hidden||!root.contains(e.target)) return;
-  const say=e.target.closest("[data-say]"); if(say){ lrnSay(say.dataset.say); return; }
+  const say=e.target.closest("[data-say]"); if(say){ lrnSay(say.dataset.say); if(say.classList.contains("kc-spk")) kcSpkPulse(); return; }
   const ch=e.target.closest("[data-ch]"); if(ch){ const i=document.getElementById("lrn-in"); if(i){ const p=i.selectionStart??i.value.length; i.value=i.value.slice(0,p)+ch.dataset.ch+i.value.slice(i.selectionEnd??p); i.focus(); i.setSelectionRange(p+1,p+1); } return; }
   const hf=e.target.closest("#lrn [data-half]"); if(hf){ LR.half=+hf.dataset.half; lrnSetup(); return; }
   const ls=e.target.closest("[data-les]"); if(ls){ const n=+ls.dataset.les; LR.sel.has(n)?LR.sel.delete(n):LR.sel.add(n); store.set(lrnKey(LR.id)+":sel",JSON.stringify([...LR.sel])); lrnSetup(); return; }
