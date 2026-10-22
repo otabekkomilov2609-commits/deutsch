@@ -15,12 +15,12 @@ Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — va yuti
 **Ballar:**
 🔗 Kimdir linkingiz / QR / kodingizni ochdi — +1
 👥 Siz orqali kelgan odam ro'yxatdan o'tdi — +1
-🎓 Siz orqali qo'shilgan odam 100 ta so'z o'rgandi yoki 5 ta grammatika mashqini bajardi — +6
+🎓 Siz orqali qo'shilgan odam 100 ta so'zni yodladi yoki 5 ta grammatika mashqini qildi — +6
 📲 O'zingiz ilovani o'rnatdingiz — +10
 ⚡ Challenge'ingizda yangi odam o'ynadi — +2
 👎 Saytdagi xatoni topdingiz (ustoz tasdiqlasa) — +1
 
-**Sovrinni kim oladi:** eng ko'p ball yig'gan va kamida 4 ta jonli odam olib kelgan ishtirokchi. Jonli odam — linkingiz bilan kelib, 100 so'z yoki 5 ta grammatika mashqini bajargan odam. Saytda har biri qancha o'rganganini ko'rib turasiz. Soxta akkauntlar tekshiriladi. E'lon — 18-noyabr.
+**Sovrinni kim oladi:** eng ko'p ball yig'gan va kamida 4 ta jonli odam olib kelgan ishtirokchi. Jonli odam — linkingiz bilan kelib, 100 so'zni yodlagan yoki 5 ta grammatika mashqini qilgan odam. Saytda har biri qancha o'rganganini ko'rib turasiz. Soxta akkauntlar tekshiriladi. E'lon — 18-noyabr.
 
 Linkingiz va kodingiz: bosh sahifadagi 📣 karta → «Linkimni yuborish».
 To'liq qoidalar: o'sha kartada → «Qoidalar».
