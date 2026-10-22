@@ -6034,7 +6034,7 @@ async function accHash(s){
 }
 function accEl(){ return document.getElementById("acc"); }
 function accLangRow(){ return `<div class="acc-lang">${["uz","ru"].map(l=>`<button type="button" data-acclang="${l}" aria-pressed="${state.lang===l}">${l.toUpperCase()}</button>`).join("")}</div>`; }
-function accLogin(){
+function accLogin(){ if(window.BLITZ) return; /* Blitz saytida ro‘yxatdan o‘tish so‘ralmaydi (2026-10-22) */
   const f=document.getElementById("acc-f");
   f.innerHTML=`<div class="snd-h"><h2>${esc(at("title"))}</h2>${accLangRow()}${ACC.cur?"":`<button type="button" class="snd-x" data-acc="close" aria-label="✕">✕</button>`}</div>
     <p class="acc-lead">${esc(at("lead"))}</p>
