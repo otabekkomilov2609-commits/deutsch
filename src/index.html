@@ -303,7 +303,7 @@ main{padding-block:6px 40px}
 .lrn-end{align-items:center;text-align:center}.lrn-end .big{font-size:52px}.lrn-end p{margin:0;color:var(--muted)}.lrn-end .btn{padding:11px 22px;font-size:15px;cursor:pointer}
 .lrn-gq h3{margin:0 0 4px;font-size:22px;text-align:center}.lrn-gq .lrn-count{text-align:center}.lrn-gopts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.lrn-gb{font:inherit;font-size:24px;font-weight:800;padding:16px 4px;border:2px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);box-shadow:0 4px 0 var(--line);cursor:pointer}.lrn-gb.all{font-size:18px}.lrn-gb.on{border-color:var(--blue);background:var(--blue-soft);box-shadow:0 4px 0 var(--blue)}.lrn-gb:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}.lrn-gown{display:flex;gap:8px}.lrn-gown input{flex:1;min-width:0;font:inherit;font-size:17px;padding:12px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}.lrn-gown.need input{border-color:#C62828;animation:lrnShake .35s}.lrn-gtip{text-align:center;color:var(--muted);margin:14px 0 0}.lrn-intro-h{text-align:center;font-weight:800;color:var(--muted);margin:0 0 10px}.lrn-intro{cursor:default;min-height:260px}.lrn-itr{font-size:19px;color:var(--muted);font-weight:700}.lrn-flash{min-height:300px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;font:inherit;cursor:pointer}
 .lrn-flash.flip{background:var(--blue-soft)}.lrn-fm{display:inline-block;font-size:15px;font-weight:600;color:var(--muted);letter-spacing:.01em}.lrn-flash .lrn-fm{font-size:17px;margin-top:-6px}.lrn-flash .lrn-q.de{color:var(--blue)}.lrn-tap{font-size:13px;color:var(--muted)}
-.lrn-say-row{display:flex;justify-content:center}.kc-row{display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:-4px}.kc-mic{font-size:16px}.kc-mic.on{background:#E5484D;color:#fff;border-color:#E5484D;animation:kcPulse 1s infinite}@keyframes kcPulse{50%{box-shadow:0 0 0 8px rgba(229,72,77,.18)}}.kc-st{font-size:13.5px;color:var(--muted)}.kc-bn{border-radius:12px;padding:8px 12px;font-size:14.5px;text-align:center;margin-top:-4px}.kc-bn.ok{background:#E3F6EA;color:#1E8E4E}.kc-bn.bad{background:#FFE4E4;color:#B42318}.kc-bn.mid{background:var(--ylw,#FFF3C4);color:#7a5a00}
+.lrn-say-row{display:flex;justify-content:center}.kc-tg{margin-top:0}.kc-tg .tg-ph{font-size:14px}.kc-bn{border-radius:12px;padding:8px 12px;font-size:14.5px;text-align:center;margin-top:-4px}.kc-bn.ok{background:#E3F6EA;color:#1E8E4E}.kc-bn.bad{background:#FFE4E4;color:#B42318}.kc-bn.mid{background:var(--ylw,#FFF3C4);color:#7a5a00}
 .lrn-kn{display:grid;grid-template-columns:1fr 1fr;gap:10px}.lrn-kn .btn{padding:14px;font-size:16px;cursor:pointer}
 .lrn-no{border-color:#E3B6B6;color:#C62828}.lrn-yes{border-color:var(--green);color:var(--green)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lrn-fb.bad,:root:not([data-theme="light"]) .lrn-opt.bad{background:#3a1d1d;color:inherit}}
@@ -4414,7 +4414,11 @@ async function spAzRun(it,blob){ const mode=spMode(it); const [SDK,T,wav]=await 
 document.addEventListener("pointerdown",e=>{ const b=e.target.closest&&e.target.closest("#sp2-mic"); if(!b||b.disabled) return; e.preventDefault(); try{ b.setPointerCapture(e.pointerId); }catch(er){} SPR.x0=e.clientX||0; spRecStart(); });
 document.addEventListener("pointermove",e=>{ if(!SPR.want) return; const dx=Math.min(0,(e.clientX||0)-SPR.x0), cn=document.getElementById("sp2-cnl"); if(cn){ cn.style.transform=`translateX(${Math.round(dx*.6)}px)`; cn.style.opacity=String(Math.max(.2,1+dx/140)); } if(dx<-90){ SPR.cancel=true; spRecStop(); } });
 ["pointerup","pointercancel"].forEach(tp=>document.addEventListener(tp,e=>{ if(SPR.want||(SPR.rec&&SPR.rec.state==="recording")) spRecStop(); }));
-document.addEventListener("contextmenu",e=>{ if(e.target.closest&&e.target.closest("#sp2-mic")) e.preventDefault(); });
+document.addEventListener("contextmenu",e=>{ if(e.target.closest&&e.target.closest("#sp2-mic,#kc-mic")) e.preventDefault(); });
+/* Karteikarten mikrofoni — xuddi shu Telegram uslubi (2026-10-23) */
+document.addEventListener("pointerdown",e=>{ const b=e.target.closest&&e.target.closest("#kc-mic"); if(!b) return; e.preventDefault(); e.stopPropagation(); try{ b.setPointerCapture(e.pointerId); }catch(er){} KC.x0=e.clientX||0; kcStart(); },true);
+document.addEventListener("pointermove",e=>{ if(!KC.on) return; const dx=Math.min(0,(e.clientX||0)-KC.x0), cn=document.getElementById("kc-cnl"); if(cn){ cn.style.transform=`translateX(${Math.round(dx*.6)}px)`; cn.style.opacity=String(Math.max(.2,1+dx/140)); } if(dx<-90) kcStop(true); });
+["pointerup","pointercancel"].forEach(tp=>document.addEventListener(tp,e=>{ if(KC.on) kcStop(); }));
 document.addEventListener("keydown",e=>{ if((e.key===" "||e.key==="Enter")&&e.target&&e.target.id==="sp2-mic"&&!e.repeat){ e.preventDefault(); if(!SPR.want) spRecStart(); } });
 document.addEventListener("keyup",e=>{ if((e.key===" "||e.key==="Enter")&&e.target&&e.target.id==="sp2-mic"){ e.preventDefault(); if(SPR.want) spRecStop(); } });
 
@@ -5254,7 +5258,7 @@ function lrnGameBlock(){ const uz=state.lang!=="ru"; try{ if(!LR.id||!LR.sel||!L
    old tomonda 🎤 → o'quvchi nemischasini aytadi → Azure (talaffuz bahosi) yoki brauzer tanishi → to'g'ri bo'lsa karta o'zi ochilib «Bilaman»ga o'tadi, xato bo'lsa ochilib eshitilgan matn qizil ko'rsatiladi */
 const KC={rec:null,sr:null,st:null,on:false,txt:"",chunks:[],t0:0,tm:null,res:null,busy:false};
 function kcCan(){ return !IN_ARTIFACT&&!!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia)&&((azOn()&&AZ.ok)||!!(window.SpeechRecognition||window.webkitSpeechRecognition)); }
-function kcMicRow(){ if(!kcCan()) return ""; const uz=state.lang!=="ru"; return `<div class="kc-row"><button type="button" class="btn kc-mic${KC.on?" on":""}" data-l="kcmic">${KC.on?"⏹ "+(uz?"To‘xtatish":"Стоп"):"🎤 "+(uz?"Ayting":"Скажите")}</button><div class="kc-st" id="kc-st">${KC.on?(uz?"Eshityapman… nemischasini ayting":"Слушаю… скажите по-немецки"):KC.busy?"⏳":(uz?"yoki kartani bosib oching":"или откройте карточку")}</div></div>`; }
+function kcMicRow(){ if(!kcCan()) return ""; const uz=state.lang!=="ru"; return `<div class="sp2-tg kc-tg${KC.on?" on":""}" id="kc-tg"><span class="tg-ph" id="kc-lb">${KC.busy?"⏳ "+(uz?"Tekshiryapman…":"Проверяю…"):(uz?"🎙 Nemischasini ayting — mikrofonni bosib turing":"🎙 Скажите по-немецки — держите микрофон")}</span><span class="tg-dot"></span><span class="tg-tm" id="kc-tm">0:00,0</span><span class="tg-live" id="kc-live"></span><span class="tg-cnl" id="kc-cnl">‹ ${uz?"Chapga — bekor":"Влево — отмена"}</span><button type="button" class="tg-mic" id="kc-mic" aria-label="🎙">🎙</button></div>`; }
 function kcBanner(x){ const r=KC.res; if(!r||r.i!==x.i) return ""; const uz=state.lang!=="ru";
   if(r.unclear) return `<div class="kc-bn mid">🎙 ${uz?"Yaxshi eshitmadim — yana urinib ko‘ring":"Плохо слышно — попробуйте ещё"}</div>`;
   return `<div class="kc-bn ${r.ok?"ok":"bad"}">${r.ok?"✅":"❌"} ${uz?"Siz":"Вы"}: <b>${esc(r.heard||"—")}</b>${r.sc!=null?` · 🎯 ${r.sc}%`:""}${r.ok?"":` · ${uz?"to‘g‘risi":"правильно"}: <b>${esc(x.full)}</b>`}</div>`; }
@@ -5273,22 +5277,28 @@ async function kcStart(){ if(KC.on||KC.busy) return; const x=LR.cards[0]; if(!x)
   KC.chunks=[]; KC.txt=""; KC.res=null; try{ KC.rec=new MediaRecorder(st,mt?{mimeType:mt}:undefined); }catch(e){ KC.rec=new MediaRecorder(st); }
   KC.rec.ondataavailable=e=>{ if(e.data&&e.data.size) KC.chunks.push(e.data); }; KC.rec.onstop=()=>kcDone(x);
   const SRc=window.SpeechRecognition||window.webkitSpeechRecognition; if(SRc&&!(azOn()&&AZ.ok)){ try{ const r=new SRc(); r.lang="de-DE"; r.continuous=true; r.interimResults=false; r.onresult=e=>{ KC.txt=Array.from(e.results).map(y=>y[0].transcript).join(" ").trim(); }; r.onerror=()=>{}; r.start(); KC.sr=r; }catch(e){ KC.sr=null; } }
-  KC.on=true; KC.t0=Date.now(); KC.rec.start(); lrnCard(); try{ actEv("kc","start"); }catch(e){}
-  clearTimeout(KC.tm); KC.tm=setTimeout(kcStop,4500); /* so'z uchun 4,5 s yetadi */ }
-function kcStop(){ if(!KC.on) return; KC.on=false; clearTimeout(KC.tm); KC.busy=true; try{ if(KC.sr) KC.sr.stop(); }catch(e){} try{ if(KC.rec&&KC.rec.state==="recording") KC.rec.stop(); }catch(e){} lrnCard(); }
+  KC.on=true; KC.cancel=false; KC.t0=Date.now(); KC.rec.start(); try{ actEv("kc","start"); }catch(e){}
+  const bar=document.getElementById("kc-tg"); if(bar) bar.classList.add("on"); const lv=document.getElementById("kc-live"); if(lv) lv.innerHTML=""; const cn=document.getElementById("kc-cnl"); if(cn){ cn.style.transform=""; cn.style.opacity=""; }
+  try{ const ac=wkCtx&&wkCtx(); if(ac){ if(ac.state==="suspended") ac.resume(); KC.src=ac.createMediaStreamSource(st); KC.an=ac.createAnalyser(); KC.an.fftSize=512; KC.src.connect(KC.an); } }catch(e){ KC.an=null; }
+  KC.lv=[]; const tick=()=>{ if(!KC.on) return; const box=document.getElementById("kc-live"); let lvl=.3+Math.random()*.5; if(KC.an){ const d=new Uint8Array(KC.an.fftSize); KC.an.getByteTimeDomainData(d); let q=0; for(let i=0;i<d.length;i++){ const v=(d[i]-128)/128; q+=v*v; } lvl=Math.min(1,Math.sqrt(q/d.length)*4.2); } KC.lv.push(lvl); if(box){ const i=document.createElement("i"); i.style.height=Math.max(12,Math.round(lvl*100))+"%"; box.appendChild(i); while(box.children.length>22) box.removeChild(box.firstChild); } const tm=document.getElementById("kc-tm"); if(tm) tm.textContent=spT10((Date.now()-KC.t0)/1000); KC.lt=setTimeout(tick,80); }; tick();
+  clearTimeout(KC.tm); KC.tm=setTimeout(kcStop,8000); /* xavfsizlik chegarasi */ }
+function kcStop(cancel){ if(!KC.on) return; KC.on=false; clearTimeout(KC.tm); clearTimeout(KC.lt); KC.cancel=!!cancel; try{ if(KC.src){ KC.src.disconnect(); KC.src=null; } }catch(e){}
+  const bar=document.getElementById("kc-tg"); if(bar) bar.classList.remove("on");
+  if(cancel){ try{ if(KC.sr) KC.sr.abort(); }catch(e){} try{ if(KC.rec&&KC.rec.state==="recording"){ KC.rec.onstop=null; KC.rec.stop(); } }catch(e){} KC.rec=null; KC.sr=null; const lb=document.getElementById("kc-lb"); if(lb) lb.innerHTML=`<span class="tg-x">${state.lang!=="ru"?"Bekor qilindi":"Отменено"}</span>`; setTimeout(()=>{ if(LR.mode==="cards"&&!KC.on&&!KC.busy) lrnCard(); },1200); return; }
+  KC.busy=true; try{ if(KC.sr) KC.sr.stop(); }catch(e){} try{ if(KC.rec&&KC.rec.state==="recording") KC.rec.stop(); }catch(e){} const lb=document.getElementById("kc-lb"); if(lb) lb.textContent="⏳ "+(state.lang!=="ru"?"Tekshiryapman…":"Проверяю…"); }
 async function kcDone(x){ const dur=(Date.now()-KC.t0)/1000; let heard="", sc=null, az=null;
   try{ const blob=new Blob(KC.chunks,{type:(KC.chunks[0]&&KC.chunks[0].type)||"audio/webm"});
     if(dur>=0.5&&azOn()&&AZ.ok){ try{ const [SDK,T,wav]=await Promise.all([azSdk(),azToken(),spWav(blob)]); az=await Promise.race([spAzOnce(SDK,T,wav,kcRef(x),true),new Promise(r=>setTimeout(()=>r(null),9000))]); }catch(e){ az=null; } }
     else await new Promise(r=>setTimeout(r,800));
     heard=(az&&az.txt)||KC.txt||""; if(az&&(az.acc||az.pron)) sc=az.pron||az.acc; }catch(e){}
   KC.busy=false; KC.rec=null; KC.sr=null; if(LR.mode!=="cards"||LR.cards[0]!==x) return;
-  const unclear=dur<0.5||!heard||(az&&az.conf!=null&&az.conf<.35);
+  const quiet=KC.an&&KC.lv&&KC.lv.length>3&&Math.max(...KC.lv)<.06; const unclear=dur<0.5||!heard||quiet||(az&&az.conf!=null&&az.conf<.35);
   const ok=!unclear&&kcMatch(kcRef(x),heard)&&(sc==null||sc>=45);
   KC.res={i:x.i,heard,sc,ok,unclear}; try{ actEv("kc",ok?"ok":unclear?"unclear":"bad"); }catch(e){}
   if(unclear){ lrnCard(); return; }
   LR.flip=true; lrnCard(); try{ if(!ok){ const b=document.querySelector(".lrn-flash [data-say]")||document.querySelector("[data-say]"); } }catch(e){}
   if(ok){ setTimeout(()=>{ if(LR.mode==="cards"&&LR.cards[0]===x&&LR.flip){ const b=document.querySelector('[data-l="yes"]'); if(b) b.click(); } },1600); } }
-function kcRelease(){ clearTimeout(KC.tm); KC.on=false; KC.busy=false; try{ if(KC.sr) KC.sr.abort(); }catch(e){} try{ if(KC.rec&&KC.rec.state==="recording"){ KC.rec.onstop=null; KC.rec.stop(); } }catch(e){} try{ if(KC.st) KC.st.getTracks().forEach(t=>t.stop()); }catch(e){} KC.st=null; KC.rec=null; KC.sr=null; }
+function kcRelease(){ clearTimeout(KC.tm); clearTimeout(KC.lt); KC.on=false; KC.busy=false; try{ if(KC.sr) KC.sr.abort(); }catch(e){} try{ if(KC.rec&&KC.rec.state==="recording"){ KC.rec.onstop=null; KC.rec.stop(); } }catch(e){} try{ if(KC.st) KC.st.getTracks().forEach(t=>t.stop()); }catch(e){} KC.st=null; KC.rec=null; KC.sr=null; }
 function lrnStartCards(){ LR.mode="cards"; LR.cHist=[]; const KN=lrnKnown(), all=lrnItems(); const un=lrnShuffle(all.filter(x=>!KN.has(x.i))); LR.cards=un.slice(0,lrnGoal()||un.length); LR.cardsN=LR.cards.length; LR.cardsRest=un.length-LR.cards.length; LR.allKnown=!un.length&&all.length>0; LR.flip=false; lrnCard(); }
 function lrnCard(){
   if(!LR.cards.length){ lrnFinish(); return; }
@@ -5342,7 +5352,6 @@ document.addEventListener("click",e=>{
   else if(a==="flip"){ LR.flip=!LR.flip; lrnCard(); if(LR.flip&&LR.cards[0]) lrnSay(LR.cards[0].say||LR.cards[0].de); }
   else if(a==="yes"){ KC.res=null; (LR.cHist=LR.cHist||[]).push({c:LR.cards.slice(),k:LR.cards[0]&&!lrnKnown().has(LR.cards[0].i)?LR.cards[0].i:null}); const x=LR.cards.shift(); if(x){ const KN=lrnKnown(); KN.add(x.i); lrnKnownSet(KN); } LR.flip=false; lrnCard(); }
   else if(a==="cundo"){ const h=(LR.cHist||[]).pop(); if(!h) return; LR.cards=h.c; if(h.k!=null){ const KN=lrnKnown(); KN.delete(h.k); lrnKnownSet(KN); } LR.flip=false; lrnCard(); } /* adashib bosilgan «Bilaman/Bilmayman» — qaytarish (2026-10-22) */
-  else if(a==="kcmic"){ if(KC.on) kcStop(); else kcStart(); }
   else if(a==="kchk") lrnStartCheck();
   else if(a==="kreset"){ const KN=lrnKnown(); lrnItems().forEach(x=>KN.delete(x.i)); lrnKnownSet(KN); lrnStartCards(); }
   else if(a==="no"){ KC.res=null; (LR.cHist=LR.cHist||[]).push({c:LR.cards.slice(),k:null}); const x=LR.cards.shift(); LR.cards.splice(Math.min(LR.cards.length,3+Math.floor(Math.random()*4)),0,x); LR.flip=false; lrnCard(); }
