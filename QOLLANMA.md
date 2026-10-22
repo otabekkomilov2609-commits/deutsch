@@ -867,3 +867,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - **O'rtoqlar** (`u:<acc>:fr` {pid:[ism,t]}): fr → fr_ok bilan ikki tomonlama; hafta reytingi (nw), Turt, ism bilan qo'shish.
 - Firestore qoidalari `tools/firestore.rules` da yangilandi (s/ pid,g,nw; g/; ib/) — konsolda nashr qilish kerak.
 - Qilinmadi: Lernraum (birga o'qish xonasi); ref-link bilan kelganlarni avtomatik o'rtoq qilish.
+- 🆕 «Yangilanish» oynasi (avtomatik ochilish va tugma) olib tashlandi (2026-10-23, Otabek).

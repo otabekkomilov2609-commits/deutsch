@@ -7004,9 +7004,9 @@ const NEWS=[
 ];
 function newsSeen(){ try{ return +(localStorage.getItem("news:v")||0); }catch(e){ return 0; } }
 function newsList(){ const seen=newsSeen(); const L=NEWS.filter(x=>x.v>seen); return L.length?L:NEWS; }
-function newsPillT(){ const b=document.getElementById("news-pill"); if(!b) return; const uz=state.lang!=="ru"; let old=false, fresh=Date.now()-NEWS_T<7*86400e3; try{ old=!!localStorage.getItem("tour")||!!localStorage.getItem("lern:last")||!!localStorage.getItem("chname"); }catch(e){}
+function newsPillT(){ const b=document.getElementById("news-pill"); if(!b) return; b.hidden=true; return; /* «Yangilanish» oynasi olib tashlandi (2026-10-23, Otabek) */ const uz=state.lang!=="ru"; let old=false, fresh=Date.now()-NEWS_T<7*86400e3; try{ old=!!localStorage.getItem("tour")||!!localStorage.getItem("lern:last")||!!localStorage.getItem("chname"); }catch(e){}
   b.hidden=!(old&&fresh&&!IN_ARTIFACT); b.textContent=uz?"🆕 Yangilanish":"🆕 Что нового"; }
-function newsAuto(){ let old=false; try{ old=!!localStorage.getItem("tour")||!!localStorage.getItem("lern:last")||!!localStorage.getItem("chname"); }catch(e){} if(!old||newsSeen()>=NEWS_V||IN_ARTIFACT||(typeof TOUR!=="undefined"&&TOUR.on)) return; if(location.search&&/[?&](du|ch|lt|kg|dc)=/.test(location.search)) return; setTimeout(newsOpen,900); }
+function newsAuto(){ return; /* avtomatik «Yangilanish» oynasi o'chirildi (2026-10-23, Otabek) */ let old=false; try{ old=!!localStorage.getItem("tour")||!!localStorage.getItem("lern:last")||!!localStorage.getItem("chname"); }catch(e){} if(!old||newsSeen()>=NEWS_V||IN_ARTIFACT||(typeof TOUR!=="undefined"&&TOUR.on)) return; if(location.search&&/[?&](du|ch|lt|kg|dc)=/.test(location.search)) return; setTimeout(newsOpen,900); }
 function newsOpen(){ const uz=state.lang!=="ru", L=newsList(); let o=document.getElementById("news"); if(!o){ o=document.createElement("div"); o.id="news"; o.className="news"; o.setAttribute("role","dialog"); o.setAttribute("aria-modal","true"); document.body.appendChild(o); }
   o.hidden=false; document.body.style.overflow="hidden"; o.dataset.k="0";
   const draw=()=>{ const k=+o.dataset.k, s=L[k], last=k===L.length-1;
