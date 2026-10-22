@@ -14,8 +14,8 @@ Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — va yuti
 
 **Ballar:**
 🔗 Kimdir linkingiz / QR / kodingizni ochdi — +1
-👥 U ro'yxatdan o'tdi — +1
-🎓 U 100 ta so'z o'rgandi yoki 5 ta grammatika mashqini bajardi — +6
+👥 Siz orqali kelgan odam ro'yxatdan o'tdi — +1
+🎓 Siz orqali qo'shilgan odam 100 ta so'z o'rgandi yoki 5 ta grammatika mashqini bajardi — +6
 📲 O'zingiz ilovani o'rnatdingiz — +10
 ⚡ Challenge'ingizda yangi odam o'ynadi — +2
 👎 Saytdagi xatoni topdingiz (ustoz tasdiqlasa) — +1
@@ -41,8 +41,8 @@ To'liq qoidalar: o'sha kartada → «Qoidalar».
 
 **Баллы:**
 🔗 Кто-то открыл вашу ссылку / QR / код — +1
-👥 Он зарегистрировался — +1
-🎓 Он выучил 100 слов или сделал 5 заданий по грамматике — +6
+👥 Пришедший через вас зарегистрировался — +1
+🎓 Пришедший через вас выучил 100 слов или сделал 5 заданий по грамматике — +6
 📲 Вы сами установили приложение — +10
 ⚡ Новый игрок в вашем Challenge — +2
 👎 Нашли ошибку на сайте (подтвердил учитель) — +1
