@@ -541,7 +541,7 @@ button.ext{background:none;cursor:pointer;font-family:inherit;line-height:inheri
 .kg-pbar{height:8px;border-radius:99px;background:var(--line);overflow:hidden}.kg-pbar i{display:block;height:100%;background:var(--green)}
 .kg-qs li.hard .kg-pbar i{background:#E21B3C}.kg-qs li.hard .h b{color:#C62828}
 /* 🎓 Ustoz paneli + 🎯 Live test — 2026-10-18 */
-html.blitz .lrn-cb,html.blitz #v-lern,html.blitz #main,html.blitz .chips,html.blitz .lead,html.blitz #tch-btn,html.blitz #fb-btn,html.blitz #tch [data-tp="close"],html.blitz #acc-chip,html.blitz .news-pill,html.blitz .motto,html.blitz .dc-card,html.blitz [data-rank],html.blitz #prog,html.blitz .tp-beta,html.blitz .wk-cred,html.blitz .reg-save,html.blitz .vs-blk{display:none!important}
+html.blitz .controls,html.blitz #tour-link,html.blitz .lrn-cb,html.blitz #v-lern,html.blitz #main,html.blitz .chips,html.blitz .lead,html.blitz #tch-btn,html.blitz #fb-btn,html.blitz #tch [data-tp="close"],html.blitz #acc-chip,html.blitz .news-pill,html.blitz .motto,html.blitz .dc-card,html.blitz [data-rank],html.blitz #prog,html.blitz .tp-beta,html.blitz .wk-cred,html.blitz .reg-save,html.blitz .vs-blk{display:none!important}
 .brand-blz{display:none}html.blitz .brand-ic,html.blitz .brand-tx{display:none!important}html.blitz .brand-blz{display:inline-flex;align-items:center;gap:12px}.brand-blz img{width:56px;height:56px;border-radius:14px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.12)}.brand-blz span{font-weight:900}.brand-blz small{display:block;font-size:.42em;font-weight:700;color:var(--muted);letter-spacing:.02em}
 .tch-btn{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:5px 10px;font-size:13px;font-weight:600;cursor:pointer;flex-shrink:0;margin-right:6px;white-space:nowrap}
 .acc-chip[hidden]+.tch-btn{margin-left:auto}
@@ -6518,7 +6518,8 @@ function ltListId(h){ return Object.keys(lernData()).find(k=>chHash(k)===h); }
 function ltPool(c){ const id=ltListId(c.l), D=id&&lernData()[id]; if(!D) return [];
   const seen=new Set(); return D.it.map((r,i)=>({i,l:r[0],de:r[3],q:r[4],red:r[6]})).filter(x=>{ if(!x.q||x.red||!c.s.includes(x.l)||x.de.length>40||/[…·]/.test(x.de)||LRN_PAIR.test(x.de)||seen.has(x.de)) return false; seen.add(x.de); return true; }); }
 function ltQs(c){ return chShuf(ltPool(c),chRng(c.r)).slice(0,c.n); }
-function ltTitle(c){ const id=ltListId(c.l), m=byId[id], D=lernData()[id]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:"")+" · "+c.s.map(lab).join(", "); }
+function ltNameOf(k){ const m=/^(A\d)-([ab]\d)(\d)-([ru])-(.+?)-Deutsch-(\w+?)(?:-L[\d-]+)?$/.exec(k); if(!m) return k; const L=m[5].replace(/-/g," ").replace(/L(\d+) (\d+)/,"L$1–$2"); return `${m[1]}.${m[3]} · ${L} · Deutsch–${m[4]==="u"?"O‘zbekcha":"Russisch"}`; } /* MATS'da yo'q ro'yxatlar uchun nom */
+function ltTitle(c){ const id=ltListId(c.l), m=byId[id], D=lernData()[id]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:ltNameOf(id))+" · "+c.s.map(lab).join(", "); }
 function ltLink(code){ return (/github\.io$/.test(location.hostname)||!/claude/.test(location.hostname)&&location.protocol!=="file:" ? location.origin+location.pathname : CH_SITE)+"?lt="+code; }
 function ltSc(v){ v=+v||0; return (Math.round(v*2)/2).toString().replace(".",","); }
 /* O'rin: 1) ko'p ball; 2) teng bo'lsa — o'sha ballga birinchi yetgan (oxirgi to'g'ri javob vaqti, tk). Tez taslim bo'lish ustunlik bermaydi. 2026-10-18 */
@@ -6860,7 +6861,7 @@ function tpLt(){
   const lab=n=>(L.lab&&L.lab[n])||("L"+n), c={l:chHash(TP.lid),s:[...TP.sel],n:TP.n,r:1}, avail=ltPool(c).length;
   const games=(()=>{ try{ return JSON.parse(localStorage.getItem("tch:games")||"[]"); }catch(e){ return []; } })();
   document.getElementById("tp-body").innerHTML=`<div class="lrn-card"><h3>Yangi live test</h3>
-    <label class="acc-lb">Ro‘yxat<select class="ch-in" id="tp-list">${ids.map(k=>{ const m=byId[k]; return `<option value="${esc(k)}"${k===TP.lid?" selected":""}>${esc((m&&m.tab&&TABS[m.tab]?TABS[m.tab].lbl+" · ":"")+(m?m.title:k))}</option>`; }).join("")}</select></label>
+    <label class="acc-lb">Ro‘yxat<select class="ch-in" id="tp-list">${ids.map(k=>{ const m=byId[k]; return `<option value="${esc(k)}"${k===TP.lid?" selected":""}>${esc((m&&m.tab&&TABS[m.tab]?TABS[m.tab].lbl+" · ":"")+(m?m.title:ltNameOf(k)))}</option>`; }).join("")}</select></label>
     <div class="lrn-les">${les.map(n=>`<button type="button" class="lrn-chip" aria-pressed="${TP.sel.has(n)}" data-tples="${n}"><b>${esc(lab(n))}</b><span>${esc(L.les[n])}</span></button>`).join("")}</div>
     <div class="tp-row"><span>So‘zlar soni</span><div class="tp-seg">${[10,20,30,40].map(v=>`<button type="button" data-tpn="${v}" aria-pressed="${TP.n===v}">${v}</button>`).join("")}</div></div>
     <div class="tp-row"><span>Vaqt</span><div class="tp-seg">${[[0,"Cheksiz"],[5,"5 daq"],[10,"10 daq"],[15,"15 daq"]].map(([v,t])=>`<button type="button" data-tptm="${v}" aria-pressed="${TP.tm===v}">${t}</button>`).join("")}</div></div>
