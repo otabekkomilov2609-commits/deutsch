@@ -6398,7 +6398,7 @@ function duCount(){ if(DU.phase==="count"||DU.phase==="play") return; DU.phase="
   tick(); }
 function duPlay(){
   const c=Object.assign({},DU.c,{r:(DU.c.r+DU.r*7919)>>>0}); DU.qs=chQuestions(c);
-  Object.assign(DU,{phase:"play",st:"play",s:0,lt:0,qi:0,t0:performance.now(),hp:3,cb:0,oCb:0}); duPub();
+  Object.assign(DU,{phase:"play",st:"play",s:0,okN:0,lt:0,qi:0,t0:performance.now(),hp:3,cb:0,oCb:0}); duPub();
   duEl().innerHTML=duHead(`<span class="ch-time" id="du-time">${duLim()}</span>`)+`<div class="lrn-body">
     <div class="ch-bar"><i id="du-tb" style="width:100%"></i></div>
     <div id="du-score"></div>
@@ -6420,14 +6420,14 @@ function duScore(){ const e=document.getElementById("du-score"); if(e) e.innerHT
 function duQ(){ const q=DU.qs[DU.qi%DU.qs.length]; DU.cur=q; DU.lock=false; DU.qT=performance.now(); const card=document.getElementById("du-card"); if(!card) return; const t=document.getElementById("du-time"); if(t) t.textContent=duLim();
   card.innerHTML=`<div class="du-lim">${DU.qi+1} / 15 · ⏱ ${duLim()} s${duMult()>1?` · <b class="du-cbp">🔥×${duMult()}</b>`:""}</div><div class="ch-q">${esc(q.q)}</div><div class="lrn-ask">${esc(DU.c.x?(state.lang==="ru"?"Выберите правильный ответ":"To‘g‘ri javobni tanlang"):dt("choose"))}</div><div class="lrn-opts">${q.o.map((o,k)=>`<button type="button" class="lrn-opt" data-duo="${k}"><span class="k">${k+1}</span>${esc(o)}</button>`).join("")}</div>`; }
 function duAnswer(k){ if(DU.phase!=="play"||DU.lock) return; DU.lock=true; const q=DU.cur, ok=k>=0&&q.o[k]===q.a, card=document.getElementById("du-card");
-  if(ok){ const left=Math.max(0,duLim()-(performance.now()-DU.qT)/1000), was=duMult(); DU.cb=(DU.cb||0)+1; const pts=Math.round((100+left*20)*was); DU.s+=pts; DU.lt=Math.round(performance.now()-DU.t0); const pp=document.createElement("div"); pp.className="ch-pts"; pp.textContent="+"+pts+(was>1?" 🔥":""); card.appendChild(pp); }
+  if(ok){ const left=Math.max(0,duLim()-(performance.now()-DU.qT)/1000), was=duMult(); DU.cb=(DU.cb||0)+1; DU.okN=(DU.okN||0)+1; const pts=Math.round((100+left*20)*was); DU.s+=pts; DU.lt=Math.round(performance.now()-DU.t0); const pp=document.createElement("div"); pp.className="ch-pts"; pp.textContent="+"+pts+(was>1?" 🔥":""); card.appendChild(pp); }
   else { DU.cb=0; DU.hp=Math.max(0,(DU.hp==null?3:DU.hp)-1); if(navigator.vibrate) try{ navigator.vibrate(60); }catch(e){} }
   card.querySelectorAll(".lrn-opt").forEach((b,j)=>{ b.disabled=true; if(q.o[j]===q.a) b.classList.add("ok"); else if(j===k) b.classList.add("bad"); });
   card.classList.remove("ch-flash-ok","ch-flash-bad"); void card.offsetWidth; card.classList.add(ok?"ch-flash-ok":"ch-flash-bad");
   duPub(); duSelf(); duScore();
   if(DU.hp<=0||DU.qi+1>=15){ setTimeout(()=>{ if(DU.phase==="play") duEnd(); },700); return; } /* 15 savol (2026-10-22, Otabek) */
   setTimeout(()=>{ if(DU.phase!=="play") return; DU.qi++; duQ(); }, ok?250:750); }
-function duEnd(){ if(DU.phase!=="play") return; try{ actEv("game","du"); }catch(e){} try{ gpAdd("du",(DU.id||"")+":"+DU.r,Math.round((DU.s|0)/20)); }catch(e){} DU.phase="end"; DU.st="done"; DU.rd=false; DU.h[DU.r]=[DU.s,DU.lt]; try{ actLog("du","du","⚔️ Duel",DU.s,0); }catch(e){} const ks=Object.keys(DU.h).map(Number).sort((a,b)=>b-a); ks.slice(3).forEach(k=>delete DU.h[k]); duPub(); duRender(); }
+function duEnd(){ if(DU.phase!=="play") return; try{ actEv("game","du"); }catch(e){} try{ gpAdd("du",(DU.id||"")+":"+DU.r,Math.round((DU.s|0)/20)); }catch(e){} DU.phase="end"; DU.st="done"; DU.rd=false; DU.h[DU.r]=[DU.s,DU.lt]; try{ actLog("du","du","⚔️ Duel · "+(DU.s|0)+" ball",DU.okN|0,DU.qi|0); /* avval ball «so'z» deb yozilardi (2026-10-23) */ }catch(e){} const ks=Object.keys(DU.h).map(Number).sort((a,b)=>b-a); ks.slice(3).forEach(k=>delete DU.h[k]); duPub(); duRender(); }
 function duRes(p,R){ const x=p.h&&p.h[R]; if(x) return {s:x[0]|0,lt:+x[1]||0}; if(p.r===R&&p.st==="done") return {s:p.s,lt:p.lt}; return null; }
 function duResult(R){ const L=duPlayers(); if(L.length<2) return null; R=R||DU.r; const ra=duRes(L[0],R), rb=duRes(L[1],R);
   if(!ra||!rb) return {wait:true}; const a={...L[0],...ra}, b={...L[1],...rb};
@@ -7480,7 +7480,7 @@ function spProfHTML(d,o){ o=o||{}; const uz=state.lang!=="ru", T=stTotals(), A=d
     <div class="sp-kp"><div><b>${d.w|0}</b><small>${uz?"so‘z":"слов"}</small></div><div><b>${g.length}</b><small>${uz?"varaq":"листов"}${pc!=null?` · ${pc}%`:""}</small></div><div><b>${muN}</b><small>${uz?"ibora":"фраз"}</small></div><div><b>${spN||(an?an.min:0)}</b><small>${spN?(uz?"gapirdi":"сказал"):(uz?"daq / 7 kun":"мин / 7 дн")}</small></div></div>
     ${fl.length?`<div class="sp-fl">${fl.slice(0,4).join("")}</div>`:""}
     <h5>⏱ ${uz?"Oxirgi ishlar":"Последние работы"}<small>${an?`7 ${uz?"kun":"дн"} · ${an.min} ${uz?"daq":"мин"}`:""}</small></h5>
-    <div class="sp-log">${L.length?L.slice(0,8).map(x=>`<div><time>${spWhen(x[0],uz)}</time><b>${esc(x[3]||x[2])}</b><i>${x[5]?`${x[4]} / ${x[5]}`:x[4]?`+${x[4]} ${uz?"so‘z":"слов"}`:""}</i></div>`).join(""):`<div><i>${uz?"hali yo‘q — yangi versiyadan boshlab yoziladi":"пока нет"}</i></div>`}</div>
+    <div class="sp-log">${L.length?L.slice(0,8).map(x=>`<div><time>${spWhen(x[0],uz)}</time><b>${esc(x[3]||x[2])}</b><i>${x[5]?`${x[4]} / ${x[5]}`:x[1]==="du"&&x[4]?`${x[4]} ${uz?"ball":"баллов"}`:x[4]?`+${x[4]} ${uz?"so‘z":"слов"}`:""}</i></div>`).join(""):`<div><i>${uz?"hali yo‘q — yangi versiyadan boshlab yoziladi":"пока нет"}</i></div>`}</div>
     <h5>🧠 Wortschatz — ${uz?"Lektion bo‘yicha":"по урокам"}<span class="sp-seg">${["A1","A2","B1"].map(l=>`<button type="button" data-sp="lv" data-v="${l}" aria-pressed="${showLv===l}">${l}</button>`).join("")}<button type="button" data-sp="half" data-v="1" aria-pressed="${half===1}">L1–12</button><button type="button" data-sp="half" data-v="2" aria-pressed="${half===2}">L13–24</button></span></h5>
     <div class="sp-grid">${vis.map(cell).join("")}</div>
     ${gRows?`<h5>✍️ ${uz?"Varaqlar va mashqlar":"Листы и упражнения"}<small>${uz?"eng yaxshi natija":"лучший результат"}</small></h5>${gRows}`:""}
