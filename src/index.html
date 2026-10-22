@@ -6662,7 +6662,7 @@ function hpRefLink(code){ return CH_SITE+"?ref="+code; }
 async function hpRefVisit(kind){ try{ if(!CLOUD_ON||window.BLITZ) return; const codes=Object.keys(localStorage).filter(k=>k.startsWith("ref:vis:")).map(k=>k.slice(8)); if(!codes.length) return; const me=ACC.cur?await hpRefCode():"", me8=HP_REF8||"";
   for(const by of codes){ if(by===me||by===me8) continue; const st=localStorage.getItem("ref:vis:"+by)||"0"; const want=kind==="a"?"a":"v"; if(st==="a"||(st==="v"&&want==="v")) continue;
     await fsPut("ref/"+by+"_"+hpDevId(),{by:fsS(by),nm:fsS(""),w:fsI(0),t:fsI(Date.now()),k:fsS(want)}); localStorage.setItem("ref:vis:"+by,want); } }catch(e){} }
-setTimeout(()=>{ try{ hpRefVisit("v"); }catch(e){} },7000);
+setTimeout(()=>{ try{ hpRefVisit("v"); }catch(e){} },1500); /* 7 s edi — tez yopib ketganlar hisoblanmasdi (2026-10-23) */
 /* yangi o'quvchi: kim chaqirganini bazaga yozadi (nomi va so'zlar soni — chaqirgan odam 100 so'zdan keyin bonus oladi) */
 async function hpRefPush(){ try{ if(!CLOUD_ON||!ACC.cur) return; const by=localStorage.getItem("ref:by"); if(!by) return; const me=await hpRefCode(); if(by===me){ localStorage.removeItem("ref:by"); return; }
   const w=progCount().n|0, gr=mrGrDone(), q=(w>=100||gr>=MR.GR)?1:0, key="ref:pushed:"+by, last=+(localStorage.getItem(key)||-1), lq=localStorage.getItem(key+":q")==="1", lt=+(localStorage.getItem(key+":t")||0), lg=+(localStorage.getItem(key+":g")||0);
