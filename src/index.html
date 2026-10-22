@@ -5633,7 +5633,9 @@ function iasShow(focus){ if(!document.getElementById("ias-card")) return;
   if(bw.length&&!starters){ const grp=IAS.steps.flatMap(s2=>s2.exFirst&&s2.ex?[...s2.ex,s2]:[s2]).filter(s2=>s2.kind==="g"&&s2.bank===st.bank), cnt={}; /* Beispiel so'zi ham ishlatilgan hisoblanadi */
     st.bank.split("·").forEach(x=>{ const m=x.match(/\((\d+)×\)/), w=bval(x.replace(/\(\d+×\)/g,"").trim()); if(w){ const k=iaNorm(w); cnt[k]=(cnt[k]||0)+(m?+m[1]:1); } });
     const tot=Object.values(cnt).reduce((a,b)=>a+b,0);
-    if(tot>=grp.length){ const used={}; grp.forEach(s2=>{ if(s2.i!==st.i&&iasState(s2.i)==="ok"){ const v=iaNorm(IA.vals[s2.i]||""); used[v]=(used[v]||0)+1; } });
+    /* faqat har javob uchun bankda yetarli nusxa bo'lsa so'z yo'qoladi; javoblar takrorlansa (einen ikki marta, keine umuman yo'q) — hamma so'z doim ko'rinadi (2026-10-22, Otabek: «to'g'ri javob yo'q diyapti») */
+    const need={}; grp.forEach(s2=>{ const x=iaItems()[s2.i]; const k=iaNorm((x&&x.a)||""); if(k) need[k]=(need[k]||0)+1; }); const fits=Object.keys(need).every(k=>need[k]<=(cnt[k]||0));
+    if(tot>=grp.length&&fits){ const used={}; grp.forEach(s2=>{ if(s2.i!==st.i&&iasState(s2.i)==="ok"){ const v=iaNorm(IA.vals[s2.i]||""); used[v]=(used[v]||0)+1; } });
       bwShow=bw.filter(w=>{ const k=iaNorm(bval(w)); return !(used[k]>=(cnt[k]||1)); }); } }
   bankEl.innerHTML=bwShow.map(w=>`<button type="button" class="ias-bw" data-iasw="${esc(bval(w))}">${esc(LETM?bval(w):w.replace(/^[a-h]\s*=\s*/,""))}</button>`).join(""); /* "a = …" — harf ko'rsatilmaydi, faqat matn (2026-10-20) */ bankEl.hidden=!bw.length;
   if(st.kind==="g"){ inw.hidden=bw.length>0&&!starters; opts.innerHTML=""; inp.dataset.i=st.i; inp.value=IA.vals[st.i]||""; inp.classList.remove("ok","bad","shake"); inp.rows=it.long?3:1; inp.classList.toggle("long",!!it.long);
