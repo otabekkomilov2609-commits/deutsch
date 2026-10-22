@@ -797,3 +797,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Live test: o‘quvchi interfeysi test tilida chiqadi (o‘zbekcha ro‘yxat → o‘zbekcha interfeys, ruscha → ruscha), saytning tilidan qat’i nazar (2026-10-22).
 - B1 Kahoot'lar (2026-10-22): B1.1 va B1.2 — har Lektion + takrorlash (L1–3, 4–6, 7–9, 10–12, 1–12; L13–15 … 13–24), jami 34 o‘yin, 15 savoldan (5 Wortschatz + 5 Kommunikation + 5 Grammatik). Sinf o‘yini papkalari A1.1 → B1.2 tartibida.
 - Challenge (2026-10-22): «Nima bo‘yicha» — 🧠 Wortschatz yoki 📘 Grammatik. Grammatikda tanlangan Lektionlarning interaktiv mashqlaridagi Grammatik bo‘limi savollari (variantli) birlashtiriladi; mashqi yo‘q Lektion tugmasi o‘chiq (B1 uchun hozircha yo‘q).
+- B1 Grammatik Challenge banki (CH_GR): har Lektionga 20 ta savol (jami 480), faqat shu Lektion grammatikasi, gaplar bizniki, 4 variant.
