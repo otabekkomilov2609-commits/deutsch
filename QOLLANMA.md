@@ -885,3 +885,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Avvalgi (40/30/25, +2/+6, do'st ilovasi +4, o'zi +2) bekor.
 - 02:17–02:19 (Otabek): nomi «Tarqatish marafoni». Ball bo'yicha minimumlar o'rniga yagona shart: **kamida 4 ta haqiqiy do'st** (100 so'z yoki 5 ta grammatika ≥80%). O'rin ball bo'yicha; shartni bajarmagan o'tkazib yuboriladi, sovrin keyingi shart bajarganga o'tadi.
 - Taklif qilgan odam «👥 Do'stlarim» oynasida har bir kelgan do'stini ko'radi: ism, 🧠 so'z x/100, 📘 grammatika y/5, ✅ haqiqiy; link ochgan lekin ro'yxatdan o'tmaganlar soni. Do'st progressi har +5 so'zda (10 daqiqada ko'pi bilan 1 marta) ref/ hujjatiga yoziladi.
+- 🆕 «Yangilanish» oynasi (avtomatik ochilish va tugma) olib tashlandi (2026-10-23, Otabek).
