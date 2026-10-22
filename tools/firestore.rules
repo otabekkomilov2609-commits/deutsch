@@ -1,6 +1,6 @@
 rules_version = '2';
 
-// streber.uz — Firestore qoidalari (2026-10-22)
+// streber.uz — Firestore qoidalari (2026-10-23)
 // Tamoyil: o'chirish yo'q · faqat ruxsat etilgan maydonlar · o'lcham/tip tekshiruvi · ID formati tekshiruvi.
 service cloud.firestore {
   match /databases/{database}/documents {
@@ -22,7 +22,7 @@ service cloud.firestore {
     match /s/{id} {
       allow get, list: if true;
       allow create, update: if isHex(id, 64)
-        && request.resource.data.keys().hasOnly(['e','t','rk','nm','n','lv','app','gw','gp','pw','pp','hp','hb','pid','g','nw'])
+        && request.resource.data.keys().hasOnly(['e','t','rk','nm','n','lv','app','gw','gp','pw','pp','hp','hb','pid','g','nw','mr','rc'])
         && str(request.resource.data.e, 30000)
         && request.resource.data.t is int
         && (!('rk' in request.resource.data) || str(request.resource.data.rk, 80))
@@ -38,7 +38,9 @@ service cloud.firestore {
         && (!('hb' in request.resource.data) || str(request.resource.data.hb, 200))
         && (!('pid' in request.resource.data) || str(request.resource.data.pid, 16))
         && (!('g' in request.resource.data) || str(request.resource.data.g, 12))
-        && (!('nw' in request.resource.data) || int0(request.resource.data.nw, 20000));
+        && (!('nw' in request.resource.data) || int0(request.resource.data.nw, 20000))
+        && (!('mr' in request.resource.data) || str(request.resource.data.mr, 400))
+        && (!('rc' in request.resource.data) || str(request.resource.data.rc, 8));
     }
 
     // n: shu ism ro'yxatdan o'tganini bildiradi (faqat yaratish).
@@ -52,13 +54,30 @@ service cloud.firestore {
     // ref: do'st linki — kim kimni chaqirgan. ID = <8 hex kod>_<16 hex>.
     match /ref/{id} {
       allow get, list: if true;
-      allow create, update: if id.size() == 25 && id.matches('^[a-f0-9]{8}_[a-f0-9]{16}$')
-        && request.resource.data.keys().hasOnly(['by','nm','w','t'])
-        && isHex(request.resource.data.by, 8)
+      // ID = <6 belgili kod yoki eski 8-hex>_<16 hex: ism-id yoki qurilma-id>. k: r = ro'yxat, v = link ochildi, a = ilova o'rnatdi (2026-10-23)
+      allow create, update: if id.matches('^[A-Za-z0-9]{6,8}_[a-f0-9]{16}$')
+        && request.resource.data.keys().hasOnly(['by','nm','w','t','k'])
+        && str(request.resource.data.by, 8) && request.resource.data.by.size() >= 6
         && str(request.resource.data.nm, 40)
         && int0(request.resource.data.w, 50000)
         && request.resource.data.t is int
+        && (!('k' in request.resource.data) || str(request.resource.data.k, 2))
         && (request.method == 'create' || request.resource.data.by == resource.data.by);
+    }
+
+    // mr: 📣 marafon — cfg (chetlatilganlar x, g'oliblar w), top (top-3, har kim yozadi), claim_<pid> (mukofot so'rovi). (2026-10-23)
+    match /mr/{id} {
+      allow get, list: if true;
+      allow create, update: if (id == 'cfg'
+          && request.resource.data.keys().hasOnly(['x','w','t'])
+          && str(request.resource.data.x, 4000) && str(request.resource.data.w, 2000)
+          && request.resource.data.t is int)
+        || (id == 'top'
+          && request.resource.data.keys().hasOnly(['l','t'])
+          && str(request.resource.data.l, 600) && request.resource.data.t is int)
+        || (id.matches('^claim_[a-f0-9]{16}$')
+          && request.resource.data.keys().hasOnly(['c','t'])
+          && str(request.resource.data.c, 160) && request.resource.data.t is int);
     }
 
     // g: guruh — nomi, a'zolar [[pid,ism]...], egasi (pid). ID = 12 hex. (2026-10-23)
