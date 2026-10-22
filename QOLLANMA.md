@@ -830,3 +830,10 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Texnika: ball `u:<acc>:hp` (bulutga sinxron), bazada s/ hujjatda `hp`; do‘st: `ref/<kod>_<id>` hujjatlar (runQuery by==kod); ustoz rahmati: `th/<hash(ak)>` + MQTT streber/th/v1/.
 ### 📈 Tahlil — Sayt o‘sishi (2026-10-22)
 - Tahlil tepasida: yangi o‘quvchilar (davr, oldingi davr bilan), faol 7/30 kun, qaytganlar %, ilova (taklif «Ha» %, o‘rnatdi), A1/A2/B1 taqsimoti, ro‘yxat ustunlari (kun/hafta) va jami chizig‘i, o‘yinlar soni turlari bo‘yicha, tarqalish (ulashish, 👎, do‘st linki, hissa qo‘shganlar), 30+ kun kirmaganlar; «📤 Haftalik hisobot rasmi». Davr 7/14/30/90 kun. Hodisalar o‘quvchi summary’sida `a.ed` (kun bo‘yicha), ro‘yxat sanalari `n/` hujjatlardan.
+
+## 📲 Ilova o'rnatishni rag'batlantirish (2026-10-22)
+- Ilovani o'rnatganda (`appinstalled` yoki standalone aniqlansa) 🏅 +2 ball (`app:inst`, bir marta); o'rnatish bannerida "🏅 +2 ball" ko'rinadi.
+- O'yin natija kartasida (Live test/Kahoot/Challenge/Duel) brauzerdan o'ynaganlarga "📲 Ilovada natijalaringiz doim qo'l ostida — O'rnatish" taklifi (`.gss-app`).
+- Reytinglarda ilova foydalanuvchisi ismi yonida 📲.
+- Ustoz paneli → Varaqlar: "📲 Ilovani o'rnating — sinf plakati" → A4 QR-plakat (print oynasi), Android/iPhone 2 qadam; Blitzda blitzdeutsch.uz, streberda streber.uz.
+- Tahlil: `app:install` hodisasi kunlik hisobga tushadi.
