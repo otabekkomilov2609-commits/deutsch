@@ -897,3 +897,13 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Ikki rejim: ro'yxat (PIN) va «Kirish» (PIN yoki eski parol — eski akkauntlar o'zgarmaydi). Telefonda akkaunt bo'lsa — avtomatik «Kirish» rejimi.
 - Ro'yxatdan keyin: «✅ Tayyor, Ism!» + ism/PIN kartasi + «📸 Skrinshot olish uchun bosing» → 1080×1080 PNG (iPhone: ulashish menyusi → «Rasmni saqlash»; boshqalar: yuklab olinadi) → «✅ Rasm saqlandi» yoki «saqlanmadi — skrinshot qiling»; rasm ekranda qoladi. «Davom etish» rasm tugmasidan keyin faollashadi; «Eslab qoldim →» ham davom ettiradi. Nusxalash va Telegram tugmalari olib tashlandi.
 - Kichik harf bilan yozilgan ism avtomatik Bosh harf bilan saqlanadi. Ro'yxat oynasi ochiqligida 👎 tugmasi yashiriladi.
+
+### Katta oqimga tayyorlov paketi *(2026-10-23, Otabek: «kamchiliklarni kamaytirishimiz kk»)*
+- **Baza tejash:** reyting (`s` kolleksiyasi) telefonda 20 daqiqa keshlanadi (`rk:cache`, `rankCloud(force)`); bosh sahifa marafon kartasi bazani to'liq o'qimaydi — faqat kesh + `mr/top`; bulutga saqlash 45 s → 120 s (yopilganda darhol saqlanadi).
+- **Ustoz paneli:** o'quvchilar natijasi faqat panel ochilganda va «🔄 Yangilash» bosilganda yuklanadi (har daqiqa avtomatik o'qish yo'q); yonida «yangilandi: N daq oldin».
+- **Mehmon «Xush kelibsiz»:** 4 ta katak (Lektionlar · So'z yodlash · Reyting va o'yinlar · Marafon/Muloqot), linkdan kelganga «🎁 Do'stingiz sizni taklif qildi», tugmalar 360 px'da ko'rinadi.
+- **To'sib qo'yishlar:** «Xato topdingizmi?» oynasi har qanday oyna/mashq ochilganda yashiriladi; 👎 tugmasi ro'yxat, 👥 va unvon oynalarida yashiriladi.
+- **Tungi rejim:** to'q ko'k tanlangan tugmalar `--fill/--on-fill` (16 qoida).
+- **👥 tablar:** 🟢 Onlayn · 📬 Xabar · 🏫 Guruh · 🤝 Do'stlar («O'rtoq» → «Do'st» hamma joyda).
+- Reyting sarlavhasi bo'limga qarab o'zgaradi (Marafon: «📣 Tarqatish marafoni · 15-noyabrgacha»). Tepadagi tugmalar ≥36–40 px. RU: «среднее произношение».
+- **Unvon oynasi:** 1-unvon «🔧 Xato tuzatuvchi» → **«🌱 Boshlovchi / Новичок»**; katta ball, «Ballar nimadan», 4 pog'onali zinapoya, «Yordamchi gacha: 2 / 10 · yana 8 ball»; o'zinikida «Qanday ball yig'aman?», boshqanikida «Men ham xohlayman →»; ruscha nom faqat RU'da.
