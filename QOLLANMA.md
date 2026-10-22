@@ -820,3 +820,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - 👀 Cheater hamma o‘yinlarda (2026-10-22): Live test (doskada 👀×N + qizil CHEATER, saqlangan natijada ham), Challenge (reytingda 👀×N), Duel (raqibga «Raqibingiz o‘yindan chiqib ketdi!»). O‘quvchiga qaytganda ogohlantirish.
 - Blitz saytida ro‘yxatdan o‘tish oynasi umuman chiqmaydi (accLogin o‘chiq).
 - Blitz belgisi (2026-10-22): Blitz rejimida brauzer yorlig‘i belgisi va ustoz paneli sarlavhasi — Blitz chaqmog‘i (icons/blitz-*.png). blitzdeutsch.uz repo'sida sync paytida <title>, favicon, og-teglar va manifest (nom «Blitz», ikonka) Blitz'ga almashtiriladi — ilova sifatida o‘rnatilsa ham Blitz belgisi.
+- Harf belgilash tuzatish (2026-10-22): o‘quvchi artikl/aniqlovchini boshqa shaklda yozsa (keine ↔ einen, den ↔ der) yoki qisqa so‘zda 2+ harf farq qilsa — harfma-harf «_ qo‘sh» belgisi chiqmaydi (chalg‘itardi: «keine_» → keinen deb o‘ylardi); butun so‘z xato deb ko‘rsatiladi.

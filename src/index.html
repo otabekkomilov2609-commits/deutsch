@@ -5759,6 +5759,8 @@ function iasDiff(stu, it, maxD){ const P=/[„“”"«».,!?;:…()]/; const ke
     for(let i=1;i<=n;i++) for(let j=1;j<=m;j++) d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(A[i-1][0]===B[j-1]?0:1));
     if(!best||d[n][m]<best.dist) best={dist:d[n][m],d,B}; });
   if(!best||!best.dist) return ""; const len=best.B.length; if(best.dist>Math.max(2,Math.ceil(len*.34))) return ""; if(maxD!=null&&best.dist>maxD) return "";
+  /* artikl/aniqlovchi boshqa shaklda yozilsa (keine ↔ einen, der ↔ den) — harfma-harf belgilamaymiz: «n qo‘sh» deb chalg‘itardi (2026-10-22, Otabek) */
+  { const ART=/^(k?ein(e|en|em|er|es)?|der|die|das|den|dem|des)$/, sv=A.map(x=>x[0]).join("").trim(); if(ART.test(sv)&&ART.test(best.B.join(""))) return ""; if(len<=6&&best.dist>=2) return ""; }
   /* orqaga yurib: har bir talaba harfi to'g'ri / noto'g'ri, tushib qolgan harf joyi */
   const bad=new Set(), miss=new Set(); let i=A.length, j=len; const d=best.d, B=best.B;
   while(i>0||j>0){ if(i>0&&j>0&&A[i-1][0]===B[j-1]&&d[i][j]===d[i-1][j-1]){ i--; j--; continue; }

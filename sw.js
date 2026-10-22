@@ -1,7 +1,7 @@
 /* streber.uz — ilova (PWA) service worker.
    Sahifa: avval internetdan (har doim eng yangi versiya), internet yo'q bo'lsa — saqlangan nusxa.
    Shriftlar va kutubxonalar: saqlangan nusxa, fonda yangilanadi. */
-const V = 'streber-5f969e28', SHELL = ['/', '/manifest.webmanifest', '/icons/icon-192.png', '/icons/favicon.svg'];
+const V = 'streber-a3c75112', SHELL = ['/', '/manifest.webmanifest', '/icons/icon-192.png', '/icons/favicon.svg'];
 const CDN = /^(fonts\.googleapis\.com|fonts\.gstatic\.com|cdnjs\.cloudflare\.com|cdn\.jsdelivr\.net|www\.gstatic\.com)$/;
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).catch(() => {})); self.skipWaiting(); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
