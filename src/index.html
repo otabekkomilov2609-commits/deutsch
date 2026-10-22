@@ -6142,7 +6142,7 @@ function accLogin(){ if(window.BLITZ) return; /* Blitz saytida ro‘yxatdan o‘
     ${(()=>{ const U=accUsers(), ns=Object.values(U).map(u=>u.name).filter(Boolean).sort((a,b)=>a.localeCompare(b)); return ns.length?`<div class="acc-here"><small>${esc(at("here"))}</small><div>${ns.map(n=>`<button type="button" class="acc-nm" data-accnm="${esc(n)}">👤 ${esc(n)}</button>`).join("")}</div></div>`:""; })()}
     <label class="acc-lb">${esc(at("name"))}<input id="acc-name" maxlength="40" autocomplete="name" placeholder="${esc(at("namePh"))}"><span class="acc-hint">${esc(at("loginIs"))}</span></label>
     <label class="acc-lb">${esc(at("pw"))}<span class="acc-pw"><input id="acc-pw" type="password" maxlength="40" autocomplete="current-password" placeholder="${esc(at("pwPh"))}"><button type="button" class="acc-eye" data-acc="eye" aria-label="👁">👁</button></span></label>
-    ${mrOn()?`<label class="acc-lb acc-ref">${state.lang==="ru"?"Код друга (необязательно)":"Do‘stingiz kodi (ixtiyoriy)"}<input id="acc-ref" maxlength="8" autocomplete="off" autocapitalize="characters" placeholder="DIL7K2" value="${esc(localStorage.getItem("ref:by")||"")}"><span class="acc-hint" id="acc-refst">${localStorage.getItem("ref:by")?"✓":""}</span></label>`:""}
+    ${mrOn()?`<label class="acc-lb acc-ref">${state.lang==="ru"?"Код друга (необязательно)":"Do‘stingiz kodi (ixtiyoriy)"}<input id="acc-ref" maxlength="8" autocomplete="off" autocapitalize="characters" placeholder="DIL7K2" value="${esc(localStorage.getItem("ref:by")||"")}"><span class="acc-hint" id="acc-refst">${hpRefOk(localStorage.getItem("ref:by"))?"✓":""}</span></label>`:""}
     <div class="acc-warn">${esc(at("warn"))}</div>
     <div class="acc-st" id="acc-st"></div>
     <button type="submit" class="btn primary">${esc(at("go"))}</button>
@@ -6652,7 +6652,7 @@ function hpToast(kind,pts,note,up){ const ru=state.lang==="ru", L=HP_LV[hpLv(hpP
 let HP_REF=null, HP_REF8=null; const REF_AB="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 /* do'st kodi: 6 belgi (A–Z, 2–9) — rasmda/og'zaki aytishga qulay; eski 8-hex linklar ham ishlaydi (2026-10-23) */
 async function hpRefCode(){ if(!ACC.cur) return ""; if(HP_REF) return HP_REF; const h=await cloudSha("streber.uz/ref/v1:"+ACC.cur); HP_REF8=h.slice(0,8); let v=parseInt(h.slice(8,16),16), c=""; for(let i=0;i<6;i++){ c+=REF_AB[v&31]; v=Math.floor(v/32); } HP_REF=c; return HP_REF; }
-function hpRefOk(r){ r=String(r||"").trim(); return /^[A-Za-z0-9]{6}$/.test(r)&&/^[A-HJ-NP-Z2-9]{6}$/.test(r.toUpperCase())?r.toUpperCase():/^[a-f0-9]{8}$/.test(r)?r:""; }
+function hpRefOk(r){ r=String(r||"").trim(); return /^[A-Za-z0-9]{6}$/.test(r)?r.toUpperCase():/^[a-f0-9]{8}$/.test(r)?r:""; }
 function hpDevId(){ let d=""; try{ d=localStorage.getItem("devid")||""; if(!d){ d=Array.from(crypto.getRandomValues(new Uint8Array(8))).map(x=>x.toString(16).padStart(2,"0")).join(""); localStorage.setItem("devid",d); } }catch(e){ d="0000000000000000"; } return d; }
 function hpRefLink(code){ return CH_SITE+"?ref="+code; }
 (function(){ try{ const q=new URLSearchParams(location.search), r=hpRefOk(q.get("ref")); if(r){ if(!ACC.cur&&!localStorage.getItem("ref:by")) localStorage.setItem("ref:by",r); try{ localStorage.setItem("ref:vis:"+r,localStorage.getItem("ref:vis:"+r)||"0"); }catch(e){} q.delete("ref"); history.replaceState(null,"",location.pathname+(q.toString()?"?"+q:"")+location.hash); } }catch(e){} })();
@@ -6668,12 +6668,12 @@ async function hpRefPush(){ try{ if(!CLOUD_ON||!ACC.cur) return; const by=localS
 /* chaqirgan odam: ref hujjatlarini sanaydi → ballar */
 async function hpRefQuery(code){ const r=await fetch(FS_BASE.replace(/\/documents\/$/,"/documents:runQuery"),{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({structuredQuery:{from:[{collectionId:"ref"}],where:{fieldFilter:{field:{fieldPath:"by"},op:"EQUAL",value:{stringValue:code}}},limit:300}})}); if(!r.ok) return []; return (await r.json()).filter(x=>x.document).map(x=>x.document); }
 async function hpRefSync(){ try{ if(!CLOUD_ON||!ACC.cur||window.BLITZ) return; const code=await hpRefCode(); let docs=await hpRefQuery(code); if(HP_REF8) docs=docs.concat(await hpRefQuery(HP_REF8));
-  const o=hpGet(); o.refs=o.refs||{}; const ru=state.lang==="ru"; let n=0;
+  const ru=state.lang==="ru"; let n=0; const RS=()=>(hpGet().refs||{}), RSet=(id,v)=>{ const o=hpGet(); o.refs=o.refs||{}; o.refs[id]=v; hpSave(o); }; /* har safar yangidan o'qiladi — hpAdd yozganini eski obyekt bosib ketmasin (2026-10-23) */
   /* ballar: ro'yxat +2 · 100 so'z +6 · link/QR ochildi +1 · o'sha odam ilova o'rnatdi +4 (2026-10-23, marafon qoidalari) */
-  docs.forEach(d=>{ const id=d.name.split("/").pop(), F=d.fields||{}, nm=(F.nm||{}).stringValue||"", w=+((F.w||{}).integerValue||0), k=(F.k||{}).stringValue||(nm?"r":"v"), st=o.refs[id]||0;
-    if(k==="v"||k==="a"){ if(st<1){ o.refs[id]=1; hpSave(o); hpAdd("vis",1,ru?"Кто-то открыл вашу ссылку":"Kimdir linkingizni ochdi","vis:"+id); } if(k==="a"&&(o.refs[id]|0)<2){ const o2=hpGet(); o2.refs[id]=2; hpSave(o2); hpAdd("vapp",4,ru?"По вашей ссылке установили приложение!":"Linkingiz orqali ilova o‘rnatildi!","vapp:"+id); } return; }
-    n++; if(st<1){ o.refs[id]=1; hpSave(o); hpAdd("ref",2,ru?`${nm} зарегистрировался по вашей ссылке`:`${nm} sizning linkingiz bilan ro‘yxatdan o‘tdi`,"ref1:"+id); }
-    if(w>=100&&(o.refs[id]|0)<2){ const o2=hpGet(); o2.refs[id]=2; hpSave(o2); hpAdd("r100",6,ru?`${nm} выучил 100 слов — бонус!`:`${nm} 100 ta so‘z o‘rgandi — bonus!`,"ref2:"+id); } });
+  docs.forEach(d=>{ const id=d.name.split("/").pop(), F=d.fields||{}, nm=(F.nm||{}).stringValue||"", w=+((F.w||{}).integerValue||0), k=(F.k||{}).stringValue||(nm?"r":"v");
+    if(k==="v"||k==="a"){ if((RS()[id]|0)<1){ RSet(id,1); hpAdd("vis",1,ru?"Кто-то открыл вашу ссылку":"Kimdir linkingizni ochdi","vis:"+id); } if(k==="a"&&(RS()[id]|0)<2){ RSet(id,2); hpAdd("vapp",4,ru?"По вашей ссылке установили приложение!":"Linkingiz orqali ilova o‘rnatildi!","vapp:"+id); } return; }
+    n++; if((RS()[id]|0)<1){ RSet(id,1); hpAdd("ref",2,ru?`${nm} зарегистрировался по вашей ссылке`:`${nm} sizning linkingiz bilan ro‘yxatdan o‘tdi`,"ref1:"+id); }
+    if(w>=100&&(RS()[id]|0)<2){ RSet(id,2); hpAdd("r100",6,ru?`${nm} выучил 100 слов — бонус!`:`${nm} 100 ta so‘z o‘rgandi — bonus!`,"ref2:"+id); } });
   const o3=hpGet(); o3.refN=n; hpSave(o3); try{ mrHomeDraw(); }catch(e){} }catch(e){} }
 
 /* ===== 📣 Tarqatuvchi marafoni — 23.10 → 15.11.2026 (2026-10-23, Otabek) =====
