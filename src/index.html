@@ -6831,7 +6831,7 @@ if(window.BLITZ) setTimeout(()=>{ try{ tpOpen(); }catch(e){} },0); /* Blitz: say
 function tpCh(){ const b=document.getElementById("tp-body"); if(!b) return; TP.chLv=TP.chLv||"A2"; TP.chSel=TP.chSel||new Set();
   const half=TP.chH||1, ls=[...Array(12)].map((_,i)=>i+1+(half===2?12:0));
   b.innerHTML=`<div class="lrn-card"><h3>⚡ Challenge</h3><p class="ch-net">Daraja va Lektionlarni tanlang → link o‘quvchilarga yuboriladi: 1 daqiqada kim ko‘p so‘z topadi.</p>
-    <div class="tp-seg">${["A1","A2"].map(l=>`<button type="button" data-tpch="lv" data-v="${l}" aria-pressed="${TP.chLv===l}">${l}</button>`).join("")}${[1,2].map(h=>`<button type="button" data-tpch="h" data-v="${h}" aria-pressed="${half===h}">${TP.chLv}.${h} · L${h===1?"1–12":"13–24"}</button>`).join("")}</div>
+    <div class="tp-seg">${["A1","A2","B1"].map(l=>`<button type="button" data-tpch="lv" data-v="${l}" aria-pressed="${TP.chLv===l}">${l}</button>`).join("")}${[1,2].map(h=>`<button type="button" data-tpch="h" data-v="${h}" aria-pressed="${half===h}">${TP.chLv}.${h} · L${h===1?"1–12":"13–24"}</button>`).join("")}</div>
     <div class="lrn-les" style="margin-top:10px">${ls.map(n=>`<button type="button" class="lrn-chip" data-tpch="l" data-v="${n}" aria-pressed="${TP.chSel.has(n)}"><b>L${n}</b></button>`).join("")}</div>
     <button type="button" class="btn primary" data-tpch="go" ${TP.chSel.size?"":"disabled"} style="margin-top:12px;width:100%">⚡ Challenge yaratish (${TP.chSel.size} Lektion)</button></div>`; }
 document.addEventListener("click",e=>{ const x=e.target.closest("#tch [data-tpch]"); if(!x) return; const k=x.dataset.tpch, v=x.dataset.v;
@@ -6857,13 +6857,13 @@ function tpRender(){ if(window.BLITZ&&!/^(vq|kg|lt|ch)$/.test(TP.tab||"")) TP.ta
 /* --- Live test yaratish --- */
 function tpLt(){
   /* faqat daraja + til + Lektion — ro'yxatlar ko'rsatilmaydi (2026-10-22, Otabek: «faqat Lektion, daraja so'rasin va til, hamma list chiqib kelishi xato») */
-  const D=lernData(); TP.ltLv=TP.ltLv||(TABS[state.tab]&&/^A[12]$/.test(TABS[state.tab].lvl)?TABS[state.tab].lvl:"A2"); TP.ltLang=TP.ltLang||(state.lang==="ru"?"ru":"uz");
+  const D=lernData(); TP.ltLv=TP.ltLv||(TABS[state.tab]&&/^(A[12]|B1)$/.test(TABS[state.tab].lvl)?TABS[state.tab].lvl:"A2"); TP.ltLang=TP.ltLang||(state.lang==="ru"?"ru":"uz");
   TP.lid=lrnAllId(TP.ltLv,TP.ltLang); const L=D[TP.lid]; TP.ltH=TP.ltH||1;
   const les=Object.keys(L.les).map(Number).filter(n=>TP.ltH===2?n>12:n<=12); [...TP.sel].forEach(n=>{ if(!les.includes(n)) TP.sel.delete(n); }); if(!TP.sel.size&&les.length) TP.sel.add(les[0]);
   const lab=n=>(L.lab&&L.lab[n])||("L"+n), c={l:chHash(TP.lid),s:[...TP.sel],n:TP.n,r:1}, avail=ltPool(c).length;
   const games=(()=>{ try{ return JSON.parse(localStorage.getItem("tch:games")||"[]"); }catch(e){ return []; } })();
   document.getElementById("tp-body").innerHTML=`<div class="lrn-card"><h3>Yangi live test</h3>
-    <div class="tp-row"><span>Daraja</span><div class="tp-seg">${["A1","A2"].map(v=>`<button type="button" data-tplt="lv" data-v="${v}" aria-pressed="${TP.ltLv===v}">${v}</button>`).join("")}</div></div>
+    <div class="tp-row"><span>Daraja</span><div class="tp-seg">${["A1","A2","B1"].map(v=>`<button type="button" data-tplt="lv" data-v="${v}" aria-pressed="${TP.ltLv===v}">${v}</button>`).join("")}</div></div>
     <div class="tp-row"><span>Til</span><div class="tp-seg">${[["uz","O‘zbekcha"],["ru","Русский"]].map(([v,t])=>`<button type="button" data-tplt="lang" data-v="${v}" aria-pressed="${TP.ltLang===v}">${t}</button>`).join("")}</div></div>
     <div class="tp-row"><span>Lektionlar</span><div class="tp-seg">${[1,2].map(h=>`<button type="button" data-tplt="h" data-v="${h}" aria-pressed="${TP.ltH===h}">${TP.ltLv}.${h} · L${h===1?"1–12":"13–24"}</button>`).join("")}</div></div>
     <div class="lrn-les">${les.map(n=>`<button type="button" class="lrn-chip" aria-pressed="${TP.sel.has(n)}" data-tples="${n}"><b>${esc(lab(n))}</b><span>${esc(L.les[n])}</span></button>`).join("")}</div>
@@ -7206,7 +7206,7 @@ function spProfHTML(d,o){ o=o||{}; const uz=state.lang!=="ru", T=stTotals(), A=d
     ${fl.length?`<div class="sp-fl">${fl.slice(0,4).join("")}</div>`:""}
     <h5>⏱ ${uz?"Oxirgi ishlar":"Последние работы"}<small>${an?`7 ${uz?"kun":"дн"} · ${an.min} ${uz?"daq":"мин"}`:""}</small></h5>
     <div class="sp-log">${L.length?L.slice(0,8).map(x=>`<div><time>${spWhen(x[0],uz)}</time><b>${esc(x[3]||x[2])}</b><i>${x[5]?`${x[4]} / ${x[5]}`:x[4]?`+${x[4]} ${uz?"so‘z":"слов"}`:""}</i></div>`).join(""):`<div><i>${uz?"hali yo‘q — yangi versiyadan boshlab yoziladi":"пока нет"}</i></div>`}</div>
-    <h5>🧠 Wortschatz — ${uz?"Lektion bo‘yicha":"по урокам"}<span class="sp-seg">${["A1","A2"].map(l=>`<button type="button" data-sp="lv" data-v="${l}" aria-pressed="${showLv===l}">${l}</button>`).join("")}<button type="button" data-sp="half" data-v="1" aria-pressed="${half===1}">L1–12</button><button type="button" data-sp="half" data-v="2" aria-pressed="${half===2}">L13–24</button></span></h5>
+    <h5>🧠 Wortschatz — ${uz?"Lektion bo‘yicha":"по урокам"}<span class="sp-seg">${["A1","A2","B1"].map(l=>`<button type="button" data-sp="lv" data-v="${l}" aria-pressed="${showLv===l}">${l}</button>`).join("")}<button type="button" data-sp="half" data-v="1" aria-pressed="${half===1}">L1–12</button><button type="button" data-sp="half" data-v="2" aria-pressed="${half===2}">L13–24</button></span></h5>
     <div class="sp-grid">${vis.map(cell).join("")}</div>
     ${gRows?`<h5>✍️ ${uz?"Varaqlar va mashqlar":"Листы и упражнения"}<small>${uz?"eng yaxshi natija":"лучший результат"}</small></h5>${gRows}`:""}
     ${muRows?`<h5>💬 Muloqot<small>${showLv} · ${uz?"iboralar":"фразы"}</small></h5>${muRows}`:""}
@@ -7581,7 +7581,7 @@ function kgPanel(){ const b=document.getElementById("tp-body"); if(!b) return;
   b.innerHTML=`<div class="lrn-card"><h3>🎮 Sinf o‘yini</h3>
     <p class="ch-net">Savollarni o‘zingiz kiritasiz → doskaga chiqarasiz → o‘quvchilar telefondan QR-kod orqali qo‘shiladi. Oxirida hisobot: kim qaysi savolda xato qildi.</p>
     ${kgListHTML(S.filter(s=>!s.f))}
-    ${[...new Set(S.filter(s=>s.f).map(s=>s.f))].map(f=>{ const F=S.filter(s=>s.f===f); return `<details class="kg-fold"${TP.kgOpenF===f?" open":""} data-kgf="${esc(f)}"><summary>📁 ${esc(f)} <small>${F.length} ta</small></summary>${kgListHTML(F)}</details>`; }).join("")}
+    ${[...new Set(S.filter(s=>s.f).map(s=>s.f))].sort().map(f=>{ const F=S.filter(s=>s.f===f); return `<details class="kg-fold"${TP.kgOpenF===f?" open":""} data-kgf="${esc(f)}"><summary>📁 ${esc(f)} <small>${F.length} ta</small></summary>${kgListHTML(F)}</details>`; }).join("")}
     ${kgLS("tch:kgdel",[]).length?`<button type="button" class="lrn-link" data-kg="undel">↺ O‘chirilgan tayyor to‘plamlarni qaytarish</button>`:""}
     ${S.length?"":`<p class="lrn-count">Hali savollar yo‘q.</p>`}
     <button type="button" class="btn primary" data-kg="new">＋ Yangi savollar</button></div>
