@@ -22,7 +22,7 @@ service cloud.firestore {
     match /s/{id} {
       allow get, list: if true;
       allow create, update: if isHex(id, 64)
-        && request.resource.data.keys().hasOnly(['e','t','rk','nm','n','lv','app','gw','gp','pw','pp','hp','hb'])
+        && request.resource.data.keys().hasOnly(['e','t','rk','nm','n','lv','app','gw','gp','pw','pp','hp','hb','pid','g','nw'])
         && str(request.resource.data.e, 30000)
         && request.resource.data.t is int
         && (!('rk' in request.resource.data) || str(request.resource.data.rk, 80))
@@ -35,7 +35,10 @@ service cloud.firestore {
         && (!('pw' in request.resource.data) || str(request.resource.data.pw, 12))
         && (!('pp' in request.resource.data) || int0(request.resource.data.pp, 200000))
         && (!('hp' in request.resource.data) || int0(request.resource.data.hp, 100000))
-        && (!('hb' in request.resource.data) || str(request.resource.data.hb, 200));
+        && (!('hb' in request.resource.data) || str(request.resource.data.hb, 200))
+        && (!('pid' in request.resource.data) || str(request.resource.data.pid, 16))
+        && (!('g' in request.resource.data) || str(request.resource.data.g, 12))
+        && (!('nw' in request.resource.data) || int0(request.resource.data.nw, 20000));
     }
 
     // n: shu ism ro'yxatdan o'tganini bildiradi (faqat yaratish).
@@ -56,6 +59,26 @@ service cloud.firestore {
         && int0(request.resource.data.w, 50000)
         && request.resource.data.t is int
         && (request.method == 'create' || request.resource.data.by == resource.data.by);
+    }
+
+    // g: guruh — nomi, a'zolar [[pid,ism]...], egasi (pid). ID = 12 hex. (2026-10-23)
+    match /g/{id} {
+      allow get, list: if true;
+      allow create, update: if isHex(id, 12)
+        && request.resource.data.keys().hasOnly(['nm','m','o','t'])
+        && str(request.resource.data.nm, 40)
+        && str(request.resource.data.m, 4000)
+        && str(request.resource.data.o, 16)
+        && request.resource.data.t is int;
+    }
+
+    // ib: xabarlar qutisi (chaqiruvlar) — pid bo'yicha. (2026-10-23)
+    match /ib/{id} {
+      allow get: if isHex(id, 16);
+      allow create, update: if isHex(id, 16)
+        && request.resource.data.keys().hasOnly(['l','t'])
+        && str(request.resource.data.l, 20000)
+        && request.resource.data.t is int;
     }
 
     // th: ustozning "rahmat"lari (o'quvchi kaliti hash'i bo'yicha).
