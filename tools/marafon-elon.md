@@ -3,53 +3,53 @@
 ## O'zbekcha
 
 📣 **STREBER.UZ — TARQATUVCHI MARAFONI**
-23-oktabr → 15-noyabr
+23-oktabr → 15-noyabr · 10 ta sovrin
 
-Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — va yutib oling:
-🥇 1 mln so'm
-🥈 600 ming so'm
-🥉 400 ming so'm
+Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — har bir do'stingiz uchun 100 ming so'mgacha yutib oling:
+🥇 1 mln so'mgacha
+🥈 600 ming so'mgacha
+🥉 400 ming so'mgacha
+4–10-o'rinlar — 100 ming so'mdan
 (Click/Payme + saytda doimiy 🏆 belgi)
 
-**Qanday ball yig'iladi:**
-👥 Do'stingiz sizning link/kodingiz bilan ro'yxatdan o'tdi — +2
-🎓 O'sha do'st 100 ta so'z o'rgandi — +6
-🔗 Kimdir linkingiz/QR'ingizni ochdi — +1
-📲 U ilovani o'rnatdi — +4
-📲 O'zingiz ilovani o'rnatdingiz — +2
+**Ballar:**
+🔗 Kimdir linkingiz / QR / kodingizni ochdi — +1
+👥 U ro'yxatdan o'tdi — +1
+🎓 U 100 ta so'z o'rgandi yoki 5 ta grammatika mashqini bajardi — +6
+📲 O'zingiz ilovani o'rnatdingiz — +10
 ⚡ Challenge'ingizda yangi odam o'ynadi — +2
 👎 Saytdagi xatoni topdingiz (ustoz tasdiqlasa) — +1
 
-**Shart:** sovrin uchun eng kami 🥇 40 · 🥈 30 · 🥉 25 ball. Soxta akkauntlar tekshiriladi va chetlatiladi. E'lon — 18-noyabr.
+**Sovrin:** har bir haqiqiy do'st (100 so'z yoki grammatika) uchun 100 ming so'm, yuqoridagi chegaragacha. Eng kami: 🥇 60 · 🥈 45 · 🥉 35 · 4–10: 20 ball. Soxta akkauntlar tekshiriladi. E'lon — 18-noyabr.
 
-Linkingiz va kodingiz: saytda 👤 Profil → 🏅 Saytga hissa → «Do'stga yuborish».
-Qoidalar to'liq: bosh sahifadagi 📣 karta → «Qoidalar».
+Linkingiz va kodingiz: saytda 👤 → 🏅 Saytga hissa → «Do'stga yuborish».
+To'liq qoidalar: bosh sahifadagi 📣 karta → «Qoidalar».
 
 🌐 streber.uz
 
 ## Русский
 
 📣 **STREBER.UZ — МАРАФОН РАСПРОСТРАНИТЕЛЕЙ**
-23 октября → 15 ноября
+23 октября → 15 ноября · 10 призов
 
-Расскажите друзьям о бесплатном сайте для изучения немецкого — и выиграйте:
-🥇 1 млн сум
-🥈 600 тыс. сум
-🥉 400 тыс. сум
+Расскажите друзьям о бесплатном сайте для изучения немецкого — до 100 тыс. сум за каждого друга:
+🥇 до 1 млн сум
+🥈 до 600 тыс. сум
+🥉 до 400 тыс. сум
+4–10 места — по 100 тыс. сум
 (Click/Payme + постоянный значок 🏆 на сайте)
 
-**Как набрать баллы:**
-👥 Друг зарегистрировался по вашей ссылке/коду — +2
-🎓 Этот друг выучил 100 слов — +6
-🔗 Кто-то открыл вашу ссылку/QR — +1
-📲 Он установил приложение — +4
-📲 Вы сами установили приложение — +2
+**Баллы:**
+🔗 Кто-то открыл вашу ссылку / QR / код — +1
+👥 Он зарегистрировался — +1
+🎓 Он выучил 100 слов или сделал 5 заданий по грамматике — +6
+📲 Вы сами установили приложение — +10
 ⚡ Новый игрок в вашем Challenge — +2
 👎 Нашли ошибку на сайте (подтвердил учитель) — +1
 
-**Условие:** минимум для приза 🥇 40 · 🥈 30 · 🥉 25 баллов. Фейковые аккаунты проверяются и исключаются. Объявление — 18 ноября.
+**Приз:** 100 тыс. сум за каждого настоящего друга (100 слов или грамматика), до указанного предела. Минимум: 🥇 60 · 🥈 45 · 🥉 35 · 4–10: 20 баллов. Фейковые аккаунты проверяются. Объявление — 18 ноября.
 
-Ваша ссылка и код: на сайте 👤 Профиль → 🏅 Вклад в сайт → «Отправить другу».
+Ваша ссылка и код: на сайте 👤 → 🏅 Вклад в сайт → «Отправить другу».
 Полные правила: карточка 📣 на главной → «Правила».
 
 🌐 streber.uz

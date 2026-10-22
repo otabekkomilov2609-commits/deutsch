@@ -56,12 +56,13 @@ service cloud.firestore {
       allow get, list: if true;
       // ID = <6 belgili kod yoki eski 8-hex>_<16 hex: ism-id yoki qurilma-id>. k: r = ro'yxat, v = link ochildi, a = ilova o'rnatdi (2026-10-23)
       allow create, update: if id.matches('^[A-Za-z0-9]{6,8}_[a-f0-9]{16}$')
-        && request.resource.data.keys().hasOnly(['by','nm','w','t','k'])
+        && request.resource.data.keys().hasOnly(['by','nm','w','gr','t','k'])
         && str(request.resource.data.by, 8) && request.resource.data.by.size() >= 6
         && str(request.resource.data.nm, 40)
         && int0(request.resource.data.w, 50000)
         && request.resource.data.t is int
         && (!('k' in request.resource.data) || str(request.resource.data.k, 2))
+        && (!('gr' in request.resource.data) || int0(request.resource.data.gr, 500))
         && (request.method == 'create' || request.resource.data.by == resource.data.by);
     }
 
@@ -70,7 +71,7 @@ service cloud.firestore {
       allow get, list: if true;
       allow create, update: if (id == 'cfg'
           && request.resource.data.keys().hasOnly(['x','w','t'])
-          && str(request.resource.data.x, 4000) && str(request.resource.data.w, 2000)
+          && str(request.resource.data.x, 4000) && str(request.resource.data.w, 3000)
           && request.resource.data.t is int)
         || (id == 'top'
           && request.resource.data.keys().hasOnly(['l','t'])
