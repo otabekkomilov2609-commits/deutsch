@@ -850,3 +850,6 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 
 ## 🔐 Firestore qoidalari (2026-10-22)
 - `tools/firestore.rules` — bazadagi qoidalarning nusxasi. Topilma: 19.10 qoidalari `s/` da faqat e,t ga ruxsat bergan — reyting maydonlari, `ref/`, `th/` rad etilgan (403). Yangi qoidalar: o'chirish yo'q, maydonlar ro'yxati, tip/o'lcham, ID formati. Nashr — Otabek konsolda "Veröffentlichen" bosadi.
+
+## 👎 Xato uchun ball — faqat ustoz tasdiqlasa (2026-10-23, Otabek)
+- 👎 yuborilganda ball avtomatik berilmaydi. Admin → muammolar ro'yxatida har jalobada "🏅 +1 ball" tugmasi; ustoz ko'rib bossa — o'quvchiga th/ orqali +1 (kind=fb) va "Xatoni topganing uchun rahmat! 🔧" xabari. Bir jalobaga bir marta (`adm:hp`). Mehmon (akkauntsiz) yuborsa — tugma yo'q.
