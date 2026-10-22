@@ -819,3 +819,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Challenge tuzatish (2026-10-22): Wortschatz rejimida «Challenge yaratish» link Yodlash oynasiga chiqib, ustoz paneli ortida ko‘rinmay qolardi («bosilmayapti»). Endi link panelning o‘zida chiqadi (Grammatik rejimidagidek).
 - 👀 Cheater hamma o‘yinlarda (2026-10-22): Live test (doskada 👀×N + qizil CHEATER, saqlangan natijada ham), Challenge (reytingda 👀×N), Duel (raqibga «Raqibingiz o‘yindan chiqib ketdi!»). O‘quvchiga qaytganda ogohlantirish.
 - Blitz saytida ro‘yxatdan o‘tish oynasi umuman chiqmaydi (accLogin o‘chiq).
+- Blitz belgisi (2026-10-22): Blitz rejimida brauzer yorlig‘i belgisi va ustoz paneli sarlavhasi — Blitz chaqmog‘i (icons/blitz-*.png). blitzdeutsch.uz repo'sida sync paytida <title>, favicon, og-teglar va manifest (nom «Blitz», ikonka) Blitz'ga almashtiriladi — ilova sifatida o‘rnatilsa ham Blitz belgisi.
