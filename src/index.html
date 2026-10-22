@@ -4051,7 +4051,7 @@ function exItem(){ kbHold(); kbRel(); const el=exEl(); el.classList.remove("has-
   if(solved){ exShowSolved(it); exGo("next"); EX.done=true; }
   else exGo(EXR[it.t].auto?"hide":"chk");
   if(it.say) setTimeout(()=>exSay(it.say),250);
-  if(it.t==="say"){ spAfterRender(it); if(!solved) setTimeout(()=>{ if(exCur()===it) vmPlay("q"); },300); }
+  if(it.t==="say"){ /* Beispiel ovozi savolga o‘tganda ham davom etib, javob o‘qilib ketardi — to‘xtatamiz (2026-10-22, Otabek) */ try{ if(EX.spAu){ EX.spAu.pause(); EX.spAu=null; } }catch(e){} try{ speechSynthesis.cancel(); }catch(e){} spAfterRender(it); if(!solved) setTimeout(()=>{ if(exCur()===it&&!EX.scr) vmPlay("q"); },300); }
   const gp=el.querySelector(".ex-gap:not(.lk)"); if(gp&&!solved){ const fo=()=>{ if(exCur()===it&&!EX.done&&document.activeElement!==gp) gp.focus({preventScroll:true}); }; fo(); setTimeout(fo,60); } /* kursor doim yoziladigan joyda (2026-10-20, Otabek: butun saytda) */
   if(document.fonts&&document.fonts.status!=="loaded") document.fonts.ready.then(()=>{ try{ exEl().querySelectorAll(".ex-gap").forEach(exGapFit); }catch(e){} }); }
 /* oldin to'g'ri yechilgan savolga qaytilsa — javob ko'rinadi */
@@ -4267,7 +4267,7 @@ function spTbDraw(){ const box=document.getElementById("sp2-tbl"), T=SPR.tb||[];
 function spBspPlay(which,chain){ const g=EX.G[exGi()], p=g&&spBspParse(g.bsp); if(!p) return; const it0=exData()[EX.id].sec[EX.si].items[EX.q[g.ks[0]]]||{};
   const f=which==="q"?it0.bq:it0.ba, t=which==="q"?spBare(p.q):p.a, sel=which==="q"?".sp2-bq":".sp2-ba", el=document.querySelector(sel);
   document.querySelectorAll(".sp2-bq.say,.sp2-ba.say").forEach(x=>x.classList.remove("say")); if(el) el.classList.add("say");
-  const next=()=>{ if(el) el.classList.remove("say"); if(chain&&which==="q"&&EX.scr==="b") setTimeout(()=>spBspPlay("a",false),300); };
+  const next=()=>{ if(el) el.classList.remove("say"); if(chain&&which==="q"&&EX.scr==="b") setTimeout(()=>{ if(EX.scr==="b") spBspPlay("a",false); },300); };
   try{ if(EX.spAu) EX.spAu.pause(); }catch(e){}
   if(f){ const a=new Audio(AUD_BASE+f); EX.spAu=a; a.onended=next; a.play().catch(()=>{ exSay(t); setTimeout(next,1800); }); }
   else { exSay(t); setTimeout(next,Math.min(4000,900+t.length*70)); } }
