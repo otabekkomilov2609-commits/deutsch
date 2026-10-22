@@ -794,3 +794,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 ### B1 Wortschatz (2026-10-22)
 - B1.1 L1–12 va B1.2 L13–24 ro‘yxatlari (991 so‘z, ru + uz; uz → alias ru). Manba: Momente B1 AB Lernwortschatz; misol gaplar bizniki. Umlautli ko‘plik «¨-e» shaklida yoziladi.
 - Live test, Challenge, profil va Neuling'da daraja tanlash: A1 · A2 · B1 (Challenge'da daraja va yarim alohida qatorda).
+- Live test: o‘quvchi interfeysi test tilida chiqadi (o‘zbekcha ro‘yxat → o‘zbekcha interfeys, ruscha → ruscha), saytning tilidan qat’i nazar (2026-10-22).

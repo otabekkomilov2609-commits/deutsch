@@ -6533,7 +6533,8 @@ const LTUZ={uz:{t:"🎯 Live test", nm:"Ismingiz", nmPh:"Ism va familiya", join:
     write:"Напишите по-немецки", ph:"По-немецки…", check:"Проверить", skip:"Пропустить →", back:"← Назад", dunno:"Не знаю", ok:"Верно!", near:"Почти!", bad:"Неверно", corr:"Правильный ответ:",
     done:"Тест окончен!", res:(o,n)=>`✓ ${o} / ${n} верно`, place:(a,b)=>`${a}-е место (из ${b})`, mist:"Не найдены", board:"Результаты", ended:"Этот тест уже окончен.",
     bad1:"Ссылка неверная или устарела.", art:"Существительное пишите с артиклем: der / die / das", net0:"⏳ Подключение…", net1:"🟢 Подключено", netBad:"🔴 Нет связи", force:"Всё равно начать", you:"вы", rules:(n,m)=>`${n} слов · пишете только по-немецки${m?` · ${m} мин`:""}`, rules2:"✓ верно = 1 балл · ≈ почти = 0,5 балла · ошиблись — попробуйте ещё раз или пропустите (слово вернётся) · 💡 3 подсказки", again:"Слово вернётся позже", help:n=>`💡 Подсказка (${n})`, helpNo:"Подсказок нет", fin:"Завершить тест", left:n=>`Осталось слов: ${n}`, pts:s=>`${s} б.`, errNm:"Напишите имя"}};
-const lz=k=>LTUZ[state.lang==="ru"?"ru":"uz"][k];
+/* Live test: o‘quvchi interfeysi test tilida (uz ro‘yxat → o‘zbekcha, ru → ruscha), sayt tilidan qat’i nazar (2026-10-22) */
+const lz=k=>LTUZ[LTP&&LTP.lang?LTP.lang:(state.lang==="ru"?"ru":"uz")][k];
 
 /* ---------- O'quvchi tomoni (?lt=) ---------- */
 const LTP={};
@@ -6549,7 +6550,7 @@ function ltOpen(code){
   const el=ltpEl(); el.hidden=false; document.body.style.overflow="hidden";
   if(!c||!ltListId(c.l)||!ltQs(c).length){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-lt="close">✕</button><div class="lrn-tt"><b>${esc(lz("t"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(lz("bad1"))}</p></div></div>`; return; }
   let me=store.get("chme"); if(!me){ me=Math.random().toString(36).slice(2,10); store.set("chme",me); }
-  Object.assign(LTP,{c,code,id:chHash(code),qs:ltQs(c),me,players:{},ctl:null,st:"join",ok:0,a:0,sk:0,ms:0,t0:0,q:[],best:{},last:{},hl:3,hw:{},name:store.get("chname")||ACC.name||""});
+  Object.assign(LTP,{lang:/^[AB]\d-[\w]+-u-/.test(ltListId(c.l)||"")?"uz":"ru",c,code,id:chHash(code),qs:ltQs(c),me,players:{},ctl:null,st:"join",ok:0,a:0,sk:0,ms:0,t0:0,q:[],best:{},last:{},hl:3,hw:{},name:store.get("chname")||ACC.name||""});
   try{ const s=JSON.parse(store.get("lt:"+LTP.id)||"null"); if(s){ Object.assign(LTP,{tk:s.tk||0,name:s.n,ok:s.ok,a:s.a,sk:s.sk,ms:s.ms,st:s.st,t0:s.t0,q:s.q||[],best:s.best||{},last:s.last||{},hl:s.hl??3,hw:s.hw||{}}); LTP.okMax=Object.values(LTP.best).reduce((t,v)=>t+v,0); } }catch(e){}
   if(LTP.mq) LTP.mq.end();
   LTP.mq=mqMulti(cl=>{ cl.subscribe(LT_NS+LTP.id+"/ctl",{qos:1}); cl.subscribe(LT_NS+LTP.id+"/p/+",{qos:1}); ltpNet(); ltpPub(true); },(t,m)=>ltpMsg(t,m));
