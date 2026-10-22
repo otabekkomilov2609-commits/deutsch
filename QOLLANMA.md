@@ -868,7 +868,7 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Firestore qoidalari `tools/firestore.rules` da yangilandi (s/ pid,g,nw; g/; ib/) — konsolda nashr qilish kerak.
 - Qilinmadi: Lernraum (birga o'qish xonasi); ref-link bilan kelganlarni avtomatik o'rtoq qilish.
 
-## 📣 Tarqatuvchi marafoni (2026-10-23, Otabek)
+## 📣 Tarqatish marafoni (2026-10-23, Otabek)
 - Muddat: 23.10.2026 00:00 → 15.11.2026 23:59 (Toshkent). Faqat shu oraliqdagi hissa ballari. Ro'yxatdan o'tgan hamma avtomatik qatnashadi (o'z o'quvchilar ham).
 - Sovrin: 🥇 1 mln · 🥈 600 ming · 🥉 400 ming so'm (Click/Payme) + doimiy "🏆 Marafon g'olibi · noyabr 2026" belgisi. **Eng kami** (marra emas): 🥇 ≥40 · 🥈 ≥30 · 🥉 ≥25 — yetmasa sovrin keyingi marafonga o'tadi. Teng bo'lsa — oldinroq yetgan yuqori.
 - Ballar: do'st link/kod bilan ro'yxatdan o'tdi +2 · o'sha do'st 100 so'z +6 · kimdir link/QR/kodni ochdi +1 (jami ≤20, bir qurilma bir marta) · o'sha odam ilova o'rnatdi +4 · o'zi ilova +2 (1 marta) · Challenge'da yangi odam +2 · 👎 ustoz tasdiqlagan xato +1 (jami ≤10). 🎓 Ustoz rahmati hisoblanmaydi. O'z linkini ochish = 0.
@@ -883,3 +883,5 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Ballar: link/QR/kod ochildi +1 (jami ≤20) · ro'yxatdan o'tdi +1 · 100 so'z YOKI 5 ta grammatika mashqi (onlayn mashqlardagi «gram» bo'limi topshiriqlari, ≥80%) +6 · o'zi ilova o'rnatdi +10 (1 marta) · do'stning ilova o'rnatishi 0 · challenge'da yangi odam +2 (jami ≤20) · 👎 tasdiqlangan xato +1 (cheklovsiz). Ustoz rahmati hisoblanmaydi.
 - Sovrin QAT'IY (02:13 da «gacha» bekor qilindi): 🥇 1 mln · 🥈 600 ming · 🥉 400 ming · 4–10: 100 ming. Eng kami 60 / 45 / 35 / 20. Jami 2,7 mln.
 - Avvalgi (40/30/25, +2/+6, do'st ilovasi +4, o'zi +2) bekor.
+- 02:17–02:19 (Otabek): nomi «Tarqatish marafoni». Ball bo'yicha minimumlar o'rniga yagona shart: **kamida 4 ta haqiqiy do'st** (100 so'z yoki 5 ta grammatika ≥80%). O'rin ball bo'yicha; shartni bajarmagan o'tkazib yuboriladi, sovrin keyingi shart bajarganga o'tadi.
+- Taklif qilgan odam «👥 Do'stlarim» oynasida har bir kelgan do'stini ko'radi: ism, 🧠 so'z x/100, 📘 grammatika y/5, ✅ haqiqiy; link ochgan lekin ro'yxatdan o'tmaganlar soni. Do'st progressi har +5 so'zda (10 daqiqada ko'pi bilan 1 marta) ref/ hujjatiga yoziladi.

@@ -1,8 +1,8 @@
-# 📣 Tarqatuvchi marafoni — Telegram e'loni
+# 📣 Tarqatish marafoni — Telegram e'loni
 
 ## O'zbekcha
 
-📣 **STREBER.UZ — TARQATUVCHI MARAFONI**
+📣 **STREBER.UZ — TARQATISH MARAFONI**
 23-oktabr → 15-noyabr · 10 ta sovrin
 
 Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — va yutib oling:
@@ -20,7 +20,7 @@ Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — va yuti
 ⚡ Challenge'ingizda yangi odam o'ynadi — +2
 👎 Saytdagi xatoni topdingiz (ustoz tasdiqlasa) — +1
 
-**Eng kami:** 🥇 60 · 🥈 45 · 🥉 35 · 4–10: 20 ball. Soxta akkauntlar tekshiriladi. E'lon — 18-noyabr.
+**Sovrin sharti:** kamida 4 ta haqiqiy do'st — linkingiz bilan kelib, 100 so'z yoki 5 ta grammatika mashqini bajargan odam. Saytda har bir do'stingiz qancha o'rganganini ko'rib turasiz. Soxta akkauntlar tekshiriladi. E'lon — 18-noyabr.
 
 Linkingiz va kodingiz: saytda 👤 → 🏅 Saytga hissa → «Do'stga yuborish».
 To'liq qoidalar: bosh sahifadagi 📣 karta → «Qoidalar».
@@ -29,7 +29,7 @@ To'liq qoidalar: bosh sahifadagi 📣 karta → «Qoidalar».
 
 ## Русский
 
-📣 **STREBER.UZ — МАРАФОН РАСПРОСТРАНИТЕЛЕЙ**
+📣 **STREBER.UZ — МАРАФОН РАСПРОСТРАНЕНИЯ**
 23 октября → 15 ноября · 10 призов
 
 Расскажите друзьям о бесплатном сайте для изучения немецкого — и выиграйте:
@@ -47,7 +47,7 @@ To'liq qoidalar: bosh sahifadagi 📣 karta → «Qoidalar».
 ⚡ Новый игрок в вашем Challenge — +2
 👎 Нашли ошибку на сайте (подтвердил учитель) — +1
 
-**Минимум:** 🥇 60 · 🥈 45 · 🥉 35 · 4–10: 20 баллов. Фейковые аккаунты проверяются. Объявление — 18 ноября.
+**Условие приза:** минимум 4 настоящих друга — пришли по вашей ссылке и выучили 100 слов или сделали 5 заданий по грамматике. На сайте видно, сколько выучил каждый ваш друг. Фейковые аккаунты проверяются. Объявление — 18 ноября.
 
 Ваша ссылка и код: на сайте 👤 → 🏅 Вклад в сайт → «Отправить другу».
 Полные правила: карточка 📣 на главной → «Правила».
