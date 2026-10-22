@@ -303,7 +303,7 @@ main{padding-block:6px 40px}
 .lrn-end{align-items:center;text-align:center}.lrn-end .big{font-size:52px}.lrn-end p{margin:0;color:var(--muted)}.lrn-end .btn{padding:11px 22px;font-size:15px;cursor:pointer}
 .lrn-gq h3{margin:0 0 4px;font-size:22px;text-align:center}.lrn-gq .lrn-count{text-align:center}.lrn-gopts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.lrn-gb{font:inherit;font-size:24px;font-weight:800;padding:16px 4px;border:2px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);box-shadow:0 4px 0 var(--line);cursor:pointer}.lrn-gb.all{font-size:18px}.lrn-gb.on{border-color:var(--blue);background:var(--blue-soft);box-shadow:0 4px 0 var(--blue)}.lrn-gb:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}.lrn-gown{display:flex;gap:8px}.lrn-gown input{flex:1;min-width:0;font:inherit;font-size:17px;padding:12px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}.lrn-gown.need input{border-color:#C62828;animation:lrnShake .35s}.lrn-gtip{text-align:center;color:var(--muted);margin:14px 0 0}.lrn-intro-h{text-align:center;font-weight:800;color:var(--muted);margin:0 0 10px}.lrn-intro{cursor:default;min-height:260px}.lrn-itr{font-size:19px;color:var(--muted);font-weight:700}.lrn-flash{min-height:300px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;font:inherit;cursor:pointer}
 .lrn-flash.flip{background:var(--blue-soft)}.lrn-fm{display:inline-block;font-size:15px;font-weight:600;color:var(--muted);letter-spacing:.01em}.lrn-flash .lrn-fm{font-size:17px;margin-top:-6px}.lrn-flash .lrn-q.de{color:var(--blue)}.lrn-tap{font-size:13px;color:var(--muted)}
-.lrn-say-row{display:flex;justify-content:center}.kc-tg{margin-top:0}.kc-tg .tg-ph{font-size:14px}.kc-bn{border-radius:12px;padding:8px 12px;font-size:14.5px;text-align:center;margin-top:-4px}.kc-bn.ok{background:#E3F6EA;color:#1E8E4E}.kc-bn.bad{background:#FFE4E4;color:#B42318}.kc-bn.mid{background:var(--ylw,#FFF3C4);color:#7a5a00}
+.lrn-say-row{display:flex;justify-content:center}.kc-tg{margin-top:0}.kc-next{flex:1;font-size:17px}.kc-tg .tg-ph{font-size:14px}.kc-bn{border-radius:12px;padding:8px 12px;font-size:14.5px;text-align:center;margin-top:-4px}.kc-bn.ok{background:#E3F6EA;color:#1E8E4E}.kc-bn.bad{background:#FFE4E4;color:#B42318}.kc-bn.mid{background:var(--ylw,#FFF3C4);color:#7a5a00}
 .lrn-kn{display:grid;grid-template-columns:1fr 1fr;gap:10px}.lrn-kn .btn{padding:14px;font-size:16px;cursor:pointer}
 .lrn-no{border-color:#E3B6B6;color:#C62828}.lrn-yes{border-color:var(--green);color:var(--green)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lrn-fb.bad,:root:not([data-theme="light"]) .lrn-opt.bad{background:#3a1d1d;color:inherit}}
@@ -5296,8 +5296,8 @@ async function kcDone(x){ const dur=(Date.now()-KC.t0)/1000; let heard="", sc=nu
   const ok=!unclear&&kcMatch(kcRef(x),heard)&&(sc==null||sc>=45);
   KC.res={i:x.i,heard,sc,ok,unclear}; try{ actEv("kc",ok?"ok":unclear?"unclear":"bad"); }catch(e){}
   if(unclear){ lrnCard(); return; }
-  LR.flip=true; lrnCard(); try{ if(!ok){ const b=document.querySelector(".lrn-flash [data-say]")||document.querySelector("[data-say]"); } }catch(e){}
-  if(ok){ setTimeout(()=>{ if(LR.mode==="cards"&&LR.cards[0]===x&&LR.flip){ const b=document.querySelector('[data-l="yes"]'); if(b) b.click(); } },1600); } }
+  /* to'g'ri aytsa: karta aylanadi, so'z yangraydi, tugma «Weiter →» bo'ladi (2026-10-23, Otabek) */
+  LR.flip=true; lrnCard(); if(ok){ setTimeout(()=>{ try{ if(LR.mode==="cards"&&LR.cards[0]===x) lrnSay(x.say||x.de); }catch(e){} },350); } }
 function kcRelease(){ clearTimeout(KC.tm); clearTimeout(KC.lt); KC.on=false; KC.busy=false; try{ if(KC.sr) KC.sr.abort(); }catch(e){} try{ if(KC.rec&&KC.rec.state==="recording"){ KC.rec.onstop=null; KC.rec.stop(); } }catch(e){} try{ if(KC.st) KC.st.getTracks().forEach(t=>t.stop()); }catch(e){} KC.st=null; KC.rec=null; KC.sr=null; }
 function lrnStartCards(){ LR.mode="cards"; LR.cHist=[]; const KN=lrnKnown(), all=lrnItems(); const un=lrnShuffle(all.filter(x=>!KN.has(x.i))); LR.cards=un.slice(0,lrnGoal()||un.length); LR.cardsN=LR.cards.length; LR.cardsRest=un.length-LR.cards.length; LR.allKnown=!un.length&&all.length>0; LR.flip=false; lrnCard(); }
 function lrnCard(){
@@ -5308,7 +5308,7 @@ function lrnCard(){
       ${LR.flip?`<span class="lrn-q de">${esc(x.full)}</span>${x.fm?`<span class="lrn-fm">${esc(x.fm)}</span>`:""}${x.ex?`<span class="lrn-ex">${esc(x.ex)}</span>`:""}`:`<span class="lrn-q">${esc(x.ru)}</span>`}
     </button>
     ${LR.flip?`<div class="lrn-say-row"><button type="button" class="lrn-say" data-say="${esc(x.say||x.de)}">🔊</button></div>${kcBanner(x)}`:kcMicRow()}
-    <div class="lrn-kn"><button type="button" class="btn lrn-no" data-l="no">${esc(lt("dontknow"))}</button><button type="button" class="btn lrn-yes" data-l="yes">${esc(lt("know"))}</button></div>
+    ${KC.res&&KC.res.i===x.i&&KC.res.ok&&LR.flip?`<div class="lrn-kn"><button type="button" class="btn lrn-yes kc-next" data-l="yes">Weiter →</button></div>`:`<div class="lrn-kn"><button type="button" class="btn lrn-no" data-l="no">${esc(lt("dontknow"))}</button><button type="button" class="btn lrn-yes" data-l="yes">${esc(lt("know"))}</button></div>`}
     ${LR.cHist&&LR.cHist.length?`<div class="lrn-back"><button type="button" class="lrn-link" data-l="cundo">← Zurück</button></div>`:""}
   </div>`;
 }
