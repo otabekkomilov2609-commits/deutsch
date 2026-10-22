@@ -888,3 +888,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - 🆕 «Yangilanish» oynasi (avtomatik ochilish va tugma) olib tashlandi (2026-10-23, Otabek).
 - 🌙 Qorong'u rejim: yangi komponentlar (marafon, jamoa, unvon oynalari, Karteikarten 🎙) uchun --card/--soft/--ylw/--red-soft/--ok-ink o'zgaruvchilari :root'da (light/dark). Yangi CSS'da qattiq #fff/#E3F6EA ishlatilmaydi (2026-10-23).
 - 02:36 (Otabek): atama «haqiqiy do'st» → «jonli odam» (ru «живой человек»). Shart matni: «Sovrin — eng ko'p ball yig'gan va kamida 4 ta jonli odam olib kelganlarga».
+- 02:51 (Otabek): «Linkimni yuborish» tugmalari bitta global delegatsiyaga o'tkazildi (bosh sahifa kartasi, Qoidalar, «Men orqali kelganlar», profil). «Unvonlar» birinchi-kirish oynasi vaqtincha o'chirildi — fokus marafonda.
