@@ -6948,7 +6948,12 @@ document.addEventListener("click",e=>{ const x=e.target.closest("#tch [data-tpch
       <div class="ch-btns"><a class="btn primary" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(txt)}">${esc(ct("tg"))}</a><button type="button" class="btn" data-ch="copy" data-url="${esc(url)}">${esc(ct("copy"))}</button></div>
       <button type="button" class="lrn-link" data-tpch="back">← Orqaga</button></div>`; }
   else if(k==="back"){ tpCh(); }
-  else if(k==="go"){ const id=lrnAllId(TP.chLv,state.lang); if(!id||!TP.chSel.size) return; lrnOpen(id); LR.sel=new Set(TP.chSel); try{ lrnSetup(); }catch(err){} chCreate(); } });
+  else if(k==="go"){ const id=lrnAllId(TP.chLv,state.lang); if(!id||!TP.chSel.size) return; /* link ustoz panelining o'zida chiqadi (oldin Yodlash oynasi panel ortida qolib, «bosilmayapti» bo'lardi — 2026-10-22) */
+    const c={v:2,l:id,s:[...TP.chSel].sort((a,b)=>a-b),r:Math.floor(Math.random()*2147483647),c:window.BLITZ?"Blitz":((ACC.name||"").split(" ")[0]||""),t:Date.now()};
+    const code=chB64e(JSON.stringify(c)), url=chLink(code), txt=ct("tgText")(c.c||"⚡",chTitle(c));
+    document.getElementById("tp-body").innerHTML=`<div class="lrn-card"><h3>${esc(ct("made"))}</h3><p class="ch-big">${esc(ct("share"))}</p><div class="ch-link">${esc(url)}</div><p class="ch-net">${esc(chTitle(c))} · ${chPool(c).length} ta so‘z</p>
+      <div class="ch-btns"><a class="btn primary" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(txt)}">${esc(ct("tg"))}</a><button type="button" class="btn" data-ch="copy" data-url="${esc(url)}">${esc(ct("copy"))}</button></div>
+      <button type="button" class="lrn-link" data-tpch="back">← Orqaga</button></div>`; } });
 function tpVq(){ const body=document.getElementById("tp-body"); if(!body) return; const tab=TP.vqTab||(TABS[state.tab]?state.tab:"a11"); TP.vqTab=tab;
   const T0=TABS[tab], LS=LEKS[T0.lvl].filter(L=>L[0]>=T0.lo&&L[0]<=T0.hi), beta=betaOn();
   const pdf=m=>m.tab===tab&&(m.file||m.href)&&m.type!=="loesung"&&!m.ex&&!blzHide(m);
