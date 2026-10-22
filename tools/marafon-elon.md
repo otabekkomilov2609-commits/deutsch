@@ -22,8 +22,8 @@ Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — va yuti
 
 **Sovrin sharti:** kamida 4 ta haqiqiy do'st — linkingiz bilan kelib, 100 so'z yoki 5 ta grammatika mashqini bajargan odam. Saytda har bir do'stingiz qancha o'rganganini ko'rib turasiz. Soxta akkauntlar tekshiriladi. E'lon — 18-noyabr.
 
-Linkingiz va kodingiz: saytda 👤 → 🏅 Saytga hissa → «Do'stga yuborish».
-To'liq qoidalar: bosh sahifadagi 📣 karta → «Qoidalar».
+Linkingiz va kodingiz: bosh sahifadagi 📣 karta → «Linkimni yuborish».
+To'liq qoidalar: o'sha kartada → «Qoidalar».
 
 🌐 streber.uz
 
@@ -49,7 +49,7 @@ To'liq qoidalar: bosh sahifadagi 📣 karta → «Qoidalar».
 
 **Условие приза:** минимум 4 настоящих друга — пришли по вашей ссылке и выучили 100 слов или сделали 5 заданий по грамматике. На сайте видно, сколько выучил каждый ваш друг. Фейковые аккаунты проверяются. Объявление — 18 ноября.
 
-Ваша ссылка и код: на сайте 👤 → 🏅 Вклад в сайт → «Отправить другу».
-Полные правила: карточка 📣 на главной → «Правила».
+Ваша ссылка и код: карточка 📣 на главной → «Моя ссылка».
+Полные правила: в той же карточке → «Правила».
 
 🌐 streber.uz
