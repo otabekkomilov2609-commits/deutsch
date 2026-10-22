@@ -811,3 +811,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - 📤💾 Ulashish va xatolarni saqlash (2026-10-22, Otabek):
   - O‘quvchi: Live test va Sinf o‘yini oxirida «📤 Natijani ulashish» (Telegram/telefon ulashish) va «💾 Xatolarni saqlash (N)» → «📝 Xatolarim» ro‘yxati (Yodlash'da ochiladi; Wortschatz bo‘limida «📝 Xatolarim» tugmasi ham chiqadi).
   - Ustoz: Live test yakunida «❌ Ko‘p xato qilingan so‘zlar», «📤 Natijalarni Telegram’ga», «💾 Natijani saqlash» → Live test bo‘limida «💾 Saqlangan natijalar» (ochish, ulashish, o‘chirish). Sinf o‘yini natijasida «📤 Telegram’ga» (top-10 + eng qiyin 5 savol).
+- ⭐ A2.2 L19 — Otabek uslubidagi to‘plam (2026-10-22): Dars rejasi 🔒, Arbeitsblatt (Präteritum der Modalverben), Wortschatz (Ereignisse im Leben), Sprechkarte (Überraschung ausdrücken), Test (25), Javoblar 🔒. Ustoz panelida «⭐» bilan; MATS `own:true` — Blitz'da ko‘rinmaydi (ism bor). Generator: scratchpad/l19/build/.
