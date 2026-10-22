@@ -7778,11 +7778,34 @@ function kgBoardOpen(R){ kgBEnd(); const K=TP.k={g:R.g,qs:R.qs,players:R.players
     (t,m)=>{ if(TP.k!==K) return; { const pid=t.split("/").pop(), was=(K.players[pid]||{}).cx|0; kgPl(K.players,t,m); const p=K.players[pid]; if(p&&(p.cx|0)>was&&K.ctl.st!=="lobby"&&K.ctl.st!=="end") kgCheat(p); } clearTimeout(K.dT); K.dT=setTimeout(kgBoardUpd,150); kgSaveSoon();
       if(TP.kgR&&TP.kgR.R===K){ clearTimeout(K.rT); K.rT=setTimeout(kgRepDraw,400); } });
   clearInterval(TP.kT); TP.kT=setInterval(kgTick,250); kgRepPut(K); TP.kgR=null; kgBoard(); }
-function kgBEnd(){ const K=TP.k; if(!K) return; clearInterval(TP.kT); clearTimeout(K.dT); clearTimeout(K.allT); kgRepPut(K); if(K.mq) K.mq.end(); TP.k=null; }
+function kgBEnd(){ kgMusic(null); const K=TP.k; if(!K) return; clearInterval(TP.kT); clearTimeout(K.dT); clearTimeout(K.allT); kgRepPut(K); if(K.mq) K.mq.end(); TP.k=null; }
 let kgSvT=0; function kgSaveSoon(){ clearTimeout(kgSvT); kgSvT=setTimeout(()=>{ if(TP.k) kgRepPut(TP.k); },1500); }
 function kgNet(){ const e=document.getElementById("kg-net"), K=TP.k; if(e&&K) e.textContent=K.mq&&K.mq.ok()?"🟢 Ulandi":"⏳ Ulanmoqda…"; }
 function kgCtl(c){ const K=TP.k; if(!K) return; K.ctl=Object.assign({t:Date.now()},c); K.mq.pub(KG_NS+K.id+"/ctl",JSON.stringify(K.ctl),true); kgRepPut(K); kgBoard(); }
-function kgHead(K){ return `<div class="lrn-bar"><button class="btn" data-kg="bback" aria-label="←">←</button><div class="lrn-tt"><b>🎮 ${esc(K.g.nm)}</b><small>${K.g.m==="k"?"⚡ Savolma-savol":"🏃 O‘z tempida"} · ${K.qs.length} savol</small></div><button type="button" class="lrn-link kg-sndb" data-kg="snd" title="Ovoz">${kgSndOn(true)?"🔊":"🔇"}</button><button type="button" class="lrn-link" data-kg="rboard">📊 Hisobot</button></div>`; }
+/* 🎵 Doska musiqasi (2026-10-22, Otabek): brauzerda sintez qilinadi (fayl/litsenziya kerak emas). Kutish — sokin, savol — tezroq, oxirgi 5 s — yanada tez. 🎵 tugmasi bilan o'chadi */
+const KGM={mode:null,tm:null,step:0,next:0,bus:null};
+function kgMusOn(){ try{ const v=localStorage.getItem("tch:kgmus"); return v==null?true:v==="1"; }catch(e){ return true; } }
+const KGM_P={ lobby:{bpm:96,ch:[[57,60,64],[53,57,60],[48,52,55],[55,59,62]],bass:[45,41,36,43],lead:[69,72,76,72,67,69,71,67]},
+  q:{bpm:132,ch:[[57,60,64],[57,60,64],[53,57,60],[55,59,62]],bass:[45,45,41,43],lead:[76,74,72,74,76,79,76,74]},
+  hurry:{bpm:168,ch:[[57,60,64],[56,59,64],[57,60,64],[56,59,64]],bass:[45,44,45,44],lead:[81,80,81,80,81,83,81,80]} };
+function kgmHz(m){ return 440*Math.pow(2,(m-69)/12); }
+function kgmNote(C,t,m,d,tp,v){ const o=C.createOscillator(), g=C.createGain(); o.type=tp; o.frequency.value=kgmHz(m); g.gain.setValueAtTime(.0001,t); g.gain.exponentialRampToValueAtTime(v,t+.015); g.gain.exponentialRampToValueAtTime(.0001,t+d); o.connect(g); g.connect(KGM.bus); o.start(t); o.stop(t+d+.05); }
+function kgMusic(mode){ if(mode&&(!kgMusOn()||!kgSndOn(true))) mode=null; if(KGM.mode===mode) return; KGM.mode=mode; clearInterval(KGM.tm); KGM.tm=null;
+  if(!mode){ try{ if(KGM.bus){ const C=KGS.ctx; KGM.bus.gain.setTargetAtTime(.0001,C.currentTime,.15); const b=KGM.bus; setTimeout(()=>{ try{ b.disconnect(); }catch(e){} },800); KGM.bus=null; } }catch(e){} return; }
+  try{ kgUnlock(); const C=KGS.ctx; if(!C) return; if(!KGM.bus){ KGM.bus=C.createGain(); KGM.bus.gain.value=.55; KGM.bus.connect(C.destination); } KGM.step=0; KGM.next=C.currentTime+.08;
+    KGM.tm=setInterval(()=>{ const P=KGM_P[KGM.mode]; if(!P||!KGS.ctx) return; const C=KGS.ctx, sp=60/P.bpm/2; /* 8-lik notalar */
+      while(KGM.next<C.currentTime+.25){ const st=KGM.step, bar=Math.floor(st/8)%4, t=KGM.next;
+        if(st%8===0||st%8===4) kgmNote(C,t,P.bass[bar]-12,sp*3.5,"triangle",.09);
+        if(st%2===0) P.ch[bar].forEach(m=>kgmNote(C,t,m,sp*.9,"square",.012));
+        if(KGM.mode!=="lobby"||st%2===0) kgmNote(C,t,P.lead[st%8]+(bar===3&&KGM.mode==="lobby"?-2:0),sp*.8,"triangle",KGM.mode==="lobby"?.035:.045);
+        if(KGM.mode!=="lobby"&&st%2===1) kgmNote(C,t,96,.03,"square",.01); /* hi-hat */
+        KGM.next+=sp; KGM.step++; } },90); }catch(e){} }
+function kgMusSync(){ const K=TP.k; if(!K||TP.kgR){ kgMusic(null); return; } const st=K.ctl.st;
+  if(st==="lobby") kgMusic("lobby");
+  else if(K.g.m==="k"&&st==="q"){ const left=K.ctl.t+kgQT(K,K.qs[K.ctl.i])-Date.now(); kgMusic(left<5500?"hurry":"q"); }
+  else if(K.g.m==="s"&&st==="run"){ const dl=K.g.tm?K.ctl.t0+K.g.tm*60000:0; kgMusic(dl&&dl-Date.now()<30000?"hurry":"q"); }
+  else kgMusic(null); }
+function kgHead(K){ return `<div class="lrn-bar"><button class="btn" data-kg="bback" aria-label="←">←</button><div class="lrn-tt"><b>🎮 ${esc(K.g.nm)}</b><small>${K.g.m==="k"?"⚡ Savolma-savol":"🏃 O‘z tempida"} · ${K.qs.length} savol</small></div><button type="button" class="lrn-link kg-sndb" data-kg="mus" title="Musiqa" style="opacity:${kgMusOn()?1:.45}">🎵</button><button type="button" class="lrn-link kg-sndb" data-kg="snd" title="Ovoz">${kgSndOn(true)?"🔊":"🔇"}</button><button type="button" class="lrn-link" data-kg="rboard">📊 Hisobot</button></div>`; }
 function kgBoard(){ const K=TP.k; if(!K||TP.kgR) return; const el=tpEl(), st=K.ctl.st;
   const body= st==="lobby"? kgLobbyHTML(K) : (K.g.m==="k"&&(st==="q"||st==="rev"))? kgQHTML(K) : (K.g.m==="s"&&st==="run")? kgRunHTML(K) : kgEndHTML(K);
   el.innerHTML=kgHead(K)+`<div class="kg-wrap kg-${st}${st==="end"&&K.conf?" shown":""}">${body}</div><div class="kg-toast" id="kg-toast"></div>`; el.scrollTop=0;
@@ -7830,7 +7853,7 @@ function kgBoardUpd(){ const K=TP.k; if(!K||TP.kgR) return; const st=K.ctl.st, P
   const an=document.getElementById("kg-ans"); if(an&&st==="q"){ const i=K.ctl.i, n=P.filter(([id,p])=>p.a&&p.a[i]).length; an.textContent=`${n} / ${P.length} javob`; }
   const c2=document.getElementById("kg-cnt2"); if(c2) c2.textContent=`${P.length} o‘quvchi · ${P.filter(([i,p])=>p.st==="done").length} tugatdi`;
   const rows=document.getElementById("kg-rows"); if(rows){ if(st==="rev"){ if(K.flipI!==K.ctl.i||!rows.children.length){ K.flipI=K.ctl.i; kgRevRows(K,rows); } } else { if(st==="run") kgRunFx(K); rows.innerHTML=kgRowsHTML(K,200,st==="run"?kgMvMap(K):null); } } }
-function kgTick(){ const K=TP.k; if(!K) return; const st=K.ctl.st, now=Date.now();
+function kgTick(){ const K=TP.k; if(!K){ kgMusic(null); return; } kgMusSync(); const st=K.ctl.st, now=Date.now();
   if(K.g.m==="k"&&st==="q"){ const q=K.qs[K.ctl.i], left=K.ctl.t+kgQT(K,q)-now, c=document.getElementById("kg-clock");
     if(c&&!TP.kgR){ c.textContent=Math.max(0,Math.ceil(left/1000)); c.classList.toggle("hurry",left<5000); } const sec=Math.ceil(left/1000); if(sec>0&&sec<=5&&K.tickS!==K.ctl.i+":"+sec){ K.tickS=K.ctl.i+":"+sec; kgSnd("tick",1); }
     const P=Object.values(K.players).filter(p=>p&&p.n), all=P.length>0&&P.every(p=>p.a&&p.a[K.ctl.i]);
@@ -8162,7 +8185,8 @@ document.addEventListener("click",e=>{
     gssShare(`🎮 Sinf o‘yini · ${R.g.nm}\n${new Date(R.g.t||Date.now()).toLocaleDateString("uz-UZ")} · ${L.length} o‘quvchi\n\n🏆 Natijalar:\n${L.slice(0,10).map((p,i)=>`${md[i]||(i+1)+"."} ${p.n} — ${p.ok}/${n}${p.cx?` 👀×${p.cx}`:""}`).join("\n")}${Q.length?`\n\n❌ Eng qiyin savollar:\n${Q.map(x=>`• ${String(x.q.q).replace(/\s+/g," ").slice(0,70)} → ${kgCor(x.q)} (${x.pct}%)`).join("\n")}`:""}`,IMG); } }
   else if(a==="hw") kgHw();
   else if(a==="copy"){ if(TP.k) kgCopy(kgLink(TP.k.id),b); }
-  else if(a==="snd"){ const on=!kgSndOn(true); try{ localStorage.setItem("tch:kgsnd",on?"1":"0"); }catch(err){} b.textContent=on?"🔊":"🔇"; if(!on&&window.speechSynthesis) speechSynthesis.cancel(); }
+  else if(a==="snd"){ const on=!kgSndOn(true); try{ localStorage.setItem("tch:kgsnd",on?"1":"0"); }catch(err){} b.textContent=on?"🔊":"🔇"; if(!on&&window.speechSynthesis) speechSynthesis.cancel(); kgMusic(null); kgMusSync(); }
+  else if(a==="mus"){ const on=!kgMusOn(); try{ localStorage.setItem("tch:kgmus",on?"1":"0"); }catch(err){} b.style.opacity=on?1:.45; b.textContent="🎵"; kgMusic(null); kgMusSync(); }
 });
 document.addEventListener("input",e=>{ if(e.target.id==="kg-tx"||e.target.id==="kg-nm"){ if(TP.kgEd){ TP.kgEd[e.target.id==="kg-tx"?"txt":"name"]=e.target.value; } if(e.target.id==="kg-tx"){ clearTimeout(TP.kgPvT); TP.kgPvT=setTimeout(kgPreview,250); } } });
 document.addEventListener("submit",e=>{ if(e.target.id==="kg-wr"){ e.preventDefault(); const i=document.getElementById("kg-in"), v=lrnNorm(i?i.value:""); if(!v){ if(i) i.focus(); return; } kgpAns(v.slice(0,80)); } });
