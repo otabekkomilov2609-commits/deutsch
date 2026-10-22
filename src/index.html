@@ -6286,13 +6286,13 @@ function duCreate(){ if(!LR.id||!LR.sel.size) return;
 function duPlayers(){ const P=Object.entries(DU.P).filter(([id,p])=>p&&p.j).sort((a,b)=>a[1].j-b[1].j||(a[0]<b[0]?-1:1)); return P.slice(0,2).map(([id,p])=>({id,...p})); }
 function duRole(){ const L=duPlayers(); return L.some(p=>p.id===DU.me)? "player" : (DU.joined? (L.length<2?"player":"spect") : "none"); }
 function duOpp(){ return duPlayers().find(p=>p.id!==DU.me)||null; }
-function duPub(){ if(!DU.mq||!DU.joined) return; DU.mq.pub(DU_NS+DU.id+"/p/"+DU.me, JSON.stringify({n:DU.name,j:DU.j,r:DU.r,rd:DU.rd,s:DU.s,lt:DU.lt,st:DU.st,h:DU.h,hp:DU.hp,cb:DU.cb,t:Date.now()}), true); }
+function duPub(){ if(!DU.mq||!DU.joined) return; DU.mq.pub(DU_NS+DU.id+"/p/"+DU.me, JSON.stringify({n:DU.name,j:DU.j,r:DU.r,rd:DU.rd,s:DU.s,lt:DU.lt,st:DU.st,h:DU.h,hp:DU.hp,cb:DU.cb,cx:DU.cx|0,t:Date.now()}), true); }
 function duOpen(code,creator){
   let c=null; try{ c=JSON.parse(chB64d(code)); }catch(e){}
   const el=duEl(); el.hidden=false; document.body.style.overflow="hidden";
   if(!c||!(c.xs?c.xs.length:c.x?exData()[c.x]:lernData()[c.l])||chQuestions(c).length===0){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-du="close">✕</button><div class="lrn-tt"><b>${esc(dt("t"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(dt("bad"))}</p></div></div>`; return; }
   let me=store.get("chme"); if(!me){ me=Math.random().toString(36).slice(2,10); store.set("chme",me); }
-  Object.assign(DU,{c,code,id:chHash("du:"+code),me,P:{},ctl:{},joined:false,name:ACC.name||store.get("chname")||"",j:0,r:1,rd:false,s:0,lt:0,st:"lobby",phase:"lobby",h:{},creator:!!creator});
+  Object.assign(DU,{cx:0,c,code,id:chHash("du:"+code),me,P:{},ctl:{},joined:false,name:ACC.name||store.get("chname")||"",j:0,r:1,rd:false,s:0,lt:0,st:"lobby",phase:"lobby",h:{},creator:!!creator});
   if(DU.mq) DU.mq.end();
   DU.mq=mqMulti(cl=>{ cl.subscribe(DU_NS+DU.id+"/#",{qos:1}); duPub(); duNet(); },(t,m)=>duMsg(t,m));
   if(creator||DU.name){ if(DU.name){ DU.joined=true; DU.j=Date.now(); } }
@@ -6303,7 +6303,7 @@ function duNet(){ const e=document.getElementById("du-net"); if(e) e.textContent
 function duMsg(t,m){
   const parts=t.split("/"), kind=parts[parts.length-2], last=parts[parts.length-1];
   if(last==="go"){ try{ const d=JSON.parse(m); if(d&&d.r) DU.ctl[d.r]=d; }catch(e){} duCheckGo(); return; }
-  if(kind==="p"){ if(last===DU.me) return; if(!m){ delete DU.P[last]; } else { try{ const d=JSON.parse(m); if(d&&d.j){ DU.P[last]={n:String(d.n||"?").slice(0,30),j:+d.j,r:d.r|0,rd:!!d.rd,s:d.s|0,lt:+d.lt||0,st:d.st,h:(d.h&&typeof d.h==="object")?d.h:{},hp:d.hp==null?3:d.hp|0,cb:d.cb|0,t:d.t||0};
+  if(kind==="p"){ if(last===DU.me) return; if(!m){ delete DU.P[last]; } else { try{ const d=JSON.parse(m); if(d&&d.j){ { const was=(DU.P[last]||{}).cx|0; if((d.cx|0)>was&&DU.phase==="play") setTimeout(()=>{ try{ const ru=state.lang==="ru"; let w=document.getElementById("gcx-w"); if(!w){ w=document.createElement("div"); w.id="gcx-w"; w.className="kgp-cxw"; document.body.appendChild(w); } w.textContent=`👀 ${ru?"Соперник вышел из игры!":"Raqibingiz o‘yindan chiqib ketdi!"} (${d.cx|0})`; w.classList.remove("show"); void w.offsetWidth; w.classList.add("show"); setTimeout(()=>w.classList.remove("show"),3000); }catch(e){} },0); } DU.P[last]={cx:Math.min(99,d.cx|0),n:String(d.n||"?").slice(0,30),j:+d.j,r:d.r|0,rd:!!d.rd,s:d.s|0,lt:+d.lt||0,st:d.st,h:(d.h&&typeof d.h==="object")?d.h:{},hp:d.hp==null?3:d.hp|0,cb:d.cb|0,t:d.t||0};
           if(DU.phase==="play"&&d.st==="play"&&(d.cb|0)>=3&&(d.cb|0)>(DU.oCb||0)&&((d.cb|0)===3||(d.cb|0)===5)) duToast(`${String(d.n||"").split(" ")[0]} 🔥×${(d.cb|0)>=5?3:2}!`); if(d.st==="play") DU.oCb=d.cb|0; } }catch(e){} } }
   duSync();
 }
@@ -6631,18 +6631,18 @@ const lz=k=>LTUZ[LTP&&LTP.lang?LTP.lang:(state.lang==="ru"?"ru":"uz")][k];
 const LTP={};
 function ltpEl(){ let e=document.getElementById("ltp"); if(!e){ e=document.createElement("div"); e.id="ltp"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
 function ltpHead(sub){ return `<div class="lrn-bar"><button class="btn" data-lt="close" aria-label="✕">✕</button><div class="lrn-tt"><b>${esc(lz("t"))}</b><small>${esc(ltTitle(LTP.c))}</small></div>${sub||""}</div>`; }
-function ltpSave(){ store.set("lt:"+LTP.id,JSON.stringify({tk:LTP.tk||0,n:LTP.name,ok:LTP.ok,a:LTP.a,sk:LTP.sk,ms:LTP.ms,st:LTP.st,t0:LTP.t0,q:LTP.q,best:LTP.best,last:LTP.last,hl:LTP.hl,hw:LTP.hw,tr:LTP.tr||{}})); }
+function ltpSave(){ store.set("lt:"+LTP.id,JSON.stringify({tk:LTP.tk||0,n:LTP.name,ok:LTP.ok,a:LTP.a,sk:LTP.sk,ms:LTP.ms,st:LTP.st,t0:LTP.t0,q:LTP.q,best:LTP.best,last:LTP.last,hl:LTP.hl,hw:LTP.hw,tr:LTP.tr||{},cx:LTP.cx|0})); }
 function ltpPub(force){ if(!LTP.mq||!LTP.name) return; const now=Date.now();
   if(!force && now-(LTP.pubT||0)<500){ clearTimeout(LTP.pubTm); LTP.pubTm=setTimeout(()=>ltpPub(true),500); return; } LTP.pubT=now;
   if(LTP.st==="play") LTP.ms=now-LTP.t0;
-  LTP.mq.pub(LT_NS+LTP.id+"/p/"+LTP.me, JSON.stringify(Object.assign({n:LTP.name,ok:LTP.ok,a:LTP.a,sk:LTP.sk,sr:LTP.sr|0,ms:LTP.ms||0,tk:LTP.tk||0,st:LTP.st,t:now},LTP.st==="done"?{mw:LTP.qs.map((x,k)=>k).filter(k=>(LTP.best[k]||0)<1).slice(0,60)}:{})), true); }
+  LTP.mq.pub(LT_NS+LTP.id+"/p/"+LTP.me, JSON.stringify(Object.assign({n:LTP.name,ok:LTP.ok,a:LTP.a,sk:LTP.sk,sr:LTP.sr|0,cx:LTP.cx|0,ms:LTP.ms||0,tk:LTP.tk||0,st:LTP.st,t:now},LTP.st==="done"?{mw:LTP.qs.map((x,k)=>k).filter(k=>(LTP.best[k]||0)<1).slice(0,60)}:{})), true); }
 function ltOpen(code){
   let c=null; try{ c=JSON.parse(chB64d(code)); }catch(e){}
   const el=ltpEl(); el.hidden=false; document.body.style.overflow="hidden";
   if(!c||!ltListId(c.l)||!ltQs(c).length){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-lt="close">✕</button><div class="lrn-tt"><b>${esc(lz("t"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(lz("bad1"))}</p></div></div>`; return; }
   let me=store.get("chme"); if(!me){ me=Math.random().toString(36).slice(2,10); store.set("chme",me); }
-  Object.assign(LTP,{lang:/^[AB]\d-[\w]+-u-/.test(ltListId(c.l)||"")?"uz":"ru",c,code,id:chHash(code),qs:ltQs(c),me,players:{},ctl:null,st:"join",ok:0,a:0,sk:0,ms:0,t0:0,q:[],best:{},last:{},hl:3,hw:{},name:store.get("chname")||ACC.name||""});
-  try{ const s=JSON.parse(store.get("lt:"+LTP.id)||"null"); if(s){ Object.assign(LTP,{tk:s.tk||0,name:s.n,ok:s.ok,a:s.a,sk:s.sk,ms:s.ms,st:s.st,t0:s.t0,q:s.q||[],best:s.best||{},last:s.last||{},hl:s.hl??3,hw:s.hw||{},tr:s.tr||{}}); LTP.okMax=Object.values(LTP.best).reduce((t,v)=>t+v,0); } }catch(e){}
+  Object.assign(LTP,{cx:0,lang:/^[AB]\d-[\w]+-u-/.test(ltListId(c.l)||"")?"uz":"ru",c,code,id:chHash(code),qs:ltQs(c),me,players:{},ctl:null,st:"join",ok:0,a:0,sk:0,ms:0,t0:0,q:[],best:{},last:{},hl:3,hw:{},name:store.get("chname")||ACC.name||""});
+  try{ const s=JSON.parse(store.get("lt:"+LTP.id)||"null"); if(s){ Object.assign(LTP,{tk:s.tk||0,name:s.n,ok:s.ok,a:s.a,sk:s.sk,ms:s.ms,st:s.st,t0:s.t0,q:s.q||[],best:s.best||{},last:s.last||{},hl:s.hl??3,hw:s.hw||{},tr:s.tr||{},cx:s.cx|0}); LTP.okMax=Object.values(LTP.best).reduce((t,v)=>t+v,0); } }catch(e){}
   if(LTP.mq) LTP.mq.end();
   LTP.mq=mqMulti(cl=>{ cl.subscribe(LT_NS+LTP.id+"/ctl",{qos:1}); cl.subscribe(LT_NS+LTP.id+"/p/+",{qos:1}); ltpNet(); ltpPub(true); },(t,m)=>ltpMsg(t,m));
   clearInterval(LTP.tick); LTP.tick=setInterval(ltpTick,500);
@@ -7006,7 +7006,7 @@ function tpBoardOpen(code,fresh){
   const id=chHash(code); TP.b={c,code,id,ctl:fresh?{st:"lobby",t:Date.now()}:null,players:{},n:ltQs(c).length};
   TP.b.mq=mqMulti(cl=>{ cl.subscribe(LT_NS+id+"/ctl",{qos:1}); cl.subscribe(LT_NS+id+"/p/+",{qos:1}); if(fresh&&TP.b&&TP.b.ctl) cl.publish(LT_NS+id+"/ctl",JSON.stringify(TP.b.ctl),{qos:1,retain:true}); tpBoardDraw(); },
     (t,m)=>{ const B=TP.b; if(!B) return; if(t.endsWith("/ctl")){ try{ const d=m?JSON.parse(m):null; if(d&&(!B.ctl||(d.t||0)>=(B.ctl.t||0))) B.ctl=d; }catch(e){} tpBoard(); return; }
-      const pid=t.split("/").pop(); if(!m) delete B.players[pid]; else { try{ const d=JSON.parse(m); if(d&&typeof d.ok==="number") B.players[pid]={n:String(d.n||"?").slice(0,40),ok:Math.max(0,Math.min(100,+d.ok||0)),a:d.a|0,sk:d.sk|0,sr:Math.min(99,d.sr|0),ms:d.ms|0,st:d.st,t:d.t||0,mw:Array.isArray(d.mw)?d.mw.filter(x=>Number.isInteger(x)).slice(0,60):null}; }catch(e){} }
+      const pid=t.split("/").pop(); if(!m) delete B.players[pid]; else { try{ const d=JSON.parse(m); if(d&&typeof d.ok==="number"){ const wcx=(B.players[pid]||{}).cx|0; B.players[pid]={cx:Math.min(99,d.cx|0),n:String(d.n||"?").slice(0,40),ok:Math.max(0,Math.min(100,+d.ok||0)),a:d.a|0,sk:d.sk|0,sr:Math.min(99,d.sr|0),ms:d.ms|0,st:d.st,t:d.t||0,mw:Array.isArray(d.mw)?d.mw.filter(x=>Number.isInteger(x)).slice(0,60):null}; if((B.players[pid].cx|0)>wcx&&B.ctl&&B.ctl.st==="run") try{ kgCheat(B.players[pid]); }catch(e){} } }catch(e){} }
       clearTimeout(B.dT); B.dT=setTimeout(()=>{ tpBoardDraw(); tpLtMwDraw(); },150); });
   clearInterval(TP.bT); TP.bT=setInterval(tpBoardTick,500); tpBoard();
 }
@@ -7030,7 +7030,7 @@ function tpBoard(){
 }
 /* Live test yakuni: eng ko'p xato qilingan so'zlar, ulashish va saqlash (2026-10-22, Otabek) */
 function tpLtMiss(B){ const qs=ltQs(B.c), C={}; Object.values(B.players).forEach(p=>(p.mw||[]).forEach(k=>{ if(qs[k]) C[k]=(C[k]||0)+1; })); return Object.entries(C).sort((a,b)=>b[1]-a[1]).map(([k,c])=>[qs[k].de,qs[k].q,c]); }
-function tpLtRep(B){ return {t:Date.now(),title:ltTitle(B.c),n:B.n,pl:ltRank(B.players).map(p=>[p.n,p.ok,p.ms]),mw:tpLtMiss(B).slice(0,20)}; }
+function tpLtRep(B){ return {t:Date.now(),title:ltTitle(B.c),n:B.n,pl:ltRank(B.players).map(p=>[p.n+(p.cx?` 👀×${p.cx}`:""),p.ok,p.ms]),mw:tpLtMiss(B).slice(0,20)}; }
 function tpLtImg(R){ return {kind:"🎯 Live test",title:R.title,rows:R.pl.map(p=>[p[0],`${ltSc(p[1])}/${R.n}`]),miss:R.mw.map(m=>`${m[0]} — ${m[1]}`)}; }
 function tpLtTxt(R){ const md=["🥇","🥈","🥉"]; return `🎯 Live test · ${R.title}\n${new Date(R.t).toLocaleDateString("uz-UZ")} · ${R.pl.length} o‘quvchi\n\n🏆 Natijalar:\n${R.pl.slice(0,10).map((p,i)=>`${md[i]||(i+1)+"."} ${p[0]} — ${ltSc(p[1])}/${R.n}`).join("\n")}${R.mw.length?`\n\n❌ Ko‘p xato qilingan so‘zlar:\n${R.mw.slice(0,8).map(m=>`• ${m[0]} — ${m[1]} (${m[2]})`).join("\n")}`:""}`; }
 function tpLtMwDraw(){ const B=TP.b, el=document.getElementById("tp-ltmw"); if(!B||!el) return; const M=tpLtMiss(B).slice(0,10); el.innerHTML=M.length?`<h3 class="tp-mwh">❌ Ko‘p xato qilingan so‘zlar</h3><ul class="lt-mis">${M.map(m=>`<li><span>${esc(m[1])}</span><b>${artCol(m[0])}</b><em>👥 ${m[2]}</em></li>`).join("")}</ul>`:""; }
@@ -7059,7 +7059,7 @@ function tpBoardDraw(){ const B=TP.b, ol=document.getElementById("tp-rows"); if(
   ol.innerHTML=L.map((p,k)=>{ const pct=n?Math.min(100,p.ok/n*100):0, ld=st!=="lobby"&&p.ok>0;
     return `<li data-id="${esc(p.id)}" class="${p.st==="done"?"fin ":""}${ld&&k<3?"top"+(k+1):""}${gain[p.id]?" gain":""}">
     <span class="tp-pos">${ld&&k<3?medal[k]:k+1}${move[p.id]?`<i class="tp-up">▲${move[p.id]}</i>`:""}</span>
-    <span class="tp-nm"><b>${ld&&k===0?"👑 ":""}${esc(p.n)}${st==="run"&&(p.sr|0)>=3?` <i class="tp-fire">🔥${p.sr}</i>`:""}</b>
+    <span class="tp-nm"><b>${ld&&k===0?"👑 ":""}${esc(p.n)}${st==="run"&&(p.sr|0)>=3?` <i class="tp-fire">🔥${p.sr}</i>`:""}${p.cx?`<i class="kg-cx">👀×${p.cx}</i>`:""}</b>
       <span class="tp-track"><i style="width:${pct}%"></i><em class="${p.st==="done"?"":"run"}" style="left:${pct}%">${p.st==="done"?"🏁":"🏃"}</em></span></span>
     <span class="tp-ok">${st==="lobby"&&p.st==="wait"?"<small>tayyor ✋</small>":`${ltSc(p.ok)}<small>/${n}</small>`}${gain[p.id]?`<i class="tp-plus">+${ltSc(gain[p.id])}</i>`:""}</span>
     <span class="tp-tm">${p.st==="wait"?"—":ltFmt(p.ms)}${p.st==="play"?' <i class="tp-live">●</i>':""}</span></li>`; }).join("");
@@ -8025,6 +8025,20 @@ function kgpCx(){ if(!kgpLive()) return; const now=Date.now(); if(now-(KGP.cxT||
 document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="hidden") kgpCx(); else if(KGP.cxW&&kgpLive()){ KGP.cxW=0; kgpWarn(); } });
 window.addEventListener("blur",()=>{ setTimeout(()=>{ if(!document.hasFocus()&&document.visibilityState==="visible") kgpCx(); },400); });
 window.addEventListener("focus",()=>{ if(KGP.cxW&&kgpLive()){ KGP.cxW=0; kgpWarn(); } });
+/* 👀 Cheater nazorati hamma o'yinlarda (2026-10-22, Otabek): Live test, Challenge, Duel — o'yin paytida boshqa ilova/oynaga o'tsa hisoblanadi */
+function gcxVis(id){ const e=document.getElementById(id); return !!(e&&!e.hidden); }
+function gcxCur(){ try{ if(gcxVis("ltp")&&LTP.st==="play") return "lt"; if(gcxVis("chal")&&CHS.phase==="play") return "ch"; if(gcxVis("duel")&&DU.phase==="play") return "du"; }catch(e){} return null; }
+const GCX={t:0,w:null};
+function gcxHit(){ const g=gcxCur(); if(!g) return; const now=Date.now(); if(now-GCX.t<1500) return; GCX.t=now; GCX.w=g;
+  if(g==="lt"){ LTP.cx=(LTP.cx|0)+1; try{ ltpSave(); ltpPub(true); }catch(e){} }
+  else if(g==="ch"){ CHS.cx=(CHS.cx|0)+1; try{ chPublish(true); }catch(e){} }
+  else if(g==="du"){ DU.cx=(DU.cx|0)+1; try{ duPub(); }catch(e){} } }
+function gcxBack(){ const g=GCX.w; if(!g) return; GCX.w=null; const n=g==="lt"?LTP.cx:g==="ch"?CHS.cx:DU.cx, host=document.getElementById(g==="lt"?"ltp":g==="ch"?"chal":"duel"); if(!host||host.hidden) return;
+  const ru=state.lang==="ru"; let w=document.getElementById("gcx-w"); if(!w){ w=document.createElement("div"); w.id="gcx-w"; w.className="kgp-cxw"; document.body.appendChild(w); }
+  w.innerHTML=`👀 ${ru?`Вы вышли из игры (${n} раз). ${g==="du"?"Соперник это видит.":g==="lt"?"Учитель это видит.":"Все это видят."}`:`O‘yindan chiqdingiz (${n}-marta). ${g==="du"?"Raqibingiz buni ko‘radi.":g==="lt"?"Ustoz buni ko‘radi.":"Hamma buni ko‘radi."}`}`; w.classList.remove("show"); void w.offsetWidth; w.classList.add("show"); clearTimeout(GCX.wt); GCX.wt=setTimeout(()=>w.classList.remove("show"),3500); }
+document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="hidden") gcxHit(); else gcxBack(); });
+window.addEventListener("blur",()=>{ setTimeout(()=>{ if(!document.hasFocus()&&document.visibilityState==="visible") gcxHit(); },400); });
+window.addEventListener("focus",gcxBack);
 function kgpWarn(){ const ru=state.lang==="ru", e=document.getElementById("kgp"); if(!e) return; let w=document.getElementById("kgp-cxw"); if(!w){ w=document.createElement("div"); w.id="kgp-cxw"; w.className="kgp-cxw"; e.appendChild(w); } w.innerHTML=`👀 ${ru?`Вы вышли из игры (${KGP.cx} раз). Учитель это видит.`:`O‘yindan chiqdingiz (${KGP.cx}-marta). Ustoz buni ko‘radi.`}`; w.classList.remove("show"); void w.offsetWidth; w.classList.add("show"); clearTimeout(KGP.cxwT); KGP.cxwT=setTimeout(()=>w.classList.remove("show"),3500); }
 function kgpMsg(t,m){ const ns=KG_NS+KGP.id;
   if(t===ns+"/qs"){ if(KGP.solo) return; try{ const d=JSON.parse(m); if(d&&d.g&&Array.isArray(d.qs)&&d.qs.length){ const first=!KGP.qs; KGP.g=d.g; KGP.qs=d.qs; if(first){ if(KGP.ctl) kgpOnCtl(); else kgpRender(); } } }catch(e){} return; }
@@ -8240,7 +8254,7 @@ function chConnect(){
   const go=()=>{ const cli=window.mqtt.connect(CH_BROKERS[bi],{clientId:"od_"+CHS.me+"_"+Math.random().toString(36).slice(2,7),clean:true,connectTimeout:8000,reconnectPeriod:3000,keepalive:30});
     CHS.cli=cli; let ok=false;
     cli.on("connect",()=>{ ok=true; chSetNet("ok"); cli.subscribe(CH_NS+CHS.id+"/p/+",{qos:1}); chPublish(true); });
-    cli.on("message",(tp,buf)=>{ const pid=tp.split("/").pop(); try{ const d=JSON.parse(buf.toString()); if(d&&typeof d.s==="number") CHS.players[pid]={n:String(d.n||"?").slice(0,40),s:d.s|0,st:d.st,t:d.t||0,g:Array.isArray(d.g)?d.g.slice(0,300).map(Number).filter(x=>x>=0&&x<=CH_SEC+1):null}; }catch(e){} chRenderBoard(); });
+    cli.on("message",(tp,buf)=>{ const pid=tp.split("/").pop(); try{ const d=JSON.parse(buf.toString()); if(d&&typeof d.s==="number") CHS.players[pid]={cx:Math.min(99,d.cx|0),n:String(d.n||"?").slice(0,40),s:d.s|0,st:d.st,t:d.t||0,g:Array.isArray(d.g)?d.g.slice(0,300).map(Number).filter(x=>x>=0&&x<=CH_SEC+1):null}; }catch(e){} chRenderBoard(); });
     cli.on("offline",()=>chSetNet("wait"));
     cli.on("error",()=>{});
     setTimeout(()=>{ if(!ok && bi+1<CH_BROKERS.length){ try{ cli.end(true); }catch(e){} bi++; CHS.cli=null; go(); } else if(!ok) chSetNet("bad"); },9000);
@@ -8251,7 +8265,7 @@ function chPublish(force){
   const cli=CHS.cli; if(!cli||!cli.connected||!CHS.name||!(CHS.phase==="play"||CHS.phase==="end")) return;
   const now=Date.now(); if(!force && now-CHS.pubT<700){ clearTimeout(CHS.pubTm); CHS.pubTm=setTimeout(()=>chPublish(true),700); return; }
   CHS.pubT=now;
-  const d={n:CHS.name,s:CHS.score,a:CHS.ans,st:CHS.phase==="end"?"done":"live",t:CHS.phase==="end"?CHS.tEnd:now};
+  const d={n:CHS.name,s:CHS.score,a:CHS.ans,cx:CHS.cx|0,st:CHS.phase==="end"?"done":"live",t:CHS.phase==="end"?CHS.tEnd:now};
   if(CHS.phase==="end"&&CHS.gt&&CHS.gt.length) d.g=CHS.gt;
   cli.publish(CH_NS+CHS.id+"/p/"+CHS.me,JSON.stringify(d),{qos:1,retain:true});
 }
@@ -8266,7 +8280,7 @@ function chBoardHTML(mini){
   const lim=mini?5:50; let rows=L.slice(0,lim); const mi=L.findIndex(p=>p.id===CHS.me); if(mi>=lim) rows=[...rows.slice(0,lim-1),L[mi]];
   const medal=k=>k===0?"🥇":k===1?"🥈":k===2?"🥉":String(k+1);
   return `<ol class="ch-lb${mini?" ch-mini":""}">`+rows.map(p=>{ const k=L.indexOf(p);
-    return `<li class="${p.id===CHS.me?"me":""}"><span class="pl">${medal(k)}</span><span class="nm">${esc(p.n)}${p.id===CHS.me?` (${esc(ct("you"))})`:""}${p.st==="live"&&p.id!==CHS.me?`<span class="lv">● ${esc(ct("live"))}</span>`:""}</span><span class="sc">${p.s}</span></li>`; }).join("")+`</ol>`;
+    return `<li class="${p.id===CHS.me?"me":""}"><span class="pl">${medal(k)}</span><span class="nm">${esc(p.n)}${p.id===CHS.me?` (${esc(ct("you"))})`:""}${p.cx?`<i class="kg-cx">👀×${p.cx}</i>`:""}${p.st==="live"&&p.id!==CHS.me?`<span class="lv">● ${esc(ct("live"))}</span>`:""}</span><span class="sc">${p.s}</span></li>`; }).join("")+`</ol>`;
 }
 function chRenderBoard(){
   const b=document.getElementById("ch-board"); if(b) b.innerHTML=chBoardHTML(CHS.phase==="play");
@@ -8278,7 +8292,7 @@ function chOpen(code){
   let c=null; try{ c=JSON.parse(chB64d(code)); }catch(e){}
   const el=chEl(); el.hidden=false; document.body.style.overflow="hidden";
   if(!c||!(c.xs?c.xs.length:c.x?exData()[c.x]:lernData()[c.l])||chQuestions(c).length===0){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-ch="close">✕</button><div class="lrn-tt"><b>${esc(ct("title"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(ct("bad"))}</p></div></div>`; return; }
-  Object.assign(CHS,{c,id:chHash(code),qs:chQuestions(c),players:{},phase:"lobby",score:0,ans:0,qi:0});
+  Object.assign(CHS,{cx:0,c,id:chHash(code),qs:chQuestions(c),players:{},phase:"lobby",score:0,ans:0,qi:0});
   let me=store.get("chme"); if(!me){ me=Math.random().toString(36).slice(2,10); store.set("chme",me); } CHS.me=me;
   const prev=store.get("chdone:"+CHS.id); if(prev){ try{ const p=JSON.parse(prev); Object.assign(CHS,{name:p.n,score:p.s,ans:p.a||0,tEnd:p.t,phase:"end"}); }catch(e){} }
   CHS.name=CHS.name||store.get("chname")||ACC.name||"";
