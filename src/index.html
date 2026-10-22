@@ -6831,11 +6831,12 @@ if(window.BLITZ) setTimeout(()=>{ try{ tpOpen(); }catch(e){} },0); /* Blitz: say
 function tpCh(){ const b=document.getElementById("tp-body"); if(!b) return; TP.chLv=TP.chLv||"A2"; TP.chSel=TP.chSel||new Set();
   const half=TP.chH||1, ls=[...Array(12)].map((_,i)=>i+1+(half===2?12:0));
   b.innerHTML=`<div class="lrn-card"><h3>⚡ Challenge</h3><p class="ch-net">Daraja va Lektionlarni tanlang → link o‘quvchilarga yuboriladi: 1 daqiqada kim ko‘p so‘z topadi.</p>
-    <div class="tp-seg">${["A1","A2","B1"].map(l=>`<button type="button" data-tpch="lv" data-v="${l}" aria-pressed="${TP.chLv===l}">${l}</button>`).join("")}${[1,2].map(h=>`<button type="button" data-tpch="h" data-v="${h}" aria-pressed="${half===h}">${TP.chLv}.${h} · L${h===1?"1–12":"13–24"}</button>`).join("")}</div>
+    <div class="tp-row"><span>Daraja</span><div class="tp-seg">${["A1","A2","B1"].map(l=>`<button type="button" data-tpch="lv" data-v="${l}" aria-pressed="${TP.chLv===l}">${l}</button>`).join("")}</div></div>
+    <div class="tp-row"><span>Lektionlar</span><div class="tp-seg">${[1,2].map(h=>`<button type="button" data-tpch="h" data-v="${h}" aria-pressed="${half===h}">${TP.chLv}.${h} · L${h===1?"1–12":"13–24"}</button>`).join("")}</div></div>
     <div class="lrn-les" style="margin-top:10px">${ls.map(n=>`<button type="button" class="lrn-chip" data-tpch="l" data-v="${n}" aria-pressed="${TP.chSel.has(n)}"><b>L${n}</b></button>`).join("")}</div>
     <button type="button" class="btn primary" data-tpch="go" ${TP.chSel.size?"":"disabled"} style="margin-top:12px;width:100%">⚡ Challenge yaratish (${TP.chSel.size} Lektion)</button></div>`; }
 document.addEventListener("click",e=>{ const x=e.target.closest("#tch [data-tpch]"); if(!x) return; const k=x.dataset.tpch, v=x.dataset.v;
-  if(k==="lv"){ TP.chLv=v; TP.chSel=new Set(); tpCh(); } else if(k==="h"){ TP.chH=+v; tpCh(); } else if(k==="l"){ const n=+v; TP.chSel.has(n)?TP.chSel.delete(n):TP.chSel.add(n); tpCh(); }
+  if(k==="lv"){ TP.chLv=v; TP.chSel=new Set(); TP.chH=1; tpCh(); } else if(k==="h"){ TP.chH=+v; TP.chSel=new Set(); tpCh(); } else if(k==="l"){ const n=+v; TP.chSel.has(n)?TP.chSel.delete(n):TP.chSel.add(n); tpCh(); }
   else if(k==="go"){ const id=lrnAllId(TP.chLv,state.lang); if(!id||!TP.chSel.size) return; lrnOpen(id); LR.sel=new Set(TP.chSel); try{ lrnSetup(); }catch(err){} chCreate(); } });
 function tpVq(){ const body=document.getElementById("tp-body"); if(!body) return; const tab=TP.vqTab||(TABS[state.tab]?state.tab:"a11"); TP.vqTab=tab;
   const T0=TABS[tab], LS=LEKS[T0.lvl].filter(L=>L[0]>=T0.lo&&L[0]<=T0.hi), beta=betaOn();
