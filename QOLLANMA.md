@@ -844,3 +844,9 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Har bir unvonga (reyting, profil, ustoz paneli) bosganda oyna: ism, ball, nima uchun (👥 do'st · ⚡ challenge · 📤 ulashish · 👎 xato · 🎓 ustoz · 📲 ilova — soni va balli), keyingi unvongacha chiziq, «Men ham xohlayman → Qanday olinadi?».
 - Buning uchun har kim o'z hissa ballarini turlar bo'yicha (`hb`) ommaviy summary'ga yozadi (faqat sonlar). Doskalarda (Live test/Kahoot/Duel) faqat daraja keladi — u yerda bosganda umumiy tavsif.
 - Keyingi reja (Otabek): eng yuqori darajaga yetganlarga rag'batlantirish tizimi.
+
+## 🎓 Ustoz paneli yashirin (2026-10-22, Otabek)
+- streber saytida 🎓 Ustoz tugmasi ko'rinmaydi. Ochish: 🌗 (rejim) tugmasini **0,7 soniya bosib turish**. Qisqa bosish — avvalgidek rejimni almashtiradi. Blitz saytida o'zgarish yo'q.
+
+## 🔐 Firestore qoidalari (2026-10-22)
+- `tools/firestore.rules` — bazadagi qoidalarning nusxasi. Topilma: 19.10 qoidalari `s/` da faqat e,t ga ruxsat bergan — reyting maydonlari, `ref/`, `th/` rad etilgan (403). Yangi qoidalar: o'chirish yo'q, maydonlar ro'yxati, tip/o'lcham, ID formati. Nashr — Otabek konsolda "Veröffentlichen" bosadi.

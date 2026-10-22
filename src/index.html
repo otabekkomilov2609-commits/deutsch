@@ -3774,6 +3774,13 @@ document.addEventListener("click",e=>{ const t=e.target.closest(".uk-t"), k=e.ta
   void k; });
 /* 🌗 rejim tugmasi: avto (telefon sozlamasi) → 🌙 tungi → ☀️ kunduzgi */
 function thmIcon(){ const t=document.documentElement.getAttribute("data-theme"); const b=document.getElementById("thm-btn"); if(b) b.textContent=t==="dark"?"🌙":t==="light"?"☀️":"🌗"; }
+/* 🎓 ustoz paneli yashirin: streber saytida 🎓 tugma yo'q, 🌗 tugmani 0,7 s bosib turilsa ochiladi (2026-10-22, Otabek) */
+(function(){ if(window.BLITZ) return; const tb=document.getElementById("tch-btn"); if(tb) tb.hidden=true; const b=document.getElementById("thm-btn"); if(!b) return; let t=null, long=false;
+  const dn=e=>{ long=false; clearTimeout(t); t=setTimeout(()=>{ long=true; try{ navigator.vibrate&&navigator.vibrate(30); }catch(x){} tpOpen(); },700); };
+  const up=()=>{ clearTimeout(t); };
+  b.addEventListener("pointerdown",dn); b.addEventListener("pointerup",up); b.addEventListener("pointerleave",up); b.addEventListener("pointercancel",up);
+  b.addEventListener("contextmenu",e=>e.preventDefault());
+  b.addEventListener("click",e=>{ if(long){ long=false; e.stopImmediatePropagation(); e.preventDefault(); } },true); })();
 document.addEventListener("click",e=>{ if(!e.target.closest("#thm-btn")) return; const r=document.documentElement, t=r.getAttribute("data-theme"), n=!t?"dark":t==="dark"?"light":"";
   if(n) r.setAttribute("data-theme",n); else r.removeAttribute("data-theme"); try{ if(n) localStorage.setItem("theme",n); else localStorage.removeItem("theme"); }catch(err){}
   const mc=document.querySelector('meta[name="theme-color"]'); thmIcon(); });
