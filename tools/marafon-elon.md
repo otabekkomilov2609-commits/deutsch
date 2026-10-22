@@ -20,7 +20,7 @@ Nemis tilini bepul o'rgatadigan saytimizni do'stlaringizga tarqating — va yuti
 ⚡ Challenge'ingizda yangi odam o'ynadi — +2
 👎 Saytdagi xatoni topdingiz (ustoz tasdiqlasa) — +1
 
-**Sovrin sharti:** kamida 4 ta haqiqiy do'st — linkingiz bilan kelib, 100 so'z yoki 5 ta grammatika mashqini bajargan odam. Saytda har bir do'stingiz qancha o'rganganini ko'rib turasiz. Soxta akkauntlar tekshiriladi. E'lon — 18-noyabr.
+**Sovrinni kim oladi:** eng ko'p ball yig'gan va kamida 4 ta jonli odam olib kelgan ishtirokchi. Jonli odam — linkingiz bilan kelib, 100 so'z yoki 5 ta grammatika mashqini bajargan odam. Saytda har biri qancha o'rganganini ko'rib turasiz. Soxta akkauntlar tekshiriladi. E'lon — 18-noyabr.
 
 Linkingiz va kodingiz: bosh sahifadagi 📣 karta → «Linkimni yuborish».
 To'liq qoidalar: o'sha kartada → «Qoidalar».
@@ -47,7 +47,7 @@ To'liq qoidalar: o'sha kartada → «Qoidalar».
 ⚡ Новый игрок в вашем Challenge — +2
 👎 Нашли ошибку на сайте (подтвердил учитель) — +1
 
-**Условие приза:** минимум 4 настоящих друга — пришли по вашей ссылке и выучили 100 слов или сделали 5 заданий по грамматике. На сайте видно, сколько выучил каждый ваш друг. Фейковые аккаунты проверяются. Объявление — 18 ноября.
+**Кто получает приз:** тот, кто набрал больше всех баллов и привёл минимум 4 живых человека. Живой человек — пришёл по вашей ссылке и выучил 100 слов или сделал 5 заданий по грамматике. На сайте видно, сколько выучил каждый. Фейковые аккаунты проверяются. Объявление — 18 ноября.
 
 Ваша ссылка и код: карточка 📣 на главной → «Моя ссылка».
 Полные правила: в той же карточке → «Правила».
