@@ -3776,7 +3776,7 @@ document.addEventListener("click",e=>{ const t=e.target.closest(".uk-t"), k=e.ta
 function thmIcon(){ const t=document.documentElement.getAttribute("data-theme"); const b=document.getElementById("thm-btn"); if(b) b.textContent=t==="dark"?"🌙":t==="light"?"☀️":"🌗"; }
 /* 🎓 ustoz paneli yashirin: streber saytida 🎓 tugma yo'q, 🌗 tugmani 0,7 s bosib turilsa ochiladi (2026-10-22, Otabek) */
 (function(){ if(window.BLITZ) return; const tb=document.getElementById("tch-btn"); if(tb) tb.hidden=true; const b=document.getElementById("thm-btn"); if(!b) return; let t=null, long=false;
-  const dn=e=>{ long=false; clearTimeout(t); t=setTimeout(()=>{ long=true; try{ navigator.vibrate&&navigator.vibrate(30); }catch(x){} tpOpen(); },700); };
+  const dn=e=>{ long=false; clearTimeout(t); t=setTimeout(()=>{ long=true; try{ navigator.vibrate&&navigator.vibrate(30); }catch(x){} try{ localStorage.removeItem("tch"); }catch(x){} /* har safar kod so'raladi (Otabek) */ TP.tab="kg"; TP.b=null; TP.k=null; TP.kgR=null; tpOpen(); },700); };
   const up=()=>{ clearTimeout(t); };
   b.addEventListener("pointerdown",dn); b.addEventListener("pointerup",up); b.addEventListener("pointerleave",up); b.addEventListener("pointercancel",up);
   b.addEventListener("contextmenu",e=>e.preventDefault());

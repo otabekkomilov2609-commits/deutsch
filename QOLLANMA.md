@@ -846,7 +846,7 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Keyingi reja (Otabek): eng yuqori darajaga yetganlarga rag'batlantirish tizimi.
 
 ## 🎓 Ustoz paneli yashirin (2026-10-22, Otabek)
-- streber saytida 🎓 Ustoz tugmasi ko'rinmaydi. Ochish: 🌗 (rejim) tugmasini **0,7 soniya bosib turish**. Qisqa bosish — avvalgidek rejimni almashtiradi. Blitz saytida o'zgarish yo'q.
+- streber saytida 🎓 Ustoz tugmasi ko'rinmaydi. Ochish: 🌗 (rejim) tugmasini **0,7 soniya bosib turish**. Qisqa bosish — avvalgidek rejimni almashtiradi. Har safar ustoz kodi so'raladi. Blitz saytida o'zgarish yo'q.
 
 ## 🔐 Firestore qoidalari (2026-10-22)
 - `tools/firestore.rules` — bazadagi qoidalarning nusxasi. Topilma: 19.10 qoidalari `s/` da faqat e,t ga ruxsat bergan — reyting maydonlari, `ref/`, `th/` rad etilgan (403). Yangi qoidalar: o'chirish yo'q, maydonlar ro'yxati, tip/o'lcham, ID formati. Nashr — Otabek konsolda "Veröffentlichen" bosadi.
