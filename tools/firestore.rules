@@ -1,6 +1,6 @@
 rules_version = '2';
 
-// streber.uz — Firestore qoidalari (2026-10-23)
+// streber.uz — Firestore qoidalari (2026-10-23, + a/ va gs/ — chuqur tahlil)
 // Tamoyil: o'chirish yo'q · faqat ruxsat etilgan maydonlar · o'lcham/tip tekshiruvi · ID formati tekshiruvi.
 service cloud.firestore {
   match /databases/{database}/documents {
@@ -99,6 +99,83 @@ service cloud.firestore {
         && request.resource.data.keys().hasOnly(['l','t'])
         && str(request.resource.data.l, 20000)
         && request.resource.data.t is int;
+    }
+
+    // a: 🔬 chuqur tahlil — o'quvchining shifrlangan batafsil ma'lumoti (faqat ustoz ocha oladi). ID = s/ bilan bir xil. (2026-10-23)
+    match /a/{id} {
+      allow get, list: if true;
+      allow create, update: if isHex(id, 64)
+        && request.resource.data.keys().hasOnly(['e','t'])
+        && str(request.resource.data.e, 150000)
+        && request.resource.data.t is int;
+    }
+
+    // gs: 🌐 mehmon va manba hisoblagichlari — ismsiz, kunlik (ID = 2026-10-23). Faqat +1…+5 qo'shish mumkin. (2026-10-23)
+    function okInc(k) {
+      return !(k in request.resource.data)
+        || (request.resource.data[k] is int
+            && request.resource.data[k] >= 0
+            && request.resource.data[k] <= (resource == null ? 0 : resource.data.get(k, 0)) + 5);
+    }
+    match /gs/{id} {
+      allow get, list: if true;
+      allow create, update: if id.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+        && request.resource.data.keys().hasOnly(['v','nd','rg','f1','w10','r1','r7','nd_ref','nd_brag','nd_du','nd_lnk','nd_ig','nd_tg','nd_web','nd_dir','rg_ref','rg_brag','rg_du','rg_lnk','rg_ig','rg_tg','rg_web','rg_dir','f1_ref','f1_brag','f1_du','f1_lnk','f1_ig','f1_tg','f1_web','f1_dir','w10_ref','w10_brag','w10_du','w10_lnk','w10_ig','w10_tg','w10_web','w10_dir','r1_ref','r1_brag','r1_du','r1_lnk','r1_ig','r1_tg','r1_web','r1_dir','r7_ref','r7_brag','r7_du','r7_lnk','r7_ig','r7_tg','r7_web','r7_dir'])
+        && okInc('v')
+        && okInc('nd')
+        && okInc('rg')
+        && okInc('f1')
+        && okInc('w10')
+        && okInc('r1')
+        && okInc('r7')
+        && okInc('nd_ref')
+        && okInc('nd_brag')
+        && okInc('nd_du')
+        && okInc('nd_lnk')
+        && okInc('nd_ig')
+        && okInc('nd_tg')
+        && okInc('nd_web')
+        && okInc('nd_dir')
+        && okInc('rg_ref')
+        && okInc('rg_brag')
+        && okInc('rg_du')
+        && okInc('rg_lnk')
+        && okInc('rg_ig')
+        && okInc('rg_tg')
+        && okInc('rg_web')
+        && okInc('rg_dir')
+        && okInc('f1_ref')
+        && okInc('f1_brag')
+        && okInc('f1_du')
+        && okInc('f1_lnk')
+        && okInc('f1_ig')
+        && okInc('f1_tg')
+        && okInc('f1_web')
+        && okInc('f1_dir')
+        && okInc('w10_ref')
+        && okInc('w10_brag')
+        && okInc('w10_du')
+        && okInc('w10_lnk')
+        && okInc('w10_ig')
+        && okInc('w10_tg')
+        && okInc('w10_web')
+        && okInc('w10_dir')
+        && okInc('r1_ref')
+        && okInc('r1_brag')
+        && okInc('r1_du')
+        && okInc('r1_lnk')
+        && okInc('r1_ig')
+        && okInc('r1_tg')
+        && okInc('r1_web')
+        && okInc('r1_dir')
+        && okInc('r7_ref')
+        && okInc('r7_brag')
+        && okInc('r7_du')
+        && okInc('r7_lnk')
+        && okInc('r7_ig')
+        && okInc('r7_tg')
+        && okInc('r7_web')
+        && okInc('r7_dir');
     }
 
     // th: ustozning "rahmat"lari (o'quvchi kaliti hash'i bo'yicha).

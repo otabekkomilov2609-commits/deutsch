@@ -1051,3 +1051,14 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 
 ## 2026-10-23 — 👎 tugmasining oq foni olib tashlandi (Otabek: «dislaykni oq fonini olib tashla»)
 - `.fb-btn`: background transparent, soya o'rniga emoji ostida yengil drop-shadow (har qanday fonda ko'rinadi), emoji 26px.
+
+## 2026-10-23 — 🔬 Chuqur tahlil (Otabek: «chuqur tahlil mock up qabul qildim, qil»)
+Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohida oyna, 4 bo'lim, davr 7/14/30/90 kun.
+- **📚 Materiallar:** avtomatik topilganlar (🧱 qiyin savol + eng ko'p yozilgan xato, 🚪 shu savolda chiqib ketish, 💡 yordam ko'p, ↩︎ 10 s da yopish, ✅ eng yaxshi) · materiallar reytingi (ochdi, oxirigacha, 1-urinishda ✓, o'rt. vaqt, eng og'ir joy, 👎, holat) → qatorni bossa «Bitta material ichida» — har savol: 1-urinish %, vaqt, eng ko'p xato javob, 💡, chiqib ketish; savolni bossa o'zi ochiladi · eng qiyin so'zlar (xato %, 7+ kunda unutdi, odatdagi xato) · sifat bahosi 0–100 · ishlatilmayotgan materiallar (ko'rindi / ochdi) · Lektion × qism · qidiruvda topilmadi · yangi materiallar.
+- **🧠 Wortschatz yo'llari:** usullar jadvali (kirish, ulush, vaqt, oxirigacha, so'z, so'z/daqiqa, 10 s da yopildi) · Yodlash ichidagi yo'l (oqim) · bir kirishda nechta so'z · maqsad bajarilishi · Lernen bosqichlari voronkasi · 🩺 funksiyalar holati · chiqib ketiladigan so'zlar · Yodlash'dan keyin nima.
+- **🧭 Sayt yo'llari:** ekrandan ekranga oqim (ildizni tanlash mumkin) · birinchi ekran · chiqish joylari · eng ko'p yo'llar · nima ko'rindi/bosildi · adashish (3 s da yopish, 3 marta bosish, topilmagan qidiruv) · bitta o'quvchining yo'li.
+- **🌐 Sayt rivoji:** haftalik faol, haftalik so'z, 7-kun qaytish, K-faktor · avtomatik xulosalar · voronka (mehmon hisoblagichlari) · kogortalar · manbalar · har bir funksiya (foydalanganlar, ishlatildi, vaqt, qaytishga ta'siri, 4 haftalik trend) · hafta kuni×soat · o'sish hisobi · eslatma/kartalar samarasi · o'qish natijasi · tarqalish · texnik holat · ketish xavfi.
+- **Yig'ish (o'quvchi):** `u:<akk>:actx` (bulut nusxasiga kirmaydi). `ax(k)` kunlik hisob, `axQ` savol darajasi, `axW` so'z darajasi, ekran o'tishlari `tr:A>B` (har 1 s tekshiriladi), sessiya yo'li `sp`. Ustozga shifrlangan holda Firestore **a/<id>** ga 15 daqiqada bir marta (`axPush` → cloudPush ichida).
+- **Mehmonlar (3-bosqich):** `gs/<kun>` — ismsiz hisoblagich (commit + increment): v, nd, rg, f1, w10, r1, r7 va manba bo'yicha (_ref, _brag, _du, _lnk, _ig, _tg, _web, _dir). Manba — kirish linkidan (`window.__Q0`), maqtanish rasmi linkiga `&s=b` qo'shildi.
+- **Firebase qoidalari:** tools/firestore.rules ga `a` va `gs` bo'limlari qo'shildi — **Otabek Publish qilishi kerak**, aks holda chuqur ma'lumot bazaga yozilmaydi (oynada ogohlantirish chiqadi).
+- Ma'lumot 23.10 dan yig'iladi; undan oldingi kunlar bo'sh.
