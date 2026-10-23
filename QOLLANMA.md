@@ -956,3 +956,8 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Endi: `duGo(url,creator)` — duel sahifani qayta yuklamasdan ochiladi (`history.replaceState` + `duOpen`), mqtt kutubxonasi allaqachon yuklangan. Ikkalasi rozi bo'lgani uchun `DU.rd=true` — «Tayyor» o'zi; raqib ulanishi bilan 3-2-1.
 - `cmSend`: `du_ok`/`du_no` bazaga yozilmaydi (faqat jonli), `du` va `ch_res` bazaga fonda yoziladi — kutilmaydi.
 - Taklif orqali ochilgan duelda (`DU.inv`) «link yuboring» o'rniga «Raqib ulanmoqda…».
+
+## 2026-10-23 — Xabar ochilmasdi (Otabek: «xabar nega ochilmayapti, xabar kelgan bo'lsa»)
+- Tepada chiqadigan xabar (`#cm-toast`) matni bosilmas edi — faqat tugmalari ishlardi, o'zi esa 📬/👥 tugmalarini to'sardi. Endi matn (`.cm-tx`, oxirida «›») bosilsa — 📬 Xabarlar oynasi ochiladi.
+- 📬 soni noto'g'ri edi: ichki xizmat xabarlari (`du_ok`, `du_no`, `fr_ok`, `g_ok`) ham sanalardi, lekin ro'yxatda ko'rinmasdi → «3» deb turib ichkarida 2 ta. Endi `CM_SYS` ro'yxati sanoqdan ham, ro'yxatdan ham chiqariladi.
+- «seni o'rtoq qilmoqchi» → «sizni do'st qilmoqchi».
