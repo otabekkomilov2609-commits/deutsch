@@ -1169,3 +1169,8 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Bosh sahifada alohida sariq qator `#kq-home` (marafon kartasidan tepada): «⭐ Kun qahramoni: Sardor M. — kecha: 45 so'z · 120 mashq · 1 soat 20 daq», bosilsa — reyting.
 - Marafondagi «Kun yulduzi» (`mr.y/z`, karta qatori, ⭐ belgi) olib tashlandi.
 - 2026-10-24 02:20 (Otabek: «reytinglarda ko'rinsa bas»): bosh sahifadagi `#kq-home` olib tashlandi. ⭐ Kun qahramoni endi faqat Reyting oynasida — «So'zlar» va «Hafta ligasi» sarlavhasi ostida `kqLineHTML`, ro'yxatda ism yonida ⭐. Marafon bo'limida yo'q.
+
+## 2026-10-24 · 🖱 Tahlil → «Tugmalar»: har bir tugmani nechta odam bosgan
+- Yig'ish: bitta `click` tinglovchi (capture). Kalit `ekran|data-atribut=qiymat` (`axBk`: dinamik qiymatlar — id, raqam, uzun matn — tashlanadi; data yo'q bo'lsa `#id` yoki `.klass`), ekran — `axScr()`. Kunlik `x[kun]["b:…"]`, tugma matni `bl[kalit]` (≤260). Kuniga ≤100 xil tugma. Faqat ro'yxatdan o'tgan o'quvchilar, ustoz emas.
+- `axSummary` → `bl` (lite'da yo'q). 15 daqiqada bir `a/` ga ketadi.
+- Ustoz paneli → Tahlil → «🖱 Tugmalar» (`dzBtHTML`): Tugma (matn + kalit) · Joy · 👥 nechta o'quvchi · % faol o'quvchilardan · 🖱 jami bosish. Ekran bo'yicha chiplar, qidiruv; davr va daraja filtri umumiy.

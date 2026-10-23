@@ -8072,6 +8072,15 @@ function axSave(){ clearTimeout(AX.st); AX.st=setTimeout(()=>{ const o=AX.o; if(
   axTrim(o.qi,45,40,Q=>Q.t); axTrim(o.wd,260,220,v=>v[5]||0); Object.keys(o.wa).forEach(k=>{ if(!o.wd[k]) delete o.wa[k]; });
   axTrim(o.mv,260,220,v=>v); axTrim(o.sq,90,70,v=>v[2]||0); axTrim(o.qc,160,130,v=>v); axTrim(o.rg,50,40,v=>v); axTrim(o.fbm,80,60,v=>v);
   localStorage.setItem(accK("actx"),JSON.stringify(o)); }catch(e){} },1500); }
+/* 🖱 Har bir tugma: kim nechta marta bosdi (2026-10-24, Otabek: «tahlilga har bir tugmani sayt bo'yicha nechta odam bosganini qayd qil»).
+   Kalit: «ekran|data-atribut=qiymat» (yoki #id / .klass). Kunlik hisob x[kun]["b:…"], nomi (tugma matni) bl[kalit]. Kuniga ko'pi bilan 100 xil tugma. Faqat ro'yxatdan o'tganlar (mehmon — yo'q). */
+const AX_BSKIP=new Set(["cmp","cmn","cmrk","rkid","say","essay","url","i","id","n","code","hpc","hpk","hpp","g","p","w","t","v","gk","gssk","tour","tourgo"]);
+function axBk(el){ const ds=el.dataset||{}; for(const k of Object.keys(ds)){ if(AX_BSKIP.has(k)) continue; let v=String(ds[k]||""); if(v.length>18||/\d{3,}|^[a-f0-9]{6,}$/i.test(v)||/^-?\d+$/.test(v)||/\s/.test(v)) v=""; return k+(v&&v!=="1"&&v!=="true"?"="+v:""); }
+  if(el.id&&!/\d{3,}/.test(el.id)) return "#"+el.id; const c=typeof el.className==="string"?el.className.split(/\s+/).filter(x=>x&&!/^(btn|primary|on|sel|ok|bad|cur|done|active|show|hid|sm|new|wait|f|st)$/.test(x))[0]:""; return c?"."+c:""; }
+document.addEventListener("click",e=>{ try{ if(!actOn()) return; const t=e.target&&e.target.closest?e.target:null; if(!t) return; const el=t.closest("button,a,[role=button],summary,label,select")||t.closest("[data-l],[data-x],[data-es],[data-dc],[data-mr]"); if(!el) return;
+  const bk=axBk(el); if(!bk) return; let sc="h"; try{ sc=axScr(); }catch(er){} const key=(sc+"|"+bk).slice(0,60), o=axGet(); if(!o) return; const X=o.x[actDay()]||(o.x[actDay()]={});
+  if(X["b:"+key]==null&&Object.keys(X).filter(k=>k.startsWith("b:")).length>=100) return; ax("b:"+key);
+  o.bl=o.bl||{}; if(!o.bl[key]){ const lb=(el.getAttribute("aria-label")||el.innerText||el.title||el.value||"").replace(/\s+/g," ").trim().slice(0,40); if(lb) o.bl[key]=lb; const ks=Object.keys(o.bl); if(ks.length>260) ks.slice(0,ks.length-220).forEach(k=>delete o.bl[k]); } }catch(er){} },true);
 function ax(k,n){ try{ if(!actOn()) return; const o=axGet(); if(!o) return; const d=actDay(), X=o.x[d]||(o.x[d]={}); X[k]=(X[k]||0)+(n==null?1:n); if(X[k]<=0) delete X[k]; axSave(); }catch(e){} }
 function axBrw(){ const u=navigator.userAgent||""; return /Telegram/i.test(u)||window.TelegramWebviewProxy?"tg":/Instagram|FBAN|FBAV/i.test(u)?"ig":/iPhone|iPad|iPod/i.test(u)?"ios":/Android/i.test(u)?"and":"pc"; }
 /* ekran: qaysi oyna ochiq — eng ustidagisi */
@@ -8143,7 +8152,7 @@ function axSummary(lite){ const o=axGet(); if(!o) return null; axFlush(); const 
   const wd=Object.entries(o.wd).sort((a,b)=>((b[1][1]+b[1][3]+b[1][4])*3+b[1][0])-((a[1][1]+a[1][3]+a[1][4])*3+a[1][0])).slice(0,lite?70:140).map(([k,v])=>[k,v[0],v[1],v[2],v[3],v[4],o.wa[k]?Object.entries(o.wa[k]).sort((p,q)=>q[1]-p[1]).slice(0,2):0]);
   const so={}; Object.entries(A.s||{}).forEach(([id,v])=>{ if(v[0]) so[id]=v[0]; });
   return {v:1, ak:ACC.cur, nm:ACC.name, t:Date.now(), f:A.f||0, brw:axBrw(), dev:/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)?"📱":"💻", lg:state.lang, w:(()=>{ try{ return progCount().n; }catch(e){ return 0; } })(),
-    app:(()=>{ try{ return localStorage.getItem("pwa:on")==="1"?1:0; }catch(e){ return 0; } })(), x, qi, wd, sp:o.sp.filter(x=>x.t>=Date.now()-30*864e5).slice(lite?-20:-60).map(x=>({t:x.t,e:x.e,w:x.w,a:x.a,src:x.src||undefined,s:(x.s||[]).map(r=>r.length>2&&!r[2]&&!r[3]&&!r[4]?[r[0],r[1]]:r)})), sq:o.sq, mv:o.mv, mo:A.m||{}, so, qc:o.qc, wh:o.wh.map(s=>Math.round(s/60)), je:o.je, fbm:o.fbm, rg:o.rg,
+    app:(()=>{ try{ return localStorage.getItem("pwa:on")==="1"?1:0; }catch(e){ return 0; } })(), x, qi, wd, sp:o.sp.filter(x=>x.t>=Date.now()-30*864e5).slice(lite?-20:-60).map(x=>({t:x.t,e:x.e,w:x.w,a:x.a,src:x.src||undefined,s:(x.s||[]).map(r=>r.length>2&&!r[2]&&!r[3]&&!r[4]?[r[0],r[1]]:r)})), sq:o.sq, mv:o.mv, mo:A.m||{}, so, qc:o.qc, wh:o.wh.map(s=>Math.round(s/60)), je:o.je, fbm:o.fbm, rg:o.rg, bl:lite?undefined:o.bl,
     dd:Object.keys(A.d||{}).sort().slice(-60).map(k=>[k,A.d[k][0]|0,A.d[k][7]|0,A.d[k][1]|0]) }; }
 async function axPush(c){ if(Date.now()-(+cloudG("at")||0)<15*60e3) return; cloudS("at",Date.now()); let d=axSummary(false); if(!d) return; let enc=await stEnc(d); if(enc.length>140000){ d=axSummary(true); enc=await stEnc(d); } if(enc.length>148000) return;
   try{ await fsPut("a/"+await cloudSumId(c),{e:fsS(enc),t:fsI(Date.now())}); }catch(e){ cloudS("at",Date.now()-10*60e3); } }
@@ -9144,12 +9153,29 @@ function tahMrDay(day,S,R,GS){ const nmOf=by=>{ const x=S.find(([id,d])=>d._rc==
     ${!sh.length&&!opL.length&&!fr.length?`<div><small>Bu kunda marafon harakati yo‘q.</small></div>`:""}</div>`; }
 
 /* ===== 📊 Tahlil — bitta oyna (2026-10-23) ===== */
-const TAH_T=[["s","🌐 Sayt rivoji"],["m","📚 Materiallar"],["w","🧠 Wortschatz"],["r","🧭 Yo‘llar"],["f","📣 Marafon"]];
+const TAH_T=[["s","🌐 Sayt rivoji"],["m","📚 Materiallar"],["w","🧠 Wortschatz"],["r","🧭 Yo‘llar"],["b","🖱 Tugmalar"],["f","📣 Marafon"]];
 function tahLvOk(d){ if(!TP.anLv) return true; try{ const r=stReach(d); return !!r&&r.lv===TP.anLv; }catch(e){ return true; } }
 function tahBody(P,t){ const stu0=TP.stu, dx0=TP.dx; if(TP.anLv&&t!=="m"&&t!=="f"){ const S={}, keep=new Set(); Object.entries(stu0||{}).forEach(([id,d])=>{ if(d&&tahLvOk(d)){ S[id]=d; keep.add(d.ak||id); } }); const X={}; Object.entries(dx0||{}).forEach(([ak,d])=>{ if(keep.has(ak)) X[ak]=d; }); TP.stu=S; TP.dx=X; }
-  try{ if(t==="m"){ DZ.lv=TP.anLv||""; return dzMatHTML(P); } if(t==="w") return dzWzHTML(P); if(t==="r") return dzRtHTML(P); if(t==="f") return tahMrHTML(P); return dzGrHTML(P); }
+  try{ if(t==="m"){ DZ.lv=TP.anLv||""; return dzMatHTML(P); } if(t==="w") return dzWzHTML(P); if(t==="r") return dzRtHTML(P); if(t==="b") return dzBtHTML(P); if(t==="f") return tahMrHTML(P); return dzGrHTML(P); }
   catch(e){ return `<p class="dz-note">⚠️ ${esc(String(e&&e.message||e))}</p>`; } finally{ TP.stu=stu0; TP.dx=dx0; } }
 
+/* 🖱 Tugmalar — har bir tugmani nechta o'quvchi bosgani (2026-10-24) */
+function dzScN(sc){ if(!sc) return "—"; if(sc.startsWith("ex:")) return DZ_EX[sc.slice(3)]||"✍️ Mashq"; return DZ_N[sc]||sc; }
+function dzBtHTML(P){ const days=new Set(anDays(P)), {T,U}=dzSum(days), L={}, all=dzAll(); all.forEach(([ak,d])=>{ for(const k in (d.bl||{})) if(!L[k]) L[k]=d.bl[k]; });
+  const act=all.filter(([ak,d])=>Object.keys(d.x||{}).some(k=>days.has(k))).length||0;
+  let R=Object.keys(U).filter(k=>k.startsWith("b:")).map(k=>{ const key=k.slice(2), i=key.indexOf("|"); return {key,sc:key.slice(0,i),bk:key.slice(i+1),u:U[k],t:T[k],lb:L[key]||""}; });
+  const SC=[...new Set(R.map(r=>r.sc))].sort((a,b)=>R.filter(r=>r.sc===b).reduce((s,r)=>s+r.u,0)-R.filter(r=>r.sc===a).reduce((s,r)=>s+r.u,0)), f=DZ.bsc||"";
+  if(f) R=R.filter(r=>r.sc===f); R.sort((a,b)=>b.u-a.u||b.t-a.t);
+  if(!R.length&&!f) return `<div class="tp-an-c"><h4>🖱 Tugmalar</h4><p class="dz-note">Hali ma’lumot yo‘q. Yig‘ish 24.10 dan boshlandi — o‘quvchilar yangi versiyada saytni ochib, tugmalarni bosgach (har 15 daqiqada yuboriladi) shu yerda paydo bo‘ladi.</p></div>`;
+  const pc=n=>act?Math.round(n/act*100)+"%":"—";
+  return `<div class="tp-an-c"><h4>🖱 Tugmalar <small>· ${P} kun · faol o‘quvchi: ${act}</small></h4>
+    <p class="dz-note">Har bir tugmani nechta o‘quvchi bosgan (👥) va jami necha marta (🖱). % — shu davrdagi faol o‘quvchilardan. Faqat ro‘yxatdan o‘tganlar; 24.10 dan.</p>
+    <div class="dz-chips">${[["","Hammasi"]].concat(SC.map(sc=>[sc,dzScN(sc)])).map(([k,l])=>`<button type="button" class="dz-chip${f===k?" on":""}" data-dzbsc="${esc(k)}">${esc(l)}</button>`).join("")}</div>
+    <input class="ch-in" id="dz-bq" placeholder="🔍 Tugma nomi…" autocomplete="off" style="margin:8px 0">
+    <table class="dz-t sm dz-bt"><tr><th>Tugma</th><th>Joy</th><th title="nechta o‘quvchi">👥</th><th>%</th><th title="jami bosish">🖱</th></tr>
+    ${R.slice(0,300).map(r=>`<tr data-bq="${esc((r.lb+" "+r.bk).toLowerCase())}"><td><b>${esc(r.lb||r.bk)}</b><br><small class="mu">${esc(r.bk)}</small></td><td><small>${esc(dzScN(r.sc))}</small></td><td><b>${r.u}</b></td><td>${pc(r.u)}</td><td>${r.t}</td></tr>`).join("")}</table></div>`; }
+document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closest("[data-dzbsc]"); if(!b) return; DZ.bsc=b.dataset.dzbsc||""; try{ tpAn(); }catch(er){} });
+document.addEventListener("input",e=>{ if(e.target.id!=="dz-bq") return; const q=e.target.value.trim().toLowerCase(); document.querySelectorAll(".dz-bt tr[data-bq]").forEach(r=>{ r.hidden=!!q&&!r.dataset.bq.includes(q); }); });
 const DZ_SH={brag:"🏆 Maqtanish rasmi",bragdl:"⬇️ Rasm saqlandi",bragopen:"🏆 Rasm ochildi",ref:"📣 Do‘st linki","link-y":"📤 Yodlash linki","link-x":"📤 Mashq linki","link-l":"📤 Lektion linki","link-d":"📤 Konspekt linki","link-r":"📤 Reyting linki",du:"⚔️ Duel linki",kc:"🃏 Karteikarten natijasi",lt:"🎯 Live test natijasi",kg:"🎮 Sinf o‘yini natijasi",dl:"⬇️ Natija saqlandi"};
 function dzSrcN(s){ return {ref:"📣 Do‘st linki / QR",brag:"🏆 Maqtanish rasmi",du:"⚔️ Duel / Challenge linki",lnk:"📤 Ichki link (Lektion, mashq…)",ig:"📷 Instagram",tg:"✈️ Telegram",web:"🌐 Qidiruv (Google…)",dir:"🔗 To‘g‘ridan"}[s]||s; }
 
