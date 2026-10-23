@@ -1161,3 +1161,10 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 2026-10-24 · Kunlik challenge kartasi: 1-o'rin urg'u bilan · guruh qidiruvida ⏳
 - `dcCardHTML`: 1-o'rin bor bo'lsa — sarlavha, «🥇 [Ism] [⚡ 87]» yorliqlari, «📚 O'tgan mavzularingizdan» (karta 3 qator, avvalgidan kichik). Hech kim o'ynamagan bo'lsa — eski ko'rinish.
 - Guruh «Odam qo'shish» ro'yxati: taklif yuborilgach «⏳ taklif qilindi» (`cmSent`), «Hammasini taklif qilish» ham yozib qo'yadi va qayta yubormaydi.
+
+## 2026-10-24 · ⭐ Kun qahramoni — marafondan ajratildi, o'qishga qarab
+- Otabek: «Kun qahramoni marafon ichida emas — o'quvchining to'liq o'rgangan narsasidan va faoliyatidan hisoblansin».
+- Hisob (kecha): o'rganilgan so'zlar ×3 + to'g'ri yechilgan mashqlar + faol daqiqalar. Manba — `act` jurnali: d[kun][7] (so'zlar soni surati, farqi olinadi), d[kun][1], d[kun][0]/60.
+- `kqMine()` → s/ hujjatining `mr` maydoniga `ky` (kecha) va `kz` (bugun, yaxlitlangan) — qoidalar o'zgarmaydi. `kqHero()` — reytingni yuklagan kishi g'olibni hisoblaydi va `mr/top` `l` oxiriga `["#",ism,so'z,mashq,daq,id,kun]` qo'yadi.
+- Bosh sahifada alohida sariq qator `#kq-home` (marafon kartasidan tepada): «⭐ Kun qahramoni: Sardor M. — kecha: 45 so'z · 120 mashq · 1 soat 20 daq», bosilsa — reyting.
+- Marafondagi «Kun yulduzi» (`mr.y/z`, karta qatori, ⭐ belgi) olib tashlandi.
