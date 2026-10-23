@@ -1108,3 +1108,6 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 
 ## 2026-10-23 — Yozish bosqichida ot uchun maslahat: «💡 mit Artikel» (Otabek: «mit Artikel desin shu joyida»)
 - Uzun «Otni artikl bilan yozing: der / die / das + so‘z (ko‘plik shart emas)» / ruscha o'rniga ikkala tilda ham qisqa «💡 mit Artikel».
+
+## 2026-10-23 — Yozish bosqichida ot uchun maslahat: «💡 mit Artikel: der / die / das» (Otabek: «mit Artikel desin shu joyida» · «der /die /das»)
+- Uzun «Otni artikl bilan yozing: der / die / das + so‘z (ko‘plik shart emas)» / ruscha matn o'rniga ikkala tilda ham bir xil qisqa nemischa yozuv.
