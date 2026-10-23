@@ -1009,3 +1009,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Endi: rasm (PNG fayl) oyna ochilganda oldindan tayyorlanadi (`bragOpen` → `o.fileObj`), «Ulashish» hech narsa kutmasdan `navigator.share({files,text})`. Ulashish imkoni bo'lmasa (Telegram ichidagi brauzer, kompyuter) — shu oynaning o'zida: «⬇ Rasmni saqlash», «📋 Matnni nusxalash» va «rasmni bosib turing → Saqlash» maslahati (`bragFallback`).
 - 🧠 Esingizdami kartasi: bugungi takror bajarilgan / qolmagan bo'lsa — bosh sahifadan butunlay yo'qoladi (avval «✅ Hammasi esingizda» bo'lib turardi). Ertaga yana chiqadi.
 - Duel taklifiga javob kutish: 10 → 20 soniya (`DU_WAIT`), qabul qiluvchidagi sanoq ham 20 dan (Otabek, shu kuni).
+- 📲 (ilova o'rnatgan) belgisi reytingdan va 👥 o'quvchi kartasidan olib tashlandi — faqat Ustoz panelida (Otabek, shu kuni).
