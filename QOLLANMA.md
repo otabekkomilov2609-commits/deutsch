@@ -1153,3 +1153,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Eski «🎙 Сказать / Слушаю…» (brauzer SpeechRecognition) o'rniga `kcMicRow()` — Telegram uslubi: bosib turib gapirish, Azure tekshiradi, chapga surib bekor qilish.
 - `kcItem()/kcEsOn()` — mikrofon qaysi oynada: Esingizdami ochiq bo'lsa ES.q[ES.k], aks holda Karteikarten. `kcDone` Esingizdami uchun: to'g'ri → `esGrade(true)`; birinchi xato → «Eshitdim: … — yana urinib ko'ring»; ikkinchisi → `esGrade(false)`; eshitilmasa → «yana ayting yoki yozing».
 - Azure ham, brauzer tanishi ham bo'lmasa — mikrofon qatori chiqmaydi, yozib javob beriladi.
+
+## 2026-10-24 01:55 · TEZKOR TUZATISH: sayt yuklanmay qoldi
+- Sabab: `const DCL={}` render() dan keyin e'lon qilingan edi → `dcCardHTML → dcLeadLoad` «Cannot access 'DCL' before initialization» → bosh sahifa chizilmadi.
+- Tuzatish: `dclMap()` (window.__DCL). Saboq: render() vaqtida chaqiriladigan funksiyalarda modul darajasidagi `const/let` ishlatmaslik; chiqarishdan oldin har doim «toza yuklash» testi (pageerror) o'tkazish.
