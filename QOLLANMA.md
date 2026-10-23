@@ -981,3 +981,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Olib tashlandi: «Mening darajam» yozuvi, motivatsiya matni, emoji zinapoya, uzun «Keyingi daraja …» jumlasi.
 - Zinapoya va motivatsiya matni «📊 Mening natijalarim» oynasining tepasiga ko'chdi (`.myp-lad`).
 - Klasslar: `.pg-top/.pg-mid/.pg-nm/.pg-lv/.pg-nx/.pg-btns`; `.prog-badge`, `.prog-bar`, `data-rank`, `data-proggo` saqlangan.
+- Tuzatish (shu kuni): `#prog.prog{display:block}` `[hidden]` dan kuchli edi → so'z o'rganmagan o'quvchida bo'sh oq quti chiqardi. Endi `#prog.prog:not([hidden])`.
