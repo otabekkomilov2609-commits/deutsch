@@ -3123,7 +3123,7 @@ function hwEntry(h){
   </div>`;
 }
 const PT_RE=/Goethe|telc|Modellsatz|Uebungssatz/i;
-function hwBlock(tab){ if(!tchOk()||window.BLITZ) return ""; /* 2026-10-21 (Otabek): sayt endi hamma uchun — «Topshiriqlar» faqat ustozga ko'rinadi */
+function hwBlock(tab){ return ""; /* 2026-10-23 (Otabek): «Topshiriqlar» bloki butunlay olib tashlandi (bo'sh turardi) */ if(!tchOk()||window.BLITZ) return "";
   const mine = HW.filter(h=>!h.tab || h.tab===tab);
   const active = mine.filter(h=>!h.due || dDiff(h.due)>=0).sort((a,b)=>(a.due||"9").localeCompare(b.due||"9"));
   const old = mine.filter(h=>h.due && dDiff(h.due)<0).sort((a,b)=>b.due.localeCompare(a.due));
