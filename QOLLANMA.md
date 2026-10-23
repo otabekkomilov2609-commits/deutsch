@@ -1105,3 +1105,6 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - **👤 Kunma-kun**: sanama-sana diagrammasida o'quvchi tanlansa → kun bosilganda `tahDayHTML`: vaqt chizig'i (soat, ekran + material nomi, davomiylik, +so'z, javob, 1-urinish ✓, kirish manbasi, tanaffuslar) + vaqt nimaga ketgani. O'quvchilar → profil → «📅 Kunma-kun yo'li» tugmasi.
 - Yig'ish: qadam = `[ekran, soniya, material, so'z, javob, 1-urinish ✓]`, sessiyada `src`; telefonda 120 kirish, ustozga oxirgi 30 kun (60 kirish, sig'masa 20).
 - Olib tashlandi: eski raqamlar qatori, Kunlik faollik, ⏱ Kuniga (alohida), Ro'yxat/Jami grafiklari, Soatlar, Bo'limlar, Mashq to'plamlari, Eng ko'p xato savollar (jadval ichida), Sayt o'sishi, Kunlik challenge bloki (funksiyalar jadvalida), O'qish natijasi, Tarqalish, Eslatmalar kartasi, O'quvchilar ro'yxati + CSV (👥 O'quvchilar bo'limida bor).
+
+## 2026-10-23 — Yozish bosqichida ot uchun maslahat: «💡 mit Artikel» (Otabek: «mit Artikel desin shu joyida»)
+- Uzun «Otni artikl bilan yozing: der / die / das + so‘z (ko‘plik shart emas)» / ruscha o'rniga ikkala tilda ham qisqa «💡 mit Artikel».
