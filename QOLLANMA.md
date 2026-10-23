@@ -1048,3 +1048,6 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Yodlash ochiq paytda har bir yangragan ovoz manbasi qayd qilinadi: `wzv:az` (Azure Seraphina), `wzv:wk` (Lingua Libre — jonli nemis), `wzv:pick` (o'quvchi tanlagan ovoz), `wzv:mp3` (files/audio), `wzv:tts` (brauzer «robot» ovozi — Azure ishlamagan bo'lsa).
 - `wza:again` — o'sha so'zni 15 s ichida qayta bosib tinglash.
 - Ustoz paneli → Tahlil → «🧠 Wortschatz ichida» → «🔈 Qaysi ovoz yangradi» kartasi: har manba ulushi (%), robot ovozi qizil, qayta tinglash soni. Ma'lumot 23.10 dan yig'iladi.
+
+## 2026-10-23 — 👎 tugmasining oq foni olib tashlandi (Otabek: «dislaykni oq fonini olib tashla»)
+- `.fb-btn`: background transparent, soya o'rniga emoji ostida yengil drop-shadow (har qanday fonda ko'rinadi), emoji 26px.
