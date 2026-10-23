@@ -1207,3 +1207,8 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - **Kunlik challenge 1-o'rin**: natija xotirada ham saqlanadi — sessionStorage ishlamasa cheksiz qayta ulanish bo'lmaydi.
 - **Yodlash → Tanishuv**: Karteikarten maslahati («Weiß ich / Keine Ahnung») chiqib qolardi → alohida «👀 Tanishuv» maslahati (`COACH.in`).
 - **Juftlash kartochkalari**: so'z bo'g'inlarga bo'linmaydi («Fernse-her» edi) — `hyphens:manual`, `overflow-wrap:break-word`.
+
+## 2026-10-24 · 🔗 Takroriy akkauntlar (ustoz paneli → O'quvchilar)
+- Filtr qatorida «🔗 Takroriy akkaunt · N» (faqat topilsa). `tpDupPairs()`: ism normallashtiriladi (`tpNmNorm`: kirill→lotin, x→h, q→k, w→v, tutuq belgilar olib tashlanadi). Juftlik: to'liq ism bir xil · yoki ism bir xil va familiya bir harfdan boshlanadi/bittasida yo'q · yoki Levenshtein ≤2.
+- Yo'nalish: birinchi faolligi oldinroq — «Eski», keyingisi — «Yangi». Tugmalar: «Eskisini yangisiga ko'chirish →» (mavjud `tpMvAsk` tasdiq oynasi → `tpMvGo`), «↔ Teskari», «Boshqa-boshqa odam» (`tp:dupno`, boshqa ko'rsatilmaydi).
+- Avtomatik ko'chirish YO'Q — har bir juftlikni ustoz o'zi tasdiqlaydi (ikki xil odam bir xil ismli bo'lishi mumkin).
