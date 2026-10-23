@@ -1138,3 +1138,13 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - «Chiqish» — brauzer `confirm` o'rniga pastki oyna: «Guruhdan chiqmoqchimisiz?» · Qolish / Ha, chiqish (`data-cmgout`).
 - `#cm` oynasiga `role=dialog` — telefonning «orqaga» tugmasi endi guruh oynasini yopadi (avval yopilmay, guruhga qaytarardi).
 - Guruh qatori: haftalik son ustma-ust («211 / haftada»), 👋 faqat belgi, ➕/👋 32px — ism to'liq ko'rinadi. O'zingizning qatoringiz — telefondagi hozirgi son (bazadagi eski emas). Reyting hali yuklanmagan a'zoda «…».
+
+## 2026-10-24 · Marafonni jonlantirish (A guruhi) — qoidalar va ballar O'ZGARMADI
+1. **Story rasmi** — `bragDraw` endi asosiy 9:16 (1080×1920), «🖼 Post» (4:5) tanlovi bor (`data-bragfmt`). Yangi turlar: `dc` (kunlik challenge ≥8/10, `dcEnd`) va `lv` (yangi daraja, `progUpHtml`). Pastda QR + kod (ref link), marafon faol bo'lsa sariq «📣 Marafon: 1 000 000 so'm · bepul». Tugma: «📷 Story uchun rasm».
+2. **Eslatma qatori** `mrNudge(place)` — Lernen/Karteikarten/mashq/kunlik challenge/duel/challenge oxirida: «Do'stingizni chaqiring — ro'yxatdan o'tsa +1, 100 so'z o'rgansa yana +6» (`data-hpref="share"`). ✕ — o'sha joyda 3 kun yo'q (`mr:ndx`). Link orqali kelgan o'quvchi 10 so'zga yetsa bir marta «🎉 Endi siz ham marafondasiz» (`mr:joined`).
+3. **Quvib o'tishdi** `mrPassCheck()` — `rankCloud` tugagach o'rin pastlagan bo'lsa toast (3 soatda 1), `mr:pass` / `mr:passT`.
+4. **⭐ Kun yulduzi** — `mrCalc` endi `y`/`z` = [kun, ball, yangi odam] (kecha/bugun). `mrStar()` kechagi eng ko'p ball; `mrTopPush` uni `mr/top` `l` oxiriga `["*",nm,p,n,id,kun]` qilib qo'shadi (qoidalar o'zgarmaydi, eski versiyalar faqat top[0]ni o'qiydi). Bosh sahifa kartasida, reyting sarlavhasida va ism yonida ⭐.
+5. **Taklif sahifasi** — `hpRefLink` endi `&fn=Ism` qo'shadi; birinchi kirishda «Xush kelibsiz» oynasi o'rnida `rwHTML`: avatar, «Sardor sizni taklif qildi 🎁», 3 qadam, «Boshlash →» (ro'yxat). Qayta kelganda — `mrWelcome` (pastki oyna, bir kod uchun 1 marta).
+
+## 2026-10-24 · Kunlik challenge kartasida 🥇
+- `dcLead/dcLeadLoad` — bosh sahifa kartasi bugungi 1-o'rinni ko'rsatadi: «🥇 Ism — 9/10 · ⚡87 · 5 kishi o'ynadi». MQTT'dan 4,5 s o'qiladi, sessionStorage'da 5 daqiqa — Firebase sarflanmaydi.
