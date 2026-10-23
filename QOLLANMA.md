@@ -1115,3 +1115,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 2026-10-24 — Marafon kunlik diagrammasi bosiladi (Otabek: «bu bosilmayapti»)
 - Tahlil → 📣 Marafon → «Har kuni — marafon bo'yicha»: ustun bosilsa (`data-tahmrd`, `tahMrDay`) pastda o'sha kun: 🔗 link ochildi (kimning linki ×son), 📤 linkini ulashganlar (ism ×son), 🙋 shu kuni faol bo'lgan do'stlar (kim olib kelgan · so'z), 🆕 link orqali ro'yxat (gs bor bo'lsa). Oxirgi kun avtomatik tanlangan.
 - `anSvgBars(...,opt)` — `opt.attr` bo'lsa ustunlar bosiladigan bo'ladi, `opt.sel` — tanlangan ustun ramkada.
+
+## 2026-10-24 — «O'sish nimaning hisobiga» tushunarliroq (Otabek: «shu nma tushunmayapman»)
+- O'zgarish kunlari endi kun o'rtasida chiziq + ustida faqat ①②③ belgisi; izohi diagramma ostida ro'yxat bo'lib («① 21.10 — 📊 Faollik kuzatuvi»). Chiziq raqamlar ostidan o'tadi (raqam ustunda fon bilan).
+- Sarlavha izohi: «ustun — o'sha kuni nechta yangi o'quvchi ro'yxatdan o'tgani (rang — qayerdan kelgani) · ①② — saytga yangilik qo'shilgan kun».
