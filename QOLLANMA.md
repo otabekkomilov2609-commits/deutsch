@@ -911,3 +911,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - **Ustoz rejimida ham 👥 ishlaydi** *(2026-10-23, Otabek: «online kimligi ko'rinmayapti»)*: ilgari ustoz kodi kiritilgan qurilmada jamoa (onlayn ro'yxat, 👥 tugma, inbox) butunlay o'chiq edi — endi ustoz ham oddiy ishtirokchi sifatida ko'rinadi va ko'radi.
 - **«Topshiriqlar» bloki olib tashlandi** *(2026-10-23, Otabek)* — `hwBlock` bo'sh qaytaradi (kod saqlangan, kerak bo'lsa qaytariladi).
 - **Do'stlar / Guruh → «qo'shish» bo'limida hamma ro'yxatdan o'tganlar ro'yxati** *(2026-10-23, Otabek)*: qidiruv bo'sh bo'lsa ham to'liq ro'yxat (onlayn → so'z soni bo'yicha, 200 tagacha); pid'siz (hali kirmagan) odamlarda «➕ ⏳» — so'rov kutib turadi; guruhda ular «⏳» (taklif u kirganda mumkin).
+- **Tahlil → «Eng ko'p xato qilingan savollar» qatori bosiladi** *(2026-10-23, Otabek)*: o'sha savol mashq oynasida (faqat shu bitta savol) ustoz paneli ustida ochiladi; yopilganda Tahlilga qaytadi.
