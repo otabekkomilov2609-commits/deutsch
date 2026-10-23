@@ -907,3 +907,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - **👥 tablar:** 🟢 Onlayn · 📬 Xabar · 🏫 Guruh · 🤝 Do'stlar («O'rtoq» → «Do'st» hamma joyda).
 - Reyting sarlavhasi bo'limga qarab o'zgaradi (Marafon: «📣 Tarqatish marafoni · 15-noyabrgacha»). Tepadagi tugmalar ≥36–40 px. RU: «среднее произношение».
 - **Unvon oynasi:** 1-unvon «🔧 Xato tuzatuvchi» → **«🌱 Boshlovchi / Новичок»**; katta ball, «Ballar nimadan», 4 pog'onali zinapoya, «Yordamchi gacha: 2 / 10 · yana 8 ball»; o'zinikida «Qanday ball yig'aman?», boshqanikida «Men ham xohlayman →»; ruscha nom faqat RU'da.
+- **Reytingda pid'siz o'quvchi** (👥 yangilanishidan beri kirmagan) *(2026-10-23)*: kartada «⚔️ Duel — linkini yuborish» (ulashish/Telegram) va «➕ Do'st» — so'rov `frpend`da kutib turadi, o'quvchi kirib pid olgach reyting yangilanganda avtomatik yuboriladi («⏳ So'rov kutilmoqda»).
