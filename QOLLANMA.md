@@ -1011,3 +1011,8 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Duel taklifiga javob kutish: 10 → 20 soniya (`DU_WAIT`), qabul qiluvchidagi sanoq ham 20 dan (Otabek, shu kuni).
 - 📲 (ilova o'rnatgan) belgisi reytingdan va 👥 o'quvchi kartasidan olib tashlandi — faqat Ustoz panelida (Otabek, shu kuni).
 - 🧭 «Sayt bo'ylab sayohat» ✕: 20 px → 28 px + atrofida kengaytirilgan bosish maydoni — telefonda ✕ o'rniga sayohat boshlanib ketmasin (bosilsa `tour=1`, butunlay yo'qoladi). (Otabek, shu kuni)
+
+## 2026-10-23 — ➕ «Odam +» hamma ro'yxatlarda + reytingda ⚔️ Duel (Otabek: mock-up → «yaxshi qil»)
+- `cmPlusBtn(pid,rk,nm)` — odamcha+ belgisi (SVG). Bosilsa `cmPlusSheet`: 🤝 Do'st qilish · 🏫 Guruhga taklif (guruh yo'q bo'lsa — «Guruh yaratib taklif qilish» → `cmGroupName`). pid'siz (hali yangi versiyaga kirmagan) odamga — `cmPend` navbati. Bajarilganlari kulrang «✓ Do'stingiz / ✓ Guruhingizda»; ikkalasi ham bajarilgan bo'lsa qatorda yashil ✓.
+- Qayerda: 👥 Odamlar (Hammasi/Onlayn/Do'st/Guruh) — Duel/Challenge yonida; Guruhim a'zolari; 🏆 Reyting — So'zlar, Hafta ligasi, Marafon (`rkActs`: 🟢 onlayn → ⚔️ Duel, bosilsa darhol taklif; hammaga «odam +»; o'z qatorida, ustoz rejimida va Blitz'da yo'q).
+- Reyting qatori: `li:has(.rk-acts)` — 4 ustunli grid, tugmalar ustuni bir xil kenglikda (78 px; ≤380 px — 68 px), so'z soni tekis turadi.
