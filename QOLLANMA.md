@@ -1111,3 +1111,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 
 ## 2026-10-23 — Yozish bosqichida ot uchun maslahat: «💡 mit Artikel: der / die / das» (Otabek: «mit Artikel desin shu joyida» · «der /die /das»)
 - Uzun «Otni artikl bilan yozing: der / die / das + so‘z (ko‘plik shart emas)» / ruscha matn o'rniga ikkala tilda ham bir xil qisqa nemischa yozuv.
+
+## 2026-10-24 — Marafon kunlik diagrammasi bosiladi (Otabek: «bu bosilmayapti»)
+- Tahlil → 📣 Marafon → «Har kuni — marafon bo'yicha»: ustun bosilsa (`data-tahmrd`, `tahMrDay`) pastda o'sha kun: 🔗 link ochildi (kimning linki ×son), 📤 linkini ulashganlar (ism ×son), 🙋 shu kuni faol bo'lgan do'stlar (kim olib kelgan · so'z), 🆕 link orqali ro'yxat (gs bor bo'lsa). Oxirgi kun avtomatik tanlangan.
+- `anSvgBars(...,opt)` — `opt.attr` bo'lsa ustunlar bosiladigan bo'ladi, `opt.sel` — tanlangan ustun ramkada.

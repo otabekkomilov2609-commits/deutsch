@@ -1793,6 +1793,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ab{padding-right:10px;margin:6px 0 4px}.ab-p{position:relative;height:var(--h);display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));align-items:end;gap:3px;border-bottom:1.5px solid var(--line);padding-top:18px}
 .ab-c{position:relative;height:100%;display:flex;align-items:flex-end;justify-content:center}.ab-c i{display:block;width:100%;max-width:38px;border-radius:5px 5px 0 0;min-height:1px}
 .ab-c em{position:absolute;left:50%;transform:translateX(-50%);font-style:normal;font-size:12px;font-weight:800;color:var(--ink);white-space:nowrap;pointer-events:none}
+.ab-c.ck{cursor:pointer}.ab-c.ck:hover i{filter:brightness(1.1)}.ab-c.on i{outline:2px solid var(--ink);outline-offset:1px}.tmd div{margin-top:4px}.tmd small{color:var(--muted);font-weight:800}
 .ab-x{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:3px;font-size:11px;color:var(--muted);font-weight:700;margin-top:4px}.ab-x span{display:flex;justify-content:center;white-space:nowrap}
 .dz-t.sm th{white-space:normal}
 .tah-top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:8px}.tah-top h3{margin:0}.tah-bar{display:grid;gap:8px;margin-bottom:6px}.tah-bar .dz-chips{margin:0}.tah-b{display:grid;gap:12px;min-width:0}.tah .dz-st{margin:4px 0 10px}
@@ -9016,7 +9017,7 @@ function tahMrHTML(P){ if(!TP.mrL&&!TP.mrRef) mrTpLoad(); const S=Object.entries
   return `<div class="dz-kpis">${dzKpi(dzF(parts.length),"Qatnashchi (≥1 ball)")}${dzKpi(dzF(regs.length),"Olib kelingan odam",`linkni ochgan: ${vis.length}`)}${dzKpi(dzF(w10),"Faol bo‘lgan (10+ so‘z)",dzP(w10,regs.length))}${dzKpi(w10&&pay?dzF(Math.round(pay/w10))+" so‘m":"—","Bir faol odam narxi",pay?`${mrSum(pay)} ÷ ${w10}`:"")}${dzKpi(mrActive()?mrDays()+" kun":"tugadi","Qolgan vaqt")}</div>
     ${ins.length?`<div class="dz-c"><h4>⚠️ Marafon — avtomatik topilgan</h4>${dzIns(ins)}</div>`:""}
     <div class="dz-c"><h4>Har kuni — marafon bo‘yicha <small>${P} kun</small></h4><div class="dz-chips">${[["v","🔗 Link ochildi"],["r","🆕 Link orqali ro‘yxat"],["s","📤 Link ulashildi"]].map(([k,l])=>`<button type="button" class="dz-chip${mkM===k?" on":""}" data-tahmr="${k}">${l}</button>`).join("")}</div>
-      ${anSvgBars(vals,days.map(d=>d.slice(5)),"var(--blue)",70,n>16)}${mkM==="r"&&!Object.keys(GS).length?`<p class="dz-note">Ro‘yxat soni manba bo‘yicha Firebase qoidasi Publish qilingach yig‘iladi.</p>`:""}</div>
+      ${(()=>{ const sel=TP.mrSel!=null&&TP.mrSel<n?TP.mrSel:n-1; return anSvgBars(vals,days.map(d=>d.slice(5)),"var(--blue)",70,n>16,{attr:"data-tahmrd",sel})+tahMrDay(days[sel],S,R,GS); })()}${mkM==="r"&&!Object.keys(GS).length?`<p class="dz-note">Ro‘yxat soni manba bo‘yicha Firebase qoidasi Publish qilingach yig‘iladi.</p>`:""}</div>
     <div class="dz-two">
       <div class="dz-c"><h4>Olib kelinganlar sifati</h4>${[["🔗 Linkni ochdi",vis.length+regs.length],["Ro‘yxatdan o‘tdi",regs.length],["10+ so‘z",w10],["100 so‘z yoki 5 grammatika (ball beradi)",real],["3+ kun faol",d3]].map(([l,v],i,a)=>dzBar(l,v,a[0][1]||1,dzF(v)+(i&&a[i-1][1]&&v<a[i-1][1]?` <small>−${Math.round((1-v/a[i-1][1])*100)}%</small>`:""))).join("")}</div>
       <div class="dz-c"><h4>Ball nimadan kelyapti</h4>${ptT?[["👤 Do‘st ro‘yxatdan o‘tdi",pts.ref],["💯 Do‘st 100 so‘z / grammatika",pts.r100],["📲 Ilova o‘rnatish",pts.app],["📤 Ulashish va boshqalar",pts.oth]].map(([l,v])=>dzBar(l,v,ptT,dzP(v,ptT))).join(""):dzEmpty("Hali ball yo‘q.")}
@@ -9025,6 +9026,17 @@ function tahMrHTML(P){ if(!TP.mrL&&!TP.mrRef) mrTpLoad(); const S=Object.entries
     ${mrTpHTML()}`; }
 document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closest("[data-tahday]"); if(!b) return; const id=b.dataset.tahday, d=(TP.stu||{})[id]; TP.dcW=(d&&d.ak)||id; TP.dcSel=null; TP.dcM="t"; TP.anT="s"; TP.tab="an"; tpRender(); setTimeout(()=>{ const c=document.querySelector(".dcc"); if(c) c.scrollIntoView({block:"start",behavior:"smooth"}); },120); });
 document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closest("[data-tahmr]"); if(!b) return; TP.mrM=b.dataset.tahmr; tpStDrawSoon(); });
+document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closest("[data-tahmrd]"); if(!b) return; TP.mrSel=+b.dataset.tahmrd; tpAn(); });
+/* marafon: tanlangan kun — kim ulashdi, kimning linki ochildi, kim faol bo'ldi (2026-10-24, Otabek: «bu bosilmayapti») */
+function tahMrDay(day,S,R,GS){ const nmOf=by=>{ const x=S.find(([id,d])=>d._rc===by||d._rc8===by); return x?x[1].nm:by; };
+  const sh=S.map(([id,d])=>[d.nm,((((d.a||{}).ed||{})[day]||{})["share:ref"])|0]).filter(x=>x[1]).sort((a,b)=>b[1]-a[1]);
+  const op={}; R.filter(r=>!r.nm&&actDay(r.t)===day).forEach(r=>{ const k=nmOf(r.by); op[k]=(op[k]||0)+1; }); const opL=Object.entries(op).sort((a,b)=>b[1]-a[1]);
+  const fr=R.filter(r=>r.nm&&actDay(r.t)===day).map(r=>[r.nm,nmOf(r.by),r.w|0]); const g=GS[day]||{}, rg=(g.rg_ref|0)+(g.rg_brag|0);
+  return `<div class="dc-sel tmd"><b>${day.slice(8)}.${day.slice(5,7)}</b> · 🔗 link ochildi: ${opL.reduce((a,b)=>a+b[1],0)} · 📤 ulashildi: ${sh.reduce((a,b)=>a+b[1],0)}${Object.keys(GS).length?` · 🆕 link orqali ro‘yxat: ${rg}`:""}
+    ${sh.length?`<div><small>📤 Linkini ulashganlar:</small> ${sh.map(([n,c])=>`${esc(n)}${c>1?" ×"+c:""}`).join(" · ")}</div>`:""}
+    ${opL.length?`<div><small>🔗 Kimning linki ochildi:</small> ${opL.map(([n,c])=>`${esc(n)} ×${c}`).join(" · ")}</div>`:""}
+    ${fr.length?`<div><small>🙋 Shu kuni faol bo‘lgan do‘stlar:</small> ${fr.map(([n,by,w])=>`${esc(n)} (${esc(by)} · ${w} so‘z)`).join(" · ")}</div>`:""}
+    ${!sh.length&&!opL.length&&!fr.length?`<div><small>Bu kunda marafon harakati yo‘q.</small></div>`:""}</div>`; }
 
 /* ===== 📊 Tahlil — bitta oyna (2026-10-23) ===== */
 const TAH_T=[["s","🌐 Sayt rivoji"],["m","📚 Materiallar"],["w","🧠 Wortschatz"],["r","🧭 Yo‘llar"],["f","📣 Marafon"]];
@@ -9099,9 +9111,9 @@ async function anGrowthLoad(){ if(!CLOUD_ON||TP.anGL) return; TP.anGL=1; try{ le
   do{ const r=await fetch(FS_BASE+"n?pageSize=300&mask.fieldPaths=t"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok) break; const j=await r.json(); (j.documents||[]).forEach(d=>{ const t=+(((d.fields||{}).t||{}).integerValue||0); if(t) T.push(t); }); tok=j.nextPageToken||""; }while(tok&&++n<30);
   TP.anReg=T.sort((a,b)=>a-b); let R=0; try{ const r=await fetch(FS_BASE+"ref?pageSize=300&mask.fieldPaths=t",{cache:"no-store"}); if(r.ok){ const j=await r.json(); R=(j.documents||[]).length; } }catch(e){} TP.anRef=R; }catch(e){} TP.anGL=0; if(TP.tab==="an") tpStDrawSoon(); }
 /* 2026-10-23 (Otabek: «yaxshi ko'rinmayapti») — SVG cho'zilgan matn o'rniga HTML ustunlar: aniq raqamlar, ostida sana */
-function anSvgBars(vals,labels,color,h,noTxt){ h=h||70; const n=vals.length, mx=Math.max(1,...vals), step=n<=8?1:n<=16?2:n<=31?5:Math.ceil(n/6), show=!noTxt&&n<=16;
+function anSvgBars(vals,labels,color,h,noTxt,opt){ h=h||70; const n=vals.length, mx=Math.max(1,...vals), step=n<=8?1:n<=16?2:n<=31?5:Math.ceil(n/6), show=!noTxt&&n<=16;
   const lb=x=>{ const m=/^(\d\d)-(\d\d)$/.exec(String(x)); return m?m[2]+"."+m[1]:String(x); };
-  return `<div class="ab" style="--n:${n};--h:${Math.max(90,h*1.6)}px"><div class="ab-p">${vals.map((v,i)=>`<div class="ab-c" title="${esc(lb(labels[i]))}: ${v}"><i style="height:${(v/mx*100).toFixed(1)}%;background:${color}"></i>${show&&v?`<em style="bottom:calc(${(v/mx*100).toFixed(1)}% + 2px)">${String(v).replace(".",",")}</em>`:""}</div>`).join("")}</div>
+  return `<div class="ab" style="--n:${n};--h:${Math.max(90,h*1.6)}px"><div class="ab-p">${vals.map((v,i)=>`<div class="ab-c${opt&&opt.attr?" ck"+(opt.sel===i?" on":""):""}"${opt&&opt.attr?` ${opt.attr}="${i}" role="button" tabindex="0"`:""} title="${esc(lb(labels[i]))}: ${v}"><i style="height:${(v/mx*100).toFixed(1)}%;background:${color}"></i>${show&&v?`<em style="bottom:calc(${(v/mx*100).toFixed(1)}% + 2px)">${String(v).replace(".",",")}</em>`:""}</div>`).join("")}</div>
     <div class="ab-x">${vals.map((_,i)=>`<span>${(n-1-i)%step===0?esc(lb(labels[i])):""}</span>`).join("")}</div></div>`; }
 function anSvgLine(vals,color,h){ h=h||60; const mx=Math.max(1,...vals), n=vals.length; const pts=vals.map((v,i)=>`${(i/(n-1||1)*100).toFixed(2)},${(h-v/mx*h+2).toFixed(2)}`); return `<svg class="an-svg" viewBox="0 0 100 ${h+4}" preserveAspectRatio="none"><polyline points="${pts.join(" ")}" fill="none" stroke="${color}" stroke-width="1.6" vector-effect="non-scaling-stroke"/><polygon points="0,${h+2} ${pts.join(" ")} 100,${h+2}" fill="${color}" opacity=".12"/></svg>`; }
 /* 📅 Kunlik challenge tahlili: o'quvchi summary'sidagi dc (45 kun) yoki eski yozuvlardagi l (dc) */
