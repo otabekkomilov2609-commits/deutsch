@@ -1168,3 +1168,4 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - `kqMine()` → s/ hujjatining `mr` maydoniga `ky` (kecha) va `kz` (bugun, yaxlitlangan) — qoidalar o'zgarmaydi. `kqHero()` — reytingni yuklagan kishi g'olibni hisoblaydi va `mr/top` `l` oxiriga `["#",ism,so'z,mashq,daq,id,kun]` qo'yadi.
 - Bosh sahifada alohida sariq qator `#kq-home` (marafon kartasidan tepada): «⭐ Kun qahramoni: Sardor M. — kecha: 45 so'z · 120 mashq · 1 soat 20 daq», bosilsa — reyting.
 - Marafondagi «Kun yulduzi» (`mr.y/z`, karta qatori, ⭐ belgi) olib tashlandi.
+- 2026-10-24 02:20 (Otabek: «reytinglarda ko'rinsa bas»): bosh sahifadagi `#kq-home` olib tashlandi. ⭐ Kun qahramoni endi faqat Reyting oynasida — «So'zlar» va «Hafta ligasi» sarlavhasi ostida `kqLineHTML`, ro'yxatda ism yonida ⭐. Marafon bo'limida yo'q.
