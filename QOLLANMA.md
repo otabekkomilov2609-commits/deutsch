@@ -1199,3 +1199,11 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - **Kunlik challenge yetakchisi**: natija xotirada ham saqlanadi — sessionStorage ishlamasa cheksiz qayta ulanmaydi.
 - **Lernen «Tanishuv»** kartasida Karteikarten maslahati («Weiß ich / Keine Ahnung») chiqardi → o'z maslahati `COACH.in`.
 - **Juftlash kartochkalari**: so'zlar bo'g'inga bo'linmaydi («Fernse-her» emas).
+
+## 2026-10-24 03:15 · Mustaqil kod tekshiruvi va jonli sinovdan keyingi tuzatishlar
+- **Esingizdami mikrofoni** yashirin Karteikarten kartasidagi bir xil id'larni yangilab qo'yardi (yozib olish ko'rinmasdi): `kcG(id)` — faol oynadan (#es yoki #lrn) qidiradi.
+- **Guruh**: `cmGroupSave` endi faqat bazadagi ro'yxat + o'zimni yozadi (eski nusxadagi chiqib ketgan a'zo qaytmaydi). Chiqqanda `grpL:<gid>` (bulutga ham ketadi) — ikkinchi telefon o'zini qayta qo'shmaydi; qayta qo'shilganda tozalanadi.
+- **Kun qahramoni**: so'zlar surati Lernen tugaganda va ilova yopilganda ham yoziladi (`actWordsSnap`) — oxirgi 5 daqiqada o'rganilgan so'zlar ertangi kunga o'tib ketmaydi.
+- **Kunlik challenge 1-o'rin**: natija xotirada ham saqlanadi — sessionStorage ishlamasa cheksiz qayta ulanish bo'lmaydi.
+- **Yodlash → Tanishuv**: Karteikarten maslahati («Weiß ich / Keine Ahnung») chiqib qolardi → alohida «👀 Tanishuv» maslahati (`COACH.in`).
+- **Juftlash kartochkalari**: so'z bo'g'inlarga bo'linmaydi («Fernse-her» edi) — `hyphens:manual`, `overflow-wrap:break-word`.
