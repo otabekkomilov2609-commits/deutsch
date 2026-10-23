@@ -942,3 +942,11 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - **🆕 tugmasi tepada** *(2026-10-23, Otabek: «new tugmasi chi»)*: 🌗 yonida, yangiliklar chiqqanidan 10 kun ko'rinadi (`WN_T`); ochilmaguncha qizil nuqta; bosilsa yangiliklar sahifasi. 360 px'da tepadagi tugmalar bir qatorga sig'adi.
 - **Pastdan chiquvchi oynalar (qoidalar, unvon, kartochkalar) aylantirilishi** *(2026-10-23, Otabek: «marafon qoidalarini pastga siypalasa tushmayapti»)*: `.hp-sh` — max-height 85dvh (iPhone Safari paneli hisobga olinadi), overscroll-behavior:contain, touch-action:pan-y, pastki xavfsiz zona; oyna ochiqligida orqadagi sahifa aylanmaydi.
 - **Lektion doirachasi rangi foizga qarab** *(2026-10-23, Otabek)*: halqa (`[data-ring]`, `--rc`) va o'ngdagi foiz: 0% — kulrang, <30% — qizil, <60% — to'q sariq, <90% — sariq, 90%+ — yashil (`ringCol`). Halqa qalinligi ~6 px (Otabek: «sal qalinroq»).
+
+## 2026-10-23 — Bosh sahifa yengillashtirildi (Otabek: «app chalg'ituvchi bo'lib qolmadimi»)
+- Sarlavha ostidagi tavsif matni (`.lead`) olib tashlandi; shior qoldi.
+- 📅 Kunlik challenge kartasi bugun bajarilgan bo'lsa ko'rinmaydi (`dcCardHTML` → `res` bo'lsa ""). Natija/reyting — Reyting oynasida.
+- Wortschatz kartasi (`.wz-all`) «Hammasi» ko'rinishidan olindi — faqat «Wortschatz» filtri tanlanganda chiqadi.
+- 📝 Xatolarim endi Yodlash oynasida ham bor: daraja foizi ostida `.lrn-mx` tugma (`data-mxopen`).
+- 🎓 Prüfungstraining tepadan Lektionlar ro'yxatining oxiriga tushirildi (`ptH`).
+- Xato tuzatildi: Kunlik challenge kartasida ortiqcha oq quti bor edi — `.dc-t` klassi grammatika varag'idagi `.dc-t` bilan to'qnashardi → `.dc-tx`; ortiqcha `.review` o'rami olindi.
