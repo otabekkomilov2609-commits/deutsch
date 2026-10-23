@@ -1190,3 +1190,4 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - `kqMine`: bugungi yaxlitlangan qiymat 0 bo'lsa `kz` yozilmaydi.
 - Marafon eslatmasi: ✕ — burchakda kichik doira (matnga joy), «📣 Marafon · 1 000 000 so'm» bir qatorda.
 - Tungi rejim **avtomatik** (telefon sozlamasi) bo'lganda ham bugungi kartalar to'q rangda: `@media (prefers-color-scheme:dark)` ichida `.mr-ndb, .mr-join, .kq, .cm-wait, .brag-mr`… (avval faqat 🌙 tugmasi bilan ishlardi).
+- Tahlil: tor ekranda (≤420px) jadvallar o'zi suriladi — «Sayt rivoji»dagi manbalar jadvali 375px da sahifani yonga surardi.
