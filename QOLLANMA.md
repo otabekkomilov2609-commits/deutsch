@@ -1188,3 +1188,5 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - **«Birga» oynasida tablar ko'rinmasdi** (Odamlar / Xabarlar / Guruhim): `.cm-tabs` flex ichida uzun ro'yxatda 0 ga siqilardi → `flex:none`.
 - **Guruh a'zosi yo'qolishi:** `cmGroupSave` butun ro'yxatni eski nusxadan yozardi (bir vaqtda kimdir qo'shilsa/nom o'zgarsa — boshqalar o'chib ketardi). Endi saqlashdan oldin bazadagi ro'yxat bilan birlashtiriladi; chiqishda `cmGroupSave([me])`. `cmGroupLoad`: o'zim guruhdaman (grp), lekin ro'yxatda yo'qman — qayta qo'shiladi. (Jonli saytda «A2 Legends · 1 kishi» — egasi ro'yxatda yo'q edi.)
 - `kqMine`: bugungi yaxlitlangan qiymat 0 bo'lsa `kz` yozilmaydi.
+- Marafon eslatmasi: ✕ — burchakda kichik doira (matnga joy), «📣 Marafon · 1 000 000 so'm» bir qatorda.
+- Tungi rejim **avtomatik** (telefon sozlamasi) bo'lganda ham bugungi kartalar to'q rangda: `@media (prefers-color-scheme:dark)` ichida `.mr-ndb, .mr-join, .kq, .cm-wait, .brag-mr`… (avval faqat 🌙 tugmasi bilan ishlardi).
