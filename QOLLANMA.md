@@ -1062,3 +1062,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - **Mehmonlar (3-bosqich):** `gs/<kun>` — ismsiz hisoblagich (commit + increment): v, nd, rg, f1, w10, r1, r7 va manba bo'yicha (_ref, _brag, _du, _lnk, _ig, _tg, _web, _dir). Manba — kirish linkidan (`window.__Q0`), maqtanish rasmi linkiga `&s=b` qo'shildi.
 - **Firebase qoidalari:** tools/firestore.rules ga `a` va `gs` bo'limlari qo'shildi — **Otabek Publish qilishi kerak**, aks holda chuqur ma'lumot bazaga yozilmaydi (oynada ogohlantirish chiqadi).
 - Ma'lumot 23.10 dan yig'iladi; undan oldingi kunlar bo'sh.
+
+## 2026-10-23 — «Verben mit Präpositionen» ro'yxati (Otabek: «ikki tomonida ham javob bor»)
+- So'zlar ro'yxatida o'ng ustunda fe'l takrorlanmaydi — «sich kümmern … (+ Akk.) — …» o'rniga faqat ma'nosi (`/…[^—]*— /` bo'lsa « — » dan keyingi qism). Test va kartalarda savol o'zgarmadi.
+- Lektion raqami 0 bo'lgan (fe'l) ro'yxatlarda sarlavhada «0» va «Lektion 0» o'rniga 📗, der/das/die belgisi ko'rsatilmaydi.

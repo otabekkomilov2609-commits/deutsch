@@ -4885,10 +4885,10 @@ function lrnList(n){ LR.mode="list"; LR.fromList=n; LR.one=+n; LR.chk=false; con
   const lvl=LR.id.split("-")[0], L=(LEKS[lvl]||[]).find(r=>+r[0]===+n), title=L?L[1]:(D.les[n]||""), thema=D.les[n]||(L?L[2]:"");
   /* artikl rangi — Wortschatzliste PDF'dagidek: der ko'k, das yashil, die qizil */
   const art=w=>esc(w).replace(/(^|\/\s)(der|das|die)(?=\s)/g,(m,p,a)=>`${p}<span class="wl-a ${a}">${a}</span>`);
-  const row=(x,au)=>`<li class="wl-r${LR.st[x.i]===2?" d":LR.st[x.i]===1?" h":""}"><div class="wl-de">${au?`<button type="button" class="wl-say" data-say="${esc(x.say||x.de)}" aria-label="🔊">🔊</button>`:""}<span>${art(x.full||x.de)}</span></div><div class="wl-tr">${esc(x.tr)}</div>${x.ex?`<div class="wl-ex">› ${esc(x.ex)}</div>`:""}</li>`;
+  const row=(x,au)=>`<li class="wl-r${LR.st[x.i]===2?" d":LR.st[x.i]===1?" h":""}"><div class="wl-de">${au?`<button type="button" class="wl-say" data-say="${esc(x.say||x.de)}" aria-label="🔊">🔊</button>`:""}<span>${art(x.full||x.de)}</span></div><div class="wl-tr">${esc(/…[^—]*— /.test(x.tr)?x.tr.split(" — ").slice(1).join(" — "):x.tr)}</div>${x.ex?`<div class="wl-ex">› ${esc(x.ex)}</div>`:""}</li>`;
   lrnEl().innerHTML=`${lrnHead()}<div class="lrn-body wl-body"><div class="lrn-card wl-top">
-      <div class="wl-h"><span class="wl-n">${esc(String(n))}</span><div><b>${esc(title)}</b><small>Lektion ${esc(String(n))} · ${esc(thema)}</small></div></div>
-      <div class="wl-leg"><span class="wl-a der">der</span> · <span class="wl-a das">das</span> · <span class="wl-a die">die</span><span class="wl-pr">${esc(lt("learned")(d,allw.length))}</span></div>
+      <div class="wl-h"><span class="wl-n">${+n===0?"📗":esc(String(n))}</span><div><b>${esc(title)}</b>${+n===0?"":`<small>Lektion ${esc(String(n))} · ${esc(thema)}</small>`}</div></div>
+      <div class="wl-leg">${D.kind==="perfekt"?"<span></span>":`<span class="wl-a der">der</span> · <span class="wl-a das">das</span> · <span class="wl-a die">die</span>`}<span class="wl-pr">${esc(lt("learned")(d,allw.length))}</span></div>
       <div class="lrn-prog"><i class="d" style="width:${allw.length?d/allw.length*100:0}%"></i></div>
       <button type="button" class="btn primary wl-go" data-l="wlgo">🧠 ${esc(uz?"Yodlashni boshlash":"Начать учить")} →</button></div>
     <div class="lrn-card wl-sheet">${Object.keys(sec).map(k=>`<h3 class="wl-s">${esc(D.sec[k]||"")}</h3><ul class="wl">${sec[k].map(x=>row(x,1)).join("")}</ul>`).join("")}
