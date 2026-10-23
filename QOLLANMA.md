@@ -1174,3 +1174,8 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Yig'ish: bitta `click` tinglovchi (capture). Kalit `ekran|data-atribut=qiymat` (`axBk`: dinamik qiymatlar — id, raqam, uzun matn — tashlanadi; data yo'q bo'lsa `#id` yoki `.klass`), ekran — `axScr()`. Kunlik `x[kun]["b:…"]`, tugma matni `bl[kalit]` (≤260). Kuniga ≤100 xil tugma. Faqat ro'yxatdan o'tgan o'quvchilar, ustoz emas.
 - `axSummary` → `bl` (lite'da yo'q). 15 daqiqada bir `a/` ga ketadi.
 - Ustoz paneli → Tahlil → «🖱 Tugmalar» (`dzBtHTML`): Tugma (matn + kalit) · Joy · 👥 nechta o'quvchi · % faol o'quvchilardan · 🖱 jami bosish. Ekran bo'yicha chiplar, qidiruv; davr va daraja filtri umumiy.
+
+## 2026-10-24 · Marafon eslatmasi: katta › va «g'olib bo'lish uchun»
+- `mrNudge`: tepada «📣 Marafon · 1 000 000 so'm», sarlavha «G'olib bo'lish uchun do'stingizni chaqiring», o'ngda 34px sariq doira ichida ›.
+- «Quvib o'tdi» xabariga: «O'rningizni qaytarish uchun do'stingizni chaqiring».
+- Story rasm oynasiga (marafon faol bo'lsa): «Marafon: rasmdagi QR orqali kirgan har bir yangi odam — +1 ball, ro'yxatdan o'tsa — yana +1».
