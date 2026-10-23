@@ -8082,7 +8082,7 @@ function cmFrHTML(){ if(!ACC.cur) return `<p class="tp-empty">${esc(cmT("needAcc
 function cmFrSearchHTML(){ const q=(CM.q||"").trim().toLowerCase(), F=cmFr(); const R=cmAllUsers(q);
   return `<p class="lbl cm-lbl">${q?"🔍":"👥"} ${R.length}</p><ul class="cm-l">${R.map(([rk,x])=>`<li class="cm-row"><span class="cm-dot${x.pid&&cmIsOnline(x.pid)?"":" off"}"></span><span class="cm-nm"><b>${esc(x.nm)}</b><small>${x.n|0} ${cmT("words")}${x.pid?"":" · "+cmT("last")+" "+cmAgo(x.t)}</small></span><span class="cm-r">${!x.pid?cmPendBtn(rk,x.nm):F[x.pid]?`<span class="cm-ok">${cmT("frOk")}</span>`:`<button type="button" class="btn cm-sm" data-cmact="fr" data-cmp="${esc(x.pid)}" data-cmn="${esc(x.nm)}">${esc(cmT("fr1"))}</button>`}</span></li>`).join("")||`<li class="tp-empty">—</li>`}</ul>`; }
 /* ===== ⚔️ Duel / ⚡ Challenge — shaxsga (2026-10-23, Otabek: «link jo'natmasin, online bo'lsa duel, offline bo'lsa challenge … kim nechta ishlagani bilinadi»; javob 10 s; Challenge 48 soat) ===== */
-const DU_WAIT=10, CH_EXP=48*3600e3;
+const DU_WAIT=20, CH_EXP=48*3600e3; /* 10 → 20 s (2026-10-23, Otabek) */
 function h2hGet(){ try{ return JSON.parse(store.get("h2h")||"{}")||{}; }catch(e){ return {}; } }
 function h2hAdd(pid,nm,r){ if(!pid) return; const H=h2hGet(), v=H[pid]||[0,0,0,""]; if(r>0) v[0]++; else if(r<0) v[1]++; else v[2]++; v[3]=nm||v[3]; H[pid]=v; try{ store.set("h2h",JSON.stringify(H)); }catch(e){} }
 function h2hTxt(pid){ const v=h2hGet()[pid]; if(!v||!(v[0]+v[1]+v[2])) return ""; return `⚔️ ${state.lang==="ru"?"Счёт":"O‘zaro hisob"}: <b>${v[0]} – ${v[1]}</b>${v[2]?` (${v[2]} ${state.lang==="ru"?"ничьи":"durang"})`:""}`; }
