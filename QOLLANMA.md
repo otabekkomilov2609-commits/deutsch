@@ -950,3 +950,9 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - 📝 Xatolarim endi Yodlash oynasida ham bor: daraja foizi ostida `.lrn-mx` tugma (`data-mxopen`).
 - 🎓 Prüfungstraining tepadan Lektionlar ro'yxatining oxiriga tushirildi (`ptH`).
 - Xato tuzatildi: Kunlik challenge kartasida ortiqcha oq quti bor edi — `.dc-t` klassi grammatika varag'idagi `.dc-t` bilan to'qnashardi → `.dc-tx`; ortiqcha `.review` o'rami olindi.
+
+## 2026-10-23 — Duel tezroq ulanadi (Otabek: «duel ulanishi cho'zilib ketyapti»)
+- Avval: taklif → bazaga yozish kutilardi (1–3 s) → «Qabul» → yana bazaga yozish (1–3 s) → ikkala telefonda sayt to'liq qayta yuklanardi (1,6 MB) → brokerga noldan ulanish → ikkalasi yana «Tayyor» bosardi.
+- Endi: `duGo(url,creator)` — duel sahifani qayta yuklamasdan ochiladi (`history.replaceState` + `duOpen`), mqtt kutubxonasi allaqachon yuklangan. Ikkalasi rozi bo'lgani uchun `DU.rd=true` — «Tayyor» o'zi; raqib ulanishi bilan 3-2-1.
+- `cmSend`: `du_ok`/`du_no` bazaga yozilmaydi (faqat jonli), `du` va `ch_res` bazaga fonda yoziladi — kutilmaydi.
+- Taklif orqali ochilgan duelda (`DU.inv`) «link yuboring» o'rniga «Raqib ulanmoqda…».

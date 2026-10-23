@@ -6576,13 +6576,18 @@ function duOpen(code,creator){
   const el=duEl(); el.hidden=false; document.body.style.overflow="hidden";
   if(!c||!(c.xs?c.xs.length:c.x?exData()[c.x]:lernData()[c.l])||chQuestions(c).length===0){ el.innerHTML=`<div class="lrn-bar"><button class="btn" data-du="close">✕</button><div class="lrn-tt"><b>${esc(dt("t"))}</b></div></div><div class="lrn-body"><div class="lrn-card"><p>${esc(dt("bad"))}</p></div></div>`; return; }
   let me=store.get("chme"); if(!me){ me=Math.random().toString(36).slice(2,10); store.set("chme",me); }
-  Object.assign(DU,{cx:0,c,code,id:chHash("du:"+code),me,P:{},ctl:{},joined:false,name:ACC.name||store.get("chname")||"",j:0,r:1,rd:false,s:0,lt:0,st:"lobby",phase:"lobby",h:{},creator:!!creator});
+  Object.assign(DU,{cx:0,c,code,id:chHash("du:"+code),me,P:{},ctl:{},joined:false,name:ACC.name||store.get("chname")||"",j:0,r:1,rd:false,s:0,lt:0,st:"lobby",phase:"lobby",h:{},creator:!!creator,inv:false});
   if(DU.mq) DU.mq.end();
   DU.mq=mqMulti(cl=>{ cl.subscribe(DU_NS+DU.id+"/#",{qos:1}); duPub(); duNet(); },(t,m)=>duMsg(t,m));
   if(creator||DU.name){ if(DU.name){ DU.joined=true; DU.j=Date.now(); } }
   clearInterval(DU.tk); DU.tk=setInterval(duTick,250); DU.openT=Date.now();
   duRender();
 }
+/* 2026-10-23: taklif/qabul orqali kelgan duel — sahifa qayta yuklanmaydi (mqtt kutubxonasi va ulanish tayyor), ikkalasi rozi bo'lgani uchun «Tayyor» o'zi bosiladi */
+function duGo(url,creator){ let code=""; try{ code=new URL(url,location.href).searchParams.get("du")||""; }catch(e){} if(!code){ location.href=url; return; }
+  try{ cmClose(); }catch(e){} const o=document.getElementById("hp-ov"); if(o) o.hidden=true; const t=document.getElementById("cm-toast"); if(t) t.classList.remove("show");
+  try{ history.replaceState(null,"",location.pathname+"?du="+code); }catch(e){}
+  duOpen(code,creator); DU.inv=true; if(DU.joined){ DU.rd=true; duPub(); duSync(); duRender(); } }
 function duNet(){ const e=document.getElementById("du-net"); if(e) e.textContent= DU.mq&&DU.mq.ok()? "🟢" : (Date.now()-DU.openT>10000? "🔴 "+ct("netBad") : "⏳"); }
 function duMsg(t,m){
   const parts=t.split("/"), kind=parts[parts.length-2], last=parts[parts.length-1];
@@ -6662,7 +6667,7 @@ function duRender(){
   if(DU.phase==="lobby"){
     const me=L.find(p=>p.id===DU.me);
     el.innerHTML=duHead()+`<div class="lrn-body"><div class="lrn-card">
-      ${!o?`<h3>${esc(DU.creator?dt("made"):dt("wait"))}</h3><p class="ch-big">${esc(dt("share"))}</p><div class="ch-link">${esc(url)}</div>
+      ${!o&&DU.inv?`<div class="lt-wait"><div class="lt-dots"><i></i><i></i><i></i></div><b>${state.lang==="ru"?"Соперник подключается…":"Raqib ulanmoqda…"}</b></div>`:!o?`<h3>${esc(DU.creator?dt("made"):dt("wait"))}</h3><p class="ch-big">${esc(dt("share"))}</p><div class="ch-link">${esc(url)}</div>
         <div class="ch-btns"><a class="btn primary" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(dt("tgText")(DU.name.split(" ")[0]||"⚔️",chTitle(DU.c)))}">${esc(dt("tg"))}</a><button type="button" class="btn" data-du="copy">${esc(dt("copy"))}</button></div>
         <div class="lt-wait"><div class="lt-dots"><i></i><i></i><i></i></div><b>${esc(dt("wait"))}</b></div>`
       :`<div class="du-vsbig"><b>${esc(DU.name)}${hpBadgeLv(hpMyLv(),true)}</b><span>${esc(dt("vs"))}</span><b>${esc(o.n)}${hpBadgeLv(o.hl,true)}</b></div><p class="ch-big du-c">⏱ 10→4 s · ❤️❤️❤️ · 🔥 ${esc(dt("round")(DU.r))}</p>
@@ -7931,7 +7936,9 @@ function cmLimitOk(pid,k){ const day=actDay(); let o={}; try{ o=JSON.parse(store
 async function cmSend(toPid,k,d){ if(!ACC.cur||!toPid) return false; if(!(k==="fr_ok"||k==="g_ok"||k==="du_ok"||k==="du_no"||k==="ch_res")&&!cmLimitOk(toPid,k)){ hpToastMsg(cmT("limit")); return false; }
   const me=await cmPid(); const m={i:Math.random().toString(36).slice(2,10),t:Date.now(),k,f:{p:me,n:rkName()},d:d||{}};
   try{ if(!CM.ibMq) await cmIbListen(); if(CM.ibMq) CM.ibMq.pub(IB_NS+toPid,JSON.stringify(m),false); }catch(e){}
-  try{ const f=await fsGet("ib/"+toPid); let L=[]; try{ L=f&&f.l?JSON.parse(f.l.stringValue||"[]"):[]; }catch(e){} L.push(m); L=L.slice(-30); await fsPut("ib/"+toPid,{l:fsS(JSON.stringify(L)),t:fsI(Date.now())}); }catch(e){}
+  /* 2026-10-23 (Otabek: «duel ulanishi cho'zilib ketyapti»): du_ok/du_no — faqat jonli (bazaga yozilmaydi); du — bazaga fonda, kutilmaydi */
+  const fsW=async()=>{ try{ const f=await fsGet("ib/"+toPid); let L=[]; try{ L=f&&f.l?JSON.parse(f.l.stringValue||"[]"):[]; }catch(e){} L.push(m); L=L.slice(-30); await fsPut("ib/"+toPid,{l:fsS(JSON.stringify(L)),t:fsI(Date.now())}); }catch(e){} };
+  if(k==="du"||k==="ch_res") fsW(); else if(k!=="du_ok"&&k!=="du_no") await fsW();
   try{ actEv("cm",k); }catch(e){} return true; }
 /* 2026-10-23 (Otabek): «challenge qabul qiluvchining darajasida bo'lsin» — har o'quvchi o'tgan Lektionlari (rg: «A1:1-12|A2:1-5») ochiq yozuvda (mr.rg) va onlayn xabarda; savollar o'shandan */
 function rgPack(R){ const out=[]; let a=null,b=null; R.forEach(n=>{ if(a===null){ a=b=n; } else if(n===b+1) b=n; else { out.push(a===b?a:a+"-"+b); a=b=n; } }); if(a!==null) out.push(a===b?a:a+"-"+b); return out.join(","); }
@@ -8037,7 +8044,7 @@ async function cmChFinishHook(){ try{ if(!ACC.cur) return; const code=new URLSea
 function cmChMsg(html){ setTimeout(()=>{ const b=document.querySelector("#chal .lrn-end")||document.querySelector(".lrn-end"); if(b){ const d=document.createElement("div"); d.className="ch-vs"; d.innerHTML=html; b.insertAdjacentElement("afterbegin",d); } else hpToastMsg(String(html).replace(/<[^>]+>/g," ")); },400); }
 /* kiruvchi xabarlar: du_ok / du_no / ch_res */
 function cmOnMsg(o){ try{ if(!o||!o.k) return; const ru=state.lang==="ru";
-  if((o.k==="du_ok"||o.k==="du_no")&&CM.duW&&o.d&&o.d.id===CM.duW.id){ if(o.k==="du_ok"){ const u=CM.duW.url; CM.duW=null; clearInterval(CM.duT); hpToastMsg(ru?"✅ Принял(а)! Начинаем…":"✅ Qabul qildi! Boshlaymiz…"); setTimeout(()=>{ location.href=u; },600); } else cmDuelFail(true); return; }
+  if((o.k==="du_ok"||o.k==="du_no")&&CM.duW&&o.d&&o.d.id===CM.duW.id){ if(o.k==="du_ok"){ const u=CM.duW.url; CM.duW=null; clearInterval(CM.duT); hpToastMsg(ru?"✅ Принял(а)! Начинаем…":"✅ Qabul qildi! Boshlaymiz…"); duGo(u,true); } else cmDuelFail(true); return; }
   if(o.k==="ch_res"&&o.d){ let done=[]; try{ done=JSON.parse(store.get("chresdone")||"[]")||[]; }catch(e){} if(done.includes(o.i)) return; done.push(o.i); try{ store.set("chresdone",JSON.stringify(done.slice(-80))); }catch(e){}
     const my=o.d.vs|0, th=o.d.s|0, r=my>th?1:my<th?-1:0, nm=o.f&&o.f.n||"?"; h2hAdd(o.f&&o.f.p,nm,r); if(r>0) try{ gpAdd("chw",o.d.id,30); }catch(e){}
     hpToastMsg(`⚡ ${nm} ${th} · ${ru?"вы":"siz"} ${my} — ${r>0?(ru?"вы победили! +30":"yutdingiz! +30"):r<0?(ru?"он(а) победил(а)":"u yutdi"):(ru?"ничья":"durang")}`); } }catch(e){} }
@@ -8067,10 +8074,10 @@ document.addEventListener("click",async e=>{
   const ac=e.target.closest("[data-cmact]"); if(ac){ e.stopPropagation(); cmAct(ac.dataset.cmact,ac.dataset.cmp,ac.dataset.cmn,ac); return; }
   const ib=e.target.closest("[data-cmib]"); if(ib){ const m=CM.ib.find(x=>x.i===ib.dataset.i); const t=document.getElementById("cm-toast"); if(t) t.classList.remove("show"); if(!m) return; cmSeenAdd(m.i); cmBadge(); const k=ib.dataset.cmib;
     if((k==="go"||k==="duok")&&m.d&&m.d.exp&&Date.now()>m.d.exp){ hpToastMsg(state.lang==="ru"?"⌛ Срок истёк":"⌛ Muddati o‘tib ketdi"); return; }
-    if(k==="duok"&&m.d&&m.d.url){ await cmSend(m.f.p,"du_ok",{id:m.d.id}); location.href=m.d.url; return; }
+    if(k==="duok"&&m.d&&m.d.url){ cmSend(m.f.p,"du_ok",{id:m.d.id}); duGo(m.d.url,false); return; }
     if(k==="duno"){ if(m.d&&m.d.id) cmSend(m.f.p,"du_no",{id:m.d.id}); return; }
     if(k==="go"&&m.k==="ch"&&m.d&&m.d.s!=null){ try{ const code=new URL(m.d.url).searchParams.get("ch")||""; localStorage.setItem(accK("chin:"+chKey(code)),JSON.stringify({pid:m.f.p,nm:m.f.n||"?",s:m.d.s|0,id:m.d.id})); }catch(er){} }
-    if(k==="go"&&m.d&&m.d.url){ location.href=m.d.url; return; }
+    if(k==="go"&&m.d&&m.d.url){ if(/[?&]du=/.test(m.d.url)) duGo(m.d.url,false); else location.href=m.d.url; return; }
     if(k==="frok"){ const F=cmFr(); F[m.f.p]=[m.f.n||"?",Date.now()]; cmFrSave(); await cmSend(m.f.p,"fr_ok",{}); hpToastMsg(cmT("frOk")); cmDrawSoon(); return; }
     if(k==="gok"){ await cmGroupJoin(m.d&&m.d.gid,m.d&&m.d.gnm); CM.tab="g"; cmDrawSoon(); return; }
     if(k==="hi"){ await cmSend(m.f.p,"hi",{}); hpToastMsg(cmT("sent")); return; }
