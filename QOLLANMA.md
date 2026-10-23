@@ -914,3 +914,11 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - **Tahlil → «Eng ko'p xato qilingan savollar» qatori bosiladi** *(2026-10-23, Otabek)*: o'sha savol mashq oynasida (faqat shu bitta savol) ustoz paneli ustida ochiladi; yopilganda Tahlilga qaytadi.
 - **Reytingda onlayn nuqta** *(2026-10-23, Otabek)*: har qatorda ism oldida 🟢 (oxirgi 3 daqiqada saytda) yoki kulrang nuqta; 3 ta reyting (so'zlar, haftalik, marafon) — `rkDot`; presence xabari kelganda va har 30 s qayta chiziladi.
 - **Onlayn emas = qizil nuqta** *(2026-10-23, Otabek)*: reyting va 👥 ro'yxatlarida yashil (onlayn) / qizil (yo'q). Barcha o'quvchilar bir marta s/ hujjatini qayta yozadi (rkv 4→5) — pid bazaga tushadi, ⏳ holatlari kamayadi. Onlayn qatorda daraja ikki marta chiqmaydi.
+
+### 🧠 «Esingizdami?» — shaxsiy takror *(2026-10-23, Otabek: A1, B1)*
+- Bosh sahifada «Mening darajam» kartasi ustida ko'k karta; muddati kelgan so'zlar soni qizil pulsatsiya belgisida (ko'pi bilan 10).
+- So'zlar — faqat o'quvchining o'zi Yodlash'da «o'rgandim» (holat 2) qilganlari; yozib bo'ladiganlari; takror so'zlar bitta. Muddat: 1 → 3 → 7 → 14 → 30 kun. Saqlash: `srs` (bulutga ham ketadi). Bugungacha o'rganilganlar «eski» — 7 kunga taqsimlanadi.
+- Javob: yozish (lrnJudge: deyarli to'g'ri — 1 marta qayta urinish) yoki 🎙 (brauzer tanishi, kcMatch, artikel qat'iy). «Esimda yo'q» — xato.
+- Xato: ertaga yana; 2 marta ketma-ket xato → so'z Yodlashga qaytadi (holat 2→1, o'rganilganlar soni kamayadi) — A1.
+- Yakun: X/N, unutilganlar ro'yxati 🔊 bilan, «Yana 10 ta»; hafta ballari +5 har to'g'ri javobga (`gpAdd("es")`); faollik jurnalida «🧠 Esingizdami?».
+- Hali so'z yodlamagan o'quvchida: «Birinchi 10 ta so'z» → Yodlash.
