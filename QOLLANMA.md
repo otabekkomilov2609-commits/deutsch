@@ -922,3 +922,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Xato: ertaga yana; 2 marta ketma-ket xato → so'z Yodlashga qaytadi (holat 2→1, o'rganilganlar soni kamayadi) — A1.
 - Yakun: X/N, unutilganlar ro'yxati 🔊 bilan, «Yana 10 ta»; hafta ballari +5 har to'g'ri javobga (`gpAdd("es")`); faollik jurnalida «🧠 Esingizdami?».
 - Hali so'z yodlamagan o'quvchida: «Birinchi 10 ta so'z» → Yodlash.
+- **Yodlash oynasi qayta tuzildi** *(2026-10-23, Otabek)*: tepada «Tarjima tili» (O'zbekcha/Русский — `lrn:tl` eslab qolinadi) va «Daraja» (A1.1 … B1.2) tugmalari; «A2.1 · 40 / 456 so'z o'rganildi · 9%» qatori; Lektionlar — telefon kengligidagi pastma-past chiziqlar (yashil/sariq to'lish, o'ngda «0 / 46»), gorizontal surish yo'q; pastda yopishqoq «🧠 Boshlash → N ta so'z». Daraja almashganda shu yarimning birinchi tugallanmagan Lektioni belgilanadi.
