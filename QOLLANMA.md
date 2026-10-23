@@ -1074,3 +1074,8 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Har bir o'zgarish `dev` shoxiga commit + push qilinadi — sayt (main) o'zgarmaydi.
 - Otabek «chiqar» desa: `git checkout main && git merge --ff-only dev` (yoki merge) → push main → `git ls-remote origin main` bilan tekshirish; keyin `git checkout dev`.
 - Chiqarishda Otabekka bitta ro'yxat: shu safar nimalar o'zgardi.
+
+## 2026-10-23 — ⏱ Kuniga qancha vaqt ishlatishadi (Otabek: «tahlilga kuniga necha soat ishlatishini qo'sh»)
+- 🔬 Chuqur tahlil → 🌐 Sayt rivoji → «⏱ Kuniga qancha vaqt ishlatishadi» (`dzTimeHTML`): bir o'quvchi kuniga (o'rtacha + mediana), hamma birga kuniga, bugun jami, davr jami · har kuni jami soat va bir faol o'quvchi daqiqasi (ustunlar) · bir kunda qancha o'tirishadi (<5 daq … 2+ soat) · hafta kuni bo'yicha · eng ko'p vaqt ajratadiganlar.
+- Oddiy Tahlil KPI'lariga «⏱ kuniga (bir o'quvchi)» qo'shildi (faol daqiqa ÷ faol kunlar).
+- Faol vaqt = sahifa ochiq va oxirgi 90 s ichida harakat bo'lgan (ACT, 15 s qadam). `anSvgBars(...,noTxt)` — 14 kundan ko'p bo'lsa ustun ustidagi raqamlar yashiriladi.

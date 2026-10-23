@@ -8872,6 +8872,7 @@ function dzGrHTML(P){ const days=anDays(P), dset=new Set(days), {T,U}=dzSum(dset
   const RC=[["1","1 kun"],["3","3 kun"],["7","7 kun"],["14","14 kun"],["30","30 kun"]].map(([k,l])=>[l,T["esr:"+k+":1"]|0,(T["esr:"+k+":1"]|0)+(T["esr:"+k+":0"]|0)]).filter(r=>r[2]);
   return `<div class="dz-kpis">${dzKpi(dzF(wa),"Haftalik faol o‘quvchi",dlt(wa,wp),wa>=wp?"up":"dn")}${dzKpi(dzF(ww),"Bir haftada o‘rganilgan so‘z",dlt(ww,wwp),ww>=wwp?"up":"dn")}${dzKpi(ret==null?"—":Math.round(ret*100)+"%","7-kun qaytish (o‘tgan hafta → bu hafta)",dlt(ret,retP,"pp"),ret>=retP?"up":"dn")}${dzKpi(K==null||!gOk?"—":K.toFixed(2),"Virallik (K-faktor)",gOk?"":"mehmon hisoblagichi kerak")}</div>
     ${ins.length?`<div class="dz-c"><h4>⚠️ Avtomatik xulosalar va takliflar</h4>${dzIns(ins)}</div>`:""}
+    ${(()=>{ try{ return dzTimeHTML(days,act); }catch(e){ return ""; } })()}
     <div class="dz-c"><h4>Voronka: tashrifdan odatgacha <small>${P} kun · yangi qurilmalar</small></h4>${gOk?(()=>{ const F=[["🆕 Saytni ochdi","nd"],["Ro‘yxatdan o‘tdi","rg"],["1-javob / 1-so‘z","f1"],["10 so‘z o‘rgandi","w10"],["2-kuni qaytdi","r1"],["7-kuni qaytdi","r7"]].map(([l,f])=>[l,g(f)]); return F.map(([l,v],i)=>dzBar(l,v,F[0][1]||1,dzF(v)+(i?` <small>${F[i-1][1]?"−"+Math.max(0,Math.round((1-v/F[i-1][1])*100))+"%":""}</small>`:""))).join(""); })():dzEmpty(TP.gsErr?"⚠️ Mehmon hisoblagichlari o‘qilmadi — Firebase qoidalarida «gs» bo‘limini Publish qiling.":"Mehmon hisoblagichlari bugundan yig‘ila boshlaydi (Firebase qoidasi Publish qilingach).")}
       <p class="dz-note">Ismsiz, qurilma bo‘yicha bir martadan sanaladi. «Ro‘yxat» — shu qurilmada yangi akkaunt ochildi.</p></div>
     <div class="dz-two">
@@ -8904,6 +8905,24 @@ function dzGrHTML(P){ const days=anDays(P), dset=new Set(days), {T,U}=dzSum(dset
         ${ldT?`<h5>Sahifa yuklanishi</h5>${[["1","1 s gacha"],["3","1–3 s"],["6","3–6 s"],["9","6 s dan ko‘p"]].map(([k,l])=>dzBar(l,LD[k]|0,ldT,dzP(LD[k]|0,ldT),k==="9"||k==="6"?"x":"")).join("")}`:""}
         <p class="dz-note">⚠️ JS xatolari: ${jsE}${Object.keys(jeC).length?" — "+Object.entries(jeC).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([k,v])=>`«${esc(k)}» ×${v}`).join(" · "):""}</p>
         ${risk.length?`<h5>⏳ Ketish xavfi <small>faol edi, 3–9 kundan beri kirmagan</small></h5><p class="dz-note" style="margin-top:0">${risk.map(n=>esc(n)).join(" · ")}</p>`:""}</div></div>`; }
+/* ⏱ Kuniga qancha vaqt ishlatishadi (2026-10-23, Otabek: «tahlilga kuniga necha soat ishlatishini qo'sh») — faol vaqt: sahifa ochiq va oxirgi 90 s ichida bosilgan/yozilgan */
+function dzTimeHTML(days,act){ const T={}, N={}, SD=[], stu=[]; days.forEach(d=>{ T[d]=0; N[d]=0; });
+  act.forEach(m=>{ let tot=0, ad=0; for(const [day,o] of m.d){ if(!(day in T)) continue; T[day]+=o.s; if(o.s>=60){ N[day]++; SD.push(o.s); ad++; tot+=o.s; } } if(ad) stu.push({nm:m.nm||"?",ad,tot,avg:tot/ad}); });
+  const sum=Object.values(T).reduce((a,b)=>a+b,0); if(!sum) return `<div class="dz-c"><h4>⏱ Kuniga qancha vaqt ishlatishadi</h4>${dzEmpty("Hali ma’lumot yo‘q.")}</div>`;
+  const hm=s=>{ const m=Math.round(s/60); return m>=60?Math.floor(m/60)+" soat "+(m%60?m%60+" daq":""):m+" daq"; };
+  const avgStu=SD.length?SD.reduce((a,b)=>a+b,0)/SD.length:0, med=SD.length?SD.slice().sort((a,b)=>a-b)[Math.floor(SD.length/2)]:0, today=T[days[days.length-1]]||0, actDays=days.filter(d=>T[d]>0).length||1;
+  const hrs=days.map(d=>Math.round(T[d]/360)/10), per=days.map(d=>N[d]?Math.round(T[d]/N[d]/60):0);
+  const B=[["< 5 daq",0,300],["5–15 daq",300,900],["15–30 daq",900,1800],["30–60 daq",1800,3600],["1–2 soat",3600,7200],["2+ soat",7200,1e9]].map(([l,a,b])=>[l,SD.filter(x=>x>=a&&x<b).length]), bm=Math.max(1,...B.map(x=>x[1]));
+  const DN=["Ya","Du","Se","Ch","Pa","Ju","Sh"], WD=[0,0,0,0,0,0,0], WC=[0,0,0,0,0,0,0]; days.forEach(d=>{ const w=new Date(d+"T12:00:00").getDay(); WD[w]+=T[d]; WC[w]++; }); const wavg=[1,2,3,4,5,6,0].map(w=>[DN[w],WC[w]?WD[w]/WC[w]:0]), wm=Math.max(1,...wavg.map(x=>x[1]));
+  const top=stu.sort((a,b)=>b.avg-a.avg).slice(0,12);
+  return `<div class="dz-c"><h4>⏱ Kuniga qancha vaqt ishlatishadi <small>${days.length} kun · faol vaqt (sahifa ochiq va o‘quvchi harakat qilyapti)</small></h4>
+    <div class="dz-kpis">${dzKpi(hm(avgStu),"Bir o‘quvchi kuniga (o‘rtacha)","mediana: "+hm(med))}${dzKpi(hm(sum/actDays),"Hamma o‘quvchilar birga, kuniga")}${dzKpi(hm(today),"Bugun jami")}${dzKpi(hm(sum),"Davr bo‘yicha jami")}</div>
+    <div class="dz-two" style="margin-top:12px"><div><h5>Har kuni jami (soat)</h5>${anSvgBars(hrs,days.map(k=>k.slice(5)),"var(--blue)",70,days.length>14)}<div class="an-xl"><span>${days[0].slice(5)}</span><span>${days[days.length-1].slice(5)}</span></div>
+      <h5>Bir faol o‘quvchi, daqiqa</h5>${anSvgBars(per,days.map(k=>k.slice(5)),"var(--green)",70,days.length>14)}</div>
+      <div><h5>Bir kunda qancha o‘tirishadi</h5>${B.map(([l,n])=>dzBar(l,n,bm,dzP(n,SD.length),l==="< 5 daq"?"x":"")).join("")}
+      <h5>Hafta kuni bo‘yicha (jami, o‘rtacha)</h5>${wavg.map(([l,v])=>dzBar(l,v,wm,hm(v))).join("")}</div></div>
+    ${top.length?`<h5>Eng ko‘p vaqt ajratadiganlar</h5><table class="dz-t sm"><tr><th>O‘quvchi</th><th class="n">Kuniga</th><th class="n">Faol kun</th><th class="n">Jami</th></tr>${top.map(r=>`<tr><td>${esc(String(r.nm).slice(0,40))}</td><td class="n">${hm(r.avg)}</td><td class="n">${r.ad}</td><td class="n">${hm(r.tot)}</td></tr>`).join("")}</table>`:""}
+    <p class="dz-note">Faol kun — kamida 1 daqiqa ishlagan kun. Saytda ochiq turib, 90 soniyadan ko‘p hech narsa bosilmasa, vaqt sanalmaydi.</p></div>`; }
 const DZ_SH={brag:"🏆 Maqtanish rasmi",bragdl:"⬇️ Rasm saqlandi",bragopen:"🏆 Rasm ochildi",ref:"📣 Do‘st linki","link-y":"📤 Yodlash linki","link-x":"📤 Mashq linki","link-l":"📤 Lektion linki","link-d":"📤 Konspekt linki","link-r":"📤 Reyting linki",du:"⚔️ Duel linki",kc:"🃏 Karteikarten natijasi",lt:"🎯 Live test natijasi",kg:"🎮 Sinf o‘yini natijasi",dl:"⬇️ Natija saqlandi"};
 function dzSrcN(s){ return {ref:"📣 Do‘st linki / QR",brag:"🏆 Maqtanish rasmi",du:"⚔️ Duel / Challenge linki",lnk:"📤 Ichki link (Lektion, mashq…)",ig:"📷 Instagram",tg:"✈️ Telegram",web:"🌐 Qidiruv (Google…)",dir:"🔗 To‘g‘ridan"}[s]||s; }
 
@@ -8935,7 +8954,7 @@ document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ const el=document
 async function anGrowthLoad(){ if(!CLOUD_ON||TP.anGL) return; TP.anGL=1; try{ let tok="", n=0; const T=[];
   do{ const r=await fetch(FS_BASE+"n?pageSize=300&mask.fieldPaths=t"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok) break; const j=await r.json(); (j.documents||[]).forEach(d=>{ const t=+(((d.fields||{}).t||{}).integerValue||0); if(t) T.push(t); }); tok=j.nextPageToken||""; }while(tok&&++n<30);
   TP.anReg=T.sort((a,b)=>a-b); let R=0; try{ const r=await fetch(FS_BASE+"ref?pageSize=300&mask.fieldPaths=t",{cache:"no-store"}); if(r.ok){ const j=await r.json(); R=(j.documents||[]).length; } }catch(e){} TP.anRef=R; }catch(e){} TP.anGL=0; if(TP.tab==="an") tpStDrawSoon(); }
-function anSvgBars(vals,labels,color,h){ h=h||70; const mx=Math.max(1,...vals), w=vals.length, bw=100/w; return `<svg class="an-svg" viewBox="0 0 100 ${h+14}" preserveAspectRatio="none">${vals.map((v,i)=>`<rect x="${(i*bw+bw*.15).toFixed(2)}" y="${(h-v/mx*h).toFixed(2)}" width="${(bw*.7).toFixed(2)}" height="${(v/mx*h).toFixed(2)}" rx="1" fill="${color}"><title>${labels[i]}: ${v}</title></rect>`).join("")}${vals.map((v,i)=>v?`<text x="${(i*bw+bw/2).toFixed(2)}" y="${(h-v/mx*h-2).toFixed(1)}" font-size="5" text-anchor="middle" fill="currentColor">${v}</text>`:"").join("")}</svg>`; }
+function anSvgBars(vals,labels,color,h,noTxt){ h=h||70; const mx=Math.max(1,...vals), w=vals.length, bw=100/w; return `<svg class="an-svg" viewBox="0 0 100 ${h+14}" preserveAspectRatio="none">${vals.map((v,i)=>`<rect x="${(i*bw+bw*.15).toFixed(2)}" y="${(h-v/mx*h).toFixed(2)}" width="${(bw*.7).toFixed(2)}" height="${(v/mx*h).toFixed(2)}" rx="1" fill="${color}"><title>${labels[i]}: ${v}</title></rect>`).join("")}${noTxt?"":vals.map((v,i)=>v?`<text x="${(i*bw+bw/2).toFixed(2)}" y="${(h-v/mx*h-2).toFixed(1)}" font-size="5" text-anchor="middle" fill="currentColor">${v}</text>`:"").join("")}</svg>`; }
 function anSvgLine(vals,color,h){ h=h||60; const mx=Math.max(1,...vals), n=vals.length; const pts=vals.map((v,i)=>`${(i/(n-1||1)*100).toFixed(2)},${(h-v/mx*h+2).toFixed(2)}`); return `<svg class="an-svg" viewBox="0 0 100 ${h+4}" preserveAspectRatio="none"><polyline points="${pts.join(" ")}" fill="none" stroke="${color}" stroke-width="1.6" vector-effect="non-scaling-stroke"/><polygon points="0,${h+2} ${pts.join(" ")} 100,${h+2}" fill="${color}" opacity=".12"/></svg>`; }
 /* 📅 Kunlik challenge tahlili: o'quvchi summary'sidagi dc (45 kun) yoki eski yozuvlardagi l (dc) */
 function anDcRows(all){ const R=[]; all.forEach(([id,d])=>{ const seen=new Set(); (d.dc||[]).forEach(x=>{ R.push({nm:d.nm,day:x[0],lv:x[1],ok:x[2]|0,s:x[3]|0}); seen.add(x[0]+x[1]); });
@@ -9066,6 +9085,7 @@ function tpAn(){ const body=document.getElementById("tp-body"); if(!body) return
       <div class="an-k"><b>${all.filter(([,d])=>d.a&&d.a.app).length}<small> / ${all.length}</small></b><span>📲 ilova o‘rnatgan</span></div>
       <div class="an-k"><b>${mins>=120?Math.round(mins/60)+" soat":mins+" daq"}</b><span>jami faol vaqt</span></div>
       <div class="an-k"><b>${act.length?Math.round(mins/act.length):0} daq</b><span>o‘rtacha (faol o‘quvchi)</span></div>
+      <div class="an-k"><b>${(()=>{ const sd=S.reduce((s,x)=>s+(x[2].days||0),0); const m=sd?Math.round(mins/sd):0; return m>=60?Math.floor(m/60)+" s "+(m%60)+" d":m+" daq"; })()}</b><span>⏱ kuniga (bir o‘quvchi)</span></div>
       <div class="an-k"><b>${ans}</b><span>yechilgan savol</span></div>
       <div class="an-k ok"><b>${pc(first,ans)}</b><span>1-urinishda to‘g‘ri</span></div>
       <div class="an-k warn"><b>${pc(sol,ans+sol)}</b><span>«Lösung» ko‘rilgan</span></div>
