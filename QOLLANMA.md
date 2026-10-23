@@ -1016,3 +1016,8 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - `cmPlusBtn(pid,rk,nm)` — odamcha+ belgisi (SVG). Bosilsa `cmPlusSheet`: 🤝 Do'st qilish · 🏫 Guruhga taklif (guruh yo'q bo'lsa — «Guruh yaratib taklif qilish» → `cmGroupName`). pid'siz (hali yangi versiyaga kirmagan) odamga — `cmPend` navbati. Bajarilganlari kulrang «✓ Do'stingiz / ✓ Guruhingizda»; ikkalasi ham bajarilgan bo'lsa qatorda yashil ✓.
 - Qayerda: 👥 Odamlar (Hammasi/Onlayn/Do'st/Guruh) — Duel/Challenge yonida; Guruhim a'zolari; 🏆 Reyting — So'zlar, Hafta ligasi, Marafon (`rkActs`: 🟢 onlayn → ⚔️ Duel, bosilsa darhol taklif; hammaga «odam +»; o'z qatorida, ustoz rejimida va Blitz'da yo'q).
 - Reyting qatori: `li:has(.rk-acts)` — 4 ustunli grid, tugmalar ustuni bir xil kenglikda (78 px; ≤380 px — 68 px), so'z soni tekis turadi.
+
+## 2026-10-23 — Unvonlar oynasi matni: «saytning rivojiga hissa» (Otabek: «yaxshiroq formulirovka kerak, saytni rivojiga yordam berishi … bu ishlar orqali saytga yordam bergan bo'lishi aytilmayapti»)
+- Sarlavha: «Unvonlar — saytning rivojiga hissa qo'shing» (ru: «Звания — помогите сайту развиваться»).
+- Kirish: «Streber.uz hammaga bepul va siz kabi o'quvchilar bilan o'sadi. Do'stingizni olib kelsangiz, natijangizni ulashsangiz yoki xato topsangiz — saytning rivojiga hissa qo'shgan bo'lasiz. Har bir yordamingiz uchun ball beriladi, ballardan unvon yig'iladi…».
+- «Qanday ball olinadi» → «Saytga qanday yordam berasiz — va necha ball»; `hpHowHTML` ikki guruhda: 📣 Saytni tanishtiring — uni ko'proq odam bilsin (link/QR +1, ro'yxat +2, 100 so'z +6, u ilova +4, challenge +2, ulashish +1) · 🛠 Saytni yaxshilang (xato +1, ilova +2, ustoz rahmati +5).
