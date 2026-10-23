@@ -997,3 +997,9 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Qo'llandi: ⚔️ Duel, ⚡ Challenge (guruh va shaxsiy) — `chPool`, `chTitle`; 🎯 Live test — `ltPool`, `ltTitle`. Sinf o'yini (kg) — ustoz o'zi yozgan savollar, tegilmadi. Kunlik challenge allaqachon o'z tilida.
 - Duel maqtanish rasmida «Raundlar X : Y» endi har doim (1-raunddan keyin ham).
 - Tuzatish: daraja nomida (Neuling) «g» pasti kesilardi — `.pg-lv` line-height 1 → 1.25 (overflow:hidden tufayli).
+
+## 2026-10-23 — Yodlash: ichki link (📤) + «Verben mit Präpositionen» (Otabek: «saytdan ichki link jo'natish imkoniyati bormi? … reflexive verbenni jo'natmoqchi, shuningdek Verben mit Präpositionen'ni qo'sh»)
+- 📤 — Yodlash ro'yxati oynasining tepasida (sozlash ekranida; Xatolarim va Blitz'da yo'q). `lrnShareLink`: telefonda ulashish oynasi, kompyuterda nusxa. Link: `https://www.streber.uz/?y=<ro'yxat id>&ref=<do'st kodi>`.
+- `?y=` ochilganda — o'sha ro'yxat Yodlash'da ochiladi, qabul qiluvchining tilida (`lrnTwinId`: uz↔ru). Har qanday ro'yxat (Reflexive Verben, Verben mit Perfekt, Wortschatz…).
+- Yangi ro'yxat «Verben mit Präpositionen» (uz + ru): Momente A2 L17 Bildlexikon'dagi 18 ta birikma (sich kümmern um … sich treffen mit) — kelishik (+ Akk./+ Dat.), tarjima, o'zimiz yozgan misol gaplar (kitobniki emas), har biriga 3 ta xato predlog varianti (ikkinchi to'g'ri javob bo'lib qolmasligi tekshirildi: masalan «sich freuen auf» uchun «über» variant emas). `kind:"perfekt"` (umumiy so'z hisobiga qo'shilmaydi); yangi maydonlar `ask` (savol yozuvi: «To'g'ri predlogni tanlang» / «Fe'lni predlogi bilan yozing», `lrnAskTx`) va `hint`.
+- Yodlash'dagi tugmalar qatori: 📗 Verben mit Perfekt · 🔁 Reflexive Verben · 🔗 Verben mit Präpositionen.
