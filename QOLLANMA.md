@@ -1031,3 +1031,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Yodlash'dagi «Tarjima tili: O'zbekcha / Русский» tanlovi olib tashlandi; `lrn:tl` endi ishlatilmaydi (progGo, lrnGoLv — `state.lang`).
 - `lrnOpen` har qanday ro'yxatni sayt tilidagi jufti bilan ochadi (`lrnTwinAny`: -u-↔-r-). Progress yo'qolmaydi: `lrnMergeTo` o'rganilganlar (asosiy, `:mu`, `:kk`) ni nemischa so'z + Lektion bo'yicha yangi tilga qo'shadi (A1'da uz/ru tartibi har xil; A2/B1'da `alias` bilan allaqachon umumiy). Sinov: A1 uz'da 4 so'z → sayt ru → ruscha ro'yxatda o'sha 4 so'z.
 - Yodlash ochiq turganda sayt tili almashsa (sozlash ekrani) — juft ro'yxatga o'tadi.
+- 🆕 tugmasi tepadan olib tashlandi (`wnBtn` → show=false); yangiliklar 👤 menyusidagi «Saytdagi yangiliklar» orqali ochiladi (Otabek, shu kuni).

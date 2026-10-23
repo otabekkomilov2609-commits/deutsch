@@ -7514,7 +7514,7 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-wn]"); if
 setTimeout(()=>{ try{ wnAuto(); }catch(e){} },500);
 /* 🆕 tugmasi tepada (2026-10-23, Otabek: «new tugmasi chi»): yangiliklar chiqqanidan 10 kun ko'rinadi; ochilmagan bo'lsa qizil nuqta */
 var WN_T=Date.UTC(2026,9,23);
-function wnBtn(){ try{ const th=document.getElementById("thm-btn"); if(!th||IN_ARTIFACT||window.BLITZ) return; let b=document.getElementById("wn-btn"); const show=Date.now()-WN_T<10*864e5;
+function wnBtn(){ try{ const th=document.getElementById("thm-btn"); if(!th||IN_ARTIFACT||window.BLITZ) return; let b=document.getElementById("wn-btn"); const show=false; /* 2026-10-23 (Otabek): 🆕 tugmasi olib tashlandi — yangiliklar 👤 menyusida */
   if(!show){ if(b) b.remove(); return; } if(!b){ b=document.createElement("button"); b.type="button"; b.id="wn-btn"; b.className="thm-btn wn-btn"; b.setAttribute("aria-label","🆕"); th.insertAdjacentElement("beforebegin",b); }
   const seen=+(localStorage.getItem("wn:v")||0)>=WN_V; b.innerHTML=`🆕${seen?"":`<i class="wn-dot"></i>`}`; b.title=state.lang==="ru"?"Что нового":"Yangiliklar"; }catch(e){} }
 document.addEventListener("click",e=>{ if(e.target.closest("#wn-btn")){ const o=document.getElementById("hp-ov"); if(o) o.hidden=true; wnOpen(); setTimeout(wnBtn,50); } });
