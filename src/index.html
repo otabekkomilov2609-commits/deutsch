@@ -7516,7 +7516,7 @@ function presAct(){
 function presPub(){ if(!ON.mq) return; let c=null; try{ c=progCount().n; }catch(e){}
   ON.mq.pub(ON_NS+ON.pid, JSON.stringify({n:ACC.name?rkName():"Mehmon",r:!!ACC.cur,w:ON.w,c,t:Date.now(),p:(typeof CM!=="undefined"&&CM.pid)||"",lv:(TABS[state.tab]||{}).lbl||"",hl:(typeof hpMyLv==="function"?hpMyLv():0)}), true); ON.t=Date.now(); }
 function presTick(){ if(!ON.mq) return; const w=presAct(); if(w!==ON.w||Date.now()-ON.t>110000){ ON.w=w; presPub(); } }
-function presStart(){ if(IN_ARTIFACT||tchOk()||ON.mq) return;
+function presStart(){ if(IN_ARTIFACT||ON.mq) return;
   try{ ON.pid=localStorage.getItem("onpid"); if(!ON.pid){ ON.pid=Math.random().toString(36).slice(2,10); localStorage.setItem("onpid",ON.pid); } }catch(e){ ON.pid=Math.random().toString(36).slice(2,10); }
   ON.w=presAct(); try{ if(typeof cmPid==="function"&&ACC.cur) cmPid().then(()=>{ if(ON.mq) presPub(); }); }catch(e){} ON.mq=mqMulti(()=>presPub(),null,()=>({will:{topic:ON_NS+ON.pid,payload:"",qos:1,retain:true}}));
   setInterval(presTick,3000);
@@ -7634,7 +7634,7 @@ setTimeout(()=>{ try{ stSync(); }catch(e){} },5000);
    u:<acc>:fr — o'rtoqlar {pid:[ism,t]}. */
 const CM={pid:"",on:{},onMq:null,ib:[],seen:null,g:null,gid:"",fr:null,tab:"on",sub:"all",ibMq:null,ibT:0,q:"",rkT:0,busy:false};
 const IB_NS="streber/ib/v1/";
-function cmOn(){ return !IN_ARTIFACT&&!window.BLITZ&&!tchOk(); }
+function cmOn(){ return !IN_ARTIFACT&&!window.BLITZ; } /* 2026-10-23: ustoz rejimida ham ko‘rinadi (Otabek: «online kimligi ko‘rinmayapti») */
 async function cmPid(){ if(!ACC.cur) return ""; if(CM.pid) return CM.pid; CM.pid=(await cloudSha("streber.uz/pub/v1:"+ACC.cur)).slice(0,16); return CM.pid; }
 function cmGid(){ if(!ACC.cur) return ""; return String(store.get("grp")||"").slice(0,12); }
 function cmNw(n){ if(!ACC.cur) return 0; let b=null; try{ b=JSON.parse(store.get("nwb")||"null"); }catch(e){} const w=gpWeek(); if(!b||b.w!==w){ b={w,b:n|0}; try{ localStorage.setItem(accK("nwb"),JSON.stringify(b)); }catch(e){} } return Math.max(0,(n|0)-(b.b|0)); }
