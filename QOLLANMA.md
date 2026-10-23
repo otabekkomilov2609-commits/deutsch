@@ -1148,3 +1148,8 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 
 ## 2026-10-24 · Kunlik challenge kartasida 🥇
 - `dcLead/dcLeadLoad` — bosh sahifa kartasi bugungi 1-o'rinni ko'rsatadi: «🥇 Ism — 9/10 · ⚡87 · 5 kishi o'ynadi». MQTT'dan 4,5 s o'qiladi, sessionStorage'da 5 daqiqa — Firebase sarflanmaydi.
+
+## 2026-10-24 · 🔁 Esingizdami: mikrofon Karteikarten'dagidek
+- Eski «🎙 Сказать / Слушаю…» (brauzer SpeechRecognition) o'rniga `kcMicRow()` — Telegram uslubi: bosib turib gapirish, Azure tekshiradi, chapga surib bekor qilish.
+- `kcItem()/kcEsOn()` — mikrofon qaysi oynada: Esingizdami ochiq bo'lsa ES.q[ES.k], aks holda Karteikarten. `kcDone` Esingizdami uchun: to'g'ri → `esGrade(true)`; birinchi xato → «Eshitdim: … — yana urinib ko'ring»; ikkinchisi → `esGrade(false)`; eshitilmasa → «yana ayting yoki yozing».
+- Azure ham, brauzer tanishi ham bo'lmasa — mikrofon qatori chiqmaydi, yozib javob beriladi.

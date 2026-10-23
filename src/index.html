@@ -3323,7 +3323,8 @@ function esAsk(){ const x=ES.q[ES.k], ru=state.lang==="ru", N=ES.q.length, sr=!!
     <div class="es-tr">${esc(x.tr)}</div>
     <input id="es-in" class="ch-in es-in" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" lang="de" placeholder="${ru?"Напишите по-немецки (с артиклем)":"Nemischa yozing (artikel bilan)"}">
     <div class="es-note" id="es-note"></div>
-    <div class="ch-btns es-btns"><button type="button" class="btn primary" data-es="chk">${ru?"Проверить":"Tekshirish"}</button>${sr?`<button type="button" class="btn" data-es="mic" aria-label="🎙">🎙 ${ru?"Сказать":"Aytish"}</button>`:""}<button type="button" class="lrn-link" data-es="skip">${ru?"Не помню":"Esimda yo‘q"}</button></div></div></div>`;
+    ${kcCan()?kcMicRow():""}
+    <div class="ch-btns es-btns"><button type="button" class="btn primary" data-es="chk">${ru?"Проверить":"Tekshirish"}</button>${sr&&!kcCan()?`<button type="button" class="btn" data-es="mic" aria-label="🎙">🎙 ${ru?"Сказать":"Aytish"}</button>`:""}<button type="button" class="lrn-link" data-es="skip">${ru?"Не помню":"Esimda yo‘q"}</button></div></div></div>`;
   setTimeout(()=>{ const i=document.getElementById("es-in"); if(i) i.focus(); },60); }
 function esGrade(ok,heard){ const x=ES.q[ES.k], o=esGet(), v=o.w[x.key]||[esDay(),0,0], td=esDay(), ru=state.lang==="ru"; let back=false; try{ const L0=ES_INT[v[1]|0]||1; ax("esr:"+L0+":"+(ok?1:0)); if(L0>=7) axW(x,!ok,"es"); }catch(e){}
   if(ok){ v[1]=Math.min(v[1]+1,ES_INT.length-1); v[0]=td+ES_INT[v[1]]; v[2]=0; o.w[x.key]=v; ES.ok++; }
@@ -5579,7 +5580,10 @@ function kcMatch(expect,heard){ const E=kcWords(expect), H=kcWords(heard); if(!E
   if(eA&&eA!==hA) return false;
   const core=E2.length?E2:E; let hit=0; core.forEach(w=>{ if(H.some(h=>spLike(h,w))) hit++; }); return hit>=Math.max(1,Math.ceil(core.length*0.75)); }
 function kcArt(expect,heard){ const art=new Set(["der","die","das"]), eA=kcWords(expect).find(w=>art.has(w)), hA=kcWords(heard).find(w=>art.has(w)); return eA&&eA!==hA?eA:""; }
-async function kcStart(){ if(KC.on||KC.busy) return; const x=LR.cards[0]; if(!x) return; const uz=state.lang!=="ru";
+/* 2026-10-24 (Otabek: «Esingizdami'dagi eshitishni boshqa joylardagiday qil»): bitta mikrofon — Karteikarten va 🔁 Esingizdami */
+function kcEsOn(){ try{ return typeof ES!=="undefined"&&ES.phase==="ask"&&!esEl().hidden&&!!document.querySelector("#es #kc-tg"); }catch(e){ return false; } }
+function kcItem(){ return kcEsOn()?ES.q[ES.k]:LR.cards[0]; }
+async function kcStart(){ if(KC.on||KC.busy) return; const x=kcItem(); if(!x) return; const uz=state.lang!=="ru"; KC.es=kcEsOn();
   try{ wkStop(); speechSynthesis.cancel(); }catch(e){}
   let st; try{ st=KC.st&&KC.st.getAudioTracks().some(t=>t.readyState==="live")?KC.st:await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true}}); KC.st=st; }
   catch(e){ try{ actEv("wzs","err"); }catch(er){} const el=document.getElementById("kc-st"); if(el) el.textContent=uz?"🎙 Mikrofonga ruxsat berilmadi":"🎙 Нет доступа к микрофону"; return; }
@@ -5595,14 +5599,20 @@ async function kcStart(){ if(KC.on||KC.busy) return; const x=LR.cards[0]; if(!x)
   clearTimeout(KC.tm); KC.tm=setTimeout(kcStop,8000); /* xavfsizlik chegarasi */ }
 function kcStop(cancel){ if(!KC.on) return; KC.on=false; clearTimeout(KC.tm); clearTimeout(KC.lt); KC.cancel=!!cancel; try{ if(KC.src){ KC.src.disconnect(); KC.src=null; } }catch(e){}
   const bar=document.getElementById("kc-tg"); if(bar) bar.classList.remove("on");
-  if(cancel){ try{ if(KC.sr) KC.sr.abort(); }catch(e){} try{ if(KC.rec&&KC.rec.state==="recording"){ KC.rec.onstop=null; KC.rec.stop(); } }catch(e){} KC.rec=null; KC.sr=null; const lb=document.getElementById("kc-lb"); if(lb) lb.innerHTML=`<span class="tg-x">${state.lang!=="ru"?"Bekor qilindi":"Отменено"}</span>`; setTimeout(()=>{ if(LR.mode==="cards"&&!KC.on&&!KC.busy) lrnCard(); },1200); return; }
+  if(cancel){ try{ if(KC.sr) KC.sr.abort(); }catch(e){} try{ if(KC.rec&&KC.rec.state==="recording"){ KC.rec.onstop=null; KC.rec.stop(); } }catch(e){} KC.rec=null; KC.sr=null; const lb=document.getElementById("kc-lb"); if(lb) lb.innerHTML=`<span class="tg-x">${state.lang!=="ru"?"Bekor qilindi":"Отменено"}</span>`; setTimeout(()=>{ if(KC.es){ if(!KC.on&&!KC.busy) kcEsLabel(); return; } if(LR.mode==="cards"&&!KC.on&&!KC.busy) lrnCard(); },1200); return; }
   KC.busy=true; try{ if(KC.sr) KC.sr.stop(); }catch(e){} try{ if(KC.rec&&KC.rec.state==="recording") KC.rec.stop(); }catch(e){} const lb=document.getElementById("kc-lb"); if(lb) lb.textContent="⏳ "+(state.lang!=="ru"?"Tekshiryapman…":"Проверяю…"); }
 async function kcDone(x){ const dur=(Date.now()-KC.t0)/1000; let heard="", sc=null, az=null;
   try{ const blob=new Blob(KC.chunks,{type:(KC.chunks[0]&&KC.chunks[0].type)||"audio/webm"});
     if(dur>=0.5&&azOn()&&AZ.ok){ try{ const [SDK,T,wav]=await Promise.all([azSdk(),azToken(),spWav(blob)]); az=await Promise.race([spAzOnce(SDK,T,wav,kcRef(x),true),new Promise(r=>setTimeout(()=>r(null),9000))]); }catch(e){ az=null; } }
     else await new Promise(r=>setTimeout(r,800));
     heard=(az&&az.txt)||KC.txt||""; if(az&&(az.acc||az.pron)) sc=az.pron||az.acc; }catch(e){}
-  KC.busy=false; KC.rec=null; KC.sr=null; if(LR.mode!=="cards"||LR.cards[0]!==x) return;
+  KC.busy=false; KC.rec=null; KC.sr=null;
+  if(KC.es){ if(!kcEsOn()||ES.q[ES.k]!==x) return; const quiet=KC.an&&KC.lv&&KC.lv.length>3&&Math.max(...KC.lv)<.06, unclear=dur<0.5||!heard||quiet||(az&&az.conf!=null&&az.conf<.35), ok=!unclear&&kcMatch(kcRef(x),heard)&&(sc==null||sc>=45), ru=state.lang==="ru", n=document.getElementById("es-note");
+    try{ actEv("wzs",unclear?"unclear":ok?"ok":"no"); }catch(e){} kcEsLabel();
+    if(unclear){ if(n){ n.textContent=ru?"🎙 Плохо слышно — скажите ещё раз или напишите":"🎙 Yaxshi eshitmadim — yana ayting yoki yozing"; n.className="es-note warn"; } return; }
+    if(!ok&&ES.tries<1){ ES.tries++; if(n){ n.textContent=(ru?"🎙 Услышал: ":"🎙 Eshitdim: ")+heard+(ru?" — попробуйте ещё раз":" — yana bir urinib ko‘ring"); n.className="es-note warn"; } return; }
+    esGrade(ok,heard); return; }
+  if(LR.mode!=="cards"||LR.cards[0]!==x) return;
   const quiet=KC.an&&KC.lv&&KC.lv.length>3&&Math.max(...KC.lv)<.06; const unclear=dur<0.5||!heard||quiet||(az&&az.conf!=null&&az.conf<.35);
   const ok=!unclear&&kcMatch(kcRef(x),heard)&&(sc==null||sc>=45), art=!unclear&&!ok?kcArt(kcRef(x),heard):""; try{ actEv("wzs",unclear?"unclear":ok?"ok":"no"); }catch(e){}
   KC.res={i:x.i,heard,sc,ok,unclear,art}; if(!unclear){ KC.log=KC.log||[]; const j=KC.log.findIndex(r=>r.i===x.i); const rec={i:x.i,x,heard,sc,ok,art}; if(j>=0) KC.log[j]=rec; else KC.log.push(rec); } try{ actEv("kc",ok?"ok":unclear?"unclear":"bad"); }catch(e){}
@@ -5611,6 +5621,7 @@ async function kcDone(x){ const dur=(Date.now()-KC.t0)/1000; let heard="", sc=nu
      xato aytsa: karta AYLANMAYDI — o'quvchi yana aytadi yoki o'zi bosib aylantiradi (2026-10-24, Otabek) */
   if(ok) LR.flip=true; lrnCard(); if(ok){ setTimeout(()=>{ try{ if(LR.mode==="cards"&&LR.cards[0]===x){ lrnSay(x.say||x.de); kcSpkPulse(); } }catch(e){} },350); } }
 /* 🎙 yakun: natijalar, takrorlash ro'yxati, ulashish (2026-10-23, Otabek) */
+function kcEsLabel(){ const lb=document.getElementById("kc-lb"), uz=state.lang!=="ru"; if(lb) lb.textContent=uz?"🎙 Nemischasini ayting — mikrofonni bosib turing":"🎙 Скажите по-немецки — держите микрофон"; }
 function kcEndHTML(){ const L=KC.log||[]; if(!L.length) return ""; const uz=state.lang!=="ru", ok=L.filter(r=>r.ok).length, bad=L.length-ok, art=L.filter(r=>r.art).length, S=L.filter(r=>r.sc!=null), avg=S.length?Math.round(S.reduce((a,r)=>a+r.sc,0)/S.length):null, min=Math.max(1,Math.round((Date.now()-(KC.t0s||Date.now()))/60000));
   return `<div class="kc-sum">${avg!=null?`<div class="kc-ring" style="--p:${avg}"><i>${avg}%</i></div><div class="kc-mu">🎯 ${uz?"o‘rtacha talaffuz":"среднее произношение"} · ${min} ${uz?"daq":"мин"}</div>`:`<div class="kc-mu">🎙 ${L.length} ${uz?"ta so‘z aytildi":"слов сказано"} · ${min} ${uz?"daq":"мин"}</div>`}
     <div class="kc-st3"><div><b>${ok}</b><span>✅ ${uz?"to‘g‘ri aytdi":"верно"}</span></div><div><b>${bad}</b><span>❌ ${uz?"xato":"ошибка"}</span></div><div><b>${art}</b><span>${uz?"artikel xato":"артикль"}</span></div></div>
