@@ -1032,3 +1032,8 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - `lrnOpen` har qanday ro'yxatni sayt tilidagi jufti bilan ochadi (`lrnTwinAny`: -u-↔-r-). Progress yo'qolmaydi: `lrnMergeTo` o'rganilganlar (asosiy, `:mu`, `:kk`) ni nemischa so'z + Lektion bo'yicha yangi tilga qo'shadi (A1'da uz/ru tartibi har xil; A2/B1'da `alias` bilan allaqachon umumiy). Sinov: A1 uz'da 4 so'z → sayt ru → ruscha ro'yxatda o'sha 4 so'z.
 - Yodlash ochiq turganda sayt tili almashsa (sozlash ekrani) — juft ro'yxatga o'tadi.
 - 🆕 tugmasi tepadan olib tashlandi (`wnBtn` → show=false); yangiliklar 👤 menyusidagi «Saytdagi yangiliklar» orqali ochiladi (Otabek, shu kuni).
+
+## 2026-10-23 — 🧠 Wortschatz: qaysi usuldan foydalanishadi (Otabek: «men bilmoqchi bo'lgan narsa — Wortschatz'ning qaysi usulidan o'quvchilar foydalanyapti; tahlilni shunga qarab qil»)
+- Yig'ish (o'quvchi telefonida, kunlik hisob `a.ed`, shifrlangan holda ustozga): `wz:<usul>` — lernen (lrnStartLearn), cards (lrnStartCards), es (esStart), mu (muStart), du (duOpen), ch (chOpen), dc (dcStart), mx (mxOpen), verb (Perfekt/Reflexive/Präp. ro'yxati ochilganda), open (Yodlash ochildi). `wzw:<usul>` — shu usulda o'rganilgan so'zlar (`lrnSave` da yangi «o'rganildi» holatlari soni).
+- Ustoz paneli → 📊 Tahlil → eng tepada «🧠 Wortschatz: qaysi usuldan foydalanishadi» (`anWzHTML`): usul · 👤 nechta o'quvchi ishlatgan (ustun) · necha marta · ulush % · o'rganilgan so'z; «Yodlash ochildi N marta · M o'quvchi ochib, hech qaysi usulni boshlamagan». Davr — 7/14/30/90 kun tugmalari.
+- 23.10 dan oldingi kunlar taxminiy: game:du/ch/dc, kc:start, jurnal (oxirgi 25 ish) «lern»/«es».
