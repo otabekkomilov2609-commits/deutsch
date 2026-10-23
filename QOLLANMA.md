@@ -982,3 +982,8 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Zinapoya va motivatsiya matni «📊 Mening natijalarim» oynasining tepasiga ko'chdi (`.myp-lad`).
 - Klasslar: `.pg-top/.pg-mid/.pg-nm/.pg-lv/.pg-nx/.pg-btns`; `.prog-badge`, `.prog-bar`, `data-rank`, `data-proggo` saqlangan.
 - Tuzatish (shu kuni): `#prog.prog{display:block}` `[hidden]` dan kuchli edi → so'z o'rganmagan o'quvchida bo'sh oq quti chiqardi. Endi `#prog.prog:not([hidden])`.
+
+## 2026-10-23 — 🏆 Maqtanish rasmi: Duel va Challenge yutilganda (Otabek: «duelni yutganda rasm chiqsin ulashish uchun, maqtanishga o'zgartir … hamma duel challenge'larda»)
+- `bragDraw(o)` — 1080×1350 rasm: «⚔️ DUEL»/«⚡ CHALLENGE», mavzu (Lektionlar «L13–L24» qisqartiriladi), 🏆, «Men yutdim!», hisob (men : raqib, ismlar), raundlar/o'rin, «Meni yengib ko'r 😏», sana · streber.uz, Otabek Komilov, do'st kodi + QR (`gcQR` — gcDraw'dan ajratildi). Duel — qizil-to'q sariq, Challenge — yashil.
+- Natija ekranida rasmning kichik ko'rinishi + «🏆 Maqtanish» (`bragHTML`/`bragFill`); bosilsa telefon ulashish oynasi (rasm + matn), kompyuterda — saqlash/nusxalash (`gssShare` endi `o.draw`/`o.file` qabul qiladi).
+- Qayerda: Duel g'alabasi (eski «✈️ Ulashish» o'rniga) · guruh Challenge'da 1-o'rin (kamida 2 kishi, `chBragUpd`) · shaxsiy Challenge — ikkinchi o'ynab yutsa natija ekranida, birinchi o'ynagan yutsa natija kelganda oyna (`ch_res` endi `lbl` ham yuboradi).
