@@ -3208,7 +3208,7 @@ function progRender(){
   el.hidden=false; esCardRender(); lgBannerRender();
 }
 function progGo(){
-  const D=lernData(), sfx=state.lang==="ru"?"-r-":"-u-"; { const T0=TABS[state.tab], a=T0&&(lrnAllId(T0.lvl,store.get("lrn:tl")||state.lang)||lrnAllId(T0.lvl,state.lang)); if(a){ lrnOpen(a); return; } }
+  const D=lernData(), sfx=state.lang==="ru"?"-r-":"-u-"; { const T0=TABS[state.tab], a=T0&&lrnAllId(T0.lvl,state.lang); if(a){ lrnOpen(a); return; } }
   let id=store.get("lern:last"); if(!id||!D[id]){ const ids=Object.keys(D);
     id=ids.find(k=>byId[k]&&byId[k].tab===state.tab&&k.includes(sfx)) || ids.find(k=>byId[k]&&byId[k].tab===state.tab) || ids.find(k=>k.includes(sfx)) || ids[0]; }
   if(id) lrnOpen(id);
@@ -3377,6 +3377,7 @@ function render(){
 /* events */
 const go = (tab, n) => { state.tab=tab; state.q=""; document.getElementById("q").value=""; store.set("tab2",tab); render(); const el=document.getElementById(`${TABS[tab].lvl}-L${n}`); if(el){ document.getElementById("later")?.setAttribute("open",""); el.scrollIntoView({behavior:"smooth"}); } };
 document.querySelector(".lang").addEventListener("click", e=>{const b=e.target.closest("button"); if(!b)return; state.lang=b.dataset.lang; store.set("lang",state.lang); render();});
+document.querySelector(".lang").addEventListener("click",()=>{ setTimeout(()=>{ try{ if(!lrnEl().hidden&&LR.id&&!LR.mode&&lrnTwinAny(LR.id)) lrnOpen(LR.id); }catch(e){} },0); }); /* tarjima tili = sayt tili (2026-10-23) */
 document.querySelector(".tabs").addEventListener("click", e=>{const b=e.target.closest("button"); if(!b)return; state.tab=b.dataset.tab; state.q=""; document.getElementById("q").value=""; store.set("tab2",state.tab); render(); window.scrollTo({top:0});});
 document.getElementById("chips").addEventListener("click", e=>{const b=e.target.closest("button"); if(!b)return; state.type=b.dataset.type; render();});
 let qt; document.getElementById("q").addEventListener("input", e=>{clearTimeout(qt); qt=setTimeout(()=>{state.q=e.target.value; render();},120);});
@@ -4781,7 +4782,16 @@ document.addEventListener("keydown",e=>{ const root=exEl(); if(!root||root.hidde
 
 function lrnShuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function lrnEl(){ return document.getElementById("lrn"); }
+/* 2026-10-23 (Otabek: «sayt qaysi tilda bo'lsa, tarjima ham shu tilda; tarjima tili tanlovi kerak emas»): har qanday ro'yxat sayt tilidagi jufti bilan ochiladi.
+   A1 va maxsus ro'yxatlarda uz/ru progressi alohida saqlanardi — o'tishda o'rganilganlar yangi tilga qo'shiladi (yo'qolmaydi) */
+function lrnTwinAny(id){ const want=state.lang==="ru"?"r":"u", m=/^([A-C]\d-[a-z0-9]+-)([ur])(-.*)$/.exec(String(id||"")); if(!m||m[2]===want) return null;
+  let t=m[1]+want+m[3]; t=want==="r"?t.replace("Deutsch-Usbekisch","Deutsch-Russisch"):t.replace("Deutsch-Russisch","Deutsch-Usbekisch"); return lernData()[t]?t:null; }
+function lrnMergeTo(from,to){ try{ if(lrnKey(from)===lrnKey(to)) return; const A=lernData()[from].it, B=lernData()[to].it, idx={};
+    B.forEach((r,i)=>{ const k=r[0]+"|"+r[3]; if(!(k in idx)) idx[k]=i; }); const map=i=>{ const r=A[i]; if(!r) return -1; const j=idx[r[0]+"|"+r[3]]; return j==null?-1:j; }; /* nemischa so'z + Lektion bo'yicha (A1'da uz/ru tartibi har xil) */
+    try{ const kb=new Set(lrnGetArr(to,":kk").map(Number)); let ch=false; lrnGetArr(from,":kk").forEach(i=>{ const j=map(+i); if(j>=0&&!kb.has(j)){ kb.add(j); ch=true; } }); if(ch) lrnPutArr(to,":kk",[...kb]); }catch(e){}
+    ["",":mu"].forEach(suf=>{ const a=lrnGetMap(from,suf), b=lrnGetMap(to,suf); let ch=false; for(const k in a){ const j=map(+k); if(j<0||typeof a[k]!=="number") continue; if(b[j]==null||a[k]>b[j]){ b[j]=a[k]; ch=true; } } if(ch) lrnPutMap(to,suf,b); }); }catch(e){} }
 function lrnOpen(id){
+  { const tw=lrnTwinAny(id); if(tw){ lrnMergeTo(id,tw); id=tw; } }
   const D=lernData()[id]; if(!D) return;
   LR.id=id; store.set("lern:last",id); LR.st=lrnLoad(id); LR.chk=false; LR.mode=null; LR.redem=false; LR.fromList=null; LR.one=null; LR.half=0;
   let saved=null; try{ saved=JSON.parse(store.get(lrnKey(id)+":sel")||"null"); }catch(e){}
@@ -4870,11 +4880,11 @@ function lrnPickHTML(D,les,halves){ const ru=state.lang==="ru", tl=D.lang==="r"?
   const lvs=[]; ["A1","A2","B1"].forEach(l=>{ if(lrnAllId(l,tl)) [1,2].forEach(k=>lvs.push([l,k])); });
   let a=0,d=0; D.it.forEach((r,i)=>{ if(!les.includes(r[0])||!r[4]||(r[6]&&!LR.redem)) return; a++; if(LR.st[i]===2) d++; });
   const cur=lv+(h?"."+h:"");
-  return `<div class="lrn-pk"><small>${ru?"Язык перевода":"Tarjima tili"}</small><div class="lrn-seg">${[["uz","O‘zbekcha"],["ru","Русский"]].map(([k,t])=>`<button type="button" data-lrtl="${k}" aria-pressed="${tl===k}">${t}</button>`).join("")}</div>
+  return `<div class="lrn-pk">
     <small>${ru?"Уровень":"Daraja"}</small><div class="lrn-seg">${lvs.map(([l,k])=>`<button type="button" data-lrlv="${l}|${k}" aria-pressed="${l===lv&&k===h}">${l}.${k}</button>`).join("")}</div>
     <div class="lrn-sum"><span>${cur} · <b>${d}</b> / ${a} ${ru?"слов выучено":"so‘z o‘rganildi"}</span><b>${a?Math.round(d/a*100):0}%</b></div>${mxGet().length?`<button type="button" class="lrn-mx" data-mxopen="1">📝 ${ru?`Мои ошибки · ${mxGet().length}`:`Xatolarim · ${mxGet().length} ta so‘z`} ›</button>`:""}
     <small>${ru?"Темы (уроки) — можно выбрать несколько":"Mavzu (Lektion) — bir nechtasini belgilash mumkin"}</small></div>`; }
-function lrnGoLv(lv,h,tl){ const id=lrnAllId(lv,tl); if(!id) return; try{ store.set("lrn:tl",tl); }catch(e){} const keepRed=LR.redem; lrnOpen(id); LR.redem=keepRed;
+function lrnGoLv(lv,h,tl){ tl=state.lang==="ru"?"ru":"uz"; /* 2026-10-23 (Otabek): tarjima tili = sayt tili */ const id=lrnAllId(lv,tl); if(!id) return; const keepRed=LR.redem; lrnOpen(id); LR.redem=keepRed;
   const D=lernData()[id], L=Object.keys(D.les).map(Number).sort((a,b)=>a-b), inH=L.filter(n=>h===2?n>12:n<=12);
   if(![...LR.sel].some(n=>inH.includes(n))){ const first=inH.find(n=>{ let a=0,d=0; D.it.forEach((r,i)=>{ if(r[0]===n&&r[4]&&!r[6]){ a++; if(LR.st[i]===2) d++; } }); return a&&d<a; })||inH[0]; LR.sel=new Set([first]); }
   LR.half=h; lrnSetup(); }

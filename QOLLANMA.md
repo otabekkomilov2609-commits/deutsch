@@ -1026,3 +1026,8 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - `shareHere(k,v,title)` — telefonda ulashish oynasi, kompyuterda nusxa; link `https://www.streber.uz/?<k>=<v>&ref=<do'st kodi>`.
 - Qayerda tugma: 🧠 Yodlash ro'yxati (📤, `?y=`) · ✍️ mashq oynasi sarlavhasi (📤, `?x=<mashq>|<bo'lim>` — bo'lim ichida bo'lsa aynan o'sha bo'lim) · 📋 Übersicht konspekti (📤, `?d=`) · 📘 Lektion kartasi ochilganda pastida «📤 Shu Lektion linkini yuborish» (`?l=A2|13` — kerakli daraja ochiladi, karta ochiq, o'sha joyga suriladi) · 🏆 Reyting sarlavhasi (📤, `?r=w|g|m` — So'zlar / Hafta ligasi / Marafon).
 - Ochilish: bitta umumiy blok (`y,x,d,l,r`), ochilgach parametr manzil qatoridan olinadi, `ref` qoladi (Marafon hisobi uchun). Sinov: 5 turining hammasi to'g'ri ochildi.
+
+## 2026-10-23 — Yodlash: tarjima tili = sayt tili (Otabek: «sayt qaysi tilda bo'lsa, perevod ham shu tilda bo'lsin, yazik perevoda kerak emas»)
+- Yodlash'dagi «Tarjima tili: O'zbekcha / Русский» tanlovi olib tashlandi; `lrn:tl` endi ishlatilmaydi (progGo, lrnGoLv — `state.lang`).
+- `lrnOpen` har qanday ro'yxatni sayt tilidagi jufti bilan ochadi (`lrnTwinAny`: -u-↔-r-). Progress yo'qolmaydi: `lrnMergeTo` o'rganilganlar (asosiy, `:mu`, `:kk`) ni nemischa so'z + Lektion bo'yicha yangi tilga qo'shadi (A1'da uz/ru tartibi har xil; A2/B1'da `alias` bilan allaqachon umumiy). Sinov: A1 uz'da 4 so'z → sayt ru → ruscha ro'yxatda o'sha 4 so'z.
+- Yodlash ochiq turganda sayt tili almashsa (sozlash ekrani) — juft ro'yxatga o'tadi.
