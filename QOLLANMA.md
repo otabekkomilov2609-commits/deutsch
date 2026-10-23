@@ -912,3 +912,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - **«Topshiriqlar» bloki olib tashlandi** *(2026-10-23, Otabek)* — `hwBlock` bo'sh qaytaradi (kod saqlangan, kerak bo'lsa qaytariladi).
 - **Do'stlar / Guruh → «qo'shish» bo'limida hamma ro'yxatdan o'tganlar ro'yxati** *(2026-10-23, Otabek)*: qidiruv bo'sh bo'lsa ham to'liq ro'yxat (onlayn → so'z soni bo'yicha, 200 tagacha); pid'siz (hali kirmagan) odamlarda «➕ ⏳» — so'rov kutib turadi; guruhda ular «⏳» (taklif u kirganda mumkin).
 - **Tahlil → «Eng ko'p xato qilingan savollar» qatori bosiladi** *(2026-10-23, Otabek)*: o'sha savol mashq oynasida (faqat shu bitta savol) ustoz paneli ustida ochiladi; yopilganda Tahlilga qaytadi.
+- **Reytingda onlayn nuqta** *(2026-10-23, Otabek)*: har qatorda ism oldida 🟢 (oxirgi 3 daqiqada saytda) yoki kulrang nuqta; 3 ta reyting (so'zlar, haftalik, marafon) — `rkDot`; presence xabari kelganda va har 30 s qayta chiziladi.
