@@ -1087,3 +1087,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Ustunni bosganda pastda o'sha kun: vaqt, o'quvchilar, so'zlar, javoblar, bir o'quvchiga vaqt. Pastda: davrning 2-yarmi 1-yarmiga nisbatan ▲/▼ %, jami va kuniga o'rtacha.
 - Manba: TP.stu a.dd (30 kun) + TP.dx dd (60 kun, chuqur tahlil Firebase qoidasi qo'yilgach).
 - 2026-10-23 (Otabek: «bu nma» — diagramma skrinshoti): vaqt «s» o'rniga «soat / daq» (y o'qi 1/2/3/4 soat kabi yumaloq qadamlar), kuzatuv boshlangan kundan oldingi kunlar kulrang chiziqli «ma'lumot yo'q» (0 deb ko'rsatilmaydi), 7 kunlik o'rtacha va ▲/▼ faqat ma'lumot bor kunlardan, izoh: «Ustun — o'sha kuni tanlangan o'quvchilarning faol vaqti yig'indisi».
+
+## 2026-10-23 — Tahlil ustunli diagrammalari aniq ko'rinadi (Otabek: «yaxshi ko'rinmayapti» — Ro'yxatdan o'tganlar skrinshoti)
+- `anSvgBars` endi SVG emas, HTML ustunlar (`.ab`): raqamlar cho'zilmaydi va eng balandi kesilmaydi, ustun ostida sana «17.10» ko'rinishida (ko'p kunda har 2/5-kun). Eski alohida sana qatorlari (`.an-xl`) shu diagrammalardan olib tashlandi.
+- «Jami o'quvchilar» sarlavhasida: boshidagi → oxirgi son (+o'sish), pastda sana · son.

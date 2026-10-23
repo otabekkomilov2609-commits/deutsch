@@ -1789,6 +1789,10 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .dc-ma{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .dc-x{grid-column:2;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));font-size:10px;color:var(--muted);font-weight:700;margin-top:4px}.dc-x span{text-align:center;white-space:nowrap;overflow:visible;display:flex;justify-content:center}
 .dc-sel{margin-top:10px;font-size:13.5px;background:var(--surface-2);border-radius:10px;padding:8px 10px;line-height:1.5}.dcc .up{color:var(--green)}.dcc .dn{color:#C62828}
+.ab{padding-right:10px;margin:6px 0 4px}.ab-p{position:relative;height:var(--h);display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));align-items:end;gap:3px;border-bottom:1.5px solid var(--line);padding-top:18px}
+.ab-c{position:relative;height:100%;display:flex;align-items:flex-end;justify-content:center}.ab-c i{display:block;width:100%;max-width:38px;border-radius:5px 5px 0 0;min-height:1px}
+.ab-c em{position:absolute;left:50%;transform:translateX(-50%);font-style:normal;font-size:12px;font-weight:800;color:var(--ink);white-space:nowrap;pointer-events:none}
+.ab-x{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:3px;font-size:11px;color:var(--muted);font-weight:700;margin-top:4px}.ab-x span{display:flex;justify-content:center;white-space:nowrap}
 .dz-t.sm th{white-space:normal}.dz-t td.t{min-width:170px}.dz-sub{display:block;color:var(--muted);font-weight:700;font-size:12px;margin-top:2px}
 .dz-mx{min-width:0}.dz-mx th,.dz-mx td{padding:6px 4px}.dz-mx td.z{color:var(--muted)}
 .dz-pl{display:grid;gap:6px}.dz-pli{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px}.dz-pli b{font-variant-numeric:tabular-nums}.dz-pli em{grid-column:1/3;font-style:normal;color:var(--muted);font-size:12.5px;font-weight:700}
@@ -8926,7 +8930,7 @@ function dzTimeHTML(days,act){ const T={}, N={}, SD=[], stu=[]; days.forEach(d=>
   const top=stu.sort((a,b)=>b.avg-a.avg).slice(0,12);
   return `<div class="dz-c"><h4>⏱ Kuniga qancha vaqt ishlatishadi <small>${days.length} kun · faol vaqt (sahifa ochiq va o‘quvchi harakat qilyapti)</small></h4>
     <div class="dz-kpis">${dzKpi(hm(avgStu),"Bir o‘quvchi kuniga (o‘rtacha)","mediana: "+hm(med))}${dzKpi(hm(sum/actDays),"Hamma o‘quvchilar birga, kuniga")}${dzKpi(hm(today),"Bugun jami")}${dzKpi(hm(sum),"Davr bo‘yicha jami")}</div>
-    <div class="dz-two" style="margin-top:12px"><div><h5>Har kuni jami (soat)</h5>${anSvgBars(hrs,days.map(k=>k.slice(5)),"var(--blue)",70,days.length>14)}<div class="an-xl"><span>${days[0].slice(5)}</span><span>${days[days.length-1].slice(5)}</span></div>
+    <div class="dz-two" style="margin-top:12px"><div><h5>Har kuni jami (soat)</h5>${anSvgBars(hrs,days.map(k=>k.slice(5)),"var(--blue)",70,days.length>14)}
       <h5>Bir faol o‘quvchi, daqiqa</h5>${anSvgBars(per,days.map(k=>k.slice(5)),"var(--green)",70,days.length>14)}</div>
       <div><h5>Bir kunda qancha o‘tirishadi</h5>${B.map(([l,n])=>dzBar(l,n,bm,dzP(n,SD.length),l==="< 5 daq"?"x":"")).join("")}
       <h5>Hafta kuni bo‘yicha (jami, o‘rtacha)</h5>${wavg.map(([l,v])=>dzBar(l,v,wm,hm(v))).join("")}</div></div>
@@ -8996,7 +9000,11 @@ function dcRedraw(){ const el=document.querySelector(".dcc"); if(!el) return; co
 async function anGrowthLoad(){ if(!CLOUD_ON||TP.anGL) return; TP.anGL=1; try{ let tok="", n=0; const T=[];
   do{ const r=await fetch(FS_BASE+"n?pageSize=300&mask.fieldPaths=t"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok) break; const j=await r.json(); (j.documents||[]).forEach(d=>{ const t=+(((d.fields||{}).t||{}).integerValue||0); if(t) T.push(t); }); tok=j.nextPageToken||""; }while(tok&&++n<30);
   TP.anReg=T.sort((a,b)=>a-b); let R=0; try{ const r=await fetch(FS_BASE+"ref?pageSize=300&mask.fieldPaths=t",{cache:"no-store"}); if(r.ok){ const j=await r.json(); R=(j.documents||[]).length; } }catch(e){} TP.anRef=R; }catch(e){} TP.anGL=0; if(TP.tab==="an") tpStDrawSoon(); }
-function anSvgBars(vals,labels,color,h,noTxt){ h=h||70; const mx=Math.max(1,...vals), w=vals.length, bw=100/w; return `<svg class="an-svg" viewBox="0 0 100 ${h+14}" preserveAspectRatio="none">${vals.map((v,i)=>`<rect x="${(i*bw+bw*.15).toFixed(2)}" y="${(h-v/mx*h).toFixed(2)}" width="${(bw*.7).toFixed(2)}" height="${(v/mx*h).toFixed(2)}" rx="1" fill="${color}"><title>${labels[i]}: ${v}</title></rect>`).join("")}${noTxt?"":vals.map((v,i)=>v?`<text x="${(i*bw+bw/2).toFixed(2)}" y="${(h-v/mx*h-2).toFixed(1)}" font-size="5" text-anchor="middle" fill="currentColor">${v}</text>`:"").join("")}</svg>`; }
+/* 2026-10-23 (Otabek: «yaxshi ko'rinmayapti») — SVG cho'zilgan matn o'rniga HTML ustunlar: aniq raqamlar, ostida sana */
+function anSvgBars(vals,labels,color,h,noTxt){ h=h||70; const n=vals.length, mx=Math.max(1,...vals), step=n<=8?1:n<=16?2:n<=31?5:Math.ceil(n/6), show=!noTxt&&n<=16;
+  const lb=x=>{ const m=/^(\d\d)-(\d\d)$/.exec(String(x)); return m?m[2]+"."+m[1]:String(x); };
+  return `<div class="ab" style="--n:${n};--h:${Math.max(90,h*1.6)}px"><div class="ab-p">${vals.map((v,i)=>`<div class="ab-c" title="${esc(lb(labels[i]))}: ${v}"><i style="height:${(v/mx*100).toFixed(1)}%;background:${color}"></i>${show&&v?`<em style="bottom:calc(${(v/mx*100).toFixed(1)}% + 2px)">${String(v).replace(".",",")}</em>`:""}</div>`).join("")}</div>
+    <div class="ab-x">${vals.map((_,i)=>`<span>${(n-1-i)%step===0?esc(lb(labels[i])):""}</span>`).join("")}</div></div>`; }
 function anSvgLine(vals,color,h){ h=h||60; const mx=Math.max(1,...vals), n=vals.length; const pts=vals.map((v,i)=>`${(i/(n-1||1)*100).toFixed(2)},${(h-v/mx*h+2).toFixed(2)}`); return `<svg class="an-svg" viewBox="0 0 100 ${h+4}" preserveAspectRatio="none"><polyline points="${pts.join(" ")}" fill="none" stroke="${color}" stroke-width="1.6" vector-effect="non-scaling-stroke"/><polygon points="0,${h+2} ${pts.join(" ")} 100,${h+2}" fill="${color}" opacity=".12"/></svg>`; }
 /* 📅 Kunlik challenge tahlili: o'quvchi summary'sidagi dc (45 kun) yoki eski yozuvlardagi l (dc) */
 function anDcRows(all){ const R=[]; all.forEach(([id,d])=>{ const seen=new Set(); (d.dc||[]).forEach(x=>{ R.push({nm:d.nm,day:x[0],lv:x[1],ok:x[2]|0,s:x[3]|0}); seen.add(x[0]+x[1]); });
@@ -9011,7 +9019,7 @@ function anDcHTML(all,P,days){ const R=anDcRows(all).filter(r=>r.day>=days[0]); 
   const perfect=R.filter(r=>r.ok>=10).length, active=all.length?Math.round(ppl.size/all.length*100):0;
   return `<div class="an-c"><h4>📅 Kunlik challenge · ${P} kun <small>${R.length} ta o‘yin</small></h4>
     <div class="an-kpis"><div class="an-k ok"><b>${ppl.size}<small> / ${all.length}</small></b><span>o‘ynaganlar (${active}%)</span></div><div class="an-k"><b>${td.length}</b><span>bugun o‘ynadi</span></div><div class="an-k"><b>${avg}<small> / 10</small></b><span>o‘rtacha natija</span></div><div class="an-k"><b>${perfect}</b><span>🏆 10/10</span></div><div class="an-k"><b>${Object.entries(lv).sort().map(([k,v])=>k+" "+v).join(" · ")||"—"}</b><span>daraja bo‘yicha</span></div></div>
-    <div class="an-two"><div><h5>Har kuni o‘ynaganlar</h5>${anSvgBars(by,days.map(k=>k.slice(5)),"#D97706")}<div class="an-xl"><span>${days[0].slice(5)}</span><span>${days[days.length-1].slice(5)}</span></div></div>
+    <div class="an-two"><div><h5>Har kuni o‘ynaganlar</h5>${anSvgBars(by,days.map(k=>k.slice(5)),"#D97706")}</div>
       <div><h5>🔥 Eng muntazam</h5>${top.map(([nm,o])=>`<div class="an-bar"><span>${esc(nm)}</span><i style="--p:${Math.round(o.days.size/days.length*100)}%"></i><em>${o.days.size} kun · ${Math.round(o.ok/o.n*10)/10}</em></div>`).join("")}</div></div>
     ${td.length?`<p class="ch-net">Bugun: ${td.map(r=>`${esc(r.nm)} ${r.ok}/10`).join(" · ")}</p>`:""}</div>`; }
 /* ===== 🧠 Wortschatz: qaysi usuldan foydalanishadi (2026-10-23, Otabek: «men bilmoqchi bo'lgan narsa — Wortschatz'ning qaysi usulidan o'quvchilar foydalanyapti; tahlilni shunga qarab qil») =====
@@ -9073,8 +9081,8 @@ function anGrowthHTML(all,P){ const days=anDays(P), reg=TP.anReg||[], now=Date.n
       <div class="an-k ${ret!=null&&ret<50?"warn":"ok"}"><b>${ret==null?"—":ret+"%"}</b><span>qaytganlar (o‘tgan hafta → bu hafta)</span></div>
       <div class="an-k"><b>${app}<small> / ${all.length}</small></b><span>📲 ilova · taklif ${ask?Math.round(yes/ask*100)+"% «Ha»":"—"} · o‘rnatdi ${inst}</span></div>
       <div class="an-k"><b>${lv.A1} · ${lv.A2} · ${lv.B1}</b><span>A1 · A2 · B1</span></div></div>
-    <div class="an-two"><div><h5>Ro‘yxatdan o‘tganlar · ${wk?"hafta":"kun"} bo‘yicha</h5>${anSvgBars(cnt,bl,"#1F4FA0")}<div class="an-xl">${bl.filter((_,i)=>wk||i%Math.ceil(P/7)===0).map(x=>`<span>${x}</span>`).join("")}</div></div>
-      <div><h5>Jami o‘quvchilar</h5>${anSvgLine(cumv,"#1E8E4E")}<div class="an-xl"><span>${bl[0]}</span><span>${bl[bl.length-1]}</span></div></div></div>
+    <div class="an-two"><div><h5>Ro‘yxatdan o‘tganlar · ${wk?"hafta":"kun"} bo‘yicha</h5>${anSvgBars(cnt,bl,"var(--blue)")}</div>
+      <div><h5>Jami o‘quvchilar <small>${cumv[0]|0} → <b>${cumv[cumv.length-1]|0}</b> (+${(cumv[cumv.length-1]|0)-(cumv[0]|0)})</small></h5>${anSvgLine(cumv,"#1E8E4E")}<div class="an-xl">${(()=>{ const lb=x=>{ const m=/^(\d\d)-(\d\d)$/.exec(String(x)); return m?m[2]+"."+m[1]:String(x); }; return `<span>${lb(bl[0])} · ${cumv[0]|0}</span><span>${lb(bl[bl.length-1])} · ${cumv[cumv.length-1]|0}</span>`; })()}</div></div></div>
     <div class="an-two"><div><h5>🎮 O‘yinlar · ${P} kun <small>${gtot} ta</small></h5>${games.map(([n,v])=>`<div class="an-bar"><span>${n}</span><i style="--p:${gtot?Math.round(v/gtot*100):0}%"></i><em>${v}</em></div>`).join("")}<div class="an-bar"><span>Challenge yaratildi</span><i style="--p:0%"></i><em>${chc}</em></div></div>
       <div><h5>📣 Tarqalish · ${P} kun</h5><div class="an-bar"><span>📤 natija ulashildi</span><i style="--p:${Math.min(100,sh*5)}%"></i><em>${sh}</em></div><div class="an-bar"><span>👎 xato xabari</span><i style="--p:${Math.min(100,fb*5)}%"></i><em>${fb}</em></div><div class="an-bar"><span>👥 do‘st linki orqali kelgan</span><i style="--p:${Math.min(100,(TP.anRef|0)*5)}%"></i><em>${TP.anRef|0}</em></div><div class="an-bar"><span>🏅 hissa qo‘shganlar</span><i style="--p:${all.length?Math.round(hp/all.length*100):0}%"></i><em>${hp}</em></div></div></div>
     ${anDcHTML(all,P,days)}
