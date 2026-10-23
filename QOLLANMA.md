@@ -1191,3 +1191,11 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Marafon eslatmasi: ✕ — burchakda kichik doira (matnga joy), «📣 Marafon · 1 000 000 so'm» bir qatorda.
 - Tungi rejim **avtomatik** (telefon sozlamasi) bo'lganda ham bugungi kartalar to'q rangda: `@media (prefers-color-scheme:dark)` ichida `.mr-ndb, .mr-join, .kq, .cm-wait, .brag-mr`… (avval faqat 🌙 tugmasi bilan ishlardi).
 - Tahlil: tor ekranda (≤420px) jadvallar o'zi suriladi — «Sayt rivoji»dagi manbalar jadvali 375px da sahifani yonga surardi.
+
+## 2026-10-24 03:15 · Mustaqil tekshiruv (alohida yordamchi) va qo'lda sinovdan keyin tuzatishlar
+- **Esingizdami mikrofoni** yashirin Karteikarten kartasidagi bir xil id'larni yangilab qo'yardi (yozuv boshlanganini ko'rsatmasdi): `kcG(id)` — faol oynadagi (#es yoki #lrn) elementni oladi.
+- **Guruh ro'yxati**: `cmGroupSave` endi faqat bazadagi ro'yxat + o'zim (eski nusxadagi chiqib ketgan a'zo qaytmaydi). Chiqqanda `grpL:<gid>` belgisi — ikkinchi telefonda ham o'z-o'zidan qayta qo'shilmaydi; qayta qo'shilsa belgi o'chadi.
+- **Kun qahramoni**: so'zlar surati (d[kun][7]) Lernen tugaganda va ilova yopilganda ham olinadi (`actWordsSnap`) — oxirgi 5 daqiqada o'rganilgan so'zlar ertangi kunga o'tib ketmaydi.
+- **Kunlik challenge yetakchisi**: natija xotirada ham saqlanadi — sessionStorage ishlamasa cheksiz qayta ulanmaydi.
+- **Lernen «Tanishuv»** kartasida Karteikarten maslahati («Weiß ich / Keine Ahnung») chiqardi → o'z maslahati `COACH.in`.
+- **Juftlash kartochkalari**: so'zlar bo'g'inga bo'linmaydi («Fernse-her» emas).
