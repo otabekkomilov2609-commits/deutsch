@@ -1021,3 +1021,8 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Sarlavha: «Unvonlar — saytning rivojiga hissa qo'shing» (ru: «Звания — помогите сайту развиваться»).
 - Kirish: «Streber.uz hammaga bepul va siz kabi o'quvchilar bilan o'sadi. Do'stingizni olib kelsangiz, natijangizni ulashsangiz yoki xato topsangiz — saytning rivojiga hissa qo'shgan bo'lasiz. Har bir yordamingiz uchun ball beriladi, ballardan unvon yig'iladi…».
 - «Qanday ball olinadi» → «Saytga qanday yordam berasiz — va necha ball»; `hpHowHTML` ikki guruhda: 📣 Saytni tanishtiring — uni ko'proq odam bilsin (link/QR +1, ro'yxat +2, 100 so'z +6, u ilova +4, challenge +2, ulashish +1) · 🛠 Saytni yaxshilang (xato +1, ilova +2, ustoz rahmati +5).
+
+## 2026-10-23 — 📤 Ichki link hamma joyda (Otabek: «saytni qayerida bo'lsam link jo'natganimda o'sha yerni linki borishi kk emasmi?»)
+- `shareHere(k,v,title)` — telefonda ulashish oynasi, kompyuterda nusxa; link `https://www.streber.uz/?<k>=<v>&ref=<do'st kodi>`.
+- Qayerda tugma: 🧠 Yodlash ro'yxati (📤, `?y=`) · ✍️ mashq oynasi sarlavhasi (📤, `?x=<mashq>|<bo'lim>` — bo'lim ichida bo'lsa aynan o'sha bo'lim) · 📋 Übersicht konspekti (📤, `?d=`) · 📘 Lektion kartasi ochilganda pastida «📤 Shu Lektion linkini yuborish» (`?l=A2|13` — kerakli daraja ochiladi, karta ochiq, o'sha joyga suriladi) · 🏆 Reyting sarlavhasi (📤, `?r=w|g|m` — So'zlar / Hafta ligasi / Marafon).
+- Ochilish: bitta umumiy blok (`y,x,d,l,r`), ochilgach parametr manzil qatoridan olinadi, `ref` qoladi (Marafon hisobi uchun). Sinov: 5 turining hammasi to'g'ri ochildi.
