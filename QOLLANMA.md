@@ -1218,3 +1218,11 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 2026-10-24 03:35 · 🎯 Yangi o'quvchiga «Birinchi 10 ta so'z — 5 daqiqa»
 - `st10Maybe()`: ro'yxatdan o'tgan, 10 tadan kam so'z bilgan o'quvchiga bir marta (`start10`) pastki oyna: «Boshlash →» → shu darajaning umumiy Wortschatz ro'yxati, Lernen, maqsad 10 (`lrnGoalRun(10)`). Daraja tanlangandan keyin va sahifa ochilganda (3,5 s) tekshiriladi; boshqa oyna ochiq bo'lsa chiqmaydi.
 - Mashq turlari katalogi: `MASHQ_TURLARI.md` (A1/A2/B1, nashriyotlar tahlilidan).
+
+## 🎬 Video-dars — A2 grammatikasiga Easy German videolari (2026-10-24)
+- Otabek: «easy german videolarini qo'sh, A2 ga». Manba bitta: Easy German (Berlin) — sekin nemischa, nemischa subtitr. Mahalliy markaz kanallari olinmaydi (xalqaro bo'lish uchun).
+- A2 ning 24 ta grammatika mashqidan 21 tasida, mashq tepasidagi qatorda «🎬 Video» tugmasi chiqadi. Bosilsa pastdan oyna ochiladi: video sayt ichida (youtube-nocookie), kerakli daqiqadan boshlanadi, nemischa subtitr yoqilgan. Bir nechta video bo'lsa — tepada tugmachalar.
+- Video yo'q mashqlar: L4 deshalb, L14 va L15 Adjektivdeklination — Easy German'da mos video topilmadi, tugma chiqmaydi.
+- Konjunktiv II (L6, L11) — 22 daqiqalik videoning kerakli bo'limlaridan boshlanadi (10:03, 13:24, 5:14, 7:49, 12:29).
+- Oyna yopilsa video to'xtaydi (iframe olib tashlanadi). Tahlilga actEv("vid", mashq#raqam) yoziladi; tugma bosishlar «🖱 Tugmalar»da ham ko'rinadi.
+- Kod: vidMap() (mashq id → [videoId, boshlanish soniyasi, nom]), vidOf, vidSheet. Yangi video qo'shish — vidMap'ga bitta qator.
