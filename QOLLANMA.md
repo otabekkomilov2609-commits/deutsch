@@ -1091,3 +1091,6 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 2026-10-23 — Tahlil ustunli diagrammalari aniq ko'rinadi (Otabek: «yaxshi ko'rinmayapti» — Ro'yxatdan o'tganlar skrinshoti)
 - `anSvgBars` endi SVG emas, HTML ustunlar (`.ab`): raqamlar cho'zilmaydi va eng balandi kesilmaydi, ustun ostida sana «17.10» ko'rinishida (ko'p kunda har 2/5-kun). Eski alohida sana qatorlari (`.an-xl`) shu diagrammalardan olib tashlandi.
 - «Jami o'quvchilar» sarlavhasida: boshidagi → oxirgi son (+o'sish), pastda sana · son.
+
+## 2026-10-23 — Marafon kartasi: yetakchi ismi → marafon reytingi (Otabek: «marafon kartada ismni ustiga bosganda marafon reytingi chiqsin»)
+- «🔥 Yetakchi: <ism> — ball ›» endi tugma (`data-mr="rank"`): Reyting oynasi «📣 Marafon» bo'limida ochiladi. G'oliblar kartasidagi ismlar ham xuddi shunday.
