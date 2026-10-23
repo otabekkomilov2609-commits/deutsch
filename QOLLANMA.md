@@ -1066,3 +1066,11 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 2026-10-23 — «Verben mit Präpositionen» ro'yxati (Otabek: «ikki tomonida ham javob bor»)
 - So'zlar ro'yxatida o'ng ustunda fe'l takrorlanmaydi — «sich kümmern … (+ Akk.) — …» o'rniga faqat ma'nosi (`/…[^—]*— /` bo'lsa « — » dan keyingi qism). Test va kartalarda savol o'zgarmadi.
 - Lektion raqami 0 bo'lgan (fe'l) ro'yxatlarda sarlavhada «0» va «Lektion 0» o'rniga 📗, der/das/die belgisi ko'rsatilmaydi.
+
+## 2026-10-23 — 👎 doira ichida (Otabek: «dislikechani tumaloqqa ol»)
+- `.fb-btn`: 40×40 doira, oq/tungi fon, ingichka chegara, yengil soya; chetdan 6px ichkarida (o'ng tomonda ham).
+
+## ⚙️ Ish tartibi: o'zgarishlar yig'ilib, bitta qilib chiqariladi (2026-10-23, Otabek: «hamma kichkina narsa saytga chiqavermasin, bitta qilib chiqarsak»)
+- Har bir o'zgarish `dev` shoxiga commit + push qilinadi — sayt (main) o'zgarmaydi.
+- Otabek «chiqar» desa: `git checkout main && git merge --ff-only dev` (yoki merge) → push main → `git ls-remote origin main` bilan tekshirish; keyin `git checkout dev`.
+- Chiqarishda Otabekka bitta ro'yxat: shu safar nimalar o'zgardi.
