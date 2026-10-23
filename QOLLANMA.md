@@ -1157,3 +1157,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 2026-10-24 01:55 · TEZKOR TUZATISH: sayt yuklanmay qoldi
 - Sabab: `const DCL={}` render() dan keyin e'lon qilingan edi → `dcCardHTML → dcLeadLoad` «Cannot access 'DCL' before initialization» → bosh sahifa chizilmadi.
 - Tuzatish: `dclMap()` (window.__DCL). Saboq: render() vaqtida chaqiriladigan funksiyalarda modul darajasidagi `const/let` ishlatmaslik; chiqarishdan oldin har doim «toza yuklash» testi (pageerror) o'tkazish.
+
+## 2026-10-24 · Kunlik challenge kartasi: 1-o'rin urg'u bilan · guruh qidiruvida ⏳
+- `dcCardHTML`: 1-o'rin bor bo'lsa — sarlavha, «🥇 [Ism] [⚡ 87]» yorliqlari, «📚 O'tgan mavzularingizdan» (karta 3 qator, avvalgidan kichik). Hech kim o'ynamagan bo'lsa — eski ko'rinish.
+- Guruh «Odam qo'shish» ro'yxati: taklif yuborilgach «⏳ taklif qilindi» (`cmSent`), «Hammasini taklif qilish» ham yozib qo'yadi va qayta yubormaydi.
