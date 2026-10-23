@@ -967,3 +967,11 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Tuzatish o'ngdan chapga: jonli tekshiruv har harfdan keyin kursorni keyingi (chapdagi) xatoga o'tkazadi; chapdagi harflar siljimaydi.
 - Sinov («die Wohnung»): `die Wonnunk|` → (k o'chdi) `die Wonnun|` → (g) `die Won|nung` → (n o'chdi) `die Wo|nung` → (h) ✓.
 - Blok ichidagi qoida o'zgarmadi: kursor oxirgi xato harfdan keyin; faqat tushib qolgan harf bo'lsa — o'sha joyda.
+
+## 2026-10-23 — 🔗 Ikki akkauntni bittaga (Otabek: «shu bolada ikkita akkaunt bor ekan, bitta qilib yuborish kk» — Юрсуналиев Абдуғани → Юрсуналиев Абдугани)
+- Ustoz paneli → O'quvchilar → o'quvchi kartasi → «🔗 Boshqa akkauntga ko'chirish» → qoladigan akkaunt tanlanadi (o'xshash ismlar tepada, qidiruv bor) → tasdiqlash oynasi (❌ Yopiladi / ✅ Qoladi, farq qiladigan harf sariq) → «Ko'chirish».
+- PIN kerak emas: panelda ikkala akkauntning kaliti (`c`) bor. Funksiyalar: `tpMvPick`, `tpMvAsk`, `tpMvGo`.
+- `p/<qoladigan>` ← ikkala natija `cloudMergeV` bilan (so'zlar yo'qolmaydi, sonlar — kattasi). `p/<yopiladigan>` ← `{__mv, __mvk}`. `s/<yopiladigan>` ← `nm:""`, `mr:{"mv":1}` → reytingda ham, ustoz ro'yxatida ham ko'rinmaydi.
+- O'quvchi telefonida (`cloudPull` → `accMoved`): eski akkaunt yopiladi, «Kirish» oynasi qoladigan ism bilan to'ldirilib ochiladi + izoh. Kirganda (`accMvMerge`) shu telefondagi eski akkaunt natijasi ham qo'shiladi.
+- Sinov (soxta baza): A {1,2} + B {3,4,5}+Y → A {1..5}+Y; telefondagi B'ning qo'shimcha so'zi ham A ga o'tdi.
+- E'tibor: o'quvchi telefonida sayt o'sha paytda ochiq bo'lsa, sahifani yangilashi kerak.
