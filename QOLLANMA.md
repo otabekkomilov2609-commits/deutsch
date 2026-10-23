@@ -990,3 +990,9 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Toza variant (shu kuni, Otabek: «isqirt» → mock-up → «toza variantini qil»): rasmda konfetti yo'q, bitta «🏆 G'alaba!», tepada bitta qator «⚔️ DUEL · A2 · L13–L24», katta hisob (faqat birinchi ismlar), pastda oq tasma: QR · streber.uz · kod · Otabek Komilov.
 - Natija ekranida rasm ko'rinmaydi — faqat oltin «🏆 Maqtanish» tugmasi (`bragHTML`); bosilsa pastdan oyna: rasm + «📤 Ulashish» + «Yopish» (`bragOpen`). Duel g'alabasida katta 🏆 olib tashlandi, konfetti ~2 s (`ltConfetti(130)`).
 - Ulashish matni: «Laylo'ni yengdim — 7:4 · … Meni yengib ko'r 😏 streber.uz/?ref=KOD» — havola do'st kodi bilan (Marafon hisobiga). Telegram matnni rasm izohi qilib yuboradi; ba'zi iPhone'larda izoh tushib qolishi mumkin — shuning uchun rasmda QR va kod bor.
+
+## 2026-10-23 — O'yinlarda tarjima — har kimga o'z tilida (Otabek: «duelda kim qaysi tilga qo'ygan bo'lsa unga o'sha tilda chiqsin so'zlar, boshqa o'yinlarda ham»)
+- O'yin kodi yuboruvchining ro'yxatiga bog'langan. `lrnTwinId(id)` — ko'ruvchining tili (UZ/RU tugmasi) bo'yicha juft ro'yxat (-u-↔-r-, Deutsch-Usbekisch↔Deutsch-Russisch); `lrnTrOf(id)` — shu indeksdagi tarjima (nemischa so'z mos kelsa; bo'sh bo'lsa — asl til).
+- Savollar (nemischa so'zlar, tartib, variantlar) ikkala o'yinchida AYNAN bir xil — faqat savol matni (tarjima) va sarlavha («Deutsch–O'zbekcha/Russisch») o'zgaradi. Sinov: uz va ru da 4 savol — a/o bir xil, q: «televizor» / «телевизор».
+- Qo'llandi: ⚔️ Duel, ⚡ Challenge (guruh va shaxsiy) — `chPool`, `chTitle`; 🎯 Live test — `ltPool`, `ltTitle`. Sinf o'yini (kg) — ustoz o'zi yozgan savollar, tegilmadi. Kunlik challenge allaqachon o'z tilida.
+- Duel maqtanish rasmida «Raundlar X : Y» endi har doim (1-raunddan keyin ham).

@@ -3666,6 +3666,12 @@ function lrnAllBuild(D){ const G={};
 /* Perfekt / Reflexiv ro'yxatlari — sayt tiliga mos (uz → -u-, ru → -r-), bo'lmasa ruscha (2026-10-22) */
 function lrnPerfLink(lvl){ const D=lernData(), want=state.lang==="ru"?"r":"u", pick=re=>{ const ks=Object.keys(D).filter(k=>k.startsWith(lvl+"-")&&D[k].kind==="perfekt"&&re.test(k)); return ks.find(k=>k.split("-")[2]===want)||ks.find(k=>k.split("-")[2]==="r")||ks[0]; };
   const p=pick(/Perfekt/), r=pick(/Reflexive/); return (p?`<button type="button" class="vo-btn" data-lern="${p}">📗 Verben mit Perfekt →</button>`:"")+(r?`<button type="button" class="vo-btn" data-lern="${r}">🔁 Reflexive Verben →</button>`:""); }
+/* 2026-10-23 (Otabek: «duelda kim qaysi tilga qo'ygan bo'lsa unga o'sha tilda chiqsin so'zlar, boshqa o'yinlarda ham»):
+   o'yin kodi bitta ro'yxatga bog'langan (yuboruvchining tili). O'zbekcha va ruscha ro'yxatlar so'zma-so'z bir xil tartibda —
+   savollar (nemischa so'zlar, tartib, variantlar) ikkala o'yinchida AYNAN bir xil qoladi, faqat tarjima ko'ruvchining tilida (UZ/RU tugmasi). Tarjima bo'sh bo'lsa — asl tildagisi. */
+function lrnTwinId(id){ const want=state.lang==="ru"?"r":"u", m=/^([A-C]\d-[a-z0-9]+-)([ur])(-.*)$/.exec(String(id||"")); if(!m||m[2]===want) return null;
+  let t=m[1]+want+m[3]; t=want==="r"?t.replace("Deutsch-Usbekisch","Deutsch-Russisch"):t.replace("Deutsch-Russisch","Deutsch-Usbekisch"); const D=lernData(); return D[t]&&D[id]&&D[t].it.length===D[id].it.length?t:null; }
+function lrnTrOf(id){ const t=lrnTwinId(id); if(!t) return null; const A=lernData()[id].it, B=lernData()[t].it; return i=>(B[i]&&A[i]&&B[i][3]===A[i][3]&&B[i][4])||null; }
 function lrnAllId(lvl,lang){ const D=lernData(), want=lang==="ru"?"r":"u", a=lvl+"-all-"+want+"-Wortschatz-"+lvl, b=lvl+"-all-r-Wortschatz-"+lvl; return D[a]?a:(D[b]?b:null); }
 function lernHas(id){ return !!lernData()[id]; }
 const LT={
@@ -6725,7 +6731,7 @@ function duRender(){
     el.innerHTML=duHead()+`<div class="lrn-body"><div class="lrn-card lrn-end">${head}${duScoreHTML()}
       ${L.length>=2?`<div class="du-tally"><span>${uz?"Raundlar":"Раунды"}: </span><b class="${T.me>T.opp?"w":T.me<T.opp?"l":""}">${T.me} : ${T.opp}</b><small> · ${uz?"3 raunddan 2 tasini yutgan — g‘olib":"победитель — 2 раунда из 3"}</small></div>`:""}
       ${fin?`<h3 class="du-win">${T.me>T.opp?"👑 "+(uz?"Siz duelni yutdingiz!":"Вы выиграли дуэль!"):"💪 "+(uz?"Duel raqibniki":"Дуэль за соперником")}</h3>`:""}
-      ${won&&o?bragHTML({kind:"du",title:chTitle(DU.c),me:DU.name,ms:DU.s,opp:o.n,os:o.s||0,sub:L.length>=2&&(T.me+T.opp)>1?`${uz?"Raundlar":"Раунды"} ${T.me} : ${T.opp}`:""}):""}
+      ${won&&o?bragHTML({kind:"du",title:chTitle(DU.c),me:DU.name,ms:DU.s,opp:o.n,os:o.s||0,sub:L.length>=2?`${uz?"Raundlar":"Раунды"} ${T.me} : ${T.opp}`:""}):""}
       ${DU.revAsk&&o&&o.r>DU.r?`<p class="ch-big du-ask">${esc(dt("revAsk")(o.n))}</p>`:""}
       <div class="ch-btns" style="justify-content:center">${r&&!r.wait?`<button type="button" class="btn primary" data-du="rev">${esc(dt("rev"))}</button>`:""}<button type="button" class="btn" data-du="close">${esc(dt("close"))}</button></div></div></div>`;
     if(r&&!r.wait&&!DU.fx){ DU.fx=DU.r; if(r.w&&r.w.id===DU.me) ltConfetti(130); }
@@ -7210,10 +7216,10 @@ function mqMulti(onConn, onMsg, optsFor){
 function ltFmt(ms){ ms=Math.max(0,ms|0); const s=Math.round(ms/1000); return Math.floor(s/60)+":"+String(s%60).padStart(2,"0"); }
 function ltListId(h){ return Object.keys(lernData()).find(k=>chHash(k)===h); }
 function ltPool(c){ const id=ltListId(c.l), D=id&&lernData()[id]; if(!D) return [];
-  const seen=new Set(); return D.it.map((r,i)=>({i,l:r[0],de:r[3],q:r[4],red:r[6]})).filter(x=>{ if(!x.q||x.red||!c.s.includes(x.l)||x.de.length>40||/[…·]/.test(x.de)||LRN_PAIR.test(x.de)||seen.has(x.de)) return false; seen.add(x.de); return true; }); }
+  const seen=new Set(), tr=lrnTrOf(id); return D.it.map((r,i)=>({i,l:r[0],de:r[3],q:r[4],red:r[6]})).filter(x=>{ if(!x.q||x.red||!c.s.includes(x.l)||x.de.length>40||/[…·]/.test(x.de)||LRN_PAIR.test(x.de)||seen.has(x.de)) return false; seen.add(x.de); return true; }).map(x=>{ const t=tr&&tr(x.i); if(t) x.q=t; return x; }); }
 function ltQs(c){ return chShuf(ltPool(c),chRng(c.r)).slice(0,c.n); }
 function ltNameOf(k){ try{ const T=lernData()[k]; if(T&&T.title) return T.title; }catch(e){} const m=/^(A\d)-([ab]\d)(\d)-([ru])-(.+?)-Deutsch-(\w+?)(?:-L[\d-]+)?$/.exec(k); if(!m) return k; const L=m[5].replace(/-/g," ").replace(/L(\d+) (\d+)/,"L$1–$2"); return `${m[1]}.${m[3]} · ${L} · Deutsch–${m[4]==="u"?"O‘zbekcha":"Russisch"}`; } /* MATS'da yo'q ro'yxatlar uchun nom */
-function ltTitle(c){ const id=ltListId(c.l), m=byId[id], D=lernData()[id]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:ltNameOf(id))+" · "+c.s.map(lab).join(", "); }
+function ltTitle(c){ const id0=ltListId(c.l), id=lrnTwinId(id0)||id0, m=byId[id], D=lernData()[id]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:ltNameOf(id))+" · "+c.s.map(lab).join(", "); }
 function ltLink(code){ return (/github\.io$/.test(location.hostname)||!/claude/.test(location.hostname)&&location.protocol!=="file:" ? location.origin+location.pathname : CH_SITE)+"?lt="+code; }
 function ltSc(v){ v=+v||0; return (Math.round(v*10)/10).toString().replace(".",","); }
 /* O'rin: 1) ko'p ball; 2) teng bo'lsa — o'sha ballga birinchi yetgan (oxirgi to'g'ri javob vaqti, tk). Tez taslim bo'lish ustunlik bermaydi. 2026-10-18 */
@@ -9260,8 +9266,8 @@ function chEl(){ let e=document.getElementById("chal"); if(!e){ e=document.creat
 /* Grammatik challenge (2026-10-22): c.xs=[[mashq id, bo'lim],…] — tanlangan Lektionlarning Grammatik bo'limlari birga */
 function chXQs(c){ if(c.xs){ const seen=new Set(); return c.xs.flatMap(([id,si])=>exGameQs(id,si)).filter(q=>!seen.has(q.q)&&seen.add(q.q)); } return c.x?exGameQs(c.x,c.si):[]; }
 function tpGrSecs(lv,ls){ if(CH_GR[lv]) return ls.filter(n=>(CH_GR[lv][n]||[]).length>=4).map(n=>["gr:"+lv,n]); const D=exData(), out=[]; for(const id in D){ const m=byId[id]; if(!m||m.lvl!==lv||!ls.includes(+m.key)) continue; (D[id].sec||[]).forEach((s,si)=>{ if(/Grammatik/i.test(s.t||"")&&exGameQs(id,si).length>=4) out.push([id,si]); }); } return out; }
-function chPool(c){ if(c.x||c.xs) return chXQs(c); const D=lernData()[c.l]; if(!D) return []; return D.it.map((r,i)=>({i,l:r[0],de:r[3],ru:r[4],red:r[6],dis:r[7]})).filter(x=>x.ru && !x.red && c.s.includes(x.l)); }
-function chTitle(c){ if(c.xs) return "📘 Grammatik "+(c.lv||"")+" · "+(c.ls||[]).map(n=>"L"+n).join(", "); if(c.x){ try{ const D=exData()[c.x], sc=D.sec[c.si]; return (D.title||"")+(D.sec.length>1?" · "+(sc.ic||"")+" "+(sc.t||""):""); }catch(e){ return ""; } } const m=byId[c.l]; const D=lernData()[c.l]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:(D&&D.title)||"")+" · "+c.s.map(lab).join(", "); }
+function chPool(c){ if(c.x||c.xs) return chXQs(c); const D=lernData()[c.l]; if(!D) return []; const tr=lrnTrOf(c.l); return D.it.map((r,i)=>({i,l:r[0],de:r[3],ru:r[4],red:r[6],dis:r[7]})).filter(x=>x.ru && !x.red && c.s.includes(x.l)).map(x=>{ const t=tr&&tr(x.i); if(t) x.ru=t; return x; }); }
+function chTitle(c){ if(c.xs) return "📘 Grammatik "+(c.lv||"")+" · "+(c.ls||[]).map(n=>"L"+n).join(", "); if(c.x){ try{ const D=exData()[c.x], sc=D.sec[c.si]; return (D.title||"")+(D.sec.length>1?" · "+(sc.ic||"")+" "+(sc.t||""):""); }catch(e){ return ""; } } const tl=lrnTwinId(c.l)||c.l, m=byId[tl]||byId[c.l]; const D=lernData()[tl]||lernData()[c.l]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:(D&&D.title)||"")+" · "+c.s.map(lab).join(", "); }
 function chPts(){ return !!(CHS.c&&CHS.c.v>=2); }
 function chQuestions(c){
   if(c.x||c.xs){ const base=chXQs(c); if(base.length<4) return []; const r=chRng(c.r), qs=[]; while(qs.length<160){ for(const x of chShuf(base.slice(),r)){ const o=x.gp?[x.a,...chShuf(x.gp.slice(),r).slice(0,3)]:x.o.slice(); qs.push({q:x.q,a:x.a,o:chShuf(o,r)}); if(qs.length>=160) break; } } return qs; }
