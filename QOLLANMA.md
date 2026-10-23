@@ -1183,3 +1183,8 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 2026-10-24 03:00 · Qidiruv/daraja/filtr — marafon va kunlik challenge'dan PASTDA
 - `#mr-home` va yangi `#dc-home` endi `.controls` dan oldin (HTML). `render()` kunlik challenge kartasini `#dc-home` ga yozadi (main ichiga emas); har renderda avval tozalanadi.
 - Kunlik challenge kartasidagi 1-o'rin ismi qisqa: «Samira R.».
+
+## 2026-10-24 03:10 · Tunda tekshiruvda topilgan xatolar
+- **«Birga» oynasida tablar ko'rinmasdi** (Odamlar / Xabarlar / Guruhim): `.cm-tabs` flex ichida uzun ro'yxatda 0 ga siqilardi → `flex:none`.
+- **Guruh a'zosi yo'qolishi:** `cmGroupSave` butun ro'yxatni eski nusxadan yozardi (bir vaqtda kimdir qo'shilsa/nom o'zgarsa — boshqalar o'chib ketardi). Endi saqlashdan oldin bazadagi ro'yxat bilan birlashtiriladi; chiqishda `cmGroupSave([me])`. `cmGroupLoad`: o'zim guruhdaman (grp), lekin ro'yxatda yo'qman — qayta qo'shiladi. (Jonli saytda «A2 Legends · 1 kishi» — egasi ro'yxatda yo'q edi.)
+- `kqMine`: bugungi yaxlitlangan qiymat 0 bo'lsa `kz` yozilmaydi.
