@@ -1794,7 +1794,18 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .ab-c{position:relative;height:100%;display:flex;align-items:flex-end;justify-content:center}.ab-c i{display:block;width:100%;max-width:38px;border-radius:5px 5px 0 0;min-height:1px}
 .ab-c em{position:absolute;left:50%;transform:translateX(-50%);font-style:normal;font-size:12px;font-weight:800;color:var(--ink);white-space:nowrap;pointer-events:none}
 .ab-x{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:3px;font-size:11px;color:var(--muted);font-weight:700;margin-top:4px}.ab-x span{display:flex;justify-content:center;white-space:nowrap}
-.dz-t.sm th{white-space:normal}.dz-t td.t{min-width:170px}.dz-sub{display:block;color:var(--muted);font-weight:700;font-size:12px;margin-top:2px}
+.dz-t.sm th{white-space:normal}
+.tah-top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:8px}.tah-top h3{margin:0}.tah-bar{display:grid;gap:8px;margin-bottom:6px}.tah-bar .dz-chips{margin:0}.tah-b{display:grid;gap:12px;min-width:0}.tah .dz-st{margin:4px 0 10px}
+#tch .tp-seg button[aria-pressed="true"],.tah .tp-seg button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.tg{overflow:hidden;padding-right:14px}.tg-p{position:relative;height:150px;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));align-items:end;gap:3px;border-bottom:1.5px solid var(--line);padding-top:30px}
+.tg-c{position:relative;height:100%;display:flex;flex-direction:column-reverse;justify-content:flex-start;align-items:center}.tg-c i{display:block;width:100%;max-width:38px}.tg-c i:last-of-type{border-radius:5px 5px 0 0}.tg-c em{position:absolute;left:50%;transform:translateX(-50%);font-style:normal;font-size:12px;font-weight:800;color:var(--ink)}
+.tg-mk{position:absolute;top:0;bottom:0;border-left:2px dashed #E67E22;pointer-events:none}.tg-mk b{position:absolute;top:0;left:3px;font-size:10.5px;color:#C0640C;background:var(--surface);padding:0 3px;border-radius:4px;white-space:nowrap;max-width:160px;overflow:hidden;text-overflow:ellipsis}
+.tg-lg{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;font-weight:800;margin:8px 0}.tg-lg span{display:inline-flex;align-items:center;gap:5px}.tg-lg i{width:11px;height:11px;border-radius:3px;display:inline-block}
+.tg-sp{display:flex;height:14px;border-radius:99px;overflow:hidden;background:var(--line);margin:6px 0 2px}.tg-sp i{display:block;height:100%}
+.tl-box{margin-top:12px;border-top:1.5px solid var(--line);padding-top:10px}.tl-box h5{margin:0 0 6px;font-size:14px}
+.tl{margin:10px 0 0 46px;border-left:3px solid var(--line)}.tl-i{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;padding:6px 0 6px 14px}.tl-i::before{content:"";position:absolute;left:-8px;top:10px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:3px solid var(--blue)}.tl-i.x::before{border-color:#C62828}
+.tl-i time{position:absolute;left:-50px;top:8px;font-size:12px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}.tl-i b{font-size:13.5px;min-width:0;overflow-wrap:anywhere}.tl-i em{font-style:normal;font-weight:800;font-size:12.5px;white-space:nowrap;color:var(--muted)}.tl-i small{grid-column:1/3;color:var(--muted);font-weight:700;font-size:12.5px}
+.tl-gap{padding:4px 0 4px 14px;color:var(--muted);font-size:12px;font-weight:800}.dz-t td.t{min-width:170px}.dz-sub{display:block;color:var(--muted);font-weight:700;font-size:12px;margin-top:2px}
 .dz-mx{min-width:0}.dz-mx th,.dz-mx td{padding:6px 4px}.dz-mx td.z{color:var(--muted)}
 .dz-pl{display:grid;gap:6px}.dz-pli{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px}.dz-pli b{font-variant-numeric:tabular-nums}.dz-pli em{grid-column:1/3;font-style:normal;color:var(--muted);font-size:12.5px;font-weight:700}
 @media (max-width:560px){.dz-body{padding:10px 10px 60px}.dz-tabs button{font-size:13px;padding:7px 9px}.dz-kpi b{font-size:20px}.dz-fs{grid-template-columns:minmax(0,1.2fr) minmax(40px,1fr) minmax(48px,auto)}}
@@ -7927,7 +7938,7 @@ function actP(o,p){ return o.p[p]||(o.p[p]=[0,0,0,0]); }
 function actLog(kind,key,ttl,ok,n){ try{ if(!actOn()) return; const o=actGet(); if(!o) return; o.l=o.l||[]; const last=o.l[o.l.length-1];
   if(last&&last[1]===kind&&last[2]===key&&Date.now()-last[0]<120000){ last[0]=Date.now(); last[4]=ok; last[5]=n; } else o.l.push([Date.now(),kind,String(key).slice(0,80),String(ttl||"").slice(0,70),ok|0,n|0]);
   if(o.l.length>25) o.l.splice(0,o.l.length-25); clearTimeout(ACT.t); ACT.t=setTimeout(actSave,800); }catch(e){} }
-function actEv(type,id,x){ try{ if(!actOn()) return; const o=actGet(); if(!o) return; const D=actRow(o); try{ if(AX.ses){ if(type==="ok"||type==="wrong") AX.ses.a++; else if(type==="wzw") AX.ses.w++; } }catch(er){}
+function actEv(type,id,x){ try{ if(!actOn()) return; const o=actGet(); if(!o) return; const D=actRow(o); try{ if(AX.ses){ const L=AX.ses.s[AX.ses.s.length-1]; if(type==="ok"||type==="wrong"){ AX.ses.a++; if(L){ L[4]=(L[4]|0)+1; if(type==="ok"&&x&&x.first) L[5]=(L[5]|0)+1; } } else if(type==="wzw"){ AX.ses.w++; if(L) L[3]=(L[3]|0)+1; } } }catch(er){}
   if(type==="open"){ D[6]++; const S=actSet(o,id); S[0]++; S[6]=Date.now(); }
   else if(type==="ok"||type==="wrong"){ const S=actSet(o,id), P=actP(o,actPart(id)); S[6]=Date.now();
     if(type==="ok"){ D[1]++; S[1]++; P[1]++; if(x&&x.first){ D[2]++; S[2]++; P[2]++; } }
@@ -7969,18 +7980,18 @@ function axBrw(){ const u=navigator.userAgent||""; return /Telegram/i.test(u)||w
 const AX_OV=[["acc","acc"],["ex","ex"],["es","es"],["lrn","y"],["doc","doc"],["viewer","pdf"],["duel","du"],["chal","ch"],["dcal","dc"],["ltp","lt"],["kgp","kg"],["rank","rk"],["cm","cm"],["myp","my"],["news","nw"],["wn","nw"],["fb-ov","fb"]];
 function axScr(){ for(const [id,c] of AX_OV){ const e=document.getElementById(id); if(e&&!e.hidden){ if(c==="ex"){ try{ return "ex:"+actPart(EX.id); }catch(er){ return "ex:g"; } } return c; } }
   if(document.documentElement.classList.contains("touring")) return "tour"; if(state.q) return "q"; return AX.lek?"lek":"h"; }
-function axMid(c){ try{ if(c.startsWith("ex:")) return EX.id||""; if(c==="pdf") return (V&&V.cur&&V.cur.id)||""; }catch(e){} return ""; }
+function axMid(c){ try{ if(c.startsWith("ex:")) return EX.id||""; if(c==="pdf") return (V&&V.cur&&V.cur.id)||""; if(c==="y") return LR.id||""; }catch(e){} return ""; }
 function axSes(){ const o=axGet(); if(!o) return null; const now=Date.now();
   if(!AX.ses){ const L=o.sp[o.sp.length-1]; if(L&&now-(L.e||L.t)<30*60e3){ AX.ses=L; AX.last=L.e||now; } }
-  if(!AX.ses||now-AX.last>30*60e3){ if(AX.ses&&AX.scr&&!AX.ex) ax("tr:"+AX.scr+">$"); AX.ex=null; AX.ses={t:now,e:now,s:[],w:0,a:0}; o.sp.push(AX.ses); if(o.sp.length>14) o.sp.splice(0,o.sp.length-14); AX.scr=""; AX.seen=new Set(); AX.newS=true; try{ gsSes(); }catch(e){} }
+  if(!AX.ses||now-AX.last>30*60e3){ if(AX.ses&&AX.scr&&!AX.ex) ax("tr:"+AX.scr+">$"); AX.ex=null; AX.ses={t:now,e:now,s:[],w:0,a:0,src:AX.ent||""}; o.sp.push(AX.ses); if(o.sp.length>120) o.sp.splice(0,o.sp.length-120); AX.scr=""; AX.seen=new Set(); AX.newS=true; try{ gsSes(); }catch(e){} }
   AX.last=now; return AX.ses; }
 function axMove(c){ const S=axSes(); if(!S) return; const now=Date.now(), p=AX.scr;
   if(AX.newS){ AX.newS=false; ax("tr:^"+(AX.ent||"")+">"+c); AX.ent=""; }
   else if(p&&p!==c){ ax("tr:"+p+">"+c); const dur=(now-AX.t0)/1000; if(p!=="h"&&p!=="q"&&p!=="lek"&&dur<3) ax("cf:qc:"+p);
     if(AX.mid&&dur<10&&/^(ex|pdf)/.test(p)){ const o=axGet(); o.qc[AX.mid]=(o.qc[AX.mid]||0)+1; } }
-  if(p!==c){ const L=S.s[S.s.length-1]; if(!L||L[0]!==c){ S.s.push([c,Math.round((now-S.t)/1000)]); if(S.s.length>40) S.s.splice(1,1); } }
+  if(p!==c){ const L=S.s[S.s.length-1]; if(!L||L[0]!==c){ S.s.push([c,Math.round((now-S.t)/1000),axMid(c)||0,0,0,0]); if(S.s.length>40) S.s.splice(1,1); } } /* [ekran, soniya, material, so'z, javob, 1-urinishda ✓] */
   AX.scr=c; AX.t0=now; AX.mid=axMid(c); S.e=now; axSave(); }
-const AX_EL=[["es","#es-card"],["go","[data-proggo]"],["rk","#prog [data-rank]"],["my","[data-myp]"],["dc",".dc-card"],["mr",".mr-card"],["nw",".news-pill"],["lg","#lg-card"],["tour",".tour-link"],["cm","#cm-btn"],["fb","#fb-btn"],["lek",".lek"],["q","#q"],["mx",".lrn-mx"],["app",".app-soft"],["appask","#app-ask"]];
+const AX_EL=[["mrld",".mr2-ld"],["es","#es-card"],["go","[data-proggo]"],["rk","#prog [data-rank]"],["my","[data-myp]"],["dc",".dc-card"],["mr",".mr-card"],["nw",".news-pill"],["lg","#lg-card"],["tour",".tour-link"],["cm","#cm-btn"],["fb","#fb-btn"],["lek",".lek"],["q","#q"],["mx",".lrn-mx"],["app",".app-soft"],["appask","#app-ask"]];
 function axVis(e){ if(!e||e.hidden) return false; const r=e.getBoundingClientRect(); return r.width>0&&r.height>0&&r.bottom>0&&r.top<innerHeight; }
 function axSeen(){ if(!AX.ses) return; for(const [k,s] of AX_EL){ if(AX.seen.has(k)) continue; let e=null; try{ e=document.querySelector(s); }catch(er){} if(axVis(e)){ AX.seen.add(k); ax("hv:"+k); } } }
 /* Yodlash ichidagi usul — vaqt, 10 soniyada yopish */
@@ -8034,7 +8045,7 @@ function axSummary(lite){ const o=axGet(); if(!o) return null; axFlush(); const 
   const wd=Object.entries(o.wd).sort((a,b)=>((b[1][1]+b[1][3]+b[1][4])*3+b[1][0])-((a[1][1]+a[1][3]+a[1][4])*3+a[1][0])).slice(0,lite?70:140).map(([k,v])=>[k,v[0],v[1],v[2],v[3],v[4],o.wa[k]?Object.entries(o.wa[k]).sort((p,q)=>q[1]-p[1]).slice(0,2):0]);
   const so={}; Object.entries(A.s||{}).forEach(([id,v])=>{ if(v[0]) so[id]=v[0]; });
   return {v:1, ak:ACC.cur, nm:ACC.name, t:Date.now(), f:A.f||0, brw:axBrw(), dev:/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)?"📱":"💻", lg:state.lang, w:(()=>{ try{ return progCount().n; }catch(e){ return 0; } })(),
-    app:(()=>{ try{ return localStorage.getItem("pwa:on")==="1"?1:0; }catch(e){ return 0; } })(), x, qi, wd, sp:o.sp.slice(lite?-5:-10), sq:o.sq, mv:o.mv, mo:A.m||{}, so, qc:o.qc, wh:o.wh.map(s=>Math.round(s/60)), je:o.je, fbm:o.fbm, rg:o.rg,
+    app:(()=>{ try{ return localStorage.getItem("pwa:on")==="1"?1:0; }catch(e){ return 0; } })(), x, qi, wd, sp:o.sp.filter(x=>x.t>=Date.now()-30*864e5).slice(lite?-20:-60).map(x=>({t:x.t,e:x.e,w:x.w,a:x.a,src:x.src||undefined,s:(x.s||[]).map(r=>r.length>2&&!r[2]&&!r[3]&&!r[4]?[r[0],r[1]]:r)})), sq:o.sq, mv:o.mv, mo:A.m||{}, so, qc:o.qc, wh:o.wh.map(s=>Math.round(s/60)), je:o.je, fbm:o.fbm, rg:o.rg,
     dd:Object.keys(A.d||{}).sort().slice(-60).map(k=>[k,A.d[k][0]|0,A.d[k][7]|0,A.d[k][1]|0]) }; }
 async function axPush(c){ if(Date.now()-(+cloudG("at")||0)<15*60e3) return; cloudS("at",Date.now()); let d=axSummary(false); if(!d) return; let enc=await stEnc(d); if(enc.length>140000){ d=axSummary(true); enc=await stEnc(d); } if(enc.length>148000) return;
   try{ await fsPut("a/"+await cloudSumId(c),{e:fsS(enc),t:fsI(Date.now())}); }catch(e){ cloudS("at",Date.now()-10*60e3); } }
@@ -8597,7 +8608,7 @@ function tpStDraw(){ const b=document.getElementById("tp-stn"); if(b) b.textCont
     return `<li class="${open?"open":""}"><button type="button" class="tp-sth" data-tpst="${esc(id)}"><span class="tp-av">${lv.e}</span>
       <span class="tp-nm"><b>${esc(String(d.nm).slice(0,40))}${hpBadge(d.hp|0,true,{nm:d.nm,hb:d.hb})}</b><span>${esc(spLast(d,uz))}</span></span>${spMini(d)}${spLvlChip(d)}</button>
       ${open?`<div class="tp-std" id="tp-std-${esc(id)}"></div>`:""}</li>`; }).join("");
-  if(TP.stOpen&&TP.stu[TP.stOpen]){ const host=document.getElementById("tp-std-"+TP.stOpen); if(host){ host.innerHTML=spProfHTML(TP.stu[TP.stOpen])+(TP.stu[TP.stOpen].ak?`<div class="tp-th"><button type="button" class="btn" data-tpth="rahmat">🙏 Rahmat (+5)</button><button type="button" class="btn" data-tpth="maqtov">👏 Maqtov (+5)</button><button type="button" class="btn" data-tpth="own">✍️ O‘z so‘zim…</button><span class="ch-net" id="tp-thst"></span></div>`:"")+`<button type="button" class="lrn-link tp-stdel" data-tpstdel="${esc(TP.stOpen)}">🗑 Ro‘yxatdan olib tashlash</button>${TP.stu[TP.stOpen].c&&TP.stu[TP.stOpen].ak?`<button type="button" class="lrn-link tp-stdel" data-tpmv="${esc(TP.stOpen)}">🔗 Boshqa akkauntga ko‘chirish</button>`:""}`; spProfBind(host,TP.stu[TP.stOpen]); } } }function tpStCsv(){ const rows=[["Ism","O‘rganilgan so‘zlar","Varaq","Natija","Foiz"]];
+  if(TP.stOpen&&TP.stu[TP.stOpen]){ const host=document.getElementById("tp-std-"+TP.stOpen); if(host){ host.innerHTML=spProfHTML(TP.stu[TP.stOpen])+(TP.stu[TP.stOpen].ak?`<div class="tp-th"><button type="button" class="btn" data-tpth="rahmat">🙏 Rahmat (+5)</button><button type="button" class="btn" data-tpth="maqtov">👏 Maqtov (+5)</button><button type="button" class="btn" data-tpth="own">✍️ O‘z so‘zim…</button><span class="ch-net" id="tp-thst"></span></div>`:"")+`<button type="button" class="btn" data-tahday="${esc(TP.stOpen)}">📅 Kunma-kun yo‘li</button><button type="button" class="lrn-link tp-stdel" data-tpstdel="${esc(TP.stOpen)}">🗑 Ro‘yxatdan olib tashlash</button>${TP.stu[TP.stOpen].c&&TP.stu[TP.stOpen].ak?`<button type="button" class="lrn-link tp-stdel" data-tpmv="${esc(TP.stOpen)}">🔗 Boshqa akkauntga ko‘chirish</button>`:""}`; spProfBind(host,TP.stu[TP.stOpen]); } } }function tpStCsv(){ const rows=[["Ism","O‘rganilgan so‘zlar","Varaq","Natija","Foiz"]];
   tpStList().forEach(([id,d])=>{ const g=d.g||[]; if(!g.length) rows.push([d.nm,d.w,"","",""]); g.forEach(x=>rows.push([d.nm,d.w,(x[1]?x[1]+" · ":"")+x[0],x[2]+(x[3]?"/"+x[3]:""),x[3]?Math.round(x[2]/x[3]*100)+"%":""])); });
   const csv="﻿"+rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(";")).join("\n");
   const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"})); a.download="oquvchilar-natijalari.csv"; document.body.appendChild(a); a.click(); a.remove(); }
@@ -8626,13 +8637,13 @@ const DZ={tab:"mat",lv:"",root:"h",open:"",stu:"",pt:""};
 function dzEl(){ let e=document.getElementById("dz"); if(!e){ e=document.createElement("div"); e.id="dz"; e.className="lrn"; e.setAttribute("role","dialog"); e.setAttribute("aria-modal","true"); e.hidden=true; document.body.appendChild(e); } return e; }
 function dzOpen(){ const e=dzEl(); e.hidden=false; document.body.style.overflow="hidden"; dzDraw(); if(!TP.dzL) dzLoad(); }
 function dzClose(){ dzEl().hidden=true; if(document.getElementById("tch")&&document.getElementById("tch").hidden) document.body.style.overflow=""; }
-async function dzLoad(){ if(TP.dzL===1) return; TP.dzL=1; TP.dzErr=0; dzDraw(); const X={}; let n=0, tok="";
+async function dzLoad(){ if(TP.dzL===1) return; TP.dzL=1; TP.dzErr=0; const X={}; let n=0, tok="";
   try{ do{ const r=await fetch(FS_BASE+"a?pageSize=100"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok){ TP.dzErr=r.status; break; } const j=await r.json();
       for(const doc of (j.documents||[])){ const e=doc.fields&&doc.fields.e&&doc.fields.e.stringValue; if(!e) continue; try{ const d=await stDec(e); if(d&&d.ak){ const o=X[d.ak]; if(!o||(d.t||0)>(o.t||0)) X[d.ak]=d; } }catch(er){} }
       tok=j.nextPageToken||""; }while(tok&&++n<60); }catch(e){ TP.dzErr=TP.dzErr||1; }
   const G={}; try{ let t2="", m=0; do{ const r=await fetch(FS_BASE+"gs?pageSize=200"+(t2?"&pageToken="+encodeURIComponent(t2):""),{cache:"no-store"}); if(!r.ok){ TP.gsErr=r.status; break; } const j=await r.json();
       (j.documents||[]).forEach(d=>{ const o={}; Object.entries(d.fields||{}).forEach(([k,v])=>o[k]=+(v.integerValue||0)); G[d.name.split("/").pop()]=o; }); t2=j.nextPageToken||""; }while(t2&&++m<5); }catch(e){}
-  TP.dx=X; TP.gs=G; TP.dzL=2; TP.dzT=Date.now(); if(!dzEl().hidden) dzDraw(); }
+  TP.dx=X; TP.gs=G; TP.dzL=2; TP.dzT=Date.now(); if(TP.tab==="an") tpStDrawSoon(); }
 /* --- yordamchilar --- */
 const dzF=n=>String(Math.round(n||0)).replace(/\B(?=(\d{3})+(?!\d))/g," ");
 const dzP=(a,b)=>b?Math.round(a/b*100)+"%":"—";
@@ -8652,7 +8663,7 @@ function dzIns(list){ if(!list.length) return ""; return `<div class="dz-ins">${
 function dzKpi(b,s,em,cls){ return `<div class="dz-kpi"><span>${s}</span><b>${b}</b>${em?`<em class="${cls||""}">${em}</em>`:""}</div>`; }
 function dzBar(lbl,v,mx,txt,cls){ return `<div class="dz-fs${cls?" "+cls:""}"><span>${lbl}</span><div class="b"><i style="width:${Math.max(1,Math.round(dzR(v,mx)*100))}%"></i></div><span class="v">${txt}</span></div>`; }
 function dzEmpty(t){ return `<p class="dz-note">${t}</p>`; }
-function dzPill(sc){ return sc==null?"":sc>=75?`<span class="dz-pill g">yaxshi</span>`:sc>=55?`<span class="dz-pill o">kuzatish</span>`:`<span class="dz-pill r">qayta ko‘rish</span>`; }
+function dzPill(sc){ return sc==null?"":sc>=75?`<span class="dz-pill g">${sc} · yaxshi</span>`:sc>=55?`<span class="dz-pill o">${sc} · kuzatish</span>`:`<span class="dz-pill r">${sc} · qayta ko‘rish</span>`; }
 /* oqim diagrammasi: ildiz → 1-qadam → 2-qadam (chiziq qalinligi — ulush) */
 function dzFlow(root,l1,l2,opt){ opt=opt||{}; const H=Math.max(l1.length,l2.length,3)*64+20, W=760, x0=10, w0=120, x1=270, w1=130, x2=530, w2=200;
   const ys=(n,i)=>n<=1?H/2:20+(H-40)*(i/(n-1)); const nh=p=>Math.max(28,Math.min(52,24+p*0.6));
@@ -8666,17 +8677,21 @@ function dzFlow(root,l1,l2,opt){ opt=opt||{}; const H=Math.max(l1.length,l2.leng
 function dzSpark(v){ const b="▁▂▃▄▅▆▇", mx=Math.max(...v,0); if(!mx) return "▁".repeat(v.length); return v.map(x=>b[Math.min(6,Math.round(x/mx*6))]).join(""); }
 
 /* ===================== 📚 MATERIALLAR ===================== */
-function dzMatAgg(P){ const t0=Date.now()-P*864e5, M={}; const mk=id=>M[id]||(M[id]={id,stu:new Set(),re:0,s:0,e:0,it:{},wa:{},qc:0,fb:0,seen:0,op:0,opS:new Set()});
+function dzMatAgg(P){ const t0=Date.now()-P*864e5, M={}; const mk=id=>M[id]||(M[id]={id,stu:new Set(),re:0,s:0,e:0,it:{},wa:{},qc:0,fb:0,seen:0,op:0,opS:new Set(),so:0,sv:0,sf:0,sl:0,sk:0,ss:0,hh:{}});
+  /* oddiy xulosa (barcha o'quvchilar): to'plam — ochildi, yechildi, 1-urinish, Lösung, o'tkazildi, vaqt; qiyin savollar (2026-10-23: «Mashq to'plamlari» va «Eng ko'p xato savollar» shu jadvalga qo'shildi) */
+  Object.entries(TP.stu||{}).forEach(([id0,d])=>{ const A=d&&d.a; if(!A) return; const key=d.ak||id0; (A.ss||[]).forEach(r=>{ if((r[7]||0)<t0) return; const m=mk(r[0]); m.stu.add(key); m.so+=r[1]|0; m.sv+=r[2]|0; m.sf+=r[3]|0; m.sl+=r[5]|0; m.sk+=r[6]|0; m.ss+=r[8]|0; });
+    (A.hh||[]).forEach(r=>{ const m=M[r[0]]; if(!m) return; m.hh[r[1]]=(m.hh[r[1]]||0)+(r[2]|0); }); });
   dzAll().forEach(([ak,d])=>{ Object.entries(d.qi||{}).forEach(([id,Q])=>{ if((Q.t||0)<t0) return; const m=mk(id); m.stu.add(ak); if(Q.s>=2) m.re++; m.s+=Q.s|0; m.e+=Q.e|0;
       Object.entries(Q.it||{}).forEach(([k,r])=>{ const t=m.it[k]||(m.it[k]=[0,0,0,0,0,0,0]); r.forEach((v,i)=>t[i]+=v|0); });
       Object.entries(Q.wa||{}).forEach(([k,W])=>{ const t=m.wa[k]||(m.wa[k]={}); Object.entries(W).forEach(([a,n])=>t[a]=(t[a]||0)+n); }); });
     Object.entries(d.qc||{}).forEach(([id,n])=>mk(id).qc+=n); Object.entries(d.fbm||{}).forEach(([id,n])=>mk(id).fb+=n);
     Object.entries(d.mv||{}).forEach(([id,n])=>mk(id).seen+=n); Object.entries(d.mo||{}).forEach(([id,n])=>{ const m=mk(id); m.op+=n; m.opS.add(ak); }); Object.entries(d.so||{}).forEach(([id,n])=>{ const m=mk(id); m.op+=n; m.opS.add(ak); }); });
   Object.values(M).forEach(m=>{ let a=0,b=0,h=0,sh=0,sec=0,okN=0,ex=0; Object.values(m.it).forEach(r=>{ sh+=r[0]; a+=r[1]; b+=r[2]; h+=r[3]+r[4]; sec+=r[5]; ex+=r[6]; okN+=r[1]; });
-    m.f1=a+b?a/(a+b):null; m.att=a+b; m.comp=m.s?Math.min(1,m.e/m.s):null; m.hint=sh?h/sh:0; m.sec=m.stu.size?sec/m.stu.size:0; m.qcR=m.op+m.s?m.qc/(m.op+m.s):0; m.exits=ex;
+    m.f1=a+b?a/(a+b):m.sv?m.sf/m.sv:null; m.att=a+b||m.sv; m.comp=m.s?Math.min(1,m.e/m.s):null; m.hint=sh?h/sh:0; m.sec=m.stu.size?Math.max(sec,m.ss)/m.stu.size:0; m.qcR=m.op+m.s?m.qc/(m.op+m.s):0; m.exits=ex; m.solR=m.sv+m.sl?m.sl/(m.sv+m.sl):null; m.skR=m.sv+m.sk?m.sk/(m.sv+m.sk):null;
     let worst=null; Object.entries(m.it).forEach(([k,r])=>{ const n=r[1]+r[2]; if(n<3) return; const e=r[2]/n; if(!worst||e>worst.e) worst={k,e,n}; }); m.worst=worst;
     let exit=null; Object.entries(m.it).forEach(([k,r])=>{ if(r[6]>=2&&(!exit||r[6]>exit.n)) exit={k,n:r[6]}; }); m.exit=exit;
-    m.score=m.stu.size&&m.f1!=null&&m.comp!=null?Math.max(0,Math.round(100*(0.35*m.comp+0.35*m.f1+0.15*dzR(m.re,m.stu.size)+0.15*(1-m.qcR))-Math.min(15,m.fb*5))):null; });
+    if(!worst){ const hk=Object.entries(m.hh).sort((x,y)=>y[1]-x[1])[0]; if(hk&&hk[1]>=3) m.hard={k:hk[0],n:hk[1]}; }
+    const comp=m.comp!=null?m.comp:m.solR!=null?1-m.solR:null; m.score=m.stu.size&&m.f1!=null&&comp!=null?Math.max(0,Math.round(100*(0.35*comp+0.35*m.f1+0.15*dzR(m.re,m.stu.size)+0.15*(1-m.qcR))-Math.min(15,m.fb*5))):null; });
   return M; }
 function dzQn(id,k){ const [si,ii]=String(k).split(".").map(Number); let D=null; try{ D=exData()[id]; }catch(e){} return D&&D.sec&&D.sec.length>1?`${si+1}.${ii+1}`:`${ii+1}`; }
 function dzMatHTML(P){ const M=dzMatAgg(P), sets=Object.values(M).filter(m=>m.stu.size).sort((a,b)=>b.stu.size-a.stu.size||b.s-a.s);
@@ -8692,11 +8707,12 @@ function dzMatHTML(P){ const M=dzMatAgg(P), sets=Object.values(M).filter(m=>m.st
   Object.values(M).forEach(m=>{ if(m.qc>=3&&m.qcR>=.4&&lvOk(m.id)) ins.push(["o","↩︎",`${esc(anTitle(m.id))}: ochganlarning ${Math.round(m.qcR*100)}% 10 soniyada yopadi`,"Kutilgan narsa emas yoki yuklanishi sekin bo‘lishi mumkin.",m.qc]); });
   ins.sort((a,b)=>(a[0]==="g")-(b[0]==="g")||b[4]-a[4]);
   /* jadval */
-  const rows=S.slice(0,30).map(m=>{ const op=DZ.open===m.id, hard=m.worst&&m.worst.e>=.3?`${dzQn(m.id,m.worst.k)}-savol (${Math.round(m.worst.e*100)}% xato)`:m.exit?`${dzQn(m.id,m.exit.k)}-savolda chiqish`:"—";
-    return `<tr class="dz-row${op?" on":""}" data-dzmat="${esc(m.id)}"><td class="t">${op?"▾":"▸"} ${esc(anTitle(m.id))}</td><td class="n">${m.stu.size}</td><td class="n">${m.comp==null?"—":Math.round(m.comp*100)+"%"}</td><td class="n${m.f1!=null&&m.f1<.6?" bad":""}">${m.f1==null?"—":Math.round(m.f1*100)+"%"}</td><td class="n">${m.sec?dzT(m.sec):"—"}</td><td>${hard}</td><td class="n">${m.fb||""}</td><td>${dzPill(m.score)}</td></tr>`; }).join(""), detM=DZ.open&&M[DZ.open]&&M[DZ.open].stu.size?M[DZ.open]:null;
+  const SORT=DZ.ms||"u"; S.sort((a,b)=>SORT==="b"?((a.score??101)-(b.score??101)):SORT==="f"?((a.f1??2)-(b.f1??2)):SORT==="t"?(b.sec-a.sec):(b.stu.size-a.stu.size||b.s-a.s));
+  const rows=S.slice(0,40).map(m=>{ const op=DZ.open===m.id, hard=m.worst&&m.worst.e>=.3?`${dzQn(m.id,m.worst.k)}-savol (${Math.round(m.worst.e*100)}% xato)`:m.exit?`${dzQn(m.id,m.exit.k)}-savolda chiqish`:m.hard?`${dzQn(m.id,m.hard.k)}-savol (✗ ${m.hard.n})`:"—";
+    return `<tr class="dz-row${op?" on":""}" data-dzmat="${esc(m.id)}"><td class="t">${op?"▾":"▸"} ${esc(anTitle(m.id))}</td><td class="n">${m.stu.size}</td><td class="n">${m.comp==null?"—":Math.round(m.comp*100)+"%"}</td><td class="n${m.f1!=null&&m.f1<.6?" bad":""}">${m.f1==null?"—":Math.round(m.f1*100)+"%"}</td><td class="n${m.solR>=.25?" bad":""}">${m.solR==null?"—":Math.round(m.solR*100)+"%"}</td><td class="n${m.skR>=.3?" bad":""}">${m.skR==null?"—":Math.round(m.skR*100)+"%"}</td><td class="n">${m.sec?dzT(m.sec):"—"}</td><td>${hard}</td><td class="n">${m.fb||""}</td><td>${dzPill(m.score)}</td></tr>`; }).join(""), detM=DZ.open&&M[DZ.open]&&M[DZ.open].stu.size?M[DZ.open]:null;
   /* qiyin so'zlar */
   const W={}; dzAll().forEach(([ak,d])=>(d.wd||[]).forEach(r=>{ const o=W[r[0]]||(W[r[0]]={k:r[0],s:0,b:0,e:0,eb:0,x:0,a:{},u:0}); o.s+=r[1]|0; o.b+=r[2]|0; o.e+=r[3]|0; o.eb+=r[4]|0; o.x+=r[5]|0; o.u++; (r[6]||[]).forEach(([a,n])=>o.a[a]=(o.a[a]||0)+n); }));
-  const hw=Object.values(W).filter(o=>o.s>=3||o.e>=3).map(o=>({...o,r:dzR(o.b,o.s),f:dzR(o.eb,o.e)})).sort((a,b)=>(b.r+b.f)-(a.r+a.f)).slice(0,12);
+  const hw=Object.values(W).filter(o=>o.s>=3||o.e>=3).map(o=>({...o,r:Math.min(1,dzR(o.b,o.s)),f:Math.min(1,dzR(o.eb,o.e))})).sort((a,b)=>(b.r+b.f)-(a.r+a.f)).slice(0,12);
   /* ishlatilmayotganlar */
   const un=Object.values(M).filter(m=>m.seen>=5&&byId[m.id]&&!byId[m.id].solOf&&!/^(loesung|plan)$/.test(byId[m.id].type)&&!byId[m.id].lock&&lvOk(m.id)).map(m=>({...m,cl:dzR(m.opS.size||m.stu.size,m.seen)})).filter(m=>m.cl<.12).sort((a,b)=>a.cl-b.cl||b.seen-a.seen).slice(0,10);
   /* sifat bahosi */
@@ -8711,16 +8727,14 @@ function dzMatHTML(P){ const M=dzMatAgg(P), sets=Object.values(M).filter(m=>m.st
   const sq=Object.entries(SQ).sort((a,b)=>b[1].u-a[1].u||b[1].n-a[1].n).slice(0,12);
   /* yangi materiallar */
   const d14=actDay(Date.now()-14*864e5), nw=Object.values(byId).filter(m=>m&&m.date&&m.date>=d14&&!m.solOf&&m.type!=="loesung"&&(!lvF||dzLek(m.id)&&dzLek(m.id).lv===lvF)).map(m=>{ const x=M[m.id]||{seen:0,stu:new Set(),opS:new Set()}; return {m,seen:x.seen,op:new Set([...(x.stu||[]),...(x.opS||[])]).size}; }).sort((a,b)=>b.m.date.localeCompare(a.m.date)).slice(0,10);
-  return `<div class="filters dz-chips">${["","A1","A2","B1"].map(l=>`<button type="button" class="dz-chip${DZ.lv===l?" on":""}" data-dzlv="${l}">${l||"Hammasi"}</button>`).join("")}</div>
-    ${ins.length?`<div class="dz-c"><h4>⚠️ Diqqat talab qiladi — avtomatik topilgan</h4>${dzIns(ins)}</div>`:""}
-    <div class="dz-c"><h4>Materiallar reytingi <small>${P} kun · ${S.length} ta interaktiv to‘plam · qatorni bosing — savollar ochiladi</small></h4>
-      ${rows?`<div class="dz-tw"><table class="dz-t"><tr><th>Material</th><th class="n">👥 Ochdi</th><th class="n">Oxirigacha</th><th class="n">1-urinishda ✓</th><th class="n">O‘rt. vaqt</th><th>Eng og‘ir joy</th><th class="n">👎</th><th>Holat</th></tr>${rows}</table></div>`:dzEmpty("Savol darajasidagi ma’lumot hali yo‘q — o‘quvchilar yangi versiyada mashq qilgach shu yerda ko‘rinadi.")}
-      <p class="dz-note">«Oxirigacha» — boshlangan bo‘limlarning necha foizi tugatilgan. «1-urinishda ✓» — savolga birinchi marta javob berganda to‘g‘ri. «O‘rt. vaqt» — bir o‘quvchi to‘plamda o‘tkazgan vaqt. «Holat» — sifat bahosi bo‘yicha.</p></div>
+  return `${ins.length?`<div class="dz-c"><h4>⚠️ Diqqat talab qiladi — avtomatik topilgan</h4>${dzIns(ins)}</div>`:""}
+    <div class="dz-c"><h4>Materiallar reytingi <small>${P} kun · ${S.length} ta interaktiv to‘plam · qatorni bosing — savollar ochiladi</small></h4><div class="dz-chips">${[["u","👥 Ko‘p ishlatilgan"],["b","🏅 Baho ↑ (zaiflar)"],["f","1-urinish ↑"],["t","⏱ Ko‘p vaqt"]].map(([k,l])=>`<button type="button" class="dz-chip${SORT===k?" on":""}" data-dzms="${k}">${l}</button>`).join("")}</div>
+      ${rows?`<div class="dz-tw"><table class="dz-t"><tr><th>Material</th><th class="n">👥 Ochdi</th><th class="n">Oxirigacha</th><th class="n">1-urinishda ✓</th><th class="n">💡 Lösung</th><th class="n">⏭ O‘tkazdi</th><th class="n">O‘rt. vaqt</th><th>Eng og‘ir joy</th><th class="n">👎</th><th>Baho</th></tr>${rows}</table></div>`:dzEmpty("Savol darajasidagi ma’lumot hali yo‘q — o‘quvchilar yangi versiyada mashq qilgach shu yerda ko‘rinadi.")}
+      <p class="dz-note">«Oxirigacha» — boshlangan bo‘limlarning necha foizi tugatilgan. «1-urinishda ✓» — birinchi javob to‘g‘ri. «💡 Lösung» / «⏭» — javobni ko‘rib o‘tganlar / o‘tkazib yuborganlar. «Baho» (0–100) = oxirigacha + 1-urinish + qayta qaytish + 10 s da yopilmagani − 👎.</p></div>
     ${detM?`<div class="dz-c" id="dz-det"><h4>Bitta material ichida — ${esc(anTitle(detM.id))} <small>${detM.stu.size} o‘quvchi · ${detM.s} marta boshlangan · ${detM.e} marta tugatilgan</small></h4>${dzMatDet(detM)}<button type="button" class="lrn-link" data-dzmat="${esc(detM.id)}">✕ Yopish</button></div>`:""}
     <div class="dz-two">
       <div class="dz-c"><h4>🧠 Eng qiyin so‘zlar <small>Yodlash · Esingizdami</small></h4>${hw.length?`<div class="dz-tw"><table class="dz-t sm"><tr><th>So‘z</th><th class="n">Xato</th><th class="n">7+ kunda unutdi</th><th>Odatdagi xato</th></tr>${hw.map(o=>{ const a=Object.entries(o.a).sort((p,q)=>q[1]-p[1])[0]; return `<tr><td lang="de"><b>${esc(o.k)}</b></td><td class="n">${o.s?Math.round(o.r*100)+"%":"—"}</td><td class="n">${o.e?Math.round(o.f*100)+"%":"—"}</td><td lang="de">${a?"«"+esc(a[0])+"»":"—"}</td></tr>`; }).join("")}</table></div>`:dzEmpty("Hali ma’lumot yo‘q.")}</div>
-      <div class="dz-c"><h4>🏅 Sifat bahosi <small>0–100</small></h4>${sc.length?`<div class="dz-tw"><table class="dz-t sm"><tr><th>Eng yaxshi</th><th class="n">Baho</th></tr>${best.map(m=>`<tr><td>${esc(anTitle(m.id))}</td><td class="n ok">${m.score}</td></tr>`).join("")}${worst.length?`<tr><th>Eng zaif</th><th class="n">Baho</th></tr>${worst.map(m=>`<tr><td>${esc(anTitle(m.id))}</td><td class="n bad">${m.score}</td></tr>`).join("")}`:""}</table></div>`:dzEmpty("Kamida 2 o‘quvchi ishlagan to‘plamlar bo‘yicha hisoblanadi.")}
-        <p class="dz-note">Baho = oxirigacha (35%) + 1-urinishda ✓ (35%) + qayta qaytib ishlaganlar (15%) + 10 soniyada yopilmagani (15%) − 👎 xabarlar.</p></div></div>
+      <div class="dz-c"><h4>Qism bo‘yicha <small>vaqt · yechilgan · 1-urinishda ✓</small></h4>${(()=>{ const parts={}; Object.values(TP.stu||{}).forEach(d=>Object.entries(((d||{}).a||{}).p||{}).forEach(([k,v])=>{ const o=parts[k]||(parts[k]=[0,0,0,0]); v.forEach((x,i)=>o[i]+=x|0); })); const pk=Object.keys(parts).sort((a,b)=>parts[b][0]-parts[a][0]), mx=Math.max(1,...pk.map(k=>parts[k][0])); return pk.length?pk.map(k=>{ const v=parts[k], I=k==="t"?{ic:"📝",nm:"Test"}:anPartInfo(k); return dzBar(I.ic+" "+esc(I.nm),v[0],mx,`${Math.round(v[0]/60)} daq · ${dzP(v[2],v[1])}`); }).join(""):dzEmpty("Hali yo‘q."); })()}</div></div>
     <div class="dz-c"><h4>💤 Ishlatilmayotgan materiallar <small>ro‘yxatda ko‘rinadi, lekin kam ochiladi</small></h4>${un.length?`<div class="dz-tw"><table class="dz-t sm"><tr><th>Material</th><th class="n">Ko‘rindi</th><th class="n">Ochdi</th><th class="n">10 s da yopildi</th></tr>${un.map(m=>`<tr><td>${esc(anTitle(m.id))}</td><td class="n">${m.seen}</td><td class="n bad">${dzP(m.opS.size||m.stu.size,m.seen)}</td><td class="n">${m.qc||""}</td></tr>`).join("")}</table></div>`:dzEmpty("Hozircha bunday material topilmadi (kamida 5 marta ko‘ringan, 12% dan kam ochilgan).")}
       <p class="dz-note">«Ko‘rindi» — material ro‘yxatda ekranda paydo bo‘lgan; «Ochdi» — shundan qanchasi ochilgan. Kam ochilgan, lekin ochganlar yaxshi baholagan material — joyini o‘zgartirish kerak.</p></div>
     <div class="dz-c"><h4>🗺 Lektion × qism — ${esc(LV)} <small>30 kunda o‘quvchilar soni · «—» material yo‘q</small></h4>${lessons.length?`<div class="dz-tw"><table class="dz-t dz-mx"><tr><th>Lektion</th>${parts.map(p=>`<th class="n">${anPartInfo(p).ic}</th>`).join("")}</tr>${lessons.map(n=>`<tr><td>L${n}</td>${parts.map(p=>{ const k=n+"|"+p, v=cell[k]?cell[k].size:0; return has[k]?(v?`<td class="n" style="--a:${(0.12+0.6*v/cmx).toFixed(2)}"><b>${v}</b></td>`:`<td class="n z">0</td>`):`<td class="n mu">—</td>`; }).join("")}</tr>`).join("")}</table></div>`:dzEmpty("Bu darajada material yo‘q.")}
@@ -8729,7 +8743,7 @@ function dzMatHTML(P){ const M=dzMatAgg(P), sets=Object.values(M).filter(m=>m.st
       <div class="dz-c"><h4>🔍 Qidiruvda yozildi — topilmadi</h4>${sq.length?`<table class="dz-t sm"><tr><th>So‘rov</th><th class="n">Necha marta</th><th class="n">👥</th></tr>${sq.map(([q,o])=>`<tr><td>${esc(q)}</td><td class="n">${o.n}</td><td class="n">${o.u}</td></tr>`).join("")}</table>`:dzEmpty("Hali topilmagan so‘rov yo‘q.")}<p class="dz-note">O‘quvchilar nimani qidirib, topa olmayapti — yangi material uchun tayyor ro‘yxat.</p></div>
       <div class="dz-c"><h4>🆕 Yangi materiallar <small>oxirgi 14 kun</small></h4>${nw.length?`<table class="dz-t sm"><tr><th>Material</th><th class="n">Ko‘rindi</th><th class="n">👥 Ochdi</th></tr>${nw.map(x=>`<tr><td>${esc(anTitle(x.m.id))} <small class="mu">${esc(x.m.date.slice(5).split("-").reverse().join("."))}</small></td><td class="n">${x.seen}</td><td class="n">${x.op}</td></tr>`).join("")}</table>`:dzEmpty("Oxirgi 14 kunda yangi material qo‘shilmagan.")}</div></div>`; }
 function dzMatDet(m){ const ks=Object.keys(m.it).sort((a,b)=>{ const [a1,a2]=a.split(".").map(Number), [b1,b2]=b.split(".").map(Number); return a1-b1||a2-b2; });
-  if(!ks.length) return dzEmpty("Savol bo‘yicha ma’lumot yo‘q.");
+  if(!ks.length){ const H=Object.entries(m.hh||{}).sort((a,b)=>b[1]-a[1]).slice(0,15); return H.length?`<ol class="an-hard">${H.map(([k,n])=>{ const I=anItem(m.id,k); return `<li class="an-hli" data-anq="${esc(m.id)}|${esc(k)}"><div class="an-hq"><b>${dzQn(m.id,k)}. ${esc(I.q)}</b>${I.a?` <span class="an-ha">→ ${esc(I.a)}</span>`:""}</div><small>${I.h?esc(I.h)+" · ":""}<u>ochish ↗</u></small><span class="an-hn">✗ ${n}</span></li>`; }).join("")}</ol><p class="dz-note">Batafsil (1-urinish %, vaqt, xato javoblar) — chuqur ma’lumot kelgach.</p>`:dzEmpty("Savol bo‘yicha ma’lumot yo‘q."); }
   return `<div class="dz-qs">${ks.map(k=>{ const r=m.it[k], n=r[1]+r[2], p=n?r[1]/n:null, W=m.wa[k]||{}, wt=Object.values(W).reduce((a,b)=>a+b,0), top=Object.entries(W).sort((a,b)=>b[1]-a[1])[0], I=anItem(m.id,k), sec=r[1]?r[5]/r[1]:0;
       return `<div class="dz-q" data-anq="${esc(m.id)}|${esc(k)}" title="Savolni ochish"><span class="t">${dzQn(m.id,k)}</span><span class="b"><i style="width:${p==null?0:Math.round(p*100)}%;background:${p==null?"var(--line)":p>=.75?"var(--green)":p>=.5?"var(--orange)":"var(--red-ink,#C62828)"}"></i></span><span class="v">${p==null?"—":Math.round(p*100)+"%"}</span>
         <small><b>${esc(I.q.slice(0,70))}</b> · ${sec?Math.round(sec)+" s":"—"}${top?` · xato: «${esc(top[0])}» ${dzP(top[1],wt)}`:""}${r[3]+r[4]?` · 💡 ${dzP(r[3]+r[4],r[0])}`:""}${r[6]?` · chiqib ketdi ${r[6]}`:""}</small></div>`; }).join("")}</div>
@@ -8763,8 +8777,9 @@ function dzWzHTML(P){ const days=new Set(anDays(P)), {T,U}=dzSum(days), E=dzEd(d
   /* funksiyalar holati */
   const H=[]; const st=(f,lo,hi)=>f==null?"":f>=hi?`<span class="dz-pill r">yomon</span>`:f>=lo?`<span class="dz-pill o">muammo</span>`:`<span class="dz-pill g">yaxshi</span>`;
   if(sTry) H.push(["🎙 Talaffuz (mikrofon)",sTry,dzR(sErr,sTry),`ruxsat yo‘q: ${e("wzs:err")} · eshitilmadi: ${e("wzs:unclear")}`,st(dzR(sErr,sTry),.08,.2)]);
-  if(vt) H.push(["🔊 Ovoz (nemischa)",vt,dzR(V.tts|0,vt),"robot ovozi (Azure ishlamadi)",st(dzR(V.tts|0,vt),.03,.1)]);
-  if(cn) H.push(["🃏 Karteikarten",cn,dzR(cq,cn),"10 s ichida yopildi",st(dzR(cq,cn),.2,.4)]);
+  if(vt) H.push(["🔊 Ovoz (nemischa)",vt,dzR(V.tts|0,vt),[["az","Seraphina"],["wk","jonli nemis"],["pick","tanlangan"],["mp3","mp3"],["tts","robot"]].filter(([k])=>V[k]).map(([k,l])=>l+" "+dzP(V[k],vt)).join(" · ")+` · 🔁 qayta tinglash ${e("wza:again")}`,st(dzR(V.tts|0,vt),.03,.1)]);
+  if(cn) H.push(["🃏 Karteikarten",cn,dzR(cq,cn),`10 s ichida yopildi · karta ag‘darildi: ${(e("wzm:flip")/cn).toFixed(1)} / mashg‘ulot`,st(dzR(cq,cn),.2,.4)]);
+  if(e("wz:lernen")) H.push(["🧠 Lernen",e("wz:lernen"),dzR(x("wzq10:lernen"),e("wz:lernen")),`10 s ichida yopildi · «Keine Ahnung»: ${e("wzm:dunno")}`,st(dzR(x("wzq10:lernen"),e("wz:lernen")),.2,.4)]);
   const mxV=x("hv:mx"), mxC=x("hc:mx"); if(mxV) H.push(["📝 Xatolarim",mxC,null,`tugma ko‘rindi: ${mxV} · bosildi: ${dzP(mxC,mxV)}`,dzR(mxC,mxV)<.1?`<span class="dz-pill o">kam bosiladi</span>`:`<span class="dz-pill g">yaxshi</span>`]);
   const mu=e("wz:mu"), mq=x("wzq10:mu"); if(mu) H.push(["💬 Mini-chat",mu,dzR(mq,mu),"10 s ichida yopildi",st(dzR(mq,mu),.2,.4)]);
   if(fwr||x("wzo:ov")) H.push(["✍️ Yozish · tekshirish",fwr,null,`«to‘g‘ri yozdim» bosildi: ${x("wzo:ov")} (${dzP(x("wzo:ov"),fwr+x("wzo:ov"))})`,dzR(x("wzo:ov"),fwr+x("wzo:ov"))>=.08?`<span class="dz-pill o">qattiq</span>`:`<span class="dz-pill g">yaxshi</span>`]);
@@ -8775,14 +8790,17 @@ function dzWzHTML(P){ const days=new Set(anDays(P)), {T,U}=dzSum(days), E=dzEd(d
   const nx=dzPf(T,"tr:y>"), nxt=Object.values(nx).reduce((a,b)=>a+b,0), nxl=Object.entries(nx).sort((a,b)=>b[1]-a[1]).slice(0,7);
   return `<div class="dz-kpis">${dzKpi(dzF(opU),"Yodlash’ni ochgan o‘quvchilar",opens?dzF(opens)+" marta":"")}${dzKpi(med,"Bir kirishda o‘rganilgan so‘z (mediana)")}${dzKpi(nbT?dzP(nb["0"]|0,nbT):"—","0 ta so‘z bilan chiqib ketganlar")}${dzKpi(r7n?dzP(r7ok,r7n):"—","7+ kundan keyin esda (Esingizdami)")}</div>
     ${ins.length?`<div class="dz-c"><h4>⚠️ Avtomatik topilgan</h4>${dzIns(ins.sort((a,b)=>b[4]-a[4]))}</div>`:""}
-    <div class="dz-c"><h4>Qaysi usul ko‘p ishlatiladi va qaysi biri samarali <small>${P} kun</small></h4>${M.length?`<div class="dz-tw"><table class="dz-t"><tr><th>Usul</th><th class="n">Kirishlar</th><th class="n">Ulush</th><th class="n">O‘rt. vaqt</th><th class="n">Oxirigacha</th><th class="n">O‘rganilgan so‘z</th><th class="n">So‘z / daqiqa</th><th class="n">10 s da yopildi</th></tr>
-      ${M.sort((a,b)=>b.n-a.n).map(r=>`<tr><td>${r.ic} ${esc(r.nm)}</td><td class="n">${dzF(r.n)}</td><td class="n">${dzP(r.n,sumN)}</td><td class="n">${r.t&&r.n?dzT(r.t/r.n):"—"}</td><td class="n">${r.c?dzP(r.c,r.n):"—"}</td><td class="n">${r.w?dzF(r.w):"—"}</td><td class="n">${r.w&&r.t?(r.w/(r.t/60)).toFixed(1):"—"}</td><td class="n${r.q/r.n>=.3?" bad":""}">${r.q?dzP(r.q,r.n):"—"}</td></tr>`).join("")}</table></div>`:dzEmpty("Ma’lumot 23.10 dan yig‘ilmoqda.")}
+    <div class="dz-c"><h4>Qaysi usul ko‘p ishlatiladi va qaysi biri samarali <small>${P} kun</small></h4>${M.length?`<div class="dz-tw"><table class="dz-t"><tr><th>Usul</th><th class="n">👥 O‘quvchi</th><th class="n">Kirishlar</th><th class="n">Ulush</th><th class="n">O‘rt. vaqt</th><th class="n">Oxirigacha</th><th class="n">O‘rganilgan so‘z</th><th class="n">So‘z / daqiqa</th><th class="n">10 s da yopildi</th></tr>
+      ${M.sort((a,b)=>b.n-a.n).map(r=>`<tr><td>${r.ic} ${esc(r.nm)}</td><td class="n">${dzF(E.U["wz:"+r.k]|0)}</td><td class="n">${dzF(r.n)}</td><td class="n">${dzP(r.n,sumN)}</td><td class="n">${r.t&&r.n?dzT(r.t/r.n):"—"}</td><td class="n">${r.c?dzP(r.c,r.n):"—"}</td><td class="n">${r.w?dzF(r.w):"—"}</td><td class="n">${r.w&&r.t?(r.w/(r.t/60)).toFixed(1):"—"}</td><td class="n${r.q/r.n>=.3?" bad":""}">${r.q?dzP(r.q,r.n):"—"}</td></tr>`).join("")}</table></div>`:dzEmpty("Ma’lumot 23.10 dan yig‘ilmoqda.")}
       <p class="dz-note">«Oxirigacha» — Lernen’da tanlangan maqsad (5/10/… so‘z) bajarilgani, Karteikarten va Esingizdami’da oxirgi karta, o‘yinlarda — o‘yin tugagani. Vaqt va «10 s» — 23.10 dan.</p></div>
     <div class="dz-c"><h4>Yodlash ichidagi yo‘l</h4>${opens&&l1.length?dzFlow({l:"🧠 Yodlash",s:"ochildi "+dzF(opens)},l1,l2,{aria:"Yodlash ichidagi yo‘llar"}):dzEmpty("Ma’lumot yetarli emas.")}<p class="dz-note">Foiz — Yodlash ochilishlariga nisbatan. Bir ochilishda bir nechta usul bo‘lishi mumkin.</p></div>
     <div class="dz-two">
       <div class="dz-c"><h4>Nechta so‘z o‘rganib chiqib ketishadi <small>bir kirishda</small></h4>${nbT?NB.map(([k,l])=>dzBar(l,nb[k]|0,Math.max(...Object.values(nb)),dzP(nb[k]|0,nbT),k==="0"?"x":"")).join(""):dzEmpty("Ma’lumot yo‘q.")}
         ${G.length?`<p class="dz-note">Maqsad bo‘yicha: ${G.map(r=>`«${r[0]}» tanlaganlarning ${dzP(r[2],r[1])} tugatdi`).join(" · ")}.</p>`:""}</div>
-      <div class="dz-c"><h4>Lernen bosqichlari: qayerda «tushib qoladi»</h4>${fin?[["👀 Tanishuv",fin],["🧩 Tanlash ✓",fmc],["✍️ Yozish ✓",fwr],["✅ O‘rganildi",fl]].map(([l,v],i,a)=>dzBar(l,v,fin,dzP(v,fin)+(i&&v<a[i-1][1]?` <small>−${Math.round((1-dzR(v,a[i-1][1]||1))*100)}%</small>`:""))).join("")+(r7n?dzBar("🧠 7+ kunda esda",r7ok,r7n,dzP(r7ok,r7n),"g"):""):dzEmpty("Ma’lumot 23.10 dan yig‘ilmoqda.")}</div></div>
+      <div class="dz-c"><h4>Qayerda chiqib ketishadi <small>Yodlash yopilgan paytdagi bosqich</small></h4>${xt?Object.entries(X).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([k,v],i,a)=>dzBar(esc(WZ_ST[k]||k),v,a[0][1],dzP(v,xt),/_end$/.test(k)?"g":"")).join("")+`<p class="dz-note">Natija ekranida chiqish — normal (ish tugagan).</p>`:dzEmpty("Hali yo‘q.")}</div></div>
+    <div class="dz-two">
+      <div class="dz-c"><h4>Lernen bosqichlari: qayerda «tushib qoladi»</h4>${fin?[["👀 Tanishuv",fin],["🧩 Tanlash ✓",fmc],["✍️ Yozish ✓",fwr],["✅ O‘rganildi",fl]].map(([l,v],i,a)=>dzBar(l,v,fin,dzP(v,fin)+(i&&v<a[i-1][1]?` <small>−${Math.round((1-dzR(v,a[i-1][1]||1))*100)}%</small>`:""))).join("")+(r7n?dzBar("🧠 7+ kunda esda",r7ok,r7n,dzP(r7ok,r7n),"g"):""):dzEmpty("Ma’lumot 23.10 dan yig‘ilmoqda.")}</div>
+      <div class="dz-c"><h4>🔁 Esingizdami: necha kundan keyin esladi</h4>${(()=>{ const RC=[["1","1 kun"],["3","3 kun"],["7","7 kun"],["14","14 kun"],["30","30 kun"]].map(([k,l])=>[l,x("esr:"+k+":1"),x("esr:"+k+":1")+x("esr:"+k+":0")]).filter(r=>r[2]); return RC.length?RC.map(([l,ok,n])=>dzBar(l,ok,n,dzP(ok,n),"g")).join(""):dzEmpty("Hali yo‘q."); })()}</div></div>
     <div class="dz-c"><h4>🩺 Qaysi funksiya ishlamayapti yoki ishlatilmayapti</h4>${H.length?`<div class="dz-tw"><table class="dz-t sm"><tr><th>Funksiya</th><th class="n">Urinish</th><th class="n">Muvaffaqiyatsiz</th><th>Holat</th></tr>${H.map(r=>`<tr><td>${r[0]}<small class="dz-sub">${r[3]}</small></td><td class="n">${dzF(r[1])}</td><td class="n">${r[2]==null?"—":Math.round(r[2]*100)+"%"}</td><td>${r[4]}</td></tr>`).join("")}</table></div>`:dzEmpty("Ma’lumot yo‘q.")}
       <p class="dz-note">«Muvaffaqiyatsiz» — funksiya ishga tushmadi, xato berdi yoki o‘quvchi darhol tashlab ketdi.</p></div>
     <div class="dz-two">
@@ -8828,8 +8846,7 @@ function dzRtHTML(P){ const days=new Set(anDays(P)), {T}=dzSum(days), root=DZ.ro
         ${rgl.length?`<h5>👆 Bir joyni 3 marta tez bosish</h5>${rgl.map(([k,v])=>{ const [s,l]=k.split("|"); return dzBar(dzIc(s)+" «"+esc(l)+"»",v,rgl[0][1],String(v),"x"); }).join("")}`:""}
         ${sqNo+sqOk?`<p class="dz-note">🔍 Qidiruv: ${sqNo+sqOk} ta so‘rov, ${dzP(sqNo,sqNo+sqOk)} — hech narsa topilmadi.</p>`:""}
         ${!qcl.length&&!rgl.length&&!(sqNo+sqOk)?dzEmpty("Hali belgilar yo‘q."):""}</div></div>
-    <div class="dz-c"><h4>👤 Bitta o‘quvchining yo‘li</h4><select class="dz-sel" data-dzstu="1"><option value="">— o‘quvchini tanlang —</option>${SL.map(([ak,d])=>`<option value="${esc(ak)}"${ak===DZ.stu?" selected":""}>${esc(String(d.nm||"?").slice(0,40))}</option>`).join("")}</select>
-      ${cur?`<div class="dz-path">${(cur.sp||[]).slice().sort((a,b)=>b.t-a.t).map(s=>`<div class="dz-ps"><b>${new Date(s.t).toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit"})} ${hm(s.t)}</b> ${(s.s||[]).map(([c,sec])=>`<span title="${hm(s.t+sec*1000)}">${esc(dzN(c))}</span>`).join(" → ")} <em>${s.w?s.w+" so‘z · ":""}${s.a|0} javob${s.e?" · "+Math.max(1,Math.round((s.e-s.t)/60000))+" daq":""}</em></div>`).join("")||dzEmpty("Yo‘l yo‘q.")}</div>`:""}</div>`; }
+`; }
 
 /* ===================== 🌐 SAYT RIVOJI ===================== */
 function dzGrHTML(P){ const days=anDays(P), dset=new Set(days), {T,U}=dzSum(dset), E=dzEd(dset), e=k=>E.T[k]|0, now=Date.now();
@@ -8885,41 +8902,33 @@ function dzGrHTML(P){ const days=anDays(P), dset=new Set(days), {T,U}=dzSum(dset
   const lvD={}; STU.forEach(([id,d])=>{ const l=PROG_LV[progLv(d.w|0)]; if(l) lvD[l.de]=[l.e,(lvD[l.de]?lvD[l.de][1]:0)+1,l.n]; });
   const actDays=[...act.values()].reduce((s,m)=>{ let n=0; for(const [day,o] of m.d) if(dset.has(day)&&o.s>=60) n++; return s+n; },0), wP=wordsIn(days[0],days[days.length-1]);
   const RC=[["1","1 kun"],["3","3 kun"],["7","7 kun"],["14","14 kun"],["30","30 kun"]].map(([k,l])=>[l,T["esr:"+k+":1"]|0,(T["esr:"+k+":1"]|0)+(T["esr:"+k+":0"]|0)]).filter(r=>r[2]);
-  return `<div class="dz-kpis">${dzKpi(dzF(wa),"Haftalik faol o‘quvchi",dlt(wa,wp),wa>=wp?"up":"dn")}${dzKpi(dzF(ww),"Bir haftada o‘rganilgan so‘z",dlt(ww,wwp),ww>=wwp?"up":"dn")}${dzKpi(ret==null?"—":Math.round(ret*100)+"%","7-kun qaytish (o‘tgan hafta → bu hafta)",dlt(ret,retP,"pp"),ret>=retP?"up":"dn")}${dzKpi(K==null||!gOk?"—":K.toFixed(2),"Virallik (K-faktor)",gOk?"":"mehmon hisoblagichi kerak")}</div>
-    ${ins.length?`<div class="dz-c"><h4>⚠️ Avtomatik xulosalar va takliflar</h4>${dzIns(ins)}</div>`:""}
-    ${(()=>{ try{ return dzTimeHTML(days,act); }catch(e){ return ""; } })()}
-    <div class="dz-c"><h4>Voronka: tashrifdan odatgacha <small>${P} kun · yangi qurilmalar</small></h4>${gOk?(()=>{ const F=[["🆕 Saytni ochdi","nd"],["Ro‘yxatdan o‘tdi","rg"],["1-javob / 1-so‘z","f1"],["10 so‘z o‘rgandi","w10"],["2-kuni qaytdi","r1"],["7-kuni qaytdi","r7"]].map(([l,f])=>[l,g(f)]); return F.map(([l,v],i)=>dzBar(l,v,F[0][1]||1,dzF(v)+(i?` <small>${F[i-1][1]?"−"+Math.max(0,Math.round((1-v/F[i-1][1])*100))+"%":""}</small>`:""))).join(""); })():dzEmpty(TP.gsErr?"⚠️ Mehmon hisoblagichlari o‘qilmadi — Firebase qoidalarida «gs» bo‘limini Publish qiling.":"Mehmon hisoblagichlari bugundan yig‘ila boshlaydi (Firebase qoidasi Publish qilingach).")}
-      <p class="dz-note">Ismsiz, qurilma bo‘yicha bir martadan sanaladi. «Ro‘yxat» — shu qurilmada yangi akkaunt ochildi.</p></div>
+  /* 2026-10-23 (Otabek: «tahlilni bitta qilaylik, takrorlarni olib tashla») — Sayt rivoji bo'limi */
+  const now2=Date.now(), REG=TP.anReg||[], r7=REG.filter(t=>t>=now2-7*864e5).length, r7p=REG.filter(t=>t>=now2-14*864e5&&t<now2-7*864e5).length;
+  const SD7=[]; act.forEach(m=>{ for(const [day,o] of m.d){ if(day>=D(6)&&o.s>=60) SD7.push(o.s); } }), SD7p=[]; act.forEach(m=>{ for(const [day,o] of m.d){ if(day>=D(13)&&day<=D(7)&&o.s>=60) SD7p.push(o.s); } });
+  const avgD=L=>L.length?Math.round(L.reduce((a,b)=>a+b,0)/L.length/60):null, k1=avgD(SD7), k0=avgD(SD7p);
+  const hvc=(v,c)=>T["hv:"+v]?dzP(T["hc:"+c||v]|0,T["hv:"+v]):"—";
+  const FXX={y:hvc("go","go"),es:hvc("es","es"),dc:hvc("dc","dc"),rk:hvc("rk","rk"),nw:hvc("nw","nw"),cm:hvc("cm","cm"),du:e("cm:du")?dzP(e("cm:du_ok"),e("cm:du"))+" qabul":"—"};
+  const appN=STU.filter(([id,d])=>d.a&&d.a.app).length, shU=STU.filter(([id,d])=>Object.entries((d.a||{}).ed||{}).some(([day,E2])=>dset.has(day)&&Object.keys(E2).some(k=>k.startsWith("share:")))).length;
+  const extra=[["📲 Ilova (o‘rnatgan)",dzP(appN,STU.length),"—",e("app:ask")?dzP(e("app:askyes"),e("app:ask"))+" «Ha»":"—"],["📤 Ulashish (rasm, link)",dzP(shU,STU.length),dzF(shares),"—"],["📣 Marafon kartasi","—","—",T["hv:mr"]?dzP(T["hc:mr"]|0,T["hv:mr"]):"—"],["🤝 Do‘stlik · 🏫 guruh taklifi","—",dzF(e("cm:fr")+e("cm:g")),(e("cm:fr")+e("cm:g"))?dzP(e("cm:fr_ok")+e("cm:g_ok"),e("cm:fr")+e("cm:g"))+" qabul":"—"]];
+  return `<div class="dz-kpis">${dzKpi(dzF(wa),"Haftalik faol o‘quvchi",dlt(wa,wp),wa>=wp?"up":"dn")}${dzKpi(dzF(r7),"Yangi ro‘yxat · 7 kun",dlt(r7,r7p),r7>=r7p?"up":"dn")}${dzKpi(ret==null?"—":Math.round(ret*100)+"%","7-kun qaytish",dlt(ret,retP,"pp"),ret>=retP?"up":"dn")}${dzKpi(k1==null?"—":k1+" daq","Kuniga · bir o‘quvchi",k1!=null&&k0!=null?(k1>=k0?"▲ ":"▼ ")+Math.abs(k1-k0)+" daq":"",k1>=k0?"up":"dn")}${dzKpi(K==null||!gOk?"—":K.toFixed(2),"Virallik (K-faktor)",gOk?"":"mehmon hisoblagichi kerak")}</div>
+    ${ins.length?`<div class="dz-c"><h4>⚠️ Avtomatik xulosalar</h4>${dzIns(ins)}</div>`:""}
+    ${(()=>{ try{ return tahGrowthHTML(P,act,days); }catch(er){ return ""; } })()}
+    ${(()=>{ try{ return dcChartHTML(P); }catch(er){ return ""; } })()}
     <div class="dz-two">
-      <div class="dz-c"><h4>Kogortalar: qaytish <small>birinchi faollik haftasi bo‘yicha</small></h4>${coh.length?`<table class="dz-t sm coh"><tr><th>Hafta</th><th class="n">Odam</th><th class="n">1-kun</th><th class="n">7-kun</th><th class="n">14-kun</th><th class="n">30-kun</th></tr>${coh.map(c=>`<tr><td>${c.lbl}</td><td class="n">${c.n}</td>${["r1","r7","r14","r30"].map(k=>`<td class="n"${c[k]!=null?` style="--a:${(0.1+0.6*c[k]).toFixed(2)}"`:""}>${c[k]==null?"—":Math.round(c[k]*100)+"%"}</td>`).join("")}</tr>`).join("")}</table>`:dzEmpty("Hali yo‘q.")}</div>
-      <div class="dz-c"><h4>Qayerdan kelishadi</h4>${gOk?`<table class="dz-t sm"><tr><th>Manba</th><th class="n">Yangi qurilma</th><th class="n">Ro‘yxat</th><th class="n">7-kun</th></tr>${GS_SRC.map(s=>[s,g("nd_"+s),g("rg_"+s),g("r7_"+s)]).filter(r=>r[1]||r[2]).sort((a,b)=>b[1]-a[1]).map(r=>`<tr><td>${dzSrcN(r[0])}</td><td class="n">${r[1]}</td><td class="n">${dzP(r[2],r[1])}</td><td class="n">${dzP(r[3],r[1])}</td></tr>`).join("")||`<tr><td colspan="4" class="mu">—</td></tr>`}</table>`:dzEmpty("Mehmon hisoblagichlari kerak.")}</div></div>
-    <div class="dz-c"><h4>🧰 Har bir funksiya — to‘liq ro‘yxat <small>${P} kun · ${actN} o‘quvchi (chuqur ma’lumoti bor)</small></h4>${fx.length?`<div class="dz-tw"><table class="dz-t"><tr><th>Funksiya</th><th class="n">Foydalanganlar</th><th class="n">Ishlatildi</th><th class="n">O‘rt. vaqt</th><th class="n">7-kun qaytish</th><th>Trend (4 hafta)</th></tr>${fx.sort((a,b)=>b.u-a.u).map(r=>`<tr><td>${r.l}</td><td class="n">${dzP(r.u,actN)}</td><td class="n">${dzF(r.n)}</td><td class="n">${r.t&&r.n?dzT(r.t/r.n):"—"}</td><td class="n${r.lift!=null&&r.lift<0?" bad":r.lift>0?" ok":""}">${r.lift==null?"—":(r.lift>=0?"+":"")+Math.round(r.lift*100)+" p.p."}</td><td class="spk">${dzSpark(r.tr)}</td></tr>`).join("")}<tr><td>📤 Ulashish (rasm, link, natija)</td><td class="n">${dzP(STU.filter(([id,d])=>Object.values((d.a||{}).ed||{}).some(E2=>Object.keys(E2).some(k=>k.startsWith("share:")))).length,STU.length)}</td><td class="n">${dzF(shares)}</td><td class="n">—</td><td class="n">—</td><td></td></tr></table></div>`:dzEmpty("Ma’lumot 23.10 dan yig‘ilmoqda.")}
-      <p class="dz-note">«Foydalanganlar» — tanlangan davrda chuqur ma’lumoti bor o‘quvchilarning necha foizi kamida bir marta ochgan. «7-kun qaytish» — oldingi haftada ishlatganlar bu hafta ishlatmaganlardan necha foiz ko‘proq qaytgan (kamida 14 kunlik o‘quvchilar). Trend — haftalik ochilishlar.</p></div>
+      <div class="dz-c"><h4>Voronka: tashrifdan odatgacha <small>${P} kun · yangi qurilmalar</small></h4>${gOk?(()=>{ const F=[["🆕 Saytni ochdi","nd"],["Ro‘yxatdan o‘tdi","rg"],["1-javob / 1-so‘z","f1"],["10 so‘z o‘rgandi","w10"],["2-kuni qaytdi","r1"],["7-kuni qaytdi","r7"]].map(([l,f])=>[l,g(f)]); return F.map(([l,v],i)=>dzBar(l,v,F[0][1]||1,dzF(v)+(i&&F[i-1][1]&&v<F[i-1][1]?` <small>−${Math.round((1-v/F[i-1][1])*100)}%</small>`:""))).join(""); })():dzEmpty(TP.gsErr?"⚠️ Mehmon hisoblagichlari o‘qilmadi — Firebase qoidalarida «gs» bo‘limini Publish qiling.":"Mehmon hisoblagichlari Firebase qoidasi Publish qilingan kundan yig‘iladi.")}</div>
+      <div class="dz-c"><h4>Qayerdan kelishadi</h4>${gOk?`<table class="dz-t sm"><tr><th>Manba</th><th class="n">Yangi</th><th class="n">Ro‘yxat</th><th class="n">7-kun</th></tr>${GS_SRC.map(s=>[s,g("nd_"+s),g("rg_"+s),g("r7_"+s)]).filter(r=>r[1]||r[2]).sort((a,b)=>b[1]-a[1]).map(r=>`<tr><td>${dzSrcN(r[0])}</td><td class="n">${r[1]}</td><td class="n">${dzP(r[2],r[1])}</td><td class="n">${dzP(r[3],r[1])}</td></tr>`).join("")||`<tr><td colspan="4" class="mu">—</td></tr>`}</table>`:dzEmpty("Mehmon hisoblagichlari kerak.")}</div></div>
+    <div class="dz-c"><h4>🧰 Funksiyalar — bitta jadval <small>${P} kun · foydalanish, ko‘rdi → bosdi, qaytishga ta’siri</small></h4>${fx.length||STU.length?`<div class="dz-tw"><table class="dz-t"><tr><th>Funksiya</th><th class="n">Foydalanganlar</th><th class="n">Ishlatildi</th><th class="n">O‘rt. vaqt</th><th class="n">Ko‘rdi → bosdi</th><th class="n">Qaytishga ta’siri</th><th>Trend</th></tr>${fx.sort((a,b)=>b.u-a.u).map(r=>`<tr><td>${r.l}</td><td class="n">${dzP(r.u,actN)}</td><td class="n">${dzF(r.n)}</td><td class="n">${r.t&&r.n?dzT(r.t/r.n):"—"}</td><td class="n">${FXX[r.c]||"—"}</td><td class="n${r.lift!=null&&r.lift<0?" bad":r.lift>0?" ok":""}">${r.lift==null?"—":(r.lift>=0?"+":"")+Math.round(r.lift*100)+" p.p."}</td><td class="spk">${dzSpark(r.tr)}</td></tr>`).join("")}${extra.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td><td class="n">${r[2]}</td><td class="n">—</td><td class="n">${r[3]}</td><td class="n">—</td><td></td></tr>`).join("")}</table></div>`:dzEmpty("Ma’lumot yig‘ilmoqda.")}
+      <p class="dz-note">«Foydalanganlar» — chuqur ma’lumoti bor o‘quvchilarning necha foizi ochgan. «Ko‘rdi → bosdi» — karta yoki tugma ekranda ko‘ringanda necha foizi bosgan. «Qaytishga ta’siri» — ishlatganlar ishlatmaganlardan necha foiz ko‘p qaytadi.</p></div>
     <div class="dz-two">
-      <div class="dz-c"><h4>Qachon o‘qishadi <small>hafta kuni × soat, daqiqa</small></h4><div class="dz-hm"><span></span>${bins.map(h=>`<span>${h}</span>`).join("")}${ord.map(dw=>`<span>${DN[dw]}</span>${bins.map(h=>{ const v=HW[dw*24+h]+HW[dw*24+h+1]; return `<i style="opacity:${v?(0.12+0.88*v/(hwMax*2)).toFixed(2):0.05}" title="${DN[dw]} ${h}:00–${h+2}:00 · ${v} daq"></i>`; }).join("")}`).join("")}</div><p class="dz-note">Eslatma, Duel taklifi va yangilik chiqarish vaqtini tanlash uchun.</p></div>
-      <div class="dz-c"><h4>📊 O‘sish hisobi <small>hafta bo‘yicha</small></h4><table class="dz-t sm"><tr><th>Hafta</th><th class="n">🆕 Yangi</th><th class="n">🔁 Qolgan</th><th class="n">♻️ Qaytgan</th><th class="n">💤 Ketgan</th></tr>${ga.map(r=>`<tr><td>${r.lbl}</td><td class="n">${r.n}</td><td class="n">${r.r}</td><td class="n">${r.bk}</td><td class="n${r.ch?" bad":""}">${r.ch?"−"+r.ch:"0"}</td></tr>`).join("")}</table><p class="dz-note">«Qaytgan» — oldingi haftada yo‘q edi, bu hafta keldi. O‘sish = yangi + qaytgan − ketgan.</p></div></div>
+      <div class="dz-c"><h4>Kogortalar: qaytish <small>birinchi faollik haftasi</small></h4>${coh.length?`<table class="dz-t sm coh"><tr><th>Hafta</th><th class="n">Odam</th><th class="n">1-kun</th><th class="n">7-kun</th><th class="n">14-kun</th><th class="n">30-kun</th></tr>${coh.map(c=>`<tr><td>${c.lbl}</td><td class="n">${c.n}</td>${["r1","r7","r14","r30"].map(k=>`<td class="n"${c[k]!=null?` style="--a:${(0.1+0.6*c[k]).toFixed(2)}"`:""}>${c[k]==null?"—":Math.round(c[k]*100)+"%"}</td>`).join("")}</tr>`).join("")}</table>`:dzEmpty("Hali yo‘q.")}</div>
+      <div class="dz-c"><h4>📊 O‘sish hisobi <small>hafta bo‘yicha</small></h4><table class="dz-t sm"><tr><th>Hafta</th><th class="n">🆕 Yangi</th><th class="n">🔁 Qolgan</th><th class="n">♻️ Qaytgan</th><th class="n">💤 Ketgan</th></tr>${ga.map(r=>`<tr><td>${r.lbl}</td><td class="n">${r.n}</td><td class="n">${r.r}</td><td class="n">${r.bk}</td><td class="n${r.ch?" bad":""}">${r.ch?"−"+r.ch:"0"}</td></tr>`).join("")}</table></div></div>
     <div class="dz-two">
-      <div class="dz-c"><h4>🔔 Eslatma va kartalar samarasi</h4><table class="dz-t sm"><tr><th>Nima</th><th class="n">Ko‘rdi</th><th class="n">Bosdi</th><th>Natija</th></tr>
-        <tr><td>🧠 Esingizdami kartasi</td><td class="n">${T["hv:es"]|0}</td><td class="n">${dzP(T["hc:es"]|0,T["hv:es"]|0)}</td><td>${dzP(T["wzc:es"]|0,e("wz:es"))} tugatdi</td></tr>
-        <tr><td>📲 Ilovaga o‘tish taklifi</td><td class="n">${e("app:ask")+e("app:soft")}</td><td class="n">${dzP(e("app:askyes"),e("app:ask"))}</td><td>${e("app:install")} o‘rnatdi</td></tr>
-        <tr><td>🆕 Yangiliklar</td><td class="n">${e("wn:ask")}</td><td class="n">${dzP(e("wn:open"),e("wn:ask"))}</td><td>—</td></tr>
-        <tr><td>⚔️ Duel taklifi</td><td class="n">${duS}</td><td class="n">${dzP(duO,duS)}</td><td>qabul</td></tr>
-        <tr><td>🤝 Do‘stlik so‘rovi</td><td class="n">${e("cm:fr")}</td><td class="n">${dzP(e("cm:fr_ok"),e("cm:fr"))}</td><td>qabul</td></tr>
-        <tr><td>🏫 Guruhga taklif</td><td class="n">${e("cm:g")}</td><td class="n">${dzP(e("cm:g_ok"),e("cm:g"))}</td><td>qabul</td></tr></table></div>
-      <div class="dz-c"><h4>📚 O‘qish natijasi</h4>
-        <p class="dz-note" style="margin-top:0">Bir faol kunda o‘rtacha <b>${actDays?Math.round(wP/actDays):0}</b> so‘z · ${P} kunda jami <b>${dzF(wP)}</b> so‘z.</p>
-        ${Object.keys(lvD).length?Object.entries(lvD).sort((a,b)=>a[1][2]-b[1][2]).map(([de,[ic,n]])=>dzBar(ic+" "+esc(de),n,Math.max(...Object.values(lvD).map(v=>v[1])),String(n))).join(""):""}
-        ${RC.length?`<h5>Esingizdami: necha kundan keyin esladi</h5>${RC.map(([l,ok,n])=>dzBar(l,ok,n,dzP(ok,n),"g")).join("")}`:""}</div></div>
-    <div class="dz-two">
-      <div class="dz-c"><h4>🧲 Tarqalish</h4>
-        ${dzBar("📤 Ulashishlar",shares,Math.max(shares,1),dzF(shares))}
-        ${Object.entries(E.T).filter(([k])=>k.startsWith("share:")).sort((a,b)=>b[1]-a[1]).slice(0,7).map(([k,v])=>dzBar(esc(DZ_SH[k.slice(6)]||k.slice(6)),v,Math.max(shares,1),String(v))).join("")}
-        ${gOk?`<p class="dz-note">K-faktor = do‘st linki, maqtanish rasmi, o‘yin va ichki link orqali ro‘yxatdan o‘tganlar (${soc}) ÷ faol o‘quvchilar (${activeP}). 1 dan oshsa — sayt o‘zi o‘sadi.</p>`:""}</div>
-      <div class="dz-c"><h4>🩺 Sifat va texnik holat</h4>
+      <div class="dz-c"><h4>Qachon o‘qishadi <small>hafta kuni × soat, daqiqa</small></h4><div class="dz-hm"><span></span>${bins.map(h=>`<span>${h}</span>`).join("")}${ord.map(dw=>`<span>${DN[dw]}</span>${bins.map(h=>{ const v=HW[dw*24+h]+HW[dw*24+h+1]; return `<i style="opacity:${v?(0.12+0.88*v/(hwMax*2)).toFixed(2):0.05}" title="${DN[dw]} ${h}:00–${h+2}:00 · ${v} daq"></i>`; }).join("")}`).join("")}</div></div>
+      <div class="dz-c"><h4>🩺 Texnik holat · ⏳ Ketish xavfi</h4>
         <p class="dz-note" style="margin-top:0">Brauzer: ${Object.entries(brw).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${{tg:"Telegram ichida",ig:"Instagram ichida",ios:"iPhone",and:"Android",pc:"Kompyuter"}[k]||k} ${dzP(v,dxA.length)}`).join(" · ")||"—"}</p>
         ${ldT?`<h5>Sahifa yuklanishi</h5>${[["1","1 s gacha"],["3","1–3 s"],["6","3–6 s"],["9","6 s dan ko‘p"]].map(([k,l])=>dzBar(l,LD[k]|0,ldT,dzP(LD[k]|0,ldT),k==="9"||k==="6"?"x":"")).join("")}`:""}
         <p class="dz-note">⚠️ JS xatolari: ${jsE}${Object.keys(jeC).length?" — "+Object.entries(jeC).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([k,v])=>`«${esc(k)}» ×${v}`).join(" · "):""}</p>
-        ${risk.length?`<h5>⏳ Ketish xavfi <small>faol edi, 3–9 kundan beri kirmagan</small></h5><p class="dz-note" style="margin-top:0">${risk.map(n=>esc(n)).join(" · ")}</p>`:""}</div></div>`; }
+        ${risk.length?`<h5>⏳ Faol edi, 3–9 kundan beri kirmagan</h5><p class="dz-note" style="margin-top:0">${risk.map(n=>esc(n)).join(" · ")}</p>`:""}</div></div>`; }
 /* ⏱ Kuniga qancha vaqt ishlatishadi (2026-10-23, Otabek: «tahlilga kuniga necha soat ishlatishini qo'sh») — faol vaqt: sahifa ochiq va oxirgi 90 s ichida bosilgan/yozilgan */
 function dzTimeHTML(days,act){ const T={}, N={}, SD=[], stu=[]; days.forEach(d=>{ T[d]=0; N[d]=0; });
   act.forEach(m=>{ let tot=0, ad=0; for(const [day,o] of m.d){ if(!(day in T)) continue; T[day]+=o.s; if(o.s>=60){ N[day]++; SD.push(o.s); ad++; tot+=o.s; } } if(ad) stu.push({nm:m.nm||"?",ad,tot,avg:tot/ad}); });
@@ -8938,6 +8947,92 @@ function dzTimeHTML(days,act){ const T={}, N={}, SD=[], stu=[]; days.forEach(d=>
       <h5>Hafta kuni bo‘yicha (jami, o‘rtacha)</h5>${wavg.map(([l,v])=>dzBar(l,v,wm,hm(v))).join("")}</div></div>
     ${top.length?`<h5>Eng ko‘p vaqt ajratadiganlar</h5><table class="dz-t sm"><tr><th>O‘quvchi</th><th class="n">Kuniga</th><th class="n">Faol kun</th><th class="n">Jami</th></tr>${top.map(r=>`<tr><td>${esc(String(r.nm).slice(0,40))}</td><td class="n">${hm(r.avg)}</td><td class="n">${r.ad}</td><td class="n">${hm(r.tot)}</td></tr>`).join("")}</table>`:""}
     <p class="dz-note">Faol kun — kamida 1 daqiqa ishlagan kun. Saytda ochiq turib, 90 soniyadan ko‘p hech narsa bosilmasa, vaqt sanalmaydi.</p></div>`; }
+/* ===== 🧭 O'sish nimaning hisobiga (2026-10-23, Otabek: «o'sish nimani hisobiga bo'lyatkanini ham aniqlashimiz kk») =====
+   Yangi o'quvchilar manba bo'yicha — gs/<kun> rg_<manba> (ismsiz hisoblagich); u bo'lmasa — umumiy ro'yxat (n/). To'q sariq chiziq — saytdagi o'zgarish kuni (TAH_REL). */
+const TAH_REL=[["2026-10-21","📊 Faollik kuzatuvi"],["2026-10-22","📲 Ilova · 🏆 Reyting"],["2026-10-23","📣 Marafon · 🏆 Maqtanish rasmi"]]; /* yangi katta o'zgarish chiqqanda shu ro'yxatga qo'shiladi */
+const TAH_SRC=[["ref","📣 Marafon / do‘st linki","#1F4FA0"],["brag","🏆 Maqtanish rasmi","#E67E22"],["du","⚔️ Duel · Challenge linki","#1E8E4E"],["lnk","📤 Ichki link","#0b7a75"],["ig","📷 Instagram","#C2185B"],["tg","✈️ Telegram","#7A4FB3"],["web","🌐 Qidiruv","#8a6d00"],["dir","🔗 To‘g‘ridan","#9AA7BB"]];
+function tahGrowthHTML(P,act,days){ const GS=TP.gs||{}, now=Date.now(), n=days.length, reg=TP.anReg||[];
+  const byDay=days.map(d=>{ const o=GS[d]||{}, src={}; let tot=0; TAH_SRC.forEach(([k])=>{ const v=o["rg_"+k]|0; src[k]=v; tot+=v; }); const all=reg.filter(t=>actDay(t)===d).length; if(all>tot) src.etc=all-tot; return {d,src,tot:Math.max(tot,all)}; });
+  const hasSrc=byDay.some(x=>TAH_SRC.some(([k])=>x.src[k])), mx=Math.max(1,...byDay.map(x=>x.tot)), step=n<=7?1:n<=14?2:n<=31?5:14;
+  const cols=[...TAH_SRC,["etc",hasSrc?"❔ Manbasi noma’lum":"🆕 Ro‘yxatdan o‘tganlar","#9DB6E6"]];
+  const bars=byDay.map((x,i)=>`<div class="tg-c" title="${x.d.slice(8)}.${x.d.slice(5,7)}: ${x.tot}">${cols.map(([k,,c])=>x.src[k]?`<i style="height:${(x.src[k]/mx*100).toFixed(1)}%;background:${c}"></i>`:"").join("")}${n<=16&&x.tot?`<em style="bottom:calc(${(x.tot/mx*100).toFixed(1)}% + 2px)">${x.tot}</em>`:""}</div>`).join("");
+  let mi=0; const mk=TAH_REL.map(([d,l])=>{ const i=days.indexOf(d); if(i<0) return ""; const x=i/n*100, r=x>50; return `<span class="tg-mk" style="left:${x.toFixed(2)}%"><b style="top:${(mi++%2)*14}px;${r?"right:3px;left:auto":""}">${esc(l)}</b></span>`; }).join("");
+  /* jadval: manba → yangi, ulush, faol (10 so'z), 7-kun, oldingi davrga */
+  const G=(f,a,b)=>Object.keys(GS).filter(k=>k>=a&&k<=b).reduce((s,k)=>s+(GS[k][f]|0),0), a=days[0], b=days[n-1], pa=actDay(new Date(a).getTime()-P*864e5), pb=actDay(new Date(a).getTime()-864e5);
+  const rows=TAH_SRC.map(([k,l])=>({k,l,nw:G("rg_"+k,a,b),w10:G("w10_"+k,a,b),r7:G("r7_"+k,a,b),prev:G("rg_"+k,pa,pb)})).filter(r=>r.nw||r.prev), tot=rows.reduce((s,r)=>s+r.nw,0);
+  /* faollik o'sishi: yangi / eskilar ko'proq / qaytganlar */
+  const W2a=days[0], W1a=actDay(new Date(W2a).getTime()-P*864e5), W1b=actDay(new Date(W2a).getTime()-864e5); let nN=0,nX=0,nR=0,nL=0;
+  act.forEach(m=>{ let m2=0,m1=0,old=false; for(const [d,o] of m.d){ if(d>=W2a) m2+=o.s; else if(d>=W1a&&d<=W1b) m1+=o.s; else if(d<W1a&&o.s>=60) old=true; }
+    const isNew=m.f&&actDay(m.f)>=W2a; if(isNew) nN+=m2; else if(m1>0){ const dl=m2-m1; if(dl>0) nX+=dl; else nL+=-dl; } else if(m2>0&&old) nR+=m2; else if(m2>0) nN+=m2; });
+  const pos=nN+nX+nR, net=pos-nL, h=s=>{ const m=Math.round(s/60); return m>=60?Math.round(m/6)/10+" soat":m+" daq"; };
+  const ins=[]; if(tot>=5){ const top=rows.slice().sort((x,y)=>y.nw-x.nw)[0]; ins.push(["g","📈",`O‘sishning ${dzP(top.nw,tot)} — ${top.l}`,`${top.nw} ta yangi o‘quvchi${top.prev?`, oldingi ${P} kunda ${top.prev} ta edi`:""}. Ulardan ${dzP(top.w10,top.nw)} 10 so‘zgacha yetdi.`]); }
+  if(pos>0) ins.push([nX>=nN?"g":"o","🔁",nX>=nN?`Faollik asosan eski o‘quvchilar hisobiga oshdi (${dzP(nX,pos)})`:`Faollik asosan yangi o‘quvchilar hisobiga (${dzP(nN,pos)})`,`Yangi: +${h(nN)} · eskilar ko‘proq: +${h(nX)} · qaytganlar: +${h(nR)}${nL?` · kamaygan: −${h(nL)}`:""}.`]);
+  return `<div class="dz-c"><h4>🧭 O‘sish nimaning hisobiga <small>har kuni yangi ro‘yxatdan o‘tganlar — qayerdan kelgani bo‘yicha · to‘q sariq chiziq — saytdagi o‘zgarish kuni</small></h4>
+    <div class="tg" style="--n:${n}"><div class="tg-p">${bars}${mk}</div><div class="ab-x">${days.map((d,i)=>`<span>${(n-1-i)%step===0?d.slice(8)+"."+d.slice(5,7):""}</span>`).join("")}</div></div>
+    <div class="tg-lg">${cols.filter(([k])=>byDay.some(x=>x.src[k])).map(([k,l,c])=>`<span><i style="background:${c}"></i>${esc(l)}</span>`).join("")}</div>
+    ${hasSrc?"":`<p class="dz-note">Manba bo‘yicha bo‘linish Firebase qoidasi Publish qilingan kundan boshlab yig‘iladi — hozircha jami son.</p>`}
+    ${rows.length?`<div class="dz-tw"><table class="dz-t sm"><tr><th>Manba</th><th class="n">Yangi o‘quvchi</th><th class="n">Ulushi</th><th class="n">10+ so‘z</th><th class="n">7-kun qaytdi</th><th class="n">Oldingi ${P} kunga</th></tr>${rows.sort((x,y)=>y.nw-x.nw).map(r=>`<tr><td>${esc(r.l)}</td><td class="n">${r.nw}</td><td class="n"><b>${dzP(r.nw,tot)}</b></td><td class="n">${dzP(r.w10,r.nw)}</td><td class="n">${dzP(r.r7,r.nw)}</td><td class="n${r.nw>=r.prev?" ok":" bad"}">${r.prev?(r.nw>=r.prev?"▲ ":"▼ ")+dzP(Math.abs(r.nw-r.prev),r.prev):r.nw?"yangi":"—"}</td></tr>`).join("")}</table></div>`:""}
+    <h5>Faollik o‘sishi nimadan <small class="mu">(oldingi ${P} kunga nisbatan, faol vaqt)</small></h5>
+    ${pos?`<div class="tg-sp"><i style="width:${dzR(nN,pos)*100}%;background:#1F4FA0"></i><i style="width:${dzR(nX,pos)*100}%;background:#1E8E4E"></i><i style="width:${dzR(nR,pos)*100}%;background:#E67E22"></i></div>
+      <div class="tg-lg"><span><i style="background:#1F4FA0"></i>🆕 Yangi o‘quvchilar +${h(nN)}</span><span><i style="background:#1E8E4E"></i>🔁 Eskilar ko‘proq o‘qiyapti +${h(nX)}</span><span><i style="background:#E67E22"></i>♻️ Qaytganlar +${h(nR)}</span>${nL?`<span>📉 kamaygan −${h(nL)}</span>`:""}<span><b>Jami: ${net>=0?"+":"−"}${h(Math.abs(net))}</b></span></div>`:dzEmpty("Oldingi davr bilan solishtirish uchun ma’lumot hali kam.")}
+    ${ins.length?dzIns(ins):""}</div>`; }
+
+/* ===== 👤 Bitta o'quvchi — kunma-kun yo'li (2026-10-23, Otabek: «bitta o'quvchini ustiga bosib, uni yo'lini qayerda qancha o'tirganini ketma-ketligi bilan, kunini ustiga bosib») ===== */
+function tahStepName(c,mid){ let t=dzN(c); try{ if(mid){ if(/^ex:|^pdf/.test(c)) t+=" · "+anTitle(mid); else if(c==="y"){ const D=lernData()[mid], m=byId[mid]; const tt=(m&&m.title)||(D&&D.title)||""; if(tt) t+=" · "+String(tt).replace(/\s*·\s*Deutsch[–-].*$/,""); } } }catch(e){} return t; }
+function tahDayHTML(who,day){ const d=(TP.dx||{})[who]; if(!d) return `<p class="dz-note">👤 Bu o‘quvchining batafsil yo‘li hali kelmagan — u saytning yangi versiyasiga kirgach (va Firebase qoidasi Publish qilingach) paydo bo‘ladi.</p>`;
+  const S=(d.sp||[]).filter(s=>actDay(s.t)===day).sort((a,b)=>a.t-b.t); if(!S.length) return `<p class="dz-note">👤 ${day.slice(8)}.${day.slice(5,7)} — bu kunda kirish yozilmagan.</p>`;
+  const hm=t=>{ const x=new Date(t); return String(x.getHours()).padStart(2,"0")+":"+String(x.getMinutes()).padStart(2,"0"); }, dur=s=>s<60?Math.max(1,Math.round(s))+" s":Math.round(s/60)+" daq";
+  const CAT={}, SRC={lnk:"📤 ichki link orqali",game:"⚔️ o‘yin linki orqali",ref:"📣 do‘st linki orqali"}; let tot=0, W=0, A=0, OK=0, html="", prevEnd=0;
+  S.forEach((s,si)=>{ const end=s.e||s.t, steps=(s.s||[]).filter(x=>!/^lek:/.test(x[0])||true);
+    if(si&&prevEnd){ const gap=(s.t-prevEnd)/60000; if(gap>=5) html+=`<div class="tl-gap">… ${gap>=60?Math.floor(gap/60)+" soat "+Math.round(gap%60)+" daq":Math.round(gap)+" daq"} tanaffus</div>`; }
+    steps.forEach((st,i)=>{ const [c,sec,mid,w,a,ok]=st, nx=steps[i+1], len=Math.max(0,(nx?nx[1]:(end-s.t)/1000)-sec); if(/^lek:/.test(c)) return; tot+=len; const cat=/^ex:/.test(c)?"ex":c; CAT[cat]=(CAT[cat]||0)+len; W+=w|0; A+=a|0; OK+=ok|0;
+      const det=[]; if(i===0&&s.src&&SRC[s.src]) det.push(SRC[s.src]); if(w) det.push(`+${w} so‘z`); if(a) det.push(`${a} javob${ok!=null&&a?` · ${ok} tasi 1-urinishda ✓`:""}`);
+      html+=`<div class="tl-i"><time>${hm(s.t+sec*1000)}</time><b>${esc(tahStepName(c,mid))}</b><em>${len?dur(len):""}</em>${det.length?`<small>${esc(det.join(" · "))}</small>`:""}</div>`; });
+    html+=`<div class="tl-i x"><time>${hm(end)}</time><b>🚪 Chiqib ketdi</b><em></em></div>`; prevEnd=end; });
+  const cats=Object.entries(CAT).filter(([,v])=>v>=30).sort((a,b)=>b[1]-a[1]), CC=["#1F4FA0","#1E8E4E","#E67E22","#7A4FB3","#C2185B","#0b7a75","#9AA7BB"];
+  const cn=c=>c==="ex"?"✍️ Mashqlar":dzN(c);
+  return `<div class="tl-box"><h5>👤 ${esc(d.nm||"")} · ${day.slice(8)}.${day.slice(5,7)} · ${dur(tot)} · ${S.length} marta kirgan</h5>
+    ${cats.length?`<div class="tg-sp">${cats.map(([c,v],i)=>`<i style="width:${(v/tot*100).toFixed(1)}%;background:${CC[i%CC.length]}"></i>`).join("")}</div><div class="tg-lg">${cats.map(([c,v],i)=>`<span><i style="background:${CC[i%CC.length]}"></i>${esc(cn(c))} ${dur(v)}</span>`).join("")}</div>`:""}
+    <div class="tl">${html}</div><p class="dz-note">Kun natijasi: ${W} yangi so‘z · ${A} javob${A?` (${dzP(OK,A)} birinchi urinishda ✓)`:""}.</p></div>`; }
+
+/* ===== 📣 Marafon tahlili (2026-10-23, Otabek: «marathon tahlilini ham qo'sh») ===== */
+function tahMrHTML(P){ if(!TP.mrL&&!TP.mrRef) mrTpLoad(); const S=Object.entries(TP.stu||{}).filter(([id,d])=>d&&d.nm), R=TP.mrRef||[], days=anDays(P), dset=new Set(days);
+  const byNm={}; S.forEach(([id,d])=>{ byNm[String(d.nm).trim().toLowerCase()]=d; });
+  const regs=R.filter(r=>r.nm), vis=R.filter(r=>!r.nm), parts=S.filter(([id,d])=>d.mr&&d.mr.p>0);
+  const fr=regs.map(r=>{ const f=byNm[String(r.nm).trim().toLowerCase()], days2=f&&f.a&&f.a.dd?f.a.dd.filter(x=>x[1]>=60).length:null; return {r,f,w:r.w|0,real:r.w>=100||(r.gr|0)>=MR.GR,d3:days2!=null&&days2>=3}; });
+  const w10=fr.filter(x=>x.w>=10).length, real=fr.filter(x=>x.real).length, d3=fr.filter(x=>x.d3).length;
+  let pay=0; try{ pay=Object.values(mrAlloc(parts.map(([id,d])=>[d.ak?audId("rk:"+d.ak):id,{mr:d.mr}]))).reduce((s,v)=>s+v,0); }catch(e){}
+  const pts={ref:0,r100:0,app:0,oth:0}; parts.forEach(([id,d])=>{ const m=d.mr; pts.ref+=m.ref|0; pts.r100+=(m.r100|0)*6; pts.app+=(m.app|0)*10; pts.oth+=Math.max(0,(m.p|0)-(m.ref|0)-(m.r100|0)*6-(m.app|0)*10); }), ptT=pts.ref+pts.r100+pts.app+pts.oth;
+  const dist=[["0",0,0],["1–9",1,9],["10–49",10,49],["50+",50,1e9]].map(([l,a,b])=>[l,S.filter(([id,d])=>{ const p=(d.mr&&d.mr.p)|0; return p>=a&&p<=b; }).length]);
+  const E={}; S.forEach(([id,d])=>Object.entries((d.a||{}).ed||{}).forEach(([day,o])=>{ if(!dset.has(day)) return; for(const k in o) E[k]=(E[k]||0)+(o[k]|0); }));
+  const X={}; Object.values(TP.dx||{}).forEach(d=>Object.entries(d.x||{}).forEach(([day,o])=>{ if(!dset.has(day)) return; for(const k in o) X[k]=(X[k]||0)+(o[k]|0); }));
+  const GS=TP.gs||{}, mkM=TP.mrM||"v", vals=days.map(d=>mkM==="v"?vis.filter(r=>actDay(r.t)===d).length:mkM==="r"?((GS[d]||{}).rg_ref|0)+((GS[d]||{}).rg_brag|0):S.reduce((s,[id,x])=>s+((((x.a||{}).ed||{})[d]||{})["share:ref"]|0),0));
+  const sus=[]; S.forEach(([id,d])=>{ const mine=fr.filter(x=>x.r.by===d._rc||x.r.by===d._rc8); if(mine.length>=5&&mine.filter(x=>x.w>=10).length/mine.length<.3) sus.push([d.nm,mine.length,mine.filter(x=>x.w>=10).length]); });
+  const best=S.map(([id,d])=>{ const mine=fr.filter(x=>x.r.by===d._rc||x.r.by===d._rc8); return [d.nm,mine.length,mine.filter(x=>x.w>=10).length]; }).filter(x=>x[1]>=3).sort((a,b)=>dzR(b[2],b[1])-dzR(a[2],a[1])||b[2]-a[2])[0];
+  const ins=[]; sus.slice(0,3).forEach(x=>ins.push(["r","🚩",`${esc(x[0])}: ${x[1]} ta odam olib kelgan, faqat ${x[2]} tasi 10 so‘zga yetgan`,"Pastdagi ro‘yxatda tekshiring — kerak bo‘lsa «🚫 Chetlatish»."]));
+  if(regs.length>=5&&w10/regs.length<.5) ins.push(["o","📉",`Olib kelinganlarning ${dzP(regs.length-w10,regs.length)} 10 so‘zga ham yetmagan`,"Taklif: do‘st linki orqali kelganga 1-kun «10 so‘z» maqsadi va do‘sti bilan Duel taklifi."]);
+  if(best) ins.push(["g","🏆",`Eng sifatli tarqatuvchi: ${esc(best[0])} — ${best[1]} odam, ${best[2]} tasi faol`,""]);
+  const mxV=Math.max(1,...vals), n=days.length, step=n<=7?1:n<=14?2:n<=31?5:14;
+  return `<div class="dz-kpis">${dzKpi(dzF(parts.length),"Qatnashchi (≥1 ball)")}${dzKpi(dzF(regs.length),"Olib kelingan odam",`linkni ochgan: ${vis.length}`)}${dzKpi(dzF(w10),"Faol bo‘lgan (10+ so‘z)",dzP(w10,regs.length))}${dzKpi(w10&&pay?dzF(Math.round(pay/w10))+" so‘m":"—","Bir faol odam narxi",pay?`${mrSum(pay)} ÷ ${w10}`:"")}${dzKpi(mrActive()?mrDays()+" kun":"tugadi","Qolgan vaqt")}</div>
+    ${ins.length?`<div class="dz-c"><h4>⚠️ Marafon — avtomatik topilgan</h4>${dzIns(ins)}</div>`:""}
+    <div class="dz-c"><h4>Har kuni — marafon bo‘yicha <small>${P} kun</small></h4><div class="dz-chips">${[["v","🔗 Link ochildi"],["r","🆕 Link orqali ro‘yxat"],["s","📤 Link ulashildi"]].map(([k,l])=>`<button type="button" class="dz-chip${mkM===k?" on":""}" data-tahmr="${k}">${l}</button>`).join("")}</div>
+      ${anSvgBars(vals,days.map(d=>d.slice(5)),"var(--blue)",70,n>16)}${mkM==="r"&&!Object.keys(GS).length?`<p class="dz-note">Ro‘yxat soni manba bo‘yicha Firebase qoidasi Publish qilingach yig‘iladi.</p>`:""}</div>
+    <div class="dz-two">
+      <div class="dz-c"><h4>Olib kelinganlar sifati</h4>${[["🔗 Linkni ochdi",vis.length+regs.length],["Ro‘yxatdan o‘tdi",regs.length],["10+ so‘z",w10],["100 so‘z yoki 5 grammatika (ball beradi)",real],["3+ kun faol",d3]].map(([l,v],i,a)=>dzBar(l,v,a[0][1]||1,dzF(v)+(i&&a[i-1][1]&&v<a[i-1][1]?` <small>−${Math.round((1-v/a[i-1][1])*100)}%</small>`:""))).join("")}</div>
+      <div class="dz-c"><h4>Ball nimadan kelyapti</h4>${ptT?[["👤 Do‘st ro‘yxatdan o‘tdi",pts.ref],["💯 Do‘st 100 so‘z / grammatika",pts.r100],["📲 Ilova o‘rnatish",pts.app],["📤 Ulashish va boshqalar",pts.oth]].map(([l,v])=>dzBar(l,v,ptT,dzP(v,ptT))).join(""):dzEmpty("Hali ball yo‘q.")}
+        <h5>Ballar taqsimoti (hamma o‘quvchi)</h5>${dist.map(([l,v])=>dzBar(l+" ball",v,Math.max(1,...dist.map(x=>x[1])),String(v),l==="0"?"x":"")).join("")}</div></div>
+    <div class="dz-c"><h4>Marafon kartasi samarasi <small>${P} kun</small></h4><p class="dz-note" style="margin-top:0">Kartani ko‘rdi: <b>${X["hv:mr"]|0}</b> · bosdi: <b>${dzP(X["hc:mr"]|0,X["hv:mr"]|0)}</b> · yetakchi ismini bosib reytingga o‘tdi: <b>${X["hc:mrld"]|0}</b> · link ulashildi: <b>${E["share:ref"]|0}</b> marta.</p></div>
+    ${mrTpHTML()}`; }
+document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closest("[data-tahday]"); if(!b) return; const id=b.dataset.tahday, d=(TP.stu||{})[id]; TP.dcW=(d&&d.ak)||id; TP.dcSel=null; TP.dcM="t"; TP.anT="s"; TP.tab="an"; tpRender(); setTimeout(()=>{ const c=document.querySelector(".dcc"); if(c) c.scrollIntoView({block:"start",behavior:"smooth"}); },120); });
+document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closest("[data-tahmr]"); if(!b) return; TP.mrM=b.dataset.tahmr; tpStDrawSoon(); });
+
+/* ===== 📊 Tahlil — bitta oyna (2026-10-23) ===== */
+const TAH_T=[["s","🌐 Sayt rivoji"],["m","📚 Materiallar"],["w","🧠 Wortschatz"],["r","🧭 Yo‘llar"],["f","📣 Marafon"]];
+function tahLvOk(d){ if(!TP.anLv) return true; try{ const r=stReach(d); return !!r&&r.lv===TP.anLv; }catch(e){ return true; } }
+function tahBody(P,t){ const stu0=TP.stu, dx0=TP.dx; if(TP.anLv&&t!=="m"&&t!=="f"){ const S={}, keep=new Set(); Object.entries(stu0||{}).forEach(([id,d])=>{ if(d&&tahLvOk(d)){ S[id]=d; keep.add(d.ak||id); } }); const X={}; Object.entries(dx0||{}).forEach(([ak,d])=>{ if(keep.has(ak)) X[ak]=d; }); TP.stu=S; TP.dx=X; }
+  try{ if(t==="m"){ DZ.lv=TP.anLv||""; return dzMatHTML(P); } if(t==="w") return dzWzHTML(P); if(t==="r") return dzRtHTML(P); if(t==="f") return tahMrHTML(P); return dzGrHTML(P); }
+  catch(e){ return `<p class="dz-note">⚠️ ${esc(String(e&&e.message||e))}</p>`; } finally{ TP.stu=stu0; TP.dx=dx0; } }
+
 const DZ_SH={brag:"🏆 Maqtanish rasmi",bragdl:"⬇️ Rasm saqlandi",bragopen:"🏆 Rasm ochildi",ref:"📣 Do‘st linki","link-y":"📤 Yodlash linki","link-x":"📤 Mashq linki","link-l":"📤 Lektion linki","link-d":"📤 Konspekt linki","link-r":"📤 Reyting linki",du:"⚔️ Duel linki",kc:"🃏 Karteikarten natijasi",lt:"🎯 Live test natijasi",kg:"🎮 Sinf o‘yini natijasi",dl:"⬇️ Natija saqlandi"};
 function dzSrcN(s){ return {ref:"📣 Do‘st linki / QR",brag:"🏆 Maqtanish rasmi",du:"⚔️ Duel / Challenge linki",lnk:"📤 Ichki link (Lektion, mashq…)",ig:"📷 Instagram",tg:"✈️ Telegram",web:"🌐 Qidiruv (Google…)",dir:"🔗 To‘g‘ridan"}[s]||s; }
 
@@ -8961,7 +9056,7 @@ document.addEventListener("click",e=>{ const el=document.getElementById("dz"); i
   const rt=t.closest("[data-dzroot]"); if(rt&&rt.dataset.dzroot){ DZ.root=rt.dataset.dzroot; dzDraw(); return; }
   if(t.closest("[data-anq]")) return;
   const mr=t.closest("[data-dzmat]"); if(mr){ DZ.open=DZ.open===mr.dataset.dzmat?"":mr.dataset.dzmat; dzDraw(); const dt=document.getElementById("dz-det"); if(dt) dt.scrollIntoView({block:"start",behavior:"smooth"}); return; } });
-document.addEventListener("click",e=>{ if(e.target.closest&&e.target.closest("[data-dzopen]")) dzOpen(); });
+
 document.addEventListener("change",e=>{ if(e.target&&e.target.dataset&&e.target.dataset.dzstu){ DZ.stu=e.target.value; dzDraw(); } });
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ const el=document.getElementById("dz"); if(el&&!el.hidden&&(!exEl()||exEl().hidden)) dzClose(); } });
 
@@ -8993,6 +9088,7 @@ function dcChartHTML(P){ const mk=TP.dcM||"t", who=TP.dcW||"", S=dcSeries(P,who)
         <div class="dc-bars">${vals.map((v,i)=>{ const dd=S.days[i], wk=new Date(dd+"T12:00:00").getDay(); if(nd(i)) return `<button type="button" class="dc-b nd" data-dcb="${i}" title="${dd.slice(8)}.${dd.slice(5,7)}: ma’lumot yo‘q"><i></i></button>`; return `<button type="button" class="dc-b${i===sel?" on":""}${wk===0?" we":""}" data-dcb="${i}" title="${dd.slice(8)}.${dd.slice(5,7)}: ${esc(dcFmt(mk,v))}"><i style="height:${(v/top*100).toFixed(1)}%"></i>${n<=14&&v?`<em style="bottom:calc(${(v/top*100).toFixed(1)}% + 2px)">${esc(mk==="t"&&v>=60?String(Math.round(v/6)/10).replace(".",",")+(n<=7?" soat":""):String(v))}</em>`:""}</button>`; }).join("")}</div>
         <svg class="dc-ma" viewBox="0 0 ${n} 100" preserveAspectRatio="none"><polyline points="${ma.map((v,i)=>v==null?"":`${(i+.5).toFixed(2)},${(100-v/top*100).toFixed(2)}`).filter(Boolean).join(" ")}" fill="none" stroke="var(--orange,#E67E22)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
       <div class="dc-x">${S.days.map((dd,i)=>`<span>${(n-1-i)%step===0?dd.slice(8)+"."+dd.slice(5,7):""}</span>`).join("")}</div></div>
+    ${who?(()=>{ try{ return tahDayHTML(who,d); }catch(er){ return ""; } })():`<p class="dz-note" style="margin:6px 0 0">👤 O‘quvchini tanlasangiz — kunni bosib, o‘sha kundagi yo‘lini (qayerda, qancha, ketma-ket) ko‘rasiz.</p>`}
     <div class="dc-sel"><b>${d.slice(8)}.${d.slice(5,7)} (${dw})</b>${nd(sel)?` · ma’lumot yo‘q (yig‘ish ${S.first?S.first.slice(8)+"."+S.first.slice(5,7)+" dan":"hali"} boshlangan)`:` · ⏱ ${dcFmt("t",all.t[sel])} · 👥 ${all.u[sel]} o‘quvchi · 🧠 ${all.w[sel]} so‘z · ✍️ ${all.a[sel]} javob${all.u[sel]&&!who?` · bir o‘quvchiga ${dcFmt("t",Math.round(all.t[sel]/all.u[sel]))}`:""}`}</div>
     <p class="dz-note">${mk==="t"?"Ustun — o‘sha kuni hamma tanlangan o‘quvchilarning faol vaqti yig‘indisi (soatda). ":""}${S.first&&nd(0)?`Kuzatuv ${S.first.slice(8)}.${S.first.slice(5,7)} dan boshlangan — undan oldingi kunlar bo‘sh (kulrang). `:""}Ustunni bosing — o‘sha kun ochiladi. To‘q sariq chiziq — 7 kunlik o‘rtacha. ${tr==null?"":`Davrning ikkinchi yarmi birinchisiga nisbatan: <b class="${tr>=0?"up":"dn"}">${tr>=0?"▲":"▼"} ${Math.abs(tr)}%</b>.`} ${mk==="u"?`Kuniga o‘rtacha: ${(sum/Math.max(1,hn)).toFixed(1)} o‘quvchi.`:`Jami: ${esc(dcFmt(mk,sum))} · kuniga o‘rtacha: ${esc(dcFmt(mk,Math.round(sum/Math.max(1,hn))))}.`}</p></div>`; }
 document.addEventListener("click",e=>{ const t=e.target; if(!t.closest) return; const b=t.closest("[data-dcb]"); if(b){ TP.dcSel=+b.dataset.dcb; dcRedraw(); return; } const m=t.closest("[data-dcm]"); if(m){ TP.dcM=m.dataset.dcm; dcRedraw(); } });
@@ -9100,68 +9196,24 @@ function tpAppPoster(){ const url=window.BLITZ?"https://blitzdeutsch.uz/":CH_SIT
     <script src="${location.origin}/files/js/qrcode.js" onload="const q=qrcode(0,'M');q.addData('${url}');q.make();document.getElementById('q').innerHTML=q.createSvgTag({cellSize:6,margin:2,scalable:true});setTimeout(()=>print(),600)"><\/script></body></html>`); w.document.close(); }
 function tpAnRep(){ const R=TP.anRep; if(!R) return; const o={kind:"📈 Streber · haftalik hisobot",title:`${R.P} kun · ${new Date().toLocaleDateString("uz-UZ")}`,rows:[["👥 Yangi o‘quvchi","+"+R.newN],["🔥 Faol (7 kun)",String(R.a7)],["📅 Faol (30 kun)",String(R.a30)],["↩️ Qaytganlar",R.ret==null?"—":R.ret+"%"],["📲 Ilova o‘rnatgan",String(R.app)],["🎮 O‘yinlar",String(R.gtot)],["📤 Ulashish",String(R.sh)],["👥 Do‘st orqali",String(R.ref)]],miss:R.top.length?["⭐ Eng faol: "+R.top.join(", ")]:[]};
   gssShare(`📈 Streber · ${R.P} kun\n+${R.newN} yangi · faol ${R.a7} (7 kun) / ${R.a30} (30 kun) · qaytganlar ${R.ret==null?"—":R.ret+"%"}\n📲 ilova ${R.app} · 🎮 o‘yinlar ${R.gtot} · 📤 ulashish ${R.sh} · 👥 do‘st orqali ${R.ref}`,o); }
-function tpAn(){ const body=document.getElementById("tp-body"); if(!body) return; const P=TP.anP||7; if(!TP.anReg) anGrowthLoad(); if(mrOn()&&!TP.mrRef&&!TP.mrL) mrTpLoad();
-  if(!TP.mqSt) tpStStart();
-  const all=Object.entries(TP.stu||{}).filter(([id,d])=>d&&d.a), days=anDays(P);
-  const S=all.map(([id,d])=>[id,d,anStu(d,P)]), act=S.filter(x=>x[2].min>0);
-  const T=k=>S.reduce((s,x)=>s+(x[2][k]||0),0); const ans=T("ans"), first=T("first"), sol=T("sol"), sk=T("sk"), mins=T("min");
-  const pc=(a,b)=>b?Math.round(a/b*100)+"%":"—";
-  /* kunlik */
-  const dMin=days.map(k=>Math.round(all.reduce((s,[,d])=>{ const r=(d.a.dd||[]).find(x=>x[0]===k); return s+(r?r[1]:0); },0)/60));
-  const dStu=days.map(k=>all.filter(([,d])=>{ const r=(d.a.dd||[]).find(x=>x[0]===k); return r&&r[1]>=60; }).length);
-  /* soatlar */
-  const hr=Array(24).fill(0); all.forEach(([,d])=>(d.a.hr||[]).forEach((v,i)=>hr[i]+=v));
-  /* bo'limlar */
-  const parts={}; all.forEach(([,d])=>Object.entries(d.a.p||{}).forEach(([k,v])=>{ const o=parts[k]||(parts[k]=[0,0,0,0]); v.forEach((x,i)=>o[i]+=x); }));
-  const pk=Object.keys(parts).sort((a,b)=>parts[b][0]-parts[a][0]), pmx=Math.max(1,...pk.map(k=>parts[k][0]));
-  /* to'plamlar */
-  const sets={}; all.forEach(([sid,d])=>(d.a.ss||[]).forEach(r=>{ const o=sets[r[0]]||(sets[r[0]]={st:new Set(),v:[0,0,0,0,0,0,0,0]}); o.st.add(sid); for(let i=1;i<=8;i++) o.v[i-1]=i===7?Math.max(o.v[6],r[7]||0):o.v[i-1]+(+r[i]||0); }));
-  const ssort=TP.anS||"u"; const sl=Object.entries(sets).sort((a,b)=> ssort==="h"? ((a[1].v[1]?a[1].v[2]/a[1].v[1]:2)-(b[1].v[1]?b[1].v[2]/b[1].v[1]:2)) : ssort==="t"? b[1].v[7]-a[1].v[7] : (b[1].st.size-a[1].st.size)||(b[1].v[0]-a[1].v[0])).slice(0,25);
-  /* qiyin savollar */
-  const hard={}; all.forEach(([sid,d])=>(d.a.hh||[]).forEach(r=>{ const k=r[0]+"#"+r[1], o=hard[k]||(hard[k]={id:r[0],i:r[1],n:0,st:new Set()}); o.n+=r[2]; o.st.add(sid); }));
-  const hl=Object.values(hard).sort((a,b)=>(b.st.size*3+b.n)-(a.st.size*3+a.n)).slice(0,20);
-  /* o'quvchilar */
-  const ss=TP.anU||"m"; const ul=S.slice().sort((a,b)=> ss==="n"? String(a[1].nm).localeCompare(String(b[1].nm)) : ss==="l"? String(b[2].last).localeCompare(String(a[2].last)) : ss==="a"? ((a[2].acc??101)-(b[2].acc??101)) : (b[2].min-a[2].min));
-  const today=actDay(), flag=x=>{ const f=[]; if(!x.last||x.last<actDay(Date.now()-6*864e5)) f.push("😴 7+ kun kirmagan"); if(x.solp!=null&&x.solp>=25&&x.ans+x.sol>=8) f.push("💡 Lösung ko‘p"); if(x.skp!=null&&x.skp>=30&&x.ans+x.sk>=8) f.push("⏭ ko‘p o‘tkazadi"); if(x.acc!=null&&x.acc<50&&x.ans>=10) f.push("⚠️ 1-urinish past"); if(x.streak>=3) f.push("🔥 "+x.streak+" kun ketma-ket"); return f; };
-  const noA=Object.keys(TP.stu||{}).length-all.length;
-  body.innerHTML=`${mrOn()?mrTpHTML():""}<div class="lrn-card an">
-    <button type="button" class="btn primary dz-open" data-dzopen="1">🔬 Chuqur tahlil — materiallar · Wortschatz yo‘llari · sayt yo‘llari · sayt rivoji →</button>
-    <div class="tp-lbh"><h3>📊 Tahlil — o‘quvchilar qanday ishlayapti</h3><div class="tp-seg">${[[7,"7 kun"],[14,"14 kun"],[30,"30 kun"],[90,"90 kun"]].map(([v,t])=>`<button type="button" data-tpanp="${v}" aria-pressed="${P===v}">${t}</button>`).join("")}</div></div>
-    ${(()=>{ try{ return dcChartHTML(P); }catch(e){ return ""; } })()}
-    ${(()=>{ try{ return anWzHTML(all,P); }catch(e){ return ""; } })()}
-    ${(()=>{ try{ return anWz2HTML(all,P); }catch(e){ return ""; } })()}
-    ${(()=>{ try{ return anGrowthHTML(all,P); }catch(e){ return ""; } })()}
-    ${!localStorage.getItem("tchk")?`<p class="ch-net">🔐 Avval «👥 O‘quvchilar» bo‘limida natijalarni oching (ustoz kodi).</p>`:""}
-    ${all.length?"":`<p class="tp-empty">Hozircha faollik ma’lumoti yo‘q. O‘quvchilar saytda mashq qilgach (yangi versiyadan boshlab) shu yerda ko‘rinadi.</p>`}
-    <div class="an-kpis">
-      <div class="an-k"><b>${act.length}<small> / ${all.length}</small></b><span>faol o‘quvchi</span></div>
-      <div class="an-k"><b>${all.filter(([,d])=>d.a&&d.a.app).length}<small> / ${all.length}</small></b><span>📲 ilova o‘rnatgan</span></div>
-      <div class="an-k"><b>${mins>=120?Math.round(mins/60)+" soat":mins+" daq"}</b><span>jami faol vaqt</span></div>
-      <div class="an-k"><b>${act.length?Math.round(mins/act.length):0} daq</b><span>o‘rtacha (faol o‘quvchi)</span></div>
-      <div class="an-k"><b>${(()=>{ const sd=S.reduce((s,x)=>s+(x[2].days||0),0); const m=sd?Math.round(mins/sd):0; return m>=60?Math.floor(m/60)+" s "+(m%60)+" d":m+" daq"; })()}</b><span>⏱ kuniga (bir o‘quvchi)</span></div>
-      <div class="an-k"><b>${ans}</b><span>yechilgan savol</span></div>
-      <div class="an-k ok"><b>${pc(first,ans)}</b><span>1-urinishda to‘g‘ri</span></div>
-      <div class="an-k warn"><b>${pc(sol,ans+sol)}</b><span>«Lösung» ko‘rilgan</span></div>
-      <div class="an-k warn"><b>${pc(sk,ans+sk)}</b><span>o‘tkazib yuborilgan</span></div>
-    </div>
-    <div class="an-grid">
-      <div class="an-c"><h4>📅 Kunlik faollik <small>daqiqa · ustun ustida — faol o‘quvchilar</small></h4>${anBars(dMin,days.map(k=>k.slice(5)),{u:"daq",lab:i=>P<=14||i%3===0?days[i].slice(8):""})}<div class="an-sub">${dStu.map((v,i)=>`<span title="${days[i]}">${v||""}</span>`).join("")}</div></div>
-      <div class="an-c"><h4>🕐 Qaysi soatda o‘qishadi <small>barcha vaqt, daqiqa</small></h4>${anBars(hr,hr.map((_,i)=>i+":00"),{u:"daq",c:"var(--orange)",sm:1,lab:i=>i%3===0?String(i):""})}</div>
-    </div>
-    <div class="an-c"><h4>🧭 Bo‘limlar <small>vaqt · yechilgan · 1-urinishda to‘g‘ri</small></h4>${pk.length?pk.map(k=>{ const v=parts[k], I=anPartInfo(k); return `<div class="an-pr"><span class="an-pn">${I.ic} ${esc(I.nm)}</span><span class="an-pb"><i style="width:${Math.round(v[0]/pmx*100)}%;background:${I.c}"></i></span><span class="an-pv">${Math.round(v[0]/60)} daq · ${v[1]} · ${pc(v[2],v[1])}</span></div>`; }).join(""):"<p class='ch-net'>—</p>"}</div>
-    <div class="an-c"><div class="tp-lbh"><h4>📚 Mashq to‘plamlari</h4><div class="tp-seg">${[["u","Ko‘p ishlatilgan"],["t","Ko‘p vaqt"],["h","Eng qiyin"]].map(([k,t])=>`<button type="button" data-tpans="${k}" aria-pressed="${ssort===k}">${t}</button>`).join("")}</div></div>
-      ${sl.length?`<table class="an-t"><tr><th>To‘plam</th><th class="r">👥</th><th class="r">ochildi</th><th class="r">yechildi</th><th class="r">1-urinish</th><th class="r">💡</th><th class="r">⏭</th><th class="r">vaqt</th></tr>${sl.map(([id,o])=>`<tr><td>${esc(anTitle(id))}</td><td class="r">${o.st.size}</td><td class="r">${o.v[0]}</td><td class="r">${o.v[1]}</td><td class="r ${o.v[1]&&o.v[2]/o.v[1]<.6?"bad":""}">${pc(o.v[2],o.v[1])}</td><td class="r">${o.v[4]||""}</td><td class="r">${o.v[5]||""}</td><td class="r">${Math.round(o.v[7]/60)} daq</td></tr>`).join("")}</table>`:"<p class='ch-net'>—</p>"}</div>
-    <div class="an-c"><h4>🧩 Eng ko‘p xato qilingan savollar <small>👥 — nechta o‘quvchi · ✗ — xatolar soni</small></h4>
-      ${hl.length?`<ol class="an-hard">${hl.map(o=>{ const I=anItem(o.id,o.i); return `<li class="an-hli" data-anq="${esc(o.id)}|${esc(String(o.i))}" title="Savolni ochish"><div class="an-hq"><b>${esc(I.q)}</b>${I.a?` <span class="an-ha">→ ${esc(I.a)}</span>`:""}</div><small>${esc(anTitle(o.id))}${I.h?" · "+esc(I.h):""} · <u>ochish ↗</u></small><span class="an-hn">👥 ${o.st.size} · ✗ ${o.n}</span></li>`; }).join("")}</ol>`:"<p class='ch-net'>—</p>"}</div>
-    <div class="an-c"><div class="tp-lbh"><h4>👤 O‘quvchilar <small>${P} kun</small></h4><div class="tp-seg">${[["m","Vaqt"],["l","Oxirgi kirish"],["a","1-urinish ↑"],["n","Ism"]].map(([k,t])=>`<button type="button" data-tpanu="${k}" aria-pressed="${ss===k}">${t}</button>`).join("")}</div></div>
-      <ul class="an-us">${ul.map(([id,d,x])=>{ const op=TP.anOpen===id, A=d.a; const lastTxt=x.last?(x.last===today?"bugun":x.last===actDay(Date.now()-864e5)?"kecha":x.last.slice(5).split("-").reverse().join(".")):"—";
-        return `<li class="${op?"open":""}"><button type="button" class="an-uh" data-tpanopen="${esc(id)}"><span class="an-un"><b>${esc(String(d.nm).slice(0,40))}</b> ${A.dev||""}${A.app?"📲":""}<small>oxirgi: ${lastTxt} · ${x.days} kun faol · ${x.wg?"+"+x.wg+" so‘z":"so‘z: "+(d.w|0)}</small></span>
-          <span class="an-uv"><b>${x.min}</b><small>daq</small></span><span class="an-uv"><b>${x.ans}</b><small>savol</small></span><span class="an-uv ${x.acc!=null&&x.acc<60?"bad":""}"><b>${x.acc==null?"—":x.acc+"%"}</b><small>1-urinish</small></span></button>
-          ${flag(x).length?`<div class="an-fl">${flag(x).map(f=>`<span>${esc(f)}</span>`).join("")}</div>`:""}
-          ${op?anStuDetail(d,P):""}</li>`; }).join("")}</ul>
-      ${noA>0?`<p class="ch-net">Yana ${noA} o‘quvchida faollik ma’lumoti hali yo‘q (saytning yangi versiyasiga kirmagan).</p>`:""}
-      <button type="button" class="lrn-link" data-tp="ancsv">📥 Jadvalni yuklab olish (CSV)</button></div>
-  </div>`; }
+/* 2026-10-23 (Otabek: «tahlilni bitta qilaylik, takrorlanishlarni olib tashla, sayt rivoji va materiallar rivoji uchun kerak narsalar qolsin») — Tahlil + Chuqur tahlil = bitta oyna, 5 bo'lim */
+function tpAn(){ const body=document.getElementById("tp-body"); if(!body) return; const P=TP.anP||7; if(!TP.anReg) anGrowthLoad(); if(!TP.dzL) dzLoad(); if(!TP.mqSt) tpStStart();
+  const T=TAH_T.filter(([k])=>k!=="f"||mrOn()), t=T.some(x=>x[0]===TP.anT)?TP.anT:"s", n=Object.keys(TP.dx||{}).length;
+  const st=TP.dzErr?`<p class="dz-st bad">⚠️ Chuqur ma’lumot o‘qilmadi (${TP.dzErr}) — Firebase qoidalarida «a» va «gs» bo‘limlarini Publish qiling. Hozircha oddiy ma’lumot ko‘rsatiladi.</p>`:TP.dzL===1?`<p class="dz-st">⏳ Chuqur ma’lumot yuklanmoqda…</p>`:`<p class="dz-st">${Object.keys(TP.stu||{}).length} o‘quvchi · ${n} tasidan batafsil ma’lumot${TP.dzT?" · "+new Date(TP.dzT).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"}):""} <button type="button" class="lrn-link" data-tahre="1">↻</button></p>`;
+  body.innerHTML=`<div class="lrn-card an tah"><div class="tah-top"><h3>📊 Tahlil</h3><div class="tp-seg">${[[7,"7 kun"],[14,"14 kun"],[30,"30 kun"],[90,"90 kun"]].map(([v,x])=>`<button type="button" data-tpanp="${v}" aria-pressed="${P===v}">${x}</button>`).join("")}</div></div>
+    <div class="tah-bar"><div class="dz-tabs">${T.map(([k,l])=>`<button type="button" data-taht="${k}" aria-pressed="${t===k}">${l}</button>`).join("")}</div>
+      <div class="dz-chips">${["","A1","A2","B1"].map(l=>`<button type="button" class="dz-chip${(TP.anLv||"")===l?" on":""}" data-tahlv="${l}">${l||"Hammasi"}</button>`).join("")}</div></div>
+    ${st}${!localStorage.getItem("tchk")?`<p class="ch-net">🔐 Avval «👥 O‘quvchilar» bo‘limida natijalarni oching (ustoz kodi).</p>`:""}
+    <div class="tah-b">${tahBody(P,t)}</div>
+    <p class="dz-note">Batafsil ma’lumot 23.10.2026 dan yig‘ilmoqda. Hammasi umumlashtirilgan; o‘quvchi ma’lumoti shifrlangan holda faqat ustozga keladi.</p></div>`; }
+document.addEventListener("click",e=>{ const t=e.target; if(!t.closest||!t.closest("#tch .tah")) return;
+  const tb=t.closest("[data-taht]"); if(tb){ TP.anT=tb.dataset.taht; tpAn(); const el=document.querySelector("#tch .tah"); if(el) el.scrollIntoView({block:"start"}); return; }
+  const lv=t.closest("[data-tahlv]"); if(lv){ TP.anLv=lv.dataset.tahlv; tpAn(); return; }
+  if(t.closest("[data-tahre]")){ TP.dzL=0; TP.anReg=null; TP.mrRef=null; tpAn(); return; }
+  const ms=t.closest("[data-dzms]"); if(ms){ DZ.ms=ms.dataset.dzms; tpAn(); return; }
+  const rt=t.closest("[data-dzroot]"); if(rt&&rt.dataset.dzroot){ DZ.root=rt.dataset.dzroot; tpAn(); return; }
+  if(t.closest("[data-anq]")) return;
+  const mr=t.closest("[data-dzmat]"); if(mr){ DZ.open=DZ.open===mr.dataset.dzmat?"":mr.dataset.dzmat; tpAn(); const dt=document.getElementById("dz-det"); if(dt) dt.scrollIntoView({block:"start",behavior:"smooth"}); } });
 function anStuDetail(d,P){ const A=d.a, days=anDays(14), mins=days.map(k=>{ const r=(A.dd||[]).find(x=>x[0]===k); return r?Math.round(r[1]/60):0; });
   const ss=(A.ss||[]).slice().sort((a,b)=>b[7]-a[7]).slice(0,10), hh=(A.hh||[]).slice(0,8);
   const pc=(a,b)=>b?Math.round(a/b*100)+"%":"—";
