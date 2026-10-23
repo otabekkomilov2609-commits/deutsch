@@ -1212,3 +1212,4 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Filtr qatorida «🔗 Takroriy akkaunt · N» (faqat topilsa). `tpDupPairs()`: ism normallashtiriladi (`tpNmNorm`: kirill→lotin, x→h, q→k, w→v, tutuq belgilar olib tashlanadi). Juftlik: to'liq ism bir xil · yoki ism bir xil va familiya bir harfdan boshlanadi/bittasida yo'q · yoki Levenshtein ≤2.
 - Yo'nalish: birinchi faolligi oldinroq — «Eski», keyingisi — «Yangi». Tugmalar: «Eskisini yangisiga ko'chirish →» (mavjud `tpMvAsk` tasdiq oynasi → `tpMvGo`), «↔ Teskari», «Boshqa-boshqa odam» (`tp:dupno`, boshqa ko'rsatilmaydi).
 - Avtomatik ko'chirish YO'Q — har bir juftlikni ustoz o'zi tasdiqlaydi (ikki xil odam bir xil ismli bo'lishi mumkin).
+- «🔄 Yangi versiya bor — yangilash» tugmasi endi ekran TEPASIDA va kichikroq — mashqdagi Weiter/Zurück tugmalarini yopib qo'yardi.
