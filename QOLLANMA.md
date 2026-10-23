@@ -1128,3 +1128,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - `kcDone`: faqat to'g'ri aytilsa `LR.flip=true`. Xato bo'lsa karta old tomonda qoladi, mikrofon o'z joyida — yana aytish mumkin.
 - Old tomonda `kcBanner(x,1)`: «🎙 Sie: … ❌ · yana ayting yoki kartani bosing» (to'g'ri artikel ko'rsatilmaydi — javobni ochib qo'ymaslik uchun). «Yaxshi eshitmadim» ham endi old tomonda ko'rinadi.
 - O'quvchi kartani o'zi bossa — odatdagidek aylanadi, orqada to'liq natija (🎯 %, artikel) chiqadi.
+
+## 2026-10-24 · Verben mit Präpositionen: karta old tomonida faqat tarjima
+- `lrnFrontTxt(x)`: `Verben-mit-Praep` ro'yxatida Karteikarten old tomonida faqat « — » dan keyingi tarjima («orzu qilmoq»). O'quvchi fe'lni ham, predlogni ham o'zi eslaydi; orqa tomonda «träumen von (+ Dat.)».
+- Predlog tanlash testi va boshqa ro'yxatlar o'zgarmadi.
