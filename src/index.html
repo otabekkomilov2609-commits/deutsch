@@ -672,7 +672,15 @@ html.blitz .controls,html.blitz #tour-link,html.blitz .lrn-cb,html.blitz #v-lern
 .sp-seg{display:flex;gap:3px;flex-wrap:wrap}.sp-seg button{font:inherit;font-size:11px;font-weight:800;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--muted);padding:2px 7px;cursor:pointer}.sp-seg button[aria-pressed="true"]{background:var(--fill);border-color:var(--fill);color:var(--on-fill)}
 .tp-st .tp-mini{display:flex;gap:2px;align-items:flex-end;height:20px;margin-right:6px}.tp-st .tp-mini i{width:4px;background:var(--blue);border-radius:2px;opacity:.7;min-height:2px}.tp-lvl{font-size:11px;font-weight:800;padding:3px 7px;border-radius:8px;background:var(--lrn-fill2,#DFF5E6);color:var(--green);white-space:nowrap}.tp-lvl.a1{background:var(--lrn-yel,#FFF3C4);color:#8a6400}
 .tp-nm span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tp-fchips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 2px}.tp-fchips button{font:inherit;font-size:12.5px;font-weight:700;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--muted);padding:4px 10px;cursor:pointer}.tp-fchips button[aria-pressed="true"]{background:var(--fill);border-color:var(--fill);color:var(--on-fill)}
-.prog-my{margin-top:8px;font:inherit;font-weight:800;font-size:14px;color:var(--blue);background:var(--blue-soft);border:0;border-radius:12px;padding:9px 12px;cursor:pointer;width:100%}
+#prog.prog{display:block;padding:12px 14px}.pg-top{display:flex;align-items:center;gap:12px}#prog .prog-badge{width:48px;height:48px;font-size:25px;flex:none}
+.pg-mid{flex:1;min-width:0;display:grid;gap:5px}.pg-nm{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.pg-lv{font-family:var(--hand);font-weight:400;font-size:25px;line-height:1;color:var(--pg-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pg-nm span{font-size:13px;color:var(--muted);font-weight:700;white-space:nowrap}.pg-nm strong{color:var(--ink);font-size:16px;font-variant-numeric:tabular-nums}
+#prog .prog-bar{height:8px}.pg-nx{font-size:12.5px;color:var(--muted);font-weight:600;line-height:1.3}.pg-nx b{color:var(--ink)}
+.pg-btns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}.pg-btns.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pg-btns .btn{padding:9px 4px;font-size:14px;justify-content:center;white-space:nowrap;cursor:pointer;min-width:0}
+.pg-my{background:var(--blue-soft);color:var(--blue);border-color:transparent;font-weight:800}
+.myp-lad{display:grid;gap:8px}.myp-lt{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.myp-lt b{font-family:var(--hand);font-weight:400;font-size:24px;color:var(--pg-ink)}.myp-lt small{color:var(--muted);font-weight:700}.myp-lad .prog-ladder{flex-wrap:wrap}.myp-mu{margin:0;font-family:var(--hand);font-size:19px;line-height:1.25}.prog-my{margin-top:8px;font:inherit;font-weight:800;font-size:14px;color:var(--blue);background:var(--blue-soft);border:0;border-radius:12px;padding:9px 12px;cursor:pointer;width:100%}
 .myp{position:fixed;inset:0;z-index:2147483000;background:var(--bg);overflow:auto;padding-bottom:40px}.myp[hidden]{display:none}.myp .lrn-body{max-width:560px;margin:0 auto;padding:12px 14px}
 .tp-std{padding:4px 12px 12px;display:flex;flex-direction:column;gap:6px}.tp-std h4{margin:6px 0 2px;font-size:14px}
 .tp-std table{width:100%;border-collapse:collapse;font-size:13.5px}.tp-std td{padding:5px 4px;border-bottom:1px dashed var(--line)}.tp-std td.r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
@@ -3186,16 +3194,12 @@ function progRender(){
   const uz=state.lang!=="ru", i=progLv(c.n), l=PROG_LV[i], nx=PROG_LV[i+1];
   if(store.get("prog:lv")==null) store.set("prog:lv",String(i));
   const pc=nx? Math.round((c.n-l.n)/(nx.n-l.n)*100) : 100;
-  el.innerHTML=`<div class="prog-badge" aria-hidden="true">${l.e}</div>
-    <div class="prog-k">${uz?"Mening darajam":"Мой уровень"}</div>
-    <div class="prog-name">${esc(l.de)}<small>${esc(uz?l.uz:l.ru)}</small></div>
-    <div class="prog-n"><b>${c.n}</b><span>${uz?"ta so‘z va ibora o‘rganildi":"слов и фраз выучено"}</span></div>
-    <div class="prog-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pc}"><i style="width:${Math.max(3,pc)}%"></i></div>
-    ${ACC.cur?`<button type="button" class="prog-my" data-myp="open">📊 ${uz?"Mening natijalarim →":"Мои результаты →"}</button>`:""}
-    <div class="prog-next">${nx? (uz?`Keyingi daraja <b>${esc(progLvName(nx))}</b> — yana <b>${nx.n-c.n}</b> ta so‘z`:`Следующий уровень <b>${esc(progLvName(nx))}</b> — ещё <b>${nx.n-c.n}</b> слов`) : (uz?"Eng yuqori daraja! 🏆":"Высший уровень! 🏆")}${c.k? ` · 🃏 ${uz?`${c.k} ta «Bilaman» so‘zni tekshirsangiz — hisobga qo‘shiladi`:`проверьте ${c.k} слов с «Знаю» — они засчитаются`}`:""}</div>
-    <div class="prog-msg">${esc(uz?l.mu:l.mr)}</div>
-    <div class="prog-foot"><span class="prog-ladder" aria-hidden="true">${PROG_LV.map((x,k)=>`<span class="${k<=i?"on":""}${k===i?" cur":""}" title="${esc(x.de)} · ${x.n}+">${x.e}</span>`).join("")}</span>
-    <span class="prog-btns"><button type="button" class="btn prog-rk" data-rank>🏆 ${uz?"Reyting":"Рейтинг"}</button><button type="button" class="btn primary prog-go" data-proggo>🧠 ${uz?"Yodlashga":"Учить слова"}</button></span></div>`;
+  /* 2026-10-23 (Otabek: «shuni ixcham qilsak») — 438px → ~125px: sarlavha, motivatsiya matni va emoji zinapoya olib tashlandi (zinapoya — «Mening natijalarim» ichida) */
+  el.innerHTML=`<div class="pg-top"><div class="prog-badge" aria-hidden="true">${l.e}</div>
+    <div class="pg-mid"><div class="pg-nm"><b class="pg-lv">${esc(l.de)}</b><span><strong>${c.n}</strong> ${uz?"so‘z":"слов"}</span></div>
+    <div class="prog-bar" role="progressbar" aria-label="${uz?"Mening darajam":"Мой уровень"}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pc}"><i style="width:${Math.max(3,pc)}%"></i></div>
+    <div class="pg-nx">${nx?(uz?`${esc(progLvName(nx))} gacha <b>${nx.n-c.n}</b> so‘z`:`до ${esc(progLvName(nx))} — <b>${nx.n-c.n}</b> слов`):(uz?"Eng yuqori daraja! 🏆":"Высший уровень! 🏆")}${c.k?` · 🃏 ${uz?`${c.k} ta «Bilaman»ni tekshiring`:`проверьте ${c.k} «Знаю»`}`:""}</div></div></div>
+    <div class="pg-btns${ACC.cur?"":" two"}">${ACC.cur?`<button type="button" class="btn pg-my" data-myp="open">📊 ${uz?"Natijalar":"Итоги"}</button>`:""}<button type="button" class="btn prog-rk" data-rank>🏆 ${uz?"Reyting":"Рейтинг"}</button><button type="button" class="btn primary prog-go" data-proggo>🧠 ${uz?"Yodlash":"Учить"}</button></div>`;
   el.hidden=false; esCardRender(); lgBannerRender();
 }
 function progGo(){
@@ -8273,6 +8277,7 @@ function spProfBind(root,d,o){ root.querySelectorAll("[data-sp]").forEach(b=>b.a
 function myProfOpen(){ if(!ACC.cur) return; let el=document.getElementById("myp"); if(!el){ el=document.createElement("div"); el.id="myp"; el.className="myp lrn"; el.setAttribute("role","dialog"); el.setAttribute("aria-modal","true"); document.body.appendChild(el); }
   const uz=state.lang!=="ru"; let d; try{ d=stCollect(); }catch(e){ return; } el.hidden=false; document.body.style.overflow="hidden";
   el.innerHTML=`<div class="lrn-bar"><button type="button" class="btn" data-myp="close" aria-label="✕">✕</button><div class="lrn-tt"><b>📊 ${uz?"Mening natijalarim":"Мои результаты"}</b><small>${uz?"ustoz ham shuni ko‘radi":"учитель видит то же самое"}</small></div></div><div class="lrn-body"><div class="lrn-card" id="myp-c"></div></div>`;
+  { const cn=progCount().n, li=progLv(cn), lv=PROG_LV[li], c0=el.querySelector(".lrn-body"); const lc=document.createElement("div"); lc.className="lrn-card myp-lad"; lc.innerHTML=`<div class="myp-lt"><b>${lv.e} ${esc(lv.de)}</b><small>${esc(uz?lv.uz:lv.ru)} · ${cn} ${uz?"so‘z":"слов"}</small></div><div class="prog-ladder" aria-hidden="true">${PROG_LV.map((x,k)=>`<span class="${k<=li?"on":""}${k===li?" cur":""}" title="${esc(x.de)} · ${x.n}+">${x.e}</span>`).join("")}</div><p class="myp-mu">${esc(uz?lv.mu:lv.mr)}</p>`; c0.insertBefore(lc,c0.firstChild); }
   const c=el.querySelector("#myp-c"); c.innerHTML=spProfHTML(d,{own:1}); spProfBind(c,d,{own:1}); hpCardBind(c); hpRefSync(); }
 function myProfClose(){ const el=document.getElementById("myp"); if(el) el.hidden=true; if(!document.querySelector(".lrn:not([hidden]),.viewer:not([hidden])")) document.body.style.overflow=""; }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-myp]"); if(b){ if(b.dataset.myp==="close") myProfClose(); else myProfOpen(); } });

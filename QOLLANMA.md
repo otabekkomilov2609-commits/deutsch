@@ -975,3 +975,9 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - O'quvchi telefonida (`cloudPull` → `accMoved`): eski akkaunt yopiladi, «Kirish» oynasi qoladigan ism bilan to'ldirilib ochiladi + izoh. Kirganda (`accMvMerge`) shu telefondagi eski akkaunt natijasi ham qo'shiladi.
 - Sinov (soxta baza): A {1,2} + B {3,4,5}+Y → A {1..5}+Y; telefondagi B'ning qo'shimcha so'zi ham A ga o'tdi.
 - E'tibor: o'quvchi telefonida sayt o'sha paytda ochiq bo'lsa, sahifani yangilashi kerak.
+
+## 2026-10-23 — «Mening darajam» ixcham (Otabek: «shuni ixcham qilsak» → mock-up A)
+- Telefonda 438 px → 138 px. Qoldi: belgi · daraja nomi · so'z soni · progress · «Der/Die Coole gacha 61 so'z» · 3 tugma (📊 Natijalar · 🏆 Reyting · 🧠 Yodlash; mehmonda 2 ta).
+- Olib tashlandi: «Mening darajam» yozuvi, motivatsiya matni, emoji zinapoya, uzun «Keyingi daraja …» jumlasi.
+- Zinapoya va motivatsiya matni «📊 Mening natijalarim» oynasining tepasiga ko'chdi (`.myp-lad`).
+- Klasslar: `.pg-top/.pg-mid/.pg-nm/.pg-lv/.pg-nx/.pg-btns`; `.prog-badge`, `.prog-bar`, `data-rank`, `data-proggo` saqlangan.
