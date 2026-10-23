@@ -1780,6 +1780,15 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .dz-sel{font:inherit;font-size:14px;padding:8px 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);max-width:100%}
 .dz-path{display:grid;gap:8px;margin-top:10px}.dz-ps{font-size:13.5px;line-height:1.6;background:var(--surface-2);border-radius:10px;padding:8px 10px;overflow-wrap:anywhere}.dz-ps em{font-style:normal;color:var(--muted);font-weight:700;margin-left:4px}.dz-ps span{white-space:nowrap}
 .spk{font-family:ui-monospace,monospace;letter-spacing:1px;color:var(--blue)}
+.dcc .tp-lbh{flex-wrap:wrap;gap:8px}.dc-who{font-size:13px;padding:6px 8px;max-width:220px}.dc-ms{margin:6px 0 8px}
+.dc-ch{display:grid;grid-template-columns:44px minmax(0,1fr);grid-template-rows:190px auto;column-gap:6px;padding-right:16px}.dc-y{position:relative;grid-row:1}.dc-y span{position:absolute;right:0;transform:translateY(50%);font-size:10.5px;color:var(--muted);font-weight:700;white-space:nowrap}
+.dc-plot{position:relative;border-bottom:1.5px solid var(--line);border-left:1.5px solid var(--line)}.dc-gl{position:absolute;left:0;right:0;border-top:1px dashed var(--line)}
+.dc-bars{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));align-items:end;gap:2px;padding:0 2px}
+.dc-b{position:relative;height:100%;border:0;background:none;padding:0;cursor:pointer;display:flex;align-items:flex-end;justify-content:center}.dc-b i{display:block;width:100%;max-width:34px;background:var(--blue);border-radius:4px 4px 0 0;min-height:1px;opacity:.85}.dc-b.we i{background:color-mix(in srgb,var(--blue) 60%,var(--orange,#E67E22))}.dc-b.on i{opacity:1;outline:2px solid var(--ink);outline-offset:1px}.dc-b:hover i{opacity:1}
+.dc-b em{position:absolute;left:50%;transform:translateX(-50%);font-style:normal;font-size:10.5px;font-weight:800;color:var(--ink);white-space:nowrap;pointer-events:none}
+.dc-ma{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.dc-x{grid-column:2;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));font-size:10px;color:var(--muted);font-weight:700;margin-top:4px}.dc-x span{text-align:center;white-space:nowrap;overflow:visible;display:flex;justify-content:center}
+.dc-sel{margin-top:10px;font-size:13.5px;background:var(--surface-2);border-radius:10px;padding:8px 10px;line-height:1.5}.dcc .up{color:var(--green)}.dcc .dn{color:#C62828}
 .dz-t.sm th{white-space:normal}.dz-t td.t{min-width:170px}.dz-sub{display:block;color:var(--muted);font-weight:700;font-size:12px;margin-top:2px}
 .dz-mx{min-width:0}.dz-mx th,.dz-mx td{padding:6px 4px}.dz-mx td.z{color:var(--muted)}
 .dz-pl{display:grid;gap:6px}.dz-pli{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px}.dz-pli b{font-variant-numeric:tabular-nums}.dz-pli em{grid-column:1/3;font-style:normal;color:var(--muted);font-size:12.5px;font-weight:700}
@@ -8950,6 +8959,38 @@ document.addEventListener("click",e=>{ if(e.target.closest&&e.target.closest("[d
 document.addEventListener("change",e=>{ if(e.target&&e.target.dataset&&e.target.dataset.dzstu){ DZ.stu=e.target.value; dzDraw(); } });
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ const el=document.getElementById("dz"); if(el&&!el.hidden&&(!exEl()||exEl().hidden)) dzClose(); } });
 
+/* ===== 📊 Kunlik ustunli diagramma — o'quvchilar har kuni qancha ishlayapti, sanama-sana (2026-10-23, Otabek: «kunlik o'quvchini ishlatishini Balkendiagramm bilan ko'rib turay, qanday o'zgaryapti, sanama-sana») =====
+   Manba: TP.stu[*].a.dd (30 kun: soniya, yechilgan, …, jami so'z) + TP.dx[*].dd (60 kun: soniya, jami so'z, javob). Ko'rsatkich: vaqt · faol o'quvchi · o'rganilgan so'z · javob. */
+const DC_M=[["t","⏱ Vaqt"],["u","👥 O‘quvchilar"],["w","🧠 So‘zlar"],["a","✍️ Javoblar"]];
+function dcSeries(P,who){ const days=anDays(P), M=new Map();
+  const add=(k,nm,day,sec,w,a)=>{ const m=M.get(k)||M.set(k,{nm,d:new Map()}).get(k); const o=m.d.get(day)||{s:0,w:0,a:0}; o.s=Math.max(o.s,sec|0); if(w) o.w=Math.max(o.w,w|0); o.a=Math.max(o.a,a|0); m.d.set(day,o); };
+  Object.entries(TP.stu||{}).forEach(([id,d])=>{ if(!d||!d.a) return; const k=d.ak||id; (d.a.dd||[]).forEach(r=>add(k,d.nm,r[0],r[1],r[8],r[2])); });
+  Object.entries(TP.dx||{}).forEach(([ak,d])=>(d.dd||[]).forEach(r=>add(ak,d.nm,r[0],r[1],r[2],r[3])));
+  const V={t:[],u:[],w:[],a:[]}, keys=[...M.keys()].filter(k=>!who||k===who);
+  days.forEach(day=>{ let t=0,u=0,w=0,a=0; keys.forEach(k=>{ const m=M.get(k), o=m.d.get(day); if(!o) return; t+=o.s; if(o.s>=60) u++; a+=o.a;
+      let prev=0; for(const [dd,x] of m.d){ if(dd<day&&x.w>prev) prev=x.w; } if(o.w&&prev) w+=Math.max(0,o.w-prev); });
+    V.t.push(Math.round(t/60)); V.u.push(u); V.w.push(w); V.a.push(a); });
+  return {days,V,people:[...M.entries()].map(([k,m])=>[k,m.nm]).sort((a,b)=>String(a[1]).localeCompare(String(b[1])))}; }
+function dcFmt(m,v){ if(m!=="t") return String(v); return v>=60?Math.floor(v/60)+" s "+(v%60?v%60+" d":""):v+" daq"; }
+function dcChartHTML(P){ const mk=TP.dcM||"t", who=TP.dcW||"", S=dcSeries(P,who), vals=S.V[mk], n=vals.length, mx=Math.max(1,...vals), sel=TP.dcSel!=null&&TP.dcSel<n?TP.dcSel:n-1;
+  const DN=["Ya","Du","Se","Ch","Pa","Ju","Sh"], step=n<=7?1:n<=14?2:n<=31?5:14, sum=vals.reduce((a,b)=>a+b,0);
+  const ma=vals.map((_,i)=>{ const w=vals.slice(Math.max(0,i-6),i+1); return w.reduce((a,b)=>a+b,0)/w.length; });
+  const half=Math.floor(n/2), a1=vals.slice(0,half).reduce((a,b)=>a+b,0)/Math.max(1,half), a2=vals.slice(half).reduce((a,b)=>a+b,0)/Math.max(1,n-half), tr=a1?Math.round((a2-a1)/a1*100):null;
+  const nice=(()=>{ const r=mx/4, p=Math.pow(10,Math.floor(Math.log10(r||1))), f=[1,2,5,10].find(x=>x*p>=r)||10; return f*p; })(), top=mk==="t"?Math.max(nice*4,4):Math.max(Math.ceil(nice)*4,4);
+  const d=S.days[sel], dw=DN[new Date(d+"T12:00:00").getDay()], all=S.V;
+  return `<div class="an-c dcc"><div class="tp-lbh"><h4>📊 Har kuni — sanama-sana <small>${P} kun${who?" · "+esc((S.people.find(x=>x[0]===who)||[,""])[1]):" · hamma o‘quvchilar"}</small></h4>
+      <select class="dz-sel dc-who" data-dcw="1"><option value="">👥 Hamma o‘quvchilar</option>${S.people.map(([k,nm])=>`<option value="${esc(k)}"${k===who?" selected":""}>${esc(String(nm||"?").slice(0,40))}</option>`).join("")}</select></div>
+    <div class="dz-chips dc-ms">${DC_M.map(([k,l])=>`<button type="button" class="dz-chip${mk===k?" on":""}" data-dcm="${k}">${l}</button>`).join("")}</div>
+    <div class="dc-ch" style="--n:${n}"><div class="dc-y">${[4,3,2,1,0].map(i=>`<span style="bottom:${i*25}%">${dcFmt(mk,Math.round(top*i/4))}</span>`).join("")}</div>
+      <div class="dc-plot">${[1,2,3,4].map(i=>`<i class="dc-gl" style="bottom:${i*25}%"></i>`).join("")}
+        <div class="dc-bars">${vals.map((v,i)=>{ const dd=S.days[i], wk=new Date(dd+"T12:00:00").getDay(); return `<button type="button" class="dc-b${i===sel?" on":""}${wk===0?" we":""}" data-dcb="${i}" title="${dd.slice(8)}.${dd.slice(5,7)}: ${esc(dcFmt(mk,v))}"><i style="height:${(v/top*100).toFixed(1)}%"></i>${n<=14&&v?`<em style="bottom:calc(${(v/top*100).toFixed(1)}% + 2px)">${esc(mk==="t"&&v>=60?Math.round(v/6)/10+"s":String(v))}</em>`:""}</button>`; }).join("")}</div>
+        <svg class="dc-ma" viewBox="0 0 ${n} 100" preserveAspectRatio="none"><polyline points="${ma.map((v,i)=>`${(i+.5).toFixed(2)},${(100-v/top*100).toFixed(2)}`).join(" ")}" fill="none" stroke="var(--orange,#E67E22)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+      <div class="dc-x">${S.days.map((dd,i)=>`<span>${(n-1-i)%step===0?dd.slice(8)+"."+dd.slice(5,7):""}</span>`).join("")}</div></div>
+    <div class="dc-sel"><b>${d.slice(8)}.${d.slice(5,7)} (${dw})</b> · ⏱ ${dcFmt("t",all.t[sel])} · 👥 ${all.u[sel]} o‘quvchi · 🧠 ${all.w[sel]} so‘z · ✍️ ${all.a[sel]} javob${all.u[sel]&&!who?` · bir o‘quvchiga ${dcFmt("t",Math.round(all.t[sel]/all.u[sel]))}`:""}</div>
+    <p class="dz-note">Ustunni bosing — o‘sha kun ochiladi. To‘q sariq chiziq — 7 kunlik o‘rtacha. ${tr==null?"":`Davrning ikkinchi yarmi birinchisiga nisbatan: <b class="${tr>=0?"up":"dn"}">${tr>=0?"▲":"▼"} ${Math.abs(tr)}%</b>.`} ${mk==="u"?`Kuniga o‘rtacha: ${(sum/n).toFixed(1)} o‘quvchi.`:`Jami: ${esc(dcFmt(mk,sum))} · kuniga o‘rtacha: ${esc(dcFmt(mk,Math.round(sum/n)))}.`}</p></div>`; }
+document.addEventListener("click",e=>{ const t=e.target; if(!t.closest) return; const b=t.closest("[data-dcb]"); if(b){ TP.dcSel=+b.dataset.dcb; dcRedraw(); return; } const m=t.closest("[data-dcm]"); if(m){ TP.dcM=m.dataset.dcm; dcRedraw(); } });
+document.addEventListener("change",e=>{ if(e.target&&e.target.dataset&&e.target.dataset.dcw!=null){ TP.dcW=e.target.value; TP.dcSel=null; dcRedraw(); } });
+function dcRedraw(){ const el=document.querySelector(".dcc"); if(!el) return; const w=document.createElement("div"); w.innerHTML=dcChartHTML(TP.anP||7); el.replaceWith(w.firstElementChild); }
 /* ===== 📈 Sayt o'sishi — ro'yxat dinamikasi, faollik, ilova, o'yinlar, tarqalish (2026-10-22, Otabek) ===== */
 async function anGrowthLoad(){ if(!CLOUD_ON||TP.anGL) return; TP.anGL=1; try{ let tok="", n=0; const T=[];
   do{ const r=await fetch(FS_BASE+"n?pageSize=300&mask.fieldPaths=t"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok) break; const j=await r.json(); (j.documents||[]).forEach(d=>{ const t=+(((d.fields||{}).t||{}).integerValue||0); if(t) T.push(t); }); tok=j.nextPageToken||""; }while(tok&&++n<30);
@@ -9075,6 +9116,7 @@ function tpAn(){ const body=document.getElementById("tp-body"); if(!body) return
   body.innerHTML=`${mrOn()?mrTpHTML():""}<div class="lrn-card an">
     <button type="button" class="btn primary dz-open" data-dzopen="1">🔬 Chuqur tahlil — materiallar · Wortschatz yo‘llari · sayt yo‘llari · sayt rivoji →</button>
     <div class="tp-lbh"><h3>📊 Tahlil — o‘quvchilar qanday ishlayapti</h3><div class="tp-seg">${[[7,"7 kun"],[14,"14 kun"],[30,"30 kun"],[90,"90 kun"]].map(([v,t])=>`<button type="button" data-tpanp="${v}" aria-pressed="${P===v}">${t}</button>`).join("")}</div></div>
+    ${(()=>{ try{ return dcChartHTML(P); }catch(e){ return ""; } })()}
     ${(()=>{ try{ return anWzHTML(all,P); }catch(e){ return ""; } })()}
     ${(()=>{ try{ return anWz2HTML(all,P); }catch(e){ return ""; } })()}
     ${(()=>{ try{ return anGrowthHTML(all,P); }catch(e){ return ""; } })()}

@@ -1079,3 +1079,10 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - 🔬 Chuqur tahlil → 🌐 Sayt rivoji → «⏱ Kuniga qancha vaqt ishlatishadi» (`dzTimeHTML`): bir o'quvchi kuniga (o'rtacha + mediana), hamma birga kuniga, bugun jami, davr jami · har kuni jami soat va bir faol o'quvchi daqiqasi (ustunlar) · bir kunda qancha o'tirishadi (<5 daq … 2+ soat) · hafta kuni bo'yicha · eng ko'p vaqt ajratadiganlar.
 - Oddiy Tahlil KPI'lariga «⏱ kuniga (bir o'quvchi)» qo'shildi (faol daqiqa ÷ faol kunlar).
 - Faol vaqt = sahifa ochiq va oxirgi 90 s ichida harakat bo'lgan (ACT, 15 s qadam). `anSvgBars(...,noTxt)` — 14 kundan ko'p bo'lsa ustun ustidagi raqamlar yashiriladi.
+
+## 2026-10-23 — 📊 Har kuni — sanama-sana (ustunli diagramma) (Otabek: «kunlik o'quvchini ishlatishini Balkendiagramm bilan ko'rib turay, qanday o'zgaryapti, sanama-sana»)
+- Ustoz paneli → 📊 Tahlil → eng tepada (Chuqur tahlil tugmasidan keyin) `dcChartHTML(P)`: har kun uchun ustun, sana pastda, 7 kunlik o'rtacha chiziq (to'q sariq), yakshanbalar boshqa rangda.
+- Ko'rsatkich: ⏱ Vaqt · 👥 O'quvchilar (≥1 daq faol) · 🧠 So'zlar (o'sha kuni o'rganilgan) · ✍️ Javoblar. Davr — Tahlil'dagi 7/14/30/90 kun.
+- «👥 Hamma o'quvchilar» ro'yxatidan bitta o'quvchini tanlash mumkin — faqat uning kunlari.
+- Ustunni bosganda pastda o'sha kun: vaqt, o'quvchilar, so'zlar, javoblar, bir o'quvchiga vaqt. Pastda: davrning 2-yarmi 1-yarmiga nisbatan ▲/▼ %, jami va kuniga o'rtacha.
+- Manba: TP.stu a.dd (30 kun) + TP.dx dd (60 kun, chuqur tahlil Firebase qoidasi qo'yilgach).
