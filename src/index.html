@@ -3908,13 +3908,13 @@ function lrnSay0(text){
     wkStop();
     const L=[].concat(WKP).map(s=>{ const p=s.replace(/^\+/,""); return {u:"https://upload.wikimedia.org/wikipedia/commons/transcoded/"+p+"/"+p.split("/").pop()+".mp3",gap:s[0]==="+"?25:180}; });
     const tok={}; lrnAud=tok; wkStop();
-    const fb=()=>{ if(lrnAud!==tok) return; lrnAud=null; if(SAYAUD.has(id)){ const b=new Audio(AUD_BASE+id+".mp3?v=4"); lrnAud=b; b.play().catch(()=>ttsSay(t)); } else ttsSay(t); };
+    const fb=()=>{ if(lrnAud!==tok) return; lrnAud=null; if(SAYAUD.has(id)){ const b=new Audio(AUD_BASE+id+".mp3?v=4"); lrnAud=b; b.play().then(()=>wzV("mp3")).catch(()=>ttsSay(t)); } else ttsSay(t); };
     const ac=wkCtx(); if(!ac){ fb(); return; }
     Promise.all(L.map(x=>wkBuf(x.u))).then(bs=>{ if(lrnAud!==tok) return;
       const sr=ac.sampleRate; let n=0; bs.forEach((b,i)=>{ n+=b.e-b.s+(i<bs.length-1?Math.round(sr*(L[i].gap/1000)):0); });
       const out=ac.createBuffer(1,Math.max(1,n),sr), o=out.getChannelData(0); let pos=0;
       bs.forEach((b,i)=>{ o.set(b.d.subarray(b.s,b.e),pos); pos+=b.e-b.s+(i<bs.length-1?Math.round(sr*(L[i].gap/1000)):0); });
-      const src=ac.createBufferSource(); src.buffer=out; src.connect(ac.destination); WKSRC=src; src.start();
+      const src=ac.createBufferSource(); src.buffer=out; src.connect(ac.destination); WKSRC=src; src.start(); wzV(voPick(id)?"pick":"wk");
     }).catch(fb);
     return;
   }catch(e){} }
@@ -3930,7 +3930,8 @@ function lrnSay0(text){
 /* Ovoz: telefon ovozi o'rniga Azure neural ovozi (de-DE Seraphina) — 2026-10-20, Otabek: «audioni har doim Azure'dan ishlat, oddiy narsa ishlatma».
    Azure ishlamasa (internet/kalit) — zaxira sifatida telefon ovozi. */
 function ttsSay(t){ try{ if(!AZ.dead&&AZ_URL&&!IN_ARTIFACT){ azSpeak(t).catch(()=>ttsLocal(t)); return; } }catch(e){} ttsLocal(t); }
-function ttsLocal(t){ try{
+function wzV(k){ try{ if(!lrnEl().hidden) actEv("wzv",k); }catch(e){} } /* 2026-10-23: qaysi ovoz yangradi — Seraphina (az), jonli nemis (wk), tanlangan (pick), mp3, robot (tts) */
+function ttsLocal(t){ try{ wzV("tts");
   const ss=window.speechSynthesis; if(!ss) return;
   const busy=ss.speaking||ss.pending; if(busy) ss.cancel();
   clearTimeout(lrnSayT);
@@ -4162,7 +4163,7 @@ async function azSpeak(t){ let url=AZTTS[t];
     const ssml=`<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="de-DE"><voice name="de-DE-SeraphinaMultilingualNeural"><prosody rate="-6%">${azXml(t)}</prosody></voice></speak>`;
     const res=await new Promise((ok,bad)=>syn.speakSsmlAsync(ssml,ok,bad)); try{ syn.close(); }catch(e){}
     if(!res||!res.audioData||!res.audioData.byteLength) throw new Error("tts"); url=AZTTS[t]=URL.createObjectURL(new Blob([res.audioData],{type:"audio/mpeg"})); }
-  try{ if(lrnAud&&lrnAud.pause) lrnAud.pause(); wkStop(); }catch(e){} const a=new Audio(url); lrnAud=a; await a.play(); }
+  try{ if(lrnAud&&lrnAud.pause) lrnAud.pause(); wkStop(); }catch(e){} const a=new Audio(url); lrnAud=a; await a.play(); wzV("az"); }
 function azCol(v){ return v>=80?"ok":v>=60?"mid":"bad"; }
 async function azRec(it,btn){ const R=exEl(), box=R.querySelector("#ex-az"), uz=state.lang!=="ru"; if(!box) return; EX.st.sp="rec"; EX.st.tok=(EX.st.tok||0)+1; const bar=R.querySelector("#ex-sp-i"); if(bar){ bar.style.transition="none"; bar.style.width="0%"; }
   const ref=String(it.a).replace(/\s*\([^)]*\)\s*/g," ").trim(); box.hidden=false; btn.disabled=true; box.innerHTML=`<div class="ex-az-st">⏳ ${uz?"Tayyorlanmoqda…":"Подготовка…"}</div>`;
@@ -5563,7 +5564,7 @@ document.addEventListener("click",e=>{
   const lb=e.target.closest("[data-lern]"); if(lb){ e.preventDefault(); lrnOpen(lb.dataset.lern);
     if(lb.dataset.les){ const n=+lb.dataset.les; LR.sel=new Set([n]); try{ store.set(lrnKey(lb.dataset.lern)+":sel",JSON.stringify([n])); }catch(err){} lrnList(n); } return; }
   const root=lrnEl(); if(!root||root.hidden||!root.contains(e.target)) return;
-  const say=e.target.closest("[data-say]"); if(say){ try{ actEv("wza","tap"); }catch(er){} lrnSay(say.dataset.say); if(say.classList.contains("kc-spk")) kcSpkPulse(); return; }
+  const say=e.target.closest("[data-say]"); if(say){ try{ actEv("wza","tap"); const k=say.dataset.say; if(LR._lastSay&&LR._lastSay[0]===k&&Date.now()-LR._lastSay[1]<15000) actEv("wza","again"); LR._lastSay=[k,Date.now()]; }catch(er){} lrnSay(say.dataset.say); if(say.classList.contains("kc-spk")) kcSpkPulse(); return; }
   const ch=e.target.closest("[data-ch]"); if(ch){ const i=document.getElementById("lrn-in"); if(i){ const p=i.selectionStart??i.value.length; i.value=i.value.slice(0,p)+ch.dataset.ch+i.value.slice(i.selectionEnd??p); i.focus(); i.setSelectionRange(p+1,p+1); } return; }
   const hf=e.target.closest("#lrn [data-half]"); if(hf){ LR.half=+hf.dataset.half; lrnSetup(); return; }
   const ls=e.target.closest("[data-les]"); if(ls){ const n=+ls.dataset.les; LR.sel.has(n)?LR.sel.delete(n):LR.sel.add(n); store.set(lrnKey(LR.id)+":sel",JSON.stringify([...LR.sel])); lrnSetup(); return; }
@@ -8487,6 +8488,7 @@ function anWzHTML(all,P){ const days=new Set(anDays(P)), t0=Date.now()-P*864e5, 
     <p class="an-wzn">«O‘quvchi» — shu usulni kamida bir marta boshlaganlar. «Marta» — necha marta boshlangan, «%» — barcha kirishlarning qancha qismi. «So‘z» — shu usulda o‘rganilgan so‘zlar (23.10 dan). ${opened?`Yodlash ochildi: ${opened} marta${noMeth?` · ${noMeth} o‘quvchi ochib, hech qaysi usulni boshlamagan`:""}.`:""} 23.10 gacha bo‘lgan kunlar — taxminiy (o‘sha paytda faqat o‘yinlar, Karteikarten va oxirgi Lernen’lar qayd qilingan).</p></div>`; }
 /* Wortschatz ichida: qayerda chiqib ketishadi, ovoz, talaffuz, ma'no ochish (2026-10-23) */
 const WZ_ST={setup:"Lektion / ro‘yxat tanlash",goal:"«Nechta so‘z?» oynasi",intro:"👀 Tanishuv (karta)",choose:"✅ Test — variant tanlash",match:"🧩 Juftlash",write:"✍️ Yozish",learn:"🧠 Lernen (boshqa)",learn_end:"🏁 Lernen natijasi",cards:"🃏 Karteikarten",cards_end:"🏁 Karteikarten natijasi",mu:"💬 Mini-chat",list:"📄 So‘zlar ro‘yxati"};
+function anWzV(all,days){ const V={}; all.forEach(([id,d])=>Object.entries(((d.a||{}).ed)||{}).forEach(([day,E])=>{ if(!days.has(day)) return; Object.entries(E).forEach(([k,v])=>{ if(k.startsWith("wzv:")){ const x=k.slice(4); V[x]=(V[x]|0)+(v|0); } }); })); return V; }
 function anWz2HTML(all,P){ const days=new Set(anDays(P)), X={}, Q={}; let a={tap:0,play:0}, aU=0, sp={try:0,ok:0,no:0,err:0,unclear:0}, sU=0, m={flip:0,dunno:0}, mU=0, wzU=0, lern=0, cards=0;
   all.forEach(([id,d])=>{ const ED=(d.a||{}).ed||{}; let ta=0, ts=0, tm=0, uw=0;
     Object.entries(ED).forEach(([day,E])=>{ if(!days.has(day)) return; Object.entries(E).forEach(([k,v])=>{ v=v|0; const [t,x]=k.split(":");
@@ -8494,13 +8496,14 @@ function anWz2HTML(all,P){ const days=new Set(anDays(P)), X={}, Q={}; let a={tap
     if(ta) aU++; if(ts) sU++; if(tm) mU++; if(uw) wzU++; });
   const keys=[...new Set([...Object.keys(X),...Object.keys(Q)])].map(k=>[k,(X[k]|0)+(Q[k]|0),Q[k]|0]).sort((x,y)=>y[1]-x[1]), tot=keys.reduce((s,r)=>s+r[1],0)||1, mx=Math.max(1,...keys.map(r=>r[1]));
   const pc=(x,y)=>y?Math.round(x/y*100)+"%":"—";
-  if(!tot&&!a.play&&!sp.try&&!m.flip&&!m.dunno) return `<div class="an-c"><h4>🧠 Wortschatz ichida <small>${P} kun</small></h4><p class="an-wzn">Ma’lumot 23.10 dan yig‘ila boshladi — o‘quvchilar yangi versiyada Yodlash’ni ishlatgach shu yerda ko‘rinadi: qayerda chiqib ketishadi, ovozni tinglashadimi, o‘zlari aytishadimi, ma’nosini ochishadimi.</p></div>`;
+  if(!tot&&!a.play&&!sp.try&&!m.flip&&!m.dunno&&!Object.keys(anWzV(all,days)).length) return `<div class="an-c"><h4>🧠 Wortschatz ichida <small>${P} kun</small></h4><p class="an-wzn">Ma’lumot 23.10 dan yig‘ila boshladi — o‘quvchilar yangi versiyada Yodlash’ni ishlatgach shu yerda ko‘rinadi: qayerda chiqib ketishadi, ovozni tinglashadimi, o‘zlari aytishadimi, ma’nosini ochishadimi.</p></div>`;
   return `<div class="an-c an-wz"><h4>🧠 Wortschatz ichida — qayerda chiqib ketishadi <small>${P} kun · ${tot} ta chiqish</small></h4>
     ${keys.map(([k,n,q])=>`<div class="an-bar"><span>${esc(WZ_ST[k]||k)}</span><i style="--p:${Math.round(n/mx*100)}%"></i><em>${Math.round(n/tot*100)}%</em></div>`).join("")||`<p class="an-wzn">—</p>`}
     <p class="an-wzn">Yodlash yopilgan yoki saytdan chiqib ketilgan paytdagi bosqich. ${(()=>{ const q=keys.reduce((s,r)=>s+r[2],0); return q?`Shundan ${pc(q,tot)} — saytni butunlay yopib ketgan.`:""; })()} Natija ekranida chiqish — normal (ish tugagan); boshqa bosqichlarda — tashlab ketish.</p>
     <div class="an-wz3">
       <div><b>🔊 Ovoz</b><span>${a.play} marta yangradi</span><span>shundan o‘zi bosib tingladi: ${a.tap}</span><span>${aU} o‘quvchi tinglagan (${pc(aU,wzU)})</span></div>
       <div><b>🎙 O‘zi aytdi</b><span>${sp.try} urinish · ${sU} o‘quvchi (${pc(sU,wzU)})</span><span>✓ ${pc(sp.ok,sp.try)} · ✗ ${pc(sp.no,sp.try)} · ? ${pc(sp.unclear,sp.try)}</span><span${sp.err?' class="bad"':""}>⚠️ mikrofon ishlamadi: ${sp.err}</span></div>
+      <div><b>🔈 Qaysi ovoz yangradi</b>${(()=>{ const V=anWzV(all,days), t=Object.values(V).reduce((x,y)=>x+y,0); if(!t) return `<span>—</span>`; const L=[["az","🤖 Azure Seraphina"],["wk","🇩🇪 jonli nemis (Lingua Libre)"],["pick","🎙 tanlangan ovoz"],["mp3","💾 mp3 fayl"],["tts","⚠️ brauzer «robot» ovozi"]]; return L.filter(([k])=>V[k]).map(([k,n])=>`<span${k==="tts"?' class="bad"':""}>${n}: ${pc(V[k],t)}</span>`).join(""); })()}<span>🔁 qayta tinglash: ${a.again|0}</span></div>
       <div><b>👁 Ma’no ochildi</b><span>🃏 karta ag‘darildi: ${m.flip}${cards?` (${(m.flip/cards).toFixed(1)} / mashg‘ulot)`:""}</span><span>🤷 «Keine Ahnung»: ${m.dunno}${lern?` (${(m.dunno/lern).toFixed(1)} / Lernen)`:""}</span><span>${mU} o‘quvchi (${pc(mU,wzU)})</span></div>
     </div></div>`; }
 function anGrowthHTML(all,P){ const days=anDays(P), reg=TP.anReg||[], now=Date.now(), d0=now-P*864e5;

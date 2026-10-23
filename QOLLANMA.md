@@ -1043,3 +1043,8 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Yig'ish (`a.ed`): `wzx:<bosqich>` — Yodlash yopilganda, `wzq:<bosqich>` — Yodlash ochiq turganda sayt yopilganda (`lrnStage`: setup, goal, intro, choose, match, write, learn_end, cards, cards_end, mu, list). `wza:play` — ovoz yangradi (avto ham), `wza:tap` — o'zi bosib tingladi. `wzs:try/ok/no/unclear/err` — talaffuz (Karteikarten/Lernen mikrofoni, Esingizdami mikrofoni; err — ruxsat yo'q / ishlamadi). `wzm:flip` — karta ag'darildi (ma'no ochildi), `wzm:dunno` — «Keine Ahnung».
 - Ustoz paneli → Tahlil → «🧠 Wortschatz ichida — qayerda chiqib ketishadi» (`anWz2HTML`): bosqichlar bo'yicha chiqish % (va saytni butunlay yopganlar ulushi) + uch karta: 🔊 Ovoz · 🎙 O'zi aytdi (✓/✗/?/⚠️ mikrofon) · 👁 Ma'no ochildi (karta ag'darish / mashg'ulot, Keine Ahnung / Lernen). Ma'lumot 23.10 dan.
 - Shu kuni: so'zlar ro'yxati tuzatishi barcha Yodlash ro'yxatlariga tegishli (bitta umumiy qator: Wortschatz, Redemittel, Perfekt, Reflexive, Präpositionen).
+
+## 2026-10-23 — 🔈 Qaysi ovoz yangradi (Otabek: «yaxshi tahlilni qo'sh»)
+- Yodlash ochiq paytda har bir yangragan ovoz manbasi qayd qilinadi: `wzv:az` (Azure Seraphina), `wzv:wk` (Lingua Libre — jonli nemis), `wzv:pick` (o'quvchi tanlagan ovoz), `wzv:mp3` (files/audio), `wzv:tts` (brauzer «robot» ovozi — Azure ishlamagan bo'lsa).
+- `wza:again` — o'sha so'zni 15 s ichida qayta bosib tinglash.
+- Ustoz paneli → Tahlil → «🧠 Wortschatz ichida» → «🔈 Qaysi ovoz yangradi» kartasi: har manba ulushi (%), robot ovozi qizil, qayta tinglash soni. Ma'lumot 23.10 dan yig'iladi.
