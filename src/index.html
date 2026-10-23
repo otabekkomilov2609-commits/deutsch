@@ -6692,7 +6692,14 @@ function lvlAsk(){ const f=document.getElementById("acc-f"), ru=state.lang==="ru
     <button type="button" class="lrn-link" data-lvl="a11">${ru?"Не знаю — начну с A1.1":"Bilmayman — A1.1 dan boshlayman"}</button>`;
   accEl().hidden=false; document.body.style.overflow="hidden"; }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-lvl]"); if(!b) return; const k=b.dataset.lvl; if(!TABS[k]) return;
-  store.set("lvl",k); store.set("tab2",k); state.tab=k; state.q=""; try{ document.getElementById("q").value=""; }catch(er){} accEl().hidden=true; document.body.style.overflow=""; try{ render(); }catch(er){} try{ actEv("lvl",k); }catch(er){} });
+  store.set("lvl",k); store.set("tab2",k); state.tab=k; state.q=""; try{ document.getElementById("q").value=""; }catch(er){} accEl().hidden=true; document.body.style.overflow=""; try{ render(); }catch(er){} try{ actEv("lvl",k); }catch(er){} setTimeout(st10Maybe,500); });
+/* 🎯 Yangi o'quvchiga: «Birinchi 10 ta so'z — 5 daqiqa» (2026-10-24, Otabek: «yangi odam kelganda 10 so'z yodlashni taklif qil») */
+function st10Maybe(){ try{ if(!ACC.cur||IN_ARTIFACT||tchOk()||window.BLITZ) return; if(store.get("start10")) return; if(progCount().n>=10){ store.set("start10","1"); return; }
+  if(!accEl().hidden) return; const ov=document.getElementById("hp-ov"); if(ov&&!ov.hidden) return; if(!lrnEl().hidden) return; store.set("start10","1");
+  const ru=state.lang==="ru"; hpSheet(`<div class="rw"><div class="rw-av">🎯</div><h4>${ru?"Первые 10 слов — 5 минут":"Birinchi 10 ta so‘z — 5 daqiqa"}</h4><p class="mu">${ru?"Каждое слово сначала показывается с аудио, потом пары и выбор, потом вы пишете его сами. Начнём?":"Har bir so‘z avval ovozi bilan ko‘rsatiladi, keyin juftlash va tanlash, keyin o‘zingiz yozasiz. Boshlaymizmi?"}</p><div class="ch-btns rw-b"><button type="button" class="btn primary" data-st10="1">${ru?"Начать →":"Boshlash →"}</button><button type="button" class="btn" data-hpx="1">${ru?"Позже":"Keyinroq"}</button></div></div>`); try{ actEv("st10","show"); }catch(e){} }catch(e){} }
+document.addEventListener("click",e=>{ if(!(e.target.closest&&e.target.closest("[data-st10]"))) return; const o=document.getElementById("hp-ov"); if(o) o.hidden=true; try{ actEv("st10","go"); }catch(er){}
+  try{ const T=TABS[state.tab]||TABS.a11, id=lrnAllId(T.lvl,state.lang); if(!id) return; lrnOpen(id); LR.goalA="learn"; lrnGoalRun(10); }catch(er){} });
+setTimeout(()=>{ try{ if(store.get("lvl")) st10Maybe(); }catch(e){} },3500);
 /* 👋 Birinchi kirgan odamga — saytning hamma imkoniyatlari bir oynada (2026-10-21, Otabek: «umuman hamma imkoniyatlar haqida gapirish kerak») */
 function welcomeShow(){ nudgeUse(); const f=document.getElementById("acc-f"), ru=state.lang==="ru"; /* 2026-10-23: qisqa — 4 ta katak, tugmalar ko'rinib turadi */
   const rf=hpRefOk(localStorage.getItem("ref:by")||""), mr=typeof mrActive==="function"&&mrOn()&&mrActive();

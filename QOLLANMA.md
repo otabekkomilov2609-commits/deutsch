@@ -1214,3 +1214,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Avtomatik ko'chirish YO'Q — har bir juftlikni ustoz o'zi tasdiqlaydi (ikki xil odam bir xil ismli bo'lishi mumkin).
 - «🔄 Yangi versiya bor — yangilash» tugmasi endi ekran TEPASIDA va kichikroq — mashqdagi Weiter/Zurück tugmalarini yopib qo'yardi.
 - 03:30 · «Yangi versiya bor» tugmasi vaqtincha o'chirildi (`if(IN_ARTIFACT||true) return`).
+
+## 2026-10-24 03:35 · 🎯 Yangi o'quvchiga «Birinchi 10 ta so'z — 5 daqiqa»
+- `st10Maybe()`: ro'yxatdan o'tgan, 10 tadan kam so'z bilgan o'quvchiga bir marta (`start10`) pastki oyna: «Boshlash →» → shu darajaning umumiy Wortschatz ro'yxati, Lernen, maqsad 10 (`lrnGoalRun(10)`). Daraja tanlangandan keyin va sahifa ochilganda (3,5 s) tekshiriladi; boshqa oyna ochiq bo'lsa chiqmaydi.
+- Mashq turlari katalogi: `MASHQ_TURLARI.md` (A1/A2/B1, nashriyotlar tahlilidan).
