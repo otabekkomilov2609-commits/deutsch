@@ -1179,3 +1179,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - `mrNudge`: tepada «📣 Marafon · 1 000 000 so'm», sarlavha «G'olib bo'lish uchun do'stingizni chaqiring», o'ngda 34px sariq doira ichida ›.
 - «Quvib o'tdi» xabariga: «O'rningizni qaytarish uchun do'stingizni chaqiring».
 - Story rasm oynasiga (marafon faol bo'lsa): «Marafon: rasmdagi QR orqali kirgan har bir yangi odam — +1 ball, ro'yxatdan o'tsa — yana +1».
+
+## 2026-10-24 03:00 · Qidiruv/daraja/filtr — marafon va kunlik challenge'dan PASTDA
+- `#mr-home` va yangi `#dc-home` endi `.controls` dan oldin (HTML). `render()` kunlik challenge kartasini `#dc-home` ga yozadi (main ichiga emas); har renderda avval tozalanadi.
+- Kunlik challenge kartasidagi 1-o'rin ismi qisqa: «Samira R.».

@@ -1837,6 +1837,9 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
     <button type="button" class="tour-link" id="tour-link" data-tourgo>🧭 Sayt bo‘ylab sayohat</button>
   </header>
   <section class="prog" id="prog" hidden aria-live="polite"></section>
+  <!-- 2026-10-24 (Otabek): marafon va kunlik challenge — qidiruv/daraja/filtrdan TEPADA -->
+  <div id="mr-home" hidden></div>
+  <div id="dc-home"></div>
 
   <div class="controls">
     <label class="search">
@@ -1856,7 +1859,6 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
     </div>
   </div>
 
-  <div id="mr-home" hidden></div>
   <main id="main"></main>
 
   <footer>
@@ -3391,12 +3393,13 @@ function render(){
     main.innerHTML = html; return;
   }
 
+  { const dch=document.getElementById("dc-home"); if(dch) dch.innerHTML=""; }
   if(state.tab!=="list"){
     const tab = state.tab, T0 = TABS[tab], LS = LEKS[T0.lvl], CUR = CURS[tab];
     if(state.type==="all") html += hwBlock(tab);
     const rv = visibleMats(tab,"r");
     if(BT){ const rw=MATS.filter(m=>m.tab===tab&&m.key==="r"&&lernHas(m.id)), ru=state.lang==="ru";
-      if(state.type==="all"&&(T0.lvl==="A1"||T0.lvl==="A2")) html += dcCardHTML(T0.lvl);
+      if(state.type==="all"&&(T0.lvl==="A1"||T0.lvl==="A2")){ const dch=document.getElementById("dc-home"); if(dch) dch.innerHTML=dcCardHTML(T0.lvl); else html += dcCardHTML(T0.lvl); }
       const aid=lrnAllId(T0.lvl,state.lang); if(aid&&state.type==="w") html += `<div class="review rv-top wz-all">${bAct("🧠","Wortschatz "+T0.lvl,ru?`Все слова ${T0.lvl} · уроки 1–24`:`${T0.lvl} ning hamma so‘zlari · 1–24-Lektion`,"",`data-lern="${aid}"`)}${mxGet().length?bAct("📝",ru?"Мои ошибки":"Xatolarim",ru?`${mxGet().length} слов из Live test и игр`:`Live test va o‘yinlardagi ${mxGet().length} ta xato`,"",`data-mxopen="1"`):""}</div>`; else if(rw.length&&state.type==="w") html += `<div class="review rv-top"><h4>${t("whole")} · L${T0.lo}–${T0.hi}</h4><div class="sxg">${rw.map(m=>bAct("🧠",m.title,ru?"Учить слова":"So‘zlarni yodlash","",`data-lern="${m.id}"`)).join("")}</div></div>`; }
     else if(rv.length) html += `<div class="review rv-top"><h4>${t("whole")} · L${T0.lo}–${T0.hi}</h4><div class="mats">${rv.map(matCard).join("")}</div></div>`;
     const modHtml = (md, onlyN, asc) => {
@@ -6945,7 +6948,7 @@ function dcHead(sub){ const uz=state.lang!=="ru"; return `<div class="lrn-bar"><
 function dcCardHTML(lvl){ const uz=state.lang!=="ru"; if(!lvl) return ""; const day=dcDay(), res=dcGet(lvl,day), st=dcStreak(lvl); if(res) return ""; /* bugun bajarilgan — bosh sahifadan yo'qoladi (2026-10-23, Otabek) */
   /* 2026-10-24 (Otabek: «ism va ball urg'u berilsin, karta kattalashmasin; o'tgan mavzudan ekanini bilsin»): 1-o'rin bo'lsa — ism/ball yorliqlari + bitta qisqa qator */
   const L=dcLead(lvl,day);
-  if(L) return `<div class="rv-top dc-card"><button type="button" class="dc-btn" data-dc="open"><span class="dc-ic">📅</span><span class="dc-tx"><b>${uz?"Kunlik challenge":"Челлендж дня"} #${dcNo(day)} · ${lvl}</b><em class="dc-l2"><span>🥇</span><span class="nm">${esc(L.n)}</span><span class="sc">⚡ ${L.s}</span></em><small class="dc-l3">📚 ${uz?"O‘tgan mavzularingizdan":"Из пройденных тем"}${st?` · 🔥 ${st}`:""}</small></span><span class="dc-go">▶</span></button></div>`;
+  if(L) return `<div class="rv-top dc-card"><button type="button" class="dc-btn" data-dc="open"><span class="dc-ic">📅</span><span class="dc-tx"><b>${uz?"Kunlik challenge":"Челлендж дня"} #${dcNo(day)} · ${lvl}</b><em class="dc-l2"><span>🥇</span><span class="nm">${esc((()=>{ const w=String(L.n||"").trim().split(/\s+/); return w[0]+(w[1]?" "+w[1][0].toUpperCase()+".":""); })())}</span><span class="sc">⚡ ${L.s}</span></em><small class="dc-l3">📚 ${uz?"O‘tgan mavzularingizdan":"Из пройденных тем"}${st?` · 🔥 ${st}`:""}</small></span><span class="dc-go">▶</span></button></div>`;
   return `<div class="rv-top dc-card"><button type="button" class="dc-btn" data-dc="open"><span class="dc-ic">📅</span><span class="dc-tx"><b>${uz?"Kunlik challenge":"Ежедневный челлендж"} #${dcNo(day)} · ${lvl}</b><small>${res?`✅ ${res.ok}/10 · ⚡${res.s}${st?` · 🔥 ${st} ${uz?"kun":"дн."}`:""} — ${uz?"reyting va ulashish":"рейтинг и поделиться"}`:(uz?`Bugun 10 savol — o‘zingiz o‘tgan mavzulardan · 60 soniya${st?` · 🔥 ${st} kun ketma-ket`:""}`:`10 вопросов из пройденных тем · 60 секунд${st?` · 🔥 ${st} дн. подряд`:""}`)}</small></span><span class="dc-go">${res?"🏆":"▶"}</span></button></div>`; }
 /* 🥇 bosh sahifadagi kartada — bugungi 1-o'rin (2026-10-24, Otabek: «challenge birinchi o'rindagi odamning nomi tursin»). MQTT'dan bir marta 4 s o'qiladi, 5 daqiqa saqlanadi — Firebase sarflanmaydi */
 function dclMap(){ return window.__DCL||(window.__DCL={}); } /* const emas — render() undan oldin chaqiriladi (TDZ xatosi sayt yuklanmay qoldi, 2026-10-24) */
