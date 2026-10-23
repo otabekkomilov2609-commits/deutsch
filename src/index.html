@@ -7657,7 +7657,7 @@ function presAct(){
   return "🏠 Bosh sahifa"+(TABS[state.tab]?" · "+TABS[state.tab].lbl:"");
 }
 function presPub(){ if(!ON.mq) return; let c=null; try{ c=progCount().n; }catch(e){}
-  ON.mq.pub(ON_NS+ON.pid, JSON.stringify({n:ACC.name?rkName():"Mehmon",r:!!ACC.cur,w:ON.w,c,t:Date.now(),p:(typeof CM!=="undefined"&&CM.pid)||"",lv:(TABS[state.tab]||{}).lbl||"",hl:(typeof hpMyLv==="function"?hpMyLv():0)}), true); ON.t=Date.now(); }
+  ON.mq.pub(ON_NS+ON.pid, JSON.stringify({n:ACC.name?rkName():"Mehmon",r:!!ACC.cur,w:ON.w,c,t:Date.now(),p:(typeof CM!=="undefined"&&CM.pid)||"",lv:(TABS[state.tab]||{}).lbl||"",rg:(typeof rgCode==="function"?rgCode():""),hl:(typeof hpMyLv==="function"?hpMyLv():0)}), true); ON.t=Date.now(); }
 function presTick(){ if(!ON.mq) return; const w=presAct(); if(w!==ON.w||Date.now()-ON.t>110000){ ON.w=w; presPub(); } }
 function presStart(){ if(IN_ARTIFACT||ON.mq) return;
   try{ ON.pid=localStorage.getItem("onpid"); if(!ON.pid){ ON.pid=Math.random().toString(36).slice(2,10); localStorage.setItem("onpid",ON.pid); } }catch(e){ ON.pid=Math.random().toString(36).slice(2,10); }
@@ -7741,7 +7741,7 @@ function stCollect(){ const pre="u:"+ACC.cur+":", sent={}, best={}, D=lernData()
   let l=[]; try{ const o=actGet(); l=(o&&o.l||[]).slice(-20); }catch(e){}
   /* 📅 kunlik challenge tarixi — 45 kun: [kun, daraja, to'g'ri, ball] (2026-10-23, Otabek: «kunlik challengelarni tahlilga qo'y») */
   let dc=[]; try{ for(let i=0;i<localStorage.length;i++){ const k=localStorage.key(i), m=k&&/^dc:([A-Z][0-9]):(\d{4}-\d\d-\d\d)$/.exec(k); if(!m) continue; if(Date.now()-new Date(m[2]).getTime()>45*864e5) continue; const v=JSON.parse(localStorage.getItem(k)||"null"); if(v) dc.push([m[2],m[1],v.ok|0,v.s|0]); } dc.sort((a,b)=>a[0]<b[0]?-1:1); dc=dc.slice(-60); }catch(e){}
-  return {nm:ACC.name, ak:ACC.cur, w:c.n, k:c.k, g, y, a, yl, ml, l, dc, hp:hpPts(), hb:hpCnt()||undefined, mr:mrCalc()||undefined, t:Date.now()}; }
+  return {nm:ACC.name, ak:ACC.cur, w:c.n, k:c.k, g, y, a, yl, ml, l, dc, hp:hpPts(), hb:hpCnt()||undefined, mr:(()=>{ const m=mrCalc(), rg=rgCode(); return rg?Object.assign({rg},m||{}):(m||undefined); })(), t:Date.now()}; }
 /* Lektion bo'yicha: yl["A1:3"]=[o'rganildi, jami] (so'zlar), ml["A1:3"]=[o'zlashtirildi, jami] (Muloqot iboralari); bir xil Lektion uchun ru/uz ro'yxatlardan eng yaxshisi */
 function stLessons(){ const D=lernData(), yl={}, ml={};
   Object.keys(D).forEach(id=>{ const d=D[id]; if(d.parts||d.kind==="perfekt"||d.alias) return; const lv=id.split("-")[0]; if(!/^(A1|A2|B1)$/.test(lv)) return;
@@ -7877,9 +7877,19 @@ async function cmSend(toPid,k,d){ if(!ACC.cur||!toPid) return false; if(!(k==="f
   try{ if(!CM.ibMq) await cmIbListen(); if(CM.ibMq) CM.ibMq.pub(IB_NS+toPid,JSON.stringify(m),false); }catch(e){}
   try{ const f=await fsGet("ib/"+toPid); let L=[]; try{ L=f&&f.l?JSON.parse(f.l.stringValue||"[]"):[]; }catch(e){} L.push(m); L=L.slice(-30); await fsPut("ib/"+toPid,{l:fsS(JSON.stringify(L)),t:fsI(Date.now())}); }catch(e){}
   try{ actEv("cm",k); }catch(e){} return true; }
-function cmGameCode(kind){ const T0=TABS[state.tab]||TABS.a11, lv=T0.lvl, l=lrnAllId(lv,state.lang); if(!l) return null; const les=[]; for(let i=T0.lo;i<=T0.hi;i++) les.push(i);
+/* 2026-10-23 (Otabek): «challenge qabul qiluvchining darajasida bo'lsin» — har o'quvchi o'tgan Lektionlari (rg: «A1:1-12|A2:1-5») ochiq yozuvda (mr.rg) va onlayn xabarda; savollar o'shandan */
+function rgPack(R){ const out=[]; let a=null,b=null; R.forEach(n=>{ if(a===null){ a=b=n; } else if(n===b+1) b=n; else { out.push(a===b?a:a+"-"+b); a=b=n; } }); if(a!==null) out.push(a===b?a:a+"-"+b); return out.join(","); }
+function rgCode(){ try{ return ["A1","A2","B1"].map(l=>{ const R=dcRange(l); return R.length?l+":"+rgPack(R):""; }).filter(Boolean).join("|").slice(0,80); }catch(e){ return ""; } }
+function rgParse(str){ const o={}; String(str||"").split("|").forEach(p=>{ const [l,r]=p.split(":"); if(!l||!r) return; const L=[]; r.split(",").forEach(x=>{ const [a,b]=x.split("-").map(Number); if(!a) return; for(let n=a;n<=(b||a);n++) L.push(n); }); if(L.length) o[l]=L; }); return o; }
+function rgOf(pid,rk){ let s=""; try{ const x=rk?RK.list[rk]:pid?cmRkByPid(pid):null; if(x&&x.mr&&x.mr.rg) s=x.mr.rg; }catch(e){} try{ if(!s&&pid){ const o=cmOnline().find(([id,d])=>d.p===pid); if(o) s=o[1].rg||(o[1].lv?"@"+o[1].lv:""); } }catch(e){} return s; }
+function cmGameCode(kind,pid,rk){ let lv=null, les=null, lbl="";
+  const rg=(pid||rk)?rgOf(pid,rk):"";
+  if(rg&&rg[0]!=="@"){ const o=rgParse(rg), ks=["B1","A2","A1"].filter(k=>o[k]); if(ks.length){ lv=ks[0]; les=o[lv]; const a=les[0], b=les[les.length-1]; lbl=lv+" · L"+a+(b>a?"–"+b:""); } }
+  if(!lv&&rg&&rg[0]==="@"){ const T=Object.values(TABS).find(t=>t.lbl===rg.slice(1)); if(T){ lv=T.lvl; les=[]; for(let i=T.lo;i<=T.hi;i++) les.push(i); lbl=T.lbl; } }
+  if(!lv){ const T0=TABS[state.tab]||TABS.a11; lv=T0.lvl; les=[]; for(let i=T0.lo;i<=T0.hi;i++) les.push(i); lbl=T0.lbl; }
+  const l=lrnAllId(lv,state.lang); if(!l) return null;
   const c=kind==="du"?{v:1,l,s:les,r:Math.floor(Math.random()*2147483647),c:(ACC.name||"").split(" ")[0]||"",t:Date.now()}:{v:2,l,s:les,r:Math.floor(Math.random()*2147483647),c:(ACC.name||"").split(" ")[0]||"",t:Date.now()};
-  const code=chB64e(JSON.stringify(c)); return {code,url:kind==="du"?(location.origin+location.pathname+"?du="+code):chLink(code),lbl:T0.lbl}; }
+  const code=chB64e(JSON.stringify(c)); return {code,url:kind==="du"?(location.origin+location.pathname+"?du="+code):chLink(code),lbl}; }
 /* ---- shaxs kartasi ---- */
 function cmCard(pid,nm){ const ru=state.lang==="ru", rk=cmRkByPid(pid)||{}, on=cmIsOnline(pid), F=cmFr(), inG=!!(CM.g&&(CM.g.m||[]).some(x=>x[0]===pid)), me=pid===CM.pid;
   const lv=PROG_LV[progLv(rk.n|0)]; const stat=`${on?"🟢 "+cmT("online"):cmT("last")+" "+cmAgo(rk.t)} · ${lv?lv.e+" "+lv.de+" · ":""}${rk.n|0} ${cmT("words")} · ${cmT("wk")}: ${rk.nw|0}${rk.app?" · 📲":""}`;
@@ -7895,7 +7905,7 @@ function cmCardRk(x,me,rkid){ const ru=state.lang==="ru", lv=PROG_LV[progLv(x.n|
 function cmPend(){ try{ return JSON.parse(store.get("frpend")||"{}")||{}; }catch(e){ return {}; } }
 function cmPendSave(o){ try{ store.set("frpend",JSON.stringify(o)); }catch(e){} }
 async function cmPendFlush(){ try{ if(!ACC.cur) return; const P=cmPend(); let ch=false; for(const key of Object.keys(P)){ const [rk,k0]=key.split("|"), k=k0||"fr", x=RK.list[rk]; if(!x||!x.pid) continue; let ok=false;
-    if(k==="fr") ok=await cmSend(x.pid,"fr",{}); else if(k==="ch"){ if(P[key].d){ const d=P[key].d; if(d.exp&&Date.now()>d.exp){ delete P[key]; ch=true; continue; } ok=await cmSend(x.pid,"ch",d); } else { const g=cmGameCode("ch"); if(g) ok=await cmSend(x.pid,"ch",{url:g.url,lbl:g.lbl}); } } else if(k==="g"){ if(!CM.g) await cmGroupLoad(); if(CM.g) ok=await cmSend(x.pid,"g",{gid:CM.gid,gnm:CM.g.nm}); }
+    if(k==="fr") ok=await cmSend(x.pid,"fr",{}); else if(k==="ch"){ if(P[key].d){ const d=P[key].d; if(d.exp&&Date.now()>d.exp){ delete P[key]; ch=true; continue; } ok=await cmSend(x.pid,"ch",d); } else { const g=cmGameCode("ch",x.pid,rk); if(g) ok=await cmSend(x.pid,"ch",{url:g.url,lbl:g.lbl}); } } else if(k==="g"){ if(!CM.g) await cmGroupLoad(); if(CM.g) ok=await cmSend(x.pid,"g",{gid:CM.gid,gnm:CM.g.nm}); }
     if(ok){ delete P[key]; ch=true; hpToastMsg("✓ "+(x.nm||"")+" — "+cmT("sent")); } else if(Date.now()-(P[key].t||0)>14*864e5){ delete P[key]; ch=true; } } if(ch) cmPendSave(P); }catch(e){} }
 document.addEventListener("click",e=>{ const pb=e.target.closest("[data-cmpend]"); if(pb){ e.stopPropagation(); if(pb.dataset.cmk==="g"&&!CM.g){ cmGroupName({rk:pb.dataset.cmpend,nm:pb.dataset.cmn||""}); return; } const P=cmPend(), k=pb.dataset.cmk||"fr"; P[pb.dataset.cmpend+(k==="fr"?"":"|"+k)]={n:pb.dataset.cmn||"",t:Date.now()}; cmPendSave(P); pb.outerHTML=`<span class="cm-ok">✓ ${state.lang==="ru"?"отправится":"yuboriladi"}</span>`; hpToastMsg(state.lang==="ru"?"Отправим, когда он зайдёт на сайт":"U saytga kirganda yuboramiz"); return; }
   const ds=e.target.closest("[data-cmdush]"); if(ds){ e.stopPropagation(); const g=cmGameCode("du"); if(!g) return; const ru=state.lang==="ru", txt=(ru?`⚔️ ${ds.dataset.cmn||""}, вызываю на дуэль по немецким словам!`:`⚔️ ${ds.dataset.cmn||""}, sizni nemis so‘zlari bo‘yicha Duelga chaqiraman!`)+"\n"+g.url;
@@ -7945,20 +7955,20 @@ function h2hAdd(pid,nm,r){ if(!pid) return; const H=h2hGet(), v=H[pid]||[0,0,0,"
 function h2hTxt(pid){ const v=h2hGet()[pid]; if(!v||!(v[0]+v[1]+v[2])) return ""; return `⚔️ ${state.lang==="ru"?"Счёт":"O‘zaro hisob"}: <b>${v[0]} – ${v[1]}</b>${v[2]?` (${v[2]} ${state.lang==="ru"?"ничьи":"durang"})`:""}`; }
 function chKey(code){ return String(code||"").slice(-24); }
 /* onlayn → Duel: taklif, 10 s javob kutiladi */
-async function cmDuelInvite(pid,nm){ const g=cmGameCode("du"); if(!g) return; const id=Math.random().toString(36).slice(2,9), ru=state.lang==="ru";
+async function cmDuelInvite(pid,nm){ const g=cmGameCode("du",pid); if(!g) return; const id=Math.random().toString(36).slice(2,9), ru=state.lang==="ru";
   const ok=await cmSend(pid,"du",{url:g.url,lbl:g.lbl,id,exp:Date.now()+(DU_WAIT+3)*1000}); if(!ok){ hpToastMsg("⚠️ "+(ru?"Не получилось — проверьте интернет":"Bo‘lmadi — internetni tekshiring")); return; }
   CM.duW={id,pid,nm,url:g.url,t:Date.now()}; clearInterval(CM.duT);
   const draw=()=>{ const left=Math.max(0,DU_WAIT-Math.floor((Date.now()-CM.duW.t)/1000)); const el=document.getElementById("du-wait-n"); if(el) el.textContent=left; const bar=document.getElementById("du-wait-b"); if(bar) bar.style.width=(left/DU_WAIT*100)+"%"; if(left<=0){ clearInterval(CM.duT); cmDuelFail(false); } };
-  hpSheet(`<div class="du-wait"><div class="du-ic">⚔️</div><h4>${ru?`Ждём ответа: ${esc(nm)}`:`${esc(nm)} javobini kutyapmiz`}</h4><p class="mu">${ru?"Ему пришло приглашение на дуэль":"Unga Duel taklifi bordi"}</p><div class="du-n" id="du-wait-n">${DU_WAIT}</div><div class="du-bar"><i id="du-wait-b" style="width:100%"></i></div>
+  hpSheet(`<div class="du-wait"><div class="du-ic">⚔️</div><h4>${ru?`Ждём ответа: ${esc(nm)}`:`${esc(nm)} javobini kutyapmiz`}</h4><p class="mu">${ru?"Ему пришло приглашение на дуэль":"Unga Duel taklifi bordi"} · ${ru?"вопросы":"savollar"}: ${esc(g.lbl)}</p><div class="du-n" id="du-wait-n">${DU_WAIT}</div><div class="du-bar"><i id="du-wait-b" style="width:100%"></i></div>
     <div class="ch-btns" style="justify-content:center"><button type="button" class="btn" data-dux="1">${ru?"Отмена":"Bekor qilish"}</button></div></div>`);
   CM.duT=setInterval(draw,250); }
 function cmDuelFail(declined){ const w=CM.duW; if(!w) return; CM.duW=null; clearInterval(CM.duT); const ru=state.lang==="ru";
   hpSheet(`<div class="du-wait"><div class="du-ic">${declined?"🙅":"⌛"}</div><h4>${esc(w.nm)} ${declined?(ru?"сейчас не может":"hozir o‘ynay olmaydi"):(ru?"не ответил(а)":"javob bermadi")}</h4><p class="mu">${ru?"Отправьте Challenge — сыграет, когда сможет (48 часов). Кто наберёт больше — тот победил.":"Challenge yuboring — u vaqti bo‘lganda o‘ynaydi (48 soat). Kim ko‘p ball olsa — o‘sha yutadi."}</p>
     <div class="ch-btns" style="justify-content:center"><button type="button" class="btn cm-ch" data-cmchgo="1" data-cmp="${esc(w.pid)}" data-cmn="${esc(w.nm)}">⚡ ${ru?"Отправить Challenge":"Challenge yuborish"}</button><button type="button" class="btn" data-hpx="1">${ru?"Закрыть":"Yopish"}</button></div></div>`); }
 /* offlayn → Challenge: avval o'zi o'ynaydi, keyin natija bilan yuboriladi */
-function cmChStart(pid,nm,rk){ if(!ACC.cur){ hpToastMsg(cmT("needAcc")); return; } const g=cmGameCode("ch"); if(!g) return; const code=new URL(g.url).searchParams.get("ch")||"";
+function cmChStart(pid,nm,rk){ if(!ACC.cur){ hpToastMsg(cmT("needAcc")); return; } const g=cmGameCode("ch",pid,rk); if(!g) return; const code=new URL(g.url).searchParams.get("ch")||"";
   try{ localStorage.setItem(accK("chout:"+chKey(code)),JSON.stringify({pid:pid||"",rk:rk||"",nm,lbl:g.lbl,url:g.url,t:Date.now()})); }catch(e){}
-  hpToastMsg(state.lang==="ru"?`⚡ Сначала играете вы — потом ${nm} получит ваш результат`:`⚡ Avval siz o‘ynaysiz — keyin natijangiz ${nm}ga boradi`); setTimeout(()=>{ location.href=g.url; },900); }
+  hpToastMsg(state.lang==="ru"?`⚡ Вопросы по уровню ${nm}: ${g.lbl}. Сначала играете вы.`:`⚡ Savollar ${nm} darajasidan: ${g.lbl}. Avval siz o‘ynaysiz.`); setTimeout(()=>{ location.href=g.url; },900); }
 async function cmChFinishHook(){ try{ if(!ACC.cur) return; const code=new URLSearchParams(location.search).get("ch")||"", key=chKey(code), ru=state.lang==="ru", my=CHS.score|0; if(!code) return;
   let out=null, inn=null; try{ out=JSON.parse(store.get("chout:"+key)||"null"); inn=JSON.parse(store.get("chin:"+key)||"null"); }catch(e){}
   if(out){ const id=Math.random().toString(36).slice(2,9), d={url:out.url,lbl:out.lbl,s:my,id,exp:Date.now()+CH_EXP};
