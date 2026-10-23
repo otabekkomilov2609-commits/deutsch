@@ -961,3 +961,9 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Tepada chiqadigan xabar (`#cm-toast`) matni bosilmas edi — faqat tugmalari ishlardi, o'zi esa 📬/👥 tugmalarini to'sardi. Endi matn (`.cm-tx`, oxirida «›») bosilsa — 📬 Xabarlar oynasi ochiladi.
 - 📬 soni noto'g'ri edi: ichki xizmat xabarlari (`du_ok`, `du_no`, `fr_ok`, `g_ok`) ham sanalardi, lekin ro'yxatda ko'rinmasdi → «3» deb turib ichkarida 2 ta. Endi `CM_SYS` ro'yxati sanoqdan ham, ro'yxatdan ham chiqariladi.
 - «seni o'rtoq qilmoqchi» → «sizni do'st qilmoqchi».
+
+## 2026-10-23 — Ikki xatoda kursor eng o'ngdagi xatoga (Otabek: «ikkita xato bo'lsa kursor eng o'ngdagi harfni o'chirishga tayyorlansin»)
+- `errCaret` endi BIRINCHI emas, ENG O'NGDAGI xato blokini tanlaydi. Butun saytda (Yodlash, Esingizdami, Duel, Live test, mashqlar) — hammasi shu funksiyadan.
+- Tuzatish o'ngdan chapga: jonli tekshiruv har harfdan keyin kursorni keyingi (chapdagi) xatoga o'tkazadi; chapdagi harflar siljimaydi.
+- Sinov («die Wohnung»): `die Wonnunk|` → (k o'chdi) `die Wonnun|` → (g) `die Won|nung` → (n o'chdi) `die Wo|nung` → (h) ✓.
+- Blok ichidagi qoida o'zgarmadi: kursor oxirgi xato harfdan keyin; faqat tushib qolgan harf bo'lsa — o'sha joyda.
