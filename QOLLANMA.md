@@ -1119,3 +1119,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 2026-10-24 — «O'sish nimaning hisobiga» tushunarliroq (Otabek: «shu nma tushunmayapman»)
 - O'zgarish kunlari endi kun o'rtasida chiziq + ustida faqat ①②③ belgisi; izohi diagramma ostida ro'yxat bo'lib («① 21.10 — 📊 Faollik kuzatuvi»). Chiziq raqamlar ostidan o'tadi (raqam ustunda fon bilan).
 - Sarlavha izohi: «ustun — o'sha kuni nechta yangi o'quvchi ro'yxatdan o'tgani (rang — qayerdan kelgani) · ①② — saytga yangilik qo'shilgan kun».
+
+## 2026-10-24 · Verben mit Präpositionen — faqat Seraphina ovozi
+- `lrnSeraOnly()`: Wortschatz oynasi ochiq va ro'yxat id'sida `Verben-mit-Praep` bo'lsa (uz va ru), `lrnSay` Forvo / jonli nemis / mp3 ni chetlab o'tib to'g'ridan-to'g'ri `ttsSay` → Azure Seraphina'ga boradi.
+- Azure ishlamasa — odatdagidek telefon ovozi (ttsLocal). Boshqa ro'yxatlar o'zgarmadi.
