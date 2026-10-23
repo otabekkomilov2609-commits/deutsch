@@ -1132,3 +1132,9 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 2026-10-24 · Verben mit Präpositionen: karta old tomonida faqat tarjima
 - `lrnFrontTxt(x)`: `Verben-mit-Praep` ro'yxatida Karteikarten old tomonida faqat « — » dan keyingi tarjima («orzu qilmoq»). O'quvchi fe'lni ham, predlogni ham o'zi eslaydi; orqa tomonda «träumen von (+ Dat.)».
 - Predlog tanlash testi va boshqa ro'yxatlar o'zgarmadi.
+
+## 2026-10-24 · Guruh oynasi: ⏳, chiqish savoli, «orqaga», qator joylashuvi
+- ➕ bosilib do'stlik/guruh so'rovi yuborilsa — `cmSentAdd(pid,k)` (`cmsent`, 14 kun). `cmPlusState` endi qabul qilingan (frA/gA) va kutilayotganini (frW/gW) ajratadi: kutilsa tugma ⏳ (sariq), hammasi qabul qilinsa ✓. Shaxs kartasida ham «⏳ So'rov yuborildi».
+- «Chiqish» — brauzer `confirm` o'rniga pastki oyna: «Guruhdan chiqmoqchimisiz?» · Qolish / Ha, chiqish (`data-cmgout`).
+- `#cm` oynasiga `role=dialog` — telefonning «orqaga» tugmasi endi guruh oynasini yopadi (avval yopilmay, guruhga qaytarardi).
+- Guruh qatori: haftalik son ustma-ust («211 / haftada»), 👋 faqat belgi, ➕/👋 32px — ism to'liq ko'rinadi. O'zingizning qatoringiz — telefondagi hozirgi son (bazadagi eski emas). Reyting hali yuklanmagan a'zoda «…».
