@@ -996,3 +996,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - Savollar (nemischa so'zlar, tartib, variantlar) ikkala o'yinchida AYNAN bir xil — faqat savol matni (tarjima) va sarlavha («Deutsch–O'zbekcha/Russisch») o'zgaradi. Sinov: uz va ru da 4 savol — a/o bir xil, q: «televizor» / «телевизор».
 - Qo'llandi: ⚔️ Duel, ⚡ Challenge (guruh va shaxsiy) — `chPool`, `chTitle`; 🎯 Live test — `ltPool`, `ltTitle`. Sinf o'yini (kg) — ustoz o'zi yozgan savollar, tegilmadi. Kunlik challenge allaqachon o'z tilida.
 - Duel maqtanish rasmida «Raundlar X : Y» endi har doim (1-raunddan keyin ham).
+- Tuzatish: daraja nomida (Neuling) «g» pasti kesilardi — `.pg-lv` line-height 1 → 1.25 (overflow:hidden tufayli).
