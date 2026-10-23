@@ -1086,3 +1086,4 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - «👥 Hamma o'quvchilar» ro'yxatidan bitta o'quvchini tanlash mumkin — faqat uning kunlari.
 - Ustunni bosganda pastda o'sha kun: vaqt, o'quvchilar, so'zlar, javoblar, bir o'quvchiga vaqt. Pastda: davrning 2-yarmi 1-yarmiga nisbatan ▲/▼ %, jami va kuniga o'rtacha.
 - Manba: TP.stu a.dd (30 kun) + TP.dx dd (60 kun, chuqur tahlil Firebase qoidasi qo'yilgach).
+- 2026-10-23 (Otabek: «bu nma» — diagramma skrinshoti): vaqt «s» o'rniga «soat / daq» (y o'qi 1/2/3/4 soat kabi yumaloq qadamlar), kuzatuv boshlangan kundan oldingi kunlar kulrang chiziqli «ma'lumot yo'q» (0 deb ko'rsatilmaydi), 7 kunlik o'rtacha va ▲/▼ faqat ma'lumot bor kunlardan, izoh: «Ustun — o'sha kuni tanlangan o'quvchilarning faol vaqti yig'indisi».
