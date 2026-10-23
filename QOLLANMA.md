@@ -1213,3 +1213,4 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Yo'nalish: birinchi faolligi oldinroq — «Eski», keyingisi — «Yangi». Tugmalar: «Eskisini yangisiga ko'chirish →» (mavjud `tpMvAsk` tasdiq oynasi → `tpMvGo`), «↔ Teskari», «Boshqa-boshqa odam» (`tp:dupno`, boshqa ko'rsatilmaydi).
 - Avtomatik ko'chirish YO'Q — har bir juftlikni ustoz o'zi tasdiqlaydi (ikki xil odam bir xil ismli bo'lishi mumkin).
 - «🔄 Yangi versiya bor — yangilash» tugmasi endi ekran TEPASIDA va kichikroq — mashqdagi Weiter/Zurück tugmalarini yopib qo'yardi.
+- 03:30 · «Yangi versiya bor» tugmasi vaqtincha o'chirildi (`if(IN_ARTIFACT||true) return`).

@@ -3654,7 +3654,7 @@ if(!IN_ARTIFACT){
     bkAsk(); bkArm(); });
 }
 /* 🔄 Sayt yangilansa — ochiq turgan sahifada "Yangilash" tugmasi (eski versiya ishlab qolmasin, 2026-10-19, Otabek) */
-(()=>{ if(IN_ARTIFACT) return; let tag=null;
+(()=>{ if(IN_ARTIFACT||true) return; /* 2026-10-24 03:30 (Otabek: «yangilanish borni o'chirib tur») — vaqtincha o'chirilgan; yoqish uchun «||true» ni olib tashlang */ let tag=null;
   const get=()=>fetch(location.pathname,{method:"HEAD",cache:"no-store"}).then(r=>r.ok?(r.headers.get("etag")||r.headers.get("last-modified")):null).catch(()=>null);
   get().then(t=>{ tag=t; });
   const show=()=>{ if(document.getElementById("upd-t")) return; const b=document.createElement("button"); b.type="button"; b.id="upd-t"; b.className="upd-t";
