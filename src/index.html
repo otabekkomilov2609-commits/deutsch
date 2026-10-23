@@ -6845,7 +6845,7 @@ document.addEventListener("click",e=>{ if(e.target.closest("[data-lang]")) setTi
 async function mrTpLoad(){ if(TP.mrL) return; TP.mrL=1; try{ await mrCfgLoad(); const R=[]; let tok="",n=0; do{ const r=await fetch(FS_BASE+"ref?pageSize=300"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok) break; const j=await r.json(); (j.documents||[]).forEach(d=>{ const F=d.fields||{}; R.push({id:d.name.split("/").pop(),by:(F.by||{}).stringValue||"",nm:(F.nm||{}).stringValue||"",w:+((F.w||{}).integerValue||0),gr:+((F.gr||{}).integerValue||0),t:+((F.t||{}).integerValue||0),k:(F.k||{}).stringValue||""}); }); tok=j.nextPageToken||""; }while(tok&&++n<20); TP.mrRef=R;
     const C=[]; try{ const r=await fetch(FS_BASE+"mr?pageSize=100",{cache:"no-store"}); if(r.ok){ const j=await r.json(); (j.documents||[]).forEach(d=>{ const id=d.name.split("/").pop(); if(id.startsWith("claim_")) C.push({id,c:((d.fields||{}).c||{}).stringValue||"",t:+(((d.fields||{}).t||{}).integerValue||0)}); }); } }catch(e){} TP.mrClaims=C;
     for(const [id,d] of Object.entries(TP.stu||{})){ if(d&&d.ak&&!d._rc){ const h=await cloudSha("streber.uz/ref/v1:"+d.ak); let v=parseInt(h.slice(8,16),16), c=""; for(let i=0;i<6;i++){ c+=REF_AB[v&31]; v=Math.floor(v/32); } d._rc=c; d._rc8=h.slice(0,8); } }
-  }catch(e){} TP.mrL=0; if(TP.tab==="an") tpStDrawSoon(); }
+  }catch(e){} TP.mrL=0; tpStDrawSoon(); }
 function mrTpHTML(){ const S=Object.entries(TP.stu||{}).filter(([id,d])=>d&&d.nm), R=TP.mrRef||[], X=new Set((MR.cfg&&MR.cfg.x)||[]), W=mrWinners(), d=mrDays();
   if(!TP.mrL&&!TP.mrRef) mrTpLoad();
   const byNm={}; S.forEach(([id,d])=>{ byNm[String(d.nm).trim().toLowerCase()]=d; });
@@ -6863,7 +6863,7 @@ function mrTpHTML(){ const S=Object.entries(TP.stu||{}).filter(([id,d])=>d&&d.nm
     <p class="ch-net">«Shubhali» — do‘sti bazada yo‘q, yoki 100 so‘zga 3 kundan kam faollik bilan yetgan, yoki hech o‘ynamagan. Yakuniy qaror sizniki.</p></div>`; }
 async function mrTpSave(){ try{ const c=MR.cfg||{x:[],w:[]}; await fsPut("mr/cfg",{x:fsS(JSON.stringify(c.x||[]).slice(0,4000)),w:fsS(JSON.stringify(c.w||[]).slice(0,2000)),t:fsI(Date.now())}); c._t=Date.now(); localStorage.setItem("mr:cfg",JSON.stringify(c)); }catch(e){ alert("Saqlab bo‘lmadi — internetni tekshiring."); } }
 document.addEventListener("click",async e=>{ const b=e.target.closest("[data-tpmr]"); if(!b||!tchOk()) return; const a=b.dataset.tpmr;
-  if(a==="reload"){ TP.mrRef=null; TP.mrL=0; try{ localStorage.removeItem("mr:cfg"); }catch(x){} MR.cfg=null; mrTpLoad(); return; }
+  if(a==="reload"){ b.disabled=true; b.textContent="⏳ Yuklanmoqda…"; TP.mrRef=null; TP.mrL=0; try{ localStorage.removeItem("mr:cfg"); }catch(x){} MR.cfg=null; try{ await tpCloudLoad(); await mrTpLoad(); }catch(x){} tpStDrawSoon(); return; }
   if(a==="x"){ const id=b.dataset.id; MR.cfg=MR.cfg||{x:[],w:[]}; const i=(MR.cfg.x||[]).indexOf(id); if(i>=0) MR.cfg.x.splice(i,1); else (MR.cfg.x=MR.cfg.x||[]).push(id); await mrTpSave(); tpStDrawSoon(); return; }
   if(a==="ann"){ const S=Object.entries(TP.stu||{}).filter(([id,d])=>d&&d.nm&&d.mr&&d.mr.p>0).map(([id,d])=>({rk:d.ak?audId("rk:"+d.ak):id,nm:d.nm,p:d.mr.p,t:d.mr.t||0,m:d.mr})).filter(r=>!((MR.cfg&&MR.cfg.x)||[]).includes(r.rk)).sort((a,b)=>b.p-a.p||a.t-b.t);
     const AL=mrAlloc(S.map(r=>[r.rk,{mr:r.m}])), W=S.filter(r=>AL[r.rk]).map(r=>[r.nm,r.p,r.rk,AL[r.rk]]);
