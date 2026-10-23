@@ -1123,3 +1123,8 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 2026-10-24 · Verben mit Präpositionen — faqat Seraphina ovozi
 - `lrnSeraOnly()`: Wortschatz oynasi ochiq va ro'yxat id'sida `Verben-mit-Praep` bo'lsa (uz va ru), `lrnSay` Forvo / jonli nemis / mp3 ni chetlab o'tib to'g'ridan-to'g'ri `ttsSay` → Azure Seraphina'ga boradi.
 - Azure ishlamasa — odatdagidek telefon ovozi (ttsLocal). Boshqa ro'yxatlar o'zgarmadi.
+
+## 2026-10-24 · Karteikarten: xato aytsa karta aylanmaydi
+- `kcDone`: faqat to'g'ri aytilsa `LR.flip=true`. Xato bo'lsa karta old tomonda qoladi, mikrofon o'z joyida — yana aytish mumkin.
+- Old tomonda `kcBanner(x,1)`: «🎙 Sie: … ❌ · yana ayting yoki kartani bosing» (to'g'ri artikel ko'rsatilmaydi — javobni ochib qo'ymaslik uchun). «Yaxshi eshitmadim» ham endi old tomonda ko'rinadi.
+- O'quvchi kartani o'zi bossa — odatdagidek aylanadi, orqada to'liq natija (🎯 %, artikel) chiqadi.

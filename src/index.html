@@ -5551,7 +5551,8 @@ function lrnGameBlock(){ const uz=state.lang!=="ru"; try{ if(!LR.id||!LR.sel||!L
 const KC={rec:null,sr:null,st:null,on:false,txt:"",chunks:[],t0:0,tm:null,res:null,busy:false};
 function kcCan(){ return !IN_ARTIFACT&&!!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia)&&((azOn()&&AZ.ok)||!!(window.SpeechRecognition||window.webkitSpeechRecognition)); }
 function kcMicRow(){ if(!kcCan()) return ""; const uz=state.lang!=="ru"; return `<div class="sp2-tg kc-tg${KC.on?" on":""}" id="kc-tg"><span class="tg-ph" id="kc-lb">${KC.busy?"⏳ "+(uz?"Tekshiryapman…":"Проверяю…"):(uz?"🎙 Nemischasini ayting — mikrofonni bosib turing":"🎙 Скажите по-немецки — держите микрофон")}</span><span class="tg-dot"></span><span class="tg-tm" id="kc-tm">0:00,0</span><span class="tg-live" id="kc-live"></span><span class="tg-cnl" id="kc-cnl">‹ ${uz?"Chapga — bekor":"Влево — отмена"}</span><button type="button" class="tg-mic" id="kc-mic" aria-label="🎙">🎙</button></div>`; }
-function kcBanner(x){ const r=KC.res; if(!r||r.i!==x.i) return ""; const uz=state.lang!=="ru";
+function kcBanner(x,front){ const r=KC.res; if(!r||r.i!==x.i) return ""; const uz=state.lang!=="ru";
+  if(front&&!r.unclear) return r.ok?"":`<span class="kc-bn bad">🎙 Sie: <b>${esc(r.heard||"—")}</b> ❌ · ${uz?"yana ayting yoki kartani bosing":"скажите ещё раз или нажмите на карточку"}</span>`;
   if(r.unclear) return `<span class="kc-bn mid">🎙 ${uz?"Yaxshi eshitmadim — yana urinib ko‘ring":"Плохо слышно — попробуйте ещё"}</span>`;
   const low=r.ok&&r.sc!=null&&r.sc<60;
   return `<span class="kc-bn ${r.ok?(low?"mid":"ok"):"bad"}">🎙 Sie: <b>${esc(r.heard||"—")}</b> ${r.ok?"✅":"❌"}${r.sc!=null?` 🎯 ${r.sc}%`:""}${r.art?` · ${uz?"artikel":"артикль"}: <b>${esc(r.art)}</b>`:""}${low?` · ${uz?"aniqroq ayting":"чётче"}`:""}</span>`; }
@@ -5591,8 +5592,9 @@ async function kcDone(x){ const dur=(Date.now()-KC.t0)/1000; let heard="", sc=nu
   const ok=!unclear&&kcMatch(kcRef(x),heard)&&(sc==null||sc>=45), art=!unclear&&!ok?kcArt(kcRef(x),heard):""; try{ actEv("wzs",unclear?"unclear":ok?"ok":"no"); }catch(e){}
   KC.res={i:x.i,heard,sc,ok,unclear,art}; if(!unclear){ KC.log=KC.log||[]; const j=KC.log.findIndex(r=>r.i===x.i); const rec={i:x.i,x,heard,sc,ok,art}; if(j>=0) KC.log[j]=rec; else KC.log.push(rec); } try{ actEv("kc",ok?"ok":unclear?"unclear":"bad"); }catch(e){}
   if(unclear){ lrnCard(); return; }
-  /* to'g'ri aytsa: karta aylanadi, so'z yangraydi, tugma «Weiter →» bo'ladi (2026-10-23, Otabek) */
-  LR.flip=true; lrnCard(); if(ok){ setTimeout(()=>{ try{ if(LR.mode==="cards"&&LR.cards[0]===x){ lrnSay(x.say||x.de); kcSpkPulse(); } }catch(e){} },350); } }
+  /* to'g'ri aytsa: karta aylanadi, so'z yangraydi, tugma «Weiter →» bo'ladi (2026-10-23, Otabek)
+     xato aytsa: karta AYLANMAYDI — o'quvchi yana aytadi yoki o'zi bosib aylantiradi (2026-10-24, Otabek) */
+  if(ok) LR.flip=true; lrnCard(); if(ok){ setTimeout(()=>{ try{ if(LR.mode==="cards"&&LR.cards[0]===x){ lrnSay(x.say||x.de); kcSpkPulse(); } }catch(e){} },350); } }
 /* 🎙 yakun: natijalar, takrorlash ro'yxati, ulashish (2026-10-23, Otabek) */
 function kcEndHTML(){ const L=KC.log||[]; if(!L.length) return ""; const uz=state.lang!=="ru", ok=L.filter(r=>r.ok).length, bad=L.length-ok, art=L.filter(r=>r.art).length, S=L.filter(r=>r.sc!=null), avg=S.length?Math.round(S.reduce((a,r)=>a+r.sc,0)/S.length):null, min=Math.max(1,Math.round((Date.now()-(KC.t0s||Date.now()))/60000));
   return `<div class="kc-sum">${avg!=null?`<div class="kc-ring" style="--p:${avg}"><i>${avg}%</i></div><div class="kc-mu">🎯 ${uz?"o‘rtacha talaffuz":"среднее произношение"} · ${min} ${uz?"daq":"мин"}</div>`:`<div class="kc-mu">🎙 ${L.length} ${uz?"ta so‘z aytildi":"слов сказано"} · ${min} ${uz?"daq":"мин"}</div>`}
@@ -5616,7 +5618,7 @@ function lrnCard(){
   const x=LR.cards[0];
   lrnEl().innerHTML=`${lrnHead(`<span class="lrn-left">${esc(lt("left")(LR.cards.length))}</span>`)}<div class="lrn-body">
     <button type="button" class="lrn-flash${LR.flip?" flip":""}" data-l="flip" aria-live="polite">
-      ${LR.flip?`<span class="kc-spk" role="button" aria-label="🔊" data-say="${esc(x.say||x.de)}">🔊</span><span class="lrn-q de">${esc(x.full)}</span>${x.fm?`<span class="lrn-fm">${esc(x.fm)}</span>`:""}${x.ex?`<span class="lrn-ex">${esc(x.ex)}</span>`:""}${kcBanner(x)}`:`<span class="lrn-q">${esc(x.ru)}</span>`}
+      ${LR.flip?`<span class="kc-spk" role="button" aria-label="🔊" data-say="${esc(x.say||x.de)}">🔊</span><span class="lrn-q de">${esc(x.full)}</span>${x.fm?`<span class="lrn-fm">${esc(x.fm)}</span>`:""}${x.ex?`<span class="lrn-ex">${esc(x.ex)}</span>`:""}${kcBanner(x)}`:`<span class="lrn-q">${esc(x.ru)}</span>${kcBanner(x,1)}`}
     </button>
     ${LR.flip?``:kcMicRow()}
     ${KC.res&&KC.res.i===x.i&&KC.res.ok&&LR.flip?`<div class="lrn-kn"><button type="button" class="btn lrn-yes kc-next" data-l="yes">Weiter →</button></div>`:`<div class="lrn-kn"><button type="button" class="btn lrn-no" data-l="no">${esc(lt("dontknow"))}</button><button type="button" class="btn lrn-yes" data-l="yes">${esc(lt("know"))}</button></div>`}
