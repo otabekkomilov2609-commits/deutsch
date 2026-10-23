@@ -1010,3 +1010,4 @@ Navoiy Street treningining bir qismi audio sifati tufayli ishonchli tiklanmagan.
 - 🧠 Esingizdami kartasi: bugungi takror bajarilgan / qolmagan bo'lsa — bosh sahifadan butunlay yo'qoladi (avval «✅ Hammasi esingizda» bo'lib turardi). Ertaga yana chiqadi.
 - Duel taklifiga javob kutish: 10 → 20 soniya (`DU_WAIT`), qabul qiluvchidagi sanoq ham 20 dan (Otabek, shu kuni).
 - 📲 (ilova o'rnatgan) belgisi reytingdan va 👥 o'quvchi kartasidan olib tashlandi — faqat Ustoz panelida (Otabek, shu kuni).
+- 🧭 «Sayt bo'ylab sayohat» ✕: 20 px → 28 px + atrofida kengaytirilgan bosish maydoni — telefonda ✕ o'rniga sayohat boshlanib ketmasin (bosilsa `tour=1`, butunlay yo'qoladi). (Otabek, shu kuni)
