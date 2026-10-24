@@ -8800,7 +8800,7 @@ if(CLOUD_ON){
 async function tpCloudLoad(){ if(!CLOUD_ON) return; TP.cloudT=0; tpAgoDraw(); try{ let tok="", n=0;
   do{ const r=await fetch(FS_BASE+"s?pageSize=300"+(tok?"&pageToken="+encodeURIComponent(tok):""),{cache:"no-store"}); if(!r.ok) break; const j=await r.json();
     for(const doc of (j.documents||[])){ const id=doc.name.split("/").pop(), e=doc.fields&&doc.fields.e&&doc.fields.e.stringValue; if(doc.fields&&doc.fields.mr&&/"mv"/.test(doc.fields.mr.stringValue||"")) continue; /* boshqa akkauntga ko'chirilgan */ if(!e||e.startsWith("FB1:")||TP.stRaw["c:"+id]===e) continue; TP.stRaw["c:"+id]=e;
-      try{ const d=await stDec(e); if(d&&d.nm){ const kk=d.ak||("c:"+id), o=TP.stu[kk]; if(!o||(d.t||0)>=(o.t||0)){ if(!d.a&&o&&o.a) d.a=o.a; TP.stu[kk]=d; } else if(o&&!o.a&&d.a) o.a=d.a; } }catch(err){ TP.stLocked=true; } }
+      try{ const d=await stDec(e); if(d&&d.nm){ const kk=d.ak||("c:"+id), o=TP.stu[kk]; if(!o||(d.t||0)>=(o.t||0)){ if(!d.a&&o&&o.a) d.a=o.a; if(!d.c&&o&&o.c) d.c=o.c; TP.stu[kk]=d; } else if(o){ if(!o.a&&d.a) o.a=d.a; if(!o.c&&d.c) o.c=d.c; } } /* c (tiklash kaliti) faqat bazadagi xulosada bor — MQTT'dagi yangiroq xulosa uni o'chirib yubormasin, aks holda 🔗 takroriy akkaunt juftligi chiqmaydi (2026-10-24, Umida) */ }catch(err){ TP.stLocked=true; } }
     tok=j.nextPageToken||""; }while(tok&&++n<30);
   TP.cloudT=Date.now(); tpAgoDraw(); tpStDrawSoon(); }catch(e){ TP.cloudT=TP.cloudT||Date.now(); tpAgoDraw(); } }
 /* ===== 🔗 Takroriy akkauntlar — ikki marta ro'yxatdan o'tganlar (2026-10-24, Otabek: «ikkita akkaunt ochganlarni eski akkauntidagi ma'lumotlarni yangisiga ko'chir»)
@@ -8873,7 +8873,7 @@ function accMvMerge(key){ try{ for(let i=localStorage.length-1;i>=0;i--){ const 
 function tpStStart(){ if(TP.mqSt) return; TP.stu={}; TP.stRaw={};
   TP.mqSt=mqMulti(cl=>cl.subscribe(ST_NS+"+",{qos:1}),(t,m)=>{ const id=t.split("/").pop();
     if(!m){ delete TP.stRaw[id]; return; } if(TP.stRaw[id]===m) return; TP.stRaw[id]=m;
-    stDec(m).then(d=>{ if(d&&d.nm){ const kk=d.ak||id, o=TP.stu[kk]; d._mq=id; if(!o||(d.t||0)>=(o.t||0)){ if(!d.a&&o&&o.a) d.a=o.a; TP.stu[kk]=d; } else if(o&&!o.a&&d.a) o.a=d.a; tpStDrawSoon(); } }).catch(()=>{ TP.stLocked=true; tpStDrawSoon(); }); });
+    stDec(m).then(d=>{ if(d&&d.nm){ const kk=d.ak||id, o=TP.stu[kk]; d._mq=id; if(!o||(d.t||0)>=(o.t||0)){ if(!d.a&&o&&o.a) d.a=o.a; if(!d.c&&o&&o.c) d.c=o.c; TP.stu[kk]=d; } else if(o){ if(!o.a&&d.a) o.a=d.a; if(!o.c&&d.c) o.c=d.c; } tpStDrawSoon(); } }).catch(()=>{ TP.stLocked=true; tpStDrawSoon(); }); });
   tpCloudLoad(); clearInterval(TP.cloudIv); TP.cloudIv=setInterval(tpAgoDraw,30000); }
 function tpAgoDraw(){ const e=document.getElementById("tp-stago"); if(e) e.textContent=TP.cloudT?"yangilandi: "+spAgo(TP.cloudT,true):"yuklanmoqda…"; }
 /* ===== 📊 O'quvchi profili — ustoz panelida ham, o'quvchining o'zida ham bir xil (2026-10-22, Otabek: «har bir o'quvchi aynan nima qilyapti… o'quvchining o'ziga ham ko'rinsin») ===== */
