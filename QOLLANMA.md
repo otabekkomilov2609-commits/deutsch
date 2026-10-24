@@ -1214,3 +1214,12 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Avtomatik ko'chirish YO'Q — har bir juftlikni ustoz o'zi tasdiqlaydi (ikki xil odam bir xil ismli bo'lishi mumkin).
 - «🔄 Yangi versiya bor — yangilash» tugmasi endi ekran TEPASIDA va kichikroq — mashqdagi Weiter/Zurück tugmalarini yopib qo'yardi.
 - 03:30 · «Yangi versiya bor» tugmasi vaqtincha o'chirildi (`if(IN_ARTIFACT||true) return`).
+
+## 🎬 Video-dars — A2 grammatikasiga Easy German videolari (2026-10-24)
+- Otabek: «easy german videolarini qo'sh, A2 ga». Manba bitta: Easy German (Berlin) — sekin nemischa, nemischa subtitr. Mahalliy markaz kanallari olinmaydi (xalqaro bo'lish uchun).
+- A2 ning 24 ta grammatika mashqidan 21 tasida, mashq tepasidagi qatorda «🎬 Video» tugmasi chiqadi. Bosilsa pastdan oyna ochiladi: video sayt ichida (youtube-nocookie), kerakli daqiqadan boshlanadi, nemischa subtitr yoqilgan. Bir nechta video bo'lsa — tepada tugmachalar.
+- Video yo'q mashqlar: L4 deshalb, L14 va L15 Adjektivdeklination — Easy German'da mos video topilmadi, tugma chiqmaydi.
+- Konjunktiv II (L6, L11) — 22 daqiqalik videoning kerakli bo'limlaridan boshlanadi (10:03, 13:24, 5:14, 7:49, 12:29).
+- Oyna yopilsa video to'xtaydi (iframe olib tashlanadi). Tahlilga actEv("vid", mashq#raqam) yoziladi; tugma bosishlar «🖱 Tugmalar»da ham ko'rinadi.
+- Kod: vidMap() (mashq id → [videoId, boshlanish soniyasi, nom]), vidOf, vidSheet. Yangi video qo'shish — vidMap'ga bitta qator.
+- Sinov (24.10): saytda hozircha faqat A2.2 Lektion 17 da ochiq — vidOnly() ro'yxati. Otabek «hammasiga» desa, vidOnly() bo'sh ro'yxat qaytarsin.

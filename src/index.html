@@ -1512,7 +1512,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 #tch .lek{margin-bottom:12px}#tch .lek .sx{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}#tch .lek .sx-h{margin:0 0 8px}#tch .lek .sx-h b{font-size:14px;letter-spacing:.03em}
 
 /* 📱 Mashq paneli — grammatika mashqlari UX'i: emoji progress, bekatlar, Regel/Beispiel ekrani, Zurück·Prüfen·Überspringen, «?» katak ichida (2026-10-20, Otabek) */
-.ex2{gap:10px}.ex-head{position:relative;display:flex;flex-direction:column;gap:6px}
+.ex2{gap:10px}.ex-vidb{width:auto!important;padding:0 10px!important;font-weight:800;font-size:14px!important;white-space:nowrap;background:#FFF1F0!important;border-color:#F5B5AE!important;color:#B42318!important}.vid-fr{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:14px;overflow:hidden;margin:8px 0}.vid-fr iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.vid-ch{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.vid-c{border:1px solid var(--line);background:var(--surface,#fff);color:var(--ink);border-radius:99px;padding:6px 12px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}.vid-c[aria-pressed="true"]{background:#1F4FA0;border-color:#1F4FA0;color:#fff}.vid-tt{font-weight:800}.vid-mu{margin-top:2px}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ex-vidb{background:#3a1d1a!important;border-color:#7a2e26!important;color:#FFB4AB!important}}[data-theme="dark"] .ex-vidb{background:#3a1d1a!important;border-color:#7a2e26!important;color:#FFB4AB!important}.ex-head{position:relative;display:flex;flex-direction:column;gap:6px}
 .ex2 .lrn-ask{font-size:17px;font-weight:800;color:var(--ink);line-height:1.3;margin:4px 0 2px;transform-origin:left center}
 .ex-ask.pop,#ias-task.pop{animation:exAskPop 1.2s cubic-bezier(.25,.9,.3,1) both;transform-origin:left center}
 @keyframes exAskPop{0%{font-size:27px;transform:scale(.6);opacity:0}18%{transform:none;opacity:1}55%{font-size:27px}100%{font-size:17px}}
@@ -4125,6 +4125,45 @@ function exStat(id,si){ const D=exData()[id], r=exLoad(id)[si]||{}; const its=D.
   return {n:its.length, d:its.filter(([,i])=>r[i]!=null).length, ok:its.filter(([,i])=>r[i]===1).length}; }
 function exPct(id){ const D=exData()[id]; if(!D) return null; let n=0,ok=0,d=0; D.sec.forEach((_,si)=>{ const s=exStat(id,si); n+=s.n; ok+=s.ok; d+=s.d; }); return d?Math.round(ok/n*100):null; }
 function exHead(sub){ const D=exData()[EX.id]||{}; if(EX.mu){ const uz=state.lang!=="ru"; return `<div class="lrn-bar"><button class="btn" data-x="close" aria-label="←">←</button><div class="lrn-tt"><b>🗣️ ${uz?"Gapirib ko‘ring":"Говорим"}</b><small>Lektion ${EX.mu.les} · ${uz?"Muloqot iboralari":"фразы из диалогов"}</small></div></div>`; } return `<div class="lrn-bar"><button class="btn" data-x="close" aria-label="${EX.si<0?"✕":"←"}">${EX.si<0?"✕":"←"}</button><div class="lrn-tt"><b>${esc(D.title||"")}</b><small>${esc(sub||D.sub||"")}</small></div>${IN_ARTIFACT||window.BLITZ?"":`<button type="button" class="btn lrn-shl" data-shl="x" data-shv="${esc(EX.id)}${EX.si>=0?"|"+EX.si:""}" data-sht="${esc((D.title||"")+(EX.si>=0&&D.sec&&D.sec[EX.si]?" · "+(D.sec[EX.si].t||""):""))}" aria-label="${state.lang==="ru"?"Отправить ссылку":"Link yuborish"}">📤</button>`}</div>`; }
+/* 🎬 Video-dars — grammatika mashqiga Easy German videosi (2026-10-24, Otabek: «easy german videolarini qo'sh, A2 ga»).
+   Manba bitta: Easy German (Berlin) — sekin nemischa, nemischa subtitr. youtube-nocookie, faqat bosilganda yuklanadi.
+   [videoId, boshlanish (soniya), qisqa nom]. Mos video yo'q mavzularda (deshalb, Adjektivdeklination) tugma chiqmaydi. */
+function vidMap(){ return window.__VIDM||(window.__VIDM={ /* funksiya — const emas (TDZ xavfi) */
+  "A2-a21-1-G":[["0q8ceeaEI68",0,"Perfekt"],["fB12-T5jC30",0,"war, hatte · Präteritum"]],
+  "A2-a21-2-G":[["8Vmwekr6WN4",0,"weil · denn · da"]],
+  "A2-a21-3-G":[["ITjyfCAspco",34,"Possessivartikel: Nom · Dat · Akk"]],
+  "A2-a21-5-G":[["-nrXMp8ECZI",40,"seit · vor · für"]],
+  "A2-a21-6-G":[["uMlagwZP9dw",603,"Konjunktiv II: höfliche Bitten (könnte)"],["uMlagwZP9dw",804,"Konjunktiv II: Ratschläge (sollte)"]],
+  "A2-a21-7-G":[["_tHi2rjFKd0",0,"das · dass"]],
+  "A2-a21-8-G":[["C7Ehqfq0AeQ",0,"wann · wenn · als"]],
+  "A2-a21-9-G":[["A438Pv_9h9Q",0,"stellen · legen"],["cPJ1Es1rF1g",0,"Wechselpräpositionen"]],
+  "A2-a21-10-G":[["h2Y15K_CuSE",0,"nach · zu · in"],["CDgG2K7Kbbs",0,"Präpositionen mit Dativ"]],
+  "A2-a21-11-G":[["uMlagwZP9dw",314,"Konjunktiv II: würde"],["uMlagwZP9dw",469,"Konjunktiv II: hätte, wäre"],["uMlagwZP9dw",749,"Konjunktiv II: Wünsche"]],
+  "A2-a21-12-G":[["vY7WCRyG-n8",0,"Indirekte Fragen"],["sZQT-qtiueQ",0,"ob · wenn"]],
+  "A2-a22-13-G":[["Uab5EC28h1w",0,"Akkusativ und Dativ"]],
+  "A2-a22-16-G":[["ZB_rSuv5OPM",0,"Reflexive Verben"]],
+  "A2-a22-17-G":[["dV54jc8K6MU",0,"Verben mit Präpositionen"],["Rd5W-HwArvM",0,"darauf, dafür … (da-Wörter)"]],
+  "A2-a22-18-G":[["X6XwtaL_4fE",0,"obwohl · trotzdem"]],
+  "A2-a22-19-G":[["fB12-T5jC30",0,"Präteritum: Diese Verben"]],
+  "A2-a22-20-G":[["OV-YbBgwaj8",0,"Wegbeschreibung: gegenüber, um die Ecke …"]],
+  "A2-a22-21-G":[["Ree_YclSVTE",0,"lassen"]],
+  "A2-a22-22-G":[["XchW3E0kTPk",0,"Relativsätze"]],
+  "A2-a22-23-G":[["fB12-T5jC30",0,"Präteritum"]],
+  "A2-a22-24-G":[["5DcelIoemzA",0,"Passiv"]] }); }
+function vidOnly(){ return window.__VIDON||(window.__VIDON=["A2-a22-17-G"]); } /* sinov: avval bitta Lektionda (2026-10-24, Otabek: «video ni 1ta lektionga qo'y ko'rib aytaman»). Hammasiga ochish — shu ro'yxatni olib tashlash */
+function vidOf(id){ if(IN_ARTIFACT) return null; const O=vidOnly(); if(O&&O.length&&!O.includes(id)) return null; return vidMap()[id]||null; }
+function vidT(s){ return s?Math.floor(s/60)+":"+String(s%60).padStart(2,"0"):""; }
+function vidSheet(id,i){ const L=vidOf(id); if(!L) return; i=Math.min(i|0,L.length-1); const v=L[i], ru=state.lang==="ru";
+  const src="https://www.youtube-nocookie.com/embed/"+v[0]+"?autoplay=1&rel=0&playsinline=1&modestbranding=1&cc_load_policy=1&cc_lang_pref=de"+(v[1]?"&start="+v[1]:"");
+  hpSheet(`<h4>🎬 ${ru?"Видеоурок":"Video-dars"}</h4>
+    ${L.length>1?`<div class="vid-ch">${L.map((x,k)=>`<button type="button" class="vid-c" data-vidi="${k}" data-vid="${esc(id)}" aria-pressed="${k===i}">${esc(x[2])}</button>`).join("")}</div>`:`<p class="vid-tt">${esc(v[2])}</p>`}
+    <div class="vid-fr"><iframe src="${src}" title="${esc(v[2])}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    <p class="mu vid-mu">${ru?"Easy German · медленный немецкий с немецкими субтитрами":"Easy German · sekin nemischa, nemischa subtitr bilan"}${v[1]?` · ${ru?"с":""} ${vidT(v[1])}${ru?"":" dan"}`:""}</p>
+    <div class="ch-btns"><button type="button" class="btn primary" data-hpx="1">${ru?"К упражнению":"Mashqqa qaytish"}</button></div>`);
+  try{ actEv("vid",id+"#"+i); }catch(e){} }
+document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closest("[data-vid]"); if(!b) return; vidSheet(b.dataset.vid,+(b.dataset.vidi||0)); });
+/* oyna yopilsa — video to'xtaydi (iframe olib tashlanadi) */
+document.addEventListener("click",e=>{ const t=e.target; if(!(t&&(t.id==="hp-ov"||(t.closest&&t.closest("#hp-ov [data-hpx]"))))) return; const f=document.querySelector("#hp-ov .vid-fr"); if(f) f.remove(); });
 function exOpen(id){ if(!exData()[id]) return; try{ actEv("open",id); }catch(e){} EX.id=id; EX.si=-1; EX.res=exLoad(id); const el=exEl(); el.hidden=false; document.body.style.overflow="hidden"; if(exData()[id].sec.length===1) exStart(0,false); else exMenu(); }
 function exClose(){ try{ if(EX.si>=0&&EX.q&&EX.qi<EX.q.length&&!EX.hl&&EX.id&&!EX.mu&&!EX.done&&!EX.scr) axQ(EX.id,EX.si+"."+EX.q[EX.qi],6); }catch(e){} try{ spRelease(); }catch(e){} try{ speechSynthesis.cancel(); }catch(e){} exAudStop(); exEl().hidden=true; exEl().classList.remove("above"); document.body.style.overflow=""; try{ progMarks(); }catch(e){} if(EX.mu){ EX.mu=null; try{ if(!lrnEl().hidden) document.body.style.overflow="hidden"; }catch(e){} } }
 /* 💡 «Nima uchun?» + Strategie — har mashq turi uchun (2026-10-20, Otabek: «o'quvchi qaysi ishni nimaga qilyotganini bilsin», «Strategien albatta kerak») */
@@ -4379,7 +4418,7 @@ function exItem(){ kbHold(); kbRel(); const el=exEl(); el.classList.remove("has-
   else if(EX.scr==="x"){ const L=state.lang==="ru"?"ru":"uz", gt=EX.force==="x"&&gwx&&gwx[L]?`<div class="ex-gwc"><div class="ex-gwc-h">📝 ${L==="ru"?"В этом упражнении":"Shu mashqda"}: <i>${esc((g&&g.h||"").replace(/\*/g,""))}</i></div><div class="ex-gwc-t">${gwx[L]}</div></div>`:""; card=gt+(info?`<div class="ex-info ex-x">${exRegelDeco(info)}</div>`:""); }
   else if(EX.scr==="b") card=(it.t==="say"&&spBspCard(g,it))||(g.bsp?`<div class="ex-bsp"><span>📌 Beispiel</span><div>${g.bsp}</div></div>`:`<div class="ex-info ex-x">${exSayInfo()}</div>`);
   else card=`${it.q&&it.t!=="mc"&&it.t!=="say"?`${exCtx(it.q)}`:""}<div class="ex-w" id="ex-w">${EXR[it.t].r(it)}</div>`;
-  el.innerHTML=`${exHead(sec.ic+" "+sec.t)}<div class="lrn-body ex2"><div class="ex-head" id="ex-head"><div class="ias-top ex-top"><div class="ias-pb"><i id="ex-pb"></i><b class="ias-pbe hid" id="ex-pbe"></b>${ticks}</div><span id="ex-cnt"></span>${EX_TIPS[tp]?`<button type="button" class="ias-tb ias-ib ex-qlb" data-x="tip" title="Tipp" aria-label="Tipp">💡</button>`:""}${sec.k==="hoer"?`<button type="button" class="ias-tb ias-ib ex-qlb" data-x="qlist" title="Fragen" aria-label="Fragen">📋</button>`:""}${anyInfo?`<button type="button" class="ias-tb ias-ib" data-x="info" title="Regel" aria-label="Regel">i</button>`:""}</div>
+  el.innerHTML=`${exHead(sec.ic+" "+sec.t)}<div class="lrn-body ex2"><div class="ex-head" id="ex-head"><div class="ias-top ex-top"><div class="ias-pb"><i id="ex-pb"></i><b class="ias-pbe hid" id="ex-pbe"></b>${ticks}</div><span id="ex-cnt"></span>${vidOf(EX.id)?`<button type="button" class="ias-tb ex-vidb" data-vid="${esc(EX.id)}" title="Video" aria-label="Video">🎬 ${state.lang==="ru"?"Видео":"Video"}</button>`:""}${EX_TIPS[tp]?`<button type="button" class="ias-tb ias-ib ex-qlb" data-x="tip" title="Tipp" aria-label="Tipp">💡</button>`:""}${sec.k==="hoer"?`<button type="button" class="ias-tb ias-ib ex-qlb" data-x="qlist" title="Fragen" aria-label="Fragen">📋</button>`:""}${anyInfo?`<button type="button" class="ias-tb ias-ib" data-x="info" title="Regel" aria-label="Regel">i</button>`:""}</div>
       <div class="ias-secs" id="ex-secs"></div>
       <div class="lrn-ask ex-ask${EX.scr==="x"||EX.scr==="p"||EX.scr==="t"?" ex-ask-scr":""}"><span class="ex-ask-t">${EX.scr==="t"?(uz?"🎯 Nima uchun? · 💡 Strategiya":"🎯 Зачем? · 💡 Стратегия"):EX.scr==="x"?"📘 Regel":EX.scr==="p"?"📋 Erst die Fragen lesen":esc(g.h||it.h||"").replace(/\*([^*]+)\*/g,'<b class="ias-mark">$1</b>')}</span>${g.bsp&&!EX.scr?`<button type="button" class="ias-bspb" data-x="bsp">📌 Beispiel</button>`:""}</div></div>
     ${exAudBar(sec)}${sec.lt&&EX.scr!=="t"?exLtHTML(sec):""}<div class="lrn-card ex-card${EX.scr?" ex-scr":""}" id="ex-card">${EX.scr?"":say}${card}</div>
