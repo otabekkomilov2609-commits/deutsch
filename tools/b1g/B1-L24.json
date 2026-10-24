@@ -16,8 +16,8 @@
     "items": [
      {
       "t": "info",
-      "h": "<h4>Futur I: werden + Infinitiv</h4>\n<table class=\"ex-tb\"><tr><th>Person</th><th>werden</th><th>… Infinitiv</th></tr>\n<tr><td>ich</td><td><b>werde</b></td><td rowspan=\"6\">… morgen <b>kommen</b></td></tr>\n<tr><td>du</td><td><b>wirst</b></td></tr>\n<tr><td>er / es / sie / man</td><td><b>wird</b></td></tr>\n<tr><td>wir</td><td><b>werden</b></td></tr>\n<tr><td>ihr</td><td><b>werdet</b></td></tr>\n<tr><td>sie / Sie</td><td><b>werden</b></td></tr></table>\n<div class=\"ex-sk\"><span>Ich</span><span class=\"v\">werde</span><span>dich</span><span>morgen</span><span class=\"v\">anrufen</span>.</div>\n<div class=\"ex-sk\"><span>…, dass</span><span>ich</span><span>dich</span><span>morgen</span><span class=\"v\">anrufen werde</span>.</div>\n<p class=\"ex-note\"><b>werden</b> 2-o‘rinda va egaga mos, <b>Infinitiv</b> gap oxirida. Nebensatzda (dass, ob, wann …) <b>werden</b> eng oxirga o‘tadi: <b>… anrufen werde</b>.</p>",
-      "ru": "<h4>Futur I: werden + Infinitiv</h4>\n<table class=\"ex-tb\"><tr><th>Person</th><th>werden</th><th>… Infinitiv</th></tr>\n<tr><td>ich</td><td><b>werde</b></td><td rowspan=\"6\">… morgen <b>kommen</b></td></tr>\n<tr><td>du</td><td><b>wirst</b></td></tr>\n<tr><td>er / es / sie / man</td><td><b>wird</b></td></tr>\n<tr><td>wir</td><td><b>werden</b></td></tr>\n<tr><td>ihr</td><td><b>werdet</b></td></tr>\n<tr><td>sie / Sie</td><td><b>werden</b></td></tr></table>\n<div class=\"ex-sk\"><span>Ich</span><span class=\"v\">werde</span><span>dich</span><span>morgen</span><span class=\"v\">anrufen</span>.</div>\n<div class=\"ex-sk\"><span>…, dass</span><span>ich</span><span>dich</span><span>morgen</span><span class=\"v\">anrufen werde</span>.</div>\n<p class=\"ex-note\"><b>werden</b> на 2-м месте и согласуется с подлежащим, <b>инфинитив</b> в конце. В придаточном (dass, ob, wann …) <b>werden</b> уходит в самый конец: <b>… anrufen werde</b>.</p>"
+      "h": "<h4>Futur I: werden + Infinitiv</h4>\n<table class=\"ex-tb\"><tr><th>Person</th><th>werden</th><th>… Infinitiv</th></tr>\n<tr><td>ich</td><td><b>werde</b></td><td>… morgen <b>kommen</b></td></tr>\n<tr><td>du</td><td><b>wirst</b></td><td>… morgen <b>kommen</b></td></tr>\n<tr><td>er / es / sie / man</td><td><b>wird</b></td><td>… morgen <b>kommen</b></td></tr>\n<tr><td>wir</td><td><b>werden</b></td><td>… morgen <b>kommen</b></td></tr>\n<tr><td>ihr</td><td><b>werdet</b></td><td>… morgen <b>kommen</b></td></tr>\n<tr><td>sie / Sie</td><td><b>werden</b></td><td>… morgen <b>kommen</b></td></tr></table>\n<div class=\"ex-sk\"><span>Ich</span><span class=\"v\">werde</span><span>dich</span><span>morgen</span><span class=\"v\">anrufen</span>.</div>\n<div class=\"ex-sk\"><span>…, dass</span><span>ich</span><span>dich</span><span>morgen</span><span class=\"v\">anrufen werde</span>.</div>\n<p class=\"ex-note\"><b>werden</b> 2-o‘rinda va egaga mos, <b>Infinitiv</b> gap oxirida. Nebensatzda (dass, ob, wann …) <b>werden</b> eng oxirga o‘tadi: <b>… anrufen werde</b>.</p>",
+      "ru": "<h4>Futur I: werden + Infinitiv</h4>\n<table class=\"ex-tb\"><tr><th>Person</th><th>werden</th><th>… Infinitiv</th></tr>\n<tr><td>ich</td><td><b>werde</b></td><td>… morgen <b>kommen</b></td></tr>\n<tr><td>du</td><td><b>wirst</b></td><td>… morgen <b>kommen</b></td></tr>\n<tr><td>er / es / sie / man</td><td><b>wird</b></td><td>… morgen <b>kommen</b></td></tr>\n<tr><td>wir</td><td><b>werden</b></td><td>… morgen <b>kommen</b></td></tr>\n<tr><td>ihr</td><td><b>werdet</b></td><td>… morgen <b>kommen</b></td></tr>\n<tr><td>sie / Sie</td><td><b>werden</b></td><td>… morgen <b>kommen</b></td></tr></table>\n<div class=\"ex-sk\"><span>Ich</span><span class=\"v\">werde</span><span>dich</span><span>morgen</span><span class=\"v\">anrufen</span>.</div>\n<div class=\"ex-sk\"><span>…, dass</span><span>ich</span><span>dich</span><span>morgen</span><span class=\"v\">anrufen werde</span>.</div>\n<p class=\"ex-note\"><b>werden</b> на 2-м месте и согласуется с подлежащим, <b>инфинитив</b> в конце. В придаточном (dass, ob, wann …) <b>werden</b> уходит в самый конец: <b>… anrufen werde</b>.</p>"
      },
      {
       "t": "mark",
@@ -385,8 +385,7 @@
       "w": [
        "Ich",
        "werde",
-       "dir",
-       "morgen",
+       "dir morgen",
        "beim Umzug",
        "helfen"
       ],
@@ -404,8 +403,7 @@
       "w": [
        "Timur",
        "wird",
-       "wohl",
-       "schon",
+       "wohl schon",
        "zu Hause",
        "sein"
       ],
@@ -428,7 +426,9 @@
        "aufräumen"
       ],
       "a": "Du wirst jetzt dein Zimmer aufräumen!",
-      "alt": [],
+      "alt": [
+       "Du wirst dein Zimmer jetzt aufräumen!"
+      ],
       "gw": {
        "uz": "Präsensdagi fe’l Infinitivga aylanib oxirga boradi, uning o‘rniga (2-o‘rin) <b>werden</b> keladi. Ajraladigan fe’l qo‘shilib ketadi: rufe … an → <b>anrufen</b>. Misol: <b>Du räumst auf. → Du wirst aufräumen.</b>",
        "ru": "Глагол из Präsens становится инфинитивом и уходит в конец, на его место (2-е место) встаёт <b>werden</b>. Отделяемый глагол соединяется: rufe … an → <b>anrufen</b>. Пример: <b>Du räumst auf. → Du wirst aufräumen.</b>"
@@ -535,15 +535,14 @@
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
       "bsp": "Wir werden morgen früh aufgestanden. → <b>aufgestanden</b> ✗ → <b>aufstehen</b>",
-      "s": "Morgen ich werde dich anrufen .",
+      "s": "Morgen werde ich dich anzurufen .",
       "a": [
-       1,
-       2
+       4
       ],
       "fix": "Morgen werde ich dich anrufen.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: <b>werden</b> 2-o‘rinda emas; <b>werden</b> egaga mos emas (<b>du wird</b> ✗ → <b>du wirst</b>); Infinitiv o‘rniga Partizip II; Nebensatzda <b>werden</b> oxirida emas. Misol: <b>…, dass es morgen regnen wird.</b>",
-       "ru": "Частые ошибки: <b>werden</b> не на 2-м месте; <b>werden</b> не согласован (<b>du wird</b> ✗ → <b>du wirst</b>); Partizip II вместо инфинитива; в придаточном <b>werden</b> не в конце. Пример: <b>…, dass es morgen regnen wird.</b>"
+       "uz": "Tez-tez uchraydigan xatolar: <b>werden</b> egaga mos emas (<b>du wird</b> ✗ → <b>du wirst</b>, <b>ihr werden</b> ✗ → <b>ihr werdet</b>); Infinitiv o‘rniga Partizip II (<b>erholt</b> ✗); Futur I da <b>zu</b> yo‘q (<b>anzurufen</b> ✗ → <b>anrufen</b>). Misol: <b>…, dass ihr kommen werdet.</b>",
+       "ru": "Частые ошибки: <b>werden</b> не согласован (<b>du wird</b> ✗ → <b>du wirst</b>, <b>ihr werden</b> ✗ → <b>ihr werdet</b>); Partizip II вместо инфинитива (<b>erholt</b> ✗); в Futur I нет <b>zu</b> (<b>anzurufen</b> ✗ → <b>anrufen</b>). Пример: <b>…, dass ihr kommen werdet.</b>"
       }
      },
      {
@@ -555,8 +554,8 @@
       ],
       "fix": "Du wirst das bestimmt schaffen.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: <b>werden</b> 2-o‘rinda emas; <b>werden</b> egaga mos emas (<b>du wird</b> ✗ → <b>du wirst</b>); Infinitiv o‘rniga Partizip II; Nebensatzda <b>werden</b> oxirida emas. Misol: <b>…, dass es morgen regnen wird.</b>",
-       "ru": "Частые ошибки: <b>werden</b> не на 2-м месте; <b>werden</b> не согласован (<b>du wird</b> ✗ → <b>du wirst</b>); Partizip II вместо инфинитива; в придаточном <b>werden</b> не в конце. Пример: <b>…, dass es morgen regnen wird.</b>"
+       "uz": "Tez-tez uchraydigan xatolar: <b>werden</b> egaga mos emas (<b>du wird</b> ✗ → <b>du wirst</b>, <b>ihr werden</b> ✗ → <b>ihr werdet</b>); Infinitiv o‘rniga Partizip II (<b>erholt</b> ✗); Futur I da <b>zu</b> yo‘q (<b>anzurufen</b> ✗ → <b>anrufen</b>). Misol: <b>…, dass ihr kommen werdet.</b>",
+       "ru": "Частые ошибки: <b>werden</b> не согласован (<b>du wird</b> ✗ → <b>du wirst</b>, <b>ihr werden</b> ✗ → <b>ihr werdet</b>); Partizip II вместо инфинитива (<b>erholt</b> ✗); в Futur I нет <b>zu</b> (<b>anzurufen</b> ✗ → <b>anrufen</b>). Пример: <b>…, dass ihr kommen werdet.</b>"
       }
      },
      {
@@ -568,22 +567,21 @@
       ],
       "fix": "Wir werden uns im Urlaub gut erholen.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: <b>werden</b> 2-o‘rinda emas; <b>werden</b> egaga mos emas (<b>du wird</b> ✗ → <b>du wirst</b>); Infinitiv o‘rniga Partizip II; Nebensatzda <b>werden</b> oxirida emas. Misol: <b>…, dass es morgen regnen wird.</b>",
-       "ru": "Частые ошибки: <b>werden</b> не на 2-м месте; <b>werden</b> не согласован (<b>du wird</b> ✗ → <b>du wirst</b>); Partizip II вместо инфинитива; в придаточном <b>werden</b> не в конце. Пример: <b>…, dass es morgen regnen wird.</b>"
+       "uz": "Tez-tez uchraydigan xatolar: <b>werden</b> egaga mos emas (<b>du wird</b> ✗ → <b>du wirst</b>, <b>ihr werden</b> ✗ → <b>ihr werdet</b>); Infinitiv o‘rniga Partizip II (<b>erholt</b> ✗); Futur I da <b>zu</b> yo‘q (<b>anzurufen</b> ✗ → <b>anrufen</b>). Misol: <b>…, dass ihr kommen werdet.</b>",
+       "ru": "Частые ошибки: <b>werden</b> не согласован (<b>du wird</b> ✗ → <b>du wirst</b>, <b>ihr werden</b> ✗ → <b>ihr werdet</b>); Partizip II вместо инфинитива (<b>erholt</b> ✗); в Futur I нет <b>zu</b> (<b>anzurufen</b> ✗ → <b>anrufen</b>). Пример: <b>…, dass ihr kommen werdet.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Ich hoffe , dass es morgen nicht wird regnen .",
+      "s": "Ich hoffe , dass ihr uns bald besuchen werden .",
       "a": [
-       7,
        8
       ],
-      "fix": "Ich hoffe, dass es morgen nicht regnen wird.",
+      "fix": "Ich hoffe, dass ihr uns bald besuchen werdet.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: <b>werden</b> 2-o‘rinda emas; <b>werden</b> egaga mos emas (<b>du wird</b> ✗ → <b>du wirst</b>); Infinitiv o‘rniga Partizip II; Nebensatzda <b>werden</b> oxirida emas. Misol: <b>…, dass es morgen regnen wird.</b>",
-       "ru": "Частые ошибки: <b>werden</b> не на 2-м месте; <b>werden</b> не согласован (<b>du wird</b> ✗ → <b>du wirst</b>); Partizip II вместо инфинитива; в придаточном <b>werden</b> не в конце. Пример: <b>…, dass es morgen regnen wird.</b>"
+       "uz": "Tez-tez uchraydigan xatolar: <b>werden</b> egaga mos emas (<b>du wird</b> ✗ → <b>du wirst</b>, <b>ihr werden</b> ✗ → <b>ihr werdet</b>); Infinitiv o‘rniga Partizip II (<b>erholt</b> ✗); Futur I da <b>zu</b> yo‘q (<b>anzurufen</b> ✗ → <b>anrufen</b>). Misol: <b>…, dass ihr kommen werdet.</b>",
+       "ru": "Частые ошибки: <b>werden</b> не согласован (<b>du wird</b> ✗ → <b>du wirst</b>, <b>ihr werden</b> ✗ → <b>ihr werdet</b>); Partizip II вместо инфинитива (<b>erholt</b> ✗); в Futur I нет <b>zu</b> (<b>anzurufen</b> ✗ → <b>anrufen</b>). Пример: <b>…, dass ihr kommen werdet.</b>"
       }
      }
     ]

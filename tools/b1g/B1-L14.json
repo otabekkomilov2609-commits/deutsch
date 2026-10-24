@@ -81,7 +81,7 @@
       "t": "mc",
       "h": "*was* oder *wo*? Was passt?",
       "bsp": "Hier ist etwas, ___ dich interessiert. → etwas → ✓ <b>was</b>",
-      "q": "Das Anschreiben ist das Wichtigste, ___ du für die Bewerbung schreibst.",
+      "q": "Das Anschreiben ist das Wichtigste, ___ du für die Bewerbung brauchst.",
       "o": [
        "was",
        "das",
@@ -199,7 +199,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie *was* oder *wo*.",
-      "s": "Hallo Leute! Ich bewerbe mich für einen Freiwilligendienst in Österreich.\nIch suche ein Projekt in einem Ort, ___ es viel Natur gibt.\nIm Anschreiben steht schon alles, ___ ich gut kann.\nGibt es etwas, ___ ich noch schreiben soll?",
+      "s": "Hallo Leute! Ich bewerbe mich für einen Freiwilligendienst in Österreich.\nIch suche ein Projekt an einem Ort, ___ es viel Natur gibt.\nIm Anschreiben steht schon alles, ___ ich gut kann.\nGibt es etwas, ___ ich noch schreiben soll?",
       "a": [
        [
         "wo"
@@ -321,7 +321,7 @@
      {
       "t": "order",
       "h": "Verbinden Sie die Sätze mit *was* oder *wo*.",
-      "bsp": "Ich verstehe nichts. Er sagt es. → <b>Ich verstehe nichts, was er sagt.</b>",
+      "bsp": "Ich habe etwas gefunden. Es hilft mir. → <b>Ich habe etwas gefunden, was mir hilft.</b>",
       "q": "Ich habe alles vorbereitet. Die Beraterin hat es empfohlen.",
       "w": [
        "Ich",
@@ -475,21 +475,21 @@
       ],
       "fix": "Das ist alles, was ich über das Praktikum weiß.",
       "gw": {
-       "uz": "Ikki xato ko‘p uchraydi: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va relativ gapda fe’lni oxirga qo‘ymaslik. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
-       "ru": "Две частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и глагол не в конце придаточного. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
+       "uz": "Ko‘p uchraydigan xatolar: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va <b>in dem / in der</b> da artiklni adashtirish: die Stadt → <b>in der</b>, das Dorf → <b>in dem</b>. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
+       "ru": "Частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и неверный артикль в <b>in dem / in der</b>: die Stadt → <b>in der</b>, das Dorf → <b>in dem</b>. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Berlin ist die Stadt , wo ich möchte studieren .",
+      "s": "Leipzig ist die Stadt , in dem ich studieren möchte .",
       "a": [
-       7
+       6
       ],
-      "fix": "Berlin ist die Stadt, wo ich studieren möchte.",
+      "fix": "Leipzig ist die Stadt, in der ich studieren möchte.",
       "gw": {
-       "uz": "Ikki xato ko‘p uchraydi: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va relativ gapda fe’lni oxirga qo‘ymaslik. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
-       "ru": "Две частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и глагол не в конце придаточного. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
+       "uz": "Ko‘p uchraydigan xatolar: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va <b>in dem / in der</b> da artiklni adashtirish: die Stadt → <b>in der</b>, das Dorf → <b>in dem</b>. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
+       "ru": "Частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и неверный артикль в <b>in dem / in der</b>: die Stadt → <b>in der</b>, das Dorf → <b>in dem</b>. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
       }
      },
      {
@@ -501,8 +501,8 @@
       ],
       "fix": "Der Freiwilligendienst war das Beste, was ich je gemacht habe.",
       "gw": {
-       "uz": "Ikki xato ko‘p uchraydi: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va relativ gapda fe’lni oxirga qo‘ymaslik. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
-       "ru": "Две частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и глагол не в конце придаточного. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
+       "uz": "Ko‘p uchraydigan xatolar: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va <b>in dem / in der</b> da artiklni adashtirish: die Stadt → <b>in der</b>, das Dorf → <b>in dem</b>. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
+       "ru": "Частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и неверный артикль в <b>in dem / in der</b>: die Stadt → <b>in der</b>, das Dorf → <b>in dem</b>. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
       }
      },
      {
@@ -514,8 +514,8 @@
       ],
       "fix": "Ich habe den Studienplatz bekommen, was meine Eltern sehr freut.",
       "gw": {
-       "uz": "Ikki xato ko‘p uchraydi: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va relativ gapda fe’lni oxirga qo‘ymaslik. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
-       "ru": "Две частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и глагол не в конце придаточного. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
+       "uz": "Ko‘p uchraydigan xatolar: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va <b>in dem / in der</b> da artiklni adashtirish: die Stadt → <b>in der</b>, das Dorf → <b>in dem</b>. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
+       "ru": "Частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и неверный артикль в <b>in dem / in der</b>: die Stadt → <b>in der</b>, das Dorf → <b>in dem</b>. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
       }
      }
     ]

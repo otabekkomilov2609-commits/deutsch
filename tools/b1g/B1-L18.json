@@ -273,13 +273,13 @@
       "t": "gap",
       "h": "Ergänzen Sie im Plusquamperfekt.",
       "bsp": "Ich ___ den Termin ___. (vergessen) → <b>hatte</b> … <b>vergessen</b>",
-      "s": "Bis letzten Monat ___ Timur nie Probleme mit den Zähnen ___. (haben)",
+      "s": "Timur ___ seit Jahren nicht beim Zahnarzt ___, deshalb hatte er jetzt große Angst. (sein)",
       "a": [
        [
-        "hatte"
+        "war"
        ],
        [
-        "gehabt"
+        "gewesen"
        ]
       ],
       "gw": {
@@ -309,7 +309,8 @@
         "gelegen"
        ],
        [
-        "hatte"
+        "hatte",
+        "war"
        ]
       ],
       "gw": {
@@ -498,19 +499,19 @@
       "t": "order",
       "h": "Verbinden Sie die Sätze mit *nachdem*.",
       "bsp": "Zuerst habe ich die Tablette genommen. Dann habe ich geschlafen. → <b>Nachdem ich die Tablette genommen hatte, schlief ich.</b>",
-      "q": "Zuerst ist Malika aus dem Urlaub zurückgekommen. Dann hat sie sich impfen lassen.",
+      "q": "Zuerst hat Malika mit dem Arzt gesprochen. Dann hat sie sich impfen lassen.",
       "w": [
        "Nachdem",
        "Malika",
-       "aus dem Urlaub",
-       "zurückgekommen",
-       "war,",
+       "mit dem Arzt",
+       "gesprochen",
+       "hatte,",
        "ließ",
        "sie",
        "sich",
        "impfen"
       ],
-      "a": "Nachdem Malika aus dem Urlaub zurückgekommen war, ließ sie sich impfen.",
+      "a": "Nachdem Malika mit dem Arzt gesprochen hatte, ließ sie sich impfen.",
       "alt": [],
       "gw": {
        "uz": "Birinchi voqea nachdem-gapga o‘tadi va Plusquamperfektda bo‘ladi (<b>hatte/war</b> eng oxirida). Ikkinchi voqea — asosiy gap, Präteritum yoki Perfektda; nachdem-gapdan keyin u fe’l bilan boshlanadi. Misol: <b>Nachdem Lena gegessen hatte, ging sie los.</b>",
@@ -576,8 +577,8 @@
       ],
       "fix": "Nachdem ich die Tablette genommen hatte, ging es mir besser.",
       "gw": {
-       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; nachdem-gapdan keyin asosiy gap fe’l bilan boshlanadi; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>).",
-       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; после nachdem-предложения главное начинается с глагола; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>)."
+       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>); gapni bog‘lovchi — <b>nachdem</b> (<b>nach</b> — predlog: nach dem Essen). Misol: <b>Nachdem ich gegessen hatte, ging ich los.</b>",
+       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>); союз — <b>nachdem</b> (<b>nach</b> — предлог: nach dem Essen). Пример: <b>Nachdem ich gegessen hatte, ging ich los.</b>"
       }
      },
      {
@@ -590,8 +591,8 @@
       ],
       "fix": "Die Sprechstunde war vorbei, weil wir zu spät gekommen waren.",
       "gw": {
-       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; nachdem-gapdan keyin asosiy gap fe’l bilan boshlanadi; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>).",
-       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; после nachdem-предложения главное начинается с глагола; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>)."
+       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>); gapni bog‘lovchi — <b>nachdem</b> (<b>nach</b> — predlog: nach dem Essen). Misol: <b>Nachdem ich gegessen hatte, ging ich los.</b>",
+       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>); союз — <b>nachdem</b> (<b>nach</b> — предлог: nach dem Essen). Пример: <b>Nachdem ich gegessen hatte, ging ich los.</b>"
       }
      },
      {
@@ -604,22 +605,22 @@
       ],
       "fix": "Ich ging zur Apotheke, weil der Arzt mir ein Rezept geschrieben hatte.",
       "gw": {
-       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; nachdem-gapdan keyin asosiy gap fe’l bilan boshlanadi; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>).",
-       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; после nachdem-предложения главное начинается с глагола; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>)."
+       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>); gapni bog‘lovchi — <b>nachdem</b> (<b>nach</b> — predlog: nach dem Essen). Misol: <b>Nachdem ich gegessen hatte, ging ich los.</b>",
+       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>); союз — <b>nachdem</b> (<b>nach</b> — предлог: nach dem Essen). Пример: <b>Nachdem ich gegessen hatte, ging ich los.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
       "bsp": "Nachdem ich gegessen habe, ging ich los. → <b>habe</b> → Nachdem ich gegessen hatte, …",
-      "s": "Nachdem Aziz die Grippe gehabt hatte , er war noch lange müde .",
+      "s": "Nach Aziz die Grippe gehabt hatte , war er noch lange müde .",
       "a": [
-       7
+       0
       ],
       "fix": "Nachdem Aziz die Grippe gehabt hatte, war er noch lange müde.",
       "gw": {
-       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; nachdem-gapdan keyin asosiy gap fe’l bilan boshlanadi; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>).",
-       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; после nachdem-предложения главное начинается с глагола; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>)."
+       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>); gapni bog‘lovchi — <b>nachdem</b> (<b>nach</b> — predlog: nach dem Essen). Misol: <b>Nachdem ich gegessen hatte, ging ich los.</b>",
+       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>); союз — <b>nachdem</b> (<b>nach</b> — предлог: nach dem Essen). Пример: <b>Nachdem ich gegessen hatte, ging ich los.</b>"
       }
      }
     ]

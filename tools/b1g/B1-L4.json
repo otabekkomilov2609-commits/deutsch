@@ -247,10 +247,10 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie *um* oder *damit*.",
-      "s": "Anna: Warum stehst du so früh auf?\nLaylo: ___ vor dem Unterricht noch joggen zu gehen. Und ich mache das Frühstück, ___ meine Schwester nicht so früh aufstehen muss.",
+      "s": "Anna: Warum stehst du so früh auf?\nLaylo: Ich stehe früh auf, ___ vor dem Unterricht noch joggen zu gehen. Und ich mache das Frühstück, ___ meine Schwester nicht so früh aufstehen muss.",
       "a": [
        [
-        "Um"
+        "um"
        ],
        [
         "damit"
@@ -367,18 +367,18 @@
      {
       "t": "order",
       "h": "Verbinden Sie die Sätze mit *um … zu* oder *damit*.",
-      "q": "Ich mache das Licht aus. Mein Bruder kann dann schlafen.",
+      "q": "Ich mache die Musik leiser. Mein Bruder kann dann lernen.",
       "w": [
        "Ich",
        "mache",
-       "das Licht",
-       "aus,",
+       "die Musik",
+       "leiser,",
        "damit",
        "mein Bruder",
-       "schlafen",
+       "lernen",
        "kann"
       ],
-      "a": "Ich mache das Licht aus, damit mein Bruder schlafen kann.",
+      "a": "Ich mache die Musik leiser, damit mein Bruder lernen kann.",
       "alt": [],
       "gw": {
        "uz": "Ega bir xil → <b>um … zu</b> (ikkinchi ega tushib qoladi, zu + Infinitiv oxirida). Ega har xil → <b>damit</b> + ega + fe’l oxirida. Bu qism oldin kelsa, keyin darhol fe’l: <b>Um Energie zu sparen, schalten wir …</b>",
@@ -388,18 +388,20 @@
      {
       "t": "order",
       "h": "Verbinden Sie die Sätze mit *um … zu* oder *damit*.",
-      "q": "Meine Schwester will nicht zu spät ankommen. Sie nimmt ein Taxi.",
+      "q": "Meine Schwester will weniger Zeit am Handy verbringen. Sie löscht ein paar Apps.",
       "w": [
        "Meine Schwester",
-       "nimmt",
-       "ein Taxi,",
+       "löscht",
+       "ein paar Apps,",
        "um",
-       "nicht",
-       "zu spät",
-       "anzukommen"
+       "weniger Zeit",
+       "am Handy",
+       "zu verbringen"
       ],
-      "a": "Meine Schwester nimmt ein Taxi, um nicht zu spät anzukommen.",
-      "alt": [],
+      "a": "Meine Schwester löscht ein paar Apps, um weniger Zeit am Handy zu verbringen.",
+      "alt": [
+       "Meine Schwester löscht ein paar Apps, um am Handy weniger Zeit zu verbringen."
+      ],
       "gw": {
        "uz": "Ega bir xil → <b>um … zu</b> (ikkinchi ega tushib qoladi, zu + Infinitiv oxirida). Ega har xil → <b>damit</b> + ega + fe’l oxirida. Bu qism oldin kelsa, keyin darhol fe’l: <b>Um Energie zu sparen, schalten wir …</b>",
        "ru": "Подлежащее одно → <b>um … zu</b> (второе подлежащее исчезает, zu + инфинитив в конце). Подлежащие разные → <b>damit</b> + подлежащее + глагол в конце. Если эта часть стоит первой, после неё сразу глагол: <b>Um Energie zu sparen, schalten wir …</b>"
@@ -461,8 +463,7 @@
        "die Grammatik,",
        "damit",
        "sie",
-       "die Regeln",
-       "besser",
+       "die Regeln besser",
        "versteht"
       ],
       "a": "Ich erkläre Anna die Grammatik, damit sie die Regeln besser versteht.",
@@ -510,42 +511,40 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Ich gehe heute früher ins Bett , um morgen pünktlich zu aufstehen .",
+      "s": "Ich gehe heute früher ins Bett , um morgen nicht müde zu bin .",
       "a": [
-       10,
-       11
-      ],
-      "fix": "Ich gehe heute früher ins Bett, um morgen pünktlich aufzustehen.",
-      "gw": {
-       "uz": "<b>aufstehen</b> — ajraladigan fe’l: zu o‘rtaga kiradi va bitta so‘z bo‘ladi: <b>aufzustehen</b>.",
-       "ru": "<b>aufstehen</b> — отделяемый глагол: zu встаёт в середину, получается одно слово: <b>aufzustehen</b>."
-      }
-     },
-     {
-      "t": "mark",
-      "h": "Markieren Sie den Fehler.",
-      "s": "Ich mache das Fenster auf , damit frische Luft ins Zimmer zu kommen .",
-      "a": [
-       11,
        12
       ],
-      "fix": "Ich mache das Fenster auf, damit frische Luft ins Zimmer kommt.",
+      "fix": "Ich gehe heute früher ins Bett, um morgen nicht müde zu sein.",
       "gw": {
-       "uz": "<b>damit</b> dan keyin <b>zu</b> yo‘q — fe’l egaga moslab tuslanadi va oxirda turadi: <b>…, damit frische Luft ins Zimmer kommt.</b>",
-       "ru": "После <b>damit</b> нет <b>zu</b> — глагол спрягается по подлежащему и стоит в конце: <b>…, damit frische Luft ins Zimmer kommt.</b>"
+       "uz": "<b>zu</b> dan keyin fe’l tuslanmaydi — faqat Infinitiv: <b>…, um morgen nicht müde zu sein.</b>",
+       "ru": "После <b>zu</b> глагол не спрягается — только инфинитив: <b>…, um morgen nicht müde zu sein.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Um gesund zu bleiben , ich esse jeden Tag Obst .",
+      "s": "Meine Mutter kauft mir einen lauten Wecker , damit ich morgens pünktlich aufzustehen .",
+      "a": [
+       12
+      ],
+      "fix": "Meine Mutter kauft mir einen lauten Wecker, damit ich morgens pünktlich aufstehe.",
+      "gw": {
+       "uz": "<b>damit</b> — Nebensatz: <b>zu</b> yo‘q, fe’l egaga (ich) moslab tuslanadi va oxirida turadi: <b>…, damit ich morgens pünktlich aufstehe.</b>",
+       "ru": "<b>damit</b> вводит придаточное: <b>zu</b> нет, глагол спрягается по подлежащему (ich) и стоит в конце: <b>…, damit ich morgens pünktlich aufstehe.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich esse jeden Tag Obst , damit gesund zu bleiben .",
       "a": [
        6
       ],
-      "fix": "Um gesund zu bleiben, esse ich jeden Tag Obst.",
+      "fix": "Ich esse jeden Tag Obst, um gesund zu bleiben.",
       "gw": {
-       "uz": "<b>Um … zu</b> qismi oldin kelgan — keyin darhol fe’l, keyin ega: <b>…, esse ich jeden Tag Obst.</b>",
-       "ru": "Часть с <b>um … zu</b> стоит первой — сразу после неё глагол, потом подлежащее: <b>…, esse ich jeden Tag Obst.</b>"
+       "uz": "Ikkinchi qismda ega yo‘q, oxirida <b>zu</b> + Infinitiv → <b>um</b>, damit emas: <b>…, um gesund zu bleiben.</b>",
+       "ru": "Во второй части нет подлежащего, в конце <b>zu</b> + инфинитив → <b>um</b>, а не damit: <b>…, um gesund zu bleiben.</b>"
       }
      }
     ]

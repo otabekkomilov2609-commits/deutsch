@@ -207,7 +207,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie *als* oder *wenn*.",
-      "s": "Ich bekomme immer gute Laune, ___ ich alte Fotos anschaue.",
+      "s": "Ich bekomme immer gute Laune, ___ ich mir alte Fotos anschaue.",
       "a": [
        [
         "wenn"
@@ -435,7 +435,7 @@
      {
       "t": "order",
       "h": "Verbinden Sie die Sätze.",
-      "q": "Meine Schwester sah das Geschenk. Sie hat laut gelacht. (als)",
+      "q": "Meine Schwester hat das Geschenk gesehen. Sie hat laut gelacht. (als)",
       "w": [
        "Meine Schwester",
        "hat",
@@ -444,9 +444,9 @@
        "als",
        "sie",
        "das Geschenk",
-       "sah"
+       "gesehen hat"
       ],
-      "a": "Meine Schwester hat laut gelacht, als sie das Geschenk sah.",
+      "a": "Meine Schwester hat laut gelacht, als sie das Geschenk gesehen hat.",
       "alt": [],
       "gw": {
        "uz": "Nebensatz birinchi kelsa: konnektor → ega → … → fe’l, vergul, keyin darhol Hauptsatz fe’li: <b>Als mein Opa jung war, hat er …</b> Nebensatz ikkinchi kelsa, Hauptsatz odatdagidek: <b>Malika hat …, als sie 16 war.</b>",
@@ -559,14 +559,14 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Als meine Schwester geheiratet hat , ich habe viel getanzt .",
+      "s": "Immer als wir bei meiner Oma waren , hat sie Plov für uns gekocht .",
       "a": [
-       7
+       1
       ],
-      "fix": "Als meine Schwester geheiratet hat, habe ich viel getanzt.",
+      "fix": "Immer wenn wir bei meiner Oma waren, hat sie Plov für uns gekocht.",
       "gw": {
-       "uz": "Nebensatz oldin kelgan — demak Hauptsatz fe’l bilan boshlanadi: <b>…, habe ich viel getanzt.</b> «…, ich habe …» — xato.",
-       "ru": "Придаточное стоит первым — значит, главное начинается с глагола: <b>…, habe ich viel getanzt.</b> «…, ich habe …» — ошибка."
+       "uz": "<b>immer</b> — har gal, ko‘p marta takrorlangan voqea. O‘tmishda ham bunday holatda <b>wenn</b> ishlatiladi: <b>Immer wenn wir bei Oma waren, …</b> «Immer als» — xato.",
+       "ru": "<b>immer</b> — каждый раз, многократное действие. Даже в прошлом здесь нужен <b>wenn</b>: <b>Immer wenn wir bei Oma waren, …</b> «Immer als» — ошибка."
       }
      }
     ]

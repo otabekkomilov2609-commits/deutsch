@@ -49,7 +49,7 @@
      {
       "t": "mark",
       "h": "Markieren Sie *darum*, *daher*, *deswegen* oder *deshalb* und das Verb.",
-      "s": "Timur hat ein Geheimnis verraten . Daher ist Mia sauer auf ihn .",
+      "s": "Timur hat Mias Geheimnis verraten . Daher ist sie sauer auf ihn .",
       "a": [
        6,
        7
@@ -376,15 +376,15 @@
       "bsp": "Ich bleibe zu Hause, weil ich krank bin. → <b>Ich bin krank, deshalb bleibe ich zu Hause.</b>",
       "q": "Sevara ist traurig, weil ihre Freundin umzieht.",
       "w": [
-       "Ihre Freundin",
+       "Sevaras Freundin",
        "zieht",
        "um,",
        "deshalb",
        "ist",
-       "Sevara",
+       "sie",
        "traurig"
       ],
-      "a": "Ihre Freundin zieht um, deshalb ist Sevara traurig.",
+      "a": "Sevaras Freundin zieht um, deshalb ist sie traurig.",
       "alt": [],
       "gw": {
        "uz": "Sabab va natija joy almashadi: <b>weil</b> gapidagi sabab birinchi gap bo‘ladi, keyin <b>deshalb</b> + fe’l + ega. Misol: <b>Ich lerne viel, weil ich eine Prüfung habe.</b> → <b>Ich habe eine Prüfung, deshalb lerne ich viel.</b>",
@@ -415,7 +415,7 @@
      {
       "t": "order",
       "h": "Schreiben Sie den Satz mit *deshalb*.",
-      "q": "Ich frage oft meinen Bruder, weil er viel Erfahrung hat.",
+      "q": "Ich frage meinen Bruder oft um Rat, weil er viel Erfahrung hat.",
       "w": [
        "Mein Bruder",
        "hat",
@@ -424,9 +424,9 @@
        "frage",
        "ich",
        "ihn",
-       "oft"
+       "oft um Rat"
       ],
-      "a": "Mein Bruder hat viel Erfahrung, deshalb frage ich ihn oft.",
+      "a": "Mein Bruder hat viel Erfahrung, deshalb frage ich ihn oft um Rat.",
       "alt": [],
       "gw": {
        "uz": "Sabab va natija joy almashadi: <b>weil</b> gapidagi sabab birinchi gap bo‘ladi, keyin <b>deshalb</b> + fe’l + ega. Misol: <b>Ich lerne viel, weil ich eine Prüfung habe.</b> → <b>Ich habe eine Prüfung, deshalb lerne ich viel.</b>",
@@ -436,41 +436,41 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "bsp": "…, weil ich bin müde. → …, weil ich müde <b>bin</b>.",
-      "s": "Ich kaufe heute ein Geschenk , weil meine Freundin hat morgen Geburtstag .",
+      "bsp": "Es ist kalt, weil trage ich eine Jacke. → Es ist kalt, <b>deshalb</b> trage ich eine Jacke.",
+      "s": "Malika hat Fieber , weil bleibt sie heute zu Hause .",
       "a": [
-       9
+       4
       ],
-      "fix": "Ich kaufe heute ein Geschenk, weil meine Freundin morgen Geburtstag hat.",
+      "fix": "Malika hat Fieber, deshalb bleibt sie heute zu Hause.",
       "gw": {
-       "uz": "<b>weil</b> — Nebensatz: tuslangan fe’l eng oxirida. <b>…, weil meine Freundin morgen Geburtstag hat.</b>",
-       "ru": "<b>weil</b> вводит придаточное: спрягаемый глагол в самом конце. <b>…, weil meine Freundin morgen Geburtstag hat.</b>"
+       "uz": "Fieber — sabab, uyda qolish — natija. Fe’l darhol keyin turibdi, demak <b>weil</b> emas, <b>deshalb</b> (darum / daher / deswegen) kerak: <b>…, deshalb bleibt sie heute zu Hause.</b>",
+       "ru": "Fieber — причина, остаться дома — следствие. Глагол стоит сразу после союза, значит нужен не <b>weil</b>, а <b>deshalb</b> (darum / daher / deswegen): <b>…, deshalb bleibt sie heute zu Hause.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Ich habe heute keine Zeit , darum ich kann nicht kommen .",
+      "s": "Ich habe den Bus verpasst . Warum bin ich zu spät zu deiner Party gekommen .",
       "a": [
-       8
+       6
       ],
-      "fix": "Ich habe heute keine Zeit, darum kann ich nicht kommen.",
+      "fix": "Ich habe den Bus verpasst. Darum bin ich zu spät zu deiner Party gekommen.",
       "gw": {
-       "uz": "<b>darum</b> dan keyin darhol fe’l, keyin ega: <b>darum kann ich …</b> «darum ich kann» — xato.",
-       "ru": "Сразу после <b>darum</b> — глагол, потом подлежащее: <b>darum kann ich …</b> «darum ich kann» — ошибка."
+       "uz": "<b>warum</b> — savol so‘zi («nega?»). Natijani <b>darum</b> («shuning uchun») bildiradi: <b>Darum bin ich zu spät gekommen.</b>",
+       "ru": "<b>warum</b> — вопросительное слово («почему?»). Следствие выражает <b>darum</b> («поэтому»): <b>Darum bin ich zu spät gekommen.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Es regnet , deshalb wir zu Hause bleiben .",
+      "s": "Ich rufe Laylo jeden Tag an , wegen sie meine beste Freundin ist .",
       "a": [
        7
       ],
-      "fix": "Es regnet, deshalb bleiben wir zu Hause.",
+      "fix": "Ich rufe Laylo jeden Tag an, weil sie meine beste Freundin ist.",
       "gw": {
-       "uz": "<b>deshalb</b> Nebensatz emas — fe’l oxiriga ketmaydi. To‘g‘ri: <b>deshalb bleiben wir zu Hause.</b>",
-       "ru": "<b>deshalb</b> не вводит придаточное — глагол не уходит в конец. Правильно: <b>deshalb bleiben wir zu Hause.</b>"
+       "uz": "<b>wegen</b> — predlog (<b>wegen des Wetters</b>), u bilan Nebensatz tuzilmaydi. Sabab + fe’l oxirida → <b>weil</b>: <b>…, weil sie meine beste Freundin ist.</b>",
+       "ru": "<b>wegen</b> — предлог (<b>wegen des Wetters</b>), придаточное с ним не строится. Причина + глагол в конце → <b>weil</b>: <b>…, weil sie meine beste Freundin ist.</b>"
       }
      },
      {

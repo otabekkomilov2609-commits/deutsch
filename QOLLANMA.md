@@ -1259,3 +1259,11 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Topildi va tuzatildi: Hören'dagi «↺5» tugmasi (ko'rinmasdi), Lektion raqami doirasi (oq yozuv och ko'kda), suzuvchi «Hammasini yig'ish», 🌗 bilan qorong'i rejimda Kunlik challenge kartasi (sarlavha umuman ko'rinmasdi).
 - Umumiy sabab: ba'zi qorong'i qoidalar faqat telefon sozlamasi (@media prefers-color-scheme) uchun yozilgan, saytdagi 🌗 tugmasi (:root[data-theme="dark"]) uchun emas. 10 ta shunday qoida avtomatik ikkilantirildi. Yangi qorong'i CSS yozganda — DOIM ikkala ko'rinishda: @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) X{…}} va :root[data-theme="dark"] X{…}.
 - Qolgan «past kontrast»lar — faqat Lektion ichidagi emoji kataklari (emoji o'z rangida ko'rinadi, muammo emas).
+
+## ✍️ B1 grammatika mashqlari (2026-10-24)
+
+- Momente B1 ning 24 ta Lektioni uchun grammatika mashqi: har Lektionda 31–35 savol, 6–7 qadam (qoida → belgilash → bo‘shliq → tanlash → gap tuzish → «Xatoni toping»).
+- Lektion kartasida GRAMMATIK bo‘limida chiqadi (B1.1 / B1.2 tablari). ID: `B1-b11-N-G`, `B1-b12-N-G`.
+- Manba fayllar: `tools/b1g/B1-L*.json`; qoidalar `tools/b1g/SPEC.md`, tekshiruv `tools/b1g/check.py`, saytga qo‘shish `python3 tools/b1g/merge.py [N…]` → `tools/build.py`.
+- «Xatoni toping»: o‘quvchi xato so‘zni bosadi, to‘g‘ri topsa — to‘g‘ri gap yashil qutida chiqadi (`fix`).
+- Gaplar bizniki: kitobdan faqat mavzu va grammatika olingan, kitob gaplari ko‘chirilmagan.

@@ -207,7 +207,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie: *sowohl*, *als auch*, *nicht nur*, *sondern auch*, *weder*, *noch*.",
-      "s": "Hallo! Ich habe seit einem Monat einen kleinen Hund.\nEr spielt ___ mit Kindern ___ mit anderen Hunden.\nAber er ist ___ müde ___ faul: Er will immer nur spielen!\nWer hat Tipps für mich?",
+      "s": "Hallo! Ich habe seit einem Monat einen kleinen Hund.\nEr ist sehr aktiv und spielt ___ mit Kindern ___ mit anderen Hunden.\nEr ist ___ müde ___ faul – er will immer nur spielen!\nWer hat Tipps für mich?",
       "a": [
        [
         "sowohl"
@@ -230,7 +230,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie: *sowohl*, *als auch*, *nicht nur*, *sondern auch*, *weder*, *noch*.",
-      "s": "▪ Hast du die Tauben auf unserem Balkon gesehen?\n● Ja! Sie sind ___ laut, ___ ziemlich frech.\n▪ Stimmt. Sie lassen ___ die Blumen ___ die Tomaten in Ruhe.",
+      "s": "▪ Hast du die Tauben auf unserem Balkon gesehen?\n● Ja! Sie sind ___ laut, ___ ziemlich frech.\n▪ Stimmt. Sie haben ___ vor unserer Katze ___ vor unserem Hund Angst.",
       "a": [
        [
         "nicht nur"
@@ -394,8 +394,7 @@
       "q": "Man sieht Tauben in Parks. Man sieht sie auch auf Bahnhöfen. (nicht nur …, sondern auch)",
       "w": [
        "Man",
-       "sieht",
-       "Tauben",
+       "sieht Tauben",
        "nicht nur",
        "in Parks,",
        "sondern auch",
@@ -435,8 +434,7 @@
       "q": "Diese Vögel bauen ihr Nest nicht auf Bäumen. Sie bauen es auch nicht auf Häusern. (weder … noch)",
       "w": [
        "Diese Vögel",
-       "bauen",
-       "ihr Nest",
+       "bauen ihr Nest",
        "weder",
        "auf Bäumen",
        "noch",
@@ -512,7 +510,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie: *stundenlang*, *tagelang*, *wochenlang*, *monatelang*, *jahrelang*.",
-      "bsp": "Am Anfang vom Film passiert ___ nichts. (viele Minuten) → <b>minutenlang</b>",
+      "bsp": "Am Anfang des Films passiert ___ nichts. (viele Minuten) → <b>minutenlang</b>",
       "s": "Mein Bruder spielt ___ mit seiner Katze – von 14 bis 18 Uhr!",
       "a": [
        [

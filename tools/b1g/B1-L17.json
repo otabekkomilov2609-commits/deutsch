@@ -123,7 +123,7 @@
       "t": "mc",
       "h": "Wie? oder Wozu? Was passt?",
       "bsp": "Ich lerne viel über Kunst, ___ ich oft ins Museum gehe. → Wie? → ✓ <b>indem</b>",
-      "q": "Die Galerie findet neue Besucher, ___ sie den Eintritt am Sonntag kostenlos macht.",
+      "q": "Die Galerie gewinnt neue Besucher, ___ sie den Eintritt am Sonntag kostenlos macht.",
       "o": [
        "sodass",
        "damit",
@@ -408,18 +408,18 @@
       "t": "order",
       "h": "Verbinden Sie die Sätze mit *indem*.",
       "bsp": "Ich lerne Wörter. Ich schreibe Karten. → <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
-      "q": "Laylo hat ihre Angst verloren. Sie hat ihre Bilder im Café gezeigt.",
+      "q": "Laylo ist als Malerin bekannt geworden. Sie hat ihre Bilder im Café ausgestellt.",
       "w": [
-       "Laylo hat",
-       "ihre Angst",
-       "verloren,",
+       "Laylo ist",
+       "als Malerin",
+       "bekannt geworden,",
        "indem",
        "sie",
        "ihre Bilder im Café",
-       "gezeigt",
+       "ausgestellt",
        "hat"
       ],
-      "a": "Laylo hat ihre Angst verloren, indem sie ihre Bilder im Café gezeigt hat.",
+      "a": "Laylo ist als Malerin bekannt geworden, indem sie ihre Bilder im Café ausgestellt hat.",
       "alt": [],
       "gw": {
        "uz": "Usulni bildiruvchi gap indem-gapga aylanadi: vergul → <b>indem</b> → ega → … → fe’l oxirida. Ikkinchi gapdagi ism olmoshga aylanadi (Aziz → <b>er</b>). indem-gap boshida bo‘lsa, asosiy gap fe’l bilan boshlanadi: <b>Indem Nodir übt, wird er besser.</b>",
@@ -429,58 +429,57 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "bsp": "Ich lerne, indem ich lese viel. → <b>lese</b> → …, indem ich viel lese.",
-      "s": "Anna verbessert ihre Zeichnungen , indem sie übt jeden Tag .",
+      "bsp": "Ich lerne Wörter, indem ich Karten schreiben. → <b>schreiben</b> ✗ → …, indem ich Karten <b>schreibe</b>.",
+      "s": "Anna verbessert ihre Zeichnungen , indem sie jeden Tag üben .",
       "a": [
-       7
+       9
       ],
       "fix": "Anna verbessert ihre Zeichnungen, indem sie jeden Tag übt.",
       "gw": {
-       "uz": "Tekshiring: indem-gapda fe’l eng oxirida (ajraluvchi fe’l qo‘shilib yoziladi); indem-gapdan keyin asosiy gap fe’l bilan boshlanadi; «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
-       "ru": "Проверьте: в indem-предложении глагол в самом конце (отделяемый пишется слитно); после indem-предложения главное начинается с глагола; на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
+       "uz": "Tekshiring: indem-gapdagi fe’l egaga mos tuslangan bo‘lsin (sie → <b>übt</b>; ajraluvchi fe’l qo‘shilib: <b>teilnimmt</b>); Perfektda harakat fe’llari <b>sein</b> bilan (<b>gelaufen ist</b>); «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
+       "ru": "Проверьте: глагол в indem-предложении согласован с подлежащим (sie → <b>übt</b>; отделяемый пишется слитно: <b>teilnimmt</b>); в Perfekt глаголы движения — с <b>sein</b> (<b>gelaufen ist</b>); на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "bsp": "Ich lerne, indem ich lese viel. → <b>lese</b> → …, indem ich viel lese.",
+      "bsp": "Ich lerne Wörter, indem ich Karten schreiben. → <b>schreiben</b> ✗ → …, indem ich Karten <b>schreibe</b>.",
       "s": "Wie macht man gute Fotos ? – Damit man auf das Licht achtet .",
       "a": [
        7
       ],
       "fix": "Wie macht man gute Fotos? – Indem man auf das Licht achtet.",
       "gw": {
-       "uz": "Tekshiring: indem-gapda fe’l eng oxirida (ajraluvchi fe’l qo‘shilib yoziladi); indem-gapdan keyin asosiy gap fe’l bilan boshlanadi; «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
-       "ru": "Проверьте: в indem-предложении глагол в самом конце (отделяемый пишется слитно); после indem-предложения главное начинается с глагола; на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
+       "uz": "Tekshiring: indem-gapdagi fe’l egaga mos tuslangan bo‘lsin (sie → <b>übt</b>; ajraluvchi fe’l qo‘shilib: <b>teilnimmt</b>); Perfektda harakat fe’llari <b>sein</b> bilan (<b>gelaufen ist</b>); «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
+       "ru": "Проверьте: глагол в indem-предложении согласован с подлежащим (sie → <b>übt</b>; отделяемый пишется слитно: <b>teilnimmt</b>); в Perfekt глаголы движения — с <b>sein</b> (<b>gelaufen ist</b>); на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "bsp": "Ich lerne, indem ich lese viel. → <b>lese</b> → …, indem ich viel lese.",
-      "s": "Indem wir die Wand bemalen , wir machen den Park schöner .",
+      "bsp": "Ich lerne Wörter, indem ich Karten schreiben. → <b>schreiben</b> ✗ → …, indem ich Karten <b>schreibe</b>.",
+      "s": "Timur hat viel Street-Art entdeckt , indem er durch die Stadt gelaufen hat .",
       "a": [
-       6
+       12
       ],
-      "fix": "Indem wir die Wand bemalen, machen wir den Park schöner.",
+      "fix": "Timur hat viel Street-Art entdeckt, indem er durch die Stadt gelaufen ist.",
       "gw": {
-       "uz": "Tekshiring: indem-gapda fe’l eng oxirida (ajraluvchi fe’l qo‘shilib yoziladi); indem-gapdan keyin asosiy gap fe’l bilan boshlanadi; «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
-       "ru": "Проверьте: в indem-предложении глагол в самом конце (отделяемый пишется слитно); после indem-предложения главное начинается с глагола; на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
+       "uz": "Tekshiring: indem-gapdagi fe’l egaga mos tuslangan bo‘lsin (sie → <b>übt</b>; ajraluvchi fe’l qo‘shilib: <b>teilnimmt</b>); Perfektda harakat fe’llari <b>sein</b> bilan (<b>gelaufen ist</b>); «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
+       "ru": "Проверьте: глагол в indem-предложении согласован с подлежащим (sie → <b>übt</b>; отделяемый пишется слитно: <b>teilnimmt</b>); в Perfekt глаголы движения — с <b>sein</b> (<b>gelaufen ist</b>); на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "bsp": "Ich lerne, indem ich lese viel. → <b>lese</b> → …, indem ich viel lese.",
-      "s": "Lena lernt die Künstler kennen , indem sie an Workshops nimmt teil .",
+      "bsp": "Ich lerne Wörter, indem ich Karten schreiben. → <b>schreiben</b> ✗ → …, indem ich Karten <b>schreibe</b>.",
+      "s": "Lena lernt die Künstler kennen , indem sie an Workshops teilnehmt .",
       "a": [
-       10,
-       11
+       10
       ],
       "fix": "Lena lernt die Künstler kennen, indem sie an Workshops teilnimmt.",
       "gw": {
-       "uz": "Tekshiring: indem-gapda fe’l eng oxirida (ajraluvchi fe’l qo‘shilib yoziladi); indem-gapdan keyin asosiy gap fe’l bilan boshlanadi; «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
-       "ru": "Проверьте: в indem-предложении глагол в самом конце (отделяемый пишется слитно); после indem-предложения главное начинается с глагола; на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
+       "uz": "Tekshiring: indem-gapdagi fe’l egaga mos tuslangan bo‘lsin (sie → <b>übt</b>; ajraluvchi fe’l qo‘shilib: <b>teilnimmt</b>); Perfektda harakat fe’llari <b>sein</b> bilan (<b>gelaufen ist</b>); «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
+       "ru": "Проверьте: глагол в indem-предложении согласован с подлежащим (sie → <b>übt</b>; отделяемый пишется слитно: <b>teilnimmt</b>); в Perfekt глаголы движения — с <b>sein</b> (<b>gelaufen ist</b>); на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
       }
      },
      {

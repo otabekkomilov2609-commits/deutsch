@@ -517,22 +517,22 @@
       ],
       "fix": "Das sind meine Freunde, denen ich gestern geholfen habe.",
       "gw": {
-       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni Nomenga, kelishigi fe’l yoki predlogga mosmi (Plural Dativ — <b>denen</b>); (2) predlog tushib qolmaganmi (<b>aus dem</b> trinken); (3) fe’l Relativsatz oxiridami. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
-       "ru": "Проверьте: (1) род/число Relativpronomen совпадают с существительным, а падеж — с глаголом или предлогом (Plural Dativ — <b>denen</b>); (2) не пропущен ли предлог (<b>aus dem</b> trinken); (3) стоит ли глагол в конце Relativsatz. Пример: <b>die Tasche, in der mein Laptop ist</b>."
+       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni — Nomenga, kelishigi — fe’lga mosmi: <b>helfen, leihen, gehören</b> → Dativ (dem / der / dem / <b>denen</b>); (2) predlog bo‘lsa, kelishikni predlog belgilaydi: <b>aus, mit, in</b> (wo?) → Dativ: <b>aus dem, in der</b>. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
+       "ru": "Проверьте: (1) род/число Relativpronomen — по существительному, падеж — по глаголу: <b>helfen, leihen, gehören</b> → Dativ (dem / der / dem / <b>denen</b>); (2) если есть предлог, падеж определяет предлог: <b>aus, mit, in</b> (wo?) → Dativ: <b>aus dem, in der</b>. Пример: <b>die Tasche, in der mein Laptop ist</b>."
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
       "bsp": "die Frau, <b>die</b> ich helfe → die Frau, <b>der</b> ich helfe",
-      "s": "Das ist der Becher , dem ich jeden Morgen Tee trinke .",
+      "s": "Das ist der Becher , aus den ich jeden Morgen Tee trinke .",
       "a": [
-       5
+       6
       ],
       "fix": "Das ist der Becher, aus dem ich jeden Morgen Tee trinke.",
       "gw": {
-       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni Nomenga, kelishigi fe’l yoki predlogga mosmi (Plural Dativ — <b>denen</b>); (2) predlog tushib qolmaganmi (<b>aus dem</b> trinken); (3) fe’l Relativsatz oxiridami. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
-       "ru": "Проверьте: (1) род/число Relativpronomen совпадают с существительным, а падеж — с глаголом или предлогом (Plural Dativ — <b>denen</b>); (2) не пропущен ли предлог (<b>aus dem</b> trinken); (3) стоит ли глагол в конце Relativsatz. Пример: <b>die Tasche, in der mein Laptop ist</b>."
+       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni — Nomenga, kelishigi — fe’lga mosmi: <b>helfen, leihen, gehören</b> → Dativ (dem / der / dem / <b>denen</b>); (2) predlog bo‘lsa, kelishikni predlog belgilaydi: <b>aus, mit, in</b> (wo?) → Dativ: <b>aus dem, in der</b>. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
+       "ru": "Проверьте: (1) род/число Relativpronomen — по существительному, падеж — по глаголу: <b>helfen, leihen, gehören</b> → Dativ (dem / der / dem / <b>denen</b>); (2) если есть предлог, падеж определяет предлог: <b>aus, mit, in</b> (wo?) → Dativ: <b>aus dem, in der</b>. Пример: <b>die Tasche, in der mein Laptop ist</b>."
       }
      },
      {
@@ -545,22 +545,22 @@
       ],
       "fix": "Ich brauche eine Tasche, in der mein Laptop Platz hat.",
       "gw": {
-       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni Nomenga, kelishigi fe’l yoki predlogga mosmi (Plural Dativ — <b>denen</b>); (2) predlog tushib qolmaganmi (<b>aus dem</b> trinken); (3) fe’l Relativsatz oxiridami. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
-       "ru": "Проверьте: (1) род/число Relativpronomen совпадают с существительным, а падеж — с глаголом или предлогом (Plural Dativ — <b>denen</b>); (2) не пропущен ли предлог (<b>aus dem</b> trinken); (3) стоит ли глагол в конце Relativsatz. Пример: <b>die Tasche, in der mein Laptop ist</b>."
+       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni — Nomenga, kelishigi — fe’lga mosmi: <b>helfen, leihen, gehören</b> → Dativ (dem / der / dem / <b>denen</b>); (2) predlog bo‘lsa, kelishikni predlog belgilaydi: <b>aus, mit, in</b> (wo?) → Dativ: <b>aus dem, in der</b>. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
+       "ru": "Проверьте: (1) род/число Relativpronomen — по существительному, падеж — по глаголу: <b>helfen, leihen, gehören</b> → Dativ (dem / der / dem / <b>denen</b>); (2) если есть предлог, падеж определяет предлог: <b>aus, mit, in</b> (wo?) → Dativ: <b>aus dem, in der</b>. Пример: <b>die Tasche, in der mein Laptop ist</b>."
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
       "bsp": "die Frau, <b>die</b> ich helfe → die Frau, <b>der</b> ich helfe",
-      "s": "Der Nachbar , dem ich habe mein Fahrrad geliehen , wohnt im dritten Stock .",
+      "s": "Der Nachbar , den ich mein Fahrrad geliehen habe , wohnt im dritten Stock .",
       "a": [
-       5
+       3
       ],
       "fix": "Der Nachbar, dem ich mein Fahrrad geliehen habe, wohnt im dritten Stock.",
       "gw": {
-       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni Nomenga, kelishigi fe’l yoki predlogga mosmi (Plural Dativ — <b>denen</b>); (2) predlog tushib qolmaganmi (<b>aus dem</b> trinken); (3) fe’l Relativsatz oxiridami. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
-       "ru": "Проверьте: (1) род/число Relativpronomen совпадают с существительным, а падеж — с глаголом или предлогом (Plural Dativ — <b>denen</b>); (2) не пропущен ли предлог (<b>aus dem</b> trinken); (3) стоит ли глагол в конце Relativsatz. Пример: <b>die Tasche, in der mein Laptop ist</b>."
+       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni — Nomenga, kelishigi — fe’lga mosmi: <b>helfen, leihen, gehören</b> → Dativ (dem / der / dem / <b>denen</b>); (2) predlog bo‘lsa, kelishikni predlog belgilaydi: <b>aus, mit, in</b> (wo?) → Dativ: <b>aus dem, in der</b>. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
+       "ru": "Проверьте: (1) род/число Relativpronomen — по существительному, падеж — по глаголу: <b>helfen, leihen, gehören</b> → Dativ (dem / der / dem / <b>denen</b>); (2) если есть предлог, падеж определяет предлог: <b>aus, mit, in</b> (wo?) → Dativ: <b>aus dem, in der</b>. Пример: <b>die Tasche, in der mein Laptop ist</b>."
       }
      }
     ]

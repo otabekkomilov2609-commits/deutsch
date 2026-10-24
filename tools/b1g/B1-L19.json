@@ -16,8 +16,8 @@
     "items": [
      {
       "t": "info",
-      "h": "<h4>Passiv Präteritum: wurde + Partizip II</h4>\n<table class=\"ex-tb\"><tr><th>Präsens</th><th>Präteritum</th></tr>\n<tr><td>Der Antrag <b>wird</b> geprüft.</td><td>Der Antrag <b>wurde</b> geprüft.</td></tr>\n<tr><td>Die Dokumente <b>werden</b> übersetzt.</td><td>Die Dokumente <b>wurden</b> übersetzt.</td></tr>\n<tr><td colspan=\"2\">ich <b>wurde</b> · du <b>wurdest</b> · er / es / sie <b>wurde</b> · wir <b>wurden</b> · ihr <b>wurdet</b> · sie / Sie <b>wurden</b></td></tr></table>\n<div class=\"ex-sk\"><span>Mein Zeugnis</span><span class=\"v\">wurde</span><span>von der Uni</span><span class=\"v\">anerkannt</span>.</div>\n<p class=\"ex-note\">Passivda muhimi — <b>nima qilingani</b>, kim qilgani emas. Präteritum: <b>wurde</b> (2-o‘rinda) + Partizip II (oxirida). Kim qilgani aytilsa — <b>von</b> + Dativ: <b>von der Behörde</b>, <b>vom Konsulat</b>.</p>",
-      "ru": "<h4>Passiv Präteritum: wurde + Partizip II</h4>\n<table class=\"ex-tb\"><tr><th>Präsens</th><th>Präteritum</th></tr>\n<tr><td>Der Antrag <b>wird</b> geprüft.</td><td>Der Antrag <b>wurde</b> geprüft.</td></tr>\n<tr><td>Die Dokumente <b>werden</b> übersetzt.</td><td>Die Dokumente <b>wurden</b> übersetzt.</td></tr>\n<tr><td colspan=\"2\">ich <b>wurde</b> · du <b>wurdest</b> · er / es / sie <b>wurde</b> · wir <b>wurden</b> · ihr <b>wurdet</b> · sie / Sie <b>wurden</b></td></tr></table>\n<div class=\"ex-sk\"><span>Mein Zeugnis</span><span class=\"v\">wurde</span><span>von der Uni</span><span class=\"v\">anerkannt</span>.</div>\n<p class=\"ex-note\">В пассиве важно, <b>что сделано</b>, а не кто это сделал. Präteritum: <b>wurde</b> (2-е место) + Partizip II (в конце). Если называем, кто сделал, — <b>von</b> + Dativ: <b>von der Behörde</b>, <b>vom Konsulat</b>.</p>"
+      "h": "<h4>Passiv Präteritum: wurde + Partizip II</h4>\n<table class=\"ex-tb\"><tr><th>Präsens</th><th>Präteritum</th></tr>\n<tr><td>Der Antrag <b>wird</b> geprüft.</td><td>Der Antrag <b>wurde</b> geprüft.</td></tr>\n<tr><td>Die Dokumente <b>werden</b> übersetzt.</td><td>Die Dokumente <b>wurden</b> übersetzt.</td></tr>\n</table>\n<table class=\"ex-tb\"><tr><th>Singular</th><th>Plural</th></tr><tr><td>ich <b>wurde</b></td><td>wir <b>wurden</b></td></tr><tr><td>du <b>wurdest</b></td><td>ihr <b>wurdet</b></td></tr><tr><td>er / es / sie <b>wurde</b></td><td>sie / Sie <b>wurden</b></td></tr></table>\n<div class=\"ex-sk\"><span>Mein Zeugnis</span><span class=\"v\">wurde</span><span>von der Uni</span><span class=\"v\">anerkannt</span>.</div>\n<p class=\"ex-note\">Passivda muhimi — <b>nima qilingani</b>, kim qilgani emas. Präteritum: <b>wurde</b> (2-o‘rinda) + Partizip II (oxirida). Kim qilgani aytilsa — <b>von</b> + Dativ: <b>von der Behörde</b>, <b>vom Konsulat</b>.</p>",
+      "ru": "<h4>Passiv Präteritum: wurde + Partizip II</h4>\n<table class=\"ex-tb\"><tr><th>Präsens</th><th>Präteritum</th></tr>\n<tr><td>Der Antrag <b>wird</b> geprüft.</td><td>Der Antrag <b>wurde</b> geprüft.</td></tr>\n<tr><td>Die Dokumente <b>werden</b> übersetzt.</td><td>Die Dokumente <b>wurden</b> übersetzt.</td></tr>\n</table>\n<table class=\"ex-tb\"><tr><th>Singular</th><th>Plural</th></tr><tr><td>ich <b>wurde</b></td><td>wir <b>wurden</b></td></tr><tr><td>du <b>wurdest</b></td><td>ihr <b>wurdet</b></td></tr><tr><td>er / es / sie <b>wurde</b></td><td>sie / Sie <b>wurden</b></td></tr></table>\n<div class=\"ex-sk\"><span>Mein Zeugnis</span><span class=\"v\">wurde</span><span>von der Uni</span><span class=\"v\">anerkannt</span>.</div>\n<p class=\"ex-note\">В пассиве важно, <b>что сделано</b>, а не кто это сделал. Präteritum: <b>wurde</b> (2-е место) + Partizip II (в конце). Если называем, кто сделал, — <b>von</b> + Dativ: <b>von der Behörde</b>, <b>vom Konsulat</b>.</p>"
      },
      {
       "t": "info",
@@ -86,7 +86,7 @@
       "t": "mc",
       "h": "Was passt?",
       "bsp": "Gestern ___ mein Antrag geprüft. → Vergangenheit, Singular → ✓ <b>wurde</b>",
-      "q": "Im Oktober ___ alle neuen Studenten zu einem Infoabend eingeladen.",
+      "q": "Letzten Oktober ___ alle neuen Studenten zu einem Infoabend eingeladen.",
       "o": [
        "wurde",
        "wurden",
@@ -452,8 +452,7 @@
        "nicht,",
        "ob",
        "mein Antrag",
-       "schon",
-       "bearbeitet",
+       "schon bearbeitet",
        "worden",
        "ist"
       ],
@@ -474,8 +473,8 @@
       ],
       "fix": "Die Dokumente wurden schon übersetzt.",
       "gw": {
-       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Nebensatzda <b>ist</b> eng oxirida turadi.",
-       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в Nebensatz <b>ist</b> стоит в самом конце."
+       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Passivda doim <b>Partizip II</b>: <b>verlängert</b> («verlängern» emas).",
+       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в пассиве всегда <b>Partizip II</b>: <b>verlängert</b> (не «verlängern»)."
       }
      },
      {
@@ -488,8 +487,8 @@
       ],
       "fix": "Mein Studentenausweis ist gestern ausgestellt worden.",
       "gw": {
-       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Nebensatzda <b>ist</b> eng oxirida turadi.",
-       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в Nebensatz <b>ist</b> стоит в самом конце."
+       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Passivda doim <b>Partizip II</b>: <b>verlängert</b> («verlängern» emas).",
+       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в пассиве всегда <b>Partizip II</b>: <b>verlängert</b> (не «verlängern»)."
       }
      },
      {
@@ -502,49 +501,34 @@
       ],
       "fix": "Mein Antrag ist leider abgelehnt worden.",
       "gw": {
-       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Nebensatzda <b>ist</b> eng oxirida turadi.",
-       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в Nebensatz <b>ist</b> стоит в самом конце."
+       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Passivda doim <b>Partizip II</b>: <b>verlängert</b> («verlängern» emas).",
+       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в пассиве всегда <b>Partizip II</b>: <b>verlängert</b> (не «verlängern»)."
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
       "bsp": "Mein Visum ist verlängert geworden. → <b>geworden</b> → Mein Visum ist verlängert worden.",
-      "s": "Ich habe gehört , dass dein Stipendium ist verlängert worden .",
+      "s": "Ich habe gehört , dass dein Stipendium verlängern worden ist .",
       "a": [
        7
       ],
       "fix": "Ich habe gehört, dass dein Stipendium verlängert worden ist.",
       "gw": {
-       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Nebensatzda <b>ist</b> eng oxirida turadi.",
-       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в Nebensatz <b>ist</b> стоит в самом конце."
+       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Passivda doim <b>Partizip II</b>: <b>verlängert</b> («verlängern» emas).",
+       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в пассиве всегда <b>Partizip II</b>: <b>verlängert</b> (не «verlängern»)."
       }
      },
      {
       "t": "info",
-      "h": "<h4>Wortbildung: -ei und -isch</h4>\n<table class=\"ex-tb\"><tr><th>Beruf → Ort: -ei</th><th>Nomen → Adjektiv: -isch</th></tr>\n<tr><td>der Bäcker → die Bäcker<b>ei</b></td><td>die Theorie → theoret<b>isch</b></td></tr>\n<tr><td>der Metzger → die Metzger<b>ei</b></td><td>die Praxis → prakt<b>isch</b></td></tr>\n<tr><td>der Konditor → die Konditor<b>ei</b></td><td>die Politik → polit<b>isch</b></td></tr>\n<tr><td></td><td>der Typ → typ<b>isch</b></td></tr>\n<tr><td></td><td>Usbekistan → usbek<b>isch</b></td></tr></table>\n<p class=\"ex-note\"><b>-ei</b>: kasb nomidan shu kasb egasi ishlaydigan joy yoki do‘kon yasaladi, artikl doim <b>die</b>. <b>-isch</b>: otdan sifat yasaladi, so‘z oxiri ko‘pincha o‘zgaradi (Theorie → theoretisch). Sifat ot oldida qo‘shimcha oladi: <b>ein typisches Gericht</b>.</p>",
-      "ru": "<h4>Wortbildung: -ei und -isch</h4>\n<table class=\"ex-tb\"><tr><th>Beruf → Ort: -ei</th><th>Nomen → Adjektiv: -isch</th></tr>\n<tr><td>der Bäcker → die Bäcker<b>ei</b></td><td>die Theorie → theoret<b>isch</b></td></tr>\n<tr><td>der Metzger → die Metzger<b>ei</b></td><td>die Praxis → prakt<b>isch</b></td></tr>\n<tr><td>der Konditor → die Konditor<b>ei</b></td><td>die Politik → polit<b>isch</b></td></tr>\n<tr><td></td><td>der Typ → typ<b>isch</b></td></tr>\n<tr><td></td><td>Usbekistan → usbek<b>isch</b></td></tr></table>\n<p class=\"ex-note\"><b>-ei</b>: от названия профессии образуется место или магазин, артикль всегда <b>die</b>. <b>-isch</b>: от существительного образуется прилагательное, конец слова часто меняется (Theorie → theoretisch). Перед существительным прилагательное получает окончание: <b>ein typisches Gericht</b>.</p>"
+      "h": "<h4>Wortbildung: -ei und -isch</h4>\n<table class=\"ex-tb\"><tr><th>Beruf → Ort: -ei</th><th>Nomen → Adjektiv: -isch</th></tr>\n<tr><td>der Bäcker → die Bäcker<b>ei</b></td><td>die Theorie → theoret<b>isch</b></td></tr>\n<tr><td>der Metzger → die Metzger<b>ei</b></td><td>die Praxis → prakt<b>isch</b></td></tr>\n<tr><td>der Gärtner → die Gärtner<b>ei</b></td><td>die Politik → polit<b>isch</b></td></tr>\n<tr><td></td><td>die Technik → techn<b>isch</b></td></tr>\n<tr><td></td><td>der Typ → typ<b>isch</b></td></tr>\n<tr><td></td><td>Usbekistan → usbek<b>isch</b></td></tr></table>\n<p class=\"ex-note\"><b>-ei</b>: kasb nomidan shu kasb egasi ishlaydigan joy yoki do‘kon yasaladi, artikl doim <b>die</b>. <b>-isch</b>: otdan sifat yasaladi, so‘z oxiri ko‘pincha o‘zgaradi (Theorie → theoretisch). Sifat ot oldida qo‘shimcha oladi: <b>ein typisches Gericht</b>.</p>",
+      "ru": "<h4>Wortbildung: -ei und -isch</h4>\n<table class=\"ex-tb\"><tr><th>Beruf → Ort: -ei</th><th>Nomen → Adjektiv: -isch</th></tr>\n<tr><td>der Bäcker → die Bäcker<b>ei</b></td><td>die Theorie → theoret<b>isch</b></td></tr>\n<tr><td>der Metzger → die Metzger<b>ei</b></td><td>die Praxis → prakt<b>isch</b></td></tr>\n<tr><td>der Gärtner → die Gärtner<b>ei</b></td><td>die Politik → polit<b>isch</b></td></tr>\n<tr><td></td><td>die Technik → techn<b>isch</b></td></tr>\n<tr><td></td><td>der Typ → typ<b>isch</b></td></tr>\n<tr><td></td><td>Usbekistan → usbek<b>isch</b></td></tr></table>\n<p class=\"ex-note\"><b>-ei</b>: от названия профессии образуется место или магазин, артикль всегда <b>die</b>. <b>-isch</b>: от существительного образуется прилагательное, конец слова часто меняется (Theorie → theoretisch). Перед существительным прилагательное получает окончание: <b>ein typisches Gericht</b>.</p>"
      },
      {
       "t": "gap",
       "h": "Bilden Sie Wörter mit -ei oder -isch.",
-      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
-      "s": "Frische Brötchen kaufe ich jeden Morgen in der ___ an der Ecke. (Bäcker)",
-      "a": [
-       [
-        "Bäckerei"
-       ]
-      ],
-      "gw": {
-       "uz": "Kasbdan joy: <b>-ei</b> qo‘shing (artikl doim <b>die</b>): Bäcker → <b>Bäckerei</b>. Otdan sifat: <b>-isch</b> (Praxis → <b>praktisch</b>). Sifat ot oldida bo‘lsa, qo‘shimcha oladi: <b>ein politisches Thema</b>.",
-       "ru": "Профессия → место: добавьте <b>-ei</b> (артикль всегда <b>die</b>): Bäcker → <b>Bäckerei</b>. Существительное → прилагательное: <b>-isch</b> (Praxis → <b>praktisch</b>). Перед существительным прилагательное получает окончание: <b>ein politisches Thema</b>."
-      }
-     },
-     {
-      "t": "gap",
-      "h": "Bilden Sie Wörter mit -ei oder -isch.",
-      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
-      "s": "Fleisch und Wurst bekommt man in einer ___. (Metzger)",
+      "bsp": "Brot und Brötchen kauft man in der ___. (Bäcker) → <b>Bäckerei</b>",
+      "s": "Fleisch und Wurst kaufe ich in der ___ neben dem Supermarkt. (Metzger)",
       "a": [
        [
         "Metzgerei"
@@ -558,7 +542,22 @@
      {
       "t": "gap",
       "h": "Bilden Sie Wörter mit -ei oder -isch.",
-      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
+      "bsp": "Brot und Brötchen kauft man in der ___. (Bäcker) → <b>Bäckerei</b>",
+      "s": "Mein Laptop geht nicht an. Ich glaube, es ist ein ___ Problem. (Technik)",
+      "a": [
+       [
+        "technisches"
+       ]
+      ],
+      "gw": {
+       "uz": "Kasbdan joy: <b>-ei</b> qo‘shing (artikl doim <b>die</b>): Bäcker → <b>Bäckerei</b>. Otdan sifat: <b>-isch</b> (Praxis → <b>praktisch</b>). Sifat ot oldida bo‘lsa, qo‘shimcha oladi: <b>ein politisches Thema</b>.",
+       "ru": "Профессия → место: добавьте <b>-ei</b> (артикль всегда <b>die</b>): Bäcker → <b>Bäckerei</b>. Существительное → прилагательное: <b>-isch</b> (Praxis → <b>praktisch</b>). Перед существительным прилагательное получает окончание: <b>ein politisches Thema</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Bilden Sie Wörter mit -ei oder -isch.",
+      "bsp": "Brot und Brötchen kauft man in der ___. (Bäcker) → <b>Bäckerei</b>",
       "s": "Der Kurs war nicht nur theoretisch, sondern auch sehr ___. (Praxis)",
       "a": [
        [
@@ -573,7 +572,7 @@
      {
       "t": "gap",
       "h": "Bilden Sie Wörter mit -ei oder -isch.",
-      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
+      "bsp": "Brot und Brötchen kauft man in der ___. (Bäcker) → <b>Bäckerei</b>",
       "s": "Mein Bruder liest jeden Tag Zeitung. Er ist sehr ___ interessiert. (Politik)",
       "a": [
        [
@@ -588,7 +587,7 @@
      {
       "t": "gap",
       "h": "Bilden Sie Wörter mit -ei oder -isch.",
-      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
+      "bsp": "Brot und Brötchen kauft man in der ___. (Bäcker) → <b>Bäckerei</b>",
       "s": "Heiße Sommer sind ___ für Taschkent. (Typ)",
       "a": [
        [
@@ -603,7 +602,7 @@
      {
       "t": "gap",
       "h": "Bilden Sie Wörter mit -ei oder -isch.",
-      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
+      "bsp": "Brot und Brötchen kauft man in der ___. (Bäcker) → <b>Bäckerei</b>",
       "s": "Plov ist ein ___ Gericht. (Usbekistan)",
       "a": [
        [

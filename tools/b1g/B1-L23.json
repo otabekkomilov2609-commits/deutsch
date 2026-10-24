@@ -77,7 +77,7 @@
      {
       "t": "cat",
       "h": "*hätte* oder *wäre*? Ordnen Sie zu.",
-      "bsp": "gefahren → <b>wäre + Partizip II</b>",
+      "bsp": "angekommen → <b>wäre + Partizip II</b>",
       "c": [
        "hätte + Partizip II",
        "wäre + Partizip II"
@@ -112,7 +112,7 @@
         0
        ],
        [
-        "gefahren",
+        "gestiegen",
         1
        ]
       ],
@@ -462,7 +462,9 @@
        "mitgekommen"
       ],
       "a": "Wenn Laylo den Ausflug nicht vergessen hätte, wäre sie mitgekommen.",
-      "alt": [],
+      "alt": [
+       "Wenn sie den Ausflug nicht vergessen hätte, wäre Laylo mitgekommen."
+      ],
       "gw": {
        "uz": "Haqiqatni teskari qiling (<b>nicht</b> qo‘shing yoki olib tashlang, <b>keine</b> ↔ ein-). wenn-gapda <b>hätte/wäre</b> oxirida, vergul, keyin Hauptsatz <b>hätte/wäre</b> bilan boshlanadi. wenn-gap oxirda ham kelishi mumkin. Misol: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>",
        "ru": "Переверните реальность (добавьте или уберите <b>nicht</b>, <b>keine</b> ↔ ein-). В части с wenn <b>hätte/wäre</b> в конце, запятая, затем главное начинается с <b>hätte/wäre</b>. Часть с wenn может стоять и в конце. Пример: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>"
@@ -603,8 +605,8 @@
       ],
       "fix": "Ohne Regenschirm wären wir nass geworden.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; Hauptsatz fe’l bilan boshlanmagan (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); Partizip o‘rniga Infinitiv.",
-       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; главное предложение начинается не с глагола (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); инфинитив вместо Partizip."
+       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; hätte/wäre egaga mos emas (<b>du wäre</b> ✗ → <b>du wärst</b>); Partizip II o‘rniga Infinitiv.",
+       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; hätte/wäre не согласован (<b>du wäre</b> ✗ → <b>du wärst</b>); инфинитив вместо Partizip II."
       }
      },
      {
@@ -616,8 +618,8 @@
       ],
       "fix": "Wenn ich das gewusst hätte, wäre ich mitgekommen.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; Hauptsatz fe’l bilan boshlanmagan (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); Partizip o‘rniga Infinitiv.",
-       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; главное предложение начинается не с глагола (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); инфинитив вместо Partizip."
+       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; hätte/wäre egaga mos emas (<b>du wäre</b> ✗ → <b>du wärst</b>); Partizip II o‘rniga Infinitiv.",
+       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; hätte/wäre не согласован (<b>du wäre</b> ✗ → <b>du wärst</b>); инфинитив вместо Partizip II."
       }
      },
      {
@@ -629,22 +631,21 @@
       ],
       "fix": "Mit dem Auto wären wir schneller am Denkmal angekommen.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; Hauptsatz fe’l bilan boshlanmagan (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); Partizip o‘rniga Infinitiv.",
-       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; главное предложение начинается не с глагола (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); инфинитив вместо Partizip."
+       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; hätte/wäre egaga mos emas (<b>du wäre</b> ✗ → <b>du wärst</b>); Partizip II o‘rniga Infinitiv.",
+       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; hätte/wäre не согласован (<b>du wäre</b> ✗ → <b>du wärst</b>); инфинитив вместо Partizip II."
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Wenn wir früher losgefahren wären , wir hätten die Fähre erreicht .",
+      "s": "Wenn du früher losgefahren wäre , hättest du die Fähre erreicht .",
       "a": [
-       6,
-       7
+       4
       ],
-      "fix": "Wenn wir früher losgefahren wären, hätten wir die Fähre erreicht.",
+      "fix": "Wenn du früher losgefahren wärst, hättest du die Fähre erreicht.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; Hauptsatz fe’l bilan boshlanmagan (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); Partizip o‘rniga Infinitiv.",
-       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; главное предложение начинается не с глагола (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); инфинитив вместо Partizip."
+       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; hätte/wäre egaga mos emas (<b>du wäre</b> ✗ → <b>du wärst</b>); Partizip II o‘rniga Infinitiv.",
+       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; hätte/wäre не согласован (<b>du wäre</b> ✗ → <b>du wärst</b>); инфинитив вместо Partizip II."
       }
      }
     ]

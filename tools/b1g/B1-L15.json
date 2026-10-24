@@ -197,7 +197,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie *lasse*, *lässt*, *lasst* oder *lassen*.",
-      "s": "Hallo! Morgen haben Lena und ich unseren ersten Jahrestag.\nIch ___ meinen Bruder einen Tisch im Restaurant reservieren – er kennt den Chef.\nLena ___ ihr Kleid reinigen, denn sie will schön aussehen.\nUnd nach dem Essen ___ wir uns mit dem Taxi nach Hause bringen.",
+      "s": "Hallo! Morgen haben Lena und ich unseren ersten Jahrestag.\nIch ___ meinen Bruder einen Tisch im Restaurant reservieren – er kennt den Chef.\nLena ___ ihr Lieblingskleid ändern, denn es ist ihr zu groß.\nUnd nach dem Essen ___ wir uns mit dem Taxi nach Hause bringen.",
       "a": [
        [
         "lasse"
@@ -376,8 +376,7 @@
        "Meine Eltern",
        "lassen",
        "mich",
-       "allein",
-       "nach Berlin",
+       "allein nach Berlin",
        "fahren"
       ],
       "a": "Meine Eltern lassen mich allein nach Berlin fahren.",
@@ -451,8 +450,7 @@
        "lässt",
        "die Kinder",
        "den Liebesfilm",
-       "nicht",
-       "sehen"
+       "nicht sehen"
       ],
       "a": "Die Mutter lässt die Kinder den Liebesfilm nicht sehen.",
       "alt": [],
@@ -464,16 +462,16 @@
      {
       "t": "order",
       "h": "Schreiben Sie die Sätze mit *lassen*.",
-      "q": "Mein Bruder lässt mich seinen Film sehen. (Perfekt)",
+      "q": "Mein Bruder lässt mich seinen Laptop benutzen. (Perfekt)",
       "w": [
        "Mein Bruder",
        "hat",
        "mich",
-       "seinen Film",
-       "sehen",
+       "seinen Laptop",
+       "benutzen",
        "lassen"
       ],
-      "a": "Mein Bruder hat mich seinen Film sehen lassen.",
+      "a": "Mein Bruder hat mich seinen Laptop benutzen lassen.",
       "alt": [],
       "gw": {
        "uz": "Kim bajaradi? Boshqa odam qilsa — <b>etwas machen lassen</b>; ruxsat bersa (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: odam Akkusativda, <b>zu</b> tushib qoladi. Perfektda: <b>hat … machen lassen</b>. Misol: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>",
@@ -490,8 +488,8 @@
       ],
       "fix": "Gestern habe ich meinen Computer reparieren lassen.",
       "gw": {
-       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) infinitiv oldida <b>zu</b> yo‘q; 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
-       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) перед инфинитивом нет <b>zu</b>; 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
+       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) lassen bilan infinitiv keladi — <b>zu</b> yo‘q, Partizip II ham emas (<b>schneiden</b>, «geschnitten» emas); 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
+       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) с lassen — инфинитив: без <b>zu</b> и не Partizip II (<b>schneiden</b>, не «geschnitten»); 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
       }
      },
      {
@@ -503,21 +501,21 @@
       ],
       "fix": "Mein Vater lässt mich nicht mit dem Auto fahren.",
       "gw": {
-       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) infinitiv oldida <b>zu</b> yo‘q; 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
-       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) перед инфинитивом нет <b>zu</b>; 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
+       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) lassen bilan infinitiv keladi — <b>zu</b> yo‘q, Partizip II ham emas (<b>schneiden</b>, «geschnitten» emas); 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
+       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) с lassen — инфинитив: без <b>zu</b> и не Partizip II (<b>schneiden</b>, не «geschnitten»); 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Er lässt seine Haare beim Friseur zu schneiden .",
+      "s": "Er lässt seine Haare beim Friseur geschnitten .",
       "a": [
        6
       ],
       "fix": "Er lässt seine Haare beim Friseur schneiden.",
       "gw": {
-       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) infinitiv oldida <b>zu</b> yo‘q; 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
-       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) перед инфинитивом нет <b>zu</b>; 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
+       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) lassen bilan infinitiv keladi — <b>zu</b> yo‘q, Partizip II ham emas (<b>schneiden</b>, «geschnitten» emas); 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
+       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) с lassen — инфинитив: без <b>zu</b> и не Partizip II (<b>schneiden</b>, не «geschnitten»); 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
       }
      },
      {
@@ -529,8 +527,8 @@
       ],
       "fix": "Meine Freundin lässt mich nie ihr Tagebuch lesen.",
       "gw": {
-       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) infinitiv oldida <b>zu</b> yo‘q; 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
-       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) перед инфинитивом нет <b>zu</b>; 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
+       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) lassen bilan infinitiv keladi — <b>zu</b> yo‘q, Partizip II ham emas (<b>schneiden</b>, «geschnitten» emas); 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
+       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) с lassen — инфинитив: без <b>zu</b> и не Partizip II (<b>schneiden</b>, не «geschnitten»); 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
       }
      }
     ]

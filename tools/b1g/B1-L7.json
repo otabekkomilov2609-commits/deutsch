@@ -234,7 +234,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie die Endung.",
-      "s": "Mein Tipp für Reisen allein: Nehmt nur leicht___ Gepäck mit!\nÜbernachtet in günstig___ Hostels – dort lernt man schnell nett___ Leute kennen.",
+      "s": "Mein Tipp fürs Alleinreisen: Nehmt nur leicht___ Gepäck mit!\nÜbernachtet in günstig___ Hostels – dort lernt man schnell nett___ Leute kennen.",
       "a": [
        [
         "es",
@@ -344,9 +344,7 @@
       "h": "Schreiben Sie den Satz im Plural.",
       "q": "Ich reise gern mit einem netten Freund.",
       "w": [
-       "Ich",
-       "reise",
-       "gern",
+       "Ich reise gern",
        "mit",
        "netten",
        "Freunden"
@@ -459,11 +457,10 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Gemütliches Zimmer mit große Fenster zu vermieten .",
-      "fix": "Gemütliches Zimmer mit großen Fenstern zu vermieten.",
+      "s": "Helles Zimmer mit eigenem Bad und kleiner Balkon zu vermieten .",
+      "fix": "Helles Zimmer mit eigenem Bad und kleinem Balkon zu vermieten.",
       "a": [
-       3,
-       4
+       6
       ],
       "gw": {
        "uz": "Predlog va fe’lni tekshiring: <b>mit, bei, in</b> (wo?) — Dativ: m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> + ot <b>-n</b>. <b>es gibt</b> — Akkusativ: m <b>-en</b>. Misol: <b>Es gibt frischen Saft.</b> · <b>mit großen Fenstern</b>",

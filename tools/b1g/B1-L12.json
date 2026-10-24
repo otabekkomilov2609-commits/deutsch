@@ -250,16 +250,16 @@
       "t": "gap",
       "h": "Ergänzen Sie *so*, *dass* oder *sodass*.",
       "bsp": "Der Tee war ___ heiß, ___ ich warten musste. → <b>so</b> … <b>dass</b>",
-      "s": "Mein Foodtrend-Test\nAlle posten gerade Fotos von bunten Bowls, ___ ich auch eine machen wollte.\nIch habe ___ viele Zutaten gekauft, ___ mein Kühlschrank jetzt ganz voll ist.\nDie Bowl sah schön aus, aber sie war ___ scharf, ___ ich nur die Hälfte essen konnte.",
+      "s": "Mein Foodtrend-Test\nBowls sind gerade ein großer Trend. Die Fotos sahen ___ lecker aus, ___ ich auch eine machen wollte.\nIch habe sehr viele Zutaten gekauft, ___ mein Kühlschrank jetzt ganz voll ist.\nDie Bowl sah schön aus, aber sie war ___ scharf, ___ ich nur die Hälfte essen konnte.",
       "a": [
-       [
-        "sodass"
-       ],
        [
         "so"
        ],
        [
         "dass"
+       ],
+       [
+        "sodass"
        ],
        [
         "so"
@@ -468,28 +468,28 @@
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
       "bsp": "Ich hatte Hunger, <b>weil</b> ich drei Teller gegessen habe. → Ich hatte Hunger, <b>sodass</b> ich drei Teller gegessen habe.",
-      "s": "Der Kuchen war so trocken , dass niemand wollte ihn essen .",
+      "s": "Wir haben zu lange geredet , damit das Essen kalt geworden ist .",
       "a": [
-       8
+       6
       ],
-      "fix": "Der Kuchen war so trocken, dass niemand ihn essen wollte.",
+      "fix": "Wir haben zu lange geredet, sodass das Essen kalt geworden ist.",
       "gw": {
-       "uz": "Tekshiring: (1) <b>dass</b> uchun Hauptsatzda <b>so</b> kerak (<b>sehr</b> emas); (2) <b>so …</b> bilan — <b>dass</b>, <b>sodass</b> emas; (3) natija — <b>sodass</b>, sabab — <b>weil</b>; (4) fe’l oxirida. Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
-       "ru": "Проверьте: (1) для <b>dass</b> в Hauptsatz нужно <b>so</b> (не <b>sehr</b>); (2) после <b>so …</b> — <b>dass</b>, а не <b>sodass</b>; (3) следствие — <b>sodass</b>, причина — <b>weil</b>; (4) глагол в конце. Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
+       "uz": "Tekshiring: (1) natija — <b>sodass</b> yoki <b>so …, dass</b>; sabab — <b>weil</b>, maqsad — <b>damit</b>, kutilmagan natija — <b>obwohl</b>; (2) bog‘lovchi <b>dass</b> ikki <b>s</b> bilan yoziladi (<b>das</b> — artikl). Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
+       "ru": "Проверьте: (1) следствие — <b>sodass</b> или <b>so …, dass</b>; причина — <b>weil</b>, цель — <b>damit</b>, уступка — <b>obwohl</b>; (2) союз <b>dass</b> пишется с двумя <b>s</b> (<b>das</b> — артикль). Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
       "bsp": "Ich hatte Hunger, <b>weil</b> ich drei Teller gegessen habe. → Ich hatte Hunger, <b>sodass</b> ich drei Teller gegessen habe.",
-      "s": "Das Brot war sehr alt , dass wir es nicht essen konnten .",
+      "s": "Das Brot war so alt , das wir es nicht essen konnten .",
       "a": [
-       3
+       6
       ],
       "fix": "Das Brot war so alt, dass wir es nicht essen konnten.",
       "gw": {
-       "uz": "Tekshiring: (1) <b>dass</b> uchun Hauptsatzda <b>so</b> kerak (<b>sehr</b> emas); (2) <b>so …</b> bilan — <b>dass</b>, <b>sodass</b> emas; (3) natija — <b>sodass</b>, sabab — <b>weil</b>; (4) fe’l oxirida. Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
-       "ru": "Проверьте: (1) для <b>dass</b> в Hauptsatz нужно <b>so</b> (не <b>sehr</b>); (2) после <b>so …</b> — <b>dass</b>, а не <b>sodass</b>; (3) следствие — <b>sodass</b>, причина — <b>weil</b>; (4) глагол в конце. Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
+       "uz": "Tekshiring: (1) natija — <b>sodass</b> yoki <b>so …, dass</b>; sabab — <b>weil</b>, maqsad — <b>damit</b>, kutilmagan natija — <b>obwohl</b>; (2) bog‘lovchi <b>dass</b> ikki <b>s</b> bilan yoziladi (<b>das</b> — artikl). Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
+       "ru": "Проверьте: (1) следствие — <b>sodass</b> или <b>so …, dass</b>; причина — <b>weil</b>, цель — <b>damit</b>, уступка — <b>obwohl</b>; (2) союз <b>dass</b> пишется с двумя <b>s</b> (<b>das</b> — артикль). Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
       }
      },
      {
@@ -502,22 +502,22 @@
       ],
       "fix": "Ich habe zu viel Salz genommen, sodass die Suppe jetzt nicht mehr schmeckt.",
       "gw": {
-       "uz": "Tekshiring: (1) <b>dass</b> uchun Hauptsatzda <b>so</b> kerak (<b>sehr</b> emas); (2) <b>so …</b> bilan — <b>dass</b>, <b>sodass</b> emas; (3) natija — <b>sodass</b>, sabab — <b>weil</b>; (4) fe’l oxirida. Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
-       "ru": "Проверьте: (1) для <b>dass</b> в Hauptsatz нужно <b>so</b> (не <b>sehr</b>); (2) после <b>so …</b> — <b>dass</b>, а не <b>sodass</b>; (3) следствие — <b>sodass</b>, причина — <b>weil</b>; (4) глагол в конце. Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
+       "uz": "Tekshiring: (1) natija — <b>sodass</b> yoki <b>so …, dass</b>; sabab — <b>weil</b>, maqsad — <b>damit</b>, kutilmagan natija — <b>obwohl</b>; (2) bog‘lovchi <b>dass</b> ikki <b>s</b> bilan yoziladi (<b>das</b> — artikl). Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
+       "ru": "Проверьте: (1) следствие — <b>sodass</b> или <b>so …, dass</b>; причина — <b>weil</b>, цель — <b>damit</b>, уступка — <b>obwohl</b>; (2) союз <b>dass</b> пишется с двумя <b>s</b> (<b>das</b> — артикль). Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
       "bsp": "Ich hatte Hunger, <b>weil</b> ich drei Teller gegessen habe. → Ich hatte Hunger, <b>sodass</b> ich drei Teller gegessen habe.",
-      "s": "Die Soße war so scharf , sodass Anna nichts mehr essen konnte .",
+      "s": "Im Supermarkt gab es keine Zwiebeln mehr , obwohl ich ohne Zwiebeln gekocht habe .",
       "a": [
-       6
+       8
       ],
-      "fix": "Die Soße war so scharf, dass Anna nichts mehr essen konnte.",
+      "fix": "Im Supermarkt gab es keine Zwiebeln mehr, sodass ich ohne Zwiebeln gekocht habe.",
       "gw": {
-       "uz": "Tekshiring: (1) <b>dass</b> uchun Hauptsatzda <b>so</b> kerak (<b>sehr</b> emas); (2) <b>so …</b> bilan — <b>dass</b>, <b>sodass</b> emas; (3) natija — <b>sodass</b>, sabab — <b>weil</b>; (4) fe’l oxirida. Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
-       "ru": "Проверьте: (1) для <b>dass</b> в Hauptsatz нужно <b>so</b> (не <b>sehr</b>); (2) после <b>so …</b> — <b>dass</b>, а не <b>sodass</b>; (3) следствие — <b>sodass</b>, причина — <b>weil</b>; (4) глагол в конце. Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
+       "uz": "Tekshiring: (1) natija — <b>sodass</b> yoki <b>so …, dass</b>; sabab — <b>weil</b>, maqsad — <b>damit</b>, kutilmagan natija — <b>obwohl</b>; (2) bog‘lovchi <b>dass</b> ikki <b>s</b> bilan yoziladi (<b>das</b> — artikl). Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
+       "ru": "Проверьте: (1) следствие — <b>sodass</b> или <b>so …, dass</b>; причина — <b>weil</b>, цель — <b>damit</b>, уступка — <b>obwohl</b>; (2) союз <b>dass</b> пишется с двумя <b>s</b> (<b>das</b> — артикль). Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
       }
      },
      {

@@ -21,8 +21,8 @@
      },
      {
       "t": "info",
-      "h": "<h4>Irreale Bedingung: wenn + Konjunktiv II</h4><table class=\"ex-tb\"><tr><th>Wirklichkeit</th><th>Wunsch / irreal</th></tr><tr><td>Ich habe <b>kein</b> Zimmer mit Balkon.</td><td><b>Wenn</b> ich ein Zimmer mit Balkon <b>hätte</b>, <b>würde</b> ich dort frühstücken.</td></tr><tr><td>Die Wohnung ist zu klein.</td><td><b>Wenn</b> die Wohnung größer <b>wäre</b>, <b>könnten</b> wir eine Party machen.</td></tr><tr><td>Ich wohne nicht in einer WG.</td><td>Ich <b>würde</b> nie allein kochen, <b>wenn</b> ich in einer WG <b>wohnen würde</b>.</td></tr></table><div class=\"ex-sk\"><span>Wenn ich mehr Platz</span><span class=\"v\">hätte,</span><span class=\"v\">würde</span><span>ich eine Katze nehmen</span>.</div><p class=\"ex-note\">wenn-gap — Nebensatz: fe’l oxirida. U birinchi kelsa, asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>. Ikkala gapda ham Konjunktiv II bo‘ladi, haqiqatdagi <b>kein / nicht</b> odatda tushib qoladi.</p>",
-      "ru": "<h4>Irreale Bedingung: wenn + Konjunktiv II</h4><table class=\"ex-tb\"><tr><th>Wirklichkeit</th><th>Wunsch / irreal</th></tr><tr><td>Ich habe <b>kein</b> Zimmer mit Balkon.</td><td><b>Wenn</b> ich ein Zimmer mit Balkon <b>hätte</b>, <b>würde</b> ich dort frühstücken.</td></tr><tr><td>Die Wohnung ist zu klein.</td><td><b>Wenn</b> die Wohnung größer <b>wäre</b>, <b>könnten</b> wir eine Party machen.</td></tr><tr><td>Ich wohne nicht in einer WG.</td><td>Ich <b>würde</b> nie allein kochen, <b>wenn</b> ich in einer WG <b>wohnen würde</b>.</td></tr></table><div class=\"ex-sk\"><span>Wenn ich mehr Platz</span><span class=\"v\">hätte,</span><span class=\"v\">würde</span><span>ich eine Katze nehmen</span>.</div><p class=\"ex-note\">wenn-предложение — Nebensatz: глагол в конце. Если оно стоит первым, главное предложение начинается с глагола: <b>…, würde ich …</b>. В обеих частях — Konjunktiv II, а <b>kein / nicht</b> из реальности обычно исчезает.</p>"
+      "h": "<h4>Irreale Bedingung: wenn + Konjunktiv II</h4><table class=\"ex-tb\"><tr><th>Wirklichkeit</th><th>Wunsch / irreal</th></tr><tr><td>Ich habe <b>kein</b> Zimmer mit Balkon.</td><td><b>Wenn</b> ich ein Zimmer mit Balkon <b>hätte</b>, <b>würde</b> ich dort frühstücken.</td></tr><tr><td>Die Wohnung ist zu klein.</td><td><b>Wenn</b> die Wohnung größer <b>wäre</b>, <b>könnten</b> wir eine Party machen.</td></tr><tr><td>Ich wohne nicht in einer WG.</td><td>Ich <b>würde</b> nie allein kochen, <b>wenn</b> ich in einer WG <b>wohnen würde</b>.</td></tr></table><div class=\"ex-sk\"><span>Wenn ich mehr Platz</span><span class=\"v\">hätte,</span><span class=\"v\">würde</span><span>ich mir eine Katze holen</span>.</div><p class=\"ex-note\">wenn-gap — Nebensatz: fe’l oxirida. U birinchi kelsa, asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>. Ikkala gapda ham Konjunktiv II bo‘ladi, haqiqatdagi <b>kein / nicht</b> odatda tushib qoladi.</p>",
+      "ru": "<h4>Irreale Bedingung: wenn + Konjunktiv II</h4><table class=\"ex-tb\"><tr><th>Wirklichkeit</th><th>Wunsch / irreal</th></tr><tr><td>Ich habe <b>kein</b> Zimmer mit Balkon.</td><td><b>Wenn</b> ich ein Zimmer mit Balkon <b>hätte</b>, <b>würde</b> ich dort frühstücken.</td></tr><tr><td>Die Wohnung ist zu klein.</td><td><b>Wenn</b> die Wohnung größer <b>wäre</b>, <b>könnten</b> wir eine Party machen.</td></tr><tr><td>Ich wohne nicht in einer WG.</td><td>Ich <b>würde</b> nie allein kochen, <b>wenn</b> ich in einer WG <b>wohnen würde</b>.</td></tr></table><div class=\"ex-sk\"><span>Wenn ich mehr Platz</span><span class=\"v\">hätte,</span><span class=\"v\">würde</span><span>ich mir eine Katze holen</span>.</div><p class=\"ex-note\">wenn-предложение — Nebensatz: глагол в конце. Если оно стоит первым, главное предложение начинается с глагола: <b>…, würde ich …</b>. В обеих частях — Konjunktiv II, а <b>kein / nicht</b> из реальности обычно исчезает.</p>"
      },
      {
       "t": "mark",
@@ -311,16 +311,18 @@
      {
       "t": "order",
       "h": "Wirklichkeit → Wunsch: Schreiben Sie einen wenn-Satz.",
-      "q": "Ich habe kein Auto. Ich kann nicht zum See fahren.",
+      "q": "Ich habe kein Auto. Wir können nicht zum See fahren.",
       "w": [
-       "Wenn ich",
+       "Wenn",
+       "ich",
        "ein Auto",
        "hätte,",
-       "könnte ich",
+       "könnten",
+       "wir",
        "zum See",
        "fahren"
       ],
-      "a": "Wenn ich ein Auto hätte, könnte ich zum See fahren.",
+      "a": "Wenn ich ein Auto hätte, könnten wir zum See fahren.",
       "alt": [],
       "gw": {
        "uz": "Haqiqatni istakka aylantiring: <b>kein / nicht</b> tushib qoladi yoki ma’no teskari bo‘ladi (zu klein → <b>größer</b>), fe’llar Konjunktiv II ga o‘tadi. wenn-gapda fe’l oxirida, verguldan keyin asosiy gap fe’l bilan boshlanadi. Asosiy gap oldin kelsa: <b>Ich würde …, wenn …</b>",
@@ -397,22 +399,20 @@
      {
       "t": "order",
       "h": "Wirklichkeit → Wunsch: Schreiben Sie einen wenn-Satz.",
-      "q": "Du hörst so laut Musik. Ich kann nicht schlafen.",
+      "q": "Du machst deine Musik nicht leiser. Ich kann nicht schlafen.",
       "w": [
        "Wenn",
        "du",
-       "nicht so laut",
-       "Musik",
-       "hören",
+       "deine Musik",
+       "leiser",
+       "machen",
        "würdest,",
        "könnte",
        "ich",
        "schlafen"
       ],
-      "a": "Wenn du nicht so laut Musik hören würdest, könnte ich schlafen.",
-      "alt": [
-       "Wenn du Musik nicht so laut hören würdest, könnte ich schlafen."
-      ],
+      "a": "Wenn du deine Musik leiser machen würdest, könnte ich schlafen.",
+      "alt": [],
       "gw": {
        "uz": "Haqiqatni istakka aylantiring: <b>kein / nicht</b> tushib qoladi yoki ma’no teskari bo‘ladi (zu klein → <b>größer</b>), fe’llar Konjunktiv II ga o‘tadi. wenn-gapda fe’l oxirida, verguldan keyin asosiy gap fe’l bilan boshlanadi. Asosiy gap oldin kelsa: <b>Ich würde …, wenn …</b>",
        "ru": "Превратите реальность в желание: <b>kein / nicht</b> исчезает или смысл меняется на противоположный (zu klein → <b>größer</b>), глаголы переходят в Konjunktiv II. В wenn-предложении глагол в конце, после запятой главное начинается с глагола. Если главное стоит первым: <b>Ich würde …, wenn …</b>"
@@ -421,18 +421,20 @@
      {
       "t": "order",
       "h": "Wirklichkeit → Wunsch: Schreiben Sie einen wenn-Satz.",
-      "q": "Ich wohne nicht in der Nähe. Ich besuche dich nicht oft.",
+      "q": "Meine Freundin wohnt nicht in der Nähe. Wir sehen uns nicht oft.",
       "w": [
        "Wenn",
-       "ich",
+       "meine Freundin",
        "in der Nähe",
-       "wohnen würde,",
-       "würde ich",
-       "dich",
+       "wohnen",
+       "würde,",
+       "würden",
+       "wir",
+       "uns",
        "öfter",
-       "besuchen"
+       "sehen"
       ],
-      "a": "Wenn ich in der Nähe wohnen würde, würde ich dich öfter besuchen.",
+      "a": "Wenn meine Freundin in der Nähe wohnen würde, würden wir uns öfter sehen.",
       "alt": [],
       "gw": {
        "uz": "Haqiqatni istakka aylantiring: <b>kein / nicht</b> tushib qoladi yoki ma’no teskari bo‘ladi (zu klein → <b>größer</b>), fe’llar Konjunktiv II ga o‘tadi. wenn-gapda fe’l oxirida, verguldan keyin asosiy gap fe’l bilan boshlanadi. Asosiy gap oldin kelsa: <b>Ich würde …, wenn …</b>",
@@ -449,34 +451,34 @@
        4
       ],
       "gw": {
-       "uz": "Tekshiring: (1) ikkala gapda Konjunktiv II bormi — <b>ist / habe</b> emas, <b>wäre / hätte</b>; (2) wenn-gapda fe’l oxirida; (3) wenn-gapdan keyin asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>; (4) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
-       "ru": "Проверьте: (1) есть ли Konjunktiv II в обеих частях — не <b>ist / habe</b>, а <b>wäre / hätte</b>; (2) в wenn-предложении глагол в конце; (3) после wenn-предложения главное начинается с глагола: <b>…, würde ich …</b>; (4) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
+       "uz": "Tekshiring: (1) ikkala gapda ham Konjunktiv II bo‘lsin — <b>ist / habe / werde</b> emas, <b>wäre / hätte / würde</b>; (2) umlautga e’tibor bering: <b>hatte</b> (Präteritum) ≠ <b>hätte</b> (Konjunktiv II); (3) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
+       "ru": "Проверьте: (1) в обеих частях должен быть Konjunktiv II — не <b>ist / habe / werde</b>, а <b>wäre / hätte / würde</b>; (2) следите за умлаутом: <b>hatte</b> (Präteritum) ≠ <b>hätte</b> (Konjunktiv II); (3) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Wenn ich hätte einen Balkon , würde ich dort frühstücken .",
+      "s": "Wenn ich einen Balkon hatte , würde ich dort frühstücken .",
       "fix": "Wenn ich einen Balkon hätte, würde ich dort frühstücken.",
       "a": [
-       2
+       4
       ],
       "gw": {
-       "uz": "Tekshiring: (1) ikkala gapda Konjunktiv II bormi — <b>ist / habe</b> emas, <b>wäre / hätte</b>; (2) wenn-gapda fe’l oxirida; (3) wenn-gapdan keyin asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>; (4) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
-       "ru": "Проверьте: (1) есть ли Konjunktiv II в обеих частях — не <b>ist / habe</b>, а <b>wäre / hätte</b>; (2) в wenn-предложении глагол в конце; (3) после wenn-предложения главное начинается с глагола: <b>…, würde ich …</b>; (4) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
+       "uz": "Tekshiring: (1) ikkala gapda ham Konjunktiv II bo‘lsin — <b>ist / habe / werde</b> emas, <b>wäre / hätte / würde</b>; (2) umlautga e’tibor bering: <b>hatte</b> (Präteritum) ≠ <b>hätte</b> (Konjunktiv II); (3) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
+       "ru": "Проверьте: (1) в обеих частях должен быть Konjunktiv II — не <b>ist / habe / werde</b>, а <b>wäre / hätte / würde</b>; (2) следите за умлаутом: <b>hatte</b> (Präteritum) ≠ <b>hätte</b> (Konjunktiv II); (3) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Wenn das Zimmer billiger wäre , ich würde es sofort mieten .",
+      "s": "Wenn das Zimmer billiger wäre , werde ich es sofort mieten .",
       "fix": "Wenn das Zimmer billiger wäre, würde ich es sofort mieten.",
       "a": [
        6
       ],
       "gw": {
-       "uz": "Tekshiring: (1) ikkala gapda Konjunktiv II bormi — <b>ist / habe</b> emas, <b>wäre / hätte</b>; (2) wenn-gapda fe’l oxirida; (3) wenn-gapdan keyin asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>; (4) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
-       "ru": "Проверьте: (1) есть ли Konjunktiv II в обеих частях — не <b>ist / habe</b>, а <b>wäre / hätte</b>; (2) в wenn-предложении глагол в конце; (3) после wenn-предложения главное начинается с глагола: <b>…, würde ich …</b>; (4) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
+       "uz": "Tekshiring: (1) ikkala gapda ham Konjunktiv II bo‘lsin — <b>ist / habe / werde</b> emas, <b>wäre / hätte / würde</b>; (2) umlautga e’tibor bering: <b>hatte</b> (Präteritum) ≠ <b>hätte</b> (Konjunktiv II); (3) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
+       "ru": "Проверьте: (1) в обеих частях должен быть Konjunktiv II — не <b>ist / habe / werde</b>, а <b>wäre / hätte / würde</b>; (2) следите за умлаутом: <b>hatte</b> (Präteritum) ≠ <b>hätte</b> (Konjunktiv II); (3) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
       }
      },
      {
@@ -488,8 +490,8 @@
        5
       ],
       "gw": {
-       "uz": "Tekshiring: (1) ikkala gapda Konjunktiv II bormi — <b>ist / habe</b> emas, <b>wäre / hätte</b>; (2) wenn-gapda fe’l oxirida; (3) wenn-gapdan keyin asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>; (4) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
-       "ru": "Проверьте: (1) есть ли Konjunktiv II в обеих частях — не <b>ist / habe</b>, а <b>wäre / hätte</b>; (2) в wenn-предложении глагол в конце; (3) после wenn-предложения главное начинается с глагола: <b>…, würde ich …</b>; (4) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
+       "uz": "Tekshiring: (1) ikkala gapda ham Konjunktiv II bo‘lsin — <b>ist / habe / werde</b> emas, <b>wäre / hätte / würde</b>; (2) umlautga e’tibor bering: <b>hatte</b> (Präteritum) ≠ <b>hätte</b> (Konjunktiv II); (3) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
+       "ru": "Проверьте: (1) в обеих частях должен быть Konjunktiv II — не <b>ist / habe / werde</b>, а <b>wäre / hätte / würde</b>; (2) следите за умлаутом: <b>hatte</b> (Präteritum) ≠ <b>hätte</b> (Konjunktiv II); (3) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
       }
      },
      {

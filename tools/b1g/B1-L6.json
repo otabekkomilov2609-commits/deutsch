@@ -169,7 +169,7 @@
      {
       "t": "mc",
       "h": "Was passt?",
-      "q": "Nodir hat jetzt keine Angst mehr vor Hunden, ___ er jeden Tag mit dem Hund von seiner Nachbarin spazieren geht.",
+      "q": "Nodir hat jetzt keine Angst mehr vor Hunden, ___ er jeden Tag mit dem Hund seiner Nachbarin spazieren geht.",
       "o": [
        "obwohl",
        "trotzdem",
@@ -270,7 +270,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie *obwohl* oder *trotzdem*.",
-      "s": "Mein Großvater ist schon 65. ___ lernt er jetzt Klavier.",
+      "s": "Mein Großvater ist schon 75. ___ lernt er jetzt Klavier.",
       "a": [
        [
         "Trotzdem"
@@ -284,7 +284,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie *obwohl* oder *trotzdem*.",
-      "s": "Mein Neuanfang in Leipzig\nVor einem Jahr bin ich zum Studium nach Leipzig gezogen. ___ ich am Anfang kaum Deutsch verstanden habe, habe ich schnell Freunde gefunden.\nDer Winter war lang und dunkel. ___ war ich fast nie traurig.\nMein Tipp: Sprecht viel, ___ ihr noch Fehler macht!",
+      "s": "Mein Neuanfang in Leipzig\nVor einem Jahr bin ich zum Studium nach Leipzig gezogen. ___ ich am Anfang kaum Deutsch verstanden habe, habe ich schnell Freunde gefunden.\nDer Winter war lang und dunkel. ___ war ich fast nie traurig.\nHeute spreche ich jeden Tag Deutsch, ___ ich noch viele Fehler mache.",
       "a": [
        [
         "Obwohl"
@@ -479,41 +479,41 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "bsp": "Obwohl es regnet, wir gehen spazieren. → <b>wir</b> → Obwohl es regnet, gehen wir spazieren.",
-      "s": "Obwohl der Weg weit ist , Laylo fährt jeden Tag mit dem Fahrrad zur Uni .",
-      "fix": "Obwohl der Weg weit ist, fährt Laylo jeden Tag mit dem Fahrrad zur Uni.",
-      "a": [
-       6
-      ],
-      "gw": {
-       "uz": "Tipik xatolar: (1) obwohl-gapda fe’l oxirida emas; (2) obwohl-gapdan yoki <b>Trotzdem</b>dan keyin ega fe’ldan oldin turibdi — fe’l birinchi keladi; (3) mantiq: sabab bo‘lsa — <b>weil / deshalb</b>, qarshilik bo‘lsa — <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b>",
-       "ru": "Типичные ошибки: (1) в obwohl-предложении глагол не в конце; (2) после obwohl-предложения или после <b>Trotzdem</b> подлежащее стоит перед глаголом — глагол идёт первым; (3) логика: причина — <b>weil / deshalb</b>, противоречие — <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b>"
-      }
-     },
-     {
-      "t": "mark",
-      "h": "Markieren Sie den Fehler.",
-      "s": "Ich habe auf der Party gesungen , obwohl ich war sehr nervös .",
-      "fix": "Ich habe auf der Party gesungen, obwohl ich sehr nervös war.",
-      "a": [
-       9
-      ],
-      "gw": {
-       "uz": "Tipik xatolar: (1) obwohl-gapda fe’l oxirida emas; (2) obwohl-gapdan yoki <b>Trotzdem</b>dan keyin ega fe’ldan oldin turibdi — fe’l birinchi keladi; (3) mantiq: sabab bo‘lsa — <b>weil / deshalb</b>, qarshilik bo‘lsa — <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b>",
-       "ru": "Типичные ошибки: (1) в obwohl-предложении глагол не в конце; (2) после obwohl-предложения или после <b>Trotzdem</b> подлежащее стоит перед глаголом — глагол идёт первым; (3) логика: причина — <b>weil / deshalb</b>, противоречие — <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b>"
-      }
-     },
-     {
-      "t": "mark",
-      "h": "Markieren Sie den Fehler.",
-      "s": "Es war schon dunkel . Trotzdem wir sind in den Park gegangen .",
+      "bsp": "Ich lerne weiter, trotzdem ich müde bin. → <b>trotzdem</b> → Ich lerne weiter, <b>obwohl</b> ich müde bin.",
+      "s": "Es war schon dunkel . Obwohl sind wir in den Park gegangen .",
       "fix": "Es war schon dunkel. Trotzdem sind wir in den Park gegangen.",
       "a": [
-       6
+       5
       ],
       "gw": {
-       "uz": "Tipik xatolar: (1) obwohl-gapda fe’l oxirida emas; (2) obwohl-gapdan yoki <b>Trotzdem</b>dan keyin ega fe’ldan oldin turibdi — fe’l birinchi keladi; (3) mantiq: sabab bo‘lsa — <b>weil / deshalb</b>, qarshilik bo‘lsa — <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b>",
-       "ru": "Типичные ошибки: (1) в obwohl-предложении глагол не в конце; (2) после obwohl-предложения или после <b>Trotzdem</b> подлежащее стоит перед глаголом — глагол идёт первым; (3) логика: причина — <b>weil / deshalb</b>, противоречие — <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b>"
+       "uz": "Tipik xatolar: (1) shakl: fe’l oxirida → <b>obwohl</b> (Nebensatz); fe’l darhol keyin → <b>trotzdem</b> (Hauptsatz). «trotzdem es regnet» yoki «Obwohl gehen wir» — xato. (2) mantiq: sabab va kutilgan natija → <b>weil / deshalb</b>, qarshilikka qaramay → <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b> · <b>Es war kalt. Trotzdem sind wir geschwommen.</b>",
+       "ru": "Типичные ошибки: (1) форма: глагол в конце → <b>obwohl</b> (Nebensatz); глагол сразу после → <b>trotzdem</b> (Hauptsatz). «trotzdem es regnet» или «Obwohl gehen wir» — ошибка. (2) логика: причина и ожидаемый результат → <b>weil / deshalb</b>, вопреки чему-то → <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b> · <b>Es war kalt. Trotzdem sind wir geschwommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Laylo fährt jeden Tag mit dem Fahrrad zur Uni , trotzdem der Weg weit ist .",
+      "fix": "Laylo fährt jeden Tag mit dem Fahrrad zur Uni, obwohl der Weg weit ist.",
+      "a": [
+       10
+      ],
+      "gw": {
+       "uz": "Tipik xatolar: (1) shakl: fe’l oxirida → <b>obwohl</b> (Nebensatz); fe’l darhol keyin → <b>trotzdem</b> (Hauptsatz). «trotzdem es regnet» yoki «Obwohl gehen wir» — xato. (2) mantiq: sabab va kutilgan natija → <b>weil / deshalb</b>, qarshilikka qaramay → <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b> · <b>Es war kalt. Trotzdem sind wir geschwommen.</b>",
+       "ru": "Типичные ошибки: (1) форма: глагол в конце → <b>obwohl</b> (Nebensatz); глагол сразу после → <b>trotzdem</b> (Hauptsatz). «trotzdem es regnet» или «Obwohl gehen wir» — ошибка. (2) логика: причина и ожидаемый результат → <b>weil / deshalb</b>, вопреки чему-то → <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b> · <b>Es war kalt. Trotzdem sind wir geschwommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Wir sind spazieren gegangen , weil es stark geregnet hat .",
+      "fix": "Wir sind spazieren gegangen, obwohl es stark geregnet hat.",
+      "a": [
+       5
+      ],
+      "gw": {
+       "uz": "Tipik xatolar: (1) shakl: fe’l oxirida → <b>obwohl</b> (Nebensatz); fe’l darhol keyin → <b>trotzdem</b> (Hauptsatz). «trotzdem es regnet» yoki «Obwohl gehen wir» — xato. (2) mantiq: sabab va kutilgan natija → <b>weil / deshalb</b>, qarshilikka qaramay → <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b> · <b>Es war kalt. Trotzdem sind wir geschwommen.</b>",
+       "ru": "Типичные ошибки: (1) форма: глагол в конце → <b>obwohl</b> (Nebensatz); глагол сразу после → <b>trotzdem</b> (Hauptsatz). «trotzdem es regnet» или «Obwohl gehen wir» — ошибка. (2) логика: причина и ожидаемый результат → <b>weil / deshalb</b>, вопреки чему-то → <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b> · <b>Es war kalt. Trotzdem sind wir geschwommen.</b>"
       }
      },
      {
@@ -525,8 +525,8 @@
        8
       ],
       "gw": {
-       "uz": "Tipik xatolar: (1) obwohl-gapda fe’l oxirida emas; (2) obwohl-gapdan yoki <b>Trotzdem</b>dan keyin ega fe’ldan oldin turibdi — fe’l birinchi keladi; (3) mantiq: sabab bo‘lsa — <b>weil / deshalb</b>, qarshilik bo‘lsa — <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b>",
-       "ru": "Типичные ошибки: (1) в obwohl-предложении глагол не в конце; (2) после obwohl-предложения или после <b>Trotzdem</b> подлежащее стоит перед глаголом — глагол идёт первым; (3) логика: причина — <b>weil / deshalb</b>, противоречие — <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b>"
+       "uz": "Tipik xatolar: (1) shakl: fe’l oxirida → <b>obwohl</b> (Nebensatz); fe’l darhol keyin → <b>trotzdem</b> (Hauptsatz). «trotzdem es regnet» yoki «Obwohl gehen wir» — xato. (2) mantiq: sabab va kutilgan natija → <b>weil / deshalb</b>, qarshilikka qaramay → <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b> · <b>Es war kalt. Trotzdem sind wir geschwommen.</b>",
+       "ru": "Типичные ошибки: (1) форма: глагол в конце → <b>obwohl</b> (Nebensatz); глагол сразу после → <b>trotzdem</b> (Hauptsatz). «trotzdem es regnet» или «Obwohl gehen wir» — ошибка. (2) логика: причина и ожидаемый результат → <b>weil / deshalb</b>, вопреки чему-то → <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b> · <b>Es war kalt. Trotzdem sind wir geschwommen.</b>"
       }
      },
      {
@@ -538,8 +538,8 @@
        6
       ],
       "gw": {
-       "uz": "Tipik xatolar: (1) obwohl-gapda fe’l oxirida emas; (2) obwohl-gapdan yoki <b>Trotzdem</b>dan keyin ega fe’ldan oldin turibdi — fe’l birinchi keladi; (3) mantiq: sabab bo‘lsa — <b>weil / deshalb</b>, qarshilik bo‘lsa — <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b>",
-       "ru": "Типичные ошибки: (1) в obwohl-предложении глагол не в конце; (2) после obwohl-предложения или после <b>Trotzdem</b> подлежащее стоит перед глаголом — глагол идёт первым; (3) логика: причина — <b>weil / deshalb</b>, противоречие — <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b>"
+       "uz": "Tipik xatolar: (1) shakl: fe’l oxirida → <b>obwohl</b> (Nebensatz); fe’l darhol keyin → <b>trotzdem</b> (Hauptsatz). «trotzdem es regnet» yoki «Obwohl gehen wir» — xato. (2) mantiq: sabab va kutilgan natija → <b>weil / deshalb</b>, qarshilikka qaramay → <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b> · <b>Es war kalt. Trotzdem sind wir geschwommen.</b>",
+       "ru": "Типичные ошибки: (1) форма: глагол в конце → <b>obwohl</b> (Nebensatz); глагол сразу после → <b>trotzdem</b> (Hauptsatz). «trotzdem es regnet» или «Obwohl gehen wir» — ошибка. (2) логика: причина и ожидаемый результат → <b>weil / deshalb</b>, вопреки чему-то → <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b> · <b>Es war kalt. Trotzdem sind wir geschwommen.</b>"
       }
      }
     ]

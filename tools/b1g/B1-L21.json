@@ -125,7 +125,7 @@
      {
       "t": "mc",
       "h": "Was passt?",
-      "q": "Die Noten können ab Freitag online gesehen ___.",
+      "q": "Die Aufsätze können auch per E-Mail geschickt ___.",
       "o": [
        "wird",
        "worden",
@@ -361,7 +361,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie den Nebensatz im Passiv.",
-      "s": "Es ist wichtig, dass im Deutschunterricht viel ___ ___ ___. (sollen, sprechen)",
+      "s": "Herr Weber meint, dass im Deutschunterricht viel ___ ___ ___. (sollen, sprechen)",
       "a": [
        [
         "gesprochen"
@@ -593,8 +593,8 @@
       ],
       "fix": "Die Hausaufgaben müssen bis morgen gemacht werden.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b>; Partizip II o‘rniga Infinitiv; Nebensatzda Modalverb oxirida emas. Misol: <b>…, dass der Test verschoben werden muss.</b>",
-       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> вместо <b>werden</b>; инфинитив вместо Partizip II; в придаточном модальный глагол не в конце. Пример: <b>…, dass der Test verschoben werden muss.</b>"
+       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b> yoki <b>worden</b>; Partizip II o‘rniga Infinitiv. Misol: <b>…, dass der Test verschoben werden muss.</b>",
+       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> или <b>worden</b> вместо <b>werden</b>; инфинитив вместо Partizip II. Пример: <b>…, dass der Test verschoben werden muss.</b>"
       }
      },
      {
@@ -606,8 +606,8 @@
       ],
       "fix": "Kann das Diktat morgen geschrieben werden?",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b>; Partizip II o‘rniga Infinitiv; Nebensatzda Modalverb oxirida emas. Misol: <b>…, dass der Test verschoben werden muss.</b>",
-       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> вместо <b>werden</b>; инфинитив вместо Partizip II; в придаточном модальный глагол не в конце. Пример: <b>…, dass der Test verschoben werden muss.</b>"
+       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b> yoki <b>worden</b>; Partizip II o‘rniga Infinitiv. Misol: <b>…, dass der Test verschoben werden muss.</b>",
+       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> или <b>worden</b> вместо <b>werden</b>; инфинитив вместо Partizip II. Пример: <b>…, dass der Test verschoben werden muss.</b>"
       }
      },
      {
@@ -619,22 +619,21 @@
       ],
       "fix": "Im Unterricht dürfen keine Handys benutzt werden.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b>; Partizip II o‘rniga Infinitiv; Nebensatzda Modalverb oxirida emas. Misol: <b>…, dass der Test verschoben werden muss.</b>",
-       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> вместо <b>werden</b>; инфинитив вместо Partizip II; в придаточном модальный глагол не в конце. Пример: <b>…, dass der Test verschoben werden muss.</b>"
+       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b> yoki <b>worden</b>; Partizip II o‘rniga Infinitiv. Misol: <b>…, dass der Test verschoben werden muss.</b>",
+       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> или <b>worden</b> вместо <b>werden</b>; инфинитив вместо Partizip II. Пример: <b>…, dass der Test verschoben werden muss.</b>"
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Ich glaube , dass der Aufsatz bis Freitag abgegeben muss werden .",
+      "s": "Ich glaube , dass der Aufsatz bis Freitag abgegeben worden muss .",
       "a": [
-       9,
-       10
+       9
       ],
       "fix": "Ich glaube, dass der Aufsatz bis Freitag abgegeben werden muss.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b>; Partizip II o‘rniga Infinitiv; Nebensatzda Modalverb oxirida emas. Misol: <b>…, dass der Test verschoben werden muss.</b>",
-       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> вместо <b>werden</b>; инфинитив вместо Partizip II; в придаточном модальный глагол не в конце. Пример: <b>…, dass der Test verschoben werden muss.</b>"
+       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b> yoki <b>worden</b>; Partizip II o‘rniga Infinitiv. Misol: <b>…, dass der Test verschoben werden muss.</b>",
+       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> или <b>worden</b> вместо <b>werden</b>; инфинитив вместо Partizip II. Пример: <b>…, dass der Test verschoben werden muss.</b>"
       }
      }
     ]

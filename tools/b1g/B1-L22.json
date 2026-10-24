@@ -388,7 +388,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie *hätte*, *hätten*, *wäre* oder *wären*.",
-      "s": "Forum: Mein erstes Mal wählen\nTimur: Gestern habe ich zum ersten Mal gewählt!\nIch war so aufgeregt, als ob ich eine große Prüfung ___.\nIm Wahllokal haben mich alle angeschaut, als ob ich etwas falsch gemacht ___.\nAber danach hatte ich das Gefühl, als ob meine Stimme wirklich wichtig ___.",
+      "s": "Forum: Mein erstes Mal wählen\nTimur: Gestern habe ich zum ersten Mal gewählt!\nIch war so aufgeregt, als ob ich einen Preis gewonnen ___.\nIm Wahllokal haben mich alle angeschaut, als ob ich etwas falsch gemacht ___.\nAber danach war ich so stolz, als ob ich selbst Präsident geworden ___.",
       "a": [
        [
         "hätte"
@@ -532,19 +532,18 @@
      {
       "t": "order",
       "h": "Verbinden Sie die Sätze mit *als ob*.",
-      "q": "Mein Opa erzählt von der ersten Wahl. – Er ist selbst Kandidat gewesen. (Das stimmt nicht.)",
+      "q": "Mein Opa erzählt von seiner ersten Wahl. – Er ist selbst Kandidat gewesen. (Das stimmt nicht.)",
       "w": [
        "Mein Opa",
        "erzählt",
-       "von der ersten Wahl,",
+       "von seiner ersten Wahl,",
        "als ob",
        "er",
-       "selbst",
-       "Kandidat",
+       "selbst Kandidat",
        "gewesen",
        "wäre"
       ],
-      "a": "Mein Opa erzählt von der ersten Wahl, als ob er selbst Kandidat gewesen wäre.",
+      "a": "Mein Opa erzählt von seiner ersten Wahl, als ob er selbst Kandidat gewesen wäre.",
       "alt": [],
       "gw": {
        "uz": "Birinchi gap o‘zgarmaydi, keyin vergul va <b>als ob</b>. Ikkinchi gapdagi fe’l Konjunktiv II ga o‘tadi va oxirga boradi: ist → <b>wäre</b>, hat → <b>hätte</b>, hat gewonnen → <b>gewonnen hätte</b>. Misol: <b>Sie lacht, als ob sie keine Sorgen hätte.</b>",
@@ -554,15 +553,15 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "bsp": "Er tut so, als ob er wäre krank. → <b>wäre</b> ✗ → als ob er krank <b>wäre</b>",
-      "s": "Sie tut so , als ob sie wäre die Chefin der Partei .",
+      "bsp": "Er tut so, als ob er krank war. → <b>war</b> ✗ → als ob er krank <b>wäre</b>",
+      "s": "Die Kandidatin redet , als ob sie schon viel Erfahrung hatte .",
       "a": [
-       7
+       10
       ],
-      "fix": "Sie tut so, als ob sie die Chefin der Partei wäre.",
+      "fix": "Die Kandidatin redet, als ob sie schon viel Erfahrung hätte.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: fe’l oxirida emas (<b>als ob er wäre …</b> ✗); Konjunktiv II egaga mos emas (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); hätte/wäre adashtirilgan (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>).",
-       "ru": "Частые ошибки: глагол не в конце (<b>als ob er wäre …</b> ✗); Konjunktiv II не согласован (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); перепутаны hätte/wäre (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>)."
+       "uz": "Tez-tez uchraydigan xatolar: umlaut yo‘q — bu Indikativ (<b>hatte</b> ✗ → <b>hätte</b>, <b>war</b> ✗ → <b>wäre</b>); Konjunktiv II egaga mos emas (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); hätte/wäre adashtirilgan (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>).",
+       "ru": "Частые ошибки: нет умлаута — это Indikativ (<b>hatte</b> ✗ → <b>hätte</b>, <b>war</b> ✗ → <b>wäre</b>); Konjunktiv II не согласован (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); перепутаны hätte/wäre (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>)."
       }
      },
      {
@@ -574,8 +573,8 @@
       ],
       "fix": "Ihr redet, als ob ihr keine Zeit hättet.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: fe’l oxirida emas (<b>als ob er wäre …</b> ✗); Konjunktiv II egaga mos emas (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); hätte/wäre adashtirilgan (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>).",
-       "ru": "Частые ошибки: глагол не в конце (<b>als ob er wäre …</b> ✗); Konjunktiv II не согласован (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); перепутаны hätte/wäre (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>)."
+       "uz": "Tez-tez uchraydigan xatolar: umlaut yo‘q — bu Indikativ (<b>hatte</b> ✗ → <b>hätte</b>, <b>war</b> ✗ → <b>wäre</b>); Konjunktiv II egaga mos emas (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); hätte/wäre adashtirilgan (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>).",
+       "ru": "Частые ошибки: нет умлаута — это Indikativ (<b>hatte</b> ✗ → <b>hätte</b>, <b>war</b> ✗ → <b>wäre</b>); Konjunktiv II не согласован (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); перепутаны hätte/wäre (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>)."
       }
      },
      {
@@ -587,8 +586,8 @@
       ],
       "fix": "Der Kandidat lacht, als ob er die Wahl schon gewonnen hätte.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: fe’l oxirida emas (<b>als ob er wäre …</b> ✗); Konjunktiv II egaga mos emas (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); hätte/wäre adashtirilgan (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>).",
-       "ru": "Частые ошибки: глагол не в конце (<b>als ob er wäre …</b> ✗); Konjunktiv II не согласован (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); перепутаны hätte/wäre (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>)."
+       "uz": "Tez-tez uchraydigan xatolar: umlaut yo‘q — bu Indikativ (<b>hatte</b> ✗ → <b>hätte</b>, <b>war</b> ✗ → <b>wäre</b>); Konjunktiv II egaga mos emas (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); hätte/wäre adashtirilgan (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>).",
+       "ru": "Частые ошибки: нет умлаута — это Indikativ (<b>hatte</b> ✗ → <b>hätte</b>, <b>war</b> ✗ → <b>wäre</b>); Konjunktiv II не согласован (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); перепутаны hätte/wäre (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>)."
       }
      },
      {
@@ -600,8 +599,8 @@
       ],
       "fix": "Mein Vater spricht, als ob er nie jung gewesen wäre.",
       "gw": {
-       "uz": "Tez-tez uchraydigan xatolar: fe’l oxirida emas (<b>als ob er wäre …</b> ✗); Konjunktiv II egaga mos emas (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); hätte/wäre adashtirilgan (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>).",
-       "ru": "Частые ошибки: глагол не в конце (<b>als ob er wäre …</b> ✗); Konjunktiv II не согласован (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); перепутаны hätte/wäre (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>)."
+       "uz": "Tez-tez uchraydigan xatolar: umlaut yo‘q — bu Indikativ (<b>hatte</b> ✗ → <b>hätte</b>, <b>war</b> ✗ → <b>wäre</b>); Konjunktiv II egaga mos emas (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); hätte/wäre adashtirilgan (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>).",
+       "ru": "Частые ошибки: нет умлаута — это Indikativ (<b>hatte</b> ✗ → <b>hätte</b>, <b>war</b> ✗ → <b>wäre</b>); Konjunktiv II не согласован (<b>ihr hätte</b> ✗ → <b>ihr hättet</b>); перепутаны hätte/wäre (<b>gewonnen wäre</b> ✗ → <b>gewonnen hätte</b>; <b>gewesen hätte</b> ✗ → <b>gewesen wäre</b>)."
       }
      }
     ]

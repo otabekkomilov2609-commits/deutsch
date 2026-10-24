@@ -200,8 +200,8 @@
      },
      {
       "t": "gap",
-      "h": "Ergänzen Sie das Verb – mit oder ohne „zu“.",
-      "bsp": "Es ist schön, Freunde ___. (treffen) → <b>zu treffen</b>",
+      "h": "Ergänzen Sie das Verb: mit oder ohne zu?",
+      "bsp": "Es ist schön, Freunde ___. (treffen) → <b>zu treffen</b> · Ich will Freunde ___. (treffen) → <b>treffen</b>",
       "s": "Es ist nicht schwer, Müll ___. (trennen)",
       "a": [
        [
@@ -215,7 +215,7 @@
      },
      {
       "t": "gap",
-      "h": "Ergänzen Sie das Verb – mit oder ohne „zu“.",
+      "h": "Ergänzen Sie das Verb: mit oder ohne zu?",
       "s": "Ich versuche, jeden Tag mit dem Fahrrad zur Uni ___. (fahren)",
       "a": [
        [
@@ -229,7 +229,7 @@
      },
      {
       "t": "gap",
-      "h": "Ergänzen Sie das Verb – mit oder ohne „zu“.",
+      "h": "Ergänzen Sie das Verb: mit oder ohne zu?",
       "s": "Meine Eltern wollen am Sonntag im Park Bäume ___. (pflanzen)",
       "a": [
        [
@@ -243,7 +243,7 @@
      },
      {
       "t": "gap",
-      "h": "Ergänzen Sie das Verb – mit oder ohne „zu“.",
+      "h": "Ergänzen Sie das Verb: mit oder ohne zu?",
       "s": "Vergiss nicht, das Licht ___! (ausmachen)",
       "a": [
        [
@@ -257,7 +257,7 @@
      },
      {
       "t": "gap",
-      "h": "Ergänzen Sie das Verb – mit oder ohne „zu“.",
+      "h": "Ergänzen Sie das Verb: mit oder ohne zu?",
       "s": "Viele Bürger haben keine Zeit, sich über Politik ___. (informieren)",
       "a": [
        [
@@ -271,7 +271,7 @@
      },
      {
       "t": "gap",
-      "h": "Ergänzen Sie das Verb – mit oder ohne „zu“.",
+      "h": "Ergänzen Sie das Verb: mit oder ohne zu?",
       "s": "Ich habe vor, nach der Schule ein Freiwilliges Soziales Jahr ___. (machen)",
       "a": [
        [
@@ -285,7 +285,7 @@
      },
      {
       "t": "gap",
-      "h": "Ergänzen Sie das Verb – mit oder ohne „zu“.",
+      "h": "Ergänzen Sie das Verb: mit oder ohne zu?",
       "s": "Forum: Soziales Pflichtjahr – ja oder nein?\nSevara: Ich finde die Idee gut. Es ist wichtig, anderen Menschen ___ (helfen).\nIch habe auch schon angefangen, einmal pro Woche im Altenheim ___ (vorlesen).\nTimur: Ich bin dagegen. Junge Leute sollen selbst ___ (entscheiden), was sie machen.",
       "a": [
        [
@@ -305,7 +305,7 @@
      },
      {
       "t": "gap",
-      "h": "Ergänzen Sie das Verb – mit oder ohne „zu“.",
+      "h": "Ergänzen Sie das Verb: mit oder ohne zu?",
       "s": "▪ Hast du Lust, am Samstag beim Stadtfest ___ (mitmachen)?\n● Gern! Aber ich muss am Vormittag noch mein Zimmer ___ (aufräumen).\n▪ Kein Problem. Vergiss nicht, deine Gitarre ___ (mitbringen)!",
       "a": [
        [
@@ -502,10 +502,10 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Es ist wichtig , die Natur schützen .",
-      "fix": "Es ist wichtig, die Natur zu schützen.",
+      "s": "Es ist wichtig , nach dem Picknick den Müll mitnehmen .",
+      "fix": "Es ist wichtig, nach dem Picknick den Müll mitzunehmen.",
       "a": [
-       6
+       9
       ],
       "gw": {
        "uz": "To‘rt tipik xato: (1) modal fe’ldan keyin <b>zu</b> bo‘lmaydi; (2) <b>Es ist wichtig, versuchen, Lust haben</b> dan keyin <b>zu</b> kerak; (3) ajraladigan fe’lda zu o‘rtada: weg<b>zu</b>bringen; (4) zu fe’l oldida, keyin doim Infinitiv: <b>zu trinken</b>. Misol: <b>Ich habe vergessen, dich anzurufen.</b>",
@@ -542,10 +542,10 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Sevara hat versucht , zu ihre Meinung erklären .",
+      "s": "Sevara hat versucht , ihre Meinung zu erklärt .",
       "fix": "Sevara hat versucht, ihre Meinung zu erklären.",
       "a": [
-       4
+       7
       ],
       "gw": {
        "uz": "To‘rt tipik xato: (1) modal fe’ldan keyin <b>zu</b> bo‘lmaydi; (2) <b>Es ist wichtig, versuchen, Lust haben</b> dan keyin <b>zu</b> kerak; (3) ajraladigan fe’lda zu o‘rtada: weg<b>zu</b>bringen; (4) zu fe’l oldida, keyin doim Infinitiv: <b>zu trinken</b>. Misol: <b>Ich habe vergessen, dich anzurufen.</b>",

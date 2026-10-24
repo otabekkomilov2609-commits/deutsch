@@ -274,7 +274,7 @@
       "t": "gap",
       "h": "Ergänzen Sie *ohne*, *statt* oder *um*.",
       "bsp": "Er geht aus dem Haus, ___ zu frühstücken. → <b>ohne</b>",
-      "s": "Viele Menschen teilen Meldungen, ___ sie zu prüfen.",
+      "s": "Mia ist zur Uni gefahren, ___ ihr Handy mitzunehmen. Deshalb hat sie die Meldung nicht gesehen.",
       "a": [
        [
         "ohne"
@@ -323,7 +323,9 @@
       "s": "▪ Hast du das Video über den Bürgermeister gesehen? Alle teilen es!\n● Ja, aber das ist ein Fake. Viele Leute teilen es, ___ nachzudenken.\n▪ Wirklich? Wie kann ich das prüfen?\n● Ganz einfach: Du ___ nur nach der Quelle ___ suchen.",
       "a": [
        [
-        "ohne"
+        "ohne",
+        "statt",
+        "anstatt"
        ],
        [
         "brauchst"
@@ -366,16 +368,16 @@
       "t": "order",
       "h": "Schreiben Sie die Sätze mit *brauchen … zu*.",
       "bsp": "Du musst nicht kommen. → <b>Du brauchst nicht zu kommen.</b>",
-      "q": "Du musst die Meldung nicht teilen.",
+      "q": "Die Meldung ist falsch. Du musst sie nicht teilen.",
       "w": [
        "Du",
        "brauchst",
-       "die Meldung",
+       "sie",
        "nicht",
        "zu",
        "teilen"
       ],
-      "a": "Du brauchst die Meldung nicht zu teilen.",
+      "a": "Du brauchst sie nicht zu teilen.",
       "alt": [],
       "gw": {
        "uz": "<b>müssen</b> o‘rniga <b>brauchen</b> qo‘ying (egaga mos) va Infinitiv oldiga <b>zu</b>: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> Ajraluvchi fe’lda zu ichida: <b>herunterzuladen</b>.",
@@ -396,7 +398,9 @@
        "lesen"
       ],
       "a": "Ihr braucht nur den Artikel zu lesen.",
-      "alt": [],
+      "alt": [
+       "Ihr braucht den Artikel nur zu lesen."
+      ],
       "gw": {
        "uz": "<b>müssen</b> o‘rniga <b>brauchen</b> qo‘ying (egaga mos) va Infinitiv oldiga <b>zu</b>: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> Ajraluvchi fe’lda zu ichida: <b>herunterzuladen</b>.",
        "ru": "Вместо <b>müssen</b> поставьте <b>brauchen</b> (по подлежащему) и <b>zu</b> перед инфинитивом: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> У отделяемого глагола zu внутри: <b>herunterzuladen</b>."
@@ -425,15 +429,15 @@
       "t": "order",
       "h": "Schreiben Sie die Sätze mit *brauchen … zu*.",
       "bsp": "Du musst nicht kommen. → <b>Du brauchst nicht zu kommen.</b>",
-      "q": "Man muss das Video nicht herunterladen.",
+      "q": "Das Video läuft auch online. Man muss es nicht herunterladen.",
       "w": [
        "Man",
        "braucht",
-       "das Video",
+       "es",
        "nicht",
        "herunterzuladen"
       ],
-      "a": "Man braucht das Video nicht herunterzuladen.",
+      "a": "Man braucht es nicht herunterzuladen.",
       "alt": [],
       "gw": {
        "uz": "<b>müssen</b> o‘rniga <b>brauchen</b> qo‘ying (egaga mos) va Infinitiv oldiga <b>zu</b>: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> Ajraluvchi fe’lda zu ichida: <b>herunterzuladen</b>.",
@@ -528,21 +532,21 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "bsp": "Du brauchst nicht kommen. → <b>kommen</b> → Du brauchst nicht zu kommen.",
-      "s": "Du brauchst die Zeitung nicht kaufen .",
+      "bsp": "Ihr brauchst nicht zu kommen. → <b>brauchst</b> ✗ → Ihr <b>braucht</b> nicht zu kommen.",
+      "s": "Du braucht die Zeitung nicht zu kaufen .",
       "a": [
-       5
+       1
       ],
       "fix": "Du brauchst die Zeitung nicht zu kaufen.",
       "gw": {
-       "uz": "Tekshiring: <b>brauchen</b> bilan <b>zu</b> shart; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); <b>zu</b> + Infinitiv doim oxirida; statt-/ohne-qismdan keyin asosiy gap fe’l bilan boshlanadi.",
-       "ru": "Проверьте: с <b>brauchen</b> обязательно <b>zu</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); <b>zu</b> + Infinitiv всегда в конце; после statt-/ohne-части главное предложение начинается с глагола."
+       "uz": "Tekshiring: <b>brauchen</b> egaga mos (du <b>brauchst</b>, ihr <b>braucht</b>); ot oldida <b>nicht</b> emas, <b>kein</b>: <b>keine Angst</b>; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); ma’noga qarab: o‘rniga — <b>statt</b>, maqsad — <b>um</b>, qilmasdan — <b>ohne</b>.",
+       "ru": "Проверьте: <b>brauchen</b> по подлежащему (du <b>brauchst</b>, ihr <b>braucht</b>); перед существительным не <b>nicht</b>, а <b>kein</b>: <b>keine Angst</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); по смыслу: вместо — <b>statt</b>, цель — <b>um</b>, не делая — <b>ohne</b>."
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "bsp": "Du brauchst nicht kommen. → <b>kommen</b> → Du brauchst nicht zu kommen.",
+      "bsp": "Ihr brauchst nicht zu kommen. → <b>brauchst</b> ✗ → Ihr <b>braucht</b> nicht zu kommen.",
       "s": "Ihr braucht mich nicht zu anrufen .",
       "a": [
        4,
@@ -550,37 +554,36 @@
       ],
       "fix": "Ihr braucht mich nicht anzurufen.",
       "gw": {
-       "uz": "Tekshiring: <b>brauchen</b> bilan <b>zu</b> shart; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); <b>zu</b> + Infinitiv doim oxirida; statt-/ohne-qismdan keyin asosiy gap fe’l bilan boshlanadi.",
-       "ru": "Проверьте: с <b>brauchen</b> обязательно <b>zu</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); <b>zu</b> + Infinitiv всегда в конце; после statt-/ohne-части главное предложение начинается с глагола."
+       "uz": "Tekshiring: <b>brauchen</b> egaga mos (du <b>brauchst</b>, ihr <b>braucht</b>); ot oldida <b>nicht</b> emas, <b>kein</b>: <b>keine Angst</b>; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); ma’noga qarab: o‘rniga — <b>statt</b>, maqsad — <b>um</b>, qilmasdan — <b>ohne</b>.",
+       "ru": "Проверьте: <b>brauchen</b> по подлежащему (du <b>brauchst</b>, ihr <b>braucht</b>); перед существительным не <b>nicht</b>, а <b>kein</b>: <b>keine Angst</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); по смыслу: вместо — <b>statt</b>, цель — <b>um</b>, не делая — <b>ohne</b>."
       }
      },
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "bsp": "Du brauchst nicht kommen. → <b>kommen</b> → Du brauchst nicht zu kommen.",
-      "s": "Statt zu lesen die Zeitung , schaut Ben fern .",
+      "bsp": "Ihr brauchst nicht zu kommen. → <b>brauchst</b> ✗ → Ihr <b>braucht</b> nicht zu kommen.",
+      "s": "Ben schaut lieber fern , um die Zeitung zu lesen .",
       "a": [
-       1,
+       5
+      ],
+      "fix": "Ben schaut lieber fern, statt die Zeitung zu lesen.",
+      "gw": {
+       "uz": "Tekshiring: <b>brauchen</b> egaga mos (du <b>brauchst</b>, ihr <b>braucht</b>); ot oldida <b>nicht</b> emas, <b>kein</b>: <b>keine Angst</b>; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); ma’noga qarab: o‘rniga — <b>statt</b>, maqsad — <b>um</b>, qilmasdan — <b>ohne</b>.",
+       "ru": "Проверьте: <b>brauchen</b> по подлежащему (du <b>brauchst</b>, ihr <b>braucht</b>); перед существительным не <b>nicht</b>, а <b>kein</b>: <b>keine Angst</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); по смыслу: вместо — <b>statt</b>, цель — <b>um</b>, не делая — <b>ohne</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ihr brauchst nicht zu kommen. → <b>brauchst</b> ✗ → Ihr <b>braucht</b> nicht zu kommen.",
+      "s": "Du brauchst nicht Angst zu haben . Das Video ist nur ein Fake .",
+      "a": [
        2
       ],
-      "fix": "Statt die Zeitung zu lesen, schaut Ben fern.",
+      "fix": "Du brauchst keine Angst zu haben. Das Video ist nur ein Fake.",
       "gw": {
-       "uz": "Tekshiring: <b>brauchen</b> bilan <b>zu</b> shart; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); <b>zu</b> + Infinitiv doim oxirida; statt-/ohne-qismdan keyin asosiy gap fe’l bilan boshlanadi.",
-       "ru": "Проверьте: с <b>brauchen</b> обязательно <b>zu</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); <b>zu</b> + Infinitiv всегда в конце; после statt-/ohne-части главное предложение начинается с глагола."
-      }
-     },
-     {
-      "t": "mark",
-      "h": "Markieren Sie den Fehler.",
-      "bsp": "Du brauchst nicht kommen. → <b>kommen</b> → Du brauchst nicht zu kommen.",
-      "s": "Statt die Quelle zu prüfen , sie glaubt alles .",
-      "a": [
-       6
-      ],
-      "fix": "Statt die Quelle zu prüfen, glaubt sie alles.",
-      "gw": {
-       "uz": "Tekshiring: <b>brauchen</b> bilan <b>zu</b> shart; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); <b>zu</b> + Infinitiv doim oxirida; statt-/ohne-qismdan keyin asosiy gap fe’l bilan boshlanadi.",
-       "ru": "Проверьте: с <b>brauchen</b> обязательно <b>zu</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); <b>zu</b> + Infinitiv всегда в конце; после statt-/ohne-части главное предложение начинается с глагола."
+       "uz": "Tekshiring: <b>brauchen</b> egaga mos (du <b>brauchst</b>, ihr <b>braucht</b>); ot oldida <b>nicht</b> emas, <b>kein</b>: <b>keine Angst</b>; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); ma’noga qarab: o‘rniga — <b>statt</b>, maqsad — <b>um</b>, qilmasdan — <b>ohne</b>.",
+       "ru": "Проверьте: <b>brauchen</b> по подлежащему (du <b>brauchst</b>, ihr <b>braucht</b>); перед существительным не <b>nicht</b>, а <b>kein</b>: <b>keine Angst</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); по смыслу: вместо — <b>statt</b>, цель — <b>um</b>, не делая — <b>ohne</b>."
       }
      }
     ]

@@ -273,15 +273,15 @@
       "t": "order",
       "h": "Schreiben Sie einen Satz: Komparativ vor dem Nomen.",
       "bsp": "Ich brauche ein Handy. Es soll billiger sein. → <b>Ich brauche ein billigeres Handy.</b>",
-      "q": "Ich brauche einen Laptop. Er soll schneller sein.",
+      "q": "Ich brauche einen Stuhl. Er soll bequemer sein.",
       "w": [
        "Ich",
        "brauche",
        "einen",
-       "schnelleren",
-       "Laptop"
+       "bequemeren",
+       "Stuhl"
       ],
-      "a": "Ich brauche einen schnelleren Laptop.",
+      "a": "Ich brauche einen bequemeren Stuhl.",
       "alt": [],
       "gw": {
        "uz": "Ikki gapni birlashtiramiz: qiyosiy sifat otdan oldin keladi va qo‘shimcha oladi: einen schneller<b>en</b> Laptop (Akk. m), ein leichter<b>es</b> Fahrrad (n), mit meiner jünger<b>en</b> Schwester (Dat.).",
@@ -449,15 +449,14 @@
      {
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
-      "s": "Das war die am schwierigsten Prüfung in diesem Jahr .",
+      "s": "Paul ist der guteste Spieler in unserer Mannschaft .",
       "a": [
-       3,
-       4
+       3
       ],
-      "fix": "Das war die schwierigste Prüfung in diesem Jahr.",
+      "fix": "Paul ist der beste Spieler in unserer Mannschaft.",
       "gw": {
-       "uz": "<b>am …sten</b> otdan oldin turmaydi. Otdan oldin: <b>die schwierigste Prüfung</b>.",
-       "ru": "<b>am …sten</b> не ставится перед существительным. Перед существительным: <b>die schwierigste Prüfung</b>."
+       "uz": "<b>gut</b> — notekis sifat: gut → besser → am besten / der <b>beste</b>. «guteste» degan shakl yo‘q: <b>der beste Spieler</b>.",
+       "ru": "<b>gut</b> — неправильное прилагательное: gut → besser → am besten / der <b>beste</b>. Формы «guteste» нет: <b>der beste Spieler</b>."
       }
      },
      {
@@ -539,10 +538,10 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie das Adjektiv mit *-lich*.",
-      "s": "___ Glückwunsch zum Geburtstag! (Herz)",
+      "s": "Meine Gastfamilie in Berlin war sehr ___. Ich habe mich wie zu Hause gefühlt. (Herz)",
       "a": [
        [
-        "Herzlichen"
+        "herzlich"
        ]
       ],
       "gw": {

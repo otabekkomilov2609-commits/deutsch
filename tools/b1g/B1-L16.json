@@ -49,7 +49,7 @@
      {
       "t": "mark",
       "h": "Markieren Sie die zweiteiligen Konnektoren (beide Teile).",
-      "s": "Mein Onkel hat zwar viel Geld , aber er gibt nicht gern etwas aus .",
+      "s": "Mein Onkel hat zwar viel Geld , aber er gibt es nicht gern aus .",
       "a": [
        3,
        7
@@ -204,7 +204,7 @@
      {
       "t": "gap",
       "h": "Ergänzen Sie: *je*, *desto*, *entweder*, *oder*, *zwar*, *aber*.",
-      "s": "Hallo! Ich ziehe nächsten Monat nach Graz und brauche ein Konto.\nMein Vermieter möchte die Miete ___ bar ___ per Überweisung bekommen.\nDie Bank am Bahnhof ist ___ teuer, ___ sie hat lange Öffnungszeiten.\n___ früher ich das Konto eröffne, ___ besser, oder?",
+      "s": "Hallo! Ich ziehe nächsten Monat nach Graz und brauche ein Konto.\nIch möchte das Konto ___ bei einer Bank in der Stadt ___ bei einer Online-Bank eröffnen.\nDie Bank am Bahnhof ist ___ teuer, ___ sie hat lange Öffnungszeiten.\n___ früher ich das Konto eröffne, ___ besser, oder?",
       "a": [
        [
         "entweder"
@@ -422,8 +422,7 @@
       "q": "Du kannst die Rechnung online bezahlen. Du kannst sie auch am Schalter bezahlen. (entweder … oder)",
       "w": [
        "Du",
-       "kannst",
-       "die Rechnung",
+       "kannst die Rechnung",
        "entweder",
        "online",
        "oder",
@@ -454,7 +453,9 @@
       ],
       "a": "Ich eröffne entweder heute oder morgen ein Konto.",
       "alt": [
-       "Ich eröffne entweder morgen oder heute ein Konto."
+       "Ich eröffne entweder morgen oder heute ein Konto.",
+       "Ich eröffne ein Konto entweder heute oder morgen.",
+       "Ich eröffne ein Konto entweder morgen oder heute."
       ],
       "gw": {
        "uz": "<b>je … desto</b>: birinchi qismda fe’l oxirida, vergul, keyin desto + Komparativ + fe’l + ega. <b>entweder … oder</b> bog‘lanadigan so‘zlar oldida turadi. <b>zwar</b> — birinchi gapda fe’ldan keyin, <b>aber</b> — ikkinchi gap boshida, vergul bilan. Misol: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>",
@@ -472,8 +473,7 @@
        "kostenlos,",
        "aber",
        "die Karte",
-       "kostet",
-       "Geld"
+       "kostet Geld"
       ],
       "a": "Das Konto ist zwar kostenlos, aber die Karte kostet Geld.",
       "alt": [],
@@ -507,14 +507,14 @@
       "t": "mark",
       "h": "Markieren Sie den Fehler.",
       "bsp": "Ich zahle entweder bar noch mit Karte. → <b>noch</b> ✗ → entweder … <b>oder</b>",
-      "s": "Je länger spare ich , desto mehr Geld habe ich .",
+      "s": "Je länger ich spare , dann mehr Geld habe ich .",
       "a": [
-       2
+       5
       ],
       "fix": "Je länger ich spare, desto mehr Geld habe ich.",
       "gw": {
-       "uz": "Tekshiring: <b>je</b>-qismda fe’l oxirida; <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b>, zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
-       "ru": "Проверьте: в части с <b>je</b> глагол в конце; после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b>, zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
+       "uz": "Tekshiring: <b>je</b> dan keyin juft — <b>desto / umso</b> («dann» emas); <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b> («und» emas), zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
+       "ru": "Проверьте: пара к <b>je</b> — <b>desto / umso</b> (не «dann»); после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b> (не «und»), zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
       }
      },
      {
@@ -526,8 +526,8 @@
       ],
       "fix": "Je mehr du sparst, desto reicher wirst du.",
       "gw": {
-       "uz": "Tekshiring: <b>je</b>-qismda fe’l oxirida; <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b>, zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
-       "ru": "Проверьте: в части с <b>je</b> глагол в конце; после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b>, zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
+       "uz": "Tekshiring: <b>je</b> dan keyin juft — <b>desto / umso</b> («dann» emas); <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b> («und» emas), zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
+       "ru": "Проверьте: пара к <b>je</b> — <b>desto / umso</b> (не «dann»); после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b> (не «und»), zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
       }
      },
      {
@@ -539,8 +539,8 @@
       ],
       "fix": "Wir fahren entweder mit dem Bus oder mit dem Taxi zur Bank.",
       "gw": {
-       "uz": "Tekshiring: <b>je</b>-qismda fe’l oxirida; <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b>, zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
-       "ru": "Проверьте: в части с <b>je</b> глагол в конце; после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b>, zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
+       "uz": "Tekshiring: <b>je</b> dan keyin juft — <b>desto / umso</b> («dann» emas); <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b> («und» emas), zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
+       "ru": "Проверьте: пара к <b>je</b> — <b>desto / umso</b> (не «dann»); после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b> (не «und»), zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
       }
      },
      {
@@ -552,8 +552,8 @@
       ],
       "fix": "Der Geldautomat ist zwar weit weg, aber er ist kostenlos.",
       "gw": {
-       "uz": "Tekshiring: <b>je</b>-qismda fe’l oxirida; <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b>, zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
-       "ru": "Проверьте: в части с <b>je</b> глагол в конце; после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b>, zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
+       "uz": "Tekshiring: <b>je</b> dan keyin juft — <b>desto / umso</b> («dann» emas); <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b> («und» emas), zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
+       "ru": "Проверьте: пара к <b>je</b> — <b>desto / umso</b> (не «dann»); после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b> (не «und»), zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
       }
      }
     ]
