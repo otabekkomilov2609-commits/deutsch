@@ -148,7 +148,7 @@
      },
      {
       "t": "cat",
-      "h": "Einmal oder mehrmals? Ordnen Sie zu.",
+      "h": "*als* oder *wenn*? Ordnen Sie zu.",
       "bsp": "… ich geboren wurde → einmal, Vergangenheit → <b>als</b>",
       "c": [
        "als",
