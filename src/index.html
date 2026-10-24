@@ -7997,6 +7997,11 @@ function ltpPick(oi){ if(LTP.st!=="play"||LTP.lock) return; const k=LTP.q[0], x=
   setTimeout(()=>{ if(LTP.st==="play") ltpQ(); }, ok?900:2400); }
 /* «Bilmayman»: to'g'ri javob ko'rsatiladi, so'z 0 ball bilan o'tadi (qaytmaydi). «← Orqaga»: oxirgi o'tkazib yuborilgan so'zga qaytadi. */
 function ltpDunno(){ if(LTP.st!=="play"||LTP.lock) return; const k=LTP.q[0], x=LTP.qs[k], i=document.getElementById("lt-in");
+  /* 💬 Kommunikation: «Bilmayman» — to'g'ri javob ko'rsatilmaydi, savol oxiriga o'tib keyinroq qaytadi (2026-10-24, Otabek) */
+  if(x&&x.kom){ LTP.lock=true; LTP.sr=0; LTP.sk++; if(LTP.q.length>1) LTP.q.push(LTP.q.shift()); ltpSave(); ltpPub(false);
+    document.querySelectorAll("#ltp .ltk-o").forEach(b=>b.disabled=true);
+    const fb=document.getElementById("lt-fb"); if(fb){ fb.className="lrn-fb near"; fb.innerHTML=`<div class="lrn-v">↻ ${esc(lz("again"))}</div>`; }
+    setTimeout(()=>{ if(LTP.st==="play") ltpQ(); }, 900); return; }
   LTP.lock=true; LTP.sr=0; clearTimeout(LTP.autoT); if(i){ LTP.last[k]=i.value; i.disabled=true; } LTP.a++; LTP.q.shift(); LTP.ok=ltpScore(); ltpSave(); ltpPub(false);
   const fb=document.getElementById("lt-fb"); if(x.kom){ ltkMark(x,-1); if(fb){ fb.className="lrn-fb bad"; fb.innerHTML=`<div class="lrn-v">${esc(lz("corr"))} ✓</div>`; } }
   else if(fb){ fb.className="lrn-fb bad"; fb.innerHTML=`<div class="lrn-v">${esc(lz("corr"))}</div><div class="lrn-ans"><b>${esc(x.full||x.de)}</b></div>`; }
