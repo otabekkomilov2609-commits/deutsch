@@ -1543,6 +1543,17 @@ mark.trm.bad sup{color:#C62828}
 :root[data-theme="dark"] .tl-tip{color:#F5D9A0;background:#3A2E14;border-color:#6B5520}:root[data-theme="dark"] .tl-g.ok,:root[data-theme="dark"] .tl-o.ok,:root[data-theme="dark"] .tl-l.ok{background:#173A27;color:#8FE0B0;border-color:#2E9E5B}:root[data-theme="dark"] .tl-g.bad,:root[data-theme="dark"] .tl-o.bad,:root[data-theme="dark"] .tl-l.bad{background:#47201F;color:#F4A5A5;border-color:#D64545}:root[data-theme="dark"] .tl-fx,:root[data-theme="dark"] .tl-rv .h span,:root[data-theme="dark"] .tl-score.pass b{color:#8FE0B0}:root[data-theme="dark"] .tl-rv .h s{color:#F4A5A5}:root[data-theme="dark"] .tl-tm.late{background:#47201F;color:#F4A5A5}:root[data-theme="dark"] .tl-tm.end{background:#173A27;color:#8FE0B0}:root[data-theme="dark"] .sx.pt .sx-act .ic{background:#3A2A18}:root[data-theme="dark"] .sx.pt .sx-h b{color:#F0A868}
 
 /* /TL-CSS */
+.ex-chat{display:flex;flex-direction:column;gap:8px}
+.ex-cg{display:flex;flex-wrap:wrap;gap:6px}.ex-cg span{font-size:12.5px;font-weight:700;border:1px solid var(--line);border-radius:99px;padding:4px 10px;background:var(--surface);color:var(--muted)}.ex-cg span.ok{background:#E3F4EA;border-color:#9fd6b5;color:#1d6b3e}
+.ex-cl{display:flex;flex-direction:column;gap:7px;max-height:46vh;overflow:auto;padding:2px}
+.ex-cm{max-width:86%;display:flex;flex-direction:column}.ex-cm span{padding:9px 12px;border-radius:16px;font-size:15px;line-height:1.4}
+.ex-cm small{font-size:11.5px;color:var(--muted);font-weight:700;margin:0 0 2px 4px}
+.ex-cm.p{align-self:flex-start}.ex-cm.p span{background:var(--surface);border:1px solid var(--line);border-bottom-left-radius:4px}
+.ex-cm.me{align-self:flex-end}.ex-cm.me span{background:var(--blue);color:#fff;border-bottom-right-radius:4px}.ex-cm.me.bad span{background:#F6D3D3;color:#7a1f1f}
+.ex-cw{font-size:13.5px;line-height:1.45;color:#7A4E00;background:#FFF6DF;border:1px solid #F2D58A;border-radius:12px;padding:7px 10px}
+.ex-co{display:flex;flex-direction:column;gap:6px}.ex-co .ex-opt{text-align:left}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ex-cm.me.bad span{background:#47201F;color:#F4A5A5}:root:not([data-theme="light"]) .ex-cw{color:#F5D9A0;background:#3A2E14;border-color:#6B5520}:root:not([data-theme="light"]) .ex-cg span.ok{background:#173A27;color:#8FE0B0;border-color:#2E9E5B}}
+:root[data-theme="dark"] .ex-cm.me.bad span{background:#47201F;color:#F4A5A5}:root[data-theme="dark"] .ex-cw{color:#F5D9A0;background:#3A2E14;border-color:#6B5520}:root[data-theme="dark"] .ex-cg span.ok{background:#173A27;color:#8FE0B0;border-color:#2E9E5B}
 /* 🧪 Beta — yangi o'quvchi paneli (2026-10-20) */
 .lek.bt .sx{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
 .lek.bt .sx-h{display:flex;align-items:baseline;gap:10px;margin:0 0 8px;flex-wrap:wrap}
@@ -4701,8 +4712,22 @@ const EXR={
     ans:it=>esc(it.a)},
   mark:{r:it=>{ EX.st.mk=new Set(); return `<div class="ex-mk">${it.s.split(" ").map((w,i)=>`<button type="button" class="ex-mw" data-x="mw" data-i="${i}">${esc(w)}</button>`).join("")}</div>`; },
     c:it=>{ const A=new Set(it.a); let all=A.size===EX.st.mk.size; exEl().querySelectorAll(".ex-mw").forEach(b=>{ const i=+b.dataset.i, on=EX.st.mk.has(i); if(on&&A.has(i)) b.classList.add("ok"); else if(on) { b.classList.add("bad"); all=false; } else if(A.has(i)){ b.classList.add("miss"); all=false; } }); if(all){ exEl().querySelectorAll(".ex-mw").forEach(b=>b.disabled=true); if(it.fix){ const mk=exEl().querySelector(".ex-mk"); if(mk&&!mk.querySelector(".ex-fix")) mk.insertAdjacentHTML("beforeend",`<div class="ex-fix">✅ <span lang="de">${esc(it.fix)}</span></div>`); } } return all; }, /* «Xatoni toping»: to'g'ri gap ko'rsatiladi (it.fix, 2026-10-24) */
-    ans:it=>{ const w=it.s.split(" "), A=new Set(it.a); return w.map((x,i)=>A.has(i)?`<b class="ex-hl">${esc(x)}</b>`:esc(x)).join(" ").replace(/ ([.,!?;:])(?=\s|$)/g,"$1"); }}
+    ans:it=>{ const w=it.s.split(" "), A=new Set(it.a); return w.map((x,i)=>A.has(i)?`<b class="ex-hl">${esc(x)}</b>`:esc(x)).join(" ").replace(/ ([.,!?;:])(?=\s|$)/g,"$1"); }},
+  /* 💬 chat — sherik bilan oldindan yozilgan tarmoqli suhbat (telc Mündlich uslubi, 2026-10-24) */
+  chat:{auto:1, r:it=>{ EX.st.ch={k:0,log:[["p",it.st[0].p]],off:{},g:new Set(),why:null}; return `<div class="ex-chat" id="ex-chat">${exChatHTML(it)}</div>`; },
+    ans:it=>it.st.map(q=>`▪ ${esc(q.p)}<br>● <b class="ex-hl">${esc(q.o.find(x=>x.ok).s)}</b>`).join("<br>")+`<br>▪ ${esc(it.end)}`}
 };
+function exChatHTML(it){ const C=EX.st.ch, ru=state.lang==="ru", fin=C.k>=it.st.length;
+  const goals=(it.goal||[]).length?`<div class="ex-cg">${it.goal.map((g,i)=>`<span class="${C.g.has(i)?"ok":""}">${C.g.has(i)?"✓ ":""}${esc(g)}</span>`).join("")}</div>`:"";
+  const log=C.log.map(([w,t])=>w==="p"?`<div class="ex-cm p"><small>${esc(it.who||"")}</small><span lang="de">${esc(t)}</span></div>`:`<div class="ex-cm me${w==="x"?" bad":""}"><span lang="de">${esc(t)}</span></div>`).join("");
+  const why=C.why?`<div class="ex-cw">💡 ${esc(C.why[ru?"ru":"uz"]||C.why.uz||"")}</div>`:"";
+  const q=fin?"":`<div class="ex-co">${it.st[C.k].o.map((o,k)=>`<button type="button" class="ex-opt${C.off[C.k+"|"+k]?" bad":""}" data-x="chq" data-k="${k}"${C.off[C.k+"|"+k]?" disabled":""} lang="de">${esc(o.s)}</button>`).join("")}</div>`;
+  return goals+`<div class="ex-cl">${log}</div>`+why+q; }
+function exChatPick(it,k){ const C=EX.st.ch; if(!C||C.k>=it.st.length) return; const o=it.st[C.k].o[k]; if(!o) return;
+  if(o.ok){ C.log.push(["m",o.s]); if(o.g!=null) C.g.add(o.g); C.why=null; C.k++; C.log.push(["p",C.k<it.st.length?it.st[C.k].p:it.end]); }
+  else { C.log.push(["x",o.s]); C.log.push(["p",o.r]); C.why=o.why||null; C.off[C.k+"|"+k]=1; const i=EX.q[EX.qi]; EX.fails[i]=(EX.fails[i]||0)+1; EX.tried[i]=true; }
+  const box=document.getElementById("ex-chat"); if(box){ box.innerHTML=exChatHTML(it); const l=box.querySelector(".ex-cl"); if(l) l.lastElementChild&&l.lastElementChild.scrollIntoView({block:"nearest",behavior:"smooth"}); }
+  if(C.k>=it.st.length) exAfter(true); }
 /* ⌨️ Android/telefon: mashqlar orasida klaviatura tushib-chiqmasin (2026-10-21, Otabek). Yozish katagi qayta chizilishidan oldin fokus
    ko'rinmas «ushlab turuvchi» katakka o'tadi — klaviatura ochiq qoladi; yangi katak chiqsa fokus unga, chiqmasa (tanlash mashqi) klaviatura yopiladi. */
 function kbCoarse(){ return matchMedia("(pointer:coarse)").matches; }
@@ -5139,6 +5164,7 @@ document.addEventListener("click",e=>{ const root=exEl(); if(!root||root.hidden|
   if(a==="azrec"){ azRec(it,b); return; }
   if(a==="spok"){ root.querySelectorAll(".ex-sp-self .ex-opt").forEach(x=>x.disabled=true); b.classList.add("ok"); exAfter(true); return; }
   if(a==="spre"){ const i=EX.q[EX.qi]; EX.fails[i]=(EX.fails[i]||0)+1; exItem(); return; }
+  if(a==="chq"){ exChatPick(it,+b.dataset.k); return; }
   if(a==="opt"){ const k=+b.dataset.k, ok=k===it.a; EX._opt=it.o[k]; if(ok) root.querySelectorAll(".ex-opt").forEach((x,i)=>{ x.disabled=true; if(i===it.a) x.classList.add("ok"); }); else { b.classList.add("bad"); b.disabled=true; } exAfter(ok); return; }
   if(a==="tile"){ const i=+b.dataset.i, line=root.querySelector("#ex-line"), inLine=b.parentElement===line; line.classList.remove("bad");
     if(inLine){ EX.st.ord.splice(EX.st.ord.indexOf(i),1); root.querySelector("#ex-pool").appendChild(b); }

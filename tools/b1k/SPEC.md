@@ -24,7 +24,7 @@ L13–24: `B1-b12-{N}-K`, lv "B1.2".
 2. **cat** (1–2 ta) — iborani funksiyasi bo'yicha saralash: `{"t":"cat","h":"Was ist das? Ordnen Sie zu.","bsp":"…","c":["Funktion A","Funktion B"],"i":[["ibora",0],…],"gw":{…}}` (6–8 element).
 3. **mc — Situationswahl** (5–6 ta): `{"t":"mc","h":"Was passt? Reagieren Sie.","bsp":"…","q":"Vaziyat yoki sherikning gapi (nemischa)","o":["…4 ta haqiqiy Redemittel…"],"a":i,"gw":{…}}`. Vaziyatlar xilma-xil (do'st, oila, kurs, forum).
 4. **order — iborani qurish** (3 ta): `{"t":"order","h":"Bilden Sie den Redemittel.","bsp":"…","q":"Vaziyat (qisqa, nemischa)","w":[plitkalar],"a":"to'liq gap.","alt":[]}` — `w.join(" ")` = `a` (oxirgi .?! siz). 4–8 plitka.
-   + **order dlg** (1 ta) — dialogni tartiblash: `{"t":"order","h":"Ordnen Sie das Gespräch.","dlg":1,"bsp":"…","w":["▪ …","● …",… 4–6 replika],"a":"w ning to'g'ri tartibda «\n» bilan birlashtirilgani","j":"\n","q":"Vaziyat"}`  ← dlg da `"j":"\n"` (qatorlar), `a` — replikalar "\n" bilan.
+   + **order dlg** (1 ta) — dialogni tartiblash: `{"t":"order","h":"Ordnen Sie das Gespräch.","dlg":1,"bsp":"…","w":["▪ …","● …",… 4–6 replika, ARALASH tartibda],"a":"replikalar to'g'ri tartibda BO'SH JOY bilan birlashtirilgan"}` — ▪ va ● navbatma-navbat; tartib yagona bo'lsin.
 5. **gap — bosh harfdan tiklash** (4 ta): har bo'shliq — bitta so'z, oldida birinchi harf turadi: `"s":"W___ w___ e_ m__ einem Kinoabend?"` → `"a":[["ie"],["äre"],["s"],["it"]]` (bosh harfdan keyingi qismi!). `h`: "Ergänzen Sie die Redemittel." Faqat Lektion iboralari.
 6. **chat — sherik bilan suhbat** (1–2 ta, telc Mündlich uslubida): oldindan yozilgan tarmoqli dialog.
 ```json

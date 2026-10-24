@@ -42,8 +42,8 @@ def check(p):
             if len(c) < 2 or not (4 <= len(ii) <= 9) or any(not (isinstance(x, list) and len(x) == 2 and 0 <= x[1] < len(c)) for x in ii): E.append(P + ": cat")
         elif t == "order":
             w, a, j = it.get("w") or [], it.get("a", ""), it.get("j", " ")
-            if j == "\n":
-                if a != "\n".join(w) and sorted(a.split("\n")) != sorted(w): E.append(P + ": dlg a ≠ w")
+            if it.get("dlg"):
+                if not all(norm(x) in norm(a) for x in w) or len(norm(a)) != len(norm(" ".join(w))): E.append(P + ": dlg a ≠ w plitkalari")
             elif norm(" ".join(w)) != re.sub(r"[.?!]$", "", norm(a)): E.append(P + f": w.join ≠ a ({' '.join(w)} | {a})")
             if len(set(w)) != len(w) or not (3 <= len(w) <= 10): E.append(P + ": plitkalar")
         elif t == "gap":
