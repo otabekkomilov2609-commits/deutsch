@@ -1245,3 +1245,11 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
   - Har bir Modul sarlavhasida «▲ Yig'ish / ▼ Ochish» — shu Moduldagi Lektionlar birdan.
   - Pastki o'ng burchakda suzuvchi «▲ Hammasini yig'ish» — ro'yxat tepasidagi tugmalardan pastga tushganda va kamida bitta Lektion ochiq bo'lsa chiqadi; bosilsa hammasi yig'iladi va sahifa ro'yxat boshiga qaytadi. Mashq/oyna ochiq bo'lsa ko'rinmaydi.
   - Kod: lekSync(), lekFlt(), data-modfold, data-lekflt.
+
+## 🎬 Video-dars sahifasi (2026-10-24, sinov: A2.2 Lektion 17)
+- Otabek: mock-up → «bitta lektionda qil», «video qo'yilganda subtitri chiqmasin», «boshqa joyga qo'yganimiz yaxshimi, grammatik mashqning ichiga emas».
+- Joyi: Lektion kartasi → GRAMMATIK bo'limida, mashqdan OLDIN alohida karta «🎬 Video-dars · …» (avval ko'rish, keyin mashq). Mashq ichida faqat kichik 🎬 belgisi qoldi — o'sha sahifani ochadi.
+- Sahifa (#vd): video tepada qotib turadi (16:9), ostida: videolar tanlovi, «↺ 10 s», «1× / 0,75×»; ⏱ Mavzular — videoning qismlari (vaqti bilan) + bizning misol gapimiz, video o'sha joyga kelganda qator ajraladi, bosilsa o'sha joydan; 🔤 So'zlar — bosilsa tarjima (uz/ru), 🔊, misol, «▶ Videoda m:ss». Pastda «✍️ Mashqqa o'tish».
+- Subtitr standart o'chiq (cc_load_policy=0); o'quvchi pleyerda o'zi yoqishi mumkin. Easy German transkripti ko'chirilmaydi (mualliflik) — Mavzular va misollar o'zimizniki.
+- Ma'lumot: vdData() — mashq id → {t, v:[{id, t, ch:[[soniya, ibora, misol]]}], w:[[so'z, uz, ru, misol, video№, soniya]]}. Yangi Lektion qo'shish — shu yerga yozish + vidOnly() ro'yxati.
+- YouTube IFrame API (youtube-nocookie); yuklanmasa — oddiy iframe (Mavzular bosilganda vaqtga o'tmaydi).
