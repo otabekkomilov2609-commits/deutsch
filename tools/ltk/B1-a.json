@@ -230,7 +230,7 @@
     "Gern! Vor vielen Leuten zu sprechen fällt mir leicht.",
     "Vor vielen Leuten zu sprechen fällt mir schwer.",
     "Ich bezweifle, dass ich das kann.",
-    "Ich bin mir nicht sicher, ob ich gut zeichne."
+    "Vor Leuten zu sprechen ist nicht so mein Ding."
    ],
    "a": 0
   },
@@ -287,7 +287,7 @@
    "a": 1
   },
   {
-   "q": "Mitten in der Präsentation möchten Sie eine Veränderung aus Ihrem eigenen Leben erzählen.",
+   "q": "Mitten in der Präsentation möchten Sie von einer Veränderung in Ihrem eigenen Leben erzählen.",
    "o": [
     "Zuerst möchte ich euch mein Thema vorstellen.",
     "Vielen Dank für eure Aufmerksamkeit!",
@@ -455,7 +455,7 @@
    "o": [
     "Wie wäre es, wenn wir ihm Konzertkarten schenken?",
     "Gut, dann schenken wir ihm Konzertkarten.",
-    "Ich bezweifle, dass Timur Konzertkarten wirklich gefallen.",
+    "Ich bezweifle, dass Konzertkarten ihm wirklich gefallen.",
     "Keine Sorge, mit dem Geschenk wird das schon gut gehen!"
    ],
    "a": 0
@@ -821,9 +821,9 @@
  ],
  "11": [
   {
-   "q": "Mia zeigt auf einen Gegenstand in Ihrer Küche: „Was ist das denn?“ Damit schneidet man Gemüse.",
+   "q": "Mia zeigt auf ein Gerät in Ihrer Küche: „Was ist das denn?“ Es ist ein Gemüseschneider.",
    "o": [
-    "Damit kann man Gemüse schneiden.",
+    "Das ist ein Gerät, mit dem man Gemüse schneidet.",
     "Kaufen Sie jetzt und sparen Sie viel Zeit!",
     "Wofür braucht man dieses Gerät eigentlich?",
     "Ich habe die Erfahrung gemacht, dass Gemüse gesund ist."
