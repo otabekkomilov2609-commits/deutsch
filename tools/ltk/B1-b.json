@@ -1,0 +1,986 @@
+{
+ "13": [
+  {
+   "q": "Laylo: „Was kann dein Hund eigentlich alles?“ Ihr Hund versteht viele Wörter.",
+   "o": [
+    "Er heißt Bobo und ist drei Jahre alt.",
+    "Ich bin sicher, dass er das schafft.",
+    "Er kann sogar zwanzig Wörter verstehen.",
+    "Als er klein war, hat er viel geschlafen."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Malika: „Kann deine Katze schwimmen?“ Ihre Katze hat große Angst vor Wasser.",
+   "o": [
+    "Nein, das kann sie überhaupt nicht.",
+    "Nein, das darf sie leider nicht.",
+    "Ja, sie kann sowohl schwimmen als auch tauchen.",
+    "Nein, sie muss heute nicht schwimmen."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie möchten wissen, ob Timurs Papagei sprechen kann. Was fragen Sie?",
+   "o": [
+    "Seit wann hast du denn deinen Papagei?",
+    "Mein Papagei kann auch ein paar Wörter.",
+    "Was frisst dein Papagei am liebsten?",
+    "Kann dein Papagei eigentlich sprechen?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihre Schwester spielt Gitarre und Klavier. Lena fragt: „Was kann deine Schwester gut?“",
+   "o": [
+    "Sie kann weder Gitarre noch Klavier spielen.",
+    "Sie kann sowohl Gitarre als auch Klavier spielen.",
+    "Sie möchte gern Klavier spielen lernen.",
+    "Sie hört am liebsten Gitarrenmusik."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Mia: „Ist es schwer, deinem Hund Tricks beizubringen?“ Ihr Hund lernt sehr schnell.",
+   "o": [
+    "Nein, er lernt neue Tricks ganz leicht.",
+    "Ja, das fällt ihm leider sehr schwer.",
+    "Ich bezweifle, dass er das jemals lernt.",
+    "Ja, er ist faul, deshalb schläft er viel."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Nodir: „Wusstest du, dass Tauben über 1000 Kilometer nach Hause finden?“ Sie sind sehr überrascht.",
+   "o": [
+    "Klar, das weiß doch jeder.",
+    "Das finde ich nicht so gut.",
+    "Das ist mir egal, ich mag keine Tiere.",
+    "Wirklich? Das hätte ich nicht gedacht!"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Paul: „Wer läuft schneller, dein Hund oder deine Katze?“ Der Hund ist viel schneller.",
+   "o": [
+    "Meine Katze läuft genauso schnell wie mein Hund.",
+    "Mein Hund läuft viel schneller als meine Katze.",
+    "Mein Hund läuft am liebsten im Park.",
+    "Meine Katze ist schneller als mein Hund."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie möchten im Tierheim helfen. Die Leiterin fragt: „Können Sie mit Hunden umgehen?“ Sie haben selbst zwei Hunde.",
+   "o": [
+    "Nein, ich habe leider Angst vor Hunden.",
+    "Ja, ich hätte sehr gern einen Hund.",
+    "Ja, mit Hunden kann ich sehr gut umgehen.",
+    "Ich bezweifle, dass Hunde das können."
+   ],
+   "a": 2
+  }
+ ],
+ "14": [
+  {
+   "q": "Gespräch für ein Stipendium: „Welche Fremdsprachen sprechen Sie?“ Sie sprechen gut Russisch und lernen seit drei Monaten Englisch.",
+   "o": [
+    "Englisch spreche ich fließend, Russisch lerne ich erst seit Kurzem.",
+    "Ich möchte in Deutschland unbedingt Informatik studieren.",
+    "Russisch spreche ich fließend, Englisch lerne ich erst seit Kurzem.",
+    "Ich bin sicher, dass ich das Stipendium bekomme."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie möchten im Sommer ehrenamtlich im Tierheim helfen. Sie fragen, ob man Vorkenntnisse braucht.",
+   "o": [
+    "Haben Sie schon Erfahrung mit Tieren?",
+    "Ich habe schon viel Erfahrung mit Tieren.",
+    "Muss man schon Erfahrung mit Tieren haben?",
+    "Kann ich mich auch online bewerben?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Bewerbung für ein Praktikum in der Uni-Bibliothek: „Wie gut kennen Sie sich mit Computern aus?“ Word und Excel können Sie gut.",
+   "o": [
+    "Mit Computern habe ich leider noch nie gearbeitet.",
+    "Mit Word und Excel kenne ich mich sehr gut aus.",
+    "Ich lese sehr gern, vor allem Romane.",
+    "Ich würde gern mal einen Computerkurs besuchen."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Bewerbung für ein FSJ im Krankenhaus: „Haben Sie schon Erfahrung in der Pflege?“ Sie haben keine, möchten aber lernen.",
+   "o": [
+    "Ja, darin habe ich schon sehr viel Erfahrung.",
+    "Nein, das interessiert mich überhaupt nicht.",
+    "Ich bin mir nicht sicher, ob das stimmt.",
+    "Darin habe ich noch keine Erfahrung, aber ich lerne schnell."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Anmeldung im Deutschkurs. Die Lehrerin fragt: „Wie gut sind Ihre Deutschkenntnisse?“ Sie haben das A2-Zertifikat.",
+   "o": [
+    "Ich habe die A2-Prüfung schon bestanden.",
+    "Ich möchte die B1-Prüfung im Mai machen.",
+    "Ich lerne Deutsch am liebsten mit Filmen.",
+    "Deutsch ist für mein Studium sehr wichtig."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihr Freund Aziz möchte für Ihr Uni-Projekt eine Website machen. Sie wissen nicht, ob er programmieren kann.",
+   "o": [
+    "Kennen Sie sich eigentlich mit Programmieren aus?",
+    "Kennst du dich eigentlich mit Programmieren aus?",
+    "Ich kenne mich leider nicht mit Programmieren aus.",
+    "Wie wäre es, wenn wir eine Website machen?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "In Ihrer Bewerbung für die Uni schreiben Sie: In Mathematik sind Sie sehr stark.",
+   "o": [
+    "Ich habe leider nur Grundkenntnisse in Mathematik.",
+    "Mathematik finde ich langweilig, aber wichtig.",
+    "Ich interessiere mich auch für Musik und Kunst.",
+    "Ich verfüge über sehr gute Kenntnisse in Mathematik."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Der Sportverein sucht Helfer für ein Kindercamp: „Kennen Sie sich mit Erster Hilfe aus?“ Sie haben letztes Jahr einen Kurs gemacht.",
+   "o": [
+    "Ja, ich habe letztes Jahr einen Erste-Hilfe-Kurs gemacht.",
+    "Nein, damit habe ich leider gar keine Erfahrung.",
+    "Ja, ich spiele schon seit zehn Jahren Fußball.",
+    "Ich bin mir sicher, dass Kinder Sport brauchen."
+   ],
+   "a": 0
+  }
+ ],
+ "15": [
+  {
+   "q": "Lena: „Wie fandest du den Film gestern?“ Sie fanden ihn sehr spannend.",
+   "o": [
+    "Es geht um zwei Freunde in Berlin.",
+    "Der Film fängt um acht Uhr an.",
+    "Ich fand ihn ziemlich langweilig, ehrlich gesagt.",
+    "Total spannend, ich konnte gar nicht wegschauen!"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihre Freundin Malika war am Wochenende im Kino. Sie möchten wissen, ob ihr der Film gefallen hat.",
+   "o": [
+    "Und, wie hat Ihnen der Film gefallen?",
+    "Und, wie hat dir der Film gefallen?",
+    "Mir hat der Film sehr gut gefallen.",
+    "Mit wem warst du denn im Kino?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Timur sucht einen guten Film für heute Abend. Sie haben gestern eine tolle neue Komödie gesehen.",
+   "o": [
+    "Die neue Komödie musst du unbedingt sehen!",
+    "Die neue Komödie würde ich dir nicht empfehlen.",
+    "Ich sehe eigentlich lieber Krimis als Komödien.",
+    "Keine Ahnung, ich gehe nie ins Kino."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie haben einen Liebesfilm gesehen. Die Geschichte war schön, aber das Ende hat Sie enttäuscht. Jonas: „Und?“",
+   "o": [
+    "Die Geschichte war langweilig, aber das Ende war toll.",
+    "Es war ein Liebesfilm mit sehr vielen Stars.",
+    "Ich weiß nicht, ob er bald im Fernsehen kommt.",
+    "Die Geschichte war schön, aber das Ende war enttäuschend."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Paul: „Waren die Schauspieler gut?“ Die Hauptdarstellerin war fantastisch.",
+   "o": [
+    "Die Hauptdarstellerin hat mich leider nicht überzeugt.",
+    "Die Hauptdarstellerin hat wirklich überzeugend gespielt.",
+    "Die Musik im Film war ziemlich laut.",
+    "Die Hauptdarstellerin kommt aus Frankreich."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Bei dem Krimi war Ihnen schon nach zehn Minuten klar, wer der Täter ist. Mia fragt, wie er war.",
+   "o": [
+    "Das Ende hat mich total überrascht.",
+    "Der Krimi hat zwei Stunden gedauert.",
+    "Die Handlung war leider total vorhersehbar.",
+    "Ich schaue Krimis am liebsten allein."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie schreiben eine Filmbewertung im Internet. Der Film war nicht schlecht, aber auch nicht super.",
+   "o": [
+    "Ein absolutes Meisterwerk: fünf von fünf Sternen!",
+    "Leider furchtbar schlecht: nur ein Stern von fünf.",
+    "Ganz okay, aber nichts Besonderes: drei von fünf Sternen.",
+    "Der Film läuft ab Donnerstag in allen Kinos."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Der Film war so traurig, dass Sie weinen mussten. Ihre Schwester fragt, wie er war.",
+   "o": [
+    "Der Film hat mich sehr berührt, ich musste weinen.",
+    "Der Film war so lustig, ich musste ständig lachen.",
+    "Der Film hat mich überhaupt nicht interessiert.",
+    "Der Film lief gestern Abend im Fernsehen."
+   ],
+   "a": 0
+  }
+ ],
+ "16": [
+  {
+   "q": "Laylo studiert und möchte ein Konto eröffnen. Sie haben ein kostenloses Studentenkonto und geben ihr einen Rat.",
+   "o": [
+    "An Ihrer Stelle würde ich ein Studentenkonto nehmen.",
+    "Ich habe schon seit zwei Jahren ein Studentenkonto.",
+    "Ich würde gern auch ein neues Konto eröffnen.",
+    "An deiner Stelle würde ich ein Studentenkonto nehmen."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Am Monatsende ist Ihr Geld immer weg. Sie bitten Ihre ältere Schwester um einen Rat.",
+   "o": [
+    "Was würdest du mir raten, wie kann ich besser sparen?",
+    "Was würden Sie mir raten, wie kann ich besser sparen?",
+    "Ich würde dir raten, weniger online einzukaufen.",
+    "Am Monatsende habe ich immer viel Geld übrig."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Timur: „Online-Banking ist total gefährlich!“ Sie finden: Wenn man vorsichtig ist, ist es meistens sicher.",
+   "o": [
+    "Da hast du völlig recht, das ist sehr gefährlich.",
+    "Das stimmt überhaupt nicht, es ist immer total sicher.",
+    "Das stimmt nicht ganz, mit etwas Vorsicht ist es sicher.",
+    "Ich habe leider mein Passwort vergessen."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Mia: „Braucht man für eine Reise nach Deutschland eine Kreditkarte?“ Manche Hotels wollen eine, sonst braucht man sie nicht unbedingt.",
+   "o": [
+    "Nein, in Deutschland braucht man nie eine Kreditkarte.",
+    "Ja, ohne Kreditkarte kann man dort gar nichts machen.",
+    "Das kommt darauf an, manche Hotels wollen eine.",
+    "Ich habe meine Kreditkarte zu Hause vergessen."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Nodir möchte sich von Freunden Geld für ein teures Handy leihen. Sie finden, er sollte lieber sparen.",
+   "o": [
+    "Kein Problem, ich leihe dir gern das Geld.",
+    "Du solltest lieber ein paar Monate sparen.",
+    "Ich hätte auch gern so ein neues Handy.",
+    "Du musst mir das Geld bald zurückgeben."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Aziz: „Bargeld ist doch total altmodisch.“ Sie finden: Viele zahlen mit Karte, aber auf dem Basar braucht man Bargeld.",
+   "o": [
+    "Genau, Bargeld braucht heute wirklich niemand mehr.",
+    "Das stimmt nicht, Karten sind total unsicher.",
+    "Ich habe leider gerade kein Bargeld dabei.",
+    "Zwar zahlen viele mit Karte, aber auf dem Basar nicht."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie sind bei der Bank und fragen die Beraterin, welches Konto für Studenten am besten ist.",
+   "o": [
+    "Welches Konto würden Sie mir als Student empfehlen?",
+    "Welches Konto würdest du mir als Student empfehlen?",
+    "Ich würde Ihnen ein Studentenkonto empfehlen.",
+    "Ich möchte bitte hundert Euro abheben."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Malika: „Lohnt es sich, schon jetzt jeden Monat ein bisschen zu sparen?“ Sie finden: Ja, unbedingt.",
+   "o": [
+    "Nein, Sparen lohnt sich überhaupt nicht.",
+    "Auf jeden Fall, je früher du anfängst, desto besser.",
+    "Ich spare schon seit einem Jahr für ein Auto.",
+    "Das finde ich zu teuer, das kaufe ich nicht."
+   ],
+   "a": 1
+  }
+ ],
+ "17": [
+  {
+   "q": "Sie zeigen Lena ein Foto von einem Graffiti. In der Mitte ist ein großer Vogel. Lena: „Was ist da drauf?“",
+   "o": [
+    "In der Mitte sieht man einen großen Vogel.",
+    "Im Hintergrund sieht man einen kleinen Vogel.",
+    "Das Bild gefällt mir, weil es so bunt ist.",
+    "Der Künstler kommt aus Taschkent."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Das Bild hat dunkle Farben und zeigt eine leere Straße. Mia: „Wie wirkt das Bild auf dich?“",
+   "o": [
+    "Es wirkt auf mich total fröhlich und lebendig.",
+    "Im Vordergrund sieht man eine leere Straße.",
+    "Es hängt im zweiten Stock des Museums.",
+    "Es wirkt auf mich ziemlich traurig und einsam."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie finden die bunte Street-Art an der Uni-Mauer toll. Timur: „Wie findest du das?“",
+   "o": [
+    "Mir gefällt es nicht, weil die Farben so dunkel sind.",
+    "Mir gefällt es sehr, weil die Farben so lebendig sind.",
+    "Links sieht man einen Mann mit einem Hut.",
+    "Das hat bestimmt sehr lange gedauert."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Das Bild zeigt Berge mit Schnee. Es erinnert Sie an Ihren Urlaub in Chimgan. Was sagen Sie?",
+   "o": [
+    "Ich erinnere mich nicht mehr an meinen Urlaub.",
+    "Ich möchte unbedingt mal nach Chimgan fahren.",
+    "Das Bild erinnert mich an meinen Urlaub in Chimgan.",
+    "Im Hintergrund sieht man einen schönen Strand."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie verstehen ein modernes Kunstwerk nicht. Sie fragen die Museumsführerin.",
+   "o": [
+    "Was möchtest du mit diesem Bild zeigen?",
+    "Der Künstler möchte zeigen, dass die Stadt laut ist.",
+    "Was möchte der Künstler mit diesem Werk zeigen?",
+    "Wann macht das Museum heute zu?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sevara hat ein Bild gemalt: „Ehrlich, wie findest du es?“ Die Farben gefallen Ihnen, die Formen nicht so.",
+   "o": [
+    "Die Farben finde ich toll, aber die Formen nicht so.",
+    "Die Formen finde ich toll, aber die Farben nicht so.",
+    "Ehrlich gesagt finde ich das Bild total schrecklich.",
+    "Auf dem Bild sieht man ein Haus und einen Baum."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ein Tourist im Museum: „Wo ist die Frau auf dem Bild?“ Sie steht vorne links.",
+   "o": [
+    "Sie steht rechts im Hintergrund.",
+    "Sie sieht sehr glücklich aus.",
+    "Das Bild ist ungefähr hundert Jahre alt.",
+    "Sie steht links im Vordergrund."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie stehen vor einem riesigen Wandbild und sind sehr beeindruckt. Was sagen Sie zu Ihrer Freundin?",
+   "o": [
+    "Na ja, das Bild ist nichts Besonderes.",
+    "Wahnsinn, das Bild ist wirklich beeindruckend!",
+    "Entschuldigung, wo ist hier der Ausgang?",
+    "Hast du eine Ahnung, wie spät es ist?"
+   ],
+   "a": 1
+  }
+ ],
+ "18": [
+  {
+   "q": "Sie stellen im Kurs einen Artikel über Schlaf vor. Zuerst sagen Sie, worum es geht.",
+   "o": [
+    "In dem Artikel geht es um gesunden Schlaf.",
+    "Ich finde, man sollte viel mehr schlafen.",
+    "Zum Schluss möchte ich mich bedanken.",
+    "Ich bin heute leider sehr müde."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Im Artikel steht: Viele Jugendliche schlafen nur fünf Stunden. Sie finden das schlimm und kommentieren.",
+   "o": [
+    "Der Artikel berichtet, dass Jugendliche wenig schlafen.",
+    "Ich finde es bedenklich, dass Jugendliche so wenig schlafen.",
+    "Ich finde es gut, dass Jugendliche so wenig schlafen.",
+    "Gestern habe ich auch nur fünf Stunden geschlafen."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Am Ende Ihres Referats über Sport fassen Sie das Wichtigste in einem Satz zusammen.",
+   "o": [
+    "Zuerst möchte ich kurz das Thema vorstellen.",
+    "Ich habe den Artikel im Internet gefunden.",
+    "Am Wochenende spiele ich immer Volleyball.",
+    "Zusammenfassend kann man sagen, dass Bewegung sehr wichtig ist."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Im Interview sagt eine Ärztin: Man soll weniger Zucker essen. Sie berichten das im Kurs.",
+   "o": [
+    "Die Ärztin meint, dass wir weniger Zucker essen sollten.",
+    "Ich bin der Meinung, dass Zucker nicht schlimm ist.",
+    "Die Ärztin meint, dass Zucker sehr gesund ist.",
+    "Weniger Zucker? Das schaffe ich bestimmt nicht."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Im Text steht: Lachen hilft gegen Schmerzen. Das wussten Sie nicht. Sie kommentieren.",
+   "o": [
+    "Ich wusste schon immer, dass Lachen hilft.",
+    "Der Text handelt von Tabletten gegen Kopfschmerzen.",
+    "Mich überrascht, dass Lachen gegen Schmerzen hilft.",
+    "Gute Besserung, hoffentlich geht es dir bald besser."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ihre Freundin hat einen langen Artikel über Vitamine gelesen, Sie nicht. Sie bitten sie:",
+   "o": [
+    "Können Sie kurz zusammenfassen, worum es geht?",
+    "Ich fasse kurz zusammen, worum es geht.",
+    "Kannst du kurz zusammenfassen, worum es geht?",
+    "Wo hast du den Artikel denn gefunden?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Im Artikel steht: Sport ist nur für junge Menschen gesund. Sie sehen das ganz anders.",
+   "o": [
+    "Da hat der Autor meiner Meinung nach völlig recht.",
+    "Das sehe ich anders, Sport ist in jedem Alter gesund.",
+    "In dem Artikel geht es um Sport und Alter.",
+    "Ich mache leider viel zu wenig Sport."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Der Text sagt vor allem: Man soll genug Wasser trinken. Lena: „Was ist die wichtigste Aussage?“",
+   "o": [
+    "Die wichtigste Aussage ist, dass Kaffee ungesund ist.",
+    "Ich trinke jeden Tag zwei Liter Wasser.",
+    "Ich finde den Text ehrlich gesagt ziemlich langweilig.",
+    "Die wichtigste Aussage ist, dass man genug Wasser trinken soll."
+   ],
+   "a": 3
+  }
+ ],
+ "19": [
+  {
+   "q": "Sie wohnen in Deutschland im Wohnheim. Sie möchten von Ihrer Mitbewohnerin Lena wissen, wie die Anmeldung funktioniert.",
+   "o": [
+    "Wie läuft das eigentlich bei Ihnen mit der Anmeldung?",
+    "Wie läuft das eigentlich mit der Anmeldung hier?",
+    "Ich habe mich gestern beim Bürgeramt angemeldet.",
+    "Bei uns läuft die Anmeldung ganz anders."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Paul zieht ins Wohnheim: „Was muss ich zuerst machen?“ Zuerst unterschreibt man den Vertrag, dann holt man den Schlüssel.",
+   "o": [
+    "Zuerst holst du den Schlüssel, dann unterschreibst du den Vertrag.",
+    "Das Wohnheim ist ganz in der Nähe der Uni.",
+    "Zuerst unterschreibst du den Vertrag, dann holst du den Schlüssel.",
+    "Im Wohnheim darf man leider keine Partys machen."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Jonas: „Macht ihr in Usbekistan beim Amt auch alles online?“ Bei Ihnen geht man oft noch persönlich hin.",
+   "o": [
+    "Ja, genauso wie bei euch läuft alles online.",
+    "Zuerst muss man immer ein Formular ausfüllen.",
+    "Nicht ganz, bei uns geht man oft noch persönlich hin.",
+    "Ich war ehrlich gesagt noch nie bei einem Amt."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Die Einschreibung an der Uni läuft in Deutschland und in Usbekistan fast gleich. Lena fragt nach den Unterschieden.",
+   "o": [
+    "Eigentlich gibt es kaum Unterschiede, das läuft ähnlich ab.",
+    "Das ist bei uns völlig anders als bei euch.",
+    "Im Gegensatz zu euch ist es bei uns viel schwieriger.",
+    "Ich habe mich letzte Woche an der Uni eingeschrieben."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ein neuer Student: „Was passiert mit meinem Antrag?“ Die Uni prüft ihn, dann bekommt man einen Brief.",
+   "o": [
+    "Zuerst bekommst du einen Brief, danach wird er geprüft.",
+    "Den Antrag hast du leider falsch ausgefüllt.",
+    "Ich weiß nicht, ob die Uni heute offen hat.",
+    "Zuerst wird er geprüft, danach bekommst du einen Brief."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Mia kommt als Austauschstudentin nach Taschkent: „Wann beantragt man hier einen Wohnheimplatz?“ Das macht man normalerweise im August.",
+   "o": [
+    "Normalerweise bekommt man den Platz erst im Dezember.",
+    "Normalerweise stellt man den Antrag schon im August.",
+    "Ich bin im August mit meiner Familie verreist.",
+    "Den Antrag kann man leider nicht online stellen."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie erzählen Jonas: Bei Ihnen dauert die Anmeldung einer Wohnung sehr lange. Jetzt fragen Sie nach Deutschland.",
+   "o": [
+    "Und wie ist das in Deutschland, dauert das auch so lange?",
+    "Bei uns dauert die Anmeldung leider ziemlich lange.",
+    "Kannst du mir vielleicht bei der Anmeldung helfen?",
+    "Wie lange wohnst du eigentlich schon in Deutschland?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Lena: „Was braucht man für den Bibliotheksausweis?“ Man braucht nur den Studentenausweis.",
+   "o": [
+    "Ich habe meinen Studentenausweis verloren.",
+    "Den Ausweis bekommt man im Erdgeschoss.",
+    "Ohne Ausweis darf man nicht in die Bibliothek.",
+    "Dafür brauchst du nur deinen Studentenausweis."
+   ],
+   "a": 3
+  }
+ ],
+ "20": [
+  {
+   "q": "Sie möchten wissen, was Ihre Lehrerin, Frau Weber, über TikTok als Nachrichtenquelle denkt.",
+   "o": [
+    "Was hältst du von TikTok als Nachrichtenquelle?",
+    "Was halten Sie von TikTok als Nachrichtenquelle?",
+    "Ich halte TikTok für keine gute Nachrichtenquelle.",
+    "Wie lange benutzen Sie TikTok schon?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "In der Diskussion im Kurs sind Sie ganz sicher: Man muss Nachrichten aus dem Internet immer prüfen.",
+   "o": [
+    "Ich bezweifle, dass man Nachrichten prüfen muss.",
+    "Ich bin mir nicht sicher, ob man das prüfen muss.",
+    "Ich lese jeden Morgen die Nachrichten im Internet.",
+    "Ich bin fest davon überzeugt, dass man Nachrichten prüfen muss."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Timur: „Im Internet steht, dass Schokolade schlank macht.“ Sie glauben das nicht.",
+   "o": [
+    "Das bezweifle ich, das klingt nach Fake News.",
+    "Echt? Dann esse ich ab heute mehr Schokolade!",
+    "Davon bin ich total überzeugt.",
+    "Ich esse lieber Obst als Schokolade."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Malika zeigt Ihnen ein Foto im Netz: „Ist das Foto echt?“ Sie wissen es nicht genau.",
+   "o": [
+    "Natürlich ist es echt, das sieht man doch sofort!",
+    "Ich bin mir nicht sicher, es könnte auch gefälscht sein.",
+    "Auf dem Foto sieht man einen bekannten Politiker.",
+    "Ich habe das Foto gestern selbst gemacht."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Lena: „Ich finde, Zeitungen sind zuverlässiger als soziale Medien.“ Sie denken das auch.",
+   "o": [
+    "Das sehe ich ehrlich gesagt ganz anders.",
+    "Da stimme ich Ihnen zu, das sehe ich genauso.",
+    "Ich lese Nachrichten meistens auf dem Handy.",
+    "Da stimme ich dir zu, das sehe ich genauso."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Aziz: „Fake News sind doch harmlos.“ Sie finden Fake News gefährlich.",
+   "o": [
+    "Das sehe ich anders, Fake News können gefährlich sein.",
+    "Genau, die sind wirklich ganz harmlos.",
+    "Ich weiß leider nicht, was Fake News sind.",
+    "Ich habe heute noch keine Nachrichten gelesen."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Im Kurs diskutieren Sie: Sollte man Handys in der Schule verbieten? Sie sind dagegen.",
+   "o": [
+    "Meiner Meinung nach sollte man Handys unbedingt verbieten.",
+    "Mein Handy ist leider schon ziemlich alt.",
+    "Meiner Meinung nach sollte man Handys nicht verbieten.",
+    "Wie wäre es, wenn wir jetzt eine Pause machen?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ein Influencer sagt, sein Tee hilft gegen alle Krankheiten. Sie glauben ihm nicht und erzählen Laylo davon.",
+   "o": [
+    "Er hat bewiesen, dass sein Tee gegen alles hilft.",
+    "Ich trinke jeden Tag zwei Tassen Tee.",
+    "Er behauptet, sein Tee hilft gegen alles. Quatsch!",
+    "Er ist der Meinung, dass Tee ungesund ist."
+   ],
+   "a": 2
+  }
+ ],
+ "21": [
+  {
+   "q": "Ihr Kurs möchte zum Kursende etwas zusammen machen. Die Lehrerin fragt: „Hat jemand eine Idee?“",
+   "o": [
+    "Gut, dann machen wir es so.",
+    "Das finde ich keine gute Idee.",
+    "Wir könnten zusammen ein Picknick im Park machen.",
+    "Ich bin mit dem Plan einverstanden."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sevara: „Wie wäre es, wenn wir am Samstag zusammen für die Prüfung lernen?“ Sie finden die Idee super.",
+   "o": [
+    "Gute Idee, Samstag passt mir perfekt!",
+    "Das geht leider nicht, weil ich am Samstag Training habe.",
+    "Wäre es nicht besser, wenn jeder allein lernt?",
+    "Wie wäre es lieber mit Sonntag?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Timur: „Lass uns in den Ferien nach Paris fliegen!“ Dafür haben Sie nicht genug Geld.",
+   "o": [
+    "Einverstanden, das klingt wirklich super!",
+    "Also abgemacht: Wir fliegen nach Paris.",
+    "Ich fliege am liebsten mit meinen Freunden.",
+    "Ich weiß nicht so recht, das kann ich mir nicht leisten."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Malika: „Wir feiern deinen Geburtstag bei uns in der WG, okay?“ Sie möchten lieber in ein Restaurant gehen.",
+   "o": [
+    "Einverstanden, wir feiern bei uns in der WG.",
+    "Wäre es nicht besser, wenn wir ins Restaurant gehen?",
+    "Gut, dann machen wir es genau so.",
+    "Was hältst du von einer Party in der WG?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie und Aziz haben lange diskutiert. Jetzt möchten Sie beide in den Zoo. Sie beenden die Diskussion.",
+   "o": [
+    "Also abgemacht: Am Sonntag gehen wir in den Zoo.",
+    "Ich habe eine andere Idee: Wir gehen ins Museum.",
+    "Was hältst du von einem Ausflug in den Zoo?",
+    "Das finde ich nicht so gut, Zoos sind langweilig."
+   ],
+   "a": 0
+  },
+  {
+   "q": "In Ihrer Projektgruppe hat jetzt jeder eine Aufgabe. Sie möchten prüfen, ob alle zustimmen.",
+   "o": [
+    "Ich habe noch eine ganz andere Idee für das Projekt.",
+    "Ich schlage vor, dass wir noch einmal neu anfangen.",
+    "Ich bin dagegen, das ist für mich zu viel.",
+    "Sind wir uns einig, oder hat jemand eine andere Meinung?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihr Kurs möchte Geld für ein Kinderheim sammeln. Niemand hat eine Idee. Sie denken an einen Kuchenbasar.",
+   "o": [
+    "Einverstanden, dann machen wir einen Kuchenbasar.",
+    "Ich schlage vor, dass wir einen Kuchenbasar machen.",
+    "Ich habe keine Lust auf einen Kuchenbasar.",
+    "Hast du schon mal einen Kuchen gebacken?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie möchten ins Kino, Paul möchte bowlen. Sie schlagen einen Kompromiss vor.",
+   "o": [
+    "Na gut, dann gehen wir eben nur bowlen.",
+    "Ich gehe ins Kino, du kannst ja allein bowlen.",
+    "Wie wäre es, wenn wir erst ins Kino und dann bowlen gehen?",
+    "Bowling finde ich nicht so gut, weil ich das nicht kann."
+   ],
+   "a": 2
+  }
+ ],
+ "22": [
+  {
+   "q": "Auf einer Karikatur schläft ein Politiker im Parlament. Lena: „Was soll das bedeuten?“",
+   "o": [
+    "Ich halte es für wahrscheinlich, dass er gewinnt.",
+    "Ich finde die Karikatur überhaupt nicht lustig.",
+    "Das soll wohl zeigen, dass Politiker oft nicht zuhören.",
+    "Ich war noch nie in einem Parlament."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Die Wahl ist erst morgen, aber ein Kandidat feiert im Fernsehen schon. Sie kommentieren.",
+   "o": [
+    "Er tut so, als ob er sehr müde wäre.",
+    "Er hat die Wahl schon gestern gewonnen.",
+    "Er tut so, als ob er schon gewonnen hätte.",
+    "Ich glaube, er hat die Wahl verloren."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Malika: „Gewinnt die junge Kandidatin die Wahl?“ Sie glauben: eher nicht, denn sie ist noch unbekannt.",
+   "o": [
+    "Ich bin mir ganz sicher, dass sie gewinnt.",
+    "Ich halte das für unwahrscheinlich, sie ist noch unbekannt.",
+    "Ich finde es super, dass sie noch so jung ist.",
+    "Sie hat gestern eine lange Rede gehalten."
+   ],
+   "a": 1
+  },
+  {
+   "q": "In manchen Ländern darf man schon mit 16 wählen. Sie finden das richtig. Aziz: „Wie findest du das?“",
+   "o": [
+    "Ich halte das für einen großen Fehler.",
+    "Ich vermute, dass nur wenige wählen gehen.",
+    "Ich bin leider erst fünfzehn Jahre alt.",
+    "Ich halte das für eine sehr gute Entscheidung."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ein Politiker sagt: „Über das Thema müssen wir noch sprechen.“ Sie glauben, er will nichts ändern.",
+   "o": [
+    "Das bedeutet wohl, dass er nichts ändern möchte.",
+    "Das bedeutet, dass er sofort etwas ändert.",
+    "Ich finde, er spricht sehr gut und klar.",
+    "Wann ist eigentlich die nächste Wahl?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Jonas: „Wie viele Studenten gehen wohl zur Wahl des Studentenrats?“ Sie schätzen: ungefähr die Hälfte.",
+   "o": [
+    "Ich weiß genau, dass alle Studenten hingehen.",
+    "Ich schätze, dass ungefähr die Hälfte hingeht.",
+    "Ich finde es wichtig, dass alle hingehen.",
+    "Ich gehe leider nicht hin, ich habe keine Zeit."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Die Stadt will einen Park schließen und dort Parkplätze bauen. Sie sind dagegen.",
+   "o": [
+    "Das finde ich richtig, weil wir mehr Parkplätze brauchen.",
+    "Ich schätze, dass der Bau zwei Jahre dauert.",
+    "Der Park liegt direkt neben meiner Uni.",
+    "Das finde ich falsch, weil wir Grünflächen brauchen."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Auf einem Foto stehen viele Menschen mit Plakaten vor dem Rathaus. Mia: „Was ist da los?“",
+   "o": [
+    "Es sieht so aus, als ob die Leute demonstrieren.",
+    "Ich halte Demonstrationen für ziemlich sinnlos.",
+    "Das Rathaus ist wirklich ein schönes Gebäude.",
+    "Ich vermute, dass das Rathaus heute zu ist."
+   ],
+   "a": 0
+  }
+ ],
+ "23": [
+  {
+   "q": "Sie planen mit Freunden einen Ausflug nach Samarkand. Die Uhrzeit ist klar, aber nicht der Treffpunkt.",
+   "o": [
+    "Wann fahren wir denn am Samstag los?",
+    "Wir treffen uns um acht am Bahnhof.",
+    "Warst du schon mal in Samarkand?",
+    "Wo treffen wir uns denn am Samstag?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Nodir: „Wer kümmert sich um die Zugtickets?“ Sie möchten das machen.",
+   "o": [
+    "Kannst du dich bitte um die Tickets kümmern?",
+    "Das übernehme ich, ich kaufe sie heute online.",
+    "Wer kümmert sich denn um das Essen?",
+    "Die Tickets sind leider schon ausverkauft."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie möchten, dass Ihre Freundin Laylo das Essen für den Ausflug organisiert.",
+   "o": [
+    "Laylo, kannst du dich um das Essen kümmern?",
+    "Laylo, ich kümmere mich um das Essen.",
+    "Laylo, hat dir das Essen geschmeckt?",
+    "Laylo, können Sie sich um das Essen kümmern?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Lena: „Wie kommen wir zur alten Festung?“ Ein Bus fährt direkt hin.",
+   "o": [
+    "Am besten fahren wir schon um neun Uhr los.",
+    "Die Festung ist über fünfhundert Jahre alt.",
+    "Ich würde lieber ins Museum gehen.",
+    "Am besten nehmen wir den Bus, der fährt direkt hin."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie wandern mit Freunden zu einer alten Burg. Es wird heute sehr heiß. Sie erinnern die anderen.",
+   "o": [
+    "Wir sollten warme Jacken mitnehmen.",
+    "Wir sollten genug Wasser mitnehmen.",
+    "Wir sollten die Burg lieber nicht besuchen.",
+    "Wie lange dauert die Wanderung?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie rufen im Museum an. Sie möchten wissen, wie teuer die Führung ist.",
+   "o": [
+    "Wie lange dauert die Führung ungefähr?",
+    "Die Führung kostet zehn Euro pro Person.",
+    "Wie viel kostet die Führung für Studenten?",
+    "Wann beginnt denn die nächste Führung?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sevara: „Wohin fahren wir am Wochenende?“ Sie möchten nach Buchara, dort gibt es viel Geschichte.",
+   "o": [
+    "Ich war letztes Jahr mit meiner Familie dort.",
+    "In Buchara ist es im Sommer sehr heiß.",
+    "Wie wäre es mit Buchara? Da gibt es viel Geschichte.",
+    "Gut, dann machen wir es so."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Timur: „Wann fahren wir morgens los?“ Die Fahrt dauert drei Stunden, das Museum öffnet um zehn.",
+   "o": [
+    "Lass uns um sieben losfahren, dann sind wir pünktlich.",
+    "Lass uns um neun losfahren, dann sind wir pünktlich.",
+    "Das Museum ist am Montag leider geschlossen.",
+    "Wir sollten unbedingt viele Fotos machen."
+   ],
+   "a": 0
+  }
+ ],
+ "24": [
+  {
+   "q": "Aziz ist heute nicht im Kurs, sonst ist er immer da. Laylo: „Wo ist Aziz?“ Sie vermuten etwas.",
+   "o": [
+    "Er ist krank, das weiß ich genau.",
+    "Ich werde ihn nie wieder anrufen.",
+    "Du wirst ihn jetzt sofort anrufen!",
+    "Er wird wohl krank sein."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihre Mutter ist sauer, weil Sie gestern sehr spät nach Hause gekommen sind. Was versprechen Sie?",
+   "o": [
+    "Ich werde nächstes Mal früher kommen, versprochen!",
+    "Du wirst nächstes Mal früher kommen!",
+    "Es wird heute wohl wieder spät werden.",
+    "Ich bin doch schon erwachsen!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihr kleiner Bruder spielt seit Stunden am Handy und macht keine Hausaufgaben. Sie sagen streng:",
+   "o": [
+    "Ich werde jetzt sofort meine Hausaufgaben machen!",
+    "Du wirst wohl heute keine Hausaufgaben haben.",
+    "Du wirst jetzt sofort deine Hausaufgaben machen!",
+    "Ich verspreche dir, dass ich dir helfe."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Lena: „Wie spät ist es?“ Sie haben keine Uhr dabei, aber es ist schon dunkel.",
+   "o": [
+    "Es ist genau acht Uhr und zehn Minuten.",
+    "Ich werde mir morgen eine Uhr kaufen.",
+    "Es wird ungefähr acht Uhr sein.",
+    "Du wirst jetzt nach Hause gehen!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Malika hat Ihnen ein Buch geliehen. Sie fragt: „Bekomme ich es bis Freitag zurück?“",
+   "o": [
+    "Klar, du wirst es mir am Donnerstag zurückgeben.",
+    "Klar, ich werde es dir am Donnerstag zurückgeben.",
+    "Das Buch wird dir bestimmt sehr gut gefallen.",
+    "Ich habe das Buch leider noch nicht gelesen."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sevara: „Wie wird das Wetter morgen beim Picknick?“ Der Himmel ist voller dunkler Wolken.",
+   "o": [
+    "Ich glaube, morgen wird die Sonne scheinen.",
+    "Ich werde morgen pünktlich sein, versprochen.",
+    "Ihr werdet jetzt die Decken einpacken!",
+    "Ich glaube, es wird morgen regnen."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie sind Gruppenleiter im Ferienlager. Die Kinder sind nachts noch sehr laut. Was sagen Sie?",
+   "o": [
+    "Ihr werdet jetzt sofort leise sein und schlafen!",
+    "Ihr werdet morgen bestimmt sehr müde sein.",
+    "Ich werde euch morgen eine Geschichte vorlesen.",
+    "Sie werden jetzt bitte sofort leise sein!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Silvester. Timur: „Was nimmst du dir für das neue Jahr vor?“",
+   "o": [
+    "Ich habe letztes Jahr viel Sport gemacht.",
+    "Ich werde endlich jeden Tag Sport machen.",
+    "Du wirst jetzt endlich Sport machen!",
+    "Im neuen Jahr wird es wohl viel regnen."
+   ],
+   "a": 1
+  }
+ ]
+}

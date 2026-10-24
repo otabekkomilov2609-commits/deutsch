@@ -31,12 +31,12 @@
    "a": 3
   },
   {
-   "q": "Sie erzählen von Ihrem Bruder und seiner Freundin. Jetzt kommt das Besondere: Sie heiraten!",
+   "q": "Sie erzählen von Ihrem Bruder und seiner Freundin. Jetzt kommt das Besondere: Die zwei heiraten!",
    "o": [
     "Kennt ihr meinen Bruder schon?",
-    "Und stellt euch vor: Sie heiraten im Juni!",
+    "Und stellt euch vor: Die zwei heiraten im Juni!",
     "Oh! Herzlichen Glückwunsch, ihr zwei!",
-    "Bist du früher oft verreist?"
+    "Also passt auf: Ich habe einen Bruder."
    ],
    "a": 1
   },
@@ -773,7 +773,7 @@
    "o": [
     "Auf keinen Fall! Ohne mich!",
     "Also gut, von mir aus.",
-    "Ich bin sicher, das funktioniert. Ich helfe dir!",
+    "Ich bin sicher, das funktioniert!",
     "Für mich ist das auch nichts."
    ],
    "a": 2
@@ -836,7 +836,7 @@
     "Ich hätte jetzt so gern eine kalte Limonade!",
     "Hast du schon mal Limonade gemacht?",
     "Nur wenige trinken gern Limonade.",
-    "Ich wäre lieber in den Bergen als hier."
+    "Die meisten trinken im Sommer Limonade."
    ],
    "a": 0
   },
