@@ -1253,3 +1253,9 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Subtitr standart o'chiq (cc_load_policy=0); o'quvchi pleyerda o'zi yoqishi mumkin. Easy German transkripti ko'chirilmaydi (mualliflik) — Mavzular va misollar o'zimizniki.
 - Ma'lumot: vdData() — mashq id → {t, v:[{id, t, ch:[[soniya, ibora, misol]]}], w:[[so'z, uz, ru, misol, video№, soniya]]}. Yangi Lektion qo'shish — shu yerga yozish + vidOnly() ro'yxati.
 - YouTube IFrame API (youtube-nocookie); yuklanmasa — oddiy iframe (Mavzular bosilganda vaqtga o'tmaydi).
+
+## 🌙 Qorong'i rejim tekshiruvi (2026-10-24)
+- Otabek: «orqa fonda dunkel modusda saytda ko'rinmasdan qolmaydimi shuni tekshir». Avtomatik tekshiruv: 18 ta ekran × 3 holat (telefon qorong'i · saytdagi 🌗 bilan qorong'i · telefon qorong'i + saytda yorug'), har bir yozuv rangi foniga nisbatan (kontrast).
+- Topildi va tuzatildi: Hören'dagi «↺5» tugmasi (ko'rinmasdi), Lektion raqami doirasi (oq yozuv och ko'kda), suzuvchi «Hammasini yig'ish», 🌗 bilan qorong'i rejimda Kunlik challenge kartasi (sarlavha umuman ko'rinmasdi).
+- Umumiy sabab: ba'zi qorong'i qoidalar faqat telefon sozlamasi (@media prefers-color-scheme) uchun yozilgan, saytdagi 🌗 tugmasi (:root[data-theme="dark"]) uchun emas. 10 ta shunday qoida avtomatik ikkilantirildi. Yangi qorong'i CSS yozganda — DOIM ikkala ko'rinishda: @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) X{…}} va :root[data-theme="dark"] X{…}.
+- Qolgan «past kontrast»lar — faqat Lektion ichidagi emoji kataklari (emoji o'z rangida ko'rinadi, muammo emas).
