@@ -1,0 +1,520 @@
+{
+ "title": "Lektion 16 · Grammatik",
+ "sub": "Reflexivpronomen · Satzstellung · Perfekt & Nebensatz",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "gram",
+   "ic": "📘",
+   "t": "Grammatik",
+   "items": [
+    {
+     "t": "info",
+     "h": "<h4>Reflexive Verben: Verb + mich / dich / sich …</h4>\n<table class=\"ex-tb\"><tr><th>Person</th><th>sich fühlen</th><th>Pronomen</th></tr>\n<tr><td>ich</td><td>fühle</td><td><b>mich</b></td></tr>\n<tr><td>du</td><td>fühlst</td><td><b>dich</b></td></tr>\n<tr><td>er / es / sie</td><td>fühlt</td><td><b>sich</b></td></tr>\n<tr><td>wir</td><td>fühlen</td><td><b>uns</b></td></tr>\n<tr><td>ihr</td><td>fühlt</td><td><b>euch</b></td></tr>\n<tr><td>sie / Sie</td><td>fühlen</td><td><b>sich</b></td></tr></table>\n<p class=\"ex-note\">Ich treffe <b>Elif</b>. (eine andere Person) · Wir treffen <b>uns</b>. (dieselben Personen)<br>er / es / sie / sie / Sie → immer <b>sich</b>.</p>"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *mich*, *dich*, *sich*, *uns* oder *euch*.",
+     "bsp": "Nach dem Sport fühle ich ___ super. → ich → <b>mich</b>",
+     "s": "Elif und Paul streiten ___ schon wieder.",
+     "a": [
+      [
+       "sich"
+      ]
+     ],
+     "gw": {
+      "uz": "Refleksiv olmosh egaga mos: ich → <b>mich</b>, du → <b>dich</b>, wir → <b>uns</b>, ihr → <b>euch</b>; er, sie, es, sie (ular) va Sie → doim <b>sich</b>. Avval egani toping. Misol: <b>Du fühlst dich müde.</b>",
+      "ru": "Возвратное местоимение зависит от подлежащего: ich → <b>mich</b>, du → <b>dich</b>, wir → <b>uns</b>, ihr → <b>euch</b>; er, sie, es, sie (они) и Sie → всегда <b>sich</b>. Сначала найдите подлежащее. Пример: <b>Du fühlst dich müde.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *mich*, *dich*, *sich*, *uns* oder *euch*.",
+     "s": "Wir treffen ___ am Samstag im Park.",
+     "a": [
+      [
+       "uns"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *mich*, *dich*, *sich*, *uns* oder *euch*.",
+     "s": "Verstehst du ___ gut mit deinem Bruder?",
+     "a": [
+      [
+       "dich"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *mich*, *dich*, *sich*, *uns* oder *euch*.",
+     "s": "Ihr müsst ___ nicht entschuldigen. Alles ist gut!",
+     "a": [
+      [
+       "euch"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *mich*, *dich*, *sich*, *uns* oder *euch*.",
+     "s": "Herr Schulz beschwert ___ oft über die Nachbarn.",
+     "a": [
+      [
+       "sich"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *mich*, *dich*, *sich*, *uns* oder *euch*.",
+     "s": "Ich freue ___ schon auf die neue Folge.",
+     "a": [
+      [
+       "mich"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Was passt?",
+     "bsp": "Mia freut ___ auf den Abend. → sie → ✓ <b>sich</b>",
+     "q": "Tom ist krank. Er fühlt ___ nicht gut.",
+     "o": [
+      "ihn",
+      "sich",
+      "er"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Variantlarda shaxs olmoshlari (<b>ihn, er</b>) ham bor — ular boshqa odamni bildiradi. Ega o‘zi haqida bo‘lsa, refleksiv kerak: 3-shaxsda <b>sich</b>, wir → <b>uns</b>, ihr → <b>euch</b>. <b>… und ich</b> = wir. Misol: <b>Paul ärgert sich oft.</b>",
+      "ru": "Среди вариантов есть личные местоимения (<b>ihn, er</b>) — они обозначают другого человека. Если действие на самого себя, нужно возвратное: в 3-м лице <b>sich</b>, wir → <b>uns</b>, ihr → <b>euch</b>. <b>… und ich</b> = wir. Пример: <b>Paul ärgert sich oft.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt?",
+     "q": "Sofia und ich treffen ___ jeden Freitag im Kino.",
+     "o": [
+      "sich",
+      "uns",
+      "euch"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was passt?",
+     "q": "Und ihr? Wo trefft ihr ___?",
+     "o": [
+      "euch",
+      "uns",
+      "sich"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was passt?",
+     "q": "Meine Eltern streiten ___ nie.",
+     "o": [
+      "ihnen",
+      "sie",
+      "sich"
+     ],
+     "a": 2
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Verb und das Reflexivpronomen.",
+     "bsp": "Wir ___ ___ morgen. (sich treffen) → <b>treffen</b> <b>uns</b>",
+     "s": "Warum ___ ihr ___ schon wieder? (sich streiten)",
+     "a": [
+      [
+       "streitet"
+      ],
+      [
+       "euch"
+      ]
+     ],
+     "gw": {
+      "uz": "Ikki bo‘shliq: egaga mos fe’l shakli, keyin refleksiv olmosh: ich …e <b>mich</b>, du …st <b>dich</b>, er …t <b>sich</b>, wir …en <b>uns</b>, ihr …t <b>euch</b>. Savolda fe’l egadan oldin, olmosh egadan keyin. Misol: <b>Warum entschuldigst du dich?</b>",
+      "ru": "Два пропуска: форма глагола по подлежащему, затем возвратное местоимение: ich …e <b>mich</b>, du …st <b>dich</b>, er …t <b>sich</b>, wir …en <b>uns</b>, ihr …t <b>euch</b>. В вопросе глагол перед подлежащим, местоимение — после. Пример: <b>Warum entschuldigst du dich?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Verb und das Reflexivpronomen.",
+     "s": "Mia ___ ___ heute super. (sich fühlen)",
+     "a": [
+      [
+       "fühlt"
+      ],
+      [
+       "sich"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Verb und das Reflexivpronomen.",
+     "s": "Ich ___ ___ gut mit meinen Kollegen. (sich verstehen)",
+     "a": [
+      [
+       "verstehe"
+      ],
+      [
+       "mich"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Verb und das Reflexivpronomen.",
+     "s": "In der Serie ___ ___ die Hauptfigur in einen Arzt. (sich verlieben)",
+     "a": [
+      [
+       "verliebt"
+      ],
+      [
+       "sich"
+      ]
+     ]
+    },
+    {
+     "t": "info",
+     "h": "<h4>Wo steht das Reflexivpronomen?</h4>\n<div class=\"ex-sk\"><span>Wir</span><span class=\"v\">treffen</span><span>uns</span><span>am Freitag</span>.</div>\n<div class=\"ex-sk\"><span>Am Freitag</span><span class=\"v\">treffen</span><span>wir</span><span>uns</span>.</div>\n<div class=\"ex-sk\"><span>Wo</span><span class=\"v\">trefft</span><span>ihr</span><span>euch</span>?</div>\n<div class=\"ex-sk\"><span>Ich</span><span class=\"v\">muss</span><span>mich</span><span>bei Mia</span><span class=\"v\">entschuldigen</span>.</div>\n<p class=\"ex-note\">Pronomen <b>direkt nach dem Verb</b>. Steht ich / du / wir … nach dem Verb: <b>Verb + Subjekt + Pronomen</b> (Heute fühle ich mich gut.)</p>"
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie Sätze.",
+     "bsp": "uns | treffen | Wir | im Park → <b>Wir treffen uns im Park.</b>",
+     "w": [
+      "uns",
+      "Am Wochenende",
+      "wir",
+      "treffen"
+     ],
+     "a": "Am Wochenende treffen wir uns.",
+     "gw": {
+      "uz": "Refleksiv olmosh fe’ldan keyin turadi. Ega fe’ldan keyin kelsa (1-o‘rinda boshqa so‘z yoki savol so‘zi), tartib: fe’l → ega → olmosh. Misol: <b>Heute fühle ich mich gut.</b> · <b>Wann sehen wir uns?</b>",
+      "ru": "Возвратное местоимение стоит после глагола. Если подлежащее идёт после глагола (на 1-м месте другое слово или вопросительное слово), порядок: глагол → подлежащее → местоимение. Пример: <b>Heute fühle ich mich gut.</b> · <b>Wann sehen wir uns?</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie Sätze.",
+     "w": [
+      "euch",
+      "Wo",
+      "ihr",
+      "trefft"
+     ],
+     "a": "Wo trefft ihr euch?"
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie Sätze.",
+     "w": [
+      "muss",
+      "mich",
+      "Ich",
+      "bei Nora",
+      "entschuldigen"
+     ],
+     "a": "Ich muss mich bei Nora entschuldigen."
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie Sätze.",
+     "w": [
+      "ihr",
+      "Streitet",
+      "oft",
+      "euch"
+     ],
+     "a": "Streitet ihr euch oft?"
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie Sätze.",
+     "w": [
+      "Nach dem Sport",
+      "ich",
+      "fühle",
+      "mich",
+      "immer super"
+     ],
+     "a": "Nach dem Sport fühle ich mich immer super."
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie Sätze.",
+     "w": [
+      "dich",
+      "Warum",
+      "entschuldigst",
+      "du",
+      "nicht"
+     ],
+     "a": "Warum entschuldigst du dich nicht?"
+    },
+    {
+     "t": "mc",
+     "h": "Welcher Satz ist richtig?",
+     "bsp": "Wir treffen uns heute. → Heute … → ✓ <b>Heute treffen wir uns.</b> (nicht: Heute treffen uns wir.)",
+     "q": "Wir treffen uns morgen im Kino. → Morgen …",
+     "o": [
+      "Morgen treffen uns wir im Kino.",
+      "Morgen treffen wir uns im Kino.",
+      "Morgen wir treffen uns im Kino."
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Fe’l 2-o‘rinda bo‘lishi kerak. Ega olmosh bo‘lsa (<b>ich, wir</b> …), tartib: fe’l → ega → refleksiv olmosh. «fe’l + refleksiv + ega» yoki ega fe’ldan oldin — xato. Misol: <b>Am Abend streiten wir uns oft.</b>",
+      "ru": "Глагол должен быть на 2-м месте. Если подлежащее — местоимение (<b>ich, wir</b> …), порядок: глагол → подлежащее → возвратное местоимение. «глагол + возвратное + подлежащее» или подлежащее перед глаголом — ошибка. Пример: <b>Am Abend streiten wir uns oft.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Welcher Satz ist richtig?",
+     "q": "Ich fühle mich nach dem Film nicht gut. → Nach dem Film …",
+     "o": [
+      "Nach dem Film fühle ich mich nicht gut.",
+      "Nach dem Film ich fühle mich nicht gut.",
+      "Nach dem Film fühle mich ich nicht gut."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Welcher Satz ist richtig?",
+     "q": "Paul soll sich entschuldigen. Bei wem? Bei Mia.",
+     "o": [
+      "Paul soll entschuldigen sich bei Mia.",
+      "Paul sich soll bei Mia entschuldigen.",
+      "Paul soll sich bei Mia entschuldigen."
+     ],
+     "a": 2
+    },
+    {
+     "t": "info",
+     "h": "<h4>Perfekt und Nebensatz</h4>\n<table class=\"ex-tb\"><tr><th>Infinitiv</th><th>Perfekt</th></tr>\n<tr><td>sich treffen</td><td><b>hat</b> sich getroffen</td></tr>\n<tr><td>sich streiten</td><td><b>hat</b> sich gestritten</td></tr>\n<tr><td>sich verlieben</td><td><b>hat</b> sich verliebt</td></tr>\n<tr><td>sich entschuldigen</td><td><b>hat</b> sich entschuldigt</td></tr></table>\n<div class=\"ex-sk\"><span>…, weil</span><span>ich</span><span>mich</span><span>nicht gut</span><span class=\"v\">fühle</span>.</div>\n<p class=\"ex-note\">Perfekt: immer mit <b>haben</b>. · Nebensatz (dass, weil, wenn): Subjekt + Pronomen … Verb am <b>Ende</b>.</p>"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie im Perfekt.",
+     "bsp": "Ali ___ sich bei mir ___. (sich entschuldigen) → <b>hat</b> … <b>entschuldigt</b>",
+     "s": "Gestern ___ ich mich mit Elif im Café ___. (sich treffen)",
+     "a": [
+      [
+       "habe"
+      ],
+      [
+       "getroffen"
+      ]
+     ],
+     "gw": {
+      "uz": "Refleksiv fe’llar Perfektda doim <b>haben</b> bilan. <b>haben</b> 2-o‘rinda, refleksiv olmosh undan keyin, Partizip oxirida. <b>ver-, ent-</b> fe’llarida <b>ge-</b> yo‘q. Misol: <b>Wir haben uns gefreut.</b> · <b>Ich habe mich verletzt.</b>",
+      "ru": "Возвратные глаголы в Perfekt всегда с <b>haben</b>. <b>haben</b> на 2-м месте, возвратное местоимение за ним, Partizip в конце. У глаголов на <b>ver-, ent-</b> нет <b>ge-</b>. Пример: <b>Wir haben uns gefreut.</b> · <b>Ich habe mich verletzt.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie im Perfekt.",
+     "s": "Jonas und Mia ___ sich im Urlaub ___. (sich verlieben)",
+     "a": [
+      [
+       "haben"
+      ],
+      [
+       "verliebt"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie im Perfekt.",
+     "s": "___ ihr euch schon wieder ___? (sich streiten)",
+     "a": [
+      [
+       "Habt"
+      ],
+      [
+       "gestritten"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie im Perfekt.",
+     "s": "Frau Keller ___ sich beim Hausmeister über den Müll im Hof ___. (sich beschweren)",
+     "a": [
+      [
+       "hat"
+      ],
+      [
+       "beschwert"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Nebensatz: Ergänzen Sie das Reflexivpronomen und das Verb.",
+     "bsp": "Ich bin froh, dass wir ___ wieder gut ___. (sich verstehen) → <b>uns</b> … <b>verstehen</b>",
+     "s": "Ich bin sauer, weil du ___ nicht ___. (sich entschuldigen)",
+     "a": [
+      [
+       "dich"
+      ],
+      [
+       "entschuldigst"
+      ]
+     ],
+     "gw": {
+      "uz": "dass/weil gapida refleksiv olmosh egadan keyin darhol keladi, tuslangan fe’l esa oxirida. Olmosh ham, fe’l ham egaga mos: du → <b>dich</b> … -st, wir → <b>uns</b> … -en. Misol: <b>…, weil er sich nicht wohl fühlt.</b>",
+      "ru": "В придаточном с dass/weil возвратное местоимение идёт сразу после подлежащего, а спрягаемый глагол — в конце. И местоимение, и глагол согласуются с подлежащим: du → <b>dich</b> … -st, wir → <b>uns</b> … -en. Пример: <b>…, weil er sich nicht wohl fühlt.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Nebensatz: Ergänzen Sie das Reflexivpronomen und das Verb.",
+     "s": "Es ist schade, dass ihr ___ so oft ___. (sich streiten)",
+     "a": [
+      [
+       "euch"
+      ],
+      [
+       "streitet"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Nebensatz: Ergänzen Sie das Reflexivpronomen und das Verb.",
+     "s": "Wir bleiben heute zu Hause, weil ich ___ nicht gut ___. (sich fühlen)",
+     "a": [
+      [
+       "mich"
+      ],
+      [
+       "fühle"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Nebensatz: Ergänzen Sie das Reflexivpronomen und das Verb.",
+     "s": "Mia ist so fröhlich, weil sie ___ auf das Wochenende ___. (sich freuen)",
+     "a": [
+      [
+       "sich"
+      ],
+      [
+       "freut"
+      ]
+     ]
+    },
+    {
+     "t": "info",
+     "h": "<h4>Reflexive Verben mit Präposition</h4>\n<table class=\"ex-tb\"><tr><th>Verb</th><th>Präposition</th><th>Beispiel</th></tr>\n<tr><td>sich verlieben</td><td><b>in</b> + Akk.</td><td>in einen Kollegen</td></tr>\n<tr><td>sich beschweren</td><td><b>über</b> + Akk.</td><td>über den Müll</td></tr>\n<tr><td>sich freuen</td><td><b>auf</b> + Akk.</td><td>auf den Urlaub</td></tr>\n<tr><td>sich entschuldigen</td><td><b>bei</b> + Dat.</td><td>bei der Nachbarin</td></tr>\n<tr><td>sich streiten / sich verstehen</td><td><b>mit</b> + Dat.</td><td>mit dem Bruder</td></tr></table>\n<p class=\"ex-note\">Achtung: sich Sorgen machen → ich mache <b>mir</b> Sorgen · du machst <b>dir</b> Sorgen · er macht <b>sich</b> Sorgen</p>"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *in*, *über*, *auf*, *bei* oder *mit*.",
+     "bsp": "Ich verstehe mich gut ___ meiner Schwester. → sich verstehen + <b>mit</b>",
+     "s": "Nora hat sich ___ ihren Nachbarn verliebt.",
+     "a": [
+      [
+       "in"
+      ]
+     ],
+     "gw": {
+      "uz": "Predlog fe’l bilan birga yodlanadi, uni ma’nodan topib bo‘lmaydi. Avval fe’lni toping, so‘ng uning juftini eslang; kelishik ham predlogga bog‘liq. Misol: <b>sich entschuldigen bei</b> → <b>Ich entschuldige mich bei dir.</b>",
+      "ru": "Предлог учат вместе с глаголом, по смыслу его не угадать. Сначала найдите глагол, затем вспомните его пару; падеж тоже зависит от предлога. Пример: <b>sich entschuldigen bei</b> → <b>Ich entschuldige mich bei dir.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *in*, *über*, *auf*, *bei* oder *mit*.",
+     "s": "Herr Yilmaz beschwert sich ___ das Essen in der Kantine.",
+     "a": [
+      [
+       "über"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *in*, *über*, *auf*, *bei* oder *mit*.",
+     "s": "Du musst dich ___ deiner Lehrerin entschuldigen.",
+     "a": [
+      [
+       "bei"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *in*, *über*, *auf*, *bei* oder *mit*.",
+     "s": "Leon streitet sich jeden Tag ___ seinem Bruder.",
+     "a": [
+      [
+       "mit"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *in*, *über*, *auf*, *bei* oder *mit*.",
+     "s": "Nächste Woche fahren wir ans Meer. Wir freuen uns schon ___ den Urlaub.",
+     "a": [
+      [
+       "auf"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? *mir*, *dir* oder *sich*?",
+     "bsp": "Tom macht ___ Sorgen, weil Mia nicht anruft. → er → ✓ <b>sich</b>",
+     "q": "Ich mache ___ Sorgen, weil mein Hund krank ist.",
+     "o": [
+      "mich",
+      "mir",
+      "sich"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "<b>sich Sorgen machen</b> da <b>Sorgen</b> — Akkusativ to‘ldiruvchi, shuning uchun refleksiv olmosh Dativda: ich va du shakllari <b>mir/dir</b> turida, «mich/dich» emas; er/sie — <b>sich</b>, wir — uns, ihr — euch. Misol: <b>Wir machen uns Sorgen.</b>",
+      "ru": "В <b>sich Sorgen machen</b> слово <b>Sorgen</b> — дополнение в Akkusativ, поэтому возвратное местоимение в Dativ: у ich и du формы типа <b>mir/dir</b>, а не «mich/dich»; er/sie — <b>sich</b>, wir — uns, ihr — euch. Пример: <b>Wir machen uns Sorgen.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? *mir*, *dir* oder *sich*?",
+     "q": "Elif, warum machst du ___ Sorgen? Alles ist gut!",
+     "o": [
+      "dir",
+      "dich",
+      "sich"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? *mir*, *dir* oder *sich*?",
+     "q": "Meine Eltern machen ___ Sorgen, weil ich so viel zocke.",
+     "o": [
+      "uns",
+      "ihnen",
+      "sich"
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}

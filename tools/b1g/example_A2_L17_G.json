@@ -1,0 +1,516 @@
+{
+ "title": "Lektion 17 · Grammatik",
+ "sub": "Verben mit Präposition · Worauf? – Darauf · Auf wen?",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "gram",
+   "ic": "📘",
+   "t": "Grammatik",
+   "items": [
+    {
+     "t": "info",
+     "h": "<h4>Verben / Adjektive / Ausdrücke mit Präposition</h4>\n<table class=\"ex-tb\"><tr><th>+ Akkusativ</th><th>+ Dativ</th></tr>\n<tr><td>sich freuen <b>auf / über</b> · sich ärgern <b>über</b></td><td>zufrieden sein <b>mit</b> · sprechen <b>mit</b></td></tr>\n<tr><td>warten <b>auf</b> · achten <b>auf</b> · sich konzentrieren <b>auf</b> · Lust haben <b>auf</b></td><td>enttäuscht sein <b>von</b> · erzählen <b>von</b> · träumen <b>von</b></td></tr>\n<tr><td>sich interessieren <b>für</b> · sich kümmern <b>um</b> · sich erinnern <b>an</b></td><td>Angst haben <b>vor</b></td></tr></table>\n<p class=\"ex-note\">Die Präposition gehört fest zum Verb – immer zusammen lernen!<br>Ich warte <b>auf den</b> Zug. (Akk.) · Ich habe Angst <b>vor dem</b> Hund. (Dat.)</p>"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Präposition: *auf*, *um*, *an*, *vor*, *mit*, *von*.",
+     "bsp": "Ich träume ___ einer Reise nach Wien. → träumen + <b>von</b>",
+     "s": "Nora wartet schon eine Stunde ___ ihre Freundin.",
+     "a": [
+      [
+       "auf"
+      ]
+     ],
+     "gw": {
+      "uz": "Predlog fe’lga mahkam bog‘langan — uni mantiq bilan topib bo‘lmaydi, fe’l bilan birga yodlanadi. Avval fe’lni toping, keyin uning predlogini eslang. Misol: <b>sich interessieren für</b> → <b>Ich interessiere mich für Kunst.</b>",
+      "ru": "Предлог жёстко связан с глаголом — логикой его не вывести, его учат вместе с глаголом. Сначала найдите глагол, потом вспомните его предлог. Пример: <b>sich interessieren für</b> → <b>Ich interessiere mich für Kunst.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Präposition: *auf*, *um*, *an*, *vor*, *mit*, *von*.",
+     "s": "Herr Yilmaz kümmert sich am Wochenende ___ seinen Garten.",
+     "a": [
+      [
+       "um"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Präposition: *auf*, *um*, *an*, *vor*, *mit*, *von*.",
+     "s": "Ich erinnere mich gern ___ die Party bei Elif.",
+     "a": [
+      [
+       "an"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Präposition: *auf*, *um*, *an*, *vor*, *mit*, *von*.",
+     "s": "Leon hat ein bisschen Angst ___ der Prüfung.",
+     "a": [
+      [
+       "vor"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Präposition: *auf*, *um*, *an*, *vor*, *mit*, *von*.",
+     "s": "Frau Keller ist sehr zufrieden ___ ihrem Team.",
+     "a": [
+      [
+       "mit"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Präposition: *auf*, *um*, *an*, *vor*, *mit*, *von*.",
+     "s": "Dilnoza ist ein bisschen enttäuscht ___ ihrem neuen Job.",
+     "a": [
+      [
+       "von"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Akkusativ oder Dativ? Was passt?",
+     "bsp": "Tom ärgert sich über ___ Bus. → über + Akk., der Bus → ✓ <b>den</b>",
+     "q": "Ole ist sehr zufrieden mit ___ neuen Computer.",
+     "o": [
+      "den",
+      "dem"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Predlogga qarang: <b>über, auf, für, um, an</b> (bu fe’llarda) — Akkusativ; <b>mit, von, vor</b> — Dativ. Keyin artiklni moslang: der → <b>den</b> (Akk.) / <b>dem</b> (Dat.). Misol: <b>Ich warte auf den Bus.</b> · <b>Ich spreche mit dem Lehrer.</b>",
+      "ru": "Смотрите на предлог: <b>über, auf, für, um, an</b> (в этих глаголах) — Akkusativ; <b>mit, von, vor</b> — Dativ. Затем артикль: der → <b>den</b> (Akk.) / <b>dem</b> (Dat.). Пример: <b>Ich warte auf den Bus.</b> · <b>Ich spreche mit dem Lehrer.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Akkusativ oder Dativ? Was passt?",
+     "q": "Marco freut sich über ___ Geschenk von seiner Oma.",
+     "o": [
+      "das",
+      "dem"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Akkusativ oder Dativ? Was passt?",
+     "q": "Wir warten schon zwanzig Minuten auf ___ Chef.",
+     "o": [
+      "dem",
+      "den"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Akkusativ oder Dativ? Was passt?",
+     "q": "Sofia erzählt von ___ Urlaub in Italien.",
+     "o": [
+      "ihren",
+      "ihrem"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Akkusativ oder Dativ? Was passt?",
+     "q": "Jonas hat Angst vor ___ Hund von den Nachbarn.",
+     "o": [
+      "dem",
+      "den"
+     ],
+     "a": 0
+    },
+    {
+     "t": "cat",
+     "h": "Mit Akkusativ oder mit Dativ? Ordnen Sie zu.",
+     "bsp": "sich ärgern über → <b>+ Akkusativ</b>",
+     "c": [
+      "+ Akkusativ",
+      "+ Dativ"
+     ],
+     "i": [
+      [
+       "sich interessieren für",
+       0
+      ],
+      [
+       "Angst haben vor",
+       1
+      ],
+      [
+       "sich erinnern an",
+       0
+      ],
+      [
+       "zufrieden sein mit",
+       1
+      ],
+      [
+       "sich kümmern um",
+       0
+      ],
+      [
+       "träumen von",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Bu yerda predlog hal qiladi: <b>mit, von, vor, bei</b> — Dativ; <b>für, um, über, auf, an</b> (shu fe’llarda) — Akkusativ. Misol: <b>erzählen von</b> → Dativ, <b>warten auf</b> → Akkusativ.",
+      "ru": "Здесь всё решает предлог: <b>mit, von, vor, bei</b> — Dativ; <b>für, um, über, auf, an</b> (в этих глаголах) — Akkusativ. Пример: <b>erzählen von</b> → Dativ, <b>warten auf</b> → Akkusativ."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie Sätze.",
+     "bsp": "Ich | mich | freue | auf das Wochenende → <b>Ich freue mich auf das Wochenende.</b>",
+     "w": [
+      "Paul",
+      "sich",
+      "kümmert",
+      "um seine Oma"
+     ],
+     "a": "Paul kümmert sich um seine Oma.",
+     "gw": {
+      "uz": "Tartib: ega → fe’l (2-o‘rin) → <b>mich/dich/sich</b> → predlogli qism. Refleksiv olmosh fe’ldan keyin darhol keladi. Misol: <b>Lisa interessiert sich für Musik.</b>",
+      "ru": "Порядок: подлежащее → глагол (2-е место) → <b>mich/dich/sich</b> → часть с предлогом. Возвратное местоимение идёт сразу после глагола. Пример: <b>Lisa interessiert sich für Musik.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie Sätze.",
+     "w": [
+      "Herr Schulz",
+      "sich",
+      "ärgert",
+      "über das Meeting"
+     ],
+     "a": "Herr Schulz ärgert sich über das Meeting."
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie Sätze.",
+     "w": [
+      "du",
+      "Hast",
+      "Lust",
+      "auf eine Pizza"
+     ],
+     "a": "Hast du Lust auf eine Pizza?"
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie Sätze.",
+     "w": [
+      "Du",
+      "dich",
+      "musst",
+      "auf die Prüfung",
+      "konzentrieren"
+     ],
+     "a": "Du musst dich auf die Prüfung konzentrieren."
+    },
+    {
+     "t": "info",
+     "h": "<h4>sich freuen auf oder über? · sprechen mit oder über?</h4>\n<table class=\"ex-tb\"><tr><td>sich freuen <b>auf</b></td><td>kommt noch</td><td>Bald ist Urlaub. Ich freue mich <b>auf</b> den Urlaub.</td></tr>\n<tr><td>sich freuen <b>über</b></td><td>ist schon da</td><td>Danke! Ich freue mich <b>über</b> das Geschenk.</td></tr>\n<tr><td>sprechen <b>mit</b></td><td>Person (+ Dat.)</td><td>Ich spreche <b>mit</b> meinem Kollegen.</td></tr>\n<tr><td>sprechen <b>über</b></td><td>Thema (+ Akk.)</td><td>Wir sprechen <b>über</b> das Problem.</td></tr></table>\n<p class=\"ex-note\">Beides zusammen: Ich spreche <b>mit</b> dem Chef <b>über</b> das Problem.</p>"
+    },
+    {
+     "t": "mc",
+     "h": "*auf* oder *über*? Was passt?",
+     "bsp": "Am Freitag ist Elifs Party. Ich freue mich schon ___ die Party. → Zukunft → ✓ <b>auf</b>",
+     "q": "Mia hat gestern eine E-Mail von Tom bekommen. Sie hat sich sehr ___ die E-Mail gefreut.",
+     "o": [
+      "über",
+      "auf"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaqtga qarang: hali bo‘lmagan voqea (kelasi hafta, bald) — <b>sich freuen auf</b>; allaqachon bo‘lgan yoki hozir bor narsa (sovg‘a, xabar) — <b>sich freuen über</b>. Misol: <b>Ich freue mich über die Blumen. Danke!</b>",
+      "ru": "Смотрите на время: событие ещё впереди (следующая неделя, bald) — <b>sich freuen auf</b>; уже случилось или уже есть (подарок, новость) — <b>sich freuen über</b>. Пример: <b>Ich freue mich über die Blumen. Danke!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "*auf* oder *über*? Was passt?",
+     "q": "Nächsten Monat fliegen wir nach Spanien. Ich freue mich schon ___ die Reise.",
+     "o": [
+      "über",
+      "auf"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "*auf* oder *über*? Was passt?",
+     "q": "Danke, Nora! Ich freue mich sehr ___ die Blumen.",
+     "o": [
+      "auf",
+      "über"
+     ],
+     "a": 1
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *mit* oder *über*.",
+     "bsp": "Ich muss heute ___ Frau Keller sprechen. → Person → <b>mit</b> (Thema → über)",
+     "s": "Morgen spreche ich ___ meiner Chefin.",
+     "a": [
+      [
+       "mit"
+      ]
+     ],
+     "gw": {
+      "uz": "Kim bilan yoki nima haqida? Odam — <b>sprechen mit</b> + Dativ; mavzu — <b>sprechen über</b> + Akkusativ. Ikkalasi bitta gapda ham bo‘lishi mumkin. Misol: <b>Ich spreche mit meinem Vater über die Reise.</b>",
+      "ru": "С кем или о чём? Человек — <b>sprechen mit</b> + Dativ; тема — <b>sprechen über</b> + Akkusativ. Оба могут быть в одном предложении. Пример: <b>Ich spreche mit meinem Vater über die Reise.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *mit* oder *über*.",
+     "s": "Im Meeting sprechen wir ___ das Ziel für das nächste Jahr.",
+     "a": [
+      [
+       "über"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *mit* oder *über*.",
+     "s": "Kannst du ___ Paul ___ das Problem sprechen?",
+     "a": [
+      [
+       "mit"
+      ],
+      [
+       "über"
+      ]
+     ]
+    },
+    {
+     "t": "info",
+     "h": "<h4>Sache oder Person? Worauf? – Darauf · Auf wen?</h4>\n<table class=\"ex-tb\"><tr><th></th><th>Sache: Frage</th><th>Sache: Pronomen</th><th>Person: Frage</th></tr>\n<tr><td>auf</td><td>wo<b>r</b>auf?</td><td>da<b>r</b>auf</td><td>auf wen?</td></tr>\n<tr><td>über</td><td>wo<b>r</b>über?</td><td>da<b>r</b>über</td><td>über wen?</td></tr>\n<tr><td>an</td><td>wo<b>r</b>an?</td><td>da<b>r</b>an</td><td>an wen?</td></tr>\n<tr><td>für</td><td>wofür?</td><td>dafür</td><td>für wen?</td></tr>\n<tr><td>mit · von</td><td>womit? · wovon?</td><td>damit · davon</td><td>mit wem? · von wem?</td></tr></table>\n<div class=\"ex-sk\"><span>Wofür</span><span class=\"v\">interessierst</span><span>du dich?</span> – Für Musik. <span>Dafür</span><span class=\"v\">interessiere</span><span>ich mich sehr</span>.</div>\n<p class=\"ex-note\">-<b>r</b>- nur vor Vokal: wo<b>r</b>auf, da<b>r</b>an – aber wofür, damit. Auch so: um → worum / darum · vor → wovor / davor.<br>Person: Präposition + <b>wen / wem</b> → Antwort: auf <b>ihn</b>, mit <b>ihm</b>, um <b>sie</b> …</p>"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Fragewort für eine Sache.",
+     "bsp": "___ interessierst du dich? – Für Musik. → wo + für → <b>Wofür</b>",
+     "s": "___ wartest du? – Auf den Bus.",
+     "a": [
+      [
+       "Worauf"
+      ]
+     ],
+     "gw": {
+      "uz": "Narsa haqida so‘rash: <b>wo</b> + fe’lning predlogi. Predlog unli bilan boshlansa, orasiga <b>r</b> qo‘shiladi: <b>wo-r-um</b>; undosh bilan boshlansa — r yo‘q: <b>womit, wovon</b>. Misol: <b>Worum geht es?</b> · <b>Wovon träumst du?</b>",
+      "ru": "Вопрос о предмете: <b>wo</b> + предлог глагола. Если предлог начинается с гласной, вставляется <b>r</b>: <b>wo-r-um</b>; если с согласной — без r: <b>womit, wovon</b>. Пример: <b>Worum geht es?</b> · <b>Wovon träumst du?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Fragewort für eine Sache.",
+     "s": "___ ärgert sich Paul? – Über die laute Musik.",
+     "a": [
+      [
+       "Worüber"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Fragewort für eine Sache.",
+     "s": "___ erinnerst du dich? – An den ersten Tag im Deutschkurs.",
+     "a": [
+      [
+       "Woran"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Fragewort für eine Sache.",
+     "s": "___ träumt Sofia? – Von einer Reise nach Berlin.",
+     "a": [
+      [
+       "Wovon"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Fragewort für eine Sache.",
+     "s": "___ bist du zufrieden? – Mit meinem neuen Handy.",
+     "a": [
+      [
+       "Womit"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Sache oder Person? Wie heißt die Frage?",
+     "bsp": "___ wartest du? – Auf meinen Bruder. → Person → ✓ <b>Auf wen</b> (nicht: Worauf)",
+     "q": "___ freust du dich? – Auf das Wochenende.",
+     "o": [
+      "Worauf",
+      "Auf wen",
+      "Darauf"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Javobga qarang: narsa yoki voqea — <b>wo(r)</b> + predlog (<b>Wofür?</b>); odam — predlog + <b>wen</b> (Akk.) yoki <b>wem</b> (Dat.). <b>da(r)</b> + predlog — javob so‘zi, savol emas. Misol: <b>Von wem ist der Brief? – Von Oma.</b>",
+      "ru": "Смотрите на ответ: предмет или событие — <b>wo(r)</b> + предлог (<b>Wofür?</b>); человек — предлог + <b>wen</b> (Akk.) или <b>wem</b> (Dat.). <b>da(r)</b> + предлог — слово для ответа, не вопрос. Пример: <b>Von wem ist der Brief? – Von Oma.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Sache oder Person? Wie heißt die Frage?",
+     "q": "___ kümmerst du dich heute? – Um meine kleine Schwester.",
+     "o": [
+      "Worum",
+      "Um wen",
+      "Um wem"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Sache oder Person? Wie heißt die Frage?",
+     "q": "___ sprichst du gerade? – Mit Herrn Schulz.",
+     "o": [
+      "Womit",
+      "Mit wen",
+      "Mit wem"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Sache oder Person? Wie heißt die Frage?",
+     "q": "___ bist du so enttäuscht? – Von meinem Bruder. Er ist nicht gekommen.",
+     "o": [
+      "Wovon",
+      "Von wem",
+      "Davon"
+     ],
+     "a": 1
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *darauf*, *darüber*, *daran*, *dafür*, *damit*.",
+     "bsp": "▪ Träumst du von einem Haus am Meer?<br>● Ja, ___ träume ich oft. → da + von → <b>davon</b>",
+     "s": "▪ Hast du Lust auf Kino?\n● Nein, ___ habe ich heute keine Lust.",
+     "a": [
+      [
+       "darauf"
+      ]
+     ],
+     "gw": {
+      "uz": "Narsa haqida qayta gapirganda: <b>da</b> + fe’lning predlogi. Predlog unli bilan boshlansa, <b>r</b> qo‘shiladi: <b>daran, darum</b>; undosh bilan — <b>damit, davon</b>. Avval fe’lning predlogini aniqlang. Misol: <b>Denkst du an die Prüfung? – Ja, daran denke ich oft.</b>",
+      "ru": "Чтобы снова сказать о предмете: <b>da</b> + предлог глагола. Если предлог начинается с гласной, добавляется <b>r</b>: <b>daran, darum</b>; с согласной — <b>damit, davon</b>. Сначала определите предлог глагола. Пример: <b>Denkst du an die Prüfung? – Ja, daran denke ich oft.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *darauf*, *darüber*, *daran*, *dafür*, *damit*.",
+     "s": "▪ Ärgerst du dich über die Arbeit?\n● Ja, ___ ärgere ich mich jeden Tag.",
+     "a": [
+      [
+       "darüber"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *darauf*, *darüber*, *daran*, *dafür*, *damit*.",
+     "s": "▪ Erinnerst du dich an das Konzert in Wien?\n● Ja, klar! ___ erinnere ich mich gern.",
+     "a": [
+      [
+       "Daran"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *darauf*, *darüber*, *daran*, *dafür*, *damit*.",
+     "s": "▪ Interessiert sich Ali für Videospiele?\n● Nein, ___ interessiert er sich nicht.",
+     "a": [
+      [
+       "dafür"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *darauf*, *darüber*, *daran*, *dafür*, *damit*.",
+     "s": "▪ Bist du mit dem Hotel zufrieden?\n● Ja, ___ bin ich sehr zufrieden.",
+     "a": [
+      [
+       "damit"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Sache oder Person? Was passt?",
+     "bsp": "▪ Wartest du auf Paul?<br>● Ja, ich warte schon lange ___. → Person → ✓ <b>auf ihn</b> (nicht: darauf)",
+     "q": "▪ Wartest du auf den Zug?\n● Ja, ich warte schon zehn Minuten ___.",
+     "o": [
+      "auf ihn",
+      "darauf",
+      "auf ihm"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Odam bo‘lsa — predlog + shaxs olmoshi (<b>mit ihr</b>, <b>für ihn</b>); narsa bo‘lsa — <b>da(r)</b> + predlog. Kelishikni tekshiring: Akkusativ predlogidan keyin <b>ihn</b>, Dativdan keyin <b>ihm</b>. Misol: <b>Ich denke an meine Oma. → Ich denke an sie.</b>",
+      "ru": "Человек — предлог + личное местоимение (<b>mit ihr</b>, <b>für ihn</b>); предмет — <b>da(r)</b> + предлог. Проверьте падеж: после предлога с Akkusativ — <b>ihn</b>, с Dativ — <b>ihm</b>. Пример: <b>Ich denke an meine Oma. → Ich denke an sie.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Sache oder Person? Was passt?",
+     "q": "▪ Ärgerst du dich über Tom?\n● Ja, ich ärgere mich oft ___.",
+     "o": [
+      "darüber",
+      "über ihm",
+      "über ihn"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Sache oder Person? Was passt?",
+     "q": "▪ Kümmert sich Elif um ihre Oma?\n● Ja, sie kümmert sich jeden Tag ___.",
+     "o": [
+      "um sie",
+      "darum",
+      "um ihr"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Sache oder Person? Was passt?",
+     "q": "▪ Bist du mit deinem neuen Kollegen zufrieden?\n● Ja, ich bin sehr zufrieden ___.",
+     "o": [
+      "damit",
+      "mit ihn",
+      "mit ihm"
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}
