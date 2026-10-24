@@ -245,7 +245,7 @@
       "a": "Also, ich bezweifle, dass du ohne Training durchhältst.",
       "alt": [],
       "gw": {
-       "uz": "Shubha: <b>Also, ich bezweifle, dass …</b> — <b>dass</b>-gapda ajraladigan fe’l ham birga, oxirida: <b>durchhältst</b>.",
+       "uz": "Shubha: <b>Also, ich bezweifle, dass …</b> — <b>dass</b>-gapda ajraladigan fe’l qo‘shilib yoziladi va oxirida turadi: <b>durchhältst</b>.",
        "ru": "Сомнение: <b>Also, ich bezweifle, dass …</b> — в <b>dass</b>-предложении отделяемый глагол пишется слитно и стоит в конце: <b>durchhältst</b>."
       }
      },
@@ -394,7 +394,7 @@
         "p": "Hallo! Wir sollen ja den „Abend der Mutigen“ im Jugendzentrum planen. Was meinst du, was machen wir an dem Abend?",
         "o": [
          {
-          "s": "Wie wäre es, wenn ein paar Jugendliche erzählen, was sie Neues angefangen haben – zum Beispiel eine Reise, einen Sport oder ein Studium?",
+          "s": "Wie wäre es, wenn ein paar Jugendliche erzählen, was sie Mutiges gemacht haben – zum Beispiel eine Reise allein, einen neuen Sport oder ein Studium im Ausland?",
           "ok": 1,
           "g": 0
          },
@@ -569,7 +569,7 @@
         "o": [
          {
           "s": "Das schaffst du bestimmt!",
-          "r": "Oh, wir duzen uns jetzt? Na gut … Aber meinen Sie wirklich, dass ich das noch lernen kann?",
+          "r": "Oh, wir duzen uns jetzt? … Aber meinen Sie wirklich, dass ich das noch lernen kann?",
           "why": {
            "uz": "Funksiya to‘g‘ri, register noto‘g‘ri: qo‘shni ayolga — <b>Sie</b>: <b>Das schaffen Sie bestimmt!</b>",
            "ru": "Функция верная, регистр нет: соседке — на <b>Sie</b>: <b>Das schaffen Sie bestimmt!</b>"
@@ -669,7 +669,7 @@
         ]
        }
       ],
-      "end": "Sie haben recht. Morgen rufe ich im Hallenbad an. Danke für den Mut!",
+      "end": "Sie haben recht. Morgen rufe ich im Hallenbad an. Danke, dass Sie mir Mut machen!",
       "gw": {
        "uz": "Kattalar bilan — <b>Sie</b>: <b>Das schaffen Sie bestimmt</b>, <b>Sie müssen keine Angst haben</b>. Qo‘rquvga — dalda, xavfli rejaga — sababli tanqid (<b>Also, ich bezweifle, dass …</b>), «nima qilay?» savoliga — taklif (<b>Wie wäre es mit …?</b>).",
        "ru": "Со старшими — на <b>Sie</b>: <b>Das schaffen Sie bestimmt</b>, <b>Sie müssen keine Angst haben</b>. На страх — поддержка, на опасный план — критика с причиной (<b>Also, ich bezweifle, dass …</b>), на вопрос «что делать?» — предложение (<b>Wie wäre es mit …?</b>)."

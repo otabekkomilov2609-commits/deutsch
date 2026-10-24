@@ -198,7 +198,7 @@
       "o": [
        "Ich schlage vor, dass wir eine Torte kaufen.",
        "Das finde ich nicht so gut, weil das zu teuer ist.",
-       "Sind wir uns einig? Torte, Musik und zwanzig Gäste.",
+       "Also: Torte, Musik und zwanzig Gäste. Sind wir uns einig?",
        "Gute Idee!"
       ],
       "a": 2,
@@ -248,7 +248,7 @@
       "a": "Das finde ich nicht so gut, weil wir dann Prüfungen haben.",
       "alt": [],
       "gw": {
-       "uz": "Sabab bilan rad etish: <b>Das finde ich nicht so gut, weil …</b> — <b>weil</b> dan keyin fe’l oxirda (<b>haben</b>).",
+       "uz": "Sabab bilan rad etish: <b>Das finde ich nicht so gut, weil …</b> — <b>weil</b> dan keyin fe’l oxirida (<b>haben</b>).",
        "ru": "Отказ с причиной: <b>Das finde ich nicht so gut, weil …</b> — после <b>weil</b> глагол в конце (<b>haben</b>)."
       }
      },
@@ -288,8 +288,8 @@
       ],
       "a": "▪ Wir brauchen Geld für die Klassenfahrt. Hast du eine Idee? ● Wie wäre es, wenn wir in der Pause Kuchen verkaufen? ▪ Gute Idee! Aber wann? Am Montag habe ich keine Zeit. ● Dann lass uns den Verkauf am Mittwoch machen. ▪ Einverstanden. Ich backe einen Apfelkuchen. Sind wir uns einig? ● Ja, dann machen wir es so.",
       "gw": {
-       "uz": "Tartib: savol → <b>taklif</b> (Wie wäre es, wenn …?) → <b>rozilik</b> + muammo → <b>yangi kun</b> → <b>Sind wir uns einig?</b> → <b>Gut, dann machen wir es so.</b>",
-       "ru": "Порядок: вопрос → <b>предложение</b> (Wie wäre es, wenn …?) → <b>согласие</b> + проблема → <b>другой день</b> → <b>Sind wir uns einig?</b> → <b>dann machen wir es so.</b>"
+       "uz": "Tartib: savol → <b>taklif</b> (Wie wäre es, wenn …?) → <b>rozilik</b> + muammo → <b>yangi kun</b> → <b>Sind wir uns einig?</b> → <b>Ja, dann machen wir es so.</b>",
+       "ru": "Порядок: вопрос → <b>предложение</b> (Wie wäre es, wenn …?) → <b>согласие</b> + проблема → <b>другой день</b> → <b>Sind wir uns einig?</b> → <b>Ja, dann machen wir es so.</b>"
       }
      },
      {
@@ -599,7 +599,7 @@
         ]
        },
        {
-        "p": "Draußen lernen? Das finde ich nicht so gut, weil es im Park oft zu laut ist.",
+        "p": "Draußen lernen? Im Park? Das finde ich nicht so gut, weil es dort oft zu laut ist.",
         "o": [
          {
           "s": "Ja, gut.",
@@ -700,7 +700,7 @@
       "q": "Ihre Freundin möchte das Klassenfest am Montag machen. Sie finden das nicht gut. Sagen Sie, warum.",
       "a": "Das finde ich nicht so gut, weil viele am Montag keine Zeit haben.",
       "gw": {
-       "uz": "Sabab bilan rad etish: <b>Das finde ich nicht so gut, weil …</b> (fe’l oxirda).",
+       "uz": "Sabab bilan rad etish: <b>Das finde ich nicht so gut, weil …</b> (fe’l oxirida).",
        "ru": "Отказ с причиной: <b>Das finde ich nicht so gut, weil …</b> (глагол в конце)."
       }
      },

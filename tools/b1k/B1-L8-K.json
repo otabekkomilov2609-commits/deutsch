@@ -180,7 +180,7 @@
      {
       "t": "mc",
       "h": "Was passt? Reagieren Sie.",
-      "q": "Beim Elternabend sagt Herr Weber, der Vater einer Mitschülerin: „Ein soziales Jahr macht junge Menschen selbstständiger.“ – Sie stimmen höflich zu.",
+      "q": "Bei einem Infoabend in der Stadtbibliothek sagt ein älterer Herr, Herr Weber: „Ein soziales Jahr macht junge Menschen selbstständiger.“ – Sie stimmen höflich zu.",
       "o": [
        "Da stimme ich dir zu.",
        "Da stimme ich Ihnen zu.",
@@ -278,12 +278,12 @@
       "w": [
        "● Das verstehe ich. Aber nach so einem Jahr weiß man oft besser, was man studieren will.",
        "▪ Lena, was meinst du: Soll ein soziales Jahr nach der Schule Pflicht sein?",
-       "▪ Hm, ich bin mir nicht sicher, ob das wirklich so ist.",
+       "▪ Hm, ich bin mir nicht sicher, ob man das nach einem Jahr wirklich besser weiß.",
        "● Ich bin der Meinung, dass das sinnvoll ist. Man hilft anderen und lernt viel.",
        "● Doch, bei meiner Cousine war das genau so.",
        "▪ Da bin ich anderer Meinung. Ich möchte nach der Schule sofort studieren."
       ],
-      "a": "▪ Lena, was meinst du: Soll ein soziales Jahr nach der Schule Pflicht sein? ● Ich bin der Meinung, dass das sinnvoll ist. Man hilft anderen und lernt viel. ▪ Da bin ich anderer Meinung. Ich möchte nach der Schule sofort studieren. ● Das verstehe ich. Aber nach so einem Jahr weiß man oft besser, was man studieren will. ▪ Hm, ich bin mir nicht sicher, ob das wirklich so ist. ● Doch, bei meiner Cousine war das genau so.",
+      "a": "▪ Lena, was meinst du: Soll ein soziales Jahr nach der Schule Pflicht sein? ● Ich bin der Meinung, dass das sinnvoll ist. Man hilft anderen und lernt viel. ▪ Da bin ich anderer Meinung. Ich möchte nach der Schule sofort studieren. ● Das verstehe ich. Aber nach so einem Jahr weiß man oft besser, was man studieren will. ▪ Hm, ich bin mir nicht sicher, ob man das nach einem Jahr wirklich besser weiß. ● Doch, bei meiner Cousine war das genau so.",
       "gw": {
        "uz": "Tartib: savol → fikr (<b>Ich bin der Meinung, dass …</b>) → e’tiroz (<b>Da bin ich anderer Meinung.</b>) → asos → shubha (<b>Ich bin mir nicht sicher, ob …</b>) → «Doch» bilan javob.",
        "ru": "Порядок: вопрос → мнение (<b>Ich bin der Meinung, dass …</b>) → возражение (<b>Da bin ich anderer Meinung.</b>) → аргумент → сомнение (<b>Ich bin mir nicht sicher, ob …</b>) → ответ с «Doch»."
@@ -456,7 +456,7 @@
         ]
        },
        {
-        "p": "Hm. Ich finde aber, das soll jeder selbst entscheiden. Wer muss, hat doch keine Lust.",
+        "p": "Hm. Ich finde aber, das sollte jeder selbst entscheiden. Wer muss, hat doch keine Lust.",
         "o": [
          {
           "s": "Da bin ich anderer Meinung. Viele merken erst im Pflichtjahr, dass ihnen das Helfen Spaß macht.",
@@ -482,7 +482,7 @@
         ]
        },
        {
-        "p": "Okay, das kann sein. Und ein Vorteil ist auch: Man lernt neue Leute kennen, zum Beispiel ältere Menschen oder kleine Kinder.",
+        "p": "Okay, das kann sein. Und ehrlich gesagt sehe ich auch einen Vorteil: Man lernt neue Leute kennen, zum Beispiel ältere Menschen oder kleine Kinder.",
         "o": [
          {
           "s": "Das stimmt so nicht.",
@@ -512,7 +512,7 @@
         "o": [
          {
           "s": "Ja, gut.",
-          "r": "„Ja, gut“? Also findest du es jetzt auch verlorene Zeit?",
+          "r": "„Ja, gut“? Heißt das, für dich ist es jetzt auch verlorene Zeit?",
           "why": {
            "uz": "«Ja, gut.» — ball yo‘q, sherik esa buni rozilik deb tushunadi. E’tiroz va asos kerak.",
            "ru": "«Ja, gut.» — баллов нет, а партнёр понимает это как согласие. Нужны возражение и аргумент."
@@ -702,7 +702,7 @@
      {
       "t": "say",
       "h": "Sagen Sie es auf Deutsch.",
-      "q": "Ein Mitschüler sagt: „Junge Leute helfen nie freiwillig.“ Widersprechen Sie.",
+      "q": "Ein Freund aus dem Deutschkurs sagt: „Junge Leute helfen nie freiwillig.“ Widersprechen Sie.",
       "a": "Da bin ich anderer Meinung. Viele helfen gern, zum Beispiel im Sportverein.",
       "gw": {
        "uz": "E’tiroz + misol: <b>Da bin ich anderer Meinung.</b> yoki <b>Das stimmt so nicht, denn …</b>",
