@@ -414,9 +414,9 @@
    "q": "Aziz: „Nächstes Semester belege ich sieben Kurse gleichzeitig.“ Sie finden das zu viel.",
    "o": [
     "Klingt gut, aber man muss auch sehen, dass das viel Arbeit ist.",
-    "Das schaffst du bestimmt, kein Problem!",
-    "Gut, dann machen wir es so.",
-    "Das wäre genau das Richtige für mich."
+    "Das schaffst du bestimmt, das ist kein Problem für dich!",
+    "Gut, einverstanden, dann machen wir es so.",
+    "Sieben Kurse wären genau das Richtige für mich."
    ],
    "a": 0
   },
@@ -443,9 +443,9 @@
   {
    "q": "Jonas will sein Studium abbrechen und mit seiner Band berühmt werden. Sie haben Zweifel.",
    "o": [
-    "Ich bin sicher, dass du das schaffst!",
-    "Du musst keine Angst haben.",
-    "Gut, dann machen wir das so.",
+    "Ich bin sicher, dass du mit deiner Band berühmt wirst!",
+    "Du musst keine Angst haben, das wird schon gut gehen.",
+    "Gut, einverstanden, dann machen wir das so.",
     "Ich bin mir nicht sicher, ob das eine gute Entscheidung ist."
    ],
    "a": 3
@@ -577,9 +577,9 @@
   {
    "q": "Frau Weber fragt in der Diskussion: „Was denken Sie über ein Handyverbot an Schulen?“ Sie sind dafür.",
    "o": [
-    "Da stimme ich Ihnen völlig zu.",
-    "Da bin ich ganz anderer Meinung.",
-    "Ich weiß nicht so recht.",
+    "Da stimme ich Ihnen völlig zu, Frau Weber.",
+    "Da bin ich ganz anderer Meinung als Sie.",
+    "Ich weiß nicht so recht, ob das sinnvoll ist.",
     "Ich bin der Meinung, dass ein Handyverbot sinnvoll ist."
    ],
    "a": 3

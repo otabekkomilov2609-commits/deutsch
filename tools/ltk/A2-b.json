@@ -1,0 +1,986 @@
+{
+ "13": [
+  {
+   "q": "Sie haben Geburtstag. Ihr Freund Aziz steht vor der Tür. Was sagen Sie?",
+   "o": [
+    "Hallo Aziz! Schön, dass du da bist!",
+    "Hallo Aziz! Ich muss jetzt leider gehen.",
+    "Hallo Aziz! Vielen Dank für die Einladung!",
+    "Hallo Aziz! Bleib doch noch ein bisschen!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie sind bei Familie Braun zum Essen eingeladen. Frau Braun öffnet die Tür.",
+   "o": [
+    "Guten Abend! Herzlich willkommen bei uns!",
+    "Guten Abend! Kommen Sie doch rein!",
+    "Guten Abend! Vielen Dank für die Einladung!",
+    "Guten Abend! Schön, dass Sie da sind!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ihre Gäste Lena und Paul bringen Ihnen Blumen mit. Was sagen Sie?",
+   "o": [
+    "Oh, Blumen! Das ist aber nett!",
+    "Oh, danke! Ich bin schon satt.",
+    "Oh, schade! Bleibt doch noch ein bisschen!",
+    "Oh, toll! Dann viel Spaß!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie haben eine Suppe mit viel Pfeffer gekocht. Ihr Gast Timur probiert sie.",
+   "o": [
+    "Die Suppe schmeckt ja wirklich super!",
+    "Möchtest du lieber Tee oder Saft?",
+    "Nein, danke. Ich bin schon satt.",
+    "Die Suppe ist hoffentlich nicht zu scharf?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Malika hat einen Kuchen gebacken. Sie probieren ihn. Er ist sehr lecker.",
+   "o": [
+    "Der Kuchen ist hoffentlich nicht zu süß?",
+    "Mmh, der Kuchen schmeckt ja super!",
+    "Möchtest du noch etwas Kuchen?",
+    "Nein, danke. Ich bin schon satt."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Laylo fragt: „Möchtest du noch etwas Reis?“ Sie haben schon sehr viel gegessen.",
+   "o": [
+    "Herzlich willkommen! Komm doch rein!",
+    "Schade! Bleib doch noch ein bisschen!",
+    "Hier, ein Geschenk für dich.",
+    "Nein, danke. Ich bin schon satt."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Es ist schon spät. Sie sind bei Sevara zu Besuch und möchten nach Hause.",
+   "o": [
+    "Oh, schon elf Uhr! Bleib doch noch ein bisschen!",
+    "Oh, schon elf Uhr! Ich muss jetzt leider gehen.",
+    "Oh, schon elf Uhr! Komm doch rein!",
+    "Oh, schon elf Uhr! Möchtest du noch Tee?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ihr Gast Nodir sagt: „Ich muss jetzt leider gehen.“ Sie möchten, dass er noch bleibt.",
+   "o": [
+    "Schade! Vielen Dank für die Einladung!",
+    "Toll! Schön, dass du da bist!",
+    "Schade! Bleib doch noch ein bisschen!",
+    "Okay! Komm gut nach Hause!"
+   ],
+   "a": 2
+  }
+ ],
+ "14": [
+  {
+   "q": "Ihre Nachbarin, Frau Weber, trägt einen schweren Koffer zur Treppe. Was sagen Sie?",
+   "o": [
+    "Moment, ich helfe Ihnen!",
+    "Moment, ich helfe dir!",
+    "Danke, ich schaffe das schon!",
+    "Vielen Dank für Ihre Hilfe!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihr Mitbewohner Jonas kommt mit vielen Einkaufstaschen nach Hause. Sie möchten helfen.",
+   "o": [
+    "Soll ich Ihnen eine Tasche tragen?",
+    "Kannst du mir eine Tasche tragen?",
+    "Danke, ich schaffe das schon.",
+    "Soll ich dir eine Tasche tragen?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Herr Braun fragt: „Soll ich Ihnen helfen?“ Ihr Fahrrad ist sehr schwer und Sie brauchen Hilfe.",
+   "o": [
+    "Oh ja, das wäre sehr nett von Ihnen!",
+    "Danke, das geht schon. Ich schaffe das!",
+    "Moment, ich helfe Ihnen gern!",
+    "Oh ja, das wäre sehr lieb von dir!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihre Freundin Mia fragt: „Soll ich dir den Rucksack tragen?“ Er ist leicht. Sie brauchen keine Hilfe.",
+   "o": [
+    "Oh, gern. Das wäre sehr lieb!",
+    "Danke, das geht schon. Er ist leicht.",
+    "Lass mich das machen!",
+    "Vielen Dank für deine Hilfe!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ihr Bruder sagt: „Moment, ich helfe dir mit dem Schrank!“ Allein schaffen Sie das nicht.",
+   "o": [
+    "Danke, ich schaffe das schon.",
+    "Soll ich dir helfen?",
+    "Oh ja, gern. Vielen Dank!",
+    "Lassen Sie mich das machen!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Frau Weber fragt: „Soll ich Ihnen die Tüten tragen?“ Sie brauchen keine Hilfe.",
+   "o": [
+    "Das wäre wirklich sehr nett von Ihnen!",
+    "Danke, ich schaffe das schon!",
+    "Moment, ich helfe Ihnen!",
+    "Danke, das ist lieb von dir!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie wohnen im zweiten Stock. Familie Saidov wohnt im dritten Stock. Was sagen Sie?",
+   "o": [
+    "Unter uns wohnt Familie Saidov.",
+    "Neben uns wohnt Familie Saidov.",
+    "Über uns wohnt Familie Saidov.",
+    "Bei uns wohnt Familie Saidov."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Der Postbote sucht Lena. Sie wohnt auf Ihrem Stock, links von Ihrer Tür.",
+   "o": [
+    "Sie wohnt rechts neben uns.",
+    "Sie wohnt über uns.",
+    "Sie wohnt unter uns.",
+    "Sie wohnt links neben uns."
+   ],
+   "a": 3
+  }
+ ],
+ "15": [
+  {
+   "q": "Morgen ist Ihr erster Tag an der Uni. Rucksack oder Tasche? Sie fragen Ihre Freundin Laylo.",
+   "o": [
+    "Rucksack oder Tasche? Was meinst du?",
+    "Nimm doch den Rucksack! Das ist besser.",
+    "Danke für den Tipp! Du hast recht.",
+    "Rucksack oder Tasche? Was meinen Sie?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie möchten die B1-Prüfung im Mai machen, sind aber nicht sicher. Sie fragen Ihre Lehrerin.",
+   "o": [
+    "Ist Mai zu früh? Wie siehst du das?",
+    "Ich würd’ sagen, Juni ist besser.",
+    "Ist Mai zu früh? Wie sehen Sie das?",
+    "Im Mai? Dann ganz viel Glück!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Aziz fragt: „Soll ich mit dem Bus oder mit dem Taxi zur Prüfung fahren?“ Der Bus ist oft spät.",
+   "o": [
+    "Ich weiß nicht so genau. Was meinst du?",
+    "Danke für den Tipp! Du hast recht.",
+    "Viel Glück! Ich drück’ dir die Daumen!",
+    "Ich würd’ sagen, dass das Taxi besser ist."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihre Freundin Sevara ist neu in der Stadt und fragt: „Wie finde ich hier Freunde?“",
+   "o": [
+    "Vielleicht ist es besser, wenn du einen Kurs machst.",
+    "Vielleicht ist es besser, wenn Sie einen Kurs machen.",
+    "Ich bin nicht sicher. Wie siehst du das?",
+    "Danke, du hast mir echt geholfen."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihr Freund Nodir hat Ihnen einen guten Tipp für die Prüfung gegeben. Das hilft Ihnen sehr.",
+   "o": [
+    "Danke, ich drück’ dir die Daumen!",
+    "Danke, ich schaffe das schon!",
+    "Danke, das kann ich verstehen.",
+    "Danke, du hast mir echt geholfen!"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Lena sagt: „Nimm doch die U-Bahn, dann bist du schneller.“ Sie finden die Idee gut.",
+   "o": [
+    "Viel Erfolg! Ich drück’ die Daumen!",
+    "Gute Idee! Danke für den Tipp!",
+    "Ich würd’ sagen, der Bus ist besser.",
+    "Ich bin nicht sicher. Was meinst du?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ihre Schwester hat morgen ihre Fahrprüfung. Was sagen Sie?",
+   "o": [
+    "Herzlichen Glückwunsch zur Prüfung!",
+    "Gute Besserung und Kopf hoch!",
+    "Viel Glück morgen! Ich drück’ dir die Daumen!",
+    "Danke für den Tipp! Du hast recht."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ihr Freund Paul fängt morgen ein FSJ in einem Krankenhaus an.",
+   "o": [
+    "Dann gute Besserung im Krankenhaus!",
+    "Dann ganz viel Erfolg morgen!",
+    "Herzlichen Glückwunsch zum Geburtstag!",
+    "Das ist ja wirklich schlimm!"
+   ],
+   "a": 1
+  }
+ ],
+ "16": [
+  {
+   "q": "Malika sagt: „Nach einem Horrorfilm kann ich nicht schlafen.“ Bei Ihnen ist das genauso.",
+   "o": [
+    "Echt? Bei mir ist das ganz anders.",
+    "Das kenne ich nicht. Ich schlafe gut.",
+    "Das kenne ich. Das geht mir auch so.",
+    "Der Film ist ja total spannend!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Jonas sagt: „Ich sehe Serien nur am Wochenende.“ Sie sehen Serien jeden Abend.",
+   "o": [
+    "Bei mir ist das anders: jeden Abend.",
+    "Bei mir ist das ähnlich: auch am Wochenende.",
+    "Ja, genau! Das geht mir auch so.",
+    "Echt? Worum geht es denn?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Bei traurigen Filmen weinen Sie immer. Sie möchten wissen, ob das bei Timur auch so ist.",
+   "o": [
+    "Ich weine bei traurigen Filmen. Das geht mir auch so.",
+    "Ich weine bei traurigen Filmen. Wie geht es dir?",
+    "Ich weine bei traurigen Filmen. Worum geht es?",
+    "Ich weine bei traurigen Filmen. Geht dir das auch so?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Aziz fragt: „Worum geht es in deiner Lieblingsserie?“",
+   "o": [
+    "Die Serie hat zehn Folgen.",
+    "Es geht um eine Familie in Samarkand.",
+    "Die Schauspieler spielen wirklich gut.",
+    "Ja, das geht mir auch so."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Lena fragt: „Wo spielt die Serie?“",
+   "o": [
+    "Die Geschichte spielt in einem Dorf in Österreich.",
+    "Es geht um zwei Brüder und viel Geld.",
+    "Die Hauptfigur ist eine junge Ärztin.",
+    "Die Serie hat acht Folgen."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihr Freund fragt: „Wer ist die Hauptfigur in dem Krimi?“",
+   "o": [
+    "Die Geschichte spielt in Berlin.",
+    "Es geht um einen Hund und eine Familie.",
+    "Die Hauptfigur ist Sara, eine junge Polizistin.",
+    "Jede Folge dauert 45 Minuten."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie haben eine Komödie gesehen. Sie hat Ihnen sehr gefallen. Was sagen Sie?",
+   "o": [
+    "Das Ende ist ein bisschen unlogisch.",
+    "Die Geschichte ist total witzig!",
+    "Die Musik ist ziemlich nervig.",
+    "Die Geschichte ist ein bisschen langweilig."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Paul fragt: „Wie findest du den Film?“ Der Film ist gut, aber das Ende passt nicht.",
+   "o": [
+    "Die Schauspieler spielen wirklich gut.",
+    "Es geht um eine Familie in Wien.",
+    "Das kenne ich. Das geht mir auch so.",
+    "Gut, aber das Ende finde ich unlogisch."
+   ],
+   "a": 3
+  }
+ ],
+ "17": [
+  {
+   "q": "Ihre Mitbewohnerin Sevara kann heute nicht putzen. Sie hat morgen eine Prüfung.",
+   "o": [
+    "Muss das sein? Ich bin total genervt!",
+    "Kein Problem, das kann ich verstehen.",
+    "Das ist mir egal. Du musst heute putzen.",
+    "Schade! Das habe ich mir anders vorgestellt."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Timur sagt: „Der Kurs ist heute nicht in Raum 5, sondern in Raum 7.“",
+   "o": [
+    "Stresst dich das? Dann helfe ich dir.",
+    "Wer möchte das übernehmen?",
+    "Ach so, das habe ich nicht gewusst. Danke!",
+    "Danke, dass du das übernimmst!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Lena sagt: „Unser Gruppenprojekt ist wichtig. Wir sollten früh anfangen.“ Sie denken das auch.",
+   "o": [
+    "Muss das sein? Jetzt schon?",
+    "Tut mir leid, das geht leider nicht.",
+    "Also, ich weiß nicht. Meinst du?",
+    "Du hast absolut recht. Das finde ich auch."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Laylo sagt: „Ich bin total müde. Ich kann heute nicht lange bleiben.“ Sie zeigen Verständnis.",
+   "o": [
+    "Ich verstehe dich. Kein Problem.",
+    "Super, dass du so lange bleibst!",
+    "Danke, dass du das übernimmst!",
+    "Ach, komm schon! Das macht Spaß!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihre Lerngruppe bereitet eine Präsentation vor. Sie möchten das Plakat gern selbst machen.",
+   "o": [
+    "Wer möchte das Plakat machen?",
+    "Kannst du bitte das Plakat machen?",
+    "Danke, dass du das Plakat machst!",
+    "Ich würde gern das Plakat machen. Einverstanden?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Im Deutschkurs gibt es eine neue Aufgabe: ein Video machen. Sie fragen die Gruppe, wer das macht.",
+   "o": [
+    "Ich würde gern das Video machen.",
+    "Wer möchte das Video übernehmen?",
+    "Danke, dass du das Video machst!",
+    "Ach so, das habe ich nicht gewusst."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ihre Mitbewohnerin Malika hat diese Woche viel Stress. Sie möchten für sie einkaufen.",
+   "o": [
+    "Kannst du bitte heute einkaufen gehen?",
+    "Wer möchte das Einkaufen übernehmen?",
+    "Ich kann das Einkaufen gern für dich übernehmen.",
+    "Danke, dass du das übernimmst!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Nodir hat heute für Sie den Müll weggebracht. Sie freuen sich.",
+   "o": [
+    "Super, danke, dass du das übernommen hast!",
+    "Kein Problem, das kann ich verstehen.",
+    "Vielleicht machen wir das zusammen?",
+    "Kannst du das bitte morgen machen?"
+   ],
+   "a": 0
+  }
+ ],
+ "18": [
+  {
+   "q": "Mia fragt: „Wann hörst du Musik?“ Sie hören immer Musik, wenn Sie im Bus sitzen.",
+   "o": [
+    "Ich schätze, ungefähr zwei Stunden pro Tag.",
+    "Nein, das kommt eigentlich nie vor.",
+    "Ich würde sagen, zwischen 10 und 20 Lieder.",
+    "Immer wenn ich im Bus sitze, höre ich Musik."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Timur fragt: „Wann liest du deine Nachrichten?“ Meistens am Abend, aber nicht immer.",
+   "o": [
+    "Immer wenn eine Nachricht kommt.",
+    "Das kommt eigentlich nie vor.",
+    "Normalerweise am Abend.",
+    "Ich würde sagen, zwischen 30 und 50."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Lena fragt: „Schaltest du dein Handy manchmal aus?“ Das machen Sie nicht oft, aber manchmal.",
+   "o": [
+    "Nein, das kommt eigentlich nie vor.",
+    "Ja, das mache ich jeden Abend.",
+    "Ich schätze, ungefähr 50-mal.",
+    "Es kommt vor, dass ich es ausschalte."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Aziz fragt: „Postest du Fotos von deinem Essen?“ Das machen Sie nie.",
+   "o": [
+    "Nein, das kommt eigentlich nie vor.",
+    "Ja, es kommt auch mal vor.",
+    "Normalerweise jeden Tag.",
+    "Ja, immer wenn ich koche."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sevara fragt: „Wie viele Apps hast du auf dem Handy?“ Sie wissen die Zahl nicht genau.",
+   "o": [
+    "Ich habe genau 43 Apps.",
+    "Ich schätze, zwischen 40 und 50.",
+    "Normalerweise am Abend.",
+    "Das kommt eigentlich nie vor."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Paul fragt: „Wie lange bist du pro Tag online?“ Sie wissen es nicht genau.",
+   "o": [
+    "Immer wenn ich Zeit habe.",
+    "Genau drei Stunden und zehn Minuten.",
+    "Hm, vielleicht so drei Stunden.",
+    "Nein, das kommt nie vor."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ihre Mutter fragt: „Wie oft schaust du am Tag aufs Handy?“ Sie denken: sehr oft, über 100-mal.",
+   "o": [
+    "Bestimmt öfter als 100-mal.",
+    "Normalerweise nur am Wochenende.",
+    "Das kommt eigentlich nie vor.",
+    "Vielleicht so zweimal pro Tag."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Laylo fragt: „Wie viele Nachrichten bekommst du pro Tag?“ Sie wissen es nicht genau, etwa 30.",
+   "o": [
+    "Normalerweise am Morgen.",
+    "Ich würde sagen, ungefähr 30.",
+    "Immer wenn ich im Bus sitze.",
+    "Ja, das kommt auch vor."
+   ],
+   "a": 1
+  }
+ ],
+ "19": [
+  {
+   "q": "Ihre Oma erzählt: „Ich habe mit 75 Jahren Snowboard fahren gelernt!“ Sie sind sehr überrascht.",
+   "o": [
+    "Oh nein! So ein Pech!",
+    "Das war bestimmt nervig.",
+    "Echt? Das ist ja unglaublich!",
+    "Das wäre nichts für mich."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Nodir sagt: „Ich habe im Supermarkt 500 Euro gefunden!“ Sie können das nicht glauben.",
+   "o": [
+    "Was? Das ist jetzt nicht wahr, oder?",
+    "Oh nein, so ein Pech!",
+    "Das war sicher nervig.",
+    "Ach so, das habe ich nicht gewusst."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Jonas sagt: „Ich habe noch nie Plov gegessen.“ Sie finden das komisch. Alle kennen Plov!",
+   "o": [
+    "Echt? So ein Glück!",
+    "Echt? Das wundert mich jetzt aber.",
+    "Das war bestimmt lustig.",
+    "Ja, das geht mir auch so."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Malika erzählt: „Mein Bruder spricht mit vier Jahren schon drei Sprachen.“ Sie sind überrascht.",
+   "o": [
+    "Oh, das war sicher nervig.",
+    "So ein Pech für ihn!",
+    "Das wäre nichts für mich.",
+    "Wow, nicht zu glauben!"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Timur erzählt: „Ich habe zwei Tickets für das Konzert gewonnen!“",
+   "o": [
+    "Oh nein! So ein Pech!",
+    "Oh, das war sicher anstrengend.",
+    "Super! So ein Glück!",
+    "Schade, dass du nicht kommen kannst."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Laylo erzählt: „Ich habe meinen Zug nach Samarkand verpasst.“",
+   "o": [
+    "Oh nein! So ein Pech!",
+    "Wow! So ein Glück!",
+    "Das war bestimmt lustig!",
+    "Das ist ja fantastisch!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Aziz erzählt: „Ich musste gestern drei Stunden beim Arzt warten.“",
+   "o": [
+    "Oh, das war sicher lustig.",
+    "Wow, so ein Glück!",
+    "Toll! Das freut mich für dich!",
+    "Oh Mann, das war sicher nervig."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sevara fragt: „Gehst du am Samstag mit mir klettern?“ Sie haben große Angst davor.",
+   "o": [
+    "Ja, gern! Das wäre toll!",
+    "Nein danke, das wäre nichts für mich.",
+    "Das war sicher lustig.",
+    "Echt? Das ist ja unglaublich!"
+   ],
+   "a": 1
+  }
+ ],
+ "20": [
+  {
+   "q": "Paul fragt: „Wie war dein Sommerkurs in Berlin?“ Der Kurs war super.",
+   "o": [
+    "Na ja, richtig glücklich war ich nicht.",
+    "Hm, es hat mir irgendetwas gefehlt.",
+    "Das freut mich. Viel Erfolg!",
+    "Toll! Der Kurs hat mir wirklich gut gefallen."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie gehen nicht mehr zum Tanzkurs. Warum? Sie wissen es selbst nicht genau.",
+   "o": [
+    "Es hat mir irgendetwas gefehlt.",
+    "Ich hab’ alles richtig gemacht!",
+    "Und das fühlt sich gut an!",
+    "Der Kurs hat mir super gefallen."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Malika fragt: „Warum studierst du nicht mehr Mathe?“ Sie waren mit Mathe nicht zufrieden.",
+   "o": [
+    "Mathe hat mir vom ersten Tag an gefallen.",
+    "Da hab’ ich gemerkt: Mathe macht mir Spaß.",
+    "Das freut mich! Viel Erfolg!",
+    "Richtig glücklich war ich mit Mathe nicht."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie machen jetzt ein FSJ im Tierheim und sind begeistert. Ihr Freund fragt, wie es ist.",
+   "o": [
+    "Na ja, richtig glücklich bin ich nicht.",
+    "Super! Genau das macht mir Spaß!",
+    "Hm, es fehlt mir irgendetwas.",
+    "Mir ist klar: Ich muss etwas verändern."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ihre Freundin fragt: „Und? Bist du mit der neuen Uni zufrieden?“ Ja, sehr!",
+   "o": [
+    "Nein, richtig glücklich bin ich nicht.",
+    "Nein, es fehlt mir irgendetwas.",
+    "Ja! Ich hab’ alles richtig gemacht!",
+    "Das freut mich! Viel Erfolg!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Laylo fragt: „Warum bist du aus der WG ausgezogen?“ Sie waren dort lange unzufrieden.",
+   "o": [
+    "Die WG hat mir vom ersten Tag an gefallen.",
+    "Mir war klar: Ich muss etwas verändern.",
+    "Ich hab’ mich dort so lebendig gefühlt.",
+    "Das finde ich ganz schön mutig!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie fahren jetzt jeden Tag mit dem Fahrrad zur Uni. Sie sind sehr zufrieden.",
+   "o": [
+    "Es hat mir irgendetwas gefehlt.",
+    "Richtig glücklich bin ich damit nicht.",
+    "Ich bin fit, und das fühlt sich gut an!",
+    "Ich frage mich: Will ich das wirklich?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ihr Bruder fragt: „Wie war die Wanderung in den Bergen?“ Sie waren begeistert.",
+   "o": [
+    "Toll! Ich habe mich so lebendig gefühlt!",
+    "Na ja, es hat mir irgendetwas gefehlt.",
+    "Ich hab’ mich gefragt: Warum mache ich das?",
+    "Das freut mich! Viel Spaß!"
+   ],
+   "a": 0
+  }
+ ],
+ "21": [
+  {
+   "q": "Ein Mann wirft im Park Plastikflaschen auf den Boden. Sie ärgern sich.",
+   "o": [
+    "Was soll denn das? Das kann man doch nicht machen!",
+    "Können Sie mir das genauer erklären?",
+    "Ich will nur, dass Sie mal nachdenken.",
+    "Super, dass Sie das machen!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ein Mann sagt im Bus: „Fahrradfahren ist nur für Kinder.“ Sie finden das falsch und ärgern sich.",
+   "o": [
+    "Da haben Sie schon recht.",
+    "Das ist eine gute Idee.",
+    "Das ist doch Unsinn!",
+    "Ja, das finde ich auch."
+   ],
+   "a": 2
+  },
+  {
+   "q": "In Ihrer WG gibt es ein Treffen. Sie finden: Wir kaufen zu viel Plastik.",
+   "o": [
+    "Kannst du mir das genauer erklären?",
+    "Tut mir leid, das sehe ich ganz anders.",
+    "Wie meinst du das? Ich verstehe das nicht.",
+    "Ich kann nur sagen, dass wir zu viel Plastik kaufen."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Im Sportverein dürfen am Abend nur die Jungen auf den Platz. Das ärgert Sie.",
+   "o": [
+    "Ich finde es toll, dass nur die Jungen spielen dürfen.",
+    "Können Sie mir das genauer erklären?",
+    "Ich finde es unfair, dass nur die Jungen spielen dürfen.",
+    "Da haben Sie schon recht."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Herr Braun sagt: „Wir sollten im Haus Strom sparen.“ Sie verstehen nicht genau, was er meint.",
+   "o": [
+    "Wie meinst du das genau?",
+    "Das ist doch Unsinn!",
+    "Tut mir leid, das sehe ich anders.",
+    "Wie meinen Sie das genau?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihr Freund Aziz: „Mit dem Bus dauert es länger.“ Das stimmt, aber der Bus ist besser für die Umwelt.",
+   "o": [
+    "Das ist doch Unsinn! Der Bus ist schnell.",
+    "Da hast du schon recht, aber die Umwelt ist wichtiger.",
+    "Tut mir leid, das sehe ich ganz anders.",
+    "Da haben Sie schon recht, aber die Umwelt ist wichtiger."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ihre Nachbarin sagt: „Müll trennen bringt doch nichts.“ Sie denken ganz anders.",
+   "o": [
+    "Tut mir leid, das sehe ich ganz anders.",
+    "Da haben Sie absolut recht.",
+    "Ja, das finde ich auch.",
+    "Okay, das ist eine gute Idee."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie sind mit Freunden am Fluss. Überall liegt Müll. Sie möchten zusammen aufräumen.",
+   "o": [
+    "Lassen Sie uns hier den Müll sammeln!",
+    "Lasst uns hier den Müll sammeln!",
+    "Sammelt hier den Müll!",
+    "Ich will nur, dass ihr mal nachdenkt."
+   ],
+   "a": 1
+  }
+ ],
+ "22": [
+  {
+   "q": "Ein Tourist fragt Sie: „Wann fährt der letzte Bus?“ Sie wissen es nicht.",
+   "o": [
+    "Tut mir leid, das weiß ich nicht.",
+    "Der Bus fährt bestimmt um elf.",
+    "Kann schon sein.",
+    "Ist das wirklich so?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihr Bruder fragt: „Wo ist mein Ladekabel?“ Sie haben es nicht gesehen.",
+   "o": [
+    "Es ist bestimmt in der Küche.",
+    "Kann schon sein. Frag doch Mama.",
+    "Da hast du bestimmt recht.",
+    "Keine Ahnung! Frag doch Mama."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Lena fragt: „Ist der Test am Montag?“ Sie denken ja, aber Sie wissen es nicht sicher.",
+   "o": [
+    "Ja, der Test ist ganz bestimmt am Montag.",
+    "Keine Ahnung! Ich weiß es gar nicht.",
+    "Ich glaube ja, aber da bin ich nicht sicher.",
+    "Ist das wirklich so? Das glaube ich nicht."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Mia fragt: „Wo ist Timur?“ Sie denken, er ist beim Training. Aber Sie sind nicht ganz sicher.",
+   "o": [
+    "Er ist ganz bestimmt beim Training.",
+    "Er ist wahrscheinlich beim Training.",
+    "Keine Ahnung! Frag doch Lena.",
+    "Ist das wirklich so? Ich glaube nicht."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Aziz sagt: „Im Sommer ist es in Taschkent zu heiß für Sport.“ Sie denken: Vielleicht stimmt das.",
+   "o": [
+    "Kann schon sein.",
+    "Das ist doch Unsinn!",
+    "Da bin ich ganz sicher!",
+    "Was soll denn das?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Laylo sagt: „Wer früh aufsteht, ist immer glücklich.“ Sie glauben das nicht so richtig.",
+   "o": [
+    "Ja, das stimmt bestimmt.",
+    "Hm, ist das wirklich so?",
+    "Keine Ahnung! Frag doch Aziz.",
+    "Da hast du absolut recht."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Nodir: „Unsere Lehrerin sagt, wir müssen jeden Tag Wörter lernen.“ Das stimmt, aber es ist schwer.",
+   "o": [
+    "Ist das wirklich so? Das glaube ich nicht.",
+    "Da bin ich nicht sicher. Vielleicht.",
+    "Sie hat absolut recht. Das ist ganz leicht.",
+    "Sie hat bestimmt recht, aber das ist schwer."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihre Lehrerin fragt: „Wann beginnt das Konzert?“ Sie wissen es nicht genau, vielleicht um acht.",
+   "o": [
+    "Es beginnt ganz bestimmt um acht.",
+    "Keine Ahnung! Frag doch Mia.",
+    "Ich weiß es nicht genau. Vielleicht um acht?",
+    "Kann schon sein, dass Sie recht haben."
+   ],
+   "a": 2
+  }
+ ],
+ "23": [
+  {
+   "q": "Sie sprechen mit Ihrem Opa über seine Mutter. Sie möchten ihr Geburtsjahr wissen.",
+   "o": [
+    "Wann ist deine Mutter gestorben?",
+    "Was ist 1950 passiert?",
+    "Was hat sie nach der Schule gemacht?",
+    "Wann ist deine Mutter geboren?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihre Freundin erzählt von ihrem Onkel. Sie möchten wissen, was er nach der Schule gemacht hat.",
+   "o": [
+    "Was hat er nach der Schule gemacht?",
+    "Wo ist er zur Schule gegangen?",
+    "Wann ist er geboren?",
+    "Er ging nach der Schule nach Berlin."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Im Leben von Ihrer Oma war 1975 etwas Wichtiges. Sie möchten wissen, was.",
+   "o": [
+    "Wann ist sie geboren?",
+    "Wo hat sie 1975 gewohnt?",
+    "Was ist 1975 passiert?",
+    "Sie heiratete 1975 in Buchara."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Timur fragt: „Wann ist dein Vater geboren?“",
+   "o": [
+    "Er hat in Taschkent studiert.",
+    "Er ist am 3. Mai 1970 geboren.",
+    "Er ist 1995 nach Taschkent gezogen.",
+    "Mit 25 Jahren hat er geheiratet."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie schreiben eine Biografie. Eine Malerin ist 1931 in Buchara geboren. Was schreiben Sie?",
+   "o": [
+    "Sie starb 1931 in Buchara.",
+    "Wann ist sie in Buchara geboren?",
+    "Sie kam 1931 in Buchara zur Welt.",
+    "Sie heiratete 1931 in Buchara."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie schreiben eine Biografie. Ein Sänger ist mit 76 Jahren in Wien gestorben.",
+   "o": [
+    "Er heiratete mit 76 Jahren in Wien.",
+    "Wann ist er in Wien gestorben?",
+    "Er studierte mit 76 Jahren in Wien.",
+    "Er starb mit 76 Jahren in Wien."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Biografie: Nach der Schule hat Herr Karimov Medizin studiert. Wie schreiben Sie das?",
+   "o": [
+    "Was hat er nach der Schule gemacht?",
+    "Nach der Schule studierte er Medizin.",
+    "Nach dem Studium arbeitete er als Arzt.",
+    "Nach der Schule heiratete er."
+   ],
+   "a": 1
+  },
+  {
+   "q": "1960 heiratete die Sängerin. 1962 bekam sie ein Kind. Wie schreiben Sie den zweiten Satz?",
+   "o": [
+    "Zwei Jahre später bekam sie ein Kind.",
+    "Zwei Jahre vorher bekam sie ein Kind.",
+    "Wann hat sie ein Kind bekommen?",
+    "Mit zwei Jahren bekam sie ein Kind."
+   ],
+   "a": 0
+  }
+ ],
+ "24": [
+  {
+   "q": "Sie planen mit Ihrem Deutschkurs ein Fest. Ihre Idee: ein Picknick im Park. Sie fragen die anderen.",
+   "o": [
+    "Super Vorschlag! Das gefällt mir!",
+    "Da bin ich dagegen. Im Park ist es kalt.",
+    "Perfekt, so machen wir es.",
+    "Was haltet ihr davon, wenn wir ein Picknick machen?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Laylo sagt: „Am Sonntag haben wir frei. Was machen wir?“ Sie möchten eine Radtour vorschlagen.",
+   "o": [
+    "Ich bin nicht so überzeugt von der Radtour.",
+    "Eine Radtour wäre nichts für mich.",
+    "Wir könnten doch eine Radtour machen.",
+    "Perfekt, so machen wir die Radtour."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Malika schlägt vor: „Wir fahren um 5 Uhr morgens los.“ Das finden Sie zu früh.",
+   "o": [
+    "Hmm, ich bin nicht so überzeugt. Das ist sehr früh.",
+    "Super Vorschlag! Das gefällt mir!",
+    "Gute Idee! So machen wir es.",
+    "Was hältst du davon, wenn wir um fünf fahren?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihre WG möchte eine Katze. Sie haben eine Katzenallergie und finden die Idee schlecht.",
+   "o": [
+    "Die Idee finde ich wirklich gut!",
+    "Da bin ich dagegen. Ich habe eine Allergie.",
+    "Ja, das ist ein super Vorschlag!",
+    "Wir könnten doch eine Katze kaufen."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ihr Freund sagt: „Wir könnten doch am Freitag zusammen kochen.“ Sie finden die Idee toll.",
+   "o": [
+    "Die Idee finde ich wirklich gut!",
+    "Ich bin nicht so überzeugt.",
+    "Da bin ich dagegen.",
+    "Könnten wir nicht lieber essen gehen?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihre Gruppe hat einen Plan für das Kursfest. Alle sind einverstanden. Was sagen Sie zum Schluss?",
+   "o": [
+    "Sollen wir vielleicht etwas anderes machen?",
+    "Hmm, ich bin nicht so überzeugt.",
+    "Ich schlage vor, dass wir neu planen.",
+    "Perfekt, so machen wir es!"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihre Gruppe sucht ein Geschenk für die Lehrerin. Sie haben eine Idee: ein Fotobuch.",
+   "o": [
+    "Ein Fotobuch? Ich bin nicht so überzeugt.",
+    "Ich schlage vor, dass wir ein Fotobuch machen.",
+    "Ein Fotobuch? Da bin ich dagegen.",
+    "Super Vorschlag! Ein Fotobuch ist toll!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Paul möchte morgen im Park grillen. Aber morgen regnet es. Ihre Idee: bei Ihnen kochen.",
+   "o": [
+    "Super, so machen wir es im Park!",
+    "Ja, das ist ein super Vorschlag!",
+    "Könnten wir nicht bei mir kochen?",
+    "Wir könnten doch im Park grillen."
+   ],
+   "a": 2
+  }
+ ]
+}
