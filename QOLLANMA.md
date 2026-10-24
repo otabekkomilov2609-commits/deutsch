@@ -1281,3 +1281,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Muammo: ustoz 🔗 bilan eski akkauntni yangisiga qo‘shgan paytda o‘quvchining yangi akkaunti telefonda ochiq tursa, telefon 2 daqiqadan keyin o‘zidagi eski holatni bazaga yozib, birlashtirilgan natijani bosib ketardi (Nargiza: 12:43 birlashtirildi, 12:53 telefon bosib ketdi).
 - Tuzatish: sayt bazaga yozishdan oldin bazadagini o‘qiydi; u yangiroq bo‘lsa — avval qo‘shib oladi, keyin yozadi. Saytdan chiqishdagi tezkor yozuv — oxirgi 5 daqiqada tekshirilgan bo‘lsagina.
 - Yo‘qolgan natijani qaytarish: eski akkaunt ochilgan qurilmada saytni ochsa — sayt yangi akkauntga kirishni so‘raydi, kirgach eski qurilmadagi natijalar qo‘shiladi.
+
+## 📂 Modullar yig‘ilgan holda (2026-10-24)
+- Otabek: «har bir moduldan razvernut kk emas». Endi Lektionlar ro‘yxatida faqat **faol modul** ochiq turadi — o‘quvchining shu daraja yarmidagi (A2.1, A2.2 …) birinchi tugallanmagan Lektioni turgan modul. Qolgan modullar yig‘ilgan; modul tugmasi «▼ Ochish» bilan ochiladi.
+- O‘quvchi o‘zi ochgan/yopgan Lektionlar eslab qolinadi (lek:op / lek:cl). «Hammasini ochish / yig‘ish» ham shu ro‘yxatga yoziladi.
