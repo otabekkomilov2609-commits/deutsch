@@ -1270,3 +1270,4 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 
 ## 👤 Tahlil — bitta o‘quvchi (2026-10-24)
 - Ustoz paneli → 📊 Tahlil: daraja tugmalari yonida «👥 Hamma o‘quvchilar» ro‘yxati. O‘quvchi tanlansa — tepada uning profili (so‘zlar, Lektionlar, eng ko‘p xato qilgan savollar), 🌐 bo‘limida uning kunma-kun vaqti va kunni bossangiz — o‘sha kungi yo‘li; 📚 🧠 🧭 🖱 bo‘limlari faqat shu o‘quvchi ma’lumoti bilan. «✕ hamma o‘quvchilar» — qaytish. 📣 Marafon — doim umumiy.
+- 2026-10-24 (Otabek: «video ustiga ortiqcha narsalarsiz chiqsa»): YouTube'ning o'z boshqaruvi o'chirildi (controls:0) — videoni bosish = ▶/⏸, ostida bizning chiziq (vaqt, siljitish, ⛶ butun ekran). YouTube'ning avtomatik subtitri ham o'chiriladi. Qolgan narsalar: boshida 2–3 soniya video nomi, Easy German'ning «Werbung» belgisi (~10 soniya — YouTube majburiy ko'rsatadi) va kanal logotipi (videoning o'zida).
