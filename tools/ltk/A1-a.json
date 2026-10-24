@@ -1,0 +1,986 @@
+{
+ "1": [
+  {
+   "q": "Frau Weber sagt: „Guten Tag!“ Sie möchten wissen: Wie geht es Frau Weber?",
+   "o": [
+    "Wie geht's dir?",
+    "Woher kommen Sie?",
+    "Wie heißen Sie?",
+    "Wie geht es Ihnen?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Timur: „Hallo! Wie geht's dir?“ Ihnen geht es sehr gut.",
+   "o": [
+    "Nicht so gut. Und dir?",
+    "Super, danke! Und dir?",
+    "Gut, danke. Und Ihnen?",
+    "Es geht. Und dir?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ein Mann sagt: „Mein Name ist Braun.“ Sie verstehen den Namen nicht.",
+   "o": [
+    "Entschuldigung, wie bitte?",
+    "Guten Tag, ich bin Laylo.",
+    "Und woher kommen Sie?",
+    "Gut, danke. Und Ihnen?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Lena fragt: „Woher kommst du?“ Sie sind aus Usbekistan.",
+   "o": [
+    "Ich heiße Malika Aliyeva.",
+    "Gut, danke. Und dir?",
+    "Ich komme aus Usbekistan.",
+    "Und woher kommst du?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ein Kind sagt: „Hallo!“ Sie möchten den Namen wissen.",
+   "o": [
+    "Hallo! Wie heißen Sie?",
+    "Hallo! Woher kommst du?",
+    "Hallo! Wie heißt du?",
+    "Hallo! Wie geht's dir?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Herr Braun fragt: „Wie geht es Ihnen?“ Es geht Ihnen gut.",
+   "o": [
+    "Gut, danke. Und Ihnen?",
+    "Gut, danke. Und dir?",
+    "Nicht so gut, danke.",
+    "Ich komme aus Taschkent."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie kommen am Morgen in den Deutschkurs. Was sagen Sie?",
+   "o": [
+    "Guten Abend!",
+    "Guten Morgen!",
+    "Auf Wiedersehen!",
+    "Tschüs!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Frau Kaya ist neu im Kurs. Sie fragen nach dem Land.",
+   "o": [
+    "Woher kommst du?",
+    "Wie heißen Sie?",
+    "Wie geht es Ihnen?",
+    "Woher kommen Sie?"
+   ],
+   "a": 3
+  }
+ ],
+ "2": [
+  {
+   "q": "Aziz studiert. Nodir fragt: „Was machst du beruflich?“ Was sagt Aziz?",
+   "o": [
+    "Ich bin Student in Taschkent.",
+    "Ich bin Lehrer in Taschkent.",
+    "Ich wohne in Taschkent.",
+    "Ich bin 19 Jahre alt."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Frau Weber arbeitet im Krankenhaus. Was ist sie von Beruf?",
+   "o": [
+    "Er ist Arzt.",
+    "Sie ist Lehrerin.",
+    "Sie ist Ärztin.",
+    "Sie ist Studentin."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Frau Braun arbeitet im Restaurant. Sie bringt das Essen. Was ist sie?",
+   "o": [
+    "Er ist Kellner.",
+    "Sie ist Kellnerin.",
+    "Sie ist Verkäuferin.",
+    "Sie ist Ärztin."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Nodir fragt: „Wie alt bist du?“ Sie sind 18.",
+   "o": [
+    "Ich bin Schüler in Taschkent.",
+    "Ich wohne in Taschkent.",
+    "Und wie alt bist du?",
+    "Ich bin 18 Jahre alt."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Paul fragt Timur: „Bist du verheiratet?“ Timur hat keine Frau.",
+   "o": [
+    "Ja, ich bin verheiratet.",
+    "Ja, wir haben zwei Kinder.",
+    "Nein, ich wohne in Berlin.",
+    "Nein, ich bin Single."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie sprechen mit Frau Weber. Sie möchten ihren Beruf wissen.",
+   "o": [
+    "Was bist du von Beruf?",
+    "Was sind Sie von Beruf?",
+    "Wo wohnen Sie, Frau Weber?",
+    "Wie alt sind Sie?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Laylo fragt Aziz: „Was machst du beruflich?“ Aziz hat keine Arbeit.",
+   "o": [
+    "Ich arbeite als Kellner.",
+    "Ich bin im Moment in Berlin.",
+    "Ich arbeite im Moment nicht.",
+    "Ich bin Single. Und du?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ihre Freunde Laylo und Timur sind hier. Sie fragen nach dem Beruf.",
+   "o": [
+    "Was macht ihr beruflich?",
+    "Was machst du beruflich?",
+    "Was machen Sie beruflich?",
+    "Wo wohnt ihr denn?"
+   ],
+   "a": 0
+  }
+ ],
+ "3": [
+  {
+   "q": "Die Tasche ist von Malika. Laylo fragt: „Wem gehört die Tasche?“",
+   "o": [
+    "Das ist meine Tasche.",
+    "Das ist Malikas Tasche.",
+    "Das ist deine Tasche.",
+    "Ist das Malikas Tasche?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie zeigen ein Foto. Auf dem Foto ist Ihr Bruder Aziz.",
+   "o": [
+    "Ist das dein Bruder?",
+    "Das ist dein Bruder Aziz.",
+    "Das ist meine Schwester.",
+    "Das ist mein Bruder Aziz."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Lena zeigt ein Foto. Sie denken: Die Frau ist Lenas Oma.",
+   "o": [
+    "Ist das Ihre Oma?",
+    "Das ist meine Oma.",
+    "Ist das deine Oma?",
+    "Hast du Geschwister?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Aziz fragt: „Wer ist der Mann?“ Sie glauben: Das ist Timurs Vater.",
+   "o": [
+    "Ich glaube, das ist Timurs Vater.",
+    "Das ist nicht Timurs Vater.",
+    "Ist das Timurs Vater?",
+    "Nein, das ist mein Vater."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Paul fragt: „Sprichst du Englisch?“ Sie sprechen nur wenig Englisch.",
+   "o": [
+    "Ja, aber nur ein bisschen.",
+    "Nein, gar nicht.",
+    "Ja, sehr gut.",
+    "Welche Sprachen sprichst du?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Lena fragt: „Kommst du nicht aus Usbekistan?“ Sie kommen aus Usbekistan.",
+   "o": [
+    "Ja, ich komme aus Usbekistan.",
+    "Nein, ich komme aus Usbekistan.",
+    "Doch, ich komme aus Usbekistan.",
+    "Nein, ich komme aus Kasachstan."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie sprechen mit Herrn Braun. Sie möchten wissen: Welche Sprachen?",
+   "o": [
+    "Welche Sprachen sprichst du?",
+    "Woher kommen Sie, Herr Braun?",
+    "Ich spreche Usbekisch und Russisch.",
+    "Welche Sprachen sprechen Sie?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Nodir ist Ihr Freund. Sie möchten wissen: Hat er Brüder oder Schwestern?",
+   "o": [
+    "Haben Sie Geschwister?",
+    "Hast du Geschwister?",
+    "Ist das deine Schwester?",
+    "Das sind meine Geschwister."
+   ],
+   "a": 1
+  }
+ ],
+ "4": [
+  {
+   "q": "Sie sind im Möbelgeschäft. Sie möchten den Preis vom Stuhl wissen.",
+   "o": [
+    "Wie finden Sie den Stuhl?",
+    "Der Stuhl ist aber günstig!",
+    "Wie viel kostet der Stuhl?",
+    "Der Stuhl ist zu klein."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Der Tisch kostet nur 20 Euro. Sie finden den Preis super.",
+   "o": [
+    "Oh, das ist aber günstig!",
+    "Oh, das ist aber teuer!",
+    "Wie viel kostet der Tisch?",
+    "Der Tisch ist so hässlich."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ein Sessel kostet 900 Euro. Das ist viel Geld für Sie.",
+   "o": [
+    "Der Sessel ist so günstig.",
+    "Der Sessel ist ein Sonderangebot.",
+    "Der Sessel ist zu klein.",
+    "Der Sessel ist zu teuer."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Timur: „Die Lampe ist so schön!“ Sie finden die Lampe auch schön.",
+   "o": [
+    "Das finde ich nicht.",
+    "Das finde ich auch.",
+    "Findest du?",
+    "Wie viel kostet sie?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Lena: „Das Regal ist modern.“ Sie finden es alt und hässlich.",
+   "o": [
+    "Das finde ich auch. Es ist modern.",
+    "Findest du? Ich finde es hässlich.",
+    "Ja, es ist wirklich schön.",
+    "Wie viel kostet das Regal?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie sind mit Frau Weber im Geschäft. Sie möchten wissen: Findet sie das Sofa schön?",
+   "o": [
+    "Wie findest du das Sofa?",
+    "Wie viel kostet das Sofa?",
+    "Ich finde das Sofa schön.",
+    "Wie finden Sie das Sofa?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie sehen ein tolles Bild. Ihr Freund Aziz soll es auch sehen.",
+   "o": [
+    "Schau mal, das Bild!",
+    "Schauen Sie mal, das Bild!",
+    "Das Bild ist zu teuer.",
+    "Was kostet das Bild?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Malika fragt: „Wie findest du den Schrank?“ Sie finden ihn sehr groß.",
+   "o": [
+    "Ich finde, er ist zu klein.",
+    "Er kostet nur 99 Euro.",
+    "Ich finde, er ist zu groß.",
+    "Das finde ich auch."
+   ],
+   "a": 2
+  }
+ ],
+ "5": [
+  {
+   "q": "Ihr Tisch ist aus Holz. Lena fragt: „Ist der Tisch aus Metall?“",
+   "o": [
+    "Ja, er ist aus Metall.",
+    "Ja, das ist ein Tisch.",
+    "Nein, das ist kein Tisch.",
+    "Nein, er ist aus Holz."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie sehen ein Ding. Das deutsche Wort? Sie fragen Frau Weber.",
+   "o": [
+    "Wie schreibt man das?",
+    "Wie heißt das auf Deutsch?",
+    "Noch einmal, bitte.",
+    "Ist das aus Holz?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Frau Weber sagt: „Das ist ein Schlüssel.“ Sie möchten das Wort schreiben.",
+   "o": [
+    "Wie schreibt man das?",
+    "Wie heißt das auf Deutsch?",
+    "Vielen Dank, Frau Weber.",
+    "Was ist das, bitte?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie geben Aziz einen Stift. Er sagt: „Danke schön!“",
+   "o": [
+    "Danke, Aziz!",
+    "Vielen Dank!",
+    "Bitte, sehr gern!",
+    "Noch einmal, bitte."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Laylo fragt: „Ist das ein Handy?“ Das ist eine Kamera.",
+   "o": [
+    "Ja, das ist ein Handy.",
+    "Nein, das ist keine Kamera.",
+    "Nein, das ist eine Kamera.",
+    "Die Kamera ist aus Plastik."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ihre Tasche ist groß und rot. Malika fragt: „Wie ist deine Tasche?“",
+   "o": [
+    "Sie ist groß und rot.",
+    "Sie ist klein und blau.",
+    "Sie ist groß und schwarz.",
+    "Ist sie groß und rot?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Frau Weber sagt ihre E-Mail-Adresse sehr schnell. Sie verstehen sie nicht.",
+   "o": [
+    "Bitte schön.",
+    "Noch einmal, bitte.",
+    "Kein Problem.",
+    "Vielen Dank."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Die Lampe ist sehr schön. Sie möchten wissen: Holz oder Metall?",
+   "o": [
+    "Wie viel kostet die Lampe?",
+    "Ist das eine Lampe?",
+    "Die Lampe ist aus Metall.",
+    "Ist die Lampe aus Holz oder Metall?"
+   ],
+   "a": 3
+  }
+ ],
+ "6": [
+  {
+   "q": "Sie telefonieren. Lenas Mutter ist am Telefon. Sie möchten Lena sprechen.",
+   "o": [
+    "Ist Lena da, bitte?",
+    "Lena ist leider nicht da.",
+    "Was kann ich für Sie tun?",
+    "Einen Moment, bitte."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ein Mann fragt am Telefon: „Ist Ihr Bruder da?“ Ihr Bruder ist nicht zu Hause.",
+   "o": [
+    "Einen Moment, bitte.",
+    "Ja, hier ist er.",
+    "Er ist leider nicht da.",
+    "Auf Wiederhören!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie telefonieren mit der Sprachschule. Das Gespräch ist zu Ende.",
+   "o": [
+    "Danke, tschüs!",
+    "Vielen Dank. Auf Wiederhören.",
+    "Einen Moment, bitte.",
+    "Was kann ich für Sie tun?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Praxis Dr. Braun: „Guten Tag! Was kann ich für Sie tun?“",
+   "o": [
+    "Einen Moment, bitte.",
+    "Hallo! Wie geht's dir?",
+    "Sehr gern. Auf Wiederhören.",
+    "Ich brauche einen Termin, bitte."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Malika telefoniert mit Timur. Timur sagt: „Hallo?“ Was sagt Malika?",
+   "o": [
+    "Guten Tag, mein Name ist Karimova.",
+    "Malika ist leider nicht da.",
+    "Einen Moment, bitte.",
+    "Hallo Timur, hier ist Malika!"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Frau Weber sagt am Telefon: „Vielen Dank!“",
+   "o": [
+    "Vielen Dank, Frau Weber.",
+    "Kein Problem, sehr gern.",
+    "Danke schön.",
+    "Ist Frau Weber da?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie sind in der Praxis. Die Frau fragt: „Haben Sie einen Termin?“ Sie haben einen.",
+   "o": [
+    "Nein, ich habe keinen Termin.",
+    "Ich brauche einen Termin.",
+    "Ja, ich habe einen Termin.",
+    "Was kann ich für Sie tun?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Am Telefon: „Hier ist Herr …“ Sie verstehen den Namen nicht.",
+   "o": [
+    "Entschuldigung, wie ist Ihr Name?",
+    "Entschuldigung, ist Herr Braun da?",
+    "Mein Name ist Laylo Karimova.",
+    "Vielen Dank. Auf Wiederhören."
+   ],
+   "a": 0
+  }
+ ],
+ "7": [
+  {
+   "q": "Ihre Freundin Sevara tanzt sehr gut.",
+   "o": [
+    "Kannst du gut tanzen?",
+    "Du kannst ja super tanzen!",
+    "Ich kann gar nicht tanzen.",
+    "Sie können ja super tanzen!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Nodir sagt: „Du kannst ja toll kochen!“",
+   "o": [
+    "Ich finde Kochen langweilig.",
+    "Wie oft kochst du denn?",
+    "Bitte, sehr gern.",
+    "Oh, danke! Kochen ist mein Hobby."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Lena fragt: „Wie oft spielst du Fußball?“ Sie spielen nie Fußball.",
+   "o": [
+    "Ich spiele oft Fußball.",
+    "Ich spiele gern Fußball.",
+    "Ich spiele nie Fußball.",
+    "Fußball macht Spaß!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie möchten wissen: Was macht Aziz in der Freizeit gern?",
+   "o": [
+    "Was machst du gern?",
+    "Wie oft machst du das?",
+    "Was machst du beruflich?",
+    "Was machen Sie gern?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Malika fragt: „Wie findest du Schach?“ Sie spielen nicht gern Schach.",
+   "o": [
+    "Ich finde Schach nicht so gut.",
+    "Ich finde Schach super.",
+    "Schach macht Spaß!",
+    "Ich spiele oft Schach."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie möchten wissen: Kann Herr Braun Gitarre spielen?",
+   "o": [
+    "Kannst du Gitarre spielen?",
+    "Wie oft spielen Sie Gitarre?",
+    "Können Sie Gitarre spielen?",
+    "Sie können ja toll Gitarre spielen!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Paul fragt: „Kannst du gut schwimmen?“ Sie schwimmen sehr gut.",
+   "o": [
+    "Nein, ich kann gar nicht schwimmen.",
+    "Du kannst ja super schwimmen!",
+    "Ich schwimme nie. Und du?",
+    "Ja, ich kann sehr gut schwimmen."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Timur fragt: „Wie findest du Tanzen?“ Sie tanzen sehr gern.",
+   "o": [
+    "Ich finde Tanzen komisch.",
+    "Super! Tanzen macht Spaß.",
+    "Ich kann gar nicht tanzen.",
+    "Was sind deine Hobbys?"
+   ],
+   "a": 1
+  }
+ ],
+ "8": [
+  {
+   "q": "Mia fragt: „Wie spät ist es?“ Es ist 7:30 Uhr.",
+   "o": [
+    "Es ist halb sieben.",
+    "Es ist Viertel nach sieben.",
+    "Es ist halb acht.",
+    "Um halb acht."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Laylo fragt: „Wie viel Uhr ist es?“ Es ist 9:15 Uhr.",
+   "o": [
+    "Es ist Viertel nach neun.",
+    "Es ist Viertel vor neun.",
+    "Es ist halb zehn.",
+    "Es ist Viertel vor zehn."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie möchten mit Aziz am Samstag ins Kino gehen.",
+   "o": [
+    "Ich kann am Samstag leider nicht.",
+    "Am Samstag habe ich keine Zeit.",
+    "Wann gehst du ins Kino?",
+    "Gehen wir am Samstag ins Kino?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Nodir: „Lust auf Konzert am Freitag?“ Sie haben Zeit und Lust.",
+   "o": [
+    "Tut mir leid, ich kann nicht.",
+    "Ja, gern! Wann denn?",
+    "Das weiß ich noch nicht.",
+    "Nein, ich habe keine Lust."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sevara: „Hast du am Sonntag Zeit?“ Am Sonntag sind Sie bei Ihrer Oma.",
+   "o": [
+    "Ja, klar. Da habe ich Zeit.",
+    "Nein, tut mir leid. Da kann ich nicht.",
+    "Gute Idee! Bis dann!",
+    "Das weiß ich noch nicht."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Paul: „Gehen wir am Montag ins Museum?“ Vielleicht haben Sie Zeit, vielleicht nicht.",
+   "o": [
+    "Ja, gern. Gute Idee!",
+    "Nein, da kann ich nicht.",
+    "Am Montag um acht?",
+    "Das weiß ich noch nicht."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Lena: „Gehen wir ins Café?“ Sie finden das gut. Aber wann?",
+   "o": [
+    "Gute Idee! Um wie viel Uhr?",
+    "Wie spät ist es jetzt?",
+    "Ja, klar. Bis dann!",
+    "Tut mir leid, ich kann nicht."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Timur: „Okay, am Freitag um sieben!“ Das Gespräch ist zu Ende.",
+   "o": [
+    "Wann denn?",
+    "Hast du am Freitag Zeit?",
+    "Super, bis dann!",
+    "Guten Abend!"
+   ],
+   "a": 2
+  }
+ ],
+ "9": [
+  {
+   "q": "Der Kellner fragt: „Sie wünschen?“ Sie möchten einen Tee.",
+   "o": [
+    "Ich mag Tee.",
+    "Ich auch!",
+    "Guten Appetit!",
+    "Einen Tee, bitte."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Malika: „Ich mag Eis.“ Sie mögen Eis auch.",
+   "o": [
+    "Ich nicht!",
+    "Ich auch!",
+    "Ich auch nicht!",
+    "Ich schon!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Aziz: „Ich esse kein Fleisch.“ Sie essen auch kein Fleisch.",
+   "o": [
+    "Ich auch nicht!",
+    "Ich auch!",
+    "Ich schon!",
+    "Ja, gern!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Lena: „Ich mag keinen Kaffee.“ Sie trinken gern Kaffee.",
+   "o": [
+    "Ich auch nicht!",
+    "Ich auch!",
+    "Ich schon!",
+    "Nein, danke!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Kellner: „Leider haben wir keine Pizza mehr.“",
+   "o": [
+    "Super! Dann nehme ich eine Pizza.",
+    "Guten Appetit! Danke.",
+    "Schade! Dann nehme ich eine Suppe.",
+    "Ich auch nicht!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Kellner: „Möchten Sie noch einen Nachtisch?“ Sie möchten nichts mehr.",
+   "o": [
+    "Nein, danke.",
+    "Ja, gern. Ein Eis, bitte.",
+    "Ich auch!",
+    "Guten Appetit!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie sind im Café. Sie möchten die Speisekarte sehen.",
+   "o": [
+    "Sie wünschen?",
+    "Die Speisekarte, bitte!",
+    "Guten Appetit!",
+    "Ich nehme einen Salat."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie möchten wissen: Mag Ihre Freundin Mia Pommes frites?",
+   "o": [
+    "Mögen Sie Pommes frites?",
+    "Ich mag keine Pommes frites.",
+    "Eine Portion Pommes frites, bitte.",
+    "Magst du Pommes frites?"
+   ],
+   "a": 3
+  }
+ ],
+ "10": [
+  {
+   "q": "Aziz kommt mit dem Zug nach Taschkent. Sie möchten wissen: Wann ist er da?",
+   "o": [
+    "Wann kommst du an?",
+    "Wann fliegst du ab?",
+    "Wie spät ist es?",
+    "Ich hole dich ab."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Lena: „Kannst du mich am Bahnhof abholen?“ Sie haben Zeit.",
+   "o": [
+    "Tut mir leid, ich kann leider nicht.",
+    "Wann fliegst du denn ab?",
+    "Natürlich! Ich hole dich ab.",
+    "Oh nein! Bist du sicher?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Timur ruft an: „Mein Zug hat zwei Stunden Verspätung.“",
+   "o": [
+    "Super! Ich freue mich auf dich!",
+    "Oh nein! Wann kommst du denn an?",
+    "Was für eine Frage? Natürlich!",
+    "Gute Idee! Bis dann!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Morgen fliegen Sie nach Berlin. Oft gibt es Verspätung.",
+   "o": [
+    "Wann fliegt das Flugzeug ab?",
+    "Ich hole dich am Flughafen ab.",
+    "Bist du sicher? So früh?",
+    "Hoffentlich gibt es keine Verspätung!"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihre Freundin Mia kommt morgen nach Taschkent. Sie finden das super.",
+   "o": [
+    "Oh nein! Hat der Zug Verspätung?",
+    "Verstehe. Bis dann!",
+    "Schade! Ich habe keine Zeit.",
+    "Toll! Ich freue mich auf dich!"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Paul: „Ich bin im Bus. Ich kann jetzt nicht sprechen.“",
+   "o": [
+    "Natürlich! Ich hole dich ab.",
+    "Verstehe! Bis dann!",
+    "Hoffentlich hast du Zeit!",
+    "Ich freue mich auf dich!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Malika: „Mein Zug fährt um 4 Uhr ab.“ Sie glauben das nicht.",
+   "o": [
+    "Verstehe. Alles klar!",
+    "Super! Ich freue mich!",
+    "So früh? Bist du sicher?",
+    "Natürlich! Was für eine Frage?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie sind am Bahnhof. Sie fragen nach der Abfahrt nach Samarkand.",
+   "o": [
+    "Wann fährt der Zug nach Samarkand ab?",
+    "Wann kommt der Zug in Samarkand an?",
+    "Wann fliegt die Maschine nach Samarkand?",
+    "Der Zug nach Samarkand hat Verspätung."
+   ],
+   "a": 0
+  }
+ ],
+ "11": [
+  {
+   "q": "Timur fragt: „Was hast du gestern gemacht?“ Sie haben Tennis gespielt.",
+   "o": [
+    "Ich spiele morgen Tennis.",
+    "Ich habe Tennis gespielt.",
+    "Ich kann gut Tennis spielen.",
+    "Hast du Tennis gespielt?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie möchten wissen: Was hat Frau Weber am Wochenende gemacht?",
+   "o": [
+    "Was hast du am Wochenende gemacht?",
+    "Was machen Sie am Wochenende?",
+    "Haben Sie am Wochenende Zeit?",
+    "Was haben Sie am Wochenende gemacht?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Mia fragt: „Hast du schon gefrühstückt?“ Sie haben noch nicht gefrühstückt.",
+   "o": [
+    "Ja, schon um sieben.",
+    "Ich auch nicht!",
+    "Nein, noch nicht.",
+    "Guten Appetit!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Paul: „Ich habe gestern gelesen. Und du?“ Sie haben eingekauft.",
+   "o": [
+    "Ich habe eingekauft.",
+    "Ich auch!",
+    "Ich kaufe heute ein.",
+    "Ich habe auch gelesen."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie möchten in die Bibliothek gehen. Sie fragen nach den Öffnungszeiten.",
+   "o": [
+    "Wann ist die Bibliothek geöffnet?",
+    "Was hast du in der Bibliothek gemacht?",
+    "Wann beginnt der Unterricht?",
+    "Wo ist die Bibliothek, bitte?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ein Mann fragt: „Wann ist der Supermarkt geöffnet?“ (8:00–20:00 Uhr)",
+   "o": [
+    "Ab 20 Uhr.",
+    "Um 8 Uhr.",
+    "Von 8 bis 20 Uhr.",
+    "Es ist 8 Uhr."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Aziz: „Was hast du letzten Sonntag gemacht?“ Sie haben einen Film gesehen.",
+   "o": [
+    "Ich sehe am Sonntag einen Film.",
+    "Gehen wir am Sonntag ins Kino?",
+    "Ich finde den Film super.",
+    "Ich habe einen Film gesehen."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihr Deutschkurs ist neu. Sie möchten wissen: Um wie viel Uhr ist der Kurs?",
+   "o": [
+    "Wie spät ist es jetzt?",
+    "Wann beginnt der Unterricht?",
+    "Hast du heute Unterricht?",
+    "Was hast du im Kurs gemacht?"
+   ],
+   "a": 1
+  }
+ ],
+ "12": [
+  {
+   "q": "Lena fragt: „Wo warst du im Sommer?“ Sie waren in Samarkand.",
+   "o": [
+    "Ich fahre nach Samarkand.",
+    "Ich komme aus Samarkand.",
+    "Ich war in Samarkand.",
+    "Wann warst du in Samarkand?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Malika: „Wie war deine Reise nach Buchara?“ Das Wetter war schlecht.",
+   "o": [
+    "Nicht so toll. Das Wetter war schlecht.",
+    "Super! Ich hatte viel Spaß.",
+    "Ich bin mit dem Zug gefahren.",
+    "Ich war mit meiner Familie dort."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Aziz fragt: „Wann hast du Geburtstag?“ Ihr Geburtstag ist im Oktober.",
+   "o": [
+    "Seit Oktober. Und du?",
+    "Mit Freunden zu Hause.",
+    "Er war super, danke.",
+    "Im Oktober. Und du?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sevara: „Wie feierst du Navruz?“ Sie feiern mit der Familie zu Hause.",
+   "o": [
+    "Das Fest gibt es seit 3000 Jahren.",
+    "Ich feiere mit meiner Familie zu Hause.",
+    "Navruz ist im Frühling, im März.",
+    "Ich war mit Freunden in Berlin."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Paul fragt: „Seit wann gibt es Navruz?“",
+   "o": [
+    "Navruz dauert drei Tage.",
+    "Es gibt Navruz seit 3000 Jahren.",
+    "Navruz ist im März.",
+    "Navruz hat viele Besucher."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie sprechen über Navruz. Lena fragt: „Wann ist Navruz?“",
+   "o": [
+    "Seit 3000 Jahren.",
+    "Mit der Familie zu Hause.",
+    "Es dauert drei Tage.",
+    "Im Frühling, im März."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Nodir: „Bist du nach Berlin geflogen?“ Sie sind mit dem Zug nach Berlin gefahren.",
+   "o": [
+    "Nein, ich bin mit dem Zug gefahren.",
+    "Ja, ich bin nach Berlin geflogen.",
+    "Nein, ich war noch nie in Berlin.",
+    "Ja, der Flug war super."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Laylo fragt: „Warst du allein in Istanbul?“ Sie waren mit Ihrer Schwester dort.",
+   "o": [
+    "Ja, ich war allein dort.",
+    "Nein, ich war in Ankara.",
+    "Nein, mit meiner Schwester.",
+    "Ja, mit meiner Schwester."
+   ],
+   "a": 2
+  }
+ ]
+}

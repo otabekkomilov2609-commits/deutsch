@@ -1,0 +1,986 @@
+{
+ "13": [
+  {
+   "q": "Malika: „Wie gefällt dir Samarkand?“ Sie finden die Stadt toll.",
+   "o": [
+    "Sehr gut! Die Stadt ist toll.",
+    "Die Stadt gefällt mir nicht so gut.",
+    "Gibt es dort auch einen Park?",
+    "Wie gefällt Ihnen die Stadt?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Sie fahren nach Buchara und möchten dort schwimmen. Was fragen Sie Aziz?",
+   "o": [
+    "In Buchara gibt es ein Schwimmbad.",
+    "Gibt es in Buchara ein Schwimmbad?",
+    "Mein Lieblingsort ist das Schwimmbad.",
+    "Gibt es in Buchara einen Zoo?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Frau Weber: „Was ist Ihr Lieblingsort in Taschkent?“",
+   "o": [
+    "Gibt es in Taschkent einen Markt?",
+    "Wie gefällt Ihnen der Markt?",
+    "Mein Lieblingsort ist der alte Markt.",
+    "Leider gibt es hier keinen Markt."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Nodir: „Der neue Park ist super, oder?“ Sie finden den Park nicht schön.",
+   "o": [
+    "Ja, der Park gefällt mir sehr gut.",
+    "Gibt es hier auch einen Park?",
+    "Mein Lieblingsort ist der Park.",
+    "Hm, er gefällt mir nicht so gut."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie sind mit Frau Weber im Museum. Sie möchten ihre Meinung wissen.",
+   "o": [
+    "Wie gefällt Ihnen das Museum?",
+    "Wie gefällt dir das Museum?",
+    "Das Museum gefällt mir gut.",
+    "Gibt es hier ein Museum?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Lena: „Was kann man in deinem Lieblingspark machen?“",
+   "o": [
+    "Ja, es gibt einen Park.",
+    "Dort kann man schön spazieren gehen.",
+    "Der Park gefällt mir nicht.",
+    "Gibt es dort auch einen See?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sevara: „Wie findest du das Kino im Zentrum?“ Die Tickets sind sehr teuer.",
+   "o": [
+    "Ja, im Zentrum gibt es ein Kino.",
+    "Wie findest du das Kino?",
+    "Ich finde es viel zu teuer.",
+    "Mein Lieblingsort ist das Kino."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Paul: „Gibt es in deiner Stadt einen Zoo?“ Ihre Stadt hat keinen Zoo.",
+   "o": [
+    "Ja, der Zoo ist sehr groß.",
+    "Der Zoo gefällt mir gut.",
+    "Gibt es dort auch einen Zoo?",
+    "Nein, leider gibt es keinen Zoo."
+   ],
+   "a": 3
+  }
+ ],
+ "14": [
+  {
+   "q": "Sie suchen die Post. Eine Frau steht an der Ampel. Was sagen Sie?",
+   "o": [
+    "Gehen Sie geradeaus und dann links.",
+    "Entschuldigung, wo ist hier die Post?",
+    "Die Post ist gar nicht weit.",
+    "Tut mir leid, ich bin nicht von hier."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ein Mann fragt Sie: „Wo ist der Bahnhof?“ Sie wissen es nicht.",
+   "o": [
+    "Das weiß ich leider nicht.",
+    "Gehen Sie hier nach rechts.",
+    "Vielen Dank, sehr nett!",
+    "Ist das weit?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ein Mann hat Ihnen den Weg zum Park erklärt. Was sagen Sie?",
+   "o": [
+    "Gehen Sie hier geradeaus.",
+    "Das weiß ich leider nicht.",
+    "Ich suche den Park.",
+    "Herzlichen Dank, das ist sehr nett!"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Eine Frau fragt: „Wo ist die Apotheke?“ Die Apotheke ist neben der Bank.",
+   "o": [
+    "Ich suche die Apotheke.",
+    "Wo ist denn hier die Bank?",
+    "Da vorne, neben der Bank.",
+    "Tut mir leid, ich bin fremd hier."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Der Weg zum Museum ist klar. Aber Sie haben kein Auto. Was fragen Sie?",
+   "o": [
+    "Gibt es hier ein Museum?",
+    "Kann ich zu Fuß gehen?",
+    "Wann ist das Museum geöffnet?",
+    "Das ist gar nicht weit."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Laylo: „Ist der Supermarkt weit?“ Sie können ihn schon sehen.",
+   "o": [
+    "Nein, das ist ganz nah.",
+    "Ja, das ist sehr weit.",
+    "Wo ist der Supermarkt?",
+    "Ich suche den Supermarkt."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ein Tourist sucht das Rathaus. Das Rathaus ist geradeaus und dann rechts.",
+   "o": [
+    "Gehen Sie links und dann geradeaus.",
+    "Wo ist denn hier das Rathaus?",
+    "Das Rathaus gefällt mir sehr gut.",
+    "Gehen Sie geradeaus und dann rechts."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie fragen eine alte Frau nach dem Weg zum Bahnhof.",
+   "o": [
+    "Kannst du mir bitte helfen?",
+    "Wo ist der Bahnhof? Weißt du das?",
+    "Entschuldigung, können Sie mir helfen?",
+    "Vielen Dank, das ist sehr nett!"
+   ],
+   "a": 2
+  }
+ ],
+ "15": [
+  {
+   "q": "Aziz: „Wie findest du meine neue Küche?“ Sie finden sie sehr schön.",
+   "o": [
+    "Die Küche ist ganz hinten.",
+    "Wo ist denn deine Küche?",
+    "Ich finde sie sehr gemütlich.",
+    "Ich finde sie leider zu klein."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie rufen Frau Braun an. Sie möchten wissen: Kann man das Zimmer noch mieten?",
+   "o": [
+    "Wie viel kostet das Zimmer?",
+    "Das Zimmer ist sehr gemütlich.",
+    "Ist dein Zimmer noch frei?",
+    "Ist das Zimmer noch frei?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Malika fragt: „Wo ist das Bad?“ Es ist neben der Küche.",
+   "o": [
+    "Das Bad ist gleich neben der Küche.",
+    "Das Bad finde ich sehr modern.",
+    "Wie findest du das Bad?",
+    "Das Bad ist ganz hinten links."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Timur: „Wie viele Zimmer hat die Wohnung?“ Die Anzeige: 3 Zimmer, Küche, Bad.",
+   "o": [
+    "Die Miete ist 300 Euro.",
+    "Sie hat drei Zimmer, Küche und Bad.",
+    "Ich finde die Wohnung zu klein.",
+    "Die Küche ist vorne rechts."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Nodir: „Wie findest du den Teppich?“ Er gefällt Ihnen überhaupt nicht.",
+   "o": [
+    "Den Teppich mag ich sehr gern.",
+    "Der Teppich ist ganz vorne.",
+    "Ich finde ihn nicht so schön.",
+    "Wo ist denn der Teppich?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie waren bei Mia. Jonas fragt: „Wie findest du Mias Wohnung?“ Sie ist hell.",
+   "o": [
+    "Seine Wohnung finde ich sehr hell.",
+    "Meine Wohnung ist sehr hell.",
+    "Wie findest du ihre Wohnung?",
+    "Ihre Wohnung finde ich sehr hell."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Paul: „Hat deine neue Wohnung einen Balkon?“ Ja, sie hat einen.",
+   "o": [
+    "Ja, sie hat einen großen Balkon.",
+    "Hast du auch einen Balkon?",
+    "Nein, sie hat leider keinen Balkon.",
+    "Wo ist denn dein Balkon?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Laylo: „Wie groß ist das Schlafzimmer?“",
+   "o": [
+    "Es ist ganz hinten links.",
+    "Es hat 14 Quadratmeter.",
+    "Es kostet 300 Euro.",
+    "Ich finde es sehr gemütlich."
+   ],
+   "a": 1
+  }
+ ],
+ "16": [
+  {
+   "q": "Ihre Nachbarin hat viele schwere Taschen und sieht müde aus.",
+   "o": [
+    "Ich habe ein Problem.",
+    "Wir brauchen Ihre Hilfe.",
+    "Tut mir leid, das geht nicht.",
+    "Kann ich Ihnen helfen?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihr Kühlschrank ist kaputt. Sie rufen den Handwerker an. Was sagen Sie?",
+   "o": [
+    "Was kann ich für Sie tun?",
+    "Kein Problem, das kann ich reparieren.",
+    "Mein Kühlschrank funktioniert nicht mehr.",
+    "Wie kann ich dir helfen?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie treffen Lena am Montag. Aber am Montag haben Sie keine Zeit.",
+   "o": [
+    "Am Montag habe ich Zeit.",
+    "Können wir das auf Dienstag verschieben?",
+    "Ja, am Montag kann ich.",
+    "Kannst du mir bitte helfen?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Die Arztpraxis ruft an: „Können Sie morgen um 10 Uhr kommen?“ Sie haben Zeit.",
+   "o": [
+    "Ja, natürlich! Um 10 Uhr kann ich.",
+    "Tut mir leid, da kann ich nicht.",
+    "Können wir den Termin verschieben?",
+    "Was kann ich für Sie tun?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihr Computer ist kaputt. Ihr Freund Nodir kann gut reparieren.",
+   "o": [
+    "Was kann ich für dich tun?",
+    "Kein Problem, das kann ich reparieren.",
+    "Können Sie mir bitte helfen?",
+    "Nodir, kannst du mir bitte helfen?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Timur: „Am Mittwoch kann ich leider nicht.“ Sie schlagen einen neuen Tag vor.",
+   "o": [
+    "Gut, dann sehen wir uns am Mittwoch.",
+    "Am Mittwoch kann ich auch nicht.",
+    "Und am Donnerstag um 17 Uhr?",
+    "Was ist los? Kann ich helfen?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie sind im Hotel. Die Dusche funktioniert nicht. Sie gehen zur Rezeption.",
+   "o": [
+    "Was kann ich für Sie tun?",
+    "Entschuldigung, die Dusche ist kaputt.",
+    "Kein Problem, ich komme gleich.",
+    "Wie finden Sie die Dusche?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Laylo: „Dein Fahrrad ist kaputt? Ich kann es reparieren.“ Sie freuen sich.",
+   "o": [
+    "Super, vielen Dank!",
+    "Kann ich dir helfen?",
+    "Tut mir leid, das geht nicht.",
+    "Ich habe ein Problem."
+   ],
+   "a": 0
+  }
+ ],
+ "17": [
+  {
+   "q": "Sevara: „Was willst du nach der Schule machen?“ Sie möchten studieren.",
+   "o": [
+    "Ich will in Taschkent studieren.",
+    "Ich habe in Taschkent studiert.",
+    "Was willst du studieren?",
+    "Ich finde das sehr wichtig."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Freunde sind für Sie sehr wichtig. Was sagen Sie?",
+   "o": [
+    "Freunde finde ich nicht so wichtig.",
+    "Was ist für dich wichtig?",
+    "Freunde finde ich sehr wichtig.",
+    "Freunde finde ich sehr interessant."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Timur: „Willst du Polizist werden?“ Das wollen Sie nie.",
+   "o": [
+    "Ja, unbedingt!",
+    "Nein, auf keinen Fall!",
+    "Vielleicht, mal sehen.",
+    "Warum willst du Polizist werden?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ihr Freund Aziz ist bald mit der Schule fertig. Sie fragen nach seinen Plänen.",
+   "o": [
+    "Was bist du von Beruf?",
+    "Was hast du gestern gemacht?",
+    "Ich will Ingenieur werden.",
+    "Was willst du später werden?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Malika möchte sehr, sehr gern in Berlin studieren. Was sagt sie?",
+   "o": [
+    "Ich will unbedingt in Berlin studieren.",
+    "Ich will vielleicht in Berlin studieren.",
+    "Ich will auf keinen Fall studieren.",
+    "Wo willst du denn studieren?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Nodir: „Ich will Lehrer werden.“ Sie verstehen das nicht. Was fragen Sie?",
+   "o": [
+    "Was willst du werden?",
+    "Ich will auch Lehrer werden.",
+    "Lehrer? Warum denn?",
+    "Das finde ich nicht wichtig."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Lena: „Was willst du im Sommer machen?“ Sie wollen den Führerschein machen.",
+   "o": [
+    "Ich habe den Führerschein gemacht.",
+    "Ich will den Führerschein machen.",
+    "Willst du den Führerschein machen?",
+    "Den Führerschein finde ich wichtig."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Paul: „Willst du später im Ausland leben?“ Sie wissen es noch nicht.",
+   "o": [
+    "Ja, auf jeden Fall!",
+    "Nein, auf keinen Fall!",
+    "Warum willst du dort leben?",
+    "Mal sehen, vielleicht."
+   ],
+   "a": 3
+  }
+ ],
+ "18": [
+  {
+   "q": "Die Ärztin: „Was ist los?“ Ihr Bauch tut weh.",
+   "o": [
+    "Mein Kopf tut weh.",
+    "Ich habe Bauchschmerzen.",
+    "Was hilft gegen Bauchschmerzen?",
+    "Trinken Sie viel Tee!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie haben oft Kopfschmerzen. Sie fragen Ihre Freundin Laylo.",
+   "o": [
+    "Das hilft wirklich gut.",
+    "Bei uns ist das üblich.",
+    "Gehen Sie zum Arzt!",
+    "Hast du einen Tipp für mich?"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Frau Weber hat Husten. Sie geben ihr einen Ratschlag.",
+   "o": [
+    "Was hilft gegen Husten?",
+    "Ich habe auch Husten.",
+    "Trinken Sie viel heißen Tee!",
+    "Bei uns ist Tee üblich."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ein Freund aus Deutschland fragt: „Trinkt man bei euch viel Tee?“ Ja, sehr viel.",
+   "o": [
+    "Ja, bei uns ist das sehr üblich.",
+    "Nein, das ist bei uns nicht üblich.",
+    "Tee hilft gut gegen Husten.",
+    "Das finde ich etwas komisch."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Die Ärztin: „Bleiben Sie zwei Tage im Bett.“ Sie wollen das machen.",
+   "o": [
+    "Was soll ich machen?",
+    "Gut, danke, das mache ich.",
+    "Bleiben Sie im Bett!",
+    "Mein Rücken tut weh."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Lena: „Bei Erkältung trinken wir Tee.“ Bei Ihnen isst man dann Suppe.",
+   "o": [
+    "Das hilft wirklich gut.",
+    "Ich habe eine Erkältung.",
+    "Was hilft gegen Erkältung?",
+    "Bei uns ist Suppe üblich."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sie waren beim Arzt. Ihre Mama fragt: „Was sollst du jetzt machen?“",
+   "o": [
+    "Was soll ich machen?",
+    "Trinken Sie viel Wasser!",
+    "Ich soll viel Wasser trinken.",
+    "Hast du einen Tipp?"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Aziz: „Mein Rücken tut weh. Hast du einen Tipp?“",
+   "o": [
+    "Sport machen! Das hilft sicher.",
+    "Mein Rücken tut auch weh.",
+    "Was hilft gegen Rückenschmerzen?",
+    "Bei uns ist das nicht üblich."
+   ],
+   "a": 0
+  }
+ ],
+ "19": [
+  {
+   "q": "Sie haben keine Zeit. Ihr Bruder Nodir soll heute einkaufen.",
+   "o": [
+    "Ich gehe heute gern einkaufen.",
+    "Das geht so nicht.",
+    "Nodir, sei so lieb und kauf ein!",
+    "Du hast recht, tut mir leid."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ihre Schwester: „Kannst du bitte das Geschirr abwaschen?“ Sie machen das.",
+   "o": [
+    "Ja, klar. Mache ich.",
+    "Tut mir leid, ich habe keine Zeit.",
+    "Wasch bitte das Geschirr ab!",
+    "Das finde ich nicht in Ordnung."
+   ],
+   "a": 0
+  },
+  {
+   "q": "In Ihrer WG räumt Lena nie die Küche auf. Sie sind sauer.",
+   "o": [
+    "Lena, kannst du heute kochen?",
+    "Du hast recht. Tut mir leid.",
+    "Ja, das kann ich gern machen.",
+    "Du räumst nie auf. Das geht so nicht."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Aziz: „Du kommst immer zu spät!“ Er hat recht.",
+   "o": [
+    "Das finde ich nicht in Ordnung.",
+    "Du hast recht. Entschuldigung!",
+    "Sei so lieb und komm pünktlich!",
+    "Ja, sicher. Mache ich."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Malika: „Bringst du bitte den Müll raus?“ Ihr Kurs beginnt in fünf Minuten.",
+   "o": [
+    "Also gut. Mache ich.",
+    "Bring bitte den Müll raus!",
+    "Tut mir leid, jetzt habe ich keine Zeit.",
+    "Ja, das kann ich gern machen."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Ihre zwei Brüder spielen sehr laut. Sie lernen für den Test.",
+   "o": [
+    "Seid bitte nicht so laut!",
+    "Sei bitte nicht so laut!",
+    "Ihr habt recht. Tut mir leid.",
+    "Ja, gern. Mache ich."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Lena fragt: „Wer macht heute die Küche sauber?“ Sie machen das.",
+   "o": [
+    "Mach bitte die Küche sauber!",
+    "Das geht so nicht.",
+    "Wer bringt den Müll raus?",
+    "Das mache ich heute."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Paul: „Du wäschst nie ab!“ Aber Sie waschen jeden Tag ab.",
+   "o": [
+    "Du hast recht. Tut mir leid.",
+    "Doch! Ich wasche jeden Tag ab.",
+    "Wasch bitte das Geschirr ab!",
+    "Ja, sicher. Das mache ich."
+   ],
+   "a": 1
+  }
+ ],
+ "20": [
+  {
+   "q": "Mia fragt: „Wie sieht dein Bruder aus?“",
+   "o": [
+    "Er wohnt jetzt in Samarkand.",
+    "Wo wohnt dein Bruder?",
+    "Das freut mich so!",
+    "Er ist groß und hat kurze Haare."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Sevara: „Ich fahre im Sommer nach Deutschland!“",
+   "o": [
+    "Oh nein!",
+    "Wow, das freut mich so!",
+    "Das ist aber schade!",
+    "Oje, wirklich?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Timur: „Mein neues Handy ist schon kaputt.“",
+   "o": [
+    "Oje! Das tut mir leid.",
+    "Hey, super!",
+    "Das freut mich so!",
+    "Oh, cool!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Nodir: „Meine Oma ist 90 und fährt noch Fahrrad!“",
+   "o": [
+    "Oh nein! Wirklich?",
+    "Das ist aber schade!",
+    "Echt? Das ist ja super!",
+    "Sie sieht sehr nett aus."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Sie beschreiben Ihre Lehrerin. Sie lacht viel und hilft gern.",
+   "o": [
+    "Sie ist groß und schlank.",
+    "Sie ist leider sehr unfreundlich.",
+    "Sie hat lange, dunkle Haare.",
+    "Sie ist sehr freundlich und lustig."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Lena sucht Ihren Freund Aziz im Café. Sie fragt: „Wie sieht er aus?“",
+   "o": [
+    "Er ist sehr sympathisch.",
+    "Er hat einen Bart und eine Brille.",
+    "Er kommt heute leider nicht.",
+    "Wer ist denn der Mann dort?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Auf der Party sehen Sie eine Frau mit roten Haaren. Sie fragen Malika.",
+   "o": [
+    "Wer ist die Frau dort?",
+    "Sie sieht sehr nett aus.",
+    "Wie sieht sie aus?",
+    "Das ist meine Schwester."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Mia: „Ich bin krank. Ich kann heute nicht ins Kino.“",
+   "o": [
+    "Hey, super!",
+    "Wow, cool!",
+    "Oh, das ist aber schade!",
+    "Echt? Das freut mich!"
+   ],
+   "a": 2
+  }
+ ],
+ "21": [
+  {
+   "q": "Sie sind mit dem Fahrrad im Park. Sie fragen eine Frau.",
+   "o": [
+    "Darf man hier Fahrrad fahren?",
+    "Hier darf man nicht Fahrrad fahren.",
+    "Fahrrad fahren stört mich total.",
+    "Man muss hier Fahrrad fahren."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ein Tourist fragt: „Darf man hier parken?“ Da ist ein Schild: Parken verboten.",
+   "o": [
+    "Ja, hier ist Parken erlaubt.",
+    "Vorsicht! Das ist gefährlich.",
+    "Das stört mich gar nicht.",
+    "Nein, das ist leider verboten."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Ihr kleiner Bruder läuft auf die Straße. Ein Auto kommt!",
+   "o": [
+    "Darf man das?",
+    "Vorsicht! Ein Auto!",
+    "Das ist doch erlaubt.",
+    "Das sehe ich auch so."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Aziz: „Laute Musik im Bus stört mich total.“ Sie denken das auch.",
+   "o": [
+    "Das sehe ich nicht so.",
+    "Vorsicht! Das ist verboten.",
+    "Das sehe ich auch so.",
+    "Das stört mich gar nicht."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Malika: „Hunde im Park? Das ist doch kein Problem.“ Sie finden das nicht gut.",
+   "o": [
+    "Hm, das sehe ich nicht so.",
+    "Stimmt, das sehe ich auch so.",
+    "Ja, das ist hier erlaubt.",
+    "Darf man hier Hunde haben?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Laylo: „Muss ich das Buch heute mitbringen?“ Sie wissen: Heute nicht.",
+   "o": [
+    "Nein, das darfst du nicht.",
+    "Ja, das musst du mitbringen.",
+    "Vorsicht! Das ist verboten.",
+    "Nein, das musst du nicht."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Timur: „Wie findest du Rauchen im Park?“ Sie finden das schlecht.",
+   "o": [
+    "Das ist doch kein Problem.",
+    "Ich denke, das ist nicht gut.",
+    "Darf man hier rauchen?",
+    "Das stört mich gar nicht."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Ein Mann fragt: „Darf man hier schwimmen?“ Sie wissen: Ja, das darf man.",
+   "o": [
+    "Nein, hier ist das verboten.",
+    "Vorsicht! Das Wasser ist kalt.",
+    "Ja, hier ist Schwimmen erlaubt.",
+    "Ich denke, das ist gefährlich."
+   ],
+   "a": 2
+  }
+ ],
+ "22": [
+  {
+   "q": "Sie sind mit Sevara im Geschäft. Sie wollen wissen: Welche Jacke mag sie?",
+   "o": [
+    "Diese Jacke gefällt mir.",
+    "Welche Jacke gefällt dir?",
+    "Welche Jacke gefällt Ihnen?",
+    "Findest du die Jacke teuer?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Timur: „Welcher Pullover gefällt dir am besten?“ Sie zeigen auf einen.",
+   "o": [
+    "Welcher gefällt dir denn?",
+    "Ich trage gern Pullover.",
+    "Dieser hier. Er ist so schön.",
+    "Der Pullover ist teurer."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Laylo: „Was ist billiger?“ Die Hose kostet 40 Euro, der Rock 60 Euro.",
+   "o": [
+    "Die Hose ist teurer als der Rock.",
+    "Die Hose ist genauso teuer wie der Rock.",
+    "Der Rock ist billiger als die Hose.",
+    "Die Hose ist billiger als der Rock."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Aziz: „Meine neuen Schuhe haben nur 5 Euro gekostet!“ Sie sind überrascht.",
+   "o": [
+    "Echt? Das ist ja billig!",
+    "Welche gefallen dir am besten?",
+    "Ich trage lieber Stiefel.",
+    "Die sind teurer als meine."
+   ],
+   "a": 0
+  },
+  {
+   "q": "Mia: „Was ziehst du heute zur Party an?“",
+   "o": [
+    "Ich gehe lieber ins Kino.",
+    "Ich ziehe mein rotes Kleid an.",
+    "Welches Kleid gefällt dir?",
+    "Das Kleid ist zu teuer."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Lena: „Die grüne Mütze ist super!“ Sie finden die blaue schöner.",
+   "o": [
+    "Ja, die grüne finde ich auch toll.",
+    "Welche Mütze gefällt dir am besten?",
+    "Findest du? Die blaue ist schöner.",
+    "Ich trage im Winter immer eine Mütze."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Paul: „Gehen wir heute ins Museum?“ Sie gehen lieber in den Park.",
+   "o": [
+    "Ja, gern! Ich komme mit.",
+    "Ich finde das Museum toll.",
+    "Welches Museum gefällt dir?",
+    "Hm, ich gehe lieber in den Park."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Malika: „Was findest du besser: Kino oder Theater?“ Sie mögen beides gleich gern.",
+   "o": [
+    "Ich finde Kino genauso gut wie Theater.",
+    "Ich finde Kino besser als Theater.",
+    "Ich gehe lieber ins Theater.",
+    "Echt? Ich finde Theater super."
+   ],
+   "a": 0
+  }
+ ],
+ "23": [
+  {
+   "q": "Sie telefonieren mit Jonas in München. Sie fragen nach dem Wetter.",
+   "o": [
+    "Wohin fährst du im Urlaub?",
+    "Hier scheint die Sonne.",
+    "Wie ist das Wetter bei dir?",
+    "Ich wünsche dir eine gute Reise!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Jonas: „Und wie ist das Wetter bei dir?“ Bei Ihnen schneit es.",
+   "o": [
+    "Hier scheint heute die Sonne.",
+    "Ich wünsche dir eine schöne Zeit.",
+    "Wie ist das Wetter in München?",
+    "Hier ist es kalt und es schneit."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Es regnet schon drei Tage. Sie finden Regen schrecklich.",
+   "o": [
+    "Regen mag ich gar nicht!",
+    "Wir haben Glück mit dem Wetter!",
+    "Super, es regnet nicht!",
+    "Wie ist das Wetter morgen?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihr Freund Aziz fliegt morgen nach Berlin.",
+   "o": [
+    "Gute Besserung!",
+    "Gute Reise und viel Spaß!",
+    "Wie war die Reise?",
+    "Wohin fährst du denn?"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie machen heute ein Picknick. Es ist warm und die Sonne scheint.",
+   "o": [
+    "Oje, das Wetter ist schlecht.",
+    "Wie ist das Wetter bei dir?",
+    "Super! Wir haben Glück mit dem Wetter.",
+    "Ich bleibe zu Hause, denn es regnet."
+   ],
+   "a": 2
+  },
+  {
+   "q": "Lena: „Warum kommst du nicht in den Park?“ Es ist sehr kalt.",
+   "o": [
+    "Ich komme gern, denn es ist warm.",
+    "Wie ist das Wetter im Park?",
+    "Ich wünsche dir viel Spaß!",
+    "Ich bleibe zu Hause, denn es ist kalt."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Malika: „Wie ist das Wetter bei dir?“ 30 Grad – zu heiß für Sie.",
+   "o": [
+    "Es sind 30 Grad. Das ist zu heiß!",
+    "Es sind 30 Grad. Super, ich liebe das!",
+    "Es ist kalt, nur 3 Grad.",
+    "Wie viel Grad sind es bei dir?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Ihre Lehrerin Frau Weber fährt eine Woche ans Meer.",
+   "o": [
+    "Ich wünsche dir eine schöne Zeit!",
+    "Ich wünsche Ihnen eine schöne Zeit!",
+    "Wie ist das Wetter am Meer?",
+    "Wohin fahren Sie im Urlaub?"
+   ],
+   "a": 1
+  }
+ ],
+ "24": [
+  {
+   "q": "Heute hat Ihre Freundin Laylo Geburtstag.",
+   "o": [
+    "Frohe Weihnachten!",
+    "Frohes neues Jahr!",
+    "Gute Besserung!",
+    "Alles Gute zum Geburtstag!"
+   ],
+   "a": 3
+  },
+  {
+   "q": "Timur: „Ich habe heute den Führerschein gemacht!“",
+   "o": [
+    "Herzlichen Glückwunsch!",
+    "Alles Gute zum Geburtstag!",
+    "Gute Reise!",
+    "Das ist aber schade!"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Paul fragt: „Was würdest du am Wochenende gern machen?“",
+   "o": [
+    "Ich habe am Wochenende gefeiert.",
+    "Ich würde gern in die Berge fahren.",
+    "Was würdest du gern machen?",
+    "Am Wochenende habe ich Zeit."
+   ],
+   "a": 1
+  },
+  {
+   "q": "Sie haben schon Tickets. Im Mai fliegen Sie nach Berlin. Was sagen Sie?",
+   "o": [
+    "Ich würde gern nach Berlin fliegen.",
+    "Fliegst du gern nach Berlin?",
+    "Im Mai fliege ich nach Berlin.",
+    "Ich wünsche dir eine gute Reise!"
+   ],
+   "a": 2
+  },
+  {
+   "q": "Lena: „Wann hast du Geburtstag?“ Ihr Geburtstag ist am 3. Oktober.",
+   "o": [
+    "Ich bin 23 Jahre alt.",
+    "Herzlichen Glückwunsch!",
+    "Am dreizehnten Oktober.",
+    "Am dritten Oktober."
+   ],
+   "a": 3
+  },
+  {
+   "q": "Malika: „Welches Fest magst du am liebsten?“",
+   "o": [
+    "Neujahr mag ich am liebsten.",
+    "Frohes neues Jahr!",
+    "Neujahr ist am ersten Januar.",
+    "Welches Fest magst du?"
+   ],
+   "a": 0
+  },
+  {
+   "q": "Es ist der 1. Januar. Sie treffen Ihren Nachbarn Herrn Braun.",
+   "o": [
+    "Frohe Ostern!",
+    "Frohes neues Jahr!",
+    "Alles Gute zum Geburtstag!",
+    "Frohe Weihnachten!"
+   ],
+   "a": 1
+  },
+  {
+   "q": "Aziz: „Ich würde gern im Park feiern. Und du?“ Sie bleiben lieber zu Hause.",
+   "o": [
+    "Ich würde auch gern im Park feiern.",
+    "Herzlichen Glückwunsch zum Fest!",
+    "Ich würde lieber zu Hause feiern.",
+    "Am Samstag feiern wir im Park."
+   ],
+   "a": 2
+  }
+ ]
+}
