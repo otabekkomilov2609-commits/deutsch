@@ -1234,3 +1234,10 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Hamma Lektion kartalari ochiq holda. Har birining pastida «▲ Yig'ish · L13» tugmasi: bosilsa karta yig'iladi va sahifa uning sarlavhasiga qaytadi (daraja paneli ostida qolmaydi). Sarlavhani bosish ham ochadi/yig'adi.
 - Ro'yxat tepasida: «▲ Hammasini yig'ish» va «▼ Hammasini ochish».
 - Yig'ilganlari eslab qolinadi (localStorage lek:cl). 21.10 dagi «hammasi yig'ilgan, bosilganda ochiladi» (lek:open) bekor.
+
+## 🧭 O'quvchi yo'li — saytdan chiqishda ham yuboriladi (2026-10-24)
+- Otabek: Naima Duel o'ynadi, lekin uning kunlik yo'lida faqat «Kirish» va «Chiqib ketdi» ko'rindi.
+- Sabab: a/ (chuqur tahlil) 15 daqiqada ko'pi bilan 1 marta yuborilardi; ro'yxatdan o'tgandagi yuborishdan keyin 15 daqiqa ichida chiqib ketsa, oxirgi yo'l yetib kelmasdi.
+- Tuzatish: saytdan chiqishda / ilovani yopishda (cloudPush(true)) a/ ham yuboriladi — oldingisidan 2 daqiqa o'tgan va ma'lumot o'zgargan bo'lsa (axh — xesh). Kichik bo'lsa keepalive bilan.
+- Ustoz panelida kun yo'li ustida: «🔄 Yo'l oxirgi marta HH:MM da kelgan» — undan keyingilar keyin qo'shiladi.
+- Naimaning bugungi Duel'i: uning telefonida saqlangan — keyingi safar saytni ochib-yopganda yetib keladi (yangi versiya bilan).
