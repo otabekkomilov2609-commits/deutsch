@@ -153,7 +153,7 @@
    "a": 2
   },
   {
-   "q": "Der Postbote sucht Lena. Sie wohnt auf Ihrem Stock, links von Ihrer Tür.",
+   "q": "Der Postbote sucht Lena. Sie wohnt im gleichen Stock wie Sie, links von Ihrer Tür.",
    "o": [
     "Sie wohnt rechts neben uns.",
     "Sie wohnt über uns.",
@@ -209,7 +209,7 @@
    "o": [
     "Danke, ich drück’ dir die Daumen!",
     "Danke, ich schaffe das schon!",
-    "Danke, das kann ich verstehen.",
+    "Danke, ich bin schon satt!",
     "Danke, du hast mir echt geholfen!"
    ],
    "a": 3
@@ -235,7 +235,7 @@
    "a": 2
   },
   {
-   "q": "Ihr Freund Paul fängt morgen ein FSJ in einem Krankenhaus an.",
+   "q": "Ihr Freund Paul fängt morgen ein FSJ in einem Krankenhaus an. Was sagen Sie?",
    "o": [
     "Dann gute Besserung im Krankenhaus!",
     "Dann ganz viel Erfolg morgen!",
@@ -319,7 +319,7 @@
   {
    "q": "Paul fragt: „Wie findest du den Film?“ Der Film ist gut, aber das Ende passt nicht.",
    "o": [
-    "Die Schauspieler spielen wirklich gut.",
+    "Die Geschichte ist ziemlich langweilig.",
     "Es geht um eine Familie in Wien.",
     "Das kenne ich. Das geht mir auch so.",
     "Gut, aber das Ende finde ich unlogisch."
@@ -329,12 +329,12 @@
  ],
  "17": [
   {
-   "q": "Ihre Mitbewohnerin Sevara kann heute nicht putzen. Sie hat morgen eine Prüfung.",
+   "q": "Ihre Mitbewohnerin Sevara kann heute nicht putzen. Sie hat morgen eine Prüfung. Sie finden das okay.",
    "o": [
-    "Muss das sein? Ich bin total genervt!",
+    "Vielleicht ist es besser, wenn du heute putzt.",
     "Kein Problem, das kann ich verstehen.",
-    "Das ist mir egal. Du musst heute putzen.",
-    "Schade! Das habe ich mir anders vorgestellt."
+    "Danke, dass du das heute übernimmst!",
+    "Kannst du das bitte heute machen?"
    ],
    "a": 1
   },
@@ -351,7 +351,7 @@
   {
    "q": "Lena sagt: „Unser Gruppenprojekt ist wichtig. Wir sollten früh anfangen.“ Sie denken das auch.",
    "o": [
-    "Muss das sein? Jetzt schon?",
+    "Ach so, das habe ich nicht gewusst.",
     "Tut mir leid, das geht leider nicht.",
     "Also, ich weiß nicht. Meinst du?",
     "Du hast absolut recht. Das finde ich auch."
@@ -364,7 +364,7 @@
     "Ich verstehe dich. Kein Problem.",
     "Super, dass du so lange bleibst!",
     "Danke, dass du das übernimmst!",
-    "Ach, komm schon! Das macht Spaß!"
+    "Schade! Bleib doch noch ein bisschen!"
    ],
    "a": 0
   },
@@ -423,7 +423,7 @@
   {
    "q": "Timur fragt: „Wann liest du deine Nachrichten?“ Meistens am Abend, aber nicht immer.",
    "o": [
-    "Immer wenn eine Nachricht kommt.",
+    "Ich schätze, ungefähr eine Stunde.",
     "Das kommt eigentlich nie vor.",
     "Normalerweise am Abend.",
     "Ich würde sagen, zwischen 30 und 50."
@@ -434,7 +434,7 @@
    "q": "Lena fragt: „Schaltest du dein Handy manchmal aus?“ Das machen Sie nicht oft, aber manchmal.",
    "o": [
     "Nein, das kommt eigentlich nie vor.",
-    "Ja, das mache ich jeden Abend.",
+    "Ja, normalerweise jeden Abend.",
     "Ich schätze, ungefähr 50-mal.",
     "Es kommt vor, dass ich es ausschalte."
    ],
@@ -445,7 +445,7 @@
    "o": [
     "Nein, das kommt eigentlich nie vor.",
     "Ja, es kommt auch mal vor.",
-    "Normalerweise jeden Tag.",
+    "Ich schätze, ungefähr fünf Fotos.",
     "Ja, immer wenn ich koche."
    ],
    "a": 0
@@ -476,7 +476,7 @@
     "Bestimmt öfter als 100-mal.",
     "Normalerweise nur am Wochenende.",
     "Das kommt eigentlich nie vor.",
-    "Vielleicht so zweimal pro Tag."
+    "Ich schätze, zwischen zwei und drei Stunden."
    ],
    "a": 0
   },
@@ -523,7 +523,7 @@
    "a": 1
   },
   {
-   "q": "Malika erzählt: „Mein Bruder spricht mit vier Jahren schon drei Sprachen.“ Sie sind überrascht.",
+   "q": "Malika erzählt: „Mein Bruder ist vier und spricht schon drei Sprachen.“ Sie sind überrascht.",
    "o": [
     "Oh, das war sicher nervig.",
     "So ein Pech für ihn!",
@@ -585,7 +585,7 @@
    "a": 3
   },
   {
-   "q": "Sie gehen nicht mehr zum Tanzkurs. Warum? Sie wissen es selbst nicht genau.",
+   "q": "Mia fragt: „Warum gehst du nicht mehr zum Tanzkurs?“ Sie wissen es selbst nicht genau.",
    "o": [
     "Es hat mir irgendetwas gefehlt.",
     "Ich hab’ alles richtig gemacht!",
@@ -635,7 +635,7 @@
    "a": 1
   },
   {
-   "q": "Sie fahren jetzt jeden Tag mit dem Fahrrad zur Uni. Sie sind sehr zufrieden.",
+   "q": "Sie fahren jetzt jeden Tag mit dem Fahrrad zur Uni. Sie sind sehr zufrieden. Was sagen Sie?",
    "o": [
     "Es hat mir irgendetwas gefehlt.",
     "Richtig glücklich bin ich damit nicht.",
@@ -661,7 +661,7 @@
    "o": [
     "Was soll denn das? Das kann man doch nicht machen!",
     "Können Sie mir das genauer erklären?",
-    "Ich will nur, dass Sie mal nachdenken.",
+    "Da haben Sie schon recht.",
     "Super, dass Sie das machen!"
    ],
    "a": 0
@@ -707,7 +707,7 @@
    "a": 3
   },
   {
-   "q": "Ihr Freund Aziz: „Mit dem Bus dauert es länger.“ Das stimmt, aber der Bus ist besser für die Umwelt.",
+   "q": "Ihr Freund Aziz sagt: „Mit dem Bus dauert es länger.“ Das stimmt, aber der Bus ist besser für die Umwelt.",
    "o": [
     "Das ist doch Unsinn! Der Bus ist schnell.",
     "Da hast du schon recht, aber die Umwelt ist wichtiger.",
@@ -763,7 +763,7 @@
    "o": [
     "Ja, der Test ist ganz bestimmt am Montag.",
     "Keine Ahnung! Ich weiß es gar nicht.",
-    "Ich glaube ja, aber da bin ich nicht sicher.",
+    "Ich glaube schon, aber da bin ich nicht sicher.",
     "Ist das wirklich so? Das glaube ich nicht."
    ],
    "a": 2
@@ -799,7 +799,7 @@
    "a": 1
   },
   {
-   "q": "Nodir: „Unsere Lehrerin sagt, wir müssen jeden Tag Wörter lernen.“ Das stimmt, aber es ist schwer.",
+   "q": "Nodir meint: „Unsere Lehrerin sagt, wir müssen jeden Tag Wörter lernen.“ Das stimmt, aber es ist schwer.",
    "o": [
     "Ist das wirklich so? Das glaube ich nicht.",
     "Da bin ich nicht sicher. Vielleicht.",
