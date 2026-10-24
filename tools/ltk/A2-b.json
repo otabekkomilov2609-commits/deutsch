@@ -31,10 +31,10 @@
    "a": 0
   },
   {
-   "q": "Sie haben eine Suppe mit viel Pfeffer gekocht. Ihr Gast Timur probiert sie.",
+   "q": "Sie haben eine Suppe mit viel Pfeffer gekocht. Ihr Gast Timur probiert sie. Sie sind unsicher.",
    "o": [
     "Die Suppe schmeckt ja wirklich super!",
-    "Möchtest du lieber Tee oder Saft?",
+    "Vielen Dank für die Einladung!",
     "Nein, danke. Ich bin schon satt.",
     "Die Suppe ist hoffentlich nicht zu scharf?"
    ],
@@ -831,7 +831,7 @@
    "a": 3
   },
   {
-   "q": "Ihre Freundin erzählt von ihrem Onkel. Sie möchten wissen, was er nach der Schule gemacht hat.",
+   "q": "Ihre Freundin erzählt von ihrem Onkel. Sie möchten wissen: Was war nach der Schule?",
    "o": [
     "Was hat er nach der Schule gemacht?",
     "Wo ist er zur Schule gegangen?",

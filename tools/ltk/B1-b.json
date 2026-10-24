@@ -155,7 +155,7 @@
   {
    "q": "Der Sportverein sucht Helfer für ein Kindercamp: „Kennen Sie sich mit Erster Hilfe aus?“ Sie haben letztes Jahr einen Kurs gemacht.",
    "o": [
-    "Ja, ich habe letztes Jahr einen Erste-Hilfe-Kurs gemacht.",
+    "Ja, damit kenne ich mich aus, ich habe einen Kurs gemacht.",
     "Nein, damit habe ich leider gar keine Erfahrung.",
     "Ja, ich spiele schon seit zehn Jahren Fußball.",
     "Ich bin mir sicher, dass Kinder Sport brauchen."
@@ -354,7 +354,7 @@
     "Mir gefällt es nicht, weil die Farben so dunkel sind.",
     "Mir gefällt es sehr, weil die Farben so lebendig sind.",
     "Links sieht man einen Mann mit einem Hut.",
-    "Das hat bestimmt sehr lange gedauert."
+    "Das hat ein Künstler aus Berlin gemacht."
    ],
    "a": 1
   },
@@ -821,7 +821,7 @@
  ],
  "23": [
   {
-   "q": "Sie planen mit Freunden einen Ausflug nach Samarkand. Die Uhrzeit ist klar, aber nicht der Treffpunkt.",
+   "q": "Sie planen mit Freunden einen Ausflug nach Samarkand. Die Uhrzeit ist klar. Sie fragen nach dem Treffpunkt.",
    "o": [
     "Wann fahren wir denn am Samstag los?",
     "Wir treffen uns um acht am Bahnhof.",
