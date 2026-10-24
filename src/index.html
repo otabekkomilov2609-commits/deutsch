@@ -1792,6 +1792,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .dz-flow{width:100%;min-width:640px;height:auto;display:block}.dz-pth path{stroke:var(--blue);opacity:.28}.dz-nd rect{fill:var(--blue-soft)}.dz-nd.x rect{fill:var(--red-soft,#FDECEC)}.dz-nd.g rect{fill:var(--green-soft,#E3F6EA)}.dz-nd text{font:800 12.5px/1 Nunito,system-ui,sans-serif;fill:var(--ink)}.dz-nd.x text{fill:#C62828}.dz-nd.g text{fill:var(--green)}.dz-nd text.s{font-size:11px;fill:var(--muted)}.dz-nd[data-dzroot]:hover rect{stroke:var(--blue);stroke-width:1.5}
 .dz-chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 10px}.dz-chip{border:1.5px solid var(--line);border-radius:99px;padding:5px 11px;font:inherit;font-weight:800;font-size:13px;background:var(--surface);color:var(--ink);cursor:pointer}.dz-chip.on{background:var(--blue-soft);border-color:var(--blue);color:var(--blue)}
 .dz-hm{display:grid;grid-template-columns:28px repeat(12,minmax(0,1fr));gap:3px;font-size:11px;color:var(--muted);font-weight:800;align-items:center}.dz-hm span{text-align:center}.dz-hm i{aspect-ratio:1.3;border-radius:4px;background:var(--blue)}
+.tah-wsel{margin-left:auto;min-width:180px}.tah-whob{margin:0 0 6px;font-size:14px;color:var(--muted)}.tah-whob b{color:var(--ink)}.tah-whob .lrn-link{margin-left:6px;font-size:13px}
 .dz-sel{font:inherit;font-size:14px;padding:8px 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);max-width:100%}
 .dz-path{display:grid;gap:8px;margin-top:10px}.dz-ps{font-size:13.5px;line-height:1.6;background:var(--surface-2);border-radius:10px;padding:8px 10px;overflow-wrap:anywhere}.dz-ps em{font-style:normal;color:var(--muted);font-weight:700;margin-left:4px}.dz-ps span{white-space:nowrap}
 .spk{font-family:ui-monospace,monospace;letter-spacing:1px;color:var(--blue)}
@@ -9371,8 +9372,15 @@ function tahMrDay(day,S,R,GS){ const nmOf=by=>{ const x=S.find(([id,d])=>d._rc==
 /* ===== 📊 Tahlil — bitta oyna (2026-10-23) ===== */
 const TAH_T=[["s","🌐 Sayt rivoji"],["m","📚 Materiallar"],["w","🧠 Wortschatz"],["r","🧭 Yo‘llar"],["b","🖱 Tugmalar"],["f","📣 Marafon"]];
 function tahLvOk(d){ if(!TP.anLv) return true; try{ const r=stReach(d); return !!r&&r.lv===TP.anLv; }catch(e){ return true; } }
-function tahBody(P,t){ const stu0=TP.stu, dx0=TP.dx; if(TP.anLv&&t!=="m"&&t!=="f"){ const S={}, keep=new Set(); Object.entries(stu0||{}).forEach(([id,d])=>{ if(d&&tahLvOk(d)){ S[id]=d; keep.add(d.ak||id); } }); const X={}; Object.entries(dx0||{}).forEach(([ak,d])=>{ if(keep.has(ak)) X[ak]=d; }); TP.stu=S; TP.dx=X; }
-  try{ if(t==="m"){ DZ.lv=TP.anLv||""; return dzMatHTML(P); } if(t==="w") return dzWzHTML(P); if(t==="r") return dzRtHTML(P); if(t==="b") return dzBtHTML(P); if(t==="f") return tahMrHTML(P); return dzGrHTML(P); }
+/* 👤 Bitta o'quvchi tahlili (2026-10-24, Otabek: «har bir o'quvchini tahlili ko'rish imkoniyati bo'lsin tahlillarda») — tanlansa, hamma bo'limlar shu o'quvchi ma'lumoti bilan */
+function tahWhoList(){ const M=new Map(); Object.entries(TP.stu||{}).forEach(([id,d])=>{ if(d&&d.nm) M.set(d.ak||id,d.nm); }); Object.entries(TP.dx||{}).forEach(([ak,d])=>{ if(d&&d.nm&&!M.has(ak)) M.set(ak,d.nm); }); return [...M.entries()].sort((a,b)=>String(a[1]).localeCompare(String(b[1]))); }
+function tahWhoStu(k){ const e=Object.entries(TP.stu||{}).find(([id,d])=>d&&(d.ak||id)===k); return e?e[1]:null; }
+function tahWhoHead(){ const k=TP.anWho; if(!k) return ""; const d=tahWhoStu(k), x=(TP.dx||{})[k], nm=(d&&d.nm)||(x&&x.nm)||"?";
+  return `<div class="dz-c tah-who"><p class="tah-whob">👤 Hamma bo‘limlar faqat <b>${esc(nm)}</b> bo‘yicha <button type="button" class="lrn-link" data-tahwho="">✕ hamma o‘quvchilar</button></p>${d?`<div id="tah-prof">${spProfHTML(d)}</div>`:`<p class="dz-note">Oddiy xulosa hali kelmagan — faqat batafsil ma’lumot bor.</p>`}</div>`; }
+function tahBody(P,t){ const stu0=TP.stu, dx0=TP.dx, W=TP.anWho; if(W&&t!=="f"){ const S={}; Object.entries(stu0||{}).forEach(([id,d])=>{ if(d&&(d.ak||id)===W) S[id]=d; }); const X={}; if(dx0&&dx0[W]) X[W]=dx0[W]; TP.stu=S; TP.dx=X; TP.dcW=W; DZ.stu=W; }
+  else if(TP.anLv&&t!=="m"&&t!=="f"){ const S={}, keep=new Set(); Object.entries(stu0||{}).forEach(([id,d])=>{ if(d&&tahLvOk(d)){ S[id]=d; keep.add(d.ak||id); } }); const X={}; Object.entries(dx0||{}).forEach(([ak,d])=>{ if(keep.has(ak)) X[ak]=d; }); TP.stu=S; TP.dx=X; }
+  try{ if(W&&t==="s") return dcChartHTML(P); /* bitta o'quvchi: sayt o'sishi o'rniga uning kunma-kun ishi va kun yo'li */
+    if(t==="m"){ DZ.lv=TP.anLv||""; return dzMatHTML(P); } if(t==="w") return dzWzHTML(P); if(t==="r") return dzRtHTML(P); if(t==="b") return dzBtHTML(P); if(t==="f") return tahMrHTML(P); return dzGrHTML(P); }
   catch(e){ return `<p class="dz-note">⚠️ ${esc(String(e&&e.message||e))}</p>`; } finally{ TP.stu=stu0; TP.dx=dx0; } }
 
 /* 🖱 Tugmalar — har bir tugmani nechta o'quvchi bosgani (2026-10-24) */
@@ -9440,7 +9448,7 @@ function dcChartHTML(P){ const mk=TP.dcM||"t", who=TP.dcW||"", S=dcSeries(P,who)
   const nice=(()=>{ const r=mx/4, p=Math.pow(10,Math.floor(Math.log10(r||1))), f=[1,2,5,10].find(x=>x*p>=r)||10; return f*p; })(), top=mk==="t"?([5,10,15,30,60,120,180,240,300,600,900,1200,1800,3000,6000].find(x=>x*4>=mx)||Math.ceil(mx/4))*4:Math.max(Math.ceil(nice)*4,4);
   const d=S.days[sel], dw=DN[new Date(d+"T12:00:00").getDay()], all=S.V;
   return `<div class="an-c dcc"><div class="tp-lbh"><h4>📊 Har kuni — sanama-sana <small>${P} kun${who?" · "+esc((S.people.find(x=>x[0]===who)||[,""])[1]):" · hamma o‘quvchilar"}</small></h4>
-      <select class="dz-sel dc-who" data-dcw="1"><option value="">👥 Hamma o‘quvchilar</option>${S.people.map(([k,nm])=>`<option value="${esc(k)}"${k===who?" selected":""}>${esc(String(nm||"?").slice(0,40))}</option>`).join("")}</select></div>
+      <select class="dz-sel dc-who" data-dcw="1"${TP.anWho&&TP.tab==="an"?" hidden":""}><option value="">👥 Hamma o‘quvchilar</option>${S.people.map(([k,nm])=>`<option value="${esc(k)}"${k===who?" selected":""}>${esc(String(nm||"?").slice(0,40))}</option>`).join("")}</select></div>
     <div class="dz-chips dc-ms">${DC_M.map(([k,l])=>`<button type="button" class="dz-chip${mk===k?" on":""}" data-dcm="${k}">${l}</button>`).join("")}</div>
     <div class="dc-ch" style="--n:${n}"><div class="dc-y">${[4,3,2,1,0].map(i=>`<span style="bottom:${i*25}%">${(()=>{ const v=Math.round(top*i/4); return mk==="t"&&v>=60?String(Math.round(v/6)/10).replace(".",",")+" soat":mk==="t"?v+" daq":String(v); })()}</span>`).join("")}</div>
       <div class="dc-plot">${[1,2,3,4].map(i=>`<i class="dc-gl" style="bottom:${i*25}%"></i>`).join("")}
@@ -9561,13 +9569,17 @@ function tpAn(){ const body=document.getElementById("tp-body"); if(!body) return
   const st=TP.dzErr?`<p class="dz-st bad">⚠️ Chuqur ma’lumot o‘qilmadi (${TP.dzErr}) — Firebase qoidalarida «a» va «gs» bo‘limlarini Publish qiling. Hozircha oddiy ma’lumot ko‘rsatiladi.</p>`:TP.dzL===1?`<p class="dz-st">⏳ Chuqur ma’lumot yuklanmoqda…</p>`:`<p class="dz-st">${Object.keys(TP.stu||{}).length} o‘quvchi · ${n} tasidan batafsil ma’lumot${TP.dzT?" · "+new Date(TP.dzT).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"}):""} <button type="button" class="lrn-link" data-tahre="1">↻</button></p>`;
   body.innerHTML=`<div class="lrn-card an tah"><div class="tah-top"><h3>📊 Tahlil</h3><div class="tp-seg">${[[7,"7 kun"],[14,"14 kun"],[30,"30 kun"],[90,"90 kun"]].map(([v,x])=>`<button type="button" data-tpanp="${v}" aria-pressed="${P===v}">${x}</button>`).join("")}</div></div>
     <div class="tah-bar"><div class="dz-tabs">${T.map(([k,l])=>`<button type="button" data-taht="${k}" aria-pressed="${t===k}">${l}</button>`).join("")}</div>
-      <div class="dz-chips">${["","A1","A2","B1"].map(l=>`<button type="button" class="dz-chip${(TP.anLv||"")===l?" on":""}" data-tahlv="${l}">${l||"Hammasi"}</button>`).join("")}</div></div>
+      <div class="dz-chips">${["","A1","A2","B1"].map(l=>`<button type="button" class="dz-chip${(TP.anLv||"")===l?" on":""}" data-tahlv="${l}">${l||"Hammasi"}</button>`).join("")}</div>
+      <select class="dz-sel tah-wsel" data-tahwsel="1" aria-label="O‘quvchi"><option value="">👥 Hamma o‘quvchilar</option>${tahWhoList().map(([k,nm])=>`<option value="${esc(k)}"${k===TP.anWho?" selected":""}>👤 ${esc(String(nm).slice(0,40))}</option>`).join("")}</select></div>
     ${st}${!localStorage.getItem("tchk")?`<p class="ch-net">🔐 Avval «👥 O‘quvchilar» bo‘limida natijalarni oching (ustoz kodi).</p>`:""}
-    <div class="tah-b">${tahBody(P,t)}</div>
-    <p class="dz-note">Batafsil ma’lumot 23.10.2026 dan yig‘ilmoqda. Hammasi umumlashtirilgan; o‘quvchi ma’lumoti shifrlangan holda faqat ustozga keladi.</p></div>`; }
+    ${t!=="f"?tahWhoHead():""}<div class="tah-b">${tahBody(P,t)}</div>
+    <p class="dz-note">Batafsil ma’lumot 23.10.2026 dan yig‘ilmoqda. Hammasi umumlashtirilgan; o‘quvchi ma’lumoti shifrlangan holda faqat ustozga keladi.</p></div>`;
+  try{ const h=document.getElementById("tah-prof"), d=TP.anWho&&tahWhoStu(TP.anWho); if(h&&d) spProfBind(h,d); }catch(e){} }
+document.addEventListener("change",e=>{ if(e.target&&e.target.dataset&&e.target.dataset.tahwsel){ TP.anWho=e.target.value||""; if(!TP.anWho){ TP.dcW=""; DZ.stu=""; } TP.dcSel=null; tpAn(); } });
 document.addEventListener("click",e=>{ const t=e.target; if(!t.closest||!t.closest("#tch .tah")) return;
   const tb=t.closest("[data-taht]"); if(tb){ TP.anT=tb.dataset.taht; tpAn(); const el=document.querySelector("#tch .tah"); if(el) el.scrollIntoView({block:"start"}); return; }
   const lv=t.closest("[data-tahlv]"); if(lv){ TP.anLv=lv.dataset.tahlv; tpAn(); return; }
+  const wh=t.closest("[data-tahwho]"); if(wh){ TP.anWho=wh.dataset.tahwho||""; if(!TP.anWho){ TP.dcW=""; DZ.stu=""; } TP.dcSel=null; tpAn(); return; }
   if(t.closest("[data-tahre]")){ TP.dzL=0; TP.anReg=null; TP.mrRef=null; tpAn(); return; }
   const ms=t.closest("[data-dzms]"); if(ms){ DZ.ms=ms.dataset.dzms; tpAn(); return; }
   const rt=t.closest("[data-dzroot]"); if(rt&&rt.dataset.dzroot){ DZ.root=rt.dataset.dzroot; tpAn(); return; }

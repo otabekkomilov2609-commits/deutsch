@@ -1267,3 +1267,6 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Manba fayllar: `tools/b1g/B1-L*.json`; qoidalar `tools/b1g/SPEC.md`, tekshiruv `tools/b1g/check.py`, saytga qo‘shish `python3 tools/b1g/merge.py [N…]` → `tools/build.py`.
 - «Xatoni toping»: o‘quvchi xato so‘zni bosadi, to‘g‘ri topsa — to‘g‘ri gap yashil qutida chiqadi (`fix`).
 - Gaplar bizniki: kitobdan faqat mavzu va grammatika olingan, kitob gaplari ko‘chirilmagan.
+
+## 👤 Tahlil — bitta o‘quvchi (2026-10-24)
+- Ustoz paneli → 📊 Tahlil: daraja tugmalari yonida «👥 Hamma o‘quvchilar» ro‘yxati. O‘quvchi tanlansa — tepada uning profili (so‘zlar, Lektionlar, eng ko‘p xato qilgan savollar), 🌐 bo‘limida uning kunma-kun vaqti va kunni bossangiz — o‘sha kungi yo‘li; 📚 🧠 🧭 🖱 bo‘limlari faqat shu o‘quvchi ma’lumoti bilan. «✕ hamma o‘quvchilar» — qaytish. 📣 Marafon — doim umumiy.
