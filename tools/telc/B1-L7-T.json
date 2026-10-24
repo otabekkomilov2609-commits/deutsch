@@ -1,43 +1,131 @@
-{"id":"B1-b11-7-T","lek":7,"lv":"B1.1","part":"l3","title":"Leseverstehen Teil 3","sub":"Kleinanzeigen · Selektives Verstehen","min":10,
-"h":"Lesen Sie die Situationen 1–10 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige. Sie können jede Anzeige nur einmal verwenden. Für eine Situation gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.",
-"tip":{"uz":"Avval har bir vaziyatdagi kalit tafsilotlarni belgilang: qachon, qayerda, qancha pul, kim bilan, qanday tajriba. E’londa mavzu mos kelishi yetarli emas — bitta tafsilot to‘g‘ri kelmasa, u javob emas.","ru":"Сначала отметьте в каждой ситуации ключевые детали: когда, где, сколько стоит, с кем, какой опыт. Совпадения темы мало — если хотя бы одна деталь не подходит, объявление не является ответом."},
-"src":"Text: streber.uz · Personen und Orte erfunden",
-"sits":[
-"Ihr Freund Timur fährt am Wochenende allein in die Stadt und sucht eine günstige Übernachtung in zentraler Lage.",
-"Ihre Bekannte Malika plant eine lange Reise durch Asien und möchte dafür einen gebrauchten Rucksack kaufen.",
-"Ihr Bekannter Jonas möchte die Altstadt mit dem Fahrrad kennenlernen – am liebsten mit einer Führung.",
-"Ihre Freundin Lena möchte ihr Spanisch verbessern. Ein Kurs ist ihr zu teuer, sie möchte lieber regelmäßig mit einer Spanierin oder einem Spanier sprechen.",
-"Ihr Freund Paul möchte im Sommer eine Woche Urlaub auf dem Land machen. Sein Hund soll mitkommen.",
-"Ihre Bekannte Mia (24) reist zum ersten Mal allein und möchte im Sommer eine Woche mit anderen jungen Leuten verbringen.",
-"Ihre Freundin Sevara war noch nie in den Bergen wandern und möchte das zuerst in einem Kurs lernen.",
-"Ihr Bekannter Aziz möchte am Samstagvormittag mit dem Zug nach Lindenau fahren und sucht eine günstige Fahrkarte.",
-"Ihr Freund Sardor ist drei Wochen auf Reisen und sucht jemanden, der in dieser Zeit seine Katze versorgt.",
-"Ihre Freundin Nodira fliegt im Herbst nach Spanien und sucht einen gebrauchten Reiseführer auf Deutsch."
-],
-"ads":[
-{"t":"Die Stadt auf zwei Rädern entdecken","body":"Geführte Radtouren durch die Altstadt und am Fluss entlang: jeden Samstag und Sonntag um 10 Uhr, Dauer drei Stunden. Kleine Gruppen mit bis zu zwölf Personen. Leihräder gibt es für 8 Euro. Anmeldung im Touristenbüro am Marktplatz."},
-{"t":"Ferienwohnung mitten in der Stadt","body":"Moderne Wohnung im dritten Stock, nur 200 Meter vom Rathaus entfernt. Zwei Schlafzimmer, voll ausgestattete Küche, Balkon. Für bis zu vier Personen, 110 Euro pro Nacht, Mindestaufenthalt drei Nächte. Hunde und Katzen sind erlaubt."},
-{"t":"Ihre Katze in guten Händen","body":"Sie fahren in den Urlaub und wissen nicht, wohin mit Ihrer Katze? Ich bin Studentin, liebe Tiere und komme gern zu Ihnen nach Hause: füttern, spielen, das Katzenklo sauber machen. Auch für mehrere Wochen möglich. Hunde betreue ich leider nicht."},
-{"t":"Günstige Betten in der Altstadt","body":"Unser Hostel liegt nur fünf Minuten vom Hauptbahnhof und vom Marktplatz entfernt. Bett im Mehrbettzimmer ab 19 Euro pro Nacht, mit kostenlosem WLAN und frischer Bettwäsche. Alleinreisende sind herzlich willkommen! Fahrräder kann man bei uns leihen."},
-{"t":"Gemeinsam statt allein","body":"Du bist zwischen 20 und 35 und möchtest nicht allein in den Urlaub fahren? Wir organisieren Gruppenreisen für Alleinreisende. Im August: eine Woche an der Küste mit Radtouren, Baden und gemeinsamem Kochen. Kleine Gruppen mit höchstens 14 Personen."},
-{"t":"Reiseführer zu verkaufen","body":"Ich räume mein Regal auf und verkaufe gebrauchte Reiseführer auf Deutsch, alle in gutem Zustand: Italien, Portugal, Griechenland und Türkei. Pro Buch 5 Euro, alle vier zusammen 15 Euro. Abholung nur am Wochenende."},
-{"t":"Gebrauchter Rucksack, fast wie neu","body":"Verkaufe meinen großen Trekkingrucksack (65 Liter), nur zweimal benutzt, mit Regenschutz. Neupreis 150 Euro, jetzt für 45 Euro. Ideal für lange Reisen. Abholung in der Gartenstraße, kein Versand. Bitte nur abends anrufen: 0176 552381."},
-{"t":"Ferienhaus am Waldrand","body":"Gemütliches Ferienhaus in einem kleinen Dorf, direkt am Waldrand, mit großem Garten. Platz für zwei bis vier Personen. Hunde sind bei uns herzlich willkommen, der Garten hat einen Zaun. Vermietung von April bis Oktober, mindestens eine Woche."},
-{"t":"Ruhige Zimmer mit eigenem Bad","body":"Kleine Familienpension am Stadtrand, mitten im Grünen. Ins Zentrum fahren Sie mit dem Bus etwa 40 Minuten. Einzelzimmer mit großem Frühstück 58 Euro pro Nacht. Ideal für Gäste, die Ruhe und Erholung suchen. Leider keine Haustiere."},
-{"t":"Fahrkarte günstig abzugeben","body":"Ich kann leider nicht fahren und verkaufe mein Ticket: Hauptbahnhof – Lindenau, Samstag, Abfahrt 9:40 Uhr, 2. Klasse. Bezahlt habe ich 39 Euro, ich gebe es für 20 Euro ab. Der Name kann online geändert werden."},
-{"t":"Spanisch gegen Deutsch","body":"Hola! Ich heiße Carmen, komme aus Spanien und studiere hier Medizin. Ich suche eine Tandempartnerin oder einen Tandempartner: Du hilfst mir mit meinem Deutsch, ich spreche mit dir Spanisch. Wir treffen uns einmal pro Woche im Café – natürlich kostenlos."},
-{"t":"Bergwandern für Einsteiger","body":"Sie möchten in den Bergen wandern, haben aber noch keine Erfahrung? In unserem Wochenendkurs zeigen erfahrene Bergführer, wie man eine Tour plant und sich richtig ausrüstet. Feste Schuhe sind nötig, Rucksäcke können ausgeliehen werden. Termine: Mai bis September."}
-],
-"a":[3,6,0,10,7,4,11,9,2,-1],
-"why":[
-{"uz":"d) hostel «nur fünf Minuten vom Hauptbahnhof und vom Marktplatz» — markazda, «ab 19 Euro» — arzon, «Alleinreisende willkommen». Qopqon: i) «am Stadtrand», 40 daqiqa, 58 Euro; b) markazda, lekin 110 Euro va kamida 3 kecha.","ru":"d) хостел «nur fünf Minuten vom Hauptbahnhof und vom Marktplatz» — в центре, «ab 19 Euro» — дёшево, «Alleinreisende willkommen». Ловушки: i) «am Stadtrand», 40 минут, 58 евро; b) в центре, но 110 евро и минимум 3 ночи."},
-{"uz":"g) «Verkaufe meinen großen Trekkingrucksack», «nur zweimal benutzt» = gebraucht, «Ideal für lange Reisen». Qopqon: l) da ham «Rucksäcke» bor, lekin ular faqat «ausgeliehen» — ijaraga, sotilmaydi.","ru":"g) «Verkaufe meinen großen Trekkingrucksack», «nur zweimal benutzt» = подержанный, «Ideal für lange Reisen». Ловушка: в l) тоже есть «Rucksäcke», но их только «ausgeliehen» — дают напрокат, не продают."},
-{"uz":"a) «Geführte Radtouren durch die Altstadt» — velosipedda va gid bilan. Qopqon: d) hostelda «Fahrräder kann man leihen» — Führung yo‘q; e) da «Radtouren» bor, lekin bu dengiz bo‘yida bir haftalik safar, shahar emas.","ru":"a) «Geführte Radtouren durch die Altstadt» — на велосипеде и с гидом. Ловушки: d) в хостеле «Fahrräder kann man leihen» — без экскурсии; в e) есть «Radtouren», но это недельная поездка на побережье, а не город."},
-{"uz":"k) Carmen ispaniyalik, «Tandempartner» qidiradi va «natürlich kostenlos» — kurs emas, bepul, muntazam («einmal pro Woche»). Boshqa e’lonlarda ispan tili haqida gap yo‘q.","ru":"k) Кармен из Испании, ищет «Tandempartner», встречи «einmal pro Woche» и «natürlich kostenlos» — не курс и бесплатно. Других объявлений об испанском языке нет."},
-{"uz":"h) «in einem kleinen Dorf» = auf dem Land, «Hunde sind herzlich willkommen», «April bis Oktober, mindestens eine Woche» — yoz va bir hafta mos. Qopqon: b) «Hunde erlaubt», lekin «mitten in der Stadt»; i) «Leider keine Haustiere».","ru":"h) «in einem kleinen Dorf» = за городом, «Hunde sind herzlich willkommen», «April bis Oktober, mindestens eine Woche» — лето и неделя подходят. Ловушки: b) «Hunde erlaubt», но «mitten in der Stadt»; i) «Leider keine Haustiere»."},
-{"uz":"e) «zwischen 20 und 35» — Mia 24 yoshda, «Gruppenreisen für Alleinreisende», «Im August: eine Woche» — yoz va bir hafta. Qopqon: d) da ham «Alleinreisende» bor, lekin bu faqat yotoqxona; l) — faqat dam olish kunlari kursi.","ru":"e) «zwischen 20 und 35» — Мие 24, «Gruppenreisen für Alleinreisende», «Im August: eine Woche» — лето и неделя. Ловушки: в d) тоже «Alleinreisende», но это только хостел; l) — лишь курс выходного дня."},
-{"uz":"l) «Bergwandern für Einsteiger», «noch keine Erfahrung», «Wochenendkurs» — tajribasizlar uchun kurs. Qopqon: e) guruh safari — kurs emas va tog‘da ham emas.","ru":"l) «Bergwandern für Einsteiger», «noch keine Erfahrung», «Wochenendkurs» — курс для новичков. Ловушка: e) — групповая поездка, не курс и не в горах."},
-{"uz":"j) «Hauptbahnhof – Lindenau, Samstag, Abfahrt 9:40 Uhr» — shanba ertalab, «für 20 Euro» statt 39 — arzon. Boshqa e’lonlarda poyezd chiptasi yo‘q.","ru":"j) «Hauptbahnhof – Lindenau, Samstag, Abfahrt 9:40 Uhr» — субботнее утро, «für 20 Euro» вместо 39 — дёшево. Других объявлений о билетах нет."},
-{"uz":"c) talaba uyga kelib mushukka qaraydi: «füttern, spielen», «Auch für mehrere Wochen» — uch hafta ham mumkin. Qopqon: b) da «Katzen sind erlaubt», lekin bu kvartira ijarasi, mushukka qaraydigan odam emas.","ru":"c) студентка приходит домой и ухаживает за кошкой: «füttern, spielen», «Auch für mehrere Wochen» — три недели тоже можно. Ловушка: в b) «Katzen sind erlaubt», но это аренда квартиры, а не присмотр за кошкой."},
-{"uz":"x — mos e’lon yo‘q. f) da «gebrauchte Reiseführer auf Deutsch» bor, lekin faqat «Italien, Portugal, Griechenland und Türkei» — Spanien yo‘q. k) da «Spanien» bor, lekin bu til tandemi.","ru":"x — подходящего объявления нет. В f) есть «gebrauchte Reiseführer auf Deutsch», но только «Italien, Portugal, Griechenland und Türkei» — Испании нет. В k) есть «Spanien», но это языковой тандем."}
-]}
+{
+ "id": "B1-b11-7-T",
+ "lek": 7,
+ "lv": "B1.1",
+ "part": "l3",
+ "title": "Leseverstehen Teil 3",
+ "sub": "Kleinanzeigen · Selektives Verstehen",
+ "min": 10,
+ "h": "Lesen Sie die Situationen 1–10 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige. Sie können jede Anzeige nur einmal verwenden. Für eine Situation gibt es keine passende Anzeige. Markieren Sie in diesem Fall ein x.",
+ "tip": {
+  "uz": "Avval har bir vaziyatdagi kalit tafsilotlarni belgilang: qachon, qayerda, qancha pul, kim bilan, qanday tajriba. E’londa mavzu mos kelishi yetarli emas — bitta tafsilot to‘g‘ri kelmasa, u javob emas.",
+  "ru": "Сначала отметьте в каждой ситуации ключевые детали: когда, где, сколько стоит, с кем, какой опыт. Совпадения темы мало — если хотя бы одна деталь не подходит, объявление не является ответом."
+ },
+ "src": "Text: streber.uz · Personen und Orte erfunden",
+ "sits": [
+  "Ihr Freund Timur kommt am Wochenende allein in Ihre Stadt und sucht eine günstige Übernachtung in zentraler Lage.",
+  "Ihre Bekannte Malika plant eine lange Reise durch Asien und möchte dafür einen gebrauchten Rucksack kaufen.",
+  "Ihr Bekannter Jonas möchte die Altstadt mit dem Fahrrad kennenlernen – am liebsten mit einer Führung.",
+  "Ihre Freundin Lena möchte ihr Spanisch verbessern. Ein Kurs ist ihr zu teuer, sie möchte lieber regelmäßig mit einer Spanierin oder einem Spanier sprechen.",
+  "Ihr Freund Paul möchte im Sommer eine Woche Urlaub auf dem Land machen. Sein Hund soll mitkommen.",
+  "Ihre Bekannte Mia (24) reist zum ersten Mal allein und möchte im Sommer eine Woche mit anderen jungen Leuten verbringen.",
+  "Ihre Freundin Sevara war noch nie in den Bergen wandern und möchte das zuerst in einem Kurs lernen.",
+  "Ihr Bekannter Aziz möchte am Samstagvormittag mit dem Zug nach Lindenau fahren und sucht eine günstige Fahrkarte.",
+  "Ihr Freund Sardor ist drei Wochen auf Reisen und sucht jemanden, der in dieser Zeit seine Katze versorgt.",
+  "Ihre Freundin Nodira fliegt im Herbst nach Spanien und sucht einen gebrauchten Reiseführer auf Deutsch."
+ ],
+ "ads": [
+  {
+   "t": "Die Stadt auf zwei Rädern entdecken",
+   "body": "Geführte Radtouren durch die Altstadt und am Fluss entlang: jeden Samstag und Sonntag um 10 Uhr, Dauer drei Stunden. Kleine Gruppen mit bis zu zwölf Personen. Leihräder gibt es für 8 Euro. Anmeldung im Touristenbüro am Marktplatz."
+  },
+  {
+   "t": "Ferienwohnung mitten in der Stadt",
+   "body": "Moderne Wohnung im dritten Stock, nur 200 Meter vom Rathaus entfernt. Zwei Schlafzimmer, voll ausgestattete Küche, Balkon. Für bis zu vier Personen, 110 Euro pro Nacht, Mindestaufenthalt drei Nächte. Hunde und Katzen sind erlaubt."
+  },
+  {
+   "t": "Ihre Katze in guten Händen",
+   "body": "Sie fahren in den Urlaub und wissen nicht, wohin mit Ihrer Katze? Ich bin Studentin, liebe Tiere und komme gern zu Ihnen nach Hause: füttern, spielen, das Katzenklo sauber machen. Auch für mehrere Wochen möglich. Hunde betreue ich leider nicht."
+  },
+  {
+   "t": "Günstige Betten in der Altstadt",
+   "body": "Unser Hostel liegt nur fünf Minuten vom Hauptbahnhof und vom Marktplatz entfernt. Bett im Mehrbettzimmer ab 19 Euro pro Nacht, mit kostenlosem WLAN und frischer Bettwäsche. Alleinreisende sind herzlich willkommen! Fahrräder kann man bei uns leihen."
+  },
+  {
+   "t": "Gemeinsam statt allein",
+   "body": "Du bist zwischen 20 und 35 und möchtest nicht allein in den Urlaub fahren? Wir organisieren Gruppenreisen für Alleinreisende. Im August: eine Woche an der Küste mit Radtouren, Baden und gemeinsamem Kochen. Kleine Gruppen mit höchstens 14 Personen."
+  },
+  {
+   "t": "Reiseführer zu verkaufen",
+   "body": "Ich räume mein Regal auf und verkaufe gebrauchte Reiseführer auf Deutsch, alle in gutem Zustand: für Italien, Portugal, Griechenland und die Türkei. Pro Buch 5 Euro, alle vier zusammen 15 Euro. Abholung nur am Wochenende."
+  },
+  {
+   "t": "Gebrauchter Rucksack, fast wie neu",
+   "body": "Verkaufe meinen großen Trekkingrucksack (65 Liter), nur zweimal benutzt, mit Regenschutz. Neupreis 150 Euro, jetzt für 45 Euro. Ideal für lange Reisen. Abholung in der Gartenstraße, kein Versand. Bitte nur abends anrufen: 0176 552381."
+  },
+  {
+   "t": "Ferienhaus am Waldrand",
+   "body": "Gemütliches Ferienhaus in einem kleinen Dorf, direkt am Waldrand, mit großem Garten. Platz für bis zu vier Personen. Hunde sind bei uns herzlich willkommen, der Garten hat einen Zaun. Vermietung von April bis Oktober, mindestens eine Woche."
+  },
+  {
+   "t": "Ruhige Zimmer mit eigenem Bad",
+   "body": "Kleine Familienpension am Stadtrand, mitten im Grünen. Ins Zentrum fahren Sie mit dem Bus etwa 40 Minuten. Einzelzimmer mit großem Frühstück 58 Euro pro Nacht. Ideal für Gäste, die Ruhe und Erholung suchen. Leider keine Haustiere."
+  },
+  {
+   "t": "Fahrkarte günstig abzugeben",
+   "body": "Ich habe leider keine Zeit und verkaufe deshalb mein Ticket: Hauptbahnhof – Lindenau, Samstag, Abfahrt 9:40 Uhr, 2. Klasse. Bezahlt habe ich 39 Euro, ich gebe es für 20 Euro ab. Der Name kann online geändert werden."
+  },
+  {
+   "t": "Spanisch gegen Deutsch",
+   "body": "Hola! Ich heiße Carmen, komme aus Spanien und studiere hier Medizin. Ich suche eine Tandempartnerin oder einen Tandempartner: Du hilfst mir mit meinem Deutsch, ich spreche mit dir Spanisch. Wir treffen uns einmal pro Woche im Café – natürlich kostenlos."
+  },
+  {
+   "t": "Bergwandern für Einsteiger",
+   "body": "Sie möchten in den Bergen wandern, haben aber noch keine Erfahrung? In unserem Wochenendkurs zeigen erfahrene Bergführer, wie man eine Tour plant und sich richtig ausrüstet. Feste Schuhe sind nötig, Rucksäcke können ausgeliehen werden. Termine: Mai bis September."
+  }
+ ],
+ "a": [
+  3,
+  6,
+  0,
+  10,
+  7,
+  4,
+  11,
+  9,
+  2,
+  -1
+ ],
+ "why": [
+  {
+   "uz": "d) hostel «nur fünf Minuten vom Hauptbahnhof und vom Marktplatz» — markazda, «ab 19 Euro» — arzon, «Alleinreisende willkommen». Qopqon: i) «am Stadtrand», 40 daqiqa, 58 Euro; b) markazda, lekin 110 Euro va kamida 3 kecha.",
+   "ru": "d) хостел «nur fünf Minuten vom Hauptbahnhof und vom Marktplatz» — в центре, «ab 19 Euro» — дёшево, «Alleinreisende willkommen». Ловушки: i) «am Stadtrand», 40 минут, 58 евро; b) в центре, но 110 евро и минимум 3 ночи."
+  },
+  {
+   "uz": "g) «Verkaufe meinen großen Trekkingrucksack», «nur zweimal benutzt» = gebraucht, «Ideal für lange Reisen». Qopqon: l) da ham «Rucksäcke» bor, lekin ular faqat «ausgeliehen» — ijaraga, sotilmaydi.",
+   "ru": "g) «Verkaufe meinen großen Trekkingrucksack», «nur zweimal benutzt» = подержанный, «Ideal für lange Reisen». Ловушка: в l) тоже есть «Rucksäcke», но их только «ausgeliehen» — дают напрокат, не продают."
+  },
+  {
+   "uz": "a) «Geführte Radtouren durch die Altstadt» — velosipedda va gid bilan. Qopqon: d) hostelda «Fahrräder kann man leihen» — Führung yo‘q; e) da «Radtouren» bor, lekin bu dengiz bo‘yida bir haftalik safar, shahar emas.",
+   "ru": "a) «Geführte Radtouren durch die Altstadt» — на велосипеде и с гидом. Ловушки: d) в хостеле «Fahrräder kann man leihen» — без экскурсии; в e) есть «Radtouren», но это недельная поездка на побережье, а не город."
+  },
+  {
+   "uz": "k) Carmen ispaniyalik, «Tandempartner» qidiradi va «natürlich kostenlos» — kurs emas, bepul, muntazam («einmal pro Woche»). Boshqa e’lonlarda ispan tili haqida gap yo‘q.",
+   "ru": "k) Кармен из Испании, ищет «Tandempartner», встречи «einmal pro Woche» и «natürlich kostenlos» — не курс и бесплатно. Других объявлений об испанском языке нет."
+  },
+  {
+   "uz": "h) «in einem kleinen Dorf» = auf dem Land, «Hunde sind herzlich willkommen», «April bis Oktober, mindestens eine Woche» — yoz va bir hafta mos. Qopqon: b) «Hunde erlaubt», lekin «mitten in der Stadt»; i) «Leider keine Haustiere».",
+   "ru": "h) «in einem kleinen Dorf» = за городом, «Hunde sind herzlich willkommen», «April bis Oktober, mindestens eine Woche» — лето и неделя подходят. Ловушки: b) «Hunde erlaubt», но «mitten in der Stadt»; i) «Leider keine Haustiere»."
+  },
+  {
+   "uz": "e) «zwischen 20 und 35» — Mia 24 yoshda, «Gruppenreisen für Alleinreisende», «Im August: eine Woche» — yoz va bir hafta. Qopqon: d) da ham «Alleinreisende» bor, lekin bu faqat yotoqxona; l) — faqat dam olish kunlari kursi.",
+   "ru": "e) «zwischen 20 und 35» — Мие 24, «Gruppenreisen für Alleinreisende», «Im August: eine Woche» — лето и неделя. Ловушки: в d) тоже «Alleinreisende», но это только хостел; l) — лишь курс выходного дня."
+  },
+  {
+   "uz": "l) «Bergwandern für Einsteiger», «noch keine Erfahrung», «Wochenendkurs» — tajribasizlar uchun kurs. Qopqon: e) guruh safari — kurs emas va tog‘da ham emas.",
+   "ru": "l) «Bergwandern für Einsteiger», «noch keine Erfahrung», «Wochenendkurs» — курс для новичков. Ловушка: e) — групповая поездка, не курс и не в горах."
+  },
+  {
+   "uz": "j) «Hauptbahnhof – Lindenau, Samstag, Abfahrt 9:40 Uhr» — shanba ertalab, «für 20 Euro» statt 39 — arzon. Boshqa e’lonlarda poyezd chiptasi yo‘q.",
+   "ru": "j) «Hauptbahnhof – Lindenau, Samstag, Abfahrt 9:40 Uhr» — субботнее утро, «für 20 Euro» вместо 39 — дёшево. Других объявлений о билетах нет."
+  },
+  {
+   "uz": "c) talaba uyga kelib mushukka qaraydi: «füttern, spielen», «Auch für mehrere Wochen» — uch hafta ham mumkin. Qopqon: b) da «Katzen sind erlaubt», lekin bu kvartira ijarasi, mushukka qaraydigan odam emas.",
+   "ru": "c) студентка приходит домой и ухаживает за кошкой: «füttern, spielen», «Auch für mehrere Wochen» — три недели тоже можно. Ловушка: в b) «Katzen sind erlaubt», но это аренда квартиры, а не присмотр за кошкой."
+  },
+  {
+   "uz": "x — mos e’lon yo‘q. f) da «gebrauchte Reiseführer auf Deutsch» bor, lekin faqat «Italien, Portugal, Griechenland und die Türkei» — Spanien yo‘q. k) da «Spanien» bor, lekin bu til tandemi.",
+   "ru": "x — подходящего объявления нет. В f) есть «gebrauchte Reiseführer auf Deutsch», но только «Italien, Portugal, Griechenland und die Türkei» — Испании нет. В k) есть «Spanien», но это языковой тандем."
+  }
+ ]
+}
