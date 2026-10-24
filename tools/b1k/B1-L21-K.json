@@ -1,0 +1,721 @@
+{
+ "id": "B1-b12-21-K",
+ "meta": {
+  "title": "Kommunikation · Gemeinsam planen",
+  "stitle": "Vorschläge machen · zustimmen/ablehnen · sich einigen"
+ },
+ "ex": {
+  "title": "Lektion 21 · Kommunikation",
+  "sub": "Vorschläge machen · zustimmen/ablehnen · sich einigen",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "komm",
+    "ic": "💬",
+    "t": "Kommunikation",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Gemeinsam planen</h4><table class=\"ex-tb\"><tr><th>Funktion</th><th>Redemittel</th></tr><tr><td>Vorschläge machen</td><td>Wie wäre es, wenn wir …?<br>Wie wäre es mit …?<br>Wir könnten …<br>Ich schlage vor, dass …<br>Was hältst du von …?</td></tr><tr><td>zustimmen</td><td>Gute Idee!<br>Einverstanden.<br>Das finde ich gut.<br>Da hast du recht.</td></tr><tr><td>ablehnen</td><td>Das finde ich nicht so gut, weil …<br>Ich weiß nicht so recht.<br>Das geht leider nicht, weil …</td></tr><tr><td>Gegenvorschlag machen</td><td>Ich habe eine andere Idee: …<br>Wäre es nicht besser, wenn …?<br>Ich würde lieber …</td></tr><tr><td>sich einigen</td><td>Gut, dann machen wir es so.<br>Sind wir uns einig?<br>Also abgemacht: …<br>Einverstanden, das machen wir.</td></tr></table><p class=\"ex-note\">telc Mündlich, 3-qism: sherik bilan birga reja tuzasiz. Faqat «Ja.» yoki «Okay.» demang — taklif bering, rozi bo‘lmasangiz sababini ayting (<b>weil …</b>) va boshqa taklif bering. Oxirida albatta kelishib oling: <b>Gut, dann machen wir es so.</b> Do‘stga — <b>du</b>, o‘qituvchiga — <b>Sie</b>.</p>",
+      "ru": "<h4>Gemeinsam planen</h4><table class=\"ex-tb\"><tr><th>Funktion</th><th>Redemittel</th></tr><tr><td>Vorschläge machen</td><td>Wie wäre es, wenn wir …?<br>Wie wäre es mit …?<br>Wir könnten …<br>Ich schlage vor, dass …<br>Was hältst du von …?</td></tr><tr><td>zustimmen</td><td>Gute Idee!<br>Einverstanden.<br>Das finde ich gut.<br>Da hast du recht.</td></tr><tr><td>ablehnen</td><td>Das finde ich nicht so gut, weil …<br>Ich weiß nicht so recht.<br>Das geht leider nicht, weil …</td></tr><tr><td>Gegenvorschlag machen</td><td>Ich habe eine andere Idee: …<br>Wäre es nicht besser, wenn …?<br>Ich würde lieber …</td></tr><tr><td>sich einigen</td><td>Gut, dann machen wir es so.<br>Sind wir uns einig?<br>Also abgemacht: …<br>Einverstanden, das machen wir.</td></tr></table><p class=\"ex-note\">telc, устная часть 3: вы вместе с партнёром составляете план. Не говорите только «Ja.» или «Okay.» — предлагайте, если не согласны — объясните почему (<b>weil …</b>) и предложите другое. В конце обязательно договоритесь: <b>Gut, dann machen wir es so.</b> Другу — <b>du</b>, преподавателю — <b>Sie</b>.</p>"
+     },
+     {
+      "t": "cat",
+      "h": "Was ist das? Ordnen Sie zu.",
+      "bsp": "Wir könnten einen Film drehen. → Vorschlag",
+      "c": [
+       "Vorschlag",
+       "Zustimmung",
+       "Ablehnung"
+      ],
+      "i": [
+       [
+        "Wie wäre es, wenn wir eine Ausstellung machen?",
+        0
+       ],
+       [
+        "Ich schlage vor, dass jede Gruppe ein Plakat macht.",
+        0
+       ],
+       [
+        "Was hältst du von einem Quiz für alle Klassen?",
+        0
+       ],
+       [
+        "Gute Idee, das machen wir!",
+        1
+       ],
+       [
+        "Einverstanden, das klingt gut.",
+        1
+       ],
+       [
+        "Da hast du recht.",
+        1
+       ],
+       [
+        "Das finde ich nicht so gut, weil das zu teuer ist.",
+        2
+       ],
+       [
+        "Ich weiß nicht so recht. Das dauert zu lange.",
+        2
+       ]
+      ],
+      "gw": {
+       "uz": "Taklif — <b>Wie wäre es …? / Ich schlage vor, dass … / Was hältst du von …?</b>; rozilik — <b>Gute Idee! / Einverstanden.</b>; rad etish — <b>Das finde ich nicht so gut, weil … / Ich weiß nicht so recht.</b>",
+       "ru": "Предложение — <b>Wie wäre es …? / Ich schlage vor, dass … / Was hältst du von …?</b>; согласие — <b>Gute Idee! / Einverstanden.</b>; отказ — <b>Das finde ich nicht so gut, weil … / Ich weiß nicht so recht.</b>"
+      }
+     },
+     {
+      "t": "cat",
+      "h": "Gegenvorschlag oder Einigung? Ordnen Sie zu.",
+      "bsp": "Ich würde lieber am Samstag anfangen. → Gegenvorschlag",
+      "c": [
+       "Gegenvorschlag",
+       "Einigung"
+      ],
+      "i": [
+       [
+        "Ich habe eine andere Idee: Wir machen ein Quiz.",
+        0
+       ],
+       [
+        "Wäre es nicht besser, wenn wir ein Theaterstück spielen?",
+        0
+       ],
+       [
+        "Ich würde lieber draußen feiern.",
+        0
+       ],
+       [
+        "Gut, dann machen wir es so.",
+        1
+       ],
+       [
+        "Sind wir uns einig?",
+        1
+       ],
+       [
+        "Also abgemacht: Du schreibst die Einladung.",
+        1
+       ],
+       [
+        "Einverstanden, das machen wir.",
+        1
+       ]
+      ],
+      "gw": {
+       "uz": "Qarshi taklif boshqa variant beradi: <b>Ich habe eine andere Idee … / Wäre es nicht besser, wenn …? / Ich würde lieber …</b>. Kelishuv rejani yakunlaydi: <b>Gut, dann machen wir es so. / Sind wir uns einig? / Also abgemacht.</b>",
+       "ru": "Встречное предложение даёт другой вариант: <b>Ich habe eine andere Idee … / Wäre es nicht besser, wenn …? / Ich würde lieber …</b>. Договорённость завершает план: <b>Gut, dann machen wir es so. / Sind wir uns einig? / Also abgemacht.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt? Reagieren Sie.",
+      "bsp": "Laylo: „Was machen wir am Wochenende?“ → Wir könnten ins Kino gehen.",
+      "q": "Ihre Schwester Malika: „Am Sonntag besucht uns Oma. Was machen wir mit ihr? Hast du eine Idee?“",
+      "o": [
+       "Gut, dann machen wir es so.",
+       "Wie wäre es, wenn wir mit ihr in den Park gehen?",
+       "Da hast du recht.",
+       "Sind wir uns einig?"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Malika g‘oya so‘rayapti — demak, <b>taklif</b> kerak: <b>Wie wäre es, wenn wir …?</b> Rozilik va kelishuv iboralari bu yerda mos emas: hali hech narsa taklif qilinmagan.",
+       "ru": "Малика просит идею — нужно <b>предложение</b>: <b>Wie wäre es, wenn wir …?</b> Фразы согласия и договорённости не подходят: ещё ничего не предложено."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt? Reagieren Sie.",
+      "q": "Timur aus Ihrem Deutschkurs: „Lass uns für das Kursfest Plov kochen. Das mögen alle!“ — Sie finden die Idee super.",
+      "o": [
+       "Ich weiß nicht so recht. Das ist viel Arbeit.",
+       "Ich habe eine andere Idee: Wir bestellen Pizza.",
+       "Gute Idee! Ich bringe den Reis mit.",
+       "Was hältst du von einem Picknick?"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "G‘oya sizga yoqdi — <b>rozilik</b>: <b>Gute Idee!</b> Qolganlari rad etish (<b>Ich weiß nicht so recht</b>) yoki boshqa taklif.",
+       "ru": "Идея вам нравится — <b>согласие</b>: <b>Gute Idee!</b> Остальное — отказ (<b>Ich weiß nicht so recht</b>) или другое предложение."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt? Reagieren Sie.",
+      "q": "Lena aus Ihrer Lerngruppe: „Ich schlage vor, dass wir uns jeden Tag um sechs Uhr morgens treffen.“ — Sie finden das nicht gut.",
+      "o": [
+       "Das finde ich nicht so gut, weil ich so früh nicht aufstehen kann.",
+       "Einverstanden, das klingt gut.",
+       "Gut, dann machen wir es so.",
+       "Sind wir uns einig?"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Taklif sizga yoqmaydi — <b>sabab bilan rad eting</b>: <b>Das finde ich nicht so gut, weil …</b> Qolgan variantlar rozilik yoki kelishuv bildiradi.",
+       "ru": "Предложение вам не нравится — <b>откажите с причиной</b>: <b>Das finde ich nicht so gut, weil …</b> Остальные варианты выражают согласие или договорённость."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt? Reagieren Sie.",
+      "q": "Aziz: „Lass uns am Samstag im Park Fußball spielen.“ — Am Samstag soll es regnen. Machen Sie einen Gegenvorschlag.",
+      "o": [
+       "Gute Idee! Ich bringe den Ball mit.",
+       "Gut, dann machen wir es so.",
+       "Das finde ich nicht so gut.",
+       "Am Samstag soll es regnen. Wäre es nicht besser, wenn wir ins Hallenbad gehen?"
+      ],
+      "a": 3,
+      "gw": {
+       "uz": "<b>Qarshi taklif</b> = sabab + boshqa variant: <b>Wäre es nicht besser, wenn …?</b> «Das finde ich nicht so gut.» — faqat rad etish, yangi taklif yo‘q.",
+       "ru": "<b>Встречное предложение</b> = причина + другой вариант: <b>Wäre es nicht besser, wenn …?</b> «Das finde ich nicht so gut.» — только отказ, без нового предложения."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt? Reagieren Sie.",
+      "q": "Sevara in der Chatgruppe vom Kurs: „Also: Wir treffen uns am Freitag um 16 Uhr in der Bibliothek, und jeder bringt seine Notizen mit. Okay?“ — Sie sind einverstanden.",
+      "o": [
+       "Wie wäre es, wenn wir uns in der Bibliothek treffen?",
+       "Gut, dann machen wir es so. Bis Freitag!",
+       "Ich weiß nicht so recht.",
+       "Ich habe eine andere Idee: Wir lernen online."
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Reja tayyor, siz rozisiz — <b>kelishuv</b>: <b>Gut, dann machen wir es so.</b> Bibliotekani yana taklif qilish shart emas — u allaqachon rejada bor.",
+       "ru": "План готов, вы согласны — <b>договорённость</b>: <b>Gut, dann machen wir es so.</b> Снова предлагать библиотеку не нужно — она уже в плане."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt? Reagieren Sie.",
+      "q": "Sie planen mit Nodir den Geburtstag Ihrer Schwester. Alles ist besprochen: Torte, Musik, Gäste. Fragen Sie, ob Nodir mit allem einverstanden ist.",
+      "o": [
+       "Ich schlage vor, dass wir eine Torte kaufen.",
+       "Das finde ich nicht so gut, weil das zu teuer ist.",
+       "Sind wir uns einig? Torte, Musik und zwanzig Gäste.",
+       "Gute Idee!"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Sherik rozimi — tekshirish: <b>Sind wir uns einig?</b> va rejani qisqa takrorlash. Bu telc’da suhbatni yakunlashning yaxshi usuli.",
+       "ru": "Проверить, согласен ли партнёр: <b>Sind wir uns einig?</b> и коротко повторить план. Хороший способ завершить разговор на telc."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Bilden Sie Sätze.",
+      "bsp": "Wir | könnten | ein Quiz | machen → Wir könnten ein Quiz machen.",
+      "q": "Ihre Klasse plant einen Projekttag. Machen Sie einen Vorschlag: ein Schulfest.",
+      "w": [
+       "Wie",
+       "wäre",
+       "es,",
+       "wenn",
+       "wir",
+       "ein",
+       "Schulfest",
+       "machen"
+      ],
+      "a": "Wie wäre es, wenn wir ein Schulfest machen?",
+      "alt": [],
+      "gw": {
+       "uz": "<b>Wie wäre es, wenn …?</b> — taklif; <b>wenn</b> dan keyin fe’l gap oxirida: … <b>machen</b>?",
+       "ru": "<b>Wie wäre es, wenn …?</b> — предложение; после <b>wenn</b> глагол в конце: … <b>machen</b>?"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Bilden Sie Sätze.",
+      "q": "Ihr Freund möchte den Projekttag im Juni machen. Aber im Juni haben Sie Prüfungen.",
+      "w": [
+       "Das",
+       "finde",
+       "ich",
+       "nicht so",
+       "gut,",
+       "weil",
+       "wir",
+       "dann",
+       "Prüfungen",
+       "haben"
+      ],
+      "a": "Das finde ich nicht so gut, weil wir dann Prüfungen haben.",
+      "alt": [],
+      "gw": {
+       "uz": "Sabab bilan rad etish: <b>Das finde ich nicht so gut, weil …</b> — <b>weil</b> dan keyin fe’l oxirda (<b>haben</b>).",
+       "ru": "Отказ с причиной: <b>Das finde ich nicht so gut, weil …</b> — после <b>weil</b> глагол в конце (<b>haben</b>)."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Bilden Sie Sätze.",
+      "q": "Ihre Freundin möchte das Schulfest in der Turnhalle machen. Sie möchten lieber draußen feiern.",
+      "w": [
+       "Wäre",
+       "es",
+       "nicht",
+       "besser,",
+       "wenn",
+       "wir",
+       "das Fest auf dem Schulhof",
+       "machen"
+      ],
+      "a": "Wäre es nicht besser, wenn wir das Fest auf dem Schulhof machen?",
+      "alt": [],
+      "gw": {
+       "uz": "Qarshi taklif: <b>Wäre es nicht besser, wenn …?</b> — muloyim, lekin aniq boshqa variant.",
+       "ru": "Встречное предложение: <b>Wäre es nicht besser, wenn …?</b> — вежливо, но с чётким другим вариантом."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Ordnen Sie das Gespräch.",
+      "dlg": 1,
+      "bsp": "▪ Was machen wir am Projekttag? → ● Wie wäre es mit einem Quiz? (zuerst die Frage, dann der Vorschlag)",
+      "w": [
+       "▪ Gute Idee! Aber wann? Am Montag habe ich keine Zeit.",
+       "● Ja, dann machen wir es so.",
+       "● Wie wäre es, wenn wir in der Pause Kuchen verkaufen?",
+       "▪ Einverstanden. Ich backe einen Apfelkuchen. Sind wir uns einig?",
+       "▪ Wir brauchen Geld für die Klassenfahrt. Hast du eine Idee?",
+       "● Dann lass uns den Verkauf am Mittwoch machen."
+      ],
+      "a": "▪ Wir brauchen Geld für die Klassenfahrt. Hast du eine Idee? ● Wie wäre es, wenn wir in der Pause Kuchen verkaufen? ▪ Gute Idee! Aber wann? Am Montag habe ich keine Zeit. ● Dann lass uns den Verkauf am Mittwoch machen. ▪ Einverstanden. Ich backe einen Apfelkuchen. Sind wir uns einig? ● Ja, dann machen wir es so.",
+      "gw": {
+       "uz": "Tartib: savol → <b>taklif</b> (Wie wäre es, wenn …?) → <b>rozilik</b> + muammo → <b>yangi kun</b> → <b>Sind wir uns einig?</b> → <b>Gut, dann machen wir es so.</b>",
+       "ru": "Порядок: вопрос → <b>предложение</b> (Wie wäre es, wenn …?) → <b>согласие</b> + проблема → <b>другой день</b> → <b>Sind wir uns einig?</b> → <b>dann machen wir es so.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Redemittel.",
+      "bsp": "W___ k___ ein Quiz machen. → Wir könnten ein Quiz machen.",
+      "s": "W___ w___ e___, w___ wir am Projekttag einen Film drehen?",
+      "a": [
+       [
+        "ie"
+       ],
+       [
+        "äre"
+       ],
+       [
+        "s"
+       ],
+       [
+        "enn"
+       ]
+      ],
+      "gw": {
+       "uz": "Taklif: <b>Wie wäre es, wenn</b> wir …?",
+       "ru": "Предложение: <b>Wie wäre es, wenn</b> wir …?"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Redemittel.",
+      "s": "I___ s___ v___, d___ wir auch die Eltern einladen.",
+      "a": [
+       [
+        "ch"
+       ],
+       [
+        "chlage"
+       ],
+       [
+        "or"
+       ],
+       [
+        "ass"
+       ]
+      ],
+      "gw": {
+       "uz": "Taklif: <b>Ich schlage vor, dass</b> … — <b>vorschlagen</b> ajraladigan fe’l.",
+       "ru": "Предложение: <b>Ich schlage vor, dass</b> … — <b>vorschlagen</b> — глагол с отделяемой приставкой."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Redemittel.",
+      "s": "D___ f___ ich nicht so g___, w___ das zu teuer ist.",
+      "a": [
+       [
+        "as"
+       ],
+       [
+        "inde"
+       ],
+       [
+        "ut"
+       ],
+       [
+        "eil"
+       ]
+      ],
+      "gw": {
+       "uz": "Sabab bilan rad etish: <b>Das finde ich nicht so gut, weil</b> …",
+       "ru": "Отказ с причиной: <b>Das finde ich nicht so gut, weil</b> …"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Redemittel.",
+      "s": "G___, d___ machen wir es s___. S___ wir uns einig?",
+      "a": [
+       [
+        "ut"
+       ],
+       [
+        "ann"
+       ],
+       [
+        "o"
+       ],
+       [
+        "ind"
+       ]
+      ],
+      "gw": {
+       "uz": "Kelishuv: <b>Gut, dann machen wir es so. Sind wir uns einig?</b>",
+       "ru": "Договорённость: <b>Gut, dann machen wir es so. Sind wir uns einig?</b>"
+      }
+     },
+     {
+      "t": "chat",
+      "h": "Planen Sie gemeinsam: einen Projekttag in der Schule.",
+      "bsp": "Jonas: „Welches Thema nehmen wir?“ → Wie wäre es mit dem Thema „Umwelt“?",
+      "who": "Jonas",
+      "goal": [
+       "Vorschlag",
+       "Zustimmung",
+       "Gegenvorschlag",
+       "Einigung"
+      ],
+      "st": [
+       {
+        "p": "Hallo! Wir sollen ja den Projekttag für unsere Klasse planen. Welches Thema nehmen wir? Hast du schon eine Idee?",
+        "o": [
+         {
+          "s": "Ja, gut.",
+          "r": "Hm, „ja, gut“ … Aber welches Thema meinst du denn? Sag doch mal einen Vorschlag.",
+          "why": {
+           "uz": "Faqat «Ja, gut.» — telc’da bunga ball yo‘q. Sherik g‘oya so‘radi: mavzu taklif qiling (<b>Wie wäre es mit …?</b>).",
+           "ru": "Только «Ja, gut.» — на telc за это нет баллов. Партнёр просит идею: предложите тему (<b>Wie wäre es mit …?</b>)."
+          }
+         },
+         {
+          "s": "Wie wäre es mit dem Thema „Gesunde Ernährung“? Das interessiert viele.",
+          "ok": 1,
+          "g": 0
+         },
+         {
+          "s": "Gut, dann machen wir es so.",
+          "r": "Was machen wir so? Wir haben doch noch gar nichts besprochen! Welches Thema schlägst du vor?",
+          "why": {
+           "uz": "Bu — kelishuv iborasi, lekin hali hech narsa taklif qilinmagan. Avval taklif kerak.",
+           "ru": "Это фраза договорённости, но ещё ничего не предложено. Сначала нужно предложение."
+          }
+         }
+        ]
+       },
+       {
+        "p": "Ernährung? Hm, ich weiß nicht so recht. Darüber haben wir in Biologie schon viel gesprochen. Ich würde lieber etwas mit Sport machen, zum Beispiel ein Sportfest.",
+        "o": [
+         {
+          "s": "Ich bin der Meinung, dass Biologie ein wichtiges Fach ist.",
+          "r": "Ja, schon … Aber es geht doch um den Projekttag. Was sagst du zu meiner Idee mit dem Sportfest?",
+          "why": {
+           "uz": "Mavzudan chiqish: sherik yangi taklif berdi (Sportfest), siz esa biologiya haqida fikr aytyapsiz. Taklifga munosabat bildiring.",
+           "ru": "Уход от темы: партнёр предложил спортивный праздник, а вы говорите о биологии. Отреагируйте на предложение."
+          }
+         },
+         {
+          "s": "Wie wäre es mit dem Thema „Gesunde Ernährung“?",
+          "r": "Das hast du doch schon gesagt. Und was hältst du von meiner Idee mit dem Sportfest?",
+          "why": {
+           "uz": "O‘z taklifingizni takrorlayapsiz va sherikni eshitmayapsiz. telc’da sherik gapiga javob berish muhim.",
+           "ru": "Вы повторяете своё предложение и не слышите партнёра. На telc важно реагировать на слова партнёра."
+          }
+         },
+         {
+          "s": "Ein Sportfest? Gute Idee! Da können auch die anderen Klassen mitmachen.",
+          "ok": 1,
+          "g": 1
+         }
+        ]
+       },
+       {
+        "p": "Super. Und wann machen wir das? Ich schlage vor, dass wir den Projekttag im Dezember machen.",
+        "o": [
+         {
+          "s": "Im Dezember ist es zu kalt für ein Sportfest. Wäre es nicht besser, wenn wir den Projekttag im Mai machen?",
+          "ok": 1,
+          "g": 2
+         },
+         {
+          "s": "Im Dezember habe ich Geburtstag.",
+          "r": "Ach, schön! Aber passt der Dezember für ein Sportfest oder nicht?",
+          "why": {
+           "uz": "Mavzuga aloqasi yo‘q ma’lumot. Sana haqida fikr ayting; muammo bo‘lsa — qarshi taklif: <b>Wäre es nicht besser, wenn …?</b>",
+           "ru": "Информация не по делу. Скажите мнение о дате; если есть проблема — встречное предложение: <b>Wäre es nicht besser, wenn …?</b>"
+          }
+         },
+         {
+          "s": "Sind wir uns einig?",
+          "r": "Einig? Ich habe doch gerade erst den Dezember vorgeschlagen. Was meinst du denn dazu?",
+          "why": {
+           "uz": "Kelishuvni tekshirish juda erta: siz hali sana haqida hech narsa demadingiz.",
+           "ru": "Проверять договорённость слишком рано: вы ещё ничего не сказали о дате."
+          }
+         }
+        ]
+       },
+       {
+        "p": "Mai? Stimmt, dann ist das Wetter besser. Okay, Mai. Und wer macht was? Es gibt viel Arbeit: Spiele planen, Getränke organisieren …",
+        "o": [
+         {
+          "s": "Einverstanden.",
+          "r": "Womit einverstanden? Ich habe doch gefragt, wer was macht. Hast du einen Vorschlag?",
+          "why": {
+           "uz": "Sherik savol berdi: kim nima qiladi? «Einverstanden.» bu savolga javob emas. Ishni taqsimlashni taklif qiling.",
+           "ru": "Партнёр спросил, кто что делает. «Einverstanden.» — не ответ на вопрос. Предложите распределение работы."
+          }
+         },
+         {
+          "s": "Das finde ich nicht so gut, weil das viel Arbeit ist.",
+          "r": "Na ja, ein bisschen Arbeit ist es immer. Aber wie teilen wir sie auf?",
+          "why": {
+           "uz": "Rad etish o‘rinsiz: butun loyihaga «yo‘q» deyapsiz. Bu yerda ishni bo‘lish bo‘yicha <b>taklif</b> kerak.",
+           "ru": "Отказ неуместен: вы говорите «нет» всему проекту. Здесь нужно <b>предложение</b>, как разделить работу."
+          }
+         },
+         {
+          "s": "Ich schlage vor, dass ich die Spiele plane und du die Getränke organisierst.",
+          "ok": 1,
+          "g": 0
+         }
+        ]
+       },
+       {
+        "p": "Gut, das mache ich gern. Und wie sagen wir es den anderen? Ich schlage vor, dass wir eine Nachricht in unsere Klassengruppe schreiben.",
+        "o": [
+         {
+          "s": "Was hältst du von einer Nachricht in der Klassengruppe?",
+          "r": "Das habe ich doch gerade vorgeschlagen! Findest du das gut oder nicht?",
+          "why": {
+           "uz": "Sherikning o‘z taklifini qaytib unga taklif qilyapsiz. Unga munosabat bildiring: rozi bo‘ling yoki boshqa variant bering.",
+           "ru": "Вы предлагаете партнёру его же идею. Отреагируйте: согласитесь или предложите другое."
+          }
+         },
+         {
+          "s": "Gute Idee! Und wir könnten noch ein Plakat in der Schule aufhängen, dann wissen es auch die anderen Klassen.",
+          "ok": 1,
+          "g": 1
+         },
+         {
+          "s": "Ich würde Ihnen vorschlagen, ein Plakat zu machen.",
+          "r": "„Ihnen“? Seit wann sagst du „Sie“ zu mir? Und was meinst du zu der Nachricht in der Gruppe?",
+          "why": {
+           "uz": "Noto‘g‘ri registr: sinfdoshga <b>du</b> deyiladi, <b>Sie</b> emas. Bundan tashqari sherik taklifiga javob yo‘q.",
+           "ru": "Неверный регистр: однокласснику говорят <b>du</b>, а не <b>Sie</b>. Кроме того, нет реакции на предложение партнёра."
+          }
+         }
+        ]
+       },
+       {
+        "p": "Ein Plakat, super! Also: Sportfest im Mai, du planst die Spiele, ich organisiere die Getränke, und wir machen eine Nachricht und ein Plakat. Habe ich etwas vergessen?",
+        "o": [
+         {
+          "s": "Ich habe eine andere Idee: Wir spielen lieber ein Theaterstück.",
+          "r": "Jetzt noch ein Theaterstück? Wir haben doch schon alles geplant! Bist du mit dem Plan einverstanden oder nicht?",
+          "why": {
+           "uz": "Hammasi kelishilgan — oxirida yangi mavzu ochilmaydi. Endi <b>kelishuv</b> kerak.",
+           "ru": "Всё уже согласовано — в конце новую тему не открывают. Теперь нужна <b>договорённость</b>."
+          }
+         },
+         {
+          "s": "Das finde ich nicht so gut.",
+          "r": "Was findest du nicht gut? Sag doch bitte, was du ändern möchtest.",
+          "why": {
+           "uz": "Sababsiz rad etish — telc’da «weil …» va boshqa taklif kerak. Bu yerda esa reja tayyor: kelishib oling.",
+           "ru": "Отказ без причины — на telc нужны «weil …» и другое предложение. А здесь план готов: договоритесь."
+          }
+         },
+         {
+          "s": "Nein, ich glaube, das ist alles. Gut, dann machen wir es so!",
+          "ok": 1,
+          "g": 3
+         }
+        ]
+       }
+      ],
+      "end": "Prima, dann sind wir fertig. Ich freue mich schon auf das Sportfest!",
+      "gw": {
+       "uz": "telc 3-qism: mavzu → sana → kim nima qiladi → qanday e’lon qilinadi. Har qadamda sherikka javob bering: <b>taklif</b>, <b>rozilik</b>, <b>qarshi taklif</b> (sabab bilan) va oxirida <b>kelishuv</b>: <b>Gut, dann machen wir es so.</b>",
+       "ru": "telc, часть 3: тема → дата → кто что делает → как объявить. На каждом шаге реагируйте на партнёра: <b>предложение</b>, <b>согласие</b>, <b>встречное предложение</b> (с причиной) и в конце <b>договорённость</b>: <b>Gut, dann machen wir es so.</b>"
+      }
+     },
+     {
+      "t": "chat",
+      "h": "Sprechen Sie mit Ihrer Lehrerin: Unterricht im Freien.",
+      "bsp": "Frau Becker: „Was schlagen Sie vor?“ → Wir schlagen vor, dass wir einmal im Monat draußen lernen.",
+      "who": "Frau Becker",
+      "goal": [
+       "Vorschlag",
+       "Zustimmung",
+       "Gegenvorschlag",
+       "Einigung"
+      ],
+      "st": [
+       {
+        "p": "Sie wollten mit mir über den Unterricht sprechen. Was haben Sie und die Klasse für Ideen?",
+        "o": [
+         {
+          "s": "Wie wäre es, wenn du einmal im Monat mit uns draußen unterrichtest?",
+          "r": "„Du“? Na ja … Bleiben wir lieber beim „Sie“. Also, was schlagen Sie vor?",
+          "why": {
+           "uz": "Noto‘g‘ri registr: o‘qituvchiga <b>Sie</b> deyiladi. Taklifning o‘zi yaxshi, lekin murojaat noto‘g‘ri.",
+           "ru": "Неверный регистр: к преподавателю обращаются на <b>Sie</b>. Само предложение хорошее, но обращение неверное."
+          }
+         },
+         {
+          "s": "Wir schlagen vor, dass wir einmal im Monat draußen lernen.",
+          "ok": 1,
+          "g": 0
+         },
+         {
+          "s": "Gut, dann machen wir es so.",
+          "r": "Wie, so? Sie haben mir doch noch gar keine Idee gesagt.",
+          "why": {
+           "uz": "Kelishuv iborasi juda erta: o‘qituvchi g‘oya so‘radi — avval taklif bering.",
+           "ru": "Фраза договорённости слишком рано: преподаватель просит идею — сначала предложите."
+          }
+         }
+        ]
+       },
+       {
+        "p": "Draußen lernen? Das finde ich nicht so gut, weil es im Park oft zu laut ist.",
+        "o": [
+         {
+          "s": "Ja, gut.",
+          "r": "Heißt das, Sie haben keine andere Idee? Wo könnten wir denn sonst draußen lernen?",
+          "why": {
+           "uz": "Faqat «Ja, gut.» — g‘oyangizdan voz kechyapsiz. Muammo bor — <b>qarshi taklif</b> bering.",
+           "ru": "Только «Ja, gut.» — вы отказываетесь от своей идеи. Есть проблема — дайте <b>встречное предложение</b>."
+          }
+         },
+         {
+          "s": "Wäre es nicht besser, wenn wir in den Schulgarten gehen? Dort ist es ruhig.",
+          "ok": 1,
+          "g": 2
+         },
+         {
+          "s": "Ich weiß nicht so recht.",
+          "r": "Was wissen Sie nicht so recht? Haben Sie vielleicht eine andere Idee?",
+          "why": {
+           "uz": "Bu — ikkilanish/rad etish, lekin yechim yo‘q. Sababga javoban boshqa joy taklif qiling.",
+           "ru": "Это сомнение/отказ, но без решения. В ответ на причину предложите другое место."
+          }
+         }
+        ]
+       },
+       {
+        "p": "Der Schulgarten … ja, das ist eine gute Idee. Aber nur bei gutem Wetter, oder?",
+        "o": [
+         {
+          "s": "Da hast du recht. Wenn es regnet, bleiben wir im Klassenzimmer.",
+          "r": "Bitte „Sie“, ja? Aber gut: Also nur bei gutem Wetter?",
+          "why": {
+           "uz": "Mazmuni to‘g‘ri, lekin registr noto‘g‘ri: o‘qituvchiga <b>Da haben Sie recht.</b>",
+           "ru": "По содержанию верно, но регистр неверный: преподавателю — <b>Da haben Sie recht.</b>"
+          }
+         },
+         {
+          "s": "Ich habe eine andere Idee: Wir lernen im Café.",
+          "r": "Im Café? Ich dachte, der Schulgarten ist gut. Also, nur bei gutem Wetter — ja?",
+          "why": {
+           "uz": "O‘qituvchi sizning g‘oyangizga rozi bo‘ldi — yangi qarshi taklif kerak emas. Shartiga rozilik bildiring.",
+           "ru": "Преподаватель согласилась с вашей идеей — новое встречное предложение не нужно. Согласитесь с условием."
+          }
+         },
+         {
+          "s": "Da haben Sie recht. Wenn es regnet, bleiben wir natürlich im Klassenzimmer.",
+          "ok": 1,
+          "g": 1
+         }
+        ]
+       },
+       {
+        "p": "Gut. Dann probieren wir es nächsten Monat einmal aus. Einverstanden?",
+        "o": [
+         {
+          "s": "Einverstanden. Dann ist das abgemacht — vielen Dank, Frau Becker!",
+          "ok": 1,
+          "g": 3
+         },
+         {
+          "s": "Wie wäre es, wenn wir draußen lernen?",
+          "r": "Aber darüber sprechen wir doch die ganze Zeit! Sind Sie nun einverstanden?",
+          "why": {
+           "uz": "Bu taklif allaqachon qabul qilindi. Endi savolga javob bering va kelishing: <b>Einverstanden.</b>",
+           "ru": "Это предложение уже принято. Теперь ответьте на вопрос и договоритесь: <b>Einverstanden.</b>"
+          }
+         },
+         {
+          "s": "Das finde ich nicht so gut.",
+          "r": "Aber das war doch Ihre Idee! Was gefällt Ihnen denn jetzt nicht?",
+          "why": {
+           "uz": "O‘z g‘oyangizni rad etyapsiz — mantiqsiz. Reja tayyor: kelishib oling.",
+           "ru": "Вы отказываетесь от своей же идеи — нелогично. План готов: договоритесь."
+          }
+         }
+        ]
+       }
+      ],
+      "end": "Schön. Ich sage es morgen der ganzen Klasse.",
+      "gw": {
+       "uz": "O‘qituvchi bilan — <b>Sie</b>: <b>Da haben Sie recht.</b> Taklif → qarshi taklif (<b>Wäre es nicht besser, wenn …?</b>) → rozilik → kelishuv (<b>Einverstanden. Dann ist das abgemacht.</b>).",
+       "ru": "С преподавателем — <b>Sie</b>: <b>Da haben Sie recht.</b> Предложение → встречное предложение (<b>Wäre es nicht besser, wenn …?</b>) → согласие → договорённость (<b>Einverstanden. Dann ist das abgemacht.</b>)."
+      }
+     },
+     {
+      "t": "say",
+      "h": "Sagen Sie es auf Deutsch.",
+      "bsp": "Ihr Freund möchte Pizza bestellen. Sie möchten lieber kochen. → Ich würde lieber selbst kochen.",
+      "q": "Ihre Klasse plant einen Projekttag. Machen Sie einen Vorschlag für ein Thema.",
+      "a": "Wie wäre es, wenn wir einen Projekttag zum Thema „Umwelt“ machen?",
+      "gw": {
+       "uz": "Taklif: <b>Wie wäre es, wenn wir …?</b> yoki <b>Wir könnten …</b>",
+       "ru": "Предложение: <b>Wie wäre es, wenn wir …?</b> или <b>Wir könnten …</b>"
+      }
+     },
+     {
+      "t": "say",
+      "h": "Sagen Sie es auf Deutsch.",
+      "q": "Ihre Freundin möchte das Klassenfest am Montag machen. Sie finden das nicht gut. Sagen Sie, warum.",
+      "a": "Das finde ich nicht so gut, weil viele am Montag keine Zeit haben.",
+      "gw": {
+       "uz": "Sabab bilan rad etish: <b>Das finde ich nicht so gut, weil …</b> (fe’l oxirda).",
+       "ru": "Отказ с причиной: <b>Das finde ich nicht so gut, weil …</b> (глагол в конце)."
+      }
+     },
+     {
+      "t": "say",
+      "h": "Sagen Sie es auf Deutsch.",
+      "q": "Sie haben mit Ihrem Partner alles geplant: Das Fest ist am Freitag. Beenden Sie die Planung.",
+      "a": "Gut, dann machen wir es so: Das Fest ist am Freitag.",
+      "gw": {
+       "uz": "Kelishuv: <b>Gut, dann machen wir es so.</b> / <b>Also abgemacht: …</b>",
+       "ru": "Договорённость: <b>Gut, dann machen wir es so.</b> / <b>Also abgemacht: …</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}
