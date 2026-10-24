@@ -15,7 +15,7 @@
    "o": [
     "Nein, nie. Und du?",
     "Ja, total gern. Und du?",
-    "Ja, sehr oft! Jeden Tag.",
+    "Und dann? Erzähl mal!",
     "Oh! Herzlichen Glückwunsch!"
    ],
    "a": 0
@@ -71,7 +71,7 @@
    "a": 1
   },
   {
-   "q": "Sie gehen immer am Mittwoch schwimmen. Aziz fragt: „Wann gehst du schwimmen?“",
+   "q": "Sie gehen immer am Mittwoch schwimmen. Aziz fragt: „Wie oft gehst du schwimmen?“",
    "o": [
     "Ich bin letzten Mittwoch geschwommen.",
     "Ich gehe nächsten Mittwoch schwimmen.",
@@ -126,7 +126,7 @@
    "q": "Frau Weber fragt im Kurs: „Ist Pünktlichkeit für Sie wichtig?“ Sie finden Pünktlichkeit sehr wichtig.",
    "o": [
     "Nein, das ist mir egal.",
-    "Das ist mir nicht so wichtig.",
+    "Ja, das finde ich ganz schlimm.",
     "Ja, das kann ich besonders gut.",
     "Ja, das ist mir total wichtig."
    ],
@@ -148,7 +148,7 @@
     "Ja, das finde ich ganz schlimm.",
     "Ja, das ist mir total wichtig.",
     "Ach, das macht mir nichts aus.",
-    "Ja, das finde ich anstrengend."
+    "Dann viel Spaß im Bus!"
    ],
    "a": 2
   },
@@ -188,7 +188,7 @@
    "q": "Sie erzählen von einem Park: Es gibt einen See und ein Café. Und es gibt noch mehr!",
    "o": [
     "Das ist mir nicht so wichtig.",
-    "Ach, das macht mir nichts aus.",
+    "Kennt ihr den Park schon?",
     "Hast du einen Tipp für uns?",
     "Aber das ist noch nicht alles!"
    ],
@@ -209,7 +209,7 @@
    "o": [
     "Meine Freunde fehlen mir sehr.",
     "Meine Freunde gefallen mir sehr.",
-    "Meine Freunde kann ich nur empfehlen.",
+    "Kennt ihr meine Freunde schon?",
     "Meine Freunde sind mir egal."
    ],
    "a": 0
@@ -217,7 +217,7 @@
   {
    "q": "Timur fragt: „Wie findest du deine neue WG?“ Sie finden die WG sehr gemütlich.",
    "o": [
-    "Furchtbar! Unsere Küche ist so laut.",
+    "Furchtbar! Unsere Küche ist so klein.",
     "Kennt ihr meine WG schon?",
     "Toll! Unsere Küche ist wirklich gemütlich.",
     "Meine alte WG fehlt mir so."
@@ -237,7 +237,7 @@
   {
    "q": "Sie sind neu in Hamburg und möchten am Sonntag etwas machen. Sie fragen Ihre Nachbarin, Frau Weber.",
    "o": [
-    "Den Hafen kann ich nur empfehlen.",
+    "Wie gefällt Ihnen Hamburg?",
     "Danke, das ist eine super Idee!",
     "Fahren Sie doch mal ans Meer!",
     "Haben Sie einen Ausflugstipp für mich?"
@@ -272,7 +272,7 @@
     "Wir brauchen sie am besten bis Freitag. Schaffst du das?",
     "Bis Freitag? Das schaffe ich leider nicht.",
     "Ja, natürlich. Das schaffen wir schon.",
-    "Kein Problem, ich erledige das bis Freitag."
+    "Herzlichen Dank für die Präsentation!"
    ],
    "a": 0
   },
@@ -280,7 +280,7 @@
    "q": "Sevara vom Sportklub: „Kannst du morgen das Training für die Kinder machen?“ Sie haben morgen eine Prüfung.",
    "o": [
     "Kein Problem, das mache ich gern.",
-    "Ja, das geht auf jeden Fall.",
+    "Hallo Sevara, hast du kurz Zeit?",
     "Das geht leider nicht. Ich habe eine Prüfung.",
     "Kannst du das bitte übernehmen?"
    ],
@@ -302,7 +302,7 @@
     "Ja, klar. Was gibt’s?",
     "Hallo Lena, hast du kurz Zeit?",
     "Ich erledige das sofort.",
-    "Das geht auf jeden Fall."
+    "Kannst du das bitte übernehmen?"
    ],
    "a": 1
   },
@@ -344,17 +344,17 @@
     "Sehr nett, aber am Sonntag kann ich leider nicht.",
     "Okay, einverstanden. Ich komme mit.",
     "Na los, das ist sicher aufregend!",
-    "Das Theater hat sich nicht gelohnt."
+    "Das Stück war eher langweilig."
    ],
    "a": 0
   },
   {
-   "q": "Lena: „Wollen wir zum Eishockeyspiel gehen?“ Sie sind nicht sicher. Eishockey finden Sie nicht so interessant.",
+   "q": "Lena: „Wollen wir zum Eishockeyspiel gehen?“ Sie sind nicht sicher.",
    "o": [
     "Ja, gern! Das ist eine gute Idee.",
     "Ach, komm schon! Das macht bestimmt Spaß!",
     "Das Spiel war von Anfang bis Ende spannend.",
-    "Hm, ich weiß nicht. Eishockey ist nicht so interessant."
+    "Hm, ich weiß nicht. Eishockey ist eher langweilig."
    ],
    "a": 3
   },
@@ -374,7 +374,7 @@
     "Ja, gern! Das ist eine gute Idee.",
     "Tut mir leid, da kann ich nicht.",
     "Also, ich weiß nicht.",
-    "Na los, das ist sicher aufregend!"
+    "Das Fest war einfach nur super!"
    ],
    "a": 0
   },
@@ -382,7 +382,7 @@
    "q": "Malika fragt: „Wie war das Konzert gestern?“ Sie waren begeistert.",
    "o": [
     "Der Besuch hat sich nicht gelohnt.",
-    "Die Musik war eher langweilig.",
+    "Ja, gern! Ich komme mit.",
     "Der Abend war einfach nur super!",
     "Hm, meinst du? Vielleicht."
    ],
@@ -415,7 +415,7 @@
    "o": [
     "Oh nein, muss das sein?",
     "Au ja! Das ist fantastisch!",
-    "Ich bin heute nicht fit.",
+    "Du solltest mehr trainieren.",
     "Hast du einen Tipp für mich?"
    ],
    "a": 1
@@ -435,7 +435,7 @@
    "o": [
     "Hast du vielleicht einen Tipp für mich?",
     "Du solltest mehr Sport machen.",
-    "Geh doch ins Fitnessstudio!",
+    "Oh nein, muss das sein?",
     "Gute Idee, das mache ich!"
    ],
    "a": 0
@@ -538,7 +538,7 @@
     "Ich fürchte, dass es morgen regnet.",
     "Super, dass es morgen regnet!",
     "Ich hoffe, dass es morgen regnet.",
-    "Schön, dass es morgen regnet."
+    "Wir könnten morgen ein Picknick machen."
    ],
    "a": 0
   },
@@ -548,7 +548,7 @@
     "Super, dass der Kiosk jetzt zu ist!",
     "Ich hoffe, dass der Kiosk zu ist.",
     "Schade, dass der Kiosk jetzt zu ist.",
-    "Schön, dass der Kiosk jetzt zu ist."
+    "Ich gehe jeden Tag zum Kiosk."
    ],
    "a": 2
   },
@@ -580,7 +580,7 @@
     "Bei uns gibt es das nicht.",
     "Bei uns gibt es das auch.",
     "Es wundert mich, dass ihr eine Mensa habt.",
-    "Bei uns ist das ganz anders."
+    "Das ist mir nicht so wichtig."
    ],
    "a": 1
   },
@@ -589,18 +589,18 @@
    "o": [
     "Bei uns gibt es das auch.",
     "Ich finde es peinlich, dass ihr Yoga macht.",
-    "Bei uns ist es auch so wie bei euch.",
+    "Bei uns ist das ganz anders.",
     "Echt? Es überrascht mich, dass ihr Yoga macht."
    ],
    "a": 3
   },
   {
-   "q": "Im Deutschkurs gibt es keine Pause. Sie finden eine Pause sehr wichtig.",
+   "q": "Malika: „Eine Pause im Kurs? Die brauchen wir nicht.“ Sie finden eine Pause sehr wichtig.",
    "o": [
     "Ich finde es wichtig, dass wir eine Pause machen.",
     "Es wundert mich, dass wir eine Pause machen.",
-    "Bei uns gibt es auch keine Pause.",
-    "Ich finde es seltsam, dass wir Pause machen."
+    "Bei uns ist das auch so.",
+    "Ich finde es peinlich, dass wir eine Pause machen."
    ],
    "a": 0
   },
@@ -617,7 +617,7 @@
   {
    "q": "Im Sportklub gibt es jetzt nach dem Training Tee für alle. Sie finden das super.",
    "o": [
-    "Ich finde es seltsam, dass es Tee gibt.",
+    "Es wundert mich, dass es Tee gibt.",
     "Ich finde es peinlich, dass es Tee gibt.",
     "Bei uns gibt es das nicht.",
     "Ich finde es toll, dass es jetzt Tee gibt."
@@ -629,18 +629,18 @@
    "o": [
     "Bei uns ist das auch so.",
     "Bei uns ist das ganz anders.",
-    "Bei uns gibt es das auch.",
-    "Es überrascht mich, dass ihr allein kocht."
+    "Klar, das mache ich gern.",
+    "Ich finde es peinlich, dass ihr zusammen kocht."
    ],
    "a": 1
   },
   {
-   "q": "Malika: „In unserem Kurs gibt es viele Hausaufgaben.“ In Ihrem Kurs gibt es auch viele.",
+   "q": "Malika: „In unserem Kurs gibt es viele Hausaufgaben. Und bei euch?“ Bei Ihnen auch.",
    "o": [
     "Bei uns ist es ganz anders als bei euch.",
     "Es wundert mich, dass ihr Hausaufgaben habt.",
     "Bei uns ist es auch so wie bei euch.",
-    "Bei uns gibt es keine Hausaufgaben."
+    "Super, dass ihr so viele Hausaufgaben habt!"
    ],
    "a": 2
   },
@@ -680,7 +680,7 @@
    "q": "Malika: „Ich esse Plov immer mit Ketchup.“ Sie finden das sehr komisch.",
    "o": [
     "Das geht mir auch so.",
-    "Bei mir ist das ähnlich.",
+    "Ich finde es toll, dass du Ketchup isst.",
     "Ich esse immer zuerst Salat.",
     "Echt? Wie ungewöhnlich!"
    ],
@@ -691,7 +691,7 @@
    "o": [
     "Das kenne ich. Das mache ich auch oft.",
     "Echt? Witzig! Das mache ich nie.",
-    "Bei mir ist das ähnlich.",
+    "Immer wenn ich koche, höre ich Musik.",
     "Ich finde es peinlich, dass du singst."
    ],
    "a": 1
@@ -701,7 +701,7 @@
    "o": [
     "Das geht mir auch so.",
     "Wie ungewöhnlich! Warum?",
-    "Echt? Witzig!",
+    "Ich stehe immer um sieben Uhr auf.",
     "Du solltest mehr schlafen."
    ],
    "a": 0
@@ -719,7 +719,7 @@
   {
    "q": "Wenn Sie Deutsch lernen, trinken Sie immer Tee. Erzählen Sie das Nodir.",
    "o": [
-    "Wirklich? Du auch?",
+    "Echt? Witzig!",
     "Immer wenn ich Deutsch lerne, trinke ich Tee.",
     "Bei mir ist das ähnlich.",
     "Trinkst du beim Lernen auch Tee?"
@@ -739,20 +739,20 @@
  ],
  "10": [
   {
-   "q": "Nodir: „Komm, wir fahren mit dem Fahrrad nach Samarkand!“ Das sind 300 Kilometer! Sie wollen nicht.",
+   "q": "Nodir: „Komm, wir fahren mit dem Fahrrad nach Fergana!“ Das sind 300 Kilometer! Sie wollen nicht.",
    "o": [
     "Na gut, wir probieren es.",
     "Auf keinen Fall! Ohne mich!",
     "Komm schon, das macht echt Spaß!",
-    "Okay, einverstanden."
+    "Die Tour war einfach super!"
    ],
    "a": 1
   },
   {
    "q": "Laylo: „Mit dem E-Scooter ist man so schnell!“ Sie finden E-Scooter gefährlich.",
    "o": [
-    "Ja, das gefällt dir sicher!",
-    "Ich bin sicher, das funktioniert.",
+    "Komm schon, das macht echt Spaß!",
+    "Ja, E-Scooter finde ich auch toll!",
     "Also gut, von mir aus.",
     "Für dich vielleicht. Für mich ist das nichts!"
    ],
@@ -763,7 +763,7 @@
    "o": [
     "Komm schon! Die U-Bahn ist doch schnell!",
     "Muss das sein? Die U-Bahn ist voll.",
-    "Für mich ist das nichts!",
+    "Hm, meinst du? Vielleicht.",
     "Na gut, wir probieren es."
    ],
    "a": 0
@@ -771,7 +771,7 @@
   {
    "q": "Ihre Mutter: „Ein Taxi mit der App bestellen? Das ist zu kompliziert!“ Sie möchten sie überreden.",
    "o": [
-    "Auf keinen Fall! Ohne mich!",
+    "Dann viel Spaß mit der App!",
     "Also gut, von mir aus.",
     "Ich bin sicher, das funktioniert!",
     "Für mich ist das auch nichts."
@@ -782,7 +782,7 @@
    "q": "Malika: „Komm schon! Mit dem Bus sind wir in zehn Minuten da.“ Sie sagen jetzt Ja.",
    "o": [
     "Bus? Muss das sein?",
-    "Für mich ist das nichts!",
+    "Wollen wir mit dem Bus fahren?",
     "Ich verspreche dir, das macht Spaß!",
     "Also gut, von mir aus."
    ],
@@ -794,7 +794,7 @@
     "Auf keinen Fall! Ohne mich!",
     "Na gut, wir probieren es.",
     "Komm schon! Das gefällt dir sicher!",
-    "Hm, ich weiß nicht. Muss das sein?"
+    "Au ja! Das ist fantastisch!"
    ],
    "a": 1
   },
@@ -802,7 +802,7 @@
    "q": "Sevara: „Wir gehen heute zu Fuß nach Hause. Das sind nur fünf Kilometer!“ Sie haben keine Lust.",
    "o": [
     "Also gut, von mir aus.",
-    "Ich bin sicher, das funktioniert.",
+    "Au ja! Es kann losgehen!",
     "Zu Fuß? Muss das sein?",
     "Warum denn nicht? Das macht Spaß!"
    ],
@@ -813,7 +813,7 @@
    "o": [
     "Warum denn nicht? Das gefällt dir sicher!",
     "Für mich ist das auch nichts.",
-    "Auf keinen Fall! Ohne mich!",
+    "Echt? Wie ungewöhnlich!",
     "Also gut, von mir aus."
    ],
    "a": 0
@@ -836,7 +836,7 @@
     "Ich hätte jetzt so gern eine kalte Limonade!",
     "Hast du schon mal Limonade gemacht?",
     "Nur wenige trinken gern Limonade.",
-    "Die meisten trinken im Sommer Limonade."
+    "Ich wäre jetzt lieber am Meer."
    ],
    "a": 0
   },
@@ -955,7 +955,7 @@
   {
    "q": "Jonas: „Ich habe keinen Platz im Sprachkurs bekommen.“ Er ist traurig.",
    "o": [
-    "Ich bin total enttäuscht!",
+    "Weißt du, wann der Kurs beginnt?",
     "Ich kann verstehen, dass du traurig bist.",
     "Ehrlich gesagt: Das habe ich mir anders vorgestellt.",
     "Super, dann viel Spaß im Kurs!"
@@ -963,12 +963,12 @@
    "a": 1
   },
   {
-   "q": "Sevara hat morgen ein Gespräch für ein FSJ. Sie ist sehr nervös.",
+   "q": "Sevara hat morgen ein Gespräch für ein FSJ. Sie ist sehr nervös. Was sagen Sie?",
    "o": [
     "Das finde ich echt schade.",
     "Herzlichen Dank für das Gespräch!",
     "Viel Glück und Kopf hoch!",
-    "Ich bin total genervt!"
+    "Gute Besserung, Sevara!"
    ],
    "a": 2
   },
@@ -976,7 +976,7 @@
    "q": "Paul: „Ich bin neu im Fußballverein und verliere jedes Spiel!“ Sie meinen: Am Anfang ist das normal.",
    "o": [
     "Das gehört am Anfang eben dazu.",
-    "Ich bin total enttäuscht!",
+    "Herzlichen Glückwunsch, Paul!",
     "Das habe ich mir anders vorgestellt!",
     "Weißt du, wann das nächste Spiel ist?"
    ],

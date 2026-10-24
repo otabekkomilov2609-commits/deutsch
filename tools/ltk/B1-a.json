@@ -26,7 +26,7 @@
     "Und wie war das früher bei dir?",
     "Bei mir war das in der Jugend genauso.",
     "Als ich jung war, hatte ich viele Freunde.",
-    "Was hast du gestern Abend gemacht?"
+    "Und wie ist das heute bei dir?"
    ],
    "a": 0
   },
@@ -292,7 +292,7 @@
     "Zuerst möchte ich euch mein Thema vorstellen.",
     "Vielen Dank für eure Aufmerksamkeit!",
     "Gibt es noch Fragen zu meiner Präsentation?",
-    "Dazu möchte ich euch ein Beispiel aus meinem Leben erzählen."
+    "Dazu möchte ich euch ein Beispiel aus meinem Leben geben."
    ],
    "a": 3
   },
@@ -317,12 +317,12 @@
    "a": 1
   },
   {
-   "q": "Ein Zuhörer stellt eine Frage, aber Sie haben sie nicht verstanden.",
+   "q": "Jemand aus dem Kurs stellt Ihnen eine Frage. Sie haben die Frage nicht verstanden.",
    "o": [
     "Gibt es noch weitere Fragen?",
     "Damit bin ich am Ende meiner Präsentation. Vielen Dank!",
     "Kannst du die Frage bitte wiederholen?",
-    "Danke, das war eine wirklich gute Antwort!"
+    "Danke, das ist eine sehr gute Frage!"
    ],
    "a": 2
   }
@@ -334,7 +334,7 @@
     "Das wäre nichts für mich, ich brauche meine Ruhe.",
     "Ich bezweifle, dass du eine WG findest.",
     "Als ich klein war, hatte ich ein eigenes Zimmer.",
-    "Das wäre super für mich, ich mag es lebendig."
+    "Das wäre toll für mich, ich bin nicht gern allein."
    ],
    "a": 3
   },
@@ -371,10 +371,10 @@
   {
    "q": "Lena: „Im neuen Wohnheim gibt es nur eine Küche für 30 Leute.“ Sie nennen einen Nachteil.",
    "o": [
-    "Der Vorteil wäre, dass man viele Leute kennenlernt.",
+    "Ein Vorteil wäre, dass man viele Leute kennenlernt.",
     "Das wäre genau das Richtige für mich!",
     "Ich bin sicher, dass das gut klappt.",
-    "Der Nachteil wäre, dass man immer warten muss."
+    "Ein Nachteil wäre, dass man oft warten muss."
    ],
    "a": 3
   },
@@ -424,9 +424,9 @@
    "q": "Malika singt morgen zum ersten Mal auf der Uni-Feier und ist sehr nervös.",
    "o": [
     "Ich bezweifle, dass das gut geht.",
-    "Keine Sorge, du singst so schön, das wird schon gut gehen!",
+    "Keine Sorge, das wird schon gut gehen!",
     "Das schaffen Sie bestimmt!",
-    "Wie wäre es, wenn wir zusammen essen gehen?"
+    "Das klingt gut, aber ist das nicht zu schwer?"
    ],
    "a": 1
   },
@@ -513,12 +513,12 @@
    "a": 0
   },
   {
-   "q": "Paul ist gerade aus Usbekistan zurück. Sie möchten mehr über seine Reise wissen.",
+   "q": "Paul ist gerade aus Georgien zurück. Sie möchten mehr über seine Reise wissen.",
    "o": [
     "Ich habe auf meiner Reise sehr viel erlebt.",
     "Erzähl mal, was hast du auf deiner Reise alles erlebt?",
     "Mir ist auf der Reise etwas sehr Lustiges im Zug passiert.",
-    "Gute Reise und viel Spaß in Usbekistan!"
+    "Gute Reise und viel Spaß in Georgien!"
    ],
    "a": 1
   },
@@ -566,7 +566,7 @@
    "q": "Timur fragt nach Ihrem Wochenende in den Bergen. Es hat nur geregnet und Sie waren krank.",
    "o": [
     "Das war ein tolles Erlebnis, ich kann es nur empfehlen.",
-    "Leider war das nicht so schön.",
+    "Leider war es nicht so schön, ich war die ganze Zeit krank.",
     "Am besten hat mir das Wetter gefallen.",
     "Ich bin sicher, dass das Wetter besser wird."
    ],
@@ -598,7 +598,7 @@
    "q": "Lena: „Busse und Bahnen sollten für alle kostenlos sein.“ Sie sind dagegen.",
    "o": [
     "Das sehe ich genauso, das wäre toll.",
-    "Ich bin mir nicht sicher, ob das wirklich so gut wäre.",
+    "Da muss ich Ihnen leider widersprechen.",
     "Das sehe ich anders, denn wer bezahlt das?",
     "Wie meinst du das genau?"
    ],
@@ -692,7 +692,7 @@
     "Könnten Sie mir bitte eine Studienbescheinigung schicken?",
     "Schick mir bitte eine Studienbescheinigung!",
     "Ich habe Ihre E-Mail mit der Bescheinigung bekommen.",
-    "Ich habe die Studienbescheinigung schon letzte Woche bekommen."
+    "Ich brauche sofort eine Studienbescheinigung!"
    ],
    "a": 0
   },
@@ -730,9 +730,9 @@
    "q": "Herr Braun vom Wohnheim hat Ihnen schnell geantwortet. Sie schreiben zurück. Wie beginnt Ihr Text?",
    "o": [
     "Ich freue mich auf Ihre Antwort.",
-    "Vielen Dank für Ihre Antwort.",
+    "Vielen Dank für Ihre schnelle Antwort.",
     "Danke für deine schnelle Antwort!",
-    "Ich schreibe Ihnen, weil ich keine Antwort habe."
+    "Ich schreibe Ihnen, weil ich noch keine Antwort bekommen habe."
    ],
    "a": 1
   }
@@ -881,12 +881,12 @@
    "a": 1
   },
   {
-   "q": "Auf dem Flohmarkt fragt jemand: „Ist das Fahrrad gut?“ Sie wollen es verkaufen.",
+   "q": "Sie verkaufen auf dem Flohmarkt Ihr fast neues Fahrrad. Jemand fragt: „Ist das Fahrrad gut?“",
    "o": [
     "Ehrlich gesagt ist es ziemlich kaputt.",
     "Ich würde dieses Fahrrad ehrlich gesagt nicht kaufen, es ist alt.",
     "Fahrradfahren ist nicht so mein Ding.",
-    "Es ist fast neu und fährt super, ein echtes Schnäppchen!"
+    "Es fährt super und ist ein echtes Schnäppchen!"
    ],
    "a": 3
   },
