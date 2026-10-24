@@ -23,7 +23,7 @@
   {
    "q": "Sie möchten wissen, wie Lena ihre Jugend erlebt hat. Was fragen Sie?",
    "o": [
-    "Wie war das bei dir, als du jung warst?",
+    "Und wie war das früher bei dir?",
     "Bei mir war das in der Jugend genauso.",
     "Als ich jung war, hatte ich viele Freunde.",
     "Was hast du gestern Abend gemacht?"
@@ -34,7 +34,7 @@
    "q": "Timur: „Früher bin ich jeden Tag Fahrrad gefahren, heute fast nie.“ Bei Ihnen ist es genau umgekehrt.",
    "o": [
     "Bei mir ist es genauso: Heute fahre ich auch kaum.",
-    "Früher bin ich auch jeden Tag mit dem Fahrrad zur Schule gefahren.",
+    "Früher bin ich auch jeden Tag Fahrrad gefahren.",
     "Bei mir ist es umgekehrt: Heute fahre ich viel mehr.",
     "Wie war das bei dir früher mit dem Fahrrad?"
    ],
@@ -44,7 +44,7 @@
    "q": "Mia: „Weißt du noch, wie dein erster Schultag war?“ Sie erinnern sich sehr gut.",
    "o": [
     "Nein, daran kann ich mich leider nicht mehr erinnern.",
-    "Ja, daran kann ich mich noch ganz genau erinnern.",
+    "Ja, daran erinnere ich mich gut.",
     "Bei mir war das genauso wie bei dir.",
     "Wie war denn dein erster Schultag?"
    ],
@@ -55,7 +55,7 @@
    "o": [
     "Ja, das weiß ich noch ganz genau!",
     "Bei mir war die Klassenfahrt ganz anders.",
-    "Ehrlich gesagt weiß ich das nicht mehr so genau.",
+    "Hm, daran erinnere ich mich nicht mehr.",
     "Als ich klein war, bin ich mit meiner Familie oft gereist."
    ],
    "a": 2
@@ -74,7 +74,7 @@
    "q": "Ihr Vater: „Als ich jung war, gab es keine Handys.“ Sie finden: Heute ist alles ganz anders.",
    "o": [
     "Im Vergleich zu damals ist das Leben heute ganz anders.",
-    "Bei mir war das auch so, ich hatte als Kind auch kein Handy.",
+    "Bei mir war das auch so, ich hatte kein Handy.",
     "Wie war das bei dir, als du jung warst?",
     "Daran kann ich mich nicht mehr erinnern."
    ],
@@ -86,7 +86,7 @@
    "q": "Laylo will in zwei Wochen zehn Kilo abnehmen. Sie haben große Zweifel.",
    "o": [
     "Ich bin sicher, dass du das in zwei Wochen locker schaffst.",
-    "Ich bezweifle, dass man das in zwei Wochen schafft.",
+    "Ich bezweifle, dass das klappt.",
     "Ich bin davon überzeugt, dass das klappt.",
     "Das kenne ich, bei mir war das genauso."
    ],
@@ -96,7 +96,7 @@
    "q": "Ihr Freund Paul hat sich für ein Stipendium beworben und ist nervös. Sie glauben fest an ihn.",
    "o": [
     "Ich bin ganz sicher, dass du das Stipendium bekommst.",
-    "Ich glaube leider nicht, dass du das Stipendium bekommst.",
+    "Ich glaube nicht, dass du das Stipendium bekommst.",
     "Ich bin mir nicht sicher, ob das klappt.",
     "Bei mir war das damals ganz anders."
    ],
@@ -117,7 +117,7 @@
    "o": [
     "Ich bezweifle, dass wir so schnell ein günstiges Zimmer finden.",
     "Ich kann mir nicht vorstellen, dass das klappt.",
-    "Klar, ich bin davon überzeugt, dass wir etwas finden.",
+    "Klar, das klappt bestimmt!",
     "Bei mir war das früher ganz anders."
    ],
    "a": 2
@@ -128,14 +128,14 @@
     "Ich bin sicher, dass sie heute pünktlich um acht Uhr hier ist.",
     "Da bin ich ganz optimistisch.",
     "Daran kann ich mich noch genau erinnern.",
-    "Das kann ich mir kaum vorstellen, sie ist nie pünktlich."
+    "Das kann ich mir kaum vorstellen."
    ],
    "a": 3
   },
   {
    "q": "Sevara hatte Streit mit ihrer besten Freundin und ist traurig. Sie machen ihr Hoffnung.",
    "o": [
-    "Ich glaube nicht, dass ihr jemals wieder Freunde werdet.",
+    "Ich glaube nicht, dass ihr wieder Freunde werdet.",
     "Ich bin mir nicht sicher, ob sie dir verzeiht.",
     "Ich bin sicher, dass ihr euch bald wieder versteht.",
     "Bei mir war das als Kind ganz anders."
@@ -145,7 +145,7 @@
   {
    "q": "Ihr Freund: „In drei Monaten spreche ich perfekt Deutsch.“ Sie sind skeptisch, aber höflich.",
    "o": [
-    "Ich bin mir nicht sicher, ob das so schnell geht.",
+    "Ich bin mir da nicht so sicher.",
     "Ich bin sicher, dass du das in drei Monaten schaffst.",
     "Ich bin davon überzeugt, dass das geht.",
     "Das kenne ich, bei mir war das genauso."
@@ -156,7 +156,7 @@
    "q": "Mia: „Glaubst du, dass Timur zu meiner Party kommt?“ Sie wissen: Er freut sich schon sehr darauf.",
    "o": [
     "Ich bezweifle, dass er am Samstag Zeit für die Party hat.",
-    "Da bin ich mir ganz sicher, er kommt bestimmt.",
+    "Da bin ich mir ganz sicher!",
     "Ich glaube nicht, dass er kommt.",
     "Das weiß ich nicht mehr so genau."
    ],
@@ -177,7 +177,7 @@
   {
    "q": "Timur: „Kommst du mit zum Tanzkurs?“ Tanzen ist überhaupt nichts für Sie.",
    "o": [
-    "Nein danke, Tanzen ist überhaupt nicht mein Ding.",
+    "Nein danke, Tanzen ist nicht mein Ding.",
     "Gern, Tanzen ist genau mein Ding!",
     "Ich bin sicher, dass du gut tanzen kannst.",
     "Als ich klein war, habe ich jeden Tag mit meiner Schwester getanzt."
@@ -187,7 +187,7 @@
   {
    "q": "Gruppenprojekt an der Uni: Mit Zahlen haben Sie Probleme, aber Sie schreiben gern. Welche Aufgabe nehmen Sie?",
    "o": [
-    "Ich mache gern die Tabellen und Grafiken, Zahlen liegen mir.",
+    "Ich mache gern die Tabellen, Zahlen liegen mir.",
     "Ich schreibe lieber den Text, Mathe liegt mir nicht so.",
     "Ich bezweifle, dass das Projekt klappt.",
     "Ich bin sicher, dass ihr das gut macht."
@@ -198,7 +198,7 @@
    "q": "Mia: „Bist du eher ein ruhiger oder ein lauter Typ?“ Sie sind ruhig.",
    "o": [
     "Ich bin eher laut und rede gern viel.",
-    "Ich glaube nicht, dass du ruhig bist.",
+    "Ich glaube nicht, dass du so ein ruhiger Typ bist.",
     "Früher war ich ruhig, heute bin ich ganz anders.",
     "Ich würde sagen, ich bin eher ein ruhiger Typ."
    ],
@@ -209,7 +209,7 @@
    "o": [
     "Danke, Zeichnen ist wirklich meine größte Stärke, das stimmt.",
     "Ich bin sicher, dass du das auch kannst.",
-    "Ach nein, im Zeichnen bin ich nicht besonders gut.",
+    "Ach nein, Zeichnen liegt mir nicht.",
     "Das weiß ich noch ganz genau."
    ],
    "a": 2
@@ -220,7 +220,7 @@
     "Darin bin ich wirklich besonders gut.",
     "Meine größte Stärke ist Geduld, das sagen alle.",
     "Wie war das bei dir, als du klein warst?",
-    "Was würdest du sagen, worin bist du gut?"
+    "Worin bist du besonders gut?"
    ],
    "a": 3
   },
@@ -228,7 +228,7 @@
    "q": "Sevara: „Hilfst du mir beim Referat? Du sprichst doch gern vor Leuten.“ Das stimmt.",
    "o": [
     "Gern! Vor vielen Leuten zu sprechen fällt mir leicht.",
-    "Vor vielen Leuten zu sprechen fällt mir leider sehr schwer.",
+    "Vor vielen Leuten zu sprechen fällt mir schwer.",
     "Ich bezweifle, dass ich das kann.",
     "Ich bin mir nicht sicher, ob ich gut zeichne."
    ],
@@ -260,7 +260,7 @@
    "q": "Nach dem Thema erklären Sie, wie Ihre Präsentation aufgebaut ist.",
    "o": [
     "Zuerst erzähle ich von früher, dann spreche ich über heute.",
-    "Damit bin ich am Ende meiner Präsentation über Veränderungen.",
+    "Damit bin ich am Ende meiner Präsentation.",
     "Ich komme jetzt zum Schluss.",
     "Habt ihr dazu noch Fragen?"
    ],
@@ -271,7 +271,7 @@
    "o": [
     "Zuerst möchte ich mich kurz bei euch vorstellen.",
     "Vielen Dank fürs Zuhören!",
-    "Damit komme ich jetzt zum zweiten Punkt.",
+    "Ich komme jetzt zum zweiten Punkt.",
     "Ich bin mir nicht sicher, ob das stimmt."
    ],
    "a": 2
@@ -280,7 +280,7 @@
    "q": "In Ihrer Präsentation zeigen Sie ein Foto von Ihrem alten Zimmer.",
    "o": [
     "Damit bin ich am Ende.",
-    "Auf diesem Foto seht ihr mein altes Zimmer.",
+    "Hier seht ihr mein altes Zimmer.",
     "Habt ihr noch Fragen zu meinem Zimmer?",
     "Fotografieren ist ehrlich gesagt nicht so mein Ding."
    ],
@@ -289,7 +289,7 @@
   {
    "q": "Mitten in der Präsentation möchten Sie eine Veränderung aus Ihrem eigenen Leben erzählen.",
    "o": [
-    "Zuerst möchte ich euch kurz das Thema meiner Präsentation vorstellen.",
+    "Zuerst möchte ich euch mein Thema vorstellen.",
     "Vielen Dank für eure Aufmerksamkeit!",
     "Gibt es noch Fragen zu meiner Präsentation?",
     "Dazu möchte ich euch ein Beispiel aus meinem Leben erzählen."
@@ -312,7 +312,7 @@
     "In meiner Präsentation geht es um Veränderungen.",
     "Danke fürs Zuhören! Habt ihr noch Fragen?",
     "Zuerst spreche ich über meine Familie.",
-    "Ich komme jetzt zum zweiten Teil."
+    "Als Nächstes spreche ich über meine Schule."
    ],
    "a": 1
   },
@@ -321,8 +321,8 @@
    "o": [
     "Gibt es noch weitere Fragen?",
     "Damit bin ich am Ende meiner Präsentation. Vielen Dank!",
-    "Entschuldigung, kannst du die Frage bitte wiederholen?",
-    "Danke, das war eine gute Antwort!"
+    "Kannst du die Frage bitte wiederholen?",
+    "Danke, das war eine wirklich gute Antwort!"
    ],
    "a": 2
   }
@@ -341,7 +341,7 @@
   {
    "q": "Sie besichtigen eine Wohnung im 9. Stock ohne Aufzug. Ihr Freund fragt: „Und?“ Sie finden das zu anstrengend.",
    "o": [
-    "Die Wohnung wäre perfekt für mich.",
+    "Die Wohnung wäre perfekt für mich und meinen Bruder.",
     "Ohne Aufzug wäre mir das zu anstrengend.",
     "Ich bin sicher, dass wir dort glücklich wären.",
     "Das weiß ich noch ganz genau."
@@ -351,7 +351,7 @@
   {
    "q": "Nodir: „Würdest du lieber in der Stadt oder auf dem Land wohnen?“ Sie mögen es ruhig.",
    "o": [
-    "Ich würde lieber in der Stadt wohnen, da ist viel mehr los.",
+    "Ich würde lieber in der Stadt wohnen, da ist mehr los.",
     "Auf dem Land wäre es mir viel zu ruhig.",
     "Ich würde lieber auf dem Land wohnen, da ist es ruhiger.",
     "Früher habe ich auf dem Land gewohnt."
@@ -361,7 +361,7 @@
   {
    "q": "Sie sprechen über ein Wohnheim direkt neben der Uni. Sie nennen einen Vorteil.",
    "o": [
-    "Ein großer Vorteil wäre, dass ich zu Fuß zur Uni gehe.",
+    "Ein großer Vorteil wäre, dass ich zu Fuß zur Uni gehen könnte.",
     "Ein Nachteil wäre, dass die Zimmer dort sehr klein und dunkel sind.",
     "Ich bezweifle, dass das Wohnheim neben der Uni ist.",
     "In meiner Präsentation geht es um das Wohnheim."
@@ -381,7 +381,7 @@
   {
    "q": "Ihr Bruder: „Ich ziehe in ein Haus, ganz weit weg von der Stadt.“ Für Sie selbst wäre das nichts.",
    "o": [
-    "Ich könnte mir gut vorstellen, dort mit dir zusammen zu wohnen.",
+    "Ich könnte mir gut vorstellen, dort auch zu wohnen.",
     "Ich bezweifle, dass das Haus so weit weg ist.",
     "Ich könnte mir nicht vorstellen, so weit weg zu wohnen.",
     "Wie war das bei dir, als du klein warst?"
@@ -391,7 +391,7 @@
   {
    "q": "Mia: „Was wäre dir bei einer Wohnung am wichtigsten?“ Für Sie: viel Licht.",
    "o": [
-    "Für mich wäre am wichtigsten, dass sie hell ist.",
+    "Am wichtigsten wäre mir viel Licht.",
     "Für mich wäre es egal, ob sie hell oder dunkel ist.",
     "Ein Nachteil wäre, dass sie sehr hell ist.",
     "Auf diesem Foto seht ihr meine Wohnung."
@@ -426,14 +426,14 @@
     "Ich bezweifle, dass das gut geht.",
     "Keine Sorge, du singst so schön, das wird schon gut gehen!",
     "Das schaffen Sie bestimmt!",
-    "Wie wäre es, wenn wir nach der Feier noch zusammen essen gehen?"
+    "Wie wäre es, wenn wir zusammen essen gehen?"
    ],
    "a": 1
   },
   {
    "q": "Ihr Nachbar Herr Braun (70) lernt Englisch und hat Angst vor seinem ersten Test.",
    "o": [
-    "Das schaffst du bestimmt, Herr Braun!",
+    "Das schaffst du bestimmt, Herr Braun, keine Angst!",
     "Ich bin mir nicht sicher, ob das klappt.",
     "Das schaffen Sie bestimmt, Herr Braun!",
     "Einverstanden, so machen wir das."
@@ -455,15 +455,15 @@
    "o": [
     "Wie wäre es, wenn wir ihm Konzertkarten schenken?",
     "Gut, dann schenken wir ihm Konzertkarten.",
-    "Ich bezweifle, dass ihm Konzertkarten gefallen.",
-    "Keine Sorge, das wird schon gut gehen mit dem Geschenk!"
+    "Ich bezweifle, dass Timur Konzertkarten wirklich gefallen.",
+    "Keine Sorge, mit dem Geschenk wird das schon gut gehen!"
    ],
    "a": 0
   },
   {
    "q": "Sevara: „Wir könnten ihm auch ein Buch schenken.“ Sie finden die Idee gut und entscheiden.",
    "o": [
-    "Was hältst du von einem Buch?",
+    "Was hältst du davon, wenn wir ihm ein Buch schenken?",
     "Man muss auch sehen, dass er nicht gern liest.",
     "Das schaffst du bestimmt!",
     "Einverstanden, dann kaufen wir das Buch."
@@ -495,7 +495,7 @@
   {
    "q": "Laylo: „Wie war deine Reise allein nach Istanbul?“ Es war super.",
    "o": [
-    "Das würde ich nie wieder machen, es war wirklich schrecklich.",
+    "Das würde ich nie wieder machen, es war schrecklich.",
     "Wie wäre es, wenn wir zusammen nach Istanbul fahren?",
     "Ich bezweifle, dass Istanbul so schön ist.",
     "Das war ein tolles Erlebnis, ich würde es wieder machen."
@@ -508,7 +508,7 @@
     "Mir ist mal passiert, dass mein Koffer nicht angekommen ist.",
     "Ich bin sicher, dass dein Koffer bald ankommt.",
     "Am besten hat mir der Flughafen gefallen.",
-    "Ich hatte auf meinen Reisen noch nie Probleme mit dem Koffer."
+    "Ich hatte noch nie Probleme mit meinem Koffer."
    ],
    "a": 0
   },
@@ -525,7 +525,7 @@
   {
    "q": "Sie waren letzte Woche in Samarkand. Mia fragt: „Was hat dir dort am besten gefallen?“",
    "o": [
-    "Am schlimmsten war das Wetter, es war im Sommer viel zu heiß.",
+    "Am schlimmsten war das Wetter, es war viel zu heiß.",
     "Ich war leider noch nie in Samarkand.",
     "Am besten hat mir der Registan gefallen, er ist wunderschön.",
     "Wie wäre es, wenn wir nach Samarkand fahren?"
@@ -538,7 +538,7 @@
     "Davon kann ich dir nur abraten, das war schrecklich.",
     "Ich bezweifle, dass du das allein schaffst.",
     "Wie war denn deine Reise mit dem Zug?",
-    "Ich kann dir das nur empfehlen, das war super."
+    "Das kann ich dir nur empfehlen!"
    ],
    "a": 3
   },
@@ -566,7 +566,7 @@
    "q": "Timur fragt nach Ihrem Wochenende in den Bergen. Es hat nur geregnet und Sie waren krank.",
    "o": [
     "Das war ein tolles Erlebnis, ich kann es nur empfehlen.",
-    "Ehrlich gesagt war das keine schöne Erfahrung.",
+    "Leider war das nicht so schön.",
     "Am besten hat mir das Wetter gefallen.",
     "Ich bin sicher, dass das Wetter besser wird."
    ],
@@ -579,7 +579,7 @@
    "o": [
     "Da stimme ich Ihnen völlig zu, Frau Weber.",
     "Da bin ich ganz anderer Meinung als Sie.",
-    "Ich weiß nicht so recht, ob ein Handyverbot sinnvoll ist.",
+    "Ich weiß nicht so recht, ob das sinnvoll ist.",
     "Ich bin der Meinung, dass ein Handyverbot sinnvoll ist."
    ],
    "a": 3
@@ -588,7 +588,7 @@
    "q": "Timur: „Ich finde, man sollte schon mit 16 wählen dürfen.“ Sie denken das auch.",
    "o": [
     "Da muss ich dir leider widersprechen.",
-    "Da hast du völlig recht, das finde ich auch.",
+    "Da hast du völlig recht.",
     "Da stimme ich Ihnen völlig zu.",
     "Ich habe da so meine Zweifel, ob das richtig ist."
    ],
@@ -599,7 +599,7 @@
    "o": [
     "Das sehe ich genauso, das wäre toll.",
     "Ich bin mir nicht sicher, ob das wirklich so gut wäre.",
-    "Das sehe ich anders, denn jemand muss das bezahlen.",
+    "Das sehe ich anders, denn wer bezahlt das?",
     "Wie meinst du das genau?"
    ],
    "a": 2
@@ -609,7 +609,7 @@
    "o": [
     "Da muss ich Ihnen widersprechen, viele sind sehr aktiv.",
     "Da muss ich dir widersprechen, viele sind sehr aktiv.",
-    "Da stimme ich Ihnen zu, die meisten interessieren sich nicht dafür.",
+    "Da stimme ich Ihnen zu, das ist leider so.",
     "Das sehe ich genauso wie Sie."
    ],
    "a": 0
@@ -627,9 +627,9 @@
   {
    "q": "Sevara: „Was meinst du: Sollen Studenten ehrenamtlich helfen?“ Sie sind dafür und begründen das.",
    "o": [
-    "Ja, ein wichtiges Argument dafür ist, dass man viel lernt.",
+    "Ja, denn man lernt dabei sehr viel.",
     "Ein wichtiges Argument dagegen ist, dass man keine Zeit hat.",
-    "Da stimme ich dir völlig zu.",
+    "Da stimme ich dir völlig zu, Sevara.",
     "Ich habe da meine Zweifel."
    ],
    "a": 0
@@ -682,7 +682,7 @@
     "Ich schreibe dir, weil ich ein Buch verlängern möchte.",
     "Ich freue mich auf Ihre Antwort.",
     "Ich schreibe Ihnen, weil ich ein Buch verlängern möchte.",
-    "Vielen Dank im Voraus, dass Sie mir mit dem Buch helfen."
+    "Vielen Dank im Voraus für Ihre Hilfe."
    ],
    "a": 2
   },
@@ -691,7 +691,7 @@
    "o": [
     "Könnten Sie mir bitte eine Studienbescheinigung schicken?",
     "Schick mir bitte eine Studienbescheinigung!",
-    "Vielen Dank für Ihre schnelle Antwort.",
+    "Ich habe Ihre E-Mail mit der Bescheinigung bekommen.",
     "Ich habe die Studienbescheinigung schon letzte Woche bekommen."
    ],
    "a": 0
@@ -711,7 +711,7 @@
    "o": [
     "Ich freue mich auf Ihre Antwort.",
     "Ich freue mich auf deine Antwort.",
-    "Vielen Dank für Ihre Antwort.",
+    "Ich habe Ihre Antwort schon bekommen, danke.",
     "Ich schreibe Ihnen, weil ich eine Frage habe."
    ],
    "a": 0
@@ -730,7 +730,7 @@
    "q": "Herr Braun vom Wohnheim hat Ihnen schnell geantwortet. Sie schreiben zurück. Wie beginnt Ihr Text?",
    "o": [
     "Ich freue mich auf Ihre Antwort.",
-    "Vielen Dank für Ihre schnelle Antwort.",
+    "Vielen Dank für Ihre Antwort.",
     "Danke für deine schnelle Antwort!",
     "Ich schreibe Ihnen, weil ich keine Antwort habe."
    ],
@@ -741,8 +741,8 @@
   {
    "q": "Sie stellen im Kurs eine Statistik vor. Thema: Freizeit von Studenten. Wie beginnen Sie?",
    "o": [
-    "Mich überrascht, dass so viele Studenten in ihrer Freizeit Sport machen.",
-    "Bei uns in Usbekistan ist das ganz anders.",
+    "Mich überrascht, dass so viele Studenten Sport machen.",
+    "Nur wenige Studenten haben viel Freizeit.",
     "Die Statistik zeigt, was Studenten in ihrer Freizeit machen.",
     "Zum Schluss fasse ich das Wichtigste zusammen."
    ],
@@ -751,7 +751,7 @@
   {
    "q": "In der Statistik steht: 50 % der Studenten wohnen bei ihren Eltern.",
    "o": [
-    "Die Hälfte der Studenten wohnt bei den Eltern.",
+    "Genau die Hälfte der Studenten wohnt bei den Eltern.",
     "Ein Viertel der Studenten wohnt bei den Eltern.",
     "Fast alle Studenten wohnen bei den Eltern.",
     "Nur wenige Studenten wohnen bei den Eltern."
@@ -812,7 +812,7 @@
    "q": "Laut Statistik schlafen Jugendliche nur sechs Stunden pro Nacht. Sie haben viel mehr erwartet.",
    "o": [
     "Es überrascht mich nicht, dass sie so wenig schlafen.",
-    "Ich habe eigentlich erwartet, dass sie noch weniger schlafen.",
+    "Ich habe erwartet, dass sie noch weniger schlafen.",
     "Es überrascht mich, dass Jugendliche so wenig schlafen.",
     "Die Hälfte der Jugendlichen schläft sechs Stunden."
    ],
@@ -823,7 +823,7 @@
   {
    "q": "Mia zeigt auf einen Gegenstand in Ihrer Küche: „Was ist das denn?“ Damit schneidet man Gemüse.",
    "o": [
-    "Das ist ein Gerät, mit dem man Gemüse schneidet.",
+    "Damit kann man Gemüse schneiden.",
     "Kaufen Sie jetzt und sparen Sie viel Zeit!",
     "Wofür braucht man dieses Gerät eigentlich?",
     "Ich habe die Erfahrung gemacht, dass Gemüse gesund ist."
@@ -846,7 +846,7 @@
     "Er ist aus festem, wasserdichtem Stoff und sehr leicht.",
     "Er kostet nur dreißig Euro.",
     "Damit kann man unterwegs sein Handy laden.",
-    "Er ist leicht und hat viele Taschen."
+    "Er ist leicht und hat viele praktische Taschen."
    ],
    "a": 2
   },
@@ -864,7 +864,7 @@
    "q": "Sie machen Werbung für eine kleine Kaffeemaschine. Sie sagen, für wen sie gut ist.",
    "o": [
     "Sie ist nichts für Leute mit wenig Platz.",
-    "Ein Nachteil ist, dass sie sehr groß ist.",
+    "Ein Nachteil ist, dass sie ziemlich groß und laut ist.",
     "Sie ist ideal für alle, die wenig Platz haben.",
     "Ich bezweifle, dass sie in Ihre kleine Küche passt."
    ],
@@ -876,7 +876,7 @@
     "Ein schwarzer Schirm ist ideal für jedes Wetter!",
     "Es ist ein großer, schwarzer Schirm mit einem Holzgriff.",
     "Schirme gehen oft verloren, das kenne ich.",
-    "Können Sie mir bitte einen neuen, schwarzen Schirm empfehlen?"
+    "Können Sie mir einen neuen Schirm empfehlen?"
    ],
    "a": 1
   },
@@ -905,7 +905,7 @@
   {
    "q": "Jonas aus Berlin fragt: „Was ist eigentlich Plov?“",
    "o": [
-    "Plov musst du unbedingt mal in einem guten Restaurant probieren!",
+    "Plov musst du unbedingt mal probieren!",
     "Das ist ein Reisgericht mit Fleisch, Karotten und Zwiebeln.",
     "Ich finde Plov viel besser als Pizza.",
     "Das schmeckt mir leider überhaupt nicht."
@@ -928,7 +928,7 @@
     "Er ist süß, ungefähr wie ein Kuchen.",
     "Er wird mit langen Nudeln, Fleisch und Gemüse gemacht.",
     "Er ist ziemlich scharf, aber sehr lecker.",
-    "Ich kann dir Lagman nur empfehlen."
+    "Ich kann dir Lagman wirklich nur empfehlen."
    ],
    "a": 2
   },
@@ -956,8 +956,8 @@
    "q": "Malika isst gern Süßes. Sie fragt, welches Dessert sie nehmen soll.",
    "o": [
     "Wenn du gern scharf isst, nimm die Chilisuppe.",
-    "Der Kuchen wird aus Honig, Butter und Nüssen gemacht.",
-    "Wenn du gern Süßes isst, nimm den Honigkuchen.",
+    "Der Kuchen wird aus Honig und Nüssen gemacht.",
+    "Wenn du gern Süßes isst, nimm unbedingt den Honigkuchen.",
     "Ich esse eigentlich nicht so gern Süßes."
    ],
    "a": 2
@@ -965,7 +965,7 @@
   {
    "q": "Ein Gast aus Deutschland fragt: „Was isst man zu Schaschlik?“",
    "o": [
-    "Schaschlik wird über dem Feuer gegrillt.",
+    "Schaschlik wird meistens über dem Feuer gegrillt.",
     "Dazu isst man meistens Brot und Zwiebeln.",
     "Probier unbedingt mal Schaschlik, das ist sehr lecker!",
     "Schaschlik ist ein Gericht aus Fleisch."
@@ -978,7 +978,7 @@
     "Das sieht ehrlich gesagt nicht besonders lecker aus.",
     "Das ist ein Reisgericht aus Japan.",
     "Davon würde ich dir lieber abraten.",
-    "Das sieht ja toll aus, fast zu schön zum Essen!"
+    "Wow, das sieht ja toll aus!"
    ],
    "a": 3
   }

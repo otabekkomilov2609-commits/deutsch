@@ -51,12 +51,12 @@
    "a": 0
   },
   {
-   "q": "Nodir: „Wusstest du, dass Tauben über 1000 Kilometer nach Hause finden?“ Sie sind sehr überrascht.",
+   "q": "Nodir: „Finden Tauben wirklich allein nach Hause?“ Sie wissen: sogar aus 1000 Kilometern Entfernung.",
    "o": [
-    "Klar, das weiß doch jeder.",
-    "Das finde ich nicht so gut.",
-    "Das ist mir egal, ich mag keine Tiere.",
-    "Wirklich? Das hätte ich nicht gedacht!"
+    "Nein, das schaffen Tauben leider nicht allein.",
+    "Ich bezweifle, dass Tauben so weit fliegen können.",
+    "Ich finde Tauben ehrlich gesagt nicht so schön.",
+    "Ja, sie sind sogar in der Lage, 1000 Kilometer zu fliegen."
    ],
    "a": 3
   },
@@ -103,11 +103,11 @@
    "a": 2
   },
   {
-   "q": "Bewerbung für ein Praktikum in der Uni-Bibliothek: „Wie gut kennen Sie sich mit Computern aus?“ Word und Excel können Sie gut.",
+   "q": "Sie bewerben sich als Helfer für das Uni-Festival: „Wie gut kennen Sie sich mit Computern aus?“ Word und Excel können Sie gut.",
    "o": [
     "Mit Computern habe ich leider noch nie gearbeitet.",
     "Mit Word und Excel kenne ich mich sehr gut aus.",
-    "Ich lese sehr gern, vor allem Romane.",
+    "Ich organisiere sehr gern Feste und Partys.",
     "Ich würde gern mal einen Computerkurs besuchen."
    ],
    "a": 1
@@ -118,7 +118,7 @@
     "Ja, darin habe ich schon sehr viel Erfahrung.",
     "Nein, das interessiert mich überhaupt nicht.",
     "Ich bin mir nicht sicher, ob das stimmt.",
-    "Darin habe ich noch keine Erfahrung, aber ich lerne schnell."
+    "Darin habe ich noch keine Erfahrung, aber ich lerne gern dazu."
    ],
    "a": 3
   },
@@ -143,7 +143,7 @@
    "a": 1
   },
   {
-   "q": "In Ihrer Bewerbung für die Uni schreiben Sie: In Mathematik sind Sie sehr stark.",
+   "q": "Sie bewerben sich an der Uni und möchten schreiben, dass Sie in Mathematik sehr stark sind.",
    "o": [
     "Ich habe leider nur Grundkenntnisse in Mathematik.",
     "Mathematik finde ich langweilig, aber wichtig.",
@@ -195,7 +195,7 @@
    "a": 0
   },
   {
-   "q": "Sie haben einen Liebesfilm gesehen. Die Geschichte war schön, aber das Ende hat Sie enttäuscht. Jonas: „Und?“",
+   "q": "Sie haben einen Liebesfilm gesehen. Die Geschichte war schön, aber das Ende hat Sie enttäuscht. Jonas: „Und, wie war er?“",
    "o": [
     "Die Geschichte war langweilig, aber das Ende war toll.",
     "Es war ein Liebesfilm mit sehr vielen Stars.",
@@ -259,8 +259,8 @@
   {
    "q": "Am Monatsende ist Ihr Geld immer weg. Sie bitten Ihre ältere Schwester um einen Rat.",
    "o": [
-    "Was würdest du mir raten, wie kann ich besser sparen?",
-    "Was würden Sie mir raten, wie kann ich besser sparen?",
+    "Kannst du mir einen Rat geben, wie ich besser sparen kann?",
+    "Können Sie mir einen Rat geben, wie ich besser sparen kann?",
     "Ich würde dir raten, weniger online einzukaufen.",
     "Am Monatsende habe ich immer viel Geld übrig."
    ],
@@ -302,7 +302,7 @@
     "Genau, Bargeld braucht heute wirklich niemand mehr.",
     "Das stimmt nicht, Karten sind total unsicher.",
     "Ich habe leider gerade kein Bargeld dabei.",
-    "Zwar zahlen viele mit Karte, aber auf dem Basar nicht."
+    "Zwar zahlen viele mit Karte, aber auf dem Basar braucht man Bargeld."
    ],
    "a": 3
   },
@@ -389,7 +389,7 @@
    "a": 0
   },
   {
-   "q": "Ein Tourist im Museum: „Wo ist die Frau auf dem Bild?“ Sie steht vorne links.",
+   "q": "Ihr kleiner Bruder im Museum: „Wo ist die Frau auf dem Bild?“ Sie steht vorne links.",
    "o": [
     "Sie steht rechts im Hintergrund.",
     "Sie sieht sehr glücklich aus.",
@@ -403,8 +403,8 @@
    "o": [
     "Na ja, das Bild ist nichts Besonderes.",
     "Wahnsinn, das Bild ist wirklich beeindruckend!",
-    "Entschuldigung, wo ist hier der Ausgang?",
-    "Hast du eine Ahnung, wie spät es ist?"
+    "Im Hintergrund sieht man ein paar kleine Häuser.",
+    "Das Bild wirkt auf mich ziemlich langweilig."
    ],
    "a": 1
   }
@@ -435,8 +435,8 @@
    "o": [
     "Zuerst möchte ich kurz das Thema vorstellen.",
     "Ich habe den Artikel im Internet gefunden.",
-    "Am Wochenende spiele ich immer Volleyball.",
-    "Zusammenfassend kann man sagen, dass Bewegung sehr wichtig ist."
+    "Ich persönlich finde Sport ziemlich anstrengend.",
+    "Zusammenfassend kann man sagen: Bewegung ist sehr wichtig."
    ],
    "a": 3
   },
@@ -672,7 +672,7 @@
     "Gute Idee, Samstag passt mir perfekt!",
     "Das geht leider nicht, weil ich am Samstag Training habe.",
     "Wäre es nicht besser, wenn jeder allein lernt?",
-    "Wie wäre es lieber mit Sonntag?"
+    "Wie wäre es denn mit Sonntag?"
    ],
    "a": 0
   },
@@ -774,7 +774,7 @@
     "Ich halte das für einen großen Fehler.",
     "Ich vermute, dass nur wenige wählen gehen.",
     "Ich bin leider erst fünfzehn Jahre alt.",
-    "Ich halte das für eine sehr gute Entscheidung."
+    "Ich halte das für eine sehr gute Idee."
    ],
    "a": 3
   },
@@ -861,7 +861,7 @@
    "a": 3
   },
   {
-   "q": "Sie wandern mit Freunden zu einer alten Burg. Es wird heute sehr heiß. Sie erinnern die anderen.",
+   "q": "Sie wandern mit Freunden zu einer alten Burg. Es wird heute sehr heiß. Sie erinnern die anderen an etwas.",
    "o": [
     "Wir sollten warme Jacken mitnehmen.",
     "Wir sollten genug Wasser mitnehmen.",
@@ -968,7 +968,7 @@
     "Ihr werdet jetzt sofort leise sein und schlafen!",
     "Ihr werdet morgen bestimmt sehr müde sein.",
     "Ich werde euch morgen eine Geschichte vorlesen.",
-    "Sie werden jetzt bitte sofort leise sein!"
+    "Sie werden jetzt sofort leise sein!"
    ],
    "a": 0
   },
