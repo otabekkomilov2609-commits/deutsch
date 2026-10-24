@@ -98,7 +98,7 @@
       "q": "Timur hat keinen Hund und keine Katze. Er hat ___ einen Hund noch eine Katze.",
       "o": [
        "sowohl",
-       "nicht",
+       "nicht nur",
        "weder"
       ],
       "a": 2,
@@ -142,11 +142,11 @@
       "h": "Was passt?",
       "q": "Unsere Katze ist sehr alt. Sie kann ___ gut sehen noch gut hören.",
       "o": [
-       "nicht",
-       "sowohl",
-       "weder"
+       "nicht nur",
+       "weder",
+       "sowohl"
       ],
-      "a": 2,
+      "a": 1,
       "gw": {
        "uz": "Ma’noga qarang: ikkalasi ham bor (+ +) — <b>sowohl … als auch</b> yoki <b>nicht nur …, sondern auch</b>; ikkalasi ham yo‘q (– –) — <b>weder … noch</b>. Juftlar aralashtirilmaydi: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Misol: <b>Er hat weder Zeit noch Geld.</b>",
        "ru": "Смотрите на смысл: есть и то, и другое (+ +) — <b>sowohl … als auch</b> или <b>nicht nur …, sondern auch</b>; нет ни того, ни другого (– –) — <b>weder … noch</b>. Пары не смешиваются: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Пример: <b>Er hat weder Zeit noch Geld.</b>"
