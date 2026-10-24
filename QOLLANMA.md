@@ -1241,3 +1241,7 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Tuzatish: saytdan chiqishda / ilovani yopishda (cloudPush(true)) a/ ham yuboriladi — oldingisidan 2 daqiqa o'tgan va ma'lumot o'zgargan bo'lsa (axh — xesh). Kichik bo'lsa keepalive bilan.
 - Ustoz panelida kun yo'li ustida: «🔄 Yo'l oxirgi marta HH:MM da kelgan» — undan keyingilar keyin qo'shiladi.
 - Naimaning bugungi Duel'i: uning telefonida saqlangan — keyingi safar saytni ochib-yopganda yetib keladi (yangi versiya bilan).
+- (qo'shimcha, 24.10) Otabek: «ko'p lektionlarni yig'ib yuborish imkoniyati bo'lsin — scrollni oldini olish uchun»:
+  - Har bir Modul sarlavhasida «▲ Yig'ish / ▼ Ochish» — shu Moduldagi Lektionlar birdan.
+  - Pastki o'ng burchakda suzuvchi «▲ Hammasini yig'ish» — ro'yxat tepasidagi tugmalardan pastga tushganda va kamida bitta Lektion ochiq bo'lsa chiqadi; bosilsa hammasi yig'iladi va sahifa ro'yxat boshiga qaytadi. Mashq/oyna ochiq bo'lsa ko'rinmaydi.
+  - Kod: lekSync(), lekFlt(), data-modfold, data-lekflt.

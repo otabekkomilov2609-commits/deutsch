@@ -1549,7 +1549,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .lek.bt .lek-h{cursor:pointer;align-items:center;user-select:none}
 .lek.bt .lek-ht{flex:1;min-width:0}
 .lek.bt:not(.open)>.sx,.lek.bt:not(.open)>.lek-hw,.lek.bt:not(.open)>:not(.lek-h){display:none}
-.lek.bt:not(.open){padding-bottom:14px}.lek-fold{display:block;width:100%;margin:12px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--blue-soft);color:var(--blue);font:inherit;font-weight:800;font-size:14.5px;cursor:pointer}.lek-all{display:flex;gap:8px;justify-content:flex-end;margin:4px 0 10px}.lek-allb{border:1px solid var(--line);background:var(--surface);color:var(--blue);border-radius:99px;padding:7px 12px;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+.lek.bt:not(.open){padding-bottom:14px}.lek-fold{display:block;width:100%;margin:12px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--blue-soft);color:var(--blue);font:inherit;font-weight:800;font-size:14.5px;cursor:pointer}.mod-fold{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--blue);border-radius:99px;padding:5px 11px;font:inherit;font-size:12.5px;font-weight:800;cursor:pointer;white-space:nowrap}.lek-flt{position:fixed;right:14px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:2147482990;border:0;border-radius:99px;padding:12px 16px;background:var(--blue);color:#fff;font:inherit;font-size:14.5px;font-weight:900;box-shadow:0 8px 22px rgba(20,40,90,.3);cursor:pointer}.lek-flt[hidden]{display:none}.lek-all{display:flex;gap:8px;justify-content:flex-end;margin:4px 0 10px}.lek-allb{border:1px solid var(--line);background:var(--surface);color:var(--blue);border-radius:99px;padding:7px 12px;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
 .lek-pc{font-weight:800;font-size:14px;color:var(--green);white-space:nowrap}.lek-pc:empty{display:none}
 .lek-chev{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:24px;line-height:1;color:var(--blue);background:var(--blue-soft);border:2px solid var(--line);transition:transform .2s;flex:none} /* kattaroq, bosish oson (2026-10-21, Otabek) */
 .lek.bt.open .lek-chev{transform:rotate(180deg)}
@@ -3162,7 +3162,17 @@ function lekSetOpen(a,o){ const k=a.dataset.lek; if(!k) return; const S=lekClSet
 document.addEventListener("click",e=>{
   const f=e.target.closest&&e.target.closest("[data-lekfold]"); if(f){ const a=f.closest(".lek"); if(!a) return; lekSetOpen(a,false); const r=a.getBoundingClientRect(); if(r.top<130) window.scrollTo({top:Math.max(0,scrollY+r.top-130),behavior:"smooth"}); /* tepadagi daraja paneli ostida qolmasin */ try{ actEv("lek","fold"); }catch(er){} return; }
   const all=e.target.closest&&e.target.closest("[data-lekall]"); if(all){ const o=all.dataset.lekall==="open", S=lekClSet(); document.querySelectorAll("#main .lek.bt[data-lek]").forEach(a=>{ a.classList.toggle("open",o); if(o) S.delete(a.dataset.lek); else S.add(a.dataset.lek); }); lekClSave(S); try{ actEv("lek",o?"openall":"foldall"); }catch(er){} return; }
+  const mf=e.target.closest&&e.target.closest("[data-modfold]"); if(mf){ const sec=mf.closest(".modul"), L=sec?[...sec.querySelectorAll(".lek.bt[data-lek]")]:[], o=!L.some(a=>a.classList.contains("open")); L.forEach(a=>lekSetOpen(a,o)); if(!o){ const r=sec.getBoundingClientRect(); if(r.top<130) window.scrollTo({top:Math.max(0,scrollY+r.top-130),behavior:"smooth"}); } try{ actEv("lek",o?"modopen":"modfold"); }catch(er){} lekSync(); return; }
+  const ff=e.target.closest&&e.target.closest("[data-lekflt]"); if(ff){ const S=lekClSet(); document.querySelectorAll("#main .lek.bt[data-lek]").forEach(a=>{ a.classList.remove("open"); S.add(a.dataset.lek); }); lekClSave(S); const bar=document.querySelector("#main .lek-all"); if(bar){ const r=bar.getBoundingClientRect(); window.scrollTo({top:Math.max(0,scrollY+r.top-140),behavior:"smooth"}); } try{ actEv("lek","fltfold"); }catch(er){} lekSync(); return; }
   const h=e.target.closest(".lek.bt .lek-h"); if(!h||e.target.closest("button,a,[data-lern],[data-open]")) return; const a=h.closest(".lek"); lekSetOpen(a,!a.classList.contains("open")); });
+/* Modul tugmasi yozuvi va pastdagi suzuvchi «▲ Yig'ish» (2026-10-24, Otabek: «ko'p lektionlarni yig'ib yuborish imkoniyati bo'lsin — scrollni oldini olish uchun») */
+function lekSync(){ try{ const ru=state.lang==="ru"; document.querySelectorAll("#main .modul").forEach(sec=>{ const b=sec.querySelector("[data-modfold]"); if(!b) return; const any=[...sec.querySelectorAll(".lek.bt[data-lek]")].some(a=>a.classList.contains("open")); b.textContent=any?"▲ "+(ru?"Свернуть":"Yig‘ish"):"▼ "+(ru?"Развернуть":"Ochish"); }); lekFlt(); }catch(e){} }
+function lekFlt(){ let f=document.getElementById("lek-flt"); const bar=document.querySelector("#main .lek-all"), open=document.querySelector("#main .lek.bt.open"), ov=document.body.style.overflow==="hidden";
+  const show=!!(bar&&open&&!ov&&bar.getBoundingClientRect().bottom<0);
+  if(!f){ if(!show) return; f=document.createElement("button"); f.type="button"; f.id="lek-flt"; f.className="lek-flt"; f.dataset.lekflt="1"; document.body.appendChild(f); }
+  f.textContent="▲ "+(state.lang==="ru"?"Свернуть все":"Hammasini yig‘ish"); f.hidden=!show; }
+{ let lekRaf=0; addEventListener("scroll",()=>{ if(lekRaf) return; lekRaf=requestAnimationFrame(()=>{ lekRaf=0; lekFlt(); }); },{passive:true}); }
+document.addEventListener("click",()=>setTimeout(lekSync,0));
 function lekCardOld(L, tab, withLvl){
   const [n,title,thema,kb,g,k,w] = L, lvl = TABS[tab].lvl;
   const mats = visibleMats(tab,n);
@@ -3419,7 +3429,7 @@ function render(){
       if(!asc) cards.reverse();
       const showRev = rev.length && onlyN(ls[2][0]);
       if(!cards.length && !showRev) return "";
-      let h = `<section class="modul"><div class="modul-h"><span class="tag">${t("modul")} ${md} · L${ls[0][0]}–${ls[2][0]}</span><span class="rule"></span></div>`;
+      let h = `<section class="modul"><div class="modul-h"><span class="tag">${t("modul")} ${md} · L${ls[0][0]}–${ls[2][0]}</span><span class="rule"></span>${BT&&cards.length>1?(()=>{ const any=cards.some(L=>lekIsOpen(T0.lvl,L[0])), ru=state.lang==="ru"; return `<button type="button" class="mod-fold" data-modfold="1">${any?"▲ "+(ru?"Свернуть":"Yig‘ish"):"▼ "+(ru?"Развернуть":"Ochish")}</button>`; })():""}</div>`;
       const blocks = cards.map(L=>({d:keyDate(tab,L[0]), n:L[0], h:lekCard(L,tab)}));
       if(showRev) blocks.push({d:keyDate(tab,"m"+md), n:ls[2][0]+.5, h:`<div class="review">${CURKEY[tab]==="m"+md?`<span class="cur">${t("cur")}</span>`:""}<h4>${t("review")} · L${ls[0][0]}–${ls[2][0]}</h4>${BT?`<div class="sxg">${rev.map(bMatAct).join("")}</div>`:`<div class="mats">${rev.map(matCard).join("")}</div>`}</div>`});
       if(!asc){ const ck=CURKEY[tab]; const isCur=b=>ck!=null && (/^m/.test(ck) ? b.n===+ck.slice(1)*3+.5 : b.n===+ck);
