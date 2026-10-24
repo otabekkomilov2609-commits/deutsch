@@ -1,0 +1,583 @@
+{
+ "id": "B1-b11-2-G",
+ "meta": {
+  "title": "Grammatik · darum · daher · deswegen",
+  "stitle": "darum · daher · deswegen · weil · Adjektive als Nomen"
+ },
+ "ex": {
+  "title": "Lektion 2 · Grammatik",
+  "sub": "darum · daher · deswegen · weil · Adjektive als Nomen",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>weil oder darum / daher / deswegen / deshalb?</h4><table class=\"ex-tb\"><tr><th></th><th>Beispiel</th><th>Verb</th></tr><tr><td><b>weil</b> (Grund)</td><td>Ich rufe Aziz an, <b>weil</b> er heute Geburtstag <b>hat</b>.</td><td>Verb am Ende</td></tr><tr><td><b>darum · daher · deswegen · deshalb</b> (Folge)</td><td>Aziz hat heute Geburtstag. <b>Darum rufe</b> ich ihn an.</td><td>Verb auf Position 2</td></tr><tr><td></td><td>Aziz hat heute Geburtstag, <b>deswegen rufe</b> ich ihn an.</td><td>Verb auf Position 2</td></tr><tr><td></td><td>Ich <b>rufe</b> ihn <b>daher</b> heute an.</td><td>auch in der Satzmitte</td></tr></table><p class=\"ex-note\"><b>weil</b> + sabab (Nebensatz, fe’l oxirida). <b>darum, daher, deswegen, deshalb</b> — ma’nosi bir xil («shuning uchun»), natijani bildiradi. Ular Hauptsatz so‘zlari: 1-o‘rinda tursa, fe’l darhol keyin, ega fe’ldan keyin keladi. Gap o‘rtasida ham turishi mumkin: <b>Ich rufe ihn daher an.</b></p>",
+      "ru": "<h4>weil oder darum / daher / deswegen / deshalb?</h4><table class=\"ex-tb\"><tr><th></th><th>Beispiel</th><th>Verb</th></tr><tr><td><b>weil</b> (Grund)</td><td>Ich rufe Aziz an, <b>weil</b> er heute Geburtstag <b>hat</b>.</td><td>Verb am Ende</td></tr><tr><td><b>darum · daher · deswegen · deshalb</b> (Folge)</td><td>Aziz hat heute Geburtstag. <b>Darum rufe</b> ich ihn an.</td><td>Verb auf Position 2</td></tr><tr><td></td><td>Aziz hat heute Geburtstag, <b>deswegen rufe</b> ich ihn an.</td><td>Verb auf Position 2</td></tr><tr><td></td><td>Ich <b>rufe</b> ihn <b>daher</b> heute an.</td><td>auch in der Satzmitte</td></tr></table><p class=\"ex-note\"><b>weil</b> + причина (придаточное, глагол в конце). <b>darum, daher, deswegen, deshalb</b> — значат одно и то же («поэтому») и выражают следствие. Это слова главного предложения: если стоят на 1-м месте, сразу за ними глагол, потом подлежащее. Могут стоять и в середине: <b>Ich rufe ihn daher an.</b></p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *darum*, *daher*, *deswegen* oder *deshalb* und das Verb.",
+      "bsp": "Ich vertraue Nodir. Darum erzähle ich ihm alles. → <b>Darum</b> … <b>erzähle</b>",
+      "s": "Laylo und ich kennen uns seit dem Kindergarten . Deswegen sind wir so eng befreundet .",
+      "a": [
+       9,
+       10
+      ],
+      "gw": {
+       "uz": "<b>darum, daher, deswegen, deshalb</b> dan keyin darhol fe’l keladi (2-o‘rin), ega undan keyin: <b>Darum telefonieren wir …</b> So‘z gap o‘rtasida bo‘lsa, fe’l odatdagidek 2-o‘rinda: <b>Ich helfe ihr deshalb.</b>",
+       "ru": "Сразу после <b>darum, daher, deswegen, deshalb</b> идёт глагол (2-е место), подлежащее — после него: <b>Darum telefonieren wir …</b> Если слово стоит в середине, глагол как обычно на 2-м месте: <b>Ich helfe ihr deshalb.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *darum*, *daher*, *deswegen* oder *deshalb* und das Verb.",
+      "s": "Mein Freund wohnt jetzt in Berlin , darum telefonieren wir jeden Abend .",
+      "a": [
+       7,
+       8
+      ],
+      "gw": {
+       "uz": "<b>darum, daher, deswegen, deshalb</b> dan keyin darhol fe’l keladi (2-o‘rin), ega undan keyin: <b>Darum telefonieren wir …</b> So‘z gap o‘rtasida bo‘lsa, fe’l odatdagidek 2-o‘rinda: <b>Ich helfe ihr deshalb.</b>",
+       "ru": "Сразу после <b>darum, daher, deswegen, deshalb</b> идёт глагол (2-е место), подлежащее — после него: <b>Darum telefonieren wir …</b> Если слово стоит в середине, глагол как обычно на 2-м месте: <b>Ich helfe ihr deshalb.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *darum*, *daher*, *deswegen* oder *deshalb* und das Verb.",
+      "s": "Timur hat ein Geheimnis verraten . Daher ist Mia sauer auf ihn .",
+      "a": [
+       6,
+       7
+      ],
+      "gw": {
+       "uz": "<b>darum, daher, deswegen, deshalb</b> dan keyin darhol fe’l keladi (2-o‘rin), ega undan keyin: <b>Darum telefonieren wir …</b> So‘z gap o‘rtasida bo‘lsa, fe’l odatdagidek 2-o‘rinda: <b>Ich helfe ihr deshalb.</b>",
+       "ru": "Сразу после <b>darum, daher, deswegen, deshalb</b> идёт глагол (2-е место), подлежащее — после него: <b>Darum telefonieren wir …</b> Если слово стоит в середине, глагол как обычно на 2-м месте: <b>Ich helfe ihr deshalb.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *darum*, *daher*, *deswegen* oder *deshalb* und das Verb.",
+      "s": "Meine beste Freundin hat morgen eine Prüfung . Ich helfe ihr deshalb heute beim Lernen .",
+      "a": [
+       9,
+       11
+      ],
+      "gw": {
+       "uz": "<b>darum, daher, deswegen, deshalb</b> dan keyin darhol fe’l keladi (2-o‘rin), ega undan keyin: <b>Darum telefonieren wir …</b> So‘z gap o‘rtasida bo‘lsa, fe’l odatdagidek 2-o‘rinda: <b>Ich helfe ihr deshalb.</b>",
+       "ru": "Сразу после <b>darum, daher, deswegen, deshalb</b> идёт глагол (2-е место), подлежащее — после него: <b>Darum telefonieren wir …</b> Если слово стоит в середине, глагол как обычно на 2-м месте: <b>Ich helfe ihr deshalb.</b>"
+      }
+     },
+     {
+      "t": "cat",
+      "h": "Wo steht das Verb? Ordnen Sie zu.",
+      "bsp": "weil → …, weil ich müde <b>bin</b>. → <b>Verb am Ende</b>",
+      "c": [
+       "Verb am Ende",
+       "Verb auf Position 2"
+      ],
+      "i": [
+       [
+        "weil",
+        0
+       ],
+       [
+        "darum",
+        1
+       ],
+       [
+        "dass",
+        0
+       ],
+       [
+        "daher",
+        1
+       ],
+       [
+        "wenn",
+        0
+       ],
+       [
+        "deswegen",
+        1
+       ],
+       [
+        "als",
+        0
+       ],
+       [
+        "deshalb",
+        1
+       ]
+      ],
+      "gw": {
+       "uz": "Nebensatz konnektorlari (<b>weil, dass, wenn, als</b>) — fe’l oxirida. <b>darum, daher, deswegen, deshalb</b> — Hauptsatz so‘zlari: fe’l 2-o‘rinda. Misol: <b>…, weil ich müde bin.</b> · <b>Deshalb bin ich müde.</b>",
+       "ru": "Союзы придаточных (<b>weil, dass, wenn, als</b>) — глагол в конце. <b>darum, daher, deswegen, deshalb</b> — слова главного предложения: глагол на 2-м месте. Пример: <b>…, weil ich müde bin.</b> · <b>Deshalb bin ich müde.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Grund oder Folge? Was passt?",
+      "bsp": "Ich habe kein Geld, ___ kann ich nicht ins Kino gehen. → Folge, Verb auf Position 2 → ✓ <b>darum</b>",
+      "q": "Ich erzähle Sevara keine Geheimnisse mehr, ___ sie ihrer Schwester alles erzählt.",
+      "o": [
+       "weil",
+       "deshalb"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Sabab (nima uchun?) — <b>weil</b>, fe’l oxirida. Natija (shuning uchun) — <b>darum / daher / deswegen / deshalb</b>, fe’l darhol keyin. Fe’lning o‘rniga qarang: <b>…, weil Anna in Wien studiert.</b> · <b>…, deswegen sehen wir uns selten.</b>",
+       "ru": "Причина (почему?) — <b>weil</b>, глагол в конце. Следствие (поэтому) — <b>darum / daher / deswegen / deshalb</b>, глагол сразу после. Смотрите на место глагола: <b>…, weil Anna in Wien studiert.</b> · <b>…, deswegen sehen wir uns selten.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Grund oder Folge? Was passt?",
+      "q": "Paul und ich haben die gleichen Hobbys, ___ verbringen wir viel Zeit zusammen.",
+      "o": [
+       "weil",
+       "deswegen",
+       "dass"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Sabab (nima uchun?) — <b>weil</b>, fe’l oxirida. Natija (shuning uchun) — <b>darum / daher / deswegen / deshalb</b>, fe’l darhol keyin. Fe’lning o‘rniga qarang: <b>…, weil Anna in Wien studiert.</b> · <b>…, deswegen sehen wir uns selten.</b>",
+       "ru": "Причина (почему?) — <b>weil</b>, глагол в конце. Следствие (поэтому) — <b>darum / daher / deswegen / deshalb</b>, глагол сразу после. Смотрите на место глагола: <b>…, weil Anna in Wien studiert.</b> · <b>…, deswegen sehen wir uns selten.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Grund oder Folge? Was passt?",
+      "q": "Wir sehen uns nur selten, ___ Anna in einer anderen Stadt studiert.",
+      "o": [
+       "daher",
+       "weil",
+       "darum"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Sabab (nima uchun?) — <b>weil</b>, fe’l oxirida. Natija (shuning uchun) — <b>darum / daher / deswegen / deshalb</b>, fe’l darhol keyin. Fe’lning o‘rniga qarang: <b>…, weil Anna in Wien studiert.</b> · <b>…, deswegen sehen wir uns selten.</b>",
+       "ru": "Причина (почему?) — <b>weil</b>, глагол в конце. Следствие (поэтому) — <b>darum / daher / deswegen / deshalb</b>, глагол сразу после. Смотрите на место глагола: <b>…, weil Anna in Wien studiert.</b> · <b>…, deswegen sehen wir uns selten.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Grund oder Folge? Was passt?",
+      "q": "Jonas muss eine wichtige Entscheidung treffen. ___ spricht er zuerst mit seinem besten Freund.",
+      "o": [
+       "Weil",
+       "Daher",
+       "Dass"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Sabab (nima uchun?) — <b>weil</b>, fe’l oxirida. Natija (shuning uchun) — <b>darum / daher / deswegen / deshalb</b>, fe’l darhol keyin. Fe’lning o‘rniga qarang: <b>…, weil Anna in Wien studiert.</b> · <b>…, deswegen sehen wir uns selten.</b>",
+       "ru": "Причина (почему?) — <b>weil</b>, глагол в конце. Следствие (поэтому) — <b>darum / daher / deswegen / deshalb</b>, глагол сразу после. Смотрите на место глагола: <b>…, weil Anna in Wien studiert.</b> · <b>…, deswegen sehen wir uns selten.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *weil* oder *deswegen*.",
+      "bsp": "Ich habe Hunger, ___ koche ich jetzt. → Verb auf Position 2 → <b>deswegen</b>",
+      "s": "Ich verstehe mich gut mit Aziz, ___ er immer ehrlich ist.",
+      "a": [
+       [
+        "weil"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: fe’l oxirida → <b>weil</b> (sabab); fe’l darhol keyin → <b>deswegen</b> (natija). Gap boshida bosh harf: <b>Weil</b>, <b>Deswegen</b>. Misol: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>",
+       "ru": "Смотрите на глагол: глагол в конце → <b>weil</b> (причина); глагол сразу после → <b>deswegen</b> (следствие). В начале предложения — с большой буквы: <b>Weil</b>, <b>Deswegen</b>. Пример: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *weil* oder *deswegen*.",
+      "s": "Mia kennt in der neuen Stadt noch niemanden. ___ ist sie oft allein.",
+      "a": [
+       [
+        "Deswegen"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: fe’l oxirida → <b>weil</b> (sabab); fe’l darhol keyin → <b>deswegen</b> (natija). Gap boshida bosh harf: <b>Weil</b>, <b>Deswegen</b>. Misol: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>",
+       "ru": "Смотрите на глагол: глагол в конце → <b>weil</b> (причина); глагол сразу после → <b>deswegen</b> (следствие). В начале предложения — с большой буквы: <b>Weil</b>, <b>Deswegen</b>. Пример: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *weil* oder *deswegen*.",
+      "s": "Ben vertraut seinem Bruder, ___ er ihm schon oft geholfen hat.",
+      "a": [
+       [
+        "weil"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: fe’l oxirida → <b>weil</b> (sabab); fe’l darhol keyin → <b>deswegen</b> (natija). Gap boshida bosh harf: <b>Weil</b>, <b>Deswegen</b>. Misol: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>",
+       "ru": "Смотрите на глагол: глагол в конце → <b>weil</b> (причина); глагол сразу после → <b>deswegen</b> (следствие). В начале предложения — с большой буквы: <b>Weil</b>, <b>Deswegen</b>. Пример: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *weil* oder *deswegen*.",
+      "s": "Wir waren zehn Jahre lang Nachbarn. ___ sind wir heute noch eng befreundet.",
+      "a": [
+       [
+        "Deswegen"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: fe’l oxirida → <b>weil</b> (sabab); fe’l darhol keyin → <b>deswegen</b> (natija). Gap boshida bosh harf: <b>Weil</b>, <b>Deswegen</b>. Misol: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>",
+       "ru": "Смотрите на глагол: глагол в конце → <b>weil</b> (причина); глагол сразу после → <b>deswegen</b> (следствие). В начале предложения — с большой буквы: <b>Weil</b>, <b>Deswegen</b>. Пример: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *weil* oder *deswegen*.",
+      "s": "Sevara: Warum warst du gestern nicht auf der Party?\nMalika: ___ ich krank war. Ich hatte Fieber, ___ bin ich im Bett geblieben.",
+      "a": [
+       [
+        "Weil"
+       ],
+       [
+        "deswegen"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: fe’l oxirida → <b>weil</b> (sabab); fe’l darhol keyin → <b>deswegen</b> (natija). Gap boshida bosh harf: <b>Weil</b>, <b>Deswegen</b>. Misol: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>",
+       "ru": "Смотрите на глагол: глагол в конце → <b>weil</b> (причина); глагол сразу после → <b>deswegen</b> (следствие). В начале предложения — с большой буквы: <b>Weil</b>, <b>Deswegen</b>. Пример: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *weil* oder *deswegen*.",
+      "s": "Meine beste Freundin heißt Laylo. Wir kennen uns schon seit der ersten Klasse. ___ weiß sie fast alles über mich. Ich mag sie sehr, ___ sie immer für mich da ist.",
+      "a": [
+       [
+        "Deswegen"
+       ],
+       [
+        "weil"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: fe’l oxirida → <b>weil</b> (sabab); fe’l darhol keyin → <b>deswegen</b> (natija). Gap boshida bosh harf: <b>Weil</b>, <b>Deswegen</b>. Misol: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>",
+       "ru": "Смотрите на глагол: глагол в конце → <b>weil</b> (причина); глагол сразу после → <b>deswegen</b> (следствие). В начале предложения — с большой буквы: <b>Weil</b>, <b>Deswegen</b>. Пример: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *weil* oder *deswegen*.",
+      "s": "Thema: Freunde im Internet\nNodir: Ich habe viele virtuelle Freunde, ___ ich gern online spiele. Aber ich kenne sie nicht persönlich. ___ erzähle ich ihnen keine Geheimnisse.\nLena: Ich auch nicht. Echte Freunde sind mir wichtiger, ___ man sie wirklich treffen kann.",
+      "a": [
+       [
+        "weil"
+       ],
+       [
+        "Deswegen"
+       ],
+       [
+        "weil"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: fe’l oxirida → <b>weil</b> (sabab); fe’l darhol keyin → <b>deswegen</b> (natija). Gap boshida bosh harf: <b>Weil</b>, <b>Deswegen</b>. Misol: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>",
+       "ru": "Смотрите на глагол: глагол в конце → <b>weil</b> (причина); глагол сразу после → <b>deswegen</b> (следствие). В начале предложения — с большой буквы: <b>Weil</b>, <b>Deswegen</b>. Пример: <b>Ich bin müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, deswegen bin ich müde.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "bsp": "Ich war müde. Ich bin früh ins Bett gegangen. (darum) → <b>Ich war müde. Darum bin ich früh ins Bett gegangen.</b>",
+      "q": "Aziz hat heute Geburtstag. Wir machen eine Party. (darum)",
+      "w": [
+       "Aziz hat heute Geburtstag.",
+       "Darum",
+       "machen",
+       "wir",
+       "eine Party"
+      ],
+      "a": "Aziz hat heute Geburtstag. Darum machen wir eine Party.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>darum / daher / deswegen / deshalb</b> 1-o‘rinda, keyin fe’l, keyin ega: <b>Darum machen wir …</b> Nuqtadan keyin (bosh harf) ham, verguldan keyin (kichik harf) ham kelishi mumkin: <b>…, deswegen konnte ich …</b>",
+       "ru": "<b>darum / daher / deswegen / deshalb</b> на 1-м месте, затем глагол, затем подлежащее: <b>Darum machen wir …</b> Может стоять после точки (с большой буквы) или после запятой (с маленькой): <b>…, deswegen konnte ich …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "q": "Lena ist neu in der Klasse. Sie kennt noch niemanden. (daher)",
+      "w": [
+       "Lena ist neu in der Klasse.",
+       "Daher",
+       "kennt",
+       "sie",
+       "noch",
+       "niemanden"
+      ],
+      "a": "Lena ist neu in der Klasse. Daher kennt sie noch niemanden.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>darum / daher / deswegen / deshalb</b> 1-o‘rinda, keyin fe’l, keyin ega: <b>Darum machen wir …</b> Nuqtadan keyin (bosh harf) ham, verguldan keyin (kichik harf) ham kelishi mumkin: <b>…, deswegen konnte ich …</b>",
+       "ru": "<b>darum / daher / deswegen / deshalb</b> на 1-м месте, затем глагол, затем подлежащее: <b>Darum machen wir …</b> Может стоять после точки (с большой буквы) или после запятой (с маленькой): <b>…, deswegen konnte ich …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "q": "Mein Handy war leer. Ich konnte dich nicht anrufen. (deswegen)",
+      "w": [
+       "Mein Handy",
+       "war",
+       "leer,",
+       "deswegen",
+       "konnte",
+       "ich",
+       "dich nicht",
+       "anrufen"
+      ],
+      "a": "Mein Handy war leer, deswegen konnte ich dich nicht anrufen.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>darum / daher / deswegen / deshalb</b> 1-o‘rinda, keyin fe’l, keyin ega: <b>Darum machen wir …</b> Nuqtadan keyin (bosh harf) ham, verguldan keyin (kichik harf) ham kelishi mumkin: <b>…, deswegen konnte ich …</b>",
+       "ru": "<b>darum / daher / deswegen / deshalb</b> на 1-м месте, затем глагол, затем подлежащее: <b>Darum machen wir …</b> Может стоять после точки (с большой буквы) или после запятой (с маленькой): <b>…, deswegen konnte ich …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "q": "Timur hat mein Geheimnis verraten. Ich bin enttäuscht. (deshalb)",
+      "w": [
+       "Timur",
+       "hat",
+       "mein Geheimnis",
+       "verraten,",
+       "deshalb",
+       "bin",
+       "ich",
+       "enttäuscht"
+      ],
+      "a": "Timur hat mein Geheimnis verraten, deshalb bin ich enttäuscht.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>darum / daher / deswegen / deshalb</b> 1-o‘rinda, keyin fe’l, keyin ega: <b>Darum machen wir …</b> Nuqtadan keyin (bosh harf) ham, verguldan keyin (kichik harf) ham kelishi mumkin: <b>…, deswegen konnte ich …</b>",
+       "ru": "<b>darum / daher / deswegen / deshalb</b> на 1-м месте, затем глагол, затем подлежащее: <b>Darum machen wir …</b> Может стоять после точки (с большой буквы) или после запятой (с маленькой): <b>…, deswegen konnte ich …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz mit *deshalb*.",
+      "bsp": "Ich bleibe zu Hause, weil ich krank bin. → <b>Ich bin krank, deshalb bleibe ich zu Hause.</b>",
+      "q": "Sevara ist traurig, weil ihre Freundin umzieht.",
+      "w": [
+       "Ihre Freundin",
+       "zieht",
+       "um,",
+       "deshalb",
+       "ist",
+       "Sevara",
+       "traurig"
+      ],
+      "a": "Ihre Freundin zieht um, deshalb ist Sevara traurig.",
+      "alt": [],
+      "gw": {
+       "uz": "Sabab va natija joy almashadi: <b>weil</b> gapidagi sabab birinchi gap bo‘ladi, keyin <b>deshalb</b> + fe’l + ega. Misol: <b>Ich lerne viel, weil ich eine Prüfung habe.</b> → <b>Ich habe eine Prüfung, deshalb lerne ich viel.</b>",
+       "ru": "Причина и следствие меняются местами: причина из <b>weil</b>-предложения становится первым предложением, затем <b>deshalb</b> + глагол + подлежащее. Пример: <b>Ich lerne viel, weil ich eine Prüfung habe.</b> → <b>Ich habe eine Prüfung, deshalb lerne ich viel.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz mit *deshalb*.",
+      "q": "Wir treffen uns oft, weil wir im selben Haus wohnen.",
+      "w": [
+       "Wir",
+       "wohnen",
+       "im selben Haus,",
+       "deshalb",
+       "treffen",
+       "wir",
+       "uns",
+       "oft"
+      ],
+      "a": "Wir wohnen im selben Haus, deshalb treffen wir uns oft.",
+      "alt": [],
+      "gw": {
+       "uz": "Sabab va natija joy almashadi: <b>weil</b> gapidagi sabab birinchi gap bo‘ladi, keyin <b>deshalb</b> + fe’l + ega. Misol: <b>Ich lerne viel, weil ich eine Prüfung habe.</b> → <b>Ich habe eine Prüfung, deshalb lerne ich viel.</b>",
+       "ru": "Причина и следствие меняются местами: причина из <b>weil</b>-предложения становится первым предложением, затем <b>deshalb</b> + глагол + подлежащее. Пример: <b>Ich lerne viel, weil ich eine Prüfung habe.</b> → <b>Ich habe eine Prüfung, deshalb lerne ich viel.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz mit *deshalb*.",
+      "q": "Ich frage oft meinen Bruder, weil er viel Erfahrung hat.",
+      "w": [
+       "Mein Bruder",
+       "hat",
+       "viel Erfahrung,",
+       "deshalb",
+       "frage",
+       "ich",
+       "ihn",
+       "oft"
+      ],
+      "a": "Mein Bruder hat viel Erfahrung, deshalb frage ich ihn oft.",
+      "alt": [],
+      "gw": {
+       "uz": "Sabab va natija joy almashadi: <b>weil</b> gapidagi sabab birinchi gap bo‘ladi, keyin <b>deshalb</b> + fe’l + ega. Misol: <b>Ich lerne viel, weil ich eine Prüfung habe.</b> → <b>Ich habe eine Prüfung, deshalb lerne ich viel.</b>",
+       "ru": "Причина и следствие меняются местами: причина из <b>weil</b>-предложения становится первым предложением, затем <b>deshalb</b> + глагол + подлежащее. Пример: <b>Ich lerne viel, weil ich eine Prüfung habe.</b> → <b>Ich habe eine Prüfung, deshalb lerne ich viel.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "…, weil ich bin müde. → …, weil ich müde <b>bin</b>.",
+      "s": "Ich kaufe heute ein Geschenk , weil meine Freundin hat morgen Geburtstag .",
+      "a": [
+       9
+      ],
+      "fix": "Ich kaufe heute ein Geschenk, weil meine Freundin morgen Geburtstag hat.",
+      "gw": {
+       "uz": "<b>weil</b> — Nebensatz: tuslangan fe’l eng oxirida. <b>…, weil meine Freundin morgen Geburtstag hat.</b>",
+       "ru": "<b>weil</b> вводит придаточное: спрягаемый глагол в самом конце. <b>…, weil meine Freundin morgen Geburtstag hat.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich habe heute keine Zeit , darum ich kann nicht kommen .",
+      "a": [
+       8
+      ],
+      "fix": "Ich habe heute keine Zeit, darum kann ich nicht kommen.",
+      "gw": {
+       "uz": "<b>darum</b> dan keyin darhol fe’l, keyin ega: <b>darum kann ich …</b> «darum ich kann» — xato.",
+       "ru": "Сразу после <b>darum</b> — глагол, потом подлежащее: <b>darum kann ich …</b> «darum ich kann» — ошибка."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Es regnet , deshalb wir zu Hause bleiben .",
+      "a": [
+       7
+      ],
+      "fix": "Es regnet, deshalb bleiben wir zu Hause.",
+      "gw": {
+       "uz": "<b>deshalb</b> Nebensatz emas — fe’l oxiriga ketmaydi. To‘g‘ri: <b>deshalb bleiben wir zu Hause.</b>",
+       "ru": "<b>deshalb</b> не вводит придаточное — глагол не уходит в конец. Правильно: <b>deshalb bleiben wir zu Hause.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Wir sind gute Freunde , deswegen wir uns seit der Grundschule kennen .",
+      "a": [
+       5
+      ],
+      "fix": "Wir sind gute Freunde, weil wir uns seit der Grundschule kennen.",
+      "gw": {
+       "uz": "Ikkinchi qism — sabab (nima uchun do‘stmiz?), fe’l esa oxirida. Demak <b>weil</b> kerak: <b>…, weil wir uns seit der Grundschule kennen.</b>",
+       "ru": "Вторая часть — причина (почему мы друзья?), и глагол в конце. Значит, нужен <b>weil</b>: <b>…, weil wir uns seit der Grundschule kennen.</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wortbildung: Adjektive als Nomen</h4><table class=\"ex-tb\"><tr><th></th><th>der / die</th><th>ein / eine</th><th>Plural</th></tr><tr><td>Nominativ</td><td>der Bekannt<b>e</b> · die Bekannt<b>e</b></td><td>ein Bekannt<b>er</b> · eine Bekannt<b>e</b></td><td>die Bekannt<b>en</b> · Bekannt<b>e</b></td></tr><tr><td>Akkusativ</td><td>den Bekannt<b>en</b></td><td>einen Bekannt<b>en</b></td><td>die Bekannt<b>en</b> · Bekannt<b>e</b></td></tr><tr><td>Dativ</td><td>dem / der Bekannt<b>en</b></td><td>einem / einer Bekannt<b>en</b></td><td>den Bekannt<b>en</b></td></tr></table><p class=\"ex-note\">Ba’zi sifatlar ot bo‘lib ishlatiladi: bekannt → <b>der / die Bekannte</b>, verwandt → <b>der / die Verwandte</b>, erwachsen → <b>der / die Erwachsene</b>, jugendlich → <b>der / die Jugendliche</b>. Bosh harf bilan yoziladi, lekin qo‘shimchasi sifatdagidek o‘zgaradi: der Bekannt<b>e</b>, ein Bekannt<b>er</b>, mit einem Bekannt<b>en</b>.</p>",
+      "ru": "<h4>Wortbildung: Adjektive als Nomen</h4><table class=\"ex-tb\"><tr><th></th><th>der / die</th><th>ein / eine</th><th>Plural</th></tr><tr><td>Nominativ</td><td>der Bekannt<b>e</b> · die Bekannt<b>e</b></td><td>ein Bekannt<b>er</b> · eine Bekannt<b>e</b></td><td>die Bekannt<b>en</b> · Bekannt<b>e</b></td></tr><tr><td>Akkusativ</td><td>den Bekannt<b>en</b></td><td>einen Bekannt<b>en</b></td><td>die Bekannt<b>en</b> · Bekannt<b>e</b></td></tr><tr><td>Dativ</td><td>dem / der Bekannt<b>en</b></td><td>einem / einer Bekannt<b>en</b></td><td>den Bekannt<b>en</b></td></tr></table><p class=\"ex-note\">Некоторые прилагательные употребляются как существительные: bekannt → <b>der / die Bekannte</b>, verwandt → <b>der / die Verwandte</b>, erwachsen → <b>der / die Erwachsene</b>, jugendlich → <b>der / die Jugendliche</b>. Пишутся с большой буквы, но окончания меняются как у прилагательного: der Bekannt<b>e</b>, ein Bekannt<b>er</b>, mit einem Bekannt<b>en</b>.</p>"
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "bsp": "Das ist eine Verwandt___ von mir. → eine … → Verwandt<b>e</b>",
+      "s": "Laylo ist eine gute Bekannt___ von meiner Mutter.",
+      "a": [
+       [
+        "e"
+       ]
+      ],
+      "gw": {
+       "uz": "Qo‘shimcha artiklga bog‘liq, xuddi sifatdagidek: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ va <b>die</b> (Pl.) → -en, artiklsiz ko‘plik → -e. Misol: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>.",
+       "ru": "Окончание зависит от артикля, как у прилагательного: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ и <b>die</b> (Pl.) → -en, множественное без артикля → -e. Пример: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "Gestern habe ich im Park einen alten Bekannt___ getroffen.",
+      "a": [
+       [
+        "en"
+       ]
+      ],
+      "gw": {
+       "uz": "Qo‘shimcha artiklga bog‘liq, xuddi sifatdagidek: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ va <b>die</b> (Pl.) → -en, artiklsiz ko‘plik → -e. Misol: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>.",
+       "ru": "Окончание зависит от артикля, как у прилагательного: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ и <b>die</b> (Pl.) → -en, множественное без артикля → -e. Пример: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "Mein Cousin ist schon ein Erwachsen___, aber er spielt noch gern mit uns.",
+      "a": [
+       [
+        "er"
+       ]
+      ],
+      "gw": {
+       "uz": "Qo‘shimcha artiklga bog‘liq, xuddi sifatdagidek: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ va <b>die</b> (Pl.) → -en, artiklsiz ko‘plik → -e. Misol: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>.",
+       "ru": "Окончание зависит от артикля, как у прилагательного: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ и <b>die</b> (Pl.) → -en, множественное без артикля → -e. Пример: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "Am Wochenende besuchen uns alle Verwandt___ aus Samarkand.",
+      "a": [
+       [
+        "en"
+       ]
+      ],
+      "gw": {
+       "uz": "Qo‘shimcha artiklga bog‘liq, xuddi sifatdagidek: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ va <b>die</b> (Pl.) → -en, artiklsiz ko‘plik → -e. Misol: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>.",
+       "ru": "Окончание зависит от артикля, как у прилагательного: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ и <b>die</b> (Pl.) → -en, множественное без артикля → -e. Пример: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "Für Jugendlich___ ist der Eintritt kostenlos.",
+      "a": [
+       [
+        "e"
+       ]
+      ],
+      "gw": {
+       "uz": "Qo‘shimcha artiklga bog‘liq, xuddi sifatdagidek: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ va <b>die</b> (Pl.) → -en, artiklsiz ko‘plik → -e. Misol: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>.",
+       "ru": "Окончание зависит от артикля, как у прилагательного: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ и <b>die</b> (Pl.) → -en, множественное без артикля → -e. Пример: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "Ich habe lange mit einem Verwandt___ in Deutschland telefoniert.",
+      "a": [
+       [
+        "en"
+       ]
+      ],
+      "gw": {
+       "uz": "Qo‘shimcha artiklga bog‘liq, xuddi sifatdagidek: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ va <b>die</b> (Pl.) → -en, artiklsiz ko‘plik → -e. Misol: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>.",
+       "ru": "Окончание зависит от артикля, как у прилагательного: <b>der / die</b> → -e, <b>ein</b> (m, Nom.) → -er, <b>eine</b> → -e, Akkusativ (m), Dativ и <b>die</b> (Pl.) → -en, множественное без артикля → -e. Пример: <b>ein Bekannter</b> · <b>mit dem Bekannten</b> · <b>viele Bekannte</b>."
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

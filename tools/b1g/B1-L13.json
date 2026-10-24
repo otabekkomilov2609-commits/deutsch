@@ -1,0 +1,587 @@
+{
+ "id": "B1-b12-13-G",
+ "meta": {
+  "title": "Grammatik · sowohl … als auch · nicht nur …, sondern auch · weder … noch",
+  "stitle": "sowohl … als auch · nicht nur …, sondern auch · weder … noch · -lang"
+ },
+ "ex": {
+  "title": "Lektion 13 · Grammatik",
+  "sub": "sowohl … als auch · nicht nur …, sondern auch · weder … noch · -lang",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Zweiteilige Konnektoren</h4>\n<table class=\"ex-tb\"><tr><th>Konnektor</th><th>Bedeutung</th><th>Beispiel</th></tr>\n<tr><td><b>sowohl</b> … <b>als auch</b></td><td>A + B (beides)</td><td>Hirsche leben <b>sowohl</b> im Wald <b>als auch</b> in den Bergen.</td></tr>\n<tr><td><b>nicht nur</b> …, <b>sondern auch</b></td><td>A + B (B ist besonders wichtig)</td><td>Mein Hund ist <b>nicht nur</b> klug, <b>sondern auch</b> sehr lieb.</td></tr>\n<tr><td><b>weder</b> … <b>noch</b></td><td>nicht A + nicht B</td><td>Der Hamster frisst <b>weder</b> Fleisch <b>noch</b> Fisch.</td></tr></table>\n<p class=\"ex-note\">Ikki qismli bog‘lovchi ikki so‘z yoki gap bo‘lagini bog‘laydi. Vergul faqat <b>sondern</b> oldidan qo‘yiladi. <b>weder … noch</b> ning o‘zi inkor — yana <b>nicht / kein</b> qo‘shilmaydi.</p>",
+      "ru": "<h4>Zweiteilige Konnektoren</h4>\n<table class=\"ex-tb\"><tr><th>Konnektor</th><th>Bedeutung</th><th>Beispiel</th></tr>\n<tr><td><b>sowohl</b> … <b>als auch</b></td><td>A + B (beides)</td><td>Hirsche leben <b>sowohl</b> im Wald <b>als auch</b> in den Bergen.</td></tr>\n<tr><td><b>nicht nur</b> …, <b>sondern auch</b></td><td>A + B (B ist besonders wichtig)</td><td>Mein Hund ist <b>nicht nur</b> klug, <b>sondern auch</b> sehr lieb.</td></tr>\n<tr><td><b>weder</b> … <b>noch</b></td><td>nicht A + nicht B</td><td>Der Hamster frisst <b>weder</b> Fleisch <b>noch</b> Fisch.</td></tr></table>\n<p class=\"ex-note\">Двойной союз связывает два слова или две части предложения. Запятая ставится только перед <b>sondern</b>. <b>weder … noch</b> уже содержит отрицание — <b>nicht / kein</b> не добавляют.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die zweiteiligen Konnektoren (beide Teile).",
+      "bsp": "Ich mag sowohl Tee als auch Kaffee. → <b>sowohl</b> … <b>als auch</b>",
+      "s": "Tauben leben sowohl in der Stadt als auch auf dem Land .",
+      "a": [
+       2,
+       6,
+       7
+      ],
+      "gw": {
+       "uz": "Ikki qismli bog‘lovchining ikkala qismini ham belgilang: <b>sowohl … als auch</b> (ham …, ham …), <b>nicht nur …, sondern auch</b> (nafaqat …, balki … ham), <b>weder … noch</b> (na …, na …). Misol: <b>Er spricht sowohl Russisch als auch Deutsch.</b>",
+       "ru": "Отметьте обе части двойного союза: <b>sowohl … als auch</b> (и …, и …), <b>nicht nur …, sondern auch</b> (не только …, но и …), <b>weder … noch</b> (ни …, ни …). Пример: <b>Er spricht sowohl Russisch als auch Deutsch.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die zweiteiligen Konnektoren (beide Teile).",
+      "s": "Mein Kater ist nicht nur faul , sondern auch frech .",
+      "a": [
+       3,
+       4,
+       7,
+       8
+      ],
+      "gw": {
+       "uz": "Ikki qismli bog‘lovchining ikkala qismini ham belgilang: <b>sowohl … als auch</b> (ham …, ham …), <b>nicht nur …, sondern auch</b> (nafaqat …, balki … ham), <b>weder … noch</b> (na …, na …). Misol: <b>Er spricht sowohl Russisch als auch Deutsch.</b>",
+       "ru": "Отметьте обе части двойного союза: <b>sowohl … als auch</b> (и …, и …), <b>nicht nur …, sondern auch</b> (не только …, но и …), <b>weder … noch</b> (ни …, ни …). Пример: <b>Er spricht sowohl Russisch als auch Deutsch.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die zweiteiligen Konnektoren (beide Teile).",
+      "s": "Diese Tiere darf man weder füttern noch anfassen .",
+      "a": [
+       4,
+       6
+      ],
+      "gw": {
+       "uz": "Ikki qismli bog‘lovchining ikkala qismini ham belgilang: <b>sowohl … als auch</b> (ham …, ham …), <b>nicht nur …, sondern auch</b> (nafaqat …, balki … ham), <b>weder … noch</b> (na …, na …). Misol: <b>Er spricht sowohl Russisch als auch Deutsch.</b>",
+       "ru": "Отметьте обе части двойного союза: <b>sowohl … als auch</b> (и …, и …), <b>nicht nur …, sondern auch</b> (не только …, но и …), <b>weder … noch</b> (ни …, ни …). Пример: <b>Er spricht sowohl Russisch als auch Deutsch.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die zweiteiligen Konnektoren (beide Teile).",
+      "s": "Im Zoo sieht man sowohl Tiger als auch Affen .",
+      "a": [
+       4,
+       6,
+       7
+      ],
+      "gw": {
+       "uz": "Ikki qismli bog‘lovchining ikkala qismini ham belgilang: <b>sowohl … als auch</b> (ham …, ham …), <b>nicht nur …, sondern auch</b> (nafaqat …, balki … ham), <b>weder … noch</b> (na …, na …). Misol: <b>Er spricht sowohl Russisch als auch Deutsch.</b>",
+       "ru": "Отметьте обе части двойного союза: <b>sowohl … als auch</b> (и …, и …), <b>nicht nur …, sondern auch</b> (не только …, но и …), <b>weder … noch</b> (ни …, ни …). Пример: <b>Er spricht sowohl Russisch als auch Deutsch.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Mia isst ___ Fisch als auch Fleisch. → + + → ✓ <b>sowohl</b>",
+      "q": "Mein Hund frisst ___ Fleisch als auch Gemüse.",
+      "o": [
+       "weder",
+       "sowohl",
+       "nicht nur"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Ma’noga qarang: ikkalasi ham bor (+ +) — <b>sowohl … als auch</b> yoki <b>nicht nur …, sondern auch</b>; ikkalasi ham yo‘q (– –) — <b>weder … noch</b>. Juftlar aralashtirilmaydi: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Misol: <b>Er hat weder Zeit noch Geld.</b>",
+       "ru": "Смотрите на смысл: есть и то, и другое (+ +) — <b>sowohl … als auch</b> или <b>nicht nur …, sondern auch</b>; нет ни того, ни другого (– –) — <b>weder … noch</b>. Пары не смешиваются: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Пример: <b>Er hat weder Zeit noch Geld.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Timur hat keinen Hund und keine Katze. Er hat ___ einen Hund noch eine Katze.",
+      "o": [
+       "sowohl",
+       "nicht",
+       "weder"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Ma’noga qarang: ikkalasi ham bor (+ +) — <b>sowohl … als auch</b> yoki <b>nicht nur …, sondern auch</b>; ikkalasi ham yo‘q (– –) — <b>weder … noch</b>. Juftlar aralashtirilmaydi: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Misol: <b>Er hat weder Zeit noch Geld.</b>",
+       "ru": "Смотрите на смысл: есть и то, и другое (+ +) — <b>sowohl … als auch</b> или <b>nicht nur …, sondern auch</b>; нет ни того, ни другого (– –) — <b>weder … noch</b>. Пары не смешиваются: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Пример: <b>Er hat weder Zeit noch Geld.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Der Hirsch ist nicht nur groß, ___ auch sehr schnell.",
+      "o": [
+       "sondern",
+       "oder",
+       "als"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Ma’noga qarang: ikkalasi ham bor (+ +) — <b>sowohl … als auch</b> yoki <b>nicht nur …, sondern auch</b>; ikkalasi ham yo‘q (– –) — <b>weder … noch</b>. Juftlar aralashtirilmaydi: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Misol: <b>Er hat weder Zeit noch Geld.</b>",
+       "ru": "Смотрите на смысл: есть и то, и другое (+ +) — <b>sowohl … als auch</b> или <b>nicht nur …, sondern auch</b>; нет ни того, ни другого (– –) — <b>weder … noch</b>. Пары не смешиваются: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Пример: <b>Er hat weder Zeit noch Geld.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Malika spricht sowohl Deutsch ___ Englisch.",
+      "o": [
+       "noch",
+       "als auch",
+       "sondern auch"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Ma’noga qarang: ikkalasi ham bor (+ +) — <b>sowohl … als auch</b> yoki <b>nicht nur …, sondern auch</b>; ikkalasi ham yo‘q (– –) — <b>weder … noch</b>. Juftlar aralashtirilmaydi: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Misol: <b>Er hat weder Zeit noch Geld.</b>",
+       "ru": "Смотрите на смысл: есть и то, и другое (+ +) — <b>sowohl … als auch</b> или <b>nicht nur …, sondern auch</b>; нет ни того, ни другого (– –) — <b>weder … noch</b>. Пары не смешиваются: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Пример: <b>Er hat weder Zeit noch Geld.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Unsere Katze ist sehr alt. Sie kann ___ gut sehen noch gut hören.",
+      "o": [
+       "nicht",
+       "sowohl",
+       "weder"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Ma’noga qarang: ikkalasi ham bor (+ +) — <b>sowohl … als auch</b> yoki <b>nicht nur …, sondern auch</b>; ikkalasi ham yo‘q (– –) — <b>weder … noch</b>. Juftlar aralashtirilmaydi: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Misol: <b>Er hat weder Zeit noch Geld.</b>",
+       "ru": "Смотрите на смысл: есть и то, и другое (+ +) — <b>sowohl … als auch</b> или <b>nicht nur …, sondern auch</b>; нет ни того, ни другого (– –) — <b>weder … noch</b>. Пары не смешиваются: sowohl → <b>als auch</b>, nicht nur → <b>sondern auch</b>, weder → <b>noch</b>. Пример: <b>Er hat weder Zeit noch Geld.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *sowohl*, *als auch*, *nicht nur*, *sondern auch*, *weder*, *noch*.",
+      "bsp": "Ich trinke ___ Tee ___ Kaffee. (– –) → <b>weder</b> … <b>noch</b>",
+      "s": "Im Wald leben ___ Hirsche ___ Füchse.",
+      "a": [
+       [
+        "sowohl"
+       ],
+       [
+        "als auch"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval ma’noni aniqlang (+ + yoki – –), keyin juftni to‘liq qo‘ying. Vergul faqat <b>sondern</b> oldidan; <b>als auch</b> va <b>noch</b> oldidan vergul yo‘q. Misol: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>",
+       "ru": "Сначала определите смысл (+ + или – –), затем вставьте пару целиком. Запятая — только перед <b>sondern</b>; перед <b>als auch</b> и <b>noch</b> запятой нет. Пример: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *sowohl*, *als auch*, *nicht nur*, *sondern auch*, *weder*, *noch*.",
+      "s": "Papageien sind ___ schön, ___ sehr klug.",
+      "a": [
+       [
+        "nicht nur"
+       ],
+       [
+        "sondern auch"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval ma’noni aniqlang (+ + yoki – –), keyin juftni to‘liq qo‘ying. Vergul faqat <b>sondern</b> oldidan; <b>als auch</b> va <b>noch</b> oldidan vergul yo‘q. Misol: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>",
+       "ru": "Сначала определите смысл (+ + или – –), затем вставьте пару целиком. Запятая — только перед <b>sondern</b>; перед <b>als auch</b> и <b>noch</b> запятой нет. Пример: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *sowohl*, *als auch*, *nicht nur*, *sondern auch*, *weder*, *noch*.",
+      "s": "Ich habe ___ Zeit ___ Geld für ein Haustier.",
+      "a": [
+       [
+        "weder"
+       ],
+       [
+        "noch"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval ma’noni aniqlang (+ + yoki – –), keyin juftni to‘liq qo‘ying. Vergul faqat <b>sondern</b> oldidan; <b>als auch</b> va <b>noch</b> oldidan vergul yo‘q. Misol: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>",
+       "ru": "Сначала определите смысл (+ + или – –), затем вставьте пару целиком. Запятая — только перед <b>sondern</b>; перед <b>als auch</b> и <b>noch</b> запятой нет. Пример: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *sowohl*, *als auch*, *nicht nur*, *sondern auch*, *weder*, *noch*.",
+      "s": "Hallo! Ich habe seit einem Monat einen kleinen Hund.\nEr spielt ___ mit Kindern ___ mit anderen Hunden.\nAber er ist ___ müde ___ faul: Er will immer nur spielen!\nWer hat Tipps für mich?",
+      "a": [
+       [
+        "sowohl"
+       ],
+       [
+        "als auch"
+       ],
+       [
+        "weder"
+       ],
+       [
+        "noch"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval ma’noni aniqlang (+ + yoki – –), keyin juftni to‘liq qo‘ying. Vergul faqat <b>sondern</b> oldidan; <b>als auch</b> va <b>noch</b> oldidan vergul yo‘q. Misol: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>",
+       "ru": "Сначала определите смысл (+ + или – –), затем вставьте пару целиком. Запятая — только перед <b>sondern</b>; перед <b>als auch</b> и <b>noch</b> запятой нет. Пример: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *sowohl*, *als auch*, *nicht nur*, *sondern auch*, *weder*, *noch*.",
+      "s": "▪ Hast du die Tauben auf unserem Balkon gesehen?\n● Ja! Sie sind ___ laut, ___ ziemlich frech.\n▪ Stimmt. Sie lassen ___ die Blumen ___ die Tomaten in Ruhe.",
+      "a": [
+       [
+        "nicht nur"
+       ],
+       [
+        "sondern auch"
+       ],
+       [
+        "weder"
+       ],
+       [
+        "noch"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval ma’noni aniqlang (+ + yoki – –), keyin juftni to‘liq qo‘ying. Vergul faqat <b>sondern</b> oldidan; <b>als auch</b> va <b>noch</b> oldidan vergul yo‘q. Misol: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>",
+       "ru": "Сначала определите смысл (+ + или – –), затем вставьте пару целиком. Запятая — только перед <b>sondern</b>; перед <b>als auch</b> и <b>noch</b> запятой нет. Пример: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *sowohl*, *als auch*, *nicht nur*, *sondern auch*, *weder*, *noch*.",
+      "s": "Der Tiger ist in der Lage, ___ am Tag ___ in der Nacht zu jagen.",
+      "a": [
+       [
+        "sowohl"
+       ],
+       [
+        "als auch"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval ma’noni aniqlang (+ + yoki – –), keyin juftni to‘liq qo‘ying. Vergul faqat <b>sondern</b> oldidan; <b>als auch</b> va <b>noch</b> oldidan vergul yo‘q. Misol: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>",
+       "ru": "Сначала определите смысл (+ + или – –), затем вставьте пару целиком. Запятая — только перед <b>sondern</b>; перед <b>als auch</b> и <b>noch</b> запятой нет. Пример: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *sowohl*, *als auch*, *nicht nur*, *sondern auch*, *weder*, *noch*.",
+      "s": "Unser Nachbar hat ___ einen Hund, ___ drei Katzen und zwei Papageien.",
+      "a": [
+       [
+        "nicht nur"
+       ],
+       [
+        "sondern auch"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval ma’noni aniqlang (+ + yoki – –), keyin juftni to‘liq qo‘ying. Vergul faqat <b>sondern</b> oldidan; <b>als auch</b> va <b>noch</b> oldidan vergul yo‘q. Misol: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>",
+       "ru": "Сначала определите смысл (+ + или – –), затем вставьте пару целиком. Запятая — только перед <b>sondern</b>; перед <b>als auch</b> и <b>noch</b> запятой нет. Пример: <b>Die Taube ist nicht nur schön, sondern auch klug.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Ich mag Hunde. Ich mag auch Katzen. (sowohl … als auch) → <b>Ich mag sowohl Hunde als auch Katzen.</b>",
+      "q": "Ein Fuchs frisst Mäuse. Er frisst auch Früchte. (sowohl … als auch)",
+      "w": [
+       "Ein Fuchs",
+       "frisst",
+       "sowohl",
+       "Mäuse",
+       "als auch",
+       "Früchte"
+      ],
+      "a": "Ein Fuchs frisst sowohl Mäuse als auch Früchte.",
+      "alt": [
+       "Ein Fuchs frisst sowohl Früchte als auch Mäuse."
+      ],
+      "gw": {
+       "uz": "Ikki gapdagi bir xil qismni bir marta yozing, farqli qismlarni juft bog‘lovchi bilan bog‘lang. Fe’l 2-o‘rinda qoladi, bog‘lovchi qismlari bog‘lanadigan so‘zlar oldida turadi. Misol: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>",
+       "ru": "Общую часть двух предложений пишите один раз, а разные части соедините двойным союзом. Глагол остаётся на 2-м месте, части союза стоят перед соединяемыми словами. Пример: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Der Hirsch ist schön. Er ist auch stark. (nicht nur …, sondern auch)",
+      "w": [
+       "Der Hirsch",
+       "ist",
+       "nicht nur",
+       "schön,",
+       "sondern auch",
+       "stark"
+      ],
+      "a": "Der Hirsch ist nicht nur schön, sondern auch stark.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikki gapdagi bir xil qismni bir marta yozing, farqli qismlarni juft bog‘lovchi bilan bog‘lang. Fe’l 2-o‘rinda qoladi, bog‘lovchi qismlari bog‘lanadigan so‘zlar oldida turadi. Misol: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>",
+       "ru": "Общую часть двух предложений пишите один раз, а разные части соедините двойным союзом. Глагол остаётся на 2-м месте, части союза стоят перед соединяемыми словами. Пример: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Mein Hamster ist nicht faul. Er ist auch nicht dumm. (weder … noch)",
+      "w": [
+       "Mein Hamster",
+       "ist",
+       "weder",
+       "faul",
+       "noch",
+       "dumm"
+      ],
+      "a": "Mein Hamster ist weder faul noch dumm.",
+      "alt": [
+       "Mein Hamster ist weder dumm noch faul."
+      ],
+      "gw": {
+       "uz": "Ikki gapdagi bir xil qismni bir marta yozing, farqli qismlarni juft bog‘lovchi bilan bog‘lang. Fe’l 2-o‘rinda qoladi, bog‘lovchi qismlari bog‘lanadigan so‘zlar oldida turadi. Misol: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>",
+       "ru": "Общую часть двух предложений пишите один раз, а разные части соедините двойным союзом. Глагол остаётся на 2-м месте, части союза стоят перед соединяемыми словами. Пример: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Die Kinder füttern die Enten. Sie füttern auch die Tauben. (sowohl … als auch)",
+      "w": [
+       "Die Kinder",
+       "füttern",
+       "sowohl",
+       "die Enten",
+       "als auch",
+       "die Tauben"
+      ],
+      "a": "Die Kinder füttern sowohl die Enten als auch die Tauben.",
+      "alt": [
+       "Die Kinder füttern sowohl die Tauben als auch die Enten."
+      ],
+      "gw": {
+       "uz": "Ikki gapdagi bir xil qismni bir marta yozing, farqli qismlarni juft bog‘lovchi bilan bog‘lang. Fe’l 2-o‘rinda qoladi, bog‘lovchi qismlari bog‘lanadigan so‘zlar oldida turadi. Misol: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>",
+       "ru": "Общую часть двух предложений пишите один раз, а разные части соедините двойным союзом. Глагол остаётся на 2-м месте, части союза стоят перед соединяемыми словами. Пример: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Ich habe keine Katze. Ich habe auch keinen Hund. (weder … noch)",
+      "w": [
+       "Ich",
+       "habe",
+       "weder",
+       "eine Katze",
+       "noch",
+       "einen Hund"
+      ],
+      "a": "Ich habe weder eine Katze noch einen Hund.",
+      "alt": [
+       "Ich habe weder einen Hund noch eine Katze."
+      ],
+      "gw": {
+       "uz": "Ikki gapdagi bir xil qismni bir marta yozing, farqli qismlarni juft bog‘lovchi bilan bog‘lang. Fe’l 2-o‘rinda qoladi, bog‘lovchi qismlari bog‘lanadigan so‘zlar oldida turadi. Misol: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>",
+       "ru": "Общую часть двух предложений пишите один раз, а разные части соедините двойным союзом. Глагол остаётся на 2-м месте, части союза стоят перед соединяемыми словами. Пример: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Man sieht Tauben in Parks. Man sieht sie auch auf Bahnhöfen. (nicht nur …, sondern auch)",
+      "w": [
+       "Man",
+       "sieht",
+       "Tauben",
+       "nicht nur",
+       "in Parks,",
+       "sondern auch",
+       "auf Bahnhöfen"
+      ],
+      "a": "Man sieht Tauben nicht nur in Parks, sondern auch auf Bahnhöfen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikki gapdagi bir xil qismni bir marta yozing, farqli qismlarni juft bog‘lovchi bilan bog‘lang. Fe’l 2-o‘rinda qoladi, bog‘lovchi qismlari bog‘lanadigan so‘zlar oldida turadi. Misol: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>",
+       "ru": "Общую часть двух предложений пишите один раз, а разные части соедините двойным союзом. Глагол остаётся на 2-м месте, части союза стоят перед соединяемыми словами. Пример: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Der Papagei kann sprechen. Er kann auch singen. (sowohl … als auch)",
+      "w": [
+       "Der Papagei",
+       "kann",
+       "sowohl",
+       "sprechen",
+       "als auch",
+       "singen"
+      ],
+      "a": "Der Papagei kann sowohl sprechen als auch singen.",
+      "alt": [
+       "Der Papagei kann sowohl singen als auch sprechen."
+      ],
+      "gw": {
+       "uz": "Ikki gapdagi bir xil qismni bir marta yozing, farqli qismlarni juft bog‘lovchi bilan bog‘lang. Fe’l 2-o‘rinda qoladi, bog‘lovchi qismlari bog‘lanadigan so‘zlar oldida turadi. Misol: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>",
+       "ru": "Общую часть двух предложений пишите один раз, а разные части соедините двойным союзом. Глагол остаётся на 2-м месте, части союза стоят перед соединяемыми словами. Пример: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Diese Vögel bauen ihr Nest nicht auf Bäumen. Sie bauen es auch nicht auf Häusern. (weder … noch)",
+      "w": [
+       "Diese Vögel",
+       "bauen",
+       "ihr Nest",
+       "weder",
+       "auf Bäumen",
+       "noch",
+       "auf Häusern"
+      ],
+      "a": "Diese Vögel bauen ihr Nest weder auf Bäumen noch auf Häusern.",
+      "alt": [
+       "Diese Vögel bauen ihr Nest weder auf Häusern noch auf Bäumen."
+      ],
+      "gw": {
+       "uz": "Ikki gapdagi bir xil qismni bir marta yozing, farqli qismlarni juft bog‘lovchi bilan bog‘lang. Fe’l 2-o‘rinda qoladi, bog‘lovchi qismlari bog‘lanadigan so‘zlar oldida turadi. Misol: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>",
+       "ru": "Общую часть двух предложений пишите один раз, а разные части соедините двойным союзом. Глагол остаётся на 2-м месте, части союза стоят перед соединяемыми словами. Пример: Ich trinke keinen Tee. Ich trinke auch keinen Kaffee. → <b>Ich trinke weder Tee noch Kaffee.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Füchse leben sowohl im Wald oder in der Stadt. → <b>oder</b> ✗ → sowohl … <b>als auch</b>",
+      "s": "Meine Schwester mag weder keine Spinnen noch Schlangen .",
+      "a": [
+       4
+      ],
+      "fix": "Meine Schwester mag weder Spinnen noch Schlangen.",
+      "gw": {
+       "uz": "Ko‘p uchraydigan xatolar: <b>weder … noch</b> bilan yana <b>kein / nicht</b> ishlatish (weder o‘zi inkor) va juftni aralashtirish: <b>sowohl … und</b>, <b>nicht nur … aber</b>, <b>weder … oder</b>. Misol: <b>Ich habe weder Zeit noch Lust.</b>",
+       "ru": "Типичные ошибки: <b>kein / nicht</b> вместе с <b>weder … noch</b> (weder уже отрицание) и смешивание пар: <b>sowohl … und</b>, <b>nicht nur … aber</b>, <b>weder … oder</b>. Пример: <b>Ich habe weder Zeit noch Lust.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Der Tiger ist nicht nur schön , aber auch gefährlich .",
+      "a": [
+       7
+      ],
+      "fix": "Der Tiger ist nicht nur schön, sondern auch gefährlich.",
+      "gw": {
+       "uz": "Ko‘p uchraydigan xatolar: <b>weder … noch</b> bilan yana <b>kein / nicht</b> ishlatish (weder o‘zi inkor) va juftni aralashtirish: <b>sowohl … und</b>, <b>nicht nur … aber</b>, <b>weder … oder</b>. Misol: <b>Ich habe weder Zeit noch Lust.</b>",
+       "ru": "Типичные ошибки: <b>kein / nicht</b> вместе с <b>weder … noch</b> (weder уже отрицание) и смешивание пар: <b>sowohl … und</b>, <b>nicht nur … aber</b>, <b>weder … oder</b>. Пример: <b>Ich habe weder Zeit noch Lust.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Meine Tante hat sowohl einen Hund und auch eine Katze .",
+      "a": [
+       6
+      ],
+      "fix": "Meine Tante hat sowohl einen Hund als auch eine Katze.",
+      "gw": {
+       "uz": "Ko‘p uchraydigan xatolar: <b>weder … noch</b> bilan yana <b>kein / nicht</b> ishlatish (weder o‘zi inkor) va juftni aralashtirish: <b>sowohl … und</b>, <b>nicht nur … aber</b>, <b>weder … oder</b>. Misol: <b>Ich habe weder Zeit noch Lust.</b>",
+       "ru": "Типичные ошибки: <b>kein / nicht</b> вместе с <b>weder … noch</b> (weder уже отрицание) и смешивание пар: <b>sowohl … und</b>, <b>nicht nur … aber</b>, <b>weder … oder</b>. Пример: <b>Ich habe weder Zeit noch Lust.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Unter dem Schnee findet der Hirsch weder Gras oder Blätter .",
+      "a": [
+       8
+      ],
+      "fix": "Unter dem Schnee findet der Hirsch weder Gras noch Blätter.",
+      "gw": {
+       "uz": "Ko‘p uchraydigan xatolar: <b>weder … noch</b> bilan yana <b>kein / nicht</b> ishlatish (weder o‘zi inkor) va juftni aralashtirish: <b>sowohl … und</b>, <b>nicht nur … aber</b>, <b>weder … oder</b>. Misol: <b>Ich habe weder Zeit noch Lust.</b>",
+       "ru": "Типичные ошибки: <b>kein / nicht</b> вместе с <b>weder … noch</b> (weder уже отрицание) и смешивание пар: <b>sowohl … und</b>, <b>nicht nur … aber</b>, <b>weder … oder</b>. Пример: <b>Ich habe weder Zeit noch Lust.</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wortbildung: Nomen + <i>-lang</i></h4>\n<table class=\"ex-tb\"><tr><th>Nomen (Plural)</th><th>+ -lang</th><th>Bedeutung</th></tr>\n<tr><td>die Minuten</td><td><b>minutenlang</b></td><td>viele Minuten</td></tr>\n<tr><td>die Stunden</td><td><b>stundenlang</b></td><td>viele Stunden</td></tr>\n<tr><td>die Tage</td><td><b>tagelang</b></td><td>viele Tage</td></tr>\n<tr><td>die Wochen</td><td><b>wochenlang</b></td><td>viele Wochen</td></tr>\n<tr><td>die Monate</td><td><b>monatelang</b></td><td>viele Monate</td></tr>\n<tr><td>die Jahre</td><td><b>jahrelang</b></td><td>viele Jahre</td></tr></table>\n<p class=\"ex-note\">Ko‘plik shakli + <b>-lang</b> = «ko‘p … davomida». Bitta so‘z, kichik harf bilan yoziladi: Ich habe <b>stundenlang</b> gewartet. = Ich habe viele Stunden gewartet.</p>",
+      "ru": "<h4>Wortbildung: Nomen + <i>-lang</i></h4>\n<table class=\"ex-tb\"><tr><th>Nomen (Plural)</th><th>+ -lang</th><th>Bedeutung</th></tr>\n<tr><td>die Minuten</td><td><b>minutenlang</b></td><td>viele Minuten</td></tr>\n<tr><td>die Stunden</td><td><b>stundenlang</b></td><td>viele Stunden</td></tr>\n<tr><td>die Tage</td><td><b>tagelang</b></td><td>viele Tage</td></tr>\n<tr><td>die Wochen</td><td><b>wochenlang</b></td><td>viele Wochen</td></tr>\n<tr><td>die Monate</td><td><b>monatelang</b></td><td>viele Monate</td></tr>\n<tr><td>die Jahre</td><td><b>jahrelang</b></td><td>viele Jahre</td></tr></table>\n<p class=\"ex-note\">Форма множественного числа + <b>-lang</b> = «много … подряд». Пишется одним словом, с маленькой буквы: Ich habe <b>stundenlang</b> gewartet. = Ich habe viele Stunden gewartet.</p>"
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *stundenlang*, *tagelang*, *wochenlang*, *monatelang*, *jahrelang*.",
+      "bsp": "Am Anfang vom Film passiert ___ nichts. (viele Minuten) → <b>minutenlang</b>",
+      "s": "Mein Bruder spielt ___ mit seiner Katze – von 14 bis 18 Uhr!",
+      "a": [
+       [
+        "stundenlang"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapdagi vaqtga qarang (soatlar, kunlar, haftalar …) va mos so‘zni tanlang: ko‘plik + <b>-lang</b>. Misol: von Montag bis Freitag → <b>tagelang</b>; fünf Jahre → <b>jahrelang</b>.",
+       "ru": "Посмотрите на время в предложении (часы, дни, недели …) и выберите нужное слово: множественное число + <b>-lang</b>. Пример: von Montag bis Freitag → <b>tagelang</b>; fünf Jahre → <b>jahrelang</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *stundenlang*, *tagelang*, *wochenlang*, *monatelang*, *jahrelang*.",
+      "s": "Der Hund war krank und hat ___ nichts gefressen – von Montag bis Freitag.",
+      "a": [
+       [
+        "tagelang"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapdagi vaqtga qarang (soatlar, kunlar, haftalar …) va mos so‘zni tanlang: ko‘plik + <b>-lang</b>. Misol: von Montag bis Freitag → <b>tagelang</b>; fünf Jahre → <b>jahrelang</b>.",
+       "ru": "Посмотрите на время в предложении (часы, дни, недели …) и выберите нужное слово: множественное число + <b>-lang</b>. Пример: von Montag bis Freitag → <b>tagelang</b>; fünf Jahre → <b>jahrelang</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *stundenlang*, *tagelang*, *wochenlang*, *monatelang*, *jahrelang*.",
+      "s": "Die Taube hat ___ auf ihren Eiern gesessen – fast drei Wochen.",
+      "a": [
+       [
+        "wochenlang"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapdagi vaqtga qarang (soatlar, kunlar, haftalar …) va mos so‘zni tanlang: ko‘plik + <b>-lang</b>. Misol: von Montag bis Freitag → <b>tagelang</b>; fünf Jahre → <b>jahrelang</b>.",
+       "ru": "Посмотрите на время в предложении (часы, дни, недели …) и выберите нужное слово: множественное число + <b>-lang</b>. Пример: von Montag bis Freitag → <b>tagelang</b>; fünf Jahre → <b>jahrelang</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *stundenlang*, *tagelang*, *wochenlang*, *monatelang*, *jahrelang*.",
+      "s": "Im Winter schläft der Bär ___ – von November bis März.",
+      "a": [
+       [
+        "monatelang"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapdagi vaqtga qarang (soatlar, kunlar, haftalar …) va mos so‘zni tanlang: ko‘plik + <b>-lang</b>. Misol: von Montag bis Freitag → <b>tagelang</b>; fünf Jahre → <b>jahrelang</b>.",
+       "ru": "Посмотрите на время в предложении (часы, дни, недели …) и выберите нужное слово: множественное число + <b>-lang</b>. Пример: von Montag bis Freitag → <b>tagelang</b>; fünf Jahre → <b>jahrelang</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *stundenlang*, *tagelang*, *wochenlang*, *monatelang*, *jahrelang*.",
+      "s": "Mein Opa hatte ___ einen Papagei – fast zwanzig Jahre.",
+      "a": [
+       [
+        "jahrelang"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapdagi vaqtga qarang (soatlar, kunlar, haftalar …) va mos so‘zni tanlang: ko‘plik + <b>-lang</b>. Misol: von Montag bis Freitag → <b>tagelang</b>; fünf Jahre → <b>jahrelang</b>.",
+       "ru": "Посмотрите на время в предложении (часы, дни, недели …) и выберите нужное слово: множественное число + <b>-lang</b>. Пример: von Montag bis Freitag → <b>tagelang</b>; fünf Jahre → <b>jahrelang</b>."
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

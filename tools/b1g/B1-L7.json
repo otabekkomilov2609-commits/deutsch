@@ -1,0 +1,553 @@
+{
+ "id": "B1-b11-7-G",
+ "meta": {
+  "title": "Grammatik · Adjektive ohne Artikel",
+  "stitle": "Adjektive ohne Artikel · Nom. · Akk. · Dat. · -chen"
+ },
+ "ex": {
+  "title": "Lektion 7 · Grammatik",
+  "sub": "Adjektive ohne Artikel · Nom. · Akk. · Dat. · -chen",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Adjektive ohne Artikel</h4><table class=\"ex-tb\"><tr><th></th><th>maskulin (der)</th><th>neutral (das)</th><th>feminin (die)</th><th>Plural (die)</th></tr><tr><td>Nom.</td><td>stark<b>er</b> Kaffee</td><td>frisch<b>es</b> Brot</td><td>warm<b>e</b> Suppe</td><td>gut<b>e</b> Freunde</td></tr><tr><td>Akk.</td><td>stark<b>en</b> Kaffee</td><td>frisch<b>es</b> Brot</td><td>warm<b>e</b> Suppe</td><td>gut<b>e</b> Freunde</td></tr><tr><td>Dat.</td><td>mit stark<b>em</b> Kaffee</td><td>mit frisch<b>em</b> Brot</td><td>mit warm<b>er</b> Suppe</td><td>mit gut<b>en</b> Freunde<b>n</b></td></tr></table><p class=\"ex-note\">Artikl bo‘lmasa, sifat artiklning oxirini oladi: d<b>er</b> → gut<b>er</b>, d<b>as</b> → gut<b>es</b>, d<b>em</b> → gut<b>em</b>, d<b>en</b> → gut<b>en</b>. Ko‘p uchraydi: e’lonlarda, sayohat maslahatlarida, ko‘plikda va iboralarda: <b>bei schönem Wetter, in zentraler Lage, mit freundlichen Grüßen</b>.</p>",
+      "ru": "<h4>Adjektive ohne Artikel</h4><table class=\"ex-tb\"><tr><th></th><th>maskulin (der)</th><th>neutral (das)</th><th>feminin (die)</th><th>Plural (die)</th></tr><tr><td>Nom.</td><td>stark<b>er</b> Kaffee</td><td>frisch<b>es</b> Brot</td><td>warm<b>e</b> Suppe</td><td>gut<b>e</b> Freunde</td></tr><tr><td>Akk.</td><td>stark<b>en</b> Kaffee</td><td>frisch<b>es</b> Brot</td><td>warm<b>e</b> Suppe</td><td>gut<b>e</b> Freunde</td></tr><tr><td>Dat.</td><td>mit stark<b>em</b> Kaffee</td><td>mit frisch<b>em</b> Brot</td><td>mit warm<b>er</b> Suppe</td><td>mit gut<b>en</b> Freunde<b>n</b></td></tr></table><p class=\"ex-note\">Если артикля нет, прилагательное берёт окончание артикля: d<b>er</b> → gut<b>er</b>, d<b>as</b> → gut<b>es</b>, d<b>em</b> → gut<b>em</b>, d<b>en</b> → gut<b>en</b>. Часто встречается в объявлениях, советах для путешественников, во множественном числе и в выражениях: <b>bei schönem Wetter, in zentraler Lage, mit freundlichen Grüßen</b>.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Adjektive.",
+      "bsp": "Bei gutem Wetter fahren wir ans Meer. → <b>gutem</b>",
+      "s": "Bei schlechtem Wetter besuchen wir das Museum .",
+      "a": [
+       1
+      ],
+      "gw": {
+       "uz": "Artiklsiz kelgan sifat artikl vazifasini bajaradi — uning oxiri artikl oxiriga o‘xshaydi: <b>dem</b> → gut<b>em</b>, <b>das</b> → frisch<b>es</b>, <b>der</b> (Dat. f) → zentral<b>er</b>. Misol: <b>mit frischem Brot</b>.",
+       "ru": "Прилагательное без артикля выполняет его роль — его окончание похоже на окончание артикля: <b>dem</b> → gut<b>em</b>, <b>das</b> → frisch<b>es</b>, <b>der</b> (Dat. f) → zentral<b>er</b>. Пример: <b>mit frischem Brot</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Adjektive.",
+      "s": "Im Hostel gibt es kostenloses WLAN und leckeres Frühstück .",
+      "a": [
+       4,
+       7
+      ],
+      "gw": {
+       "uz": "Artiklsiz kelgan sifat artikl vazifasini bajaradi — uning oxiri artikl oxiriga o‘xshaydi: <b>dem</b> → gut<b>em</b>, <b>das</b> → frisch<b>es</b>, <b>der</b> (Dat. f) → zentral<b>er</b>. Misol: <b>mit frischem Brot</b>.",
+       "ru": "Прилагательное без артикля выполняет его роль — его окончание похоже на окончание артикля: <b>dem</b> → gut<b>em</b>, <b>das</b> → frisch<b>es</b>, <b>der</b> (Dat. f) → zentral<b>er</b>. Пример: <b>mit frischem Brot</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Adjektive.",
+      "s": "Verkaufe gebrauchten Rucksack in gutem Zustand .",
+      "a": [
+       1,
+       4
+      ],
+      "gw": {
+       "uz": "Artiklsiz kelgan sifat artikl vazifasini bajaradi — uning oxiri artikl oxiriga o‘xshaydi: <b>dem</b> → gut<b>em</b>, <b>das</b> → frisch<b>es</b>, <b>der</b> (Dat. f) → zentral<b>er</b>. Misol: <b>mit frischem Brot</b>.",
+       "ru": "Прилагательное без артикля выполняет его роль — его окончание похоже на окончание артикля: <b>dem</b> → gut<b>em</b>, <b>das</b> → frisch<b>es</b>, <b>der</b> (Dat. f) → zentral<b>er</b>. Пример: <b>mit frischem Brot</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Adjektive.",
+      "s": "Ruhiges Zimmer in zentraler Lage zu vermieten .",
+      "a": [
+       0,
+       3
+      ],
+      "gw": {
+       "uz": "Artiklsiz kelgan sifat artikl vazifasini bajaradi — uning oxiri artikl oxiriga o‘xshaydi: <b>dem</b> → gut<b>em</b>, <b>das</b> → frisch<b>es</b>, <b>der</b> (Dat. f) → zentral<b>er</b>. Misol: <b>mit frischem Brot</b>.",
+       "ru": "Прилагательное без артикля выполняет его роль — его окончание похоже на окончание артикля: <b>dem</b> → gut<b>em</b>, <b>das</b> → frisch<b>es</b>, <b>der</b> (Dat. f) → zentral<b>er</b>. Пример: <b>mit frischem Brot</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welche Form passt?",
+      "bsp": "Wir trinken gern ___ Tee. → der Tee, Akk. → ✓ <b>heißen</b>",
+      "q": "Im Café gibt es morgens ___ Brötchen und Kaffee.",
+      "o": [
+       "frische",
+       "frischen",
+       "frischer"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Uch qadam: (1) otning jinsi (der / das / die / Plural); (2) kelishik — fe’l yoki predlogdan (<b>es gibt</b> → Akk., <b>mit, bei, in</b> (wo?) → Dat.); (3) artikl oxirini sifatga qo‘ying: den → <b>-en</b>, das → <b>-es</b>, die → <b>-e</b>, dem → <b>-em</b>, der (Dat.) → <b>-er</b>. Misol: <b>in zentraler Lage</b> (die Lage, in + Dat.)",
+       "ru": "Три шага: (1) род существительного (der / das / die / Plural); (2) падеж — по глаголу или предлогу (<b>es gibt</b> → Akk., <b>mit, bei, in</b> (wo?) → Dat.); (3) перенесите окончание артикля на прилагательное: den → <b>-en</b>, das → <b>-es</b>, die → <b>-e</b>, dem → <b>-em</b>, der (Dat.) → <b>-er</b>. Пример: <b>in zentraler Lage</b> (die Lage, in + Dat.)"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welche Form passt?",
+      "q": "Heute ist ___ Wetter – perfekt für eine Stadttour!",
+      "o": [
+       "schöne",
+       "schönes",
+       "schönem"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Uch qadam: (1) otning jinsi (der / das / die / Plural); (2) kelishik — fe’l yoki predlogdan (<b>es gibt</b> → Akk., <b>mit, bei, in</b> (wo?) → Dat.); (3) artikl oxirini sifatga qo‘ying: den → <b>-en</b>, das → <b>-es</b>, die → <b>-e</b>, dem → <b>-em</b>, der (Dat.) → <b>-er</b>. Misol: <b>in zentraler Lage</b> (die Lage, in + Dat.)",
+       "ru": "Три шага: (1) род существительного (der / das / die / Plural); (2) падеж — по глаголу или предлогу (<b>es gibt</b> → Akk., <b>mit, bei, in</b> (wo?) → Dat.); (3) перенесите окончание артикля на прилагательное: den → <b>-en</b>, das → <b>-es</b>, die → <b>-e</b>, dem → <b>-em</b>, der (Dat.) → <b>-er</b>. Пример: <b>in zentraler Lage</b> (die Lage, in + Dat.)"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welche Form passt?",
+      "q": "Wir suchen ein Hotel mit ___ Blick auf das Meer.",
+      "o": [
+       "direkten",
+       "direkter",
+       "direktem"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Uch qadam: (1) otning jinsi (der / das / die / Plural); (2) kelishik — fe’l yoki predlogdan (<b>es gibt</b> → Akk., <b>mit, bei, in</b> (wo?) → Dat.); (3) artikl oxirini sifatga qo‘ying: den → <b>-en</b>, das → <b>-es</b>, die → <b>-e</b>, dem → <b>-em</b>, der (Dat.) → <b>-er</b>. Misol: <b>in zentraler Lage</b> (die Lage, in + Dat.)",
+       "ru": "Три шага: (1) род существительного (der / das / die / Plural); (2) падеж — по глаголу или предлогу (<b>es gibt</b> → Akk., <b>mit, bei, in</b> (wo?) → Dat.); (3) перенесите окончание артикля на прилагательное: den → <b>-en</b>, das → <b>-es</b>, die → <b>-e</b>, dem → <b>-em</b>, der (Dat.) → <b>-er</b>. Пример: <b>in zentraler Lage</b> (die Lage, in + Dat.)"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welche Form passt?",
+      "q": "Das Hostel liegt in ___ Lage, direkt am Bahnhof.",
+      "o": [
+       "zentraler",
+       "zentrale",
+       "zentralem"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Uch qadam: (1) otning jinsi (der / das / die / Plural); (2) kelishik — fe’l yoki predlogdan (<b>es gibt</b> → Akk., <b>mit, bei, in</b> (wo?) → Dat.); (3) artikl oxirini sifatga qo‘ying: den → <b>-en</b>, das → <b>-es</b>, die → <b>-e</b>, dem → <b>-em</b>, der (Dat.) → <b>-er</b>. Misol: <b>in zentraler Lage</b> (die Lage, in + Dat.)",
+       "ru": "Три шага: (1) род существительного (der / das / die / Plural); (2) падеж — по глаголу или предлогу (<b>es gibt</b> → Akk., <b>mit, bei, in</b> (wo?) → Dat.); (3) перенесите окончание артикля на прилагательное: den → <b>-en</b>, das → <b>-es</b>, die → <b>-e</b>, dem → <b>-em</b>, der (Dat.) → <b>-er</b>. Пример: <b>in zentraler Lage</b> (die Lage, in + Dat.)"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welche Form passt?",
+      "q": "Für die Wanderung braucht man ___ Schuhe.",
+      "o": [
+       "bequemen",
+       "bequeme",
+       "bequemes"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Uch qadam: (1) otning jinsi (der / das / die / Plural); (2) kelishik — fe’l yoki predlogdan (<b>es gibt</b> → Akk., <b>mit, bei, in</b> (wo?) → Dat.); (3) artikl oxirini sifatga qo‘ying: den → <b>-en</b>, das → <b>-es</b>, die → <b>-e</b>, dem → <b>-em</b>, der (Dat.) → <b>-er</b>. Misol: <b>in zentraler Lage</b> (die Lage, in + Dat.)",
+       "ru": "Три шага: (1) род существительного (der / das / die / Plural); (2) падеж — по глаголу или предлогу (<b>es gibt</b> → Akk., <b>mit, bei, in</b> (wo?) → Dat.); (3) перенесите окончание артикля на прилагательное: den → <b>-en</b>, das → <b>-es</b>, die → <b>-e</b>, dem → <b>-em</b>, der (Dat.) → <b>-er</b>. Пример: <b>in zentraler Lage</b> (die Lage, in + Dat.)"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "bsp": "Ich esse gern frisch___ Obst. → das Obst, Akk. → frisch<b>es</b>",
+      "s": "Bei schön___ Wetter machen wir eine Bootstour.",
+      "a": [
+       [
+        "em",
+        "-em"
+       ]
+      ],
+      "gw": {
+       "uz": "Otning jinsi va kelishigini aniqlang, keyin artikl oxirini yozing: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f va Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (ot ham <b>-n</b> oladi, -s bilan tugasa — yo‘q: in günstigen Hostels). Misol: <b>bei schönem Wetter</b>",
+       "ru": "Определите род и падеж существительного, затем напишите окончание артикля: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f и Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (существительное тоже получает <b>-n</b>, кроме слов на -s: in günstigen Hostels). Пример: <b>bei schönem Wetter</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "Im Urlaub trinke ich morgens immer schwarz___ Kaffee.",
+      "a": [
+       [
+        "en",
+        "-en"
+       ]
+      ],
+      "gw": {
+       "uz": "Otning jinsi va kelishigini aniqlang, keyin artikl oxirini yozing: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f va Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (ot ham <b>-n</b> oladi, -s bilan tugasa — yo‘q: in günstigen Hostels). Misol: <b>bei schönem Wetter</b>",
+       "ru": "Определите род и падеж существительного, затем напишите окончание артикля: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f и Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (существительное тоже получает <b>-n</b>, кроме слов на -s: in günstigen Hostels). Пример: <b>bei schönem Wetter</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "Der Reiseführer gibt praktisch___ Tipps für jede Stadt.",
+      "a": [
+       [
+        "e",
+        "-e"
+       ]
+      ],
+      "gw": {
+       "uz": "Otning jinsi va kelishigini aniqlang, keyin artikl oxirini yozing: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f va Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (ot ham <b>-n</b> oladi, -s bilan tugasa — yo‘q: in günstigen Hostels). Misol: <b>bei schönem Wetter</b>",
+       "ru": "Определите род и падеж существительного, затем напишите окончание артикля: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f и Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (существительное тоже получает <b>-n</b>, кроме слов на -s: in günstigen Hostels). Пример: <b>bei schönem Wetter</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "In zentral___ Lage sind Hotels oft teuer.",
+      "a": [
+       [
+        "er",
+        "-er"
+       ]
+      ],
+      "gw": {
+       "uz": "Otning jinsi va kelishigini aniqlang, keyin artikl oxirini yozing: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f va Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (ot ham <b>-n</b> oladi, -s bilan tugasa — yo‘q: in günstigen Hostels). Misol: <b>bei schönem Wetter</b>",
+       "ru": "Определите род и падеж существительного, затем напишите окончание артикля: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f и Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (существительное тоже получает <b>-n</b>, кроме слов на -s: in günstigen Hostels). Пример: <b>bei schönem Wetter</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "Verkaufe gebraucht___ Fahrrad in sehr gut___ Zustand.\nAußerdem: alt___ Reiseführer für Spanien und Italien, je 3 Euro.\nBei Interesse bitte anrufen!",
+      "a": [
+       [
+        "es",
+        "-es"
+       ],
+       [
+        "em",
+        "-em"
+       ],
+       [
+        "e",
+        "-e"
+       ]
+      ],
+      "gw": {
+       "uz": "Otning jinsi va kelishigini aniqlang, keyin artikl oxirini yozing: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f va Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (ot ham <b>-n</b> oladi, -s bilan tugasa — yo‘q: in günstigen Hostels). Misol: <b>bei schönem Wetter</b>",
+       "ru": "Определите род и падеж существительного, затем напишите окончание артикля: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f и Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (существительное тоже получает <b>-n</b>, кроме слов на -s: in günstigen Hostels). Пример: <b>bei schönem Wetter</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "Mein Tipp für Reisen allein: Nehmt nur leicht___ Gepäck mit!\nÜbernachtet in günstig___ Hostels – dort lernt man schnell nett___ Leute kennen.",
+      "a": [
+       [
+        "es",
+        "-es"
+       ],
+       [
+        "en",
+        "-en"
+       ],
+       [
+        "e",
+        "-e"
+       ]
+      ],
+      "gw": {
+       "uz": "Otning jinsi va kelishigini aniqlang, keyin artikl oxirini yozing: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f va Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (ot ham <b>-n</b> oladi, -s bilan tugasa — yo‘q: in günstigen Hostels). Misol: <b>bei schönem Wetter</b>",
+       "ru": "Определите род и падеж существительного, затем напишите окончание артикля: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f и Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (существительное тоже получает <b>-n</b>, кроме слов на -s: in günstigen Hostels). Пример: <b>bei schönem Wetter</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endung.",
+      "s": "Liebe Grüße aus Samarkand!\nWir haben hier toll___ Wetter und essen jeden Tag süß___ Melonen.\nZum Frühstück gibt es frisch___ Brot und heiß___ Tee.\nAbends sitzen wir mit neu___ Freunden im Hof. Bis bald, Jonas",
+      "a": [
+       [
+        "es",
+        "-es"
+       ],
+       [
+        "e",
+        "-e"
+       ],
+       [
+        "es",
+        "-es"
+       ],
+       [
+        "en",
+        "-en"
+       ],
+       [
+        "en",
+        "-en"
+       ]
+      ],
+      "gw": {
+       "uz": "Otning jinsi va kelishigini aniqlang, keyin artikl oxirini yozing: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f va Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (ot ham <b>-n</b> oladi, -s bilan tugasa — yo‘q: in günstigen Hostels). Misol: <b>bei schönem Wetter</b>",
+       "ru": "Определите род и падеж существительного, затем напишите окончание артикля: Nom. m <b>-er</b>, Akk. m <b>-en</b>, n <b>-es</b>, f и Pl (Nom./Akk.) <b>-e</b>; Dativ m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> (существительное тоже получает <b>-n</b>, кроме слов на -s: in günstigen Hostels). Пример: <b>bei schönem Wetter</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz im Plural.",
+      "bsp": "Hier gibt es ein gutes Café. → <b>Hier gibt es gute Cafés.</b>",
+      "q": "Im Hostel gibt es ein billiges Zimmer.",
+      "w": [
+       "Im Hostel",
+       "gibt",
+       "es",
+       "billige",
+       "Zimmer"
+      ],
+      "a": "Im Hostel gibt es billige Zimmer.",
+      "alt": [],
+      "gw": {
+       "uz": "Ko‘plikda noaniq artikl (<b>ein, einen</b>) yo‘q — sifat artikl oxirini oladi: Nom./Akk. <b>-e</b> (gute Tipps), Dativ <b>-en</b>, ot ham <b>-n</b> oladi: mit nett<b>en</b> Freunde<b>n</b>. Ot ko‘plik shakliga o‘tadi: das Museum → <b>die Museen</b>.",
+       "ru": "Во множественном числе неопределённого артикля (<b>ein, einen</b>) нет — прилагательное берёт окончание артикля: Nom./Akk. <b>-e</b> (gute Tipps), Dativ <b>-en</b>, и существительное получает <b>-n</b>: mit nett<b>en</b> Freunde<b>n</b>. Существительное — во множественном: das Museum → <b>die Museen</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz im Plural.",
+      "q": "Der Reiseführer hat einen guten Tipp.",
+      "w": [
+       "Der Reiseführer",
+       "hat",
+       "gute",
+       "Tipps"
+      ],
+      "a": "Der Reiseführer hat gute Tipps.",
+      "alt": [],
+      "gw": {
+       "uz": "Ko‘plikda noaniq artikl (<b>ein, einen</b>) yo‘q — sifat artikl oxirini oladi: Nom./Akk. <b>-e</b> (gute Tipps), Dativ <b>-en</b>, ot ham <b>-n</b> oladi: mit nett<b>en</b> Freunde<b>n</b>. Ot ko‘plik shakliga o‘tadi: das Museum → <b>die Museen</b>.",
+       "ru": "Во множественном числе неопределённого артикля (<b>ein, einen</b>) нет — прилагательное берёт окончание артикля: Nom./Akk. <b>-e</b> (gute Tipps), Dativ <b>-en</b>, и существительное получает <b>-n</b>: mit nett<b>en</b> Freunde<b>n</b>. Существительное — во множественном: das Museum → <b>die Museen</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz im Plural.",
+      "q": "In der Altstadt gibt es ein schönes Museum.",
+      "w": [
+       "In der Altstadt",
+       "gibt",
+       "es",
+       "schöne",
+       "Museen"
+      ],
+      "a": "In der Altstadt gibt es schöne Museen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ko‘plikda noaniq artikl (<b>ein, einen</b>) yo‘q — sifat artikl oxirini oladi: Nom./Akk. <b>-e</b> (gute Tipps), Dativ <b>-en</b>, ot ham <b>-n</b> oladi: mit nett<b>en</b> Freunde<b>n</b>. Ot ko‘plik shakliga o‘tadi: das Museum → <b>die Museen</b>.",
+       "ru": "Во множественном числе неопределённого артикля (<b>ein, einen</b>) нет — прилагательное берёт окончание артикля: Nom./Akk. <b>-e</b> (gute Tipps), Dativ <b>-en</b>, и существительное получает <b>-n</b>: mit nett<b>en</b> Freunde<b>n</b>. Существительное — во множественном: das Museum → <b>die Museen</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz im Plural.",
+      "q": "Ich reise gern mit einem netten Freund.",
+      "w": [
+       "Ich",
+       "reise",
+       "gern",
+       "mit",
+       "netten",
+       "Freunden"
+      ],
+      "a": "Ich reise gern mit netten Freunden.",
+      "alt": [],
+      "gw": {
+       "uz": "Ko‘plikda noaniq artikl (<b>ein, einen</b>) yo‘q — sifat artikl oxirini oladi: Nom./Akk. <b>-e</b> (gute Tipps), Dativ <b>-en</b>, ot ham <b>-n</b> oladi: mit nett<b>en</b> Freunde<b>n</b>. Ot ko‘plik shakliga o‘tadi: das Museum → <b>die Museen</b>.",
+       "ru": "Во множественном числе неопределённого артикля (<b>ein, einen</b>) нет — прилагательное берёт окончание артикля: Nom./Akk. <b>-e</b> (gute Tipps), Dativ <b>-en</b>, и существительное получает <b>-n</b>: mit nett<b>en</b> Freunde<b>n</b>. Существительное — во множественном: das Museum → <b>die Museen</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie eine Kleinanzeige.",
+      "bsp": "Ich verkaufe einen Tisch. Er ist alt. → <b>Verkaufe alten Tisch.</b>",
+      "q": "Ich verkaufe einen Rucksack. Er ist gebraucht, aber in einem guten Zustand.",
+      "w": [
+       "Verkaufe",
+       "gebrauchten",
+       "Rucksack",
+       "in",
+       "gutem",
+       "Zustand"
+      ],
+      "a": "Verkaufe gebrauchten Rucksack in gutem Zustand.",
+      "alt": [],
+      "gw": {
+       "uz": "E’lonlarda artikl va ko‘pincha <b>ich / wir</b> tushirib qoldiriladi: <b>Verkaufe …, Suchen …, … zu vermieten</b>. Shunda sifat artikl oxirini oladi: einen → gebraucht<b>en</b> Rucksack, mit einem → mit groß<b>em</b> Garten, das Zimmer → hell<b>es</b> Zimmer.",
+       "ru": "В объявлениях артикль и часто <b>ich / wir</b> опускаются: <b>Verkaufe …, Suchen …, … zu vermieten</b>. Тогда прилагательное берёт окончание артикля: einen → gebraucht<b>en</b> Rucksack, mit einem → mit groß<b>em</b> Garten, das Zimmer → hell<b>es</b> Zimmer."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie eine Kleinanzeige.",
+      "q": "Ich vermiete ein Zimmer. Es ist hell und liegt zentral.",
+      "w": [
+       "Helles",
+       "Zimmer",
+       "in",
+       "zentraler",
+       "Lage",
+       "zu vermieten"
+      ],
+      "a": "Helles Zimmer in zentraler Lage zu vermieten.",
+      "alt": [],
+      "gw": {
+       "uz": "E’lonlarda artikl va ko‘pincha <b>ich / wir</b> tushirib qoldiriladi: <b>Verkaufe …, Suchen …, … zu vermieten</b>. Shunda sifat artikl oxirini oladi: einen → gebraucht<b>en</b> Rucksack, mit einem → mit groß<b>em</b> Garten, das Zimmer → hell<b>es</b> Zimmer.",
+       "ru": "В объявлениях артикль и часто <b>ich / wir</b> опускаются: <b>Verkaufe …, Suchen …, … zu vermieten</b>. Тогда прилагательное берёт окончание артикля: einen → gebraucht<b>en</b> Rucksack, mit einem → mit groß<b>em</b> Garten, das Zimmer → hell<b>es</b> Zimmer."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie eine Kleinanzeige.",
+      "q": "Wir suchen eine Ferienwohnung. Sie soll günstig sein und einen großen Garten haben.",
+      "w": [
+       "Suchen",
+       "günstige",
+       "Ferienwohnung",
+       "mit",
+       "großem",
+       "Garten"
+      ],
+      "a": "Suchen günstige Ferienwohnung mit großem Garten.",
+      "alt": [],
+      "gw": {
+       "uz": "E’lonlarda artikl va ko‘pincha <b>ich / wir</b> tushirib qoldiriladi: <b>Verkaufe …, Suchen …, … zu vermieten</b>. Shunda sifat artikl oxirini oladi: einen → gebraucht<b>en</b> Rucksack, mit einem → mit groß<b>em</b> Garten, das Zimmer → hell<b>es</b> Zimmer.",
+       "ru": "В объявлениях артикль и часто <b>ich / wir</b> опускаются: <b>Verkaufe …, Suchen …, … zu vermieten</b>. Тогда прилагательное берёт окончание артикля: einen → gebraucht<b>en</b> Rucksack, mit einem → mit groß<b>em</b> Garten, das Zimmer → hell<b>es</b> Zimmer."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Wir wohnen in ruhige Lage. → <b>ruhige</b> → Wir wohnen in ruhiger Lage.",
+      "s": "Bei schlechtes Wetter bleiben wir im Hotel .",
+      "fix": "Bei schlechtem Wetter bleiben wir im Hotel.",
+      "a": [
+       1
+      ],
+      "gw": {
+       "uz": "Predlog va fe’lni tekshiring: <b>mit, bei, in</b> (wo?) — Dativ: m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> + ot <b>-n</b>. <b>es gibt</b> — Akkusativ: m <b>-en</b>. Misol: <b>Es gibt frischen Saft.</b> · <b>mit großen Fenstern</b>",
+       "ru": "Проверьте предлог и глагол: <b>mit, bei, in</b> (wo?) — Dativ: m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> + существительное <b>-n</b>. <b>es gibt</b> — Akkusativ: m <b>-en</b>. Пример: <b>Es gibt frischen Saft.</b> · <b>mit großen Fenstern</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Zum Frühstück gab es frischer Saft und Brötchen .",
+      "fix": "Zum Frühstück gab es frischen Saft und Brötchen.",
+      "a": [
+       4
+      ],
+      "gw": {
+       "uz": "Predlog va fe’lni tekshiring: <b>mit, bei, in</b> (wo?) — Dativ: m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> + ot <b>-n</b>. <b>es gibt</b> — Akkusativ: m <b>-en</b>. Misol: <b>Es gibt frischen Saft.</b> · <b>mit großen Fenstern</b>",
+       "ru": "Проверьте предлог и глагол: <b>mit, bei, in</b> (wo?) — Dativ: m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> + существительное <b>-n</b>. <b>es gibt</b> — Akkusativ: m <b>-en</b>. Пример: <b>Es gibt frischen Saft.</b> · <b>mit großen Fenstern</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Wir haben in einem Hostel mit freundlichen Personal übernachtet .",
+      "fix": "Wir haben in einem Hostel mit freundlichem Personal übernachtet.",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "Predlog va fe’lni tekshiring: <b>mit, bei, in</b> (wo?) — Dativ: m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> + ot <b>-n</b>. <b>es gibt</b> — Akkusativ: m <b>-en</b>. Misol: <b>Es gibt frischen Saft.</b> · <b>mit großen Fenstern</b>",
+       "ru": "Проверьте предлог и глагол: <b>mit, bei, in</b> (wo?) — Dativ: m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> + существительное <b>-n</b>. <b>es gibt</b> — Akkusativ: m <b>-en</b>. Пример: <b>Es gibt frischen Saft.</b> · <b>mit großen Fenstern</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Gemütliches Zimmer mit große Fenster zu vermieten .",
+      "fix": "Gemütliches Zimmer mit großen Fenstern zu vermieten.",
+      "a": [
+       3,
+       4
+      ],
+      "gw": {
+       "uz": "Predlog va fe’lni tekshiring: <b>mit, bei, in</b> (wo?) — Dativ: m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> + ot <b>-n</b>. <b>es gibt</b> — Akkusativ: m <b>-en</b>. Misol: <b>Es gibt frischen Saft.</b> · <b>mit großen Fenstern</b>",
+       "ru": "Проверьте предлог и глагол: <b>mit, bei, in</b> (wo?) — Dativ: m/n <b>-em</b>, f <b>-er</b>, Pl <b>-en</b> + существительное <b>-n</b>. <b>es gibt</b> — Akkusativ: m <b>-en</b>. Пример: <b>Es gibt frischen Saft.</b> · <b>mit großen Fenstern</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wortbildung: Nomen + -chen</h4><table class=\"ex-tb\"><tr><td>das Haus</td><td>→</td><td><b>das</b> H<b>äu</b>s<b>chen</b></td></tr><tr><td>das Brot</td><td>→</td><td><b>das</b> Br<b>ö</b>t<b>chen</b></td></tr><tr><td>der Hund</td><td>→</td><td><b>das</b> H<b>ü</b>nd<b>chen</b></td></tr><tr><td>die Katze</td><td>→</td><td><b>das</b> K<b>ä</b>tz<b>chen</b></td></tr><tr><td>der Tisch</td><td>→</td><td><b>das</b> Tisch<b>chen</b></td></tr></table><p class=\"ex-note\"><b>-chen</b> narsani kichraytiradi yoki erkalaydi. Bunday so‘z har doim <b>das</b>, ko‘plikda o‘zgarmaydi (die Brötchen). a, o, u, au → <b>ä, ö, ü, äu</b>; oxirgi <b>-e</b> tushadi: die Katze → das Kätzchen.</p>",
+      "ru": "<h4>Wortbildung: Nomen + -chen</h4><table class=\"ex-tb\"><tr><td>das Haus</td><td>→</td><td><b>das</b> H<b>äu</b>s<b>chen</b></td></tr><tr><td>das Brot</td><td>→</td><td><b>das</b> Br<b>ö</b>t<b>chen</b></td></tr><tr><td>der Hund</td><td>→</td><td><b>das</b> H<b>ü</b>nd<b>chen</b></td></tr><tr><td>die Katze</td><td>→</td><td><b>das</b> K<b>ä</b>tz<b>chen</b></td></tr><tr><td>der Tisch</td><td>→</td><td><b>das</b> Tisch<b>chen</b></td></tr></table><p class=\"ex-note\"><b>-chen</b> обозначает что-то маленькое или милое. Такое слово всегда <b>das</b>, во множественном числе не меняется (die Brötchen). a, o, u, au → <b>ä, ö, ü, äu</b>; конечное <b>-e</b> выпадает: die Katze → das Kätzchen.</p>"
+     },
+     {
+      "t": "gap",
+      "h": "Wie heißt die kleine Form? Ergänzen Sie.",
+      "bsp": "Für mein Handy habe ich ein ___. (die Tasche) → <b>Täschchen</b>",
+      "s": "Mein Bruder hat ein süßes ___ – es heißt Bello. (der Hund)",
+      "a": [
+       [
+        "Hündchen"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-chen</b> qo‘shing: unli umlaut oladi (a → <b>ä</b>, o → <b>ö</b>, u → <b>ü</b>, au → <b>äu</b>), oxirgi -e tushadi. Artikl har doim <b>das</b>. Misol: <b>die Tasche → das Täschchen</b>",
+       "ru": "Добавьте к существительному <b>-chen</b>: гласная получает умлаут (a → <b>ä</b>, o → <b>ö</b>, u → <b>ü</b>, au → <b>äu</b>), конечное -e выпадает. Артикль всегда <b>das</b>. Пример: <b>die Tasche → das Täschchen</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Wie heißt die kleine Form? Ergänzen Sie.",
+      "s": "Am Meer haben wir ein kleines ___ gemietet. (das Haus)",
+      "a": [
+       [
+        "Häuschen"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-chen</b> qo‘shing: unli umlaut oladi (a → <b>ä</b>, o → <b>ö</b>, u → <b>ü</b>, au → <b>äu</b>), oxirgi -e tushadi. Artikl har doim <b>das</b>. Misol: <b>die Tasche → das Täschchen</b>",
+       "ru": "Добавьте к существительному <b>-chen</b>: гласная получает умлаут (a → <b>ä</b>, o → <b>ö</b>, u → <b>ü</b>, au → <b>äu</b>), конечное -e выпадает. Артикль всегда <b>das</b>. Пример: <b>die Tasche → das Täschchen</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Wie heißt die kleine Form? Ergänzen Sie.",
+      "s": "Beim Bäcker kaufe ich jeden Morgen frische ___. (das Brot, Plural)",
+      "a": [
+       [
+        "Brötchen"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-chen</b> qo‘shing: unli umlaut oladi (a → <b>ä</b>, o → <b>ö</b>, u → <b>ü</b>, au → <b>äu</b>), oxirgi -e tushadi. Artikl har doim <b>das</b>. Misol: <b>die Tasche → das Täschchen</b>",
+       "ru": "Добавьте к существительному <b>-chen</b>: гласная получает умлаут (a → <b>ä</b>, o → <b>ö</b>, u → <b>ü</b>, au → <b>äu</b>), конечное -e выпадает. Артикль всегда <b>das</b>. Пример: <b>die Tasche → das Täschchen</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Wie heißt die kleine Form? Ergänzen Sie.",
+      "s": "Das ___ von unseren Nachbarn ist erst drei Wochen alt. (die Katze)",
+      "a": [
+       [
+        "Kätzchen"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-chen</b> qo‘shing: unli umlaut oladi (a → <b>ä</b>, o → <b>ö</b>, u → <b>ü</b>, au → <b>äu</b>), oxirgi -e tushadi. Artikl har doim <b>das</b>. Misol: <b>die Tasche → das Täschchen</b>",
+       "ru": "Добавьте к существительному <b>-chen</b>: гласная получает умлаут (a → <b>ä</b>, o → <b>ö</b>, u → <b>ü</b>, au → <b>äu</b>), конечное -e выпадает. Артикль всегда <b>das</b>. Пример: <b>die Tasche → das Täschchen</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Wie heißt die kleine Form? Ergänzen Sie.",
+      "s": "Im Zimmer stehen ein Bett und ein ___ für den Laptop. (der Tisch)",
+      "a": [
+       [
+        "Tischchen"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-chen</b> qo‘shing: unli umlaut oladi (a → <b>ä</b>, o → <b>ö</b>, u → <b>ü</b>, au → <b>äu</b>), oxirgi -e tushadi. Artikl har doim <b>das</b>. Misol: <b>die Tasche → das Täschchen</b>",
+       "ru": "Добавьте к существительному <b>-chen</b>: гласная получает умлаут (a → <b>ä</b>, o → <b>ö</b>, u → <b>ü</b>, au → <b>äu</b>), конечное -e выпадает. Артикль всегда <b>das</b>. Пример: <b>die Tasche → das Täschchen</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,629 @@
+{
+ "id": "B1-b12-18-G",
+ "meta": {
+  "title": "Grammatik · Plusquamperfekt · nachdem",
+  "stitle": "Plusquamperfekt · hatte/war + Partizip II · nachdem"
+ },
+ "ex": {
+  "title": "Lektion 18 · Grammatik",
+  "sub": "Plusquamperfekt · hatte/war + Partizip II · nachdem",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Plusquamperfekt: hatte / war + Partizip II</h4>\n<table class=\"ex-tb\"><tr><th></th><th>mit haben</th><th>mit sein</th></tr>\n<tr><td>ich</td><td><b>hatte</b> gegessen</td><td><b>war</b> gegangen</td></tr>\n<tr><td>du</td><td><b>hattest</b> gegessen</td><td><b>warst</b> gegangen</td></tr>\n<tr><td>er / es / sie</td><td><b>hatte</b> gegessen</td><td><b>war</b> gegangen</td></tr>\n<tr><td>wir</td><td><b>hatten</b> gegessen</td><td><b>waren</b> gegangen</td></tr>\n<tr><td>ihr</td><td><b>hattet</b> gegessen</td><td><b>wart</b> gegangen</td></tr>\n<tr><td>sie / Sie</td><td><b>hatten</b> gegessen</td><td><b>waren</b> gegangen</td></tr></table>\n<div class=\"ex-sk\"><span>Ich</span><span class=\"v\">hatte</span><span>mich</span><span>auf der Reise</span><span class=\"v\">erkältet</span>.</div>\n<div class=\"ex-sk\"><span>…, weil</span><span>ich</span><span>mich</span><span>auf der Reise</span><span class=\"v\">erkältet hatte</span>.</div>\n<p class=\"ex-note\">Plusquamperfekt — «o‘tmishdan ham oldingi o‘tmish»: o‘tmishdagi bir voqeadan <b>oldin</b> bo‘lgan ish. Perfektdagi kabi <b>haben</b> yoki <b>sein</b> tanlanadi, faqat Präteritum shaklida: <b>hatte</b> / <b>war</b>. Misol: <b>Als ich ankam, war der Bus schon abgefahren.</b></p>",
+      "ru": "<h4>Plusquamperfekt: hatte / war + Partizip II</h4>\n<table class=\"ex-tb\"><tr><th></th><th>mit haben</th><th>mit sein</th></tr>\n<tr><td>ich</td><td><b>hatte</b> gegessen</td><td><b>war</b> gegangen</td></tr>\n<tr><td>du</td><td><b>hattest</b> gegessen</td><td><b>warst</b> gegangen</td></tr>\n<tr><td>er / es / sie</td><td><b>hatte</b> gegessen</td><td><b>war</b> gegangen</td></tr>\n<tr><td>wir</td><td><b>hatten</b> gegessen</td><td><b>waren</b> gegangen</td></tr>\n<tr><td>ihr</td><td><b>hattet</b> gegessen</td><td><b>wart</b> gegangen</td></tr>\n<tr><td>sie / Sie</td><td><b>hatten</b> gegessen</td><td><b>waren</b> gegangen</td></tr></table>\n<div class=\"ex-sk\"><span>Ich</span><span class=\"v\">hatte</span><span>mich</span><span>auf der Reise</span><span class=\"v\">erkältet</span>.</div>\n<div class=\"ex-sk\"><span>…, weil</span><span>ich</span><span>mich</span><span>auf der Reise</span><span class=\"v\">erkältet hatte</span>.</div>\n<p class=\"ex-note\">Plusquamperfekt — «прошедшее до прошедшего»: действие, которое было <b>раньше</b> другого действия в прошлом. Как в Perfekt, выбираем <b>haben</b> или <b>sein</b>, но в форме Präteritum: <b>hatte</b> / <b>war</b>. Пример: <b>Als ich ankam, war der Bus schon abgefahren.</b></p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Plusquamperfekt.",
+      "bsp": "Ich war krank, weil ich mich erkältet hatte. → <b>erkältet hatte</b>",
+      "s": "Als ich in die Praxis kam , hatte die Sprechstunde schon begonnen .",
+      "a": [
+       7,
+       11
+      ],
+      "gw": {
+       "uz": "Plusquamperfekt ikki qismdan iborat: <b>hatte/war</b> + Partizip II. Asosiy gapda hatte/war 2-o‘rinda, Partizip oxirida; Nebensatzda ikkalasi ham oxirida. Präteritum (<b>kam, tat</b>) — bu Plusquamperfekt emas. Misol: <b>…, weil er krank geworden war.</b>",
+       "ru": "Plusquamperfekt состоит из двух частей: <b>hatte/war</b> + Partizip II. В главном предложении hatte/war на 2-м месте, Partizip в конце; в Nebensatz обе части в конце. Präteritum (<b>kam, tat</b>) — это не Plusquamperfekt. Пример: <b>…, weil er krank geworden war.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Plusquamperfekt.",
+      "bsp": "Ich war krank, weil ich mich erkältet hatte. → <b>erkältet hatte</b>",
+      "s": "Aziz hatte vor der Reise einen Termin beim Hausarzt gemacht .",
+      "a": [
+       1,
+       9
+      ],
+      "gw": {
+       "uz": "Plusquamperfekt ikki qismdan iborat: <b>hatte/war</b> + Partizip II. Asosiy gapda hatte/war 2-o‘rinda, Partizip oxirida; Nebensatzda ikkalasi ham oxirida. Präteritum (<b>kam, tat</b>) — bu Plusquamperfekt emas. Misol: <b>…, weil er krank geworden war.</b>",
+       "ru": "Plusquamperfekt состоит из двух частей: <b>hatte/war</b> + Partizip II. В главном предложении hatte/war на 2-м месте, Partizip в конце; в Nebensatz обе части в конце. Präteritum (<b>kam, tat</b>) — это не Plusquamperfekt. Пример: <b>…, weil er krank geworden war.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Plusquamperfekt.",
+      "bsp": "Ich war krank, weil ich mich erkältet hatte. → <b>erkältet hatte</b>",
+      "s": "Nachdem Laylo zwei Tage im Bett geblieben war , fühlte sie sich besser .",
+      "a": [
+       6,
+       7
+      ],
+      "gw": {
+       "uz": "Plusquamperfekt ikki qismdan iborat: <b>hatte/war</b> + Partizip II. Asosiy gapda hatte/war 2-o‘rinda, Partizip oxirida; Nebensatzda ikkalasi ham oxirida. Präteritum (<b>kam, tat</b>) — bu Plusquamperfekt emas. Misol: <b>…, weil er krank geworden war.</b>",
+       "ru": "Plusquamperfekt состоит из двух частей: <b>hatte/war</b> + Partizip II. В главном предложении hatte/war на 2-м месте, Partizip в конце; в Nebensatz обе части в конце. Präteritum (<b>kam, tat</b>) — это не Plusquamperfekt. Пример: <b>…, weil er krank geworden war.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Plusquamperfekt.",
+      "bsp": "Ich war krank, weil ich mich erkältet hatte. → <b>erkältet hatte</b>",
+      "s": "Die Wunde tat noch weh , obwohl die Ärztin sie schon verbunden hatte .",
+      "a": [
+       11,
+       12
+      ],
+      "gw": {
+       "uz": "Plusquamperfekt ikki qismdan iborat: <b>hatte/war</b> + Partizip II. Asosiy gapda hatte/war 2-o‘rinda, Partizip oxirida; Nebensatzda ikkalasi ham oxirida. Präteritum (<b>kam, tat</b>) — bu Plusquamperfekt emas. Misol: <b>…, weil er krank geworden war.</b>",
+       "ru": "Plusquamperfekt состоит из двух частей: <b>hatte/war</b> + Partizip II. В главном предложении hatte/war на 2-м месте, Partizip в конце; в Nebensatz обе части в конце. Präteritum (<b>kam, tat</b>) — это не Plusquamperfekt. Пример: <b>…, weil er krank geworden war.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*hatte* oder *war*? Was passt?",
+      "bsp": "Ich ___ zum Arzt gegangen. → gehen → sein → ✓ <b>war</b>",
+      "q": "Malika ___ sich beim Sport verletzt.",
+      "o": [
+       "hatte",
+       "war"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Perfektdagi qoida bilan bir xil: harakat yoki holat o‘zgarishi (<b>gehen, fahren, aufstehen, werden</b>), shuningdek <b>bleiben, passieren, sein</b> — <b>war</b>; qolganlari, jumladan barcha refleksiv fe’llar — <b>hatte</b>. Misol: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>",
+       "ru": "Правило как в Perfekt: движение или изменение состояния (<b>gehen, fahren, aufstehen, werden</b>), а также <b>bleiben, passieren, sein</b> — <b>war</b>; остальные, в том числе все возвратные глаголы, — <b>hatte</b>. Пример: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*hatte* oder *war*? Was passt?",
+      "bsp": "Ich ___ zum Arzt gegangen. → gehen → sein → ✓ <b>war</b>",
+      "q": "Wir ___ schon nach Hause gefahren, als der Arzt anrief.",
+      "o": [
+       "hatten",
+       "waren"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Perfektdagi qoida bilan bir xil: harakat yoki holat o‘zgarishi (<b>gehen, fahren, aufstehen, werden</b>), shuningdek <b>bleiben, passieren, sein</b> — <b>war</b>; qolganlari, jumladan barcha refleksiv fe’llar — <b>hatte</b>. Misol: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>",
+       "ru": "Правило как в Perfekt: движение или изменение состояния (<b>gehen, fahren, aufstehen, werden</b>), а также <b>bleiben, passieren, sein</b> — <b>war</b>; остальные, в том числе все возвратные глаголы, — <b>hatte</b>. Пример: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*hatte* oder *war*? Was passt?",
+      "bsp": "Ich ___ zum Arzt gegangen. → gehen → sein → ✓ <b>war</b>",
+      "q": "Nachdem Ben die Tabletten genommen ___, schlief er sofort ein.",
+      "o": [
+       "war",
+       "hatte"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Perfektdagi qoida bilan bir xil: harakat yoki holat o‘zgarishi (<b>gehen, fahren, aufstehen, werden</b>), shuningdek <b>bleiben, passieren, sein</b> — <b>war</b>; qolganlari, jumladan barcha refleksiv fe’llar — <b>hatte</b>. Misol: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>",
+       "ru": "Правило как в Perfekt: движение или изменение состояния (<b>gehen, fahren, aufstehen, werden</b>), а также <b>bleiben, passieren, sein</b> — <b>war</b>; остальные, в том числе все возвратные глаголы, — <b>hatte</b>. Пример: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*hatte* oder *war*? Was passt?",
+      "bsp": "Ich ___ zum Arzt gegangen. → gehen → sein → ✓ <b>war</b>",
+      "q": "Paul ___ krank geworden, deshalb kam er nicht zur Party.",
+      "o": [
+       "war",
+       "hatte"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Perfektdagi qoida bilan bir xil: harakat yoki holat o‘zgarishi (<b>gehen, fahren, aufstehen, werden</b>), shuningdek <b>bleiben, passieren, sein</b> — <b>war</b>; qolganlari, jumladan barcha refleksiv fe’llar — <b>hatte</b>. Misol: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>",
+       "ru": "Правило как в Perfekt: движение или изменение состояния (<b>gehen, fahren, aufstehen, werden</b>), а также <b>bleiben, passieren, sein</b> — <b>war</b>; остальные, в том числе все возвратные глаголы, — <b>hatte</b>. Пример: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*hatte* oder *war*? Was passt?",
+      "bsp": "Ich ___ zum Arzt gegangen. → gehen → sein → ✓ <b>war</b>",
+      "q": "Sevara ___ ihr Rezept zu Hause vergessen.",
+      "o": [
+       "hatte",
+       "war"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Perfektdagi qoida bilan bir xil: harakat yoki holat o‘zgarishi (<b>gehen, fahren, aufstehen, werden</b>), shuningdek <b>bleiben, passieren, sein</b> — <b>war</b>; qolganlari, jumladan barcha refleksiv fe’llar — <b>hatte</b>. Misol: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>",
+       "ru": "Правило как в Perfekt: движение или изменение состояния (<b>gehen, fahren, aufstehen, werden</b>), а также <b>bleiben, passieren, sein</b> — <b>war</b>; остальные, в том числе все возвратные глаголы, — <b>hatte</b>. Пример: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>"
+      }
+     },
+     {
+      "t": "cat",
+      "h": "Plusquamperfekt mit *hatte* oder *war*? Ordnen Sie zu.",
+      "bsp": "geworden → <b>war</b> geworden",
+      "c": [
+       "hatte …",
+       "war …"
+      ],
+      "i": [
+       [
+        "gegangen",
+        1
+       ],
+       [
+        "genommen",
+        0
+       ],
+       [
+        "geblieben",
+        1
+       ],
+       [
+        "geschlafen",
+        0
+       ],
+       [
+        "aufgestanden",
+        1
+       ],
+       [
+        "sich erkältet",
+        0
+       ],
+       [
+        "passiert",
+        1
+       ],
+       [
+        "bekommen",
+        0
+       ]
+      ],
+      "gw": {
+       "uz": "Perfektdagi qoida bilan bir xil: harakat yoki holat o‘zgarishi (<b>gehen, fahren, aufstehen, werden</b>), shuningdek <b>bleiben, passieren, sein</b> — <b>war</b>; qolganlari, jumladan barcha refleksiv fe’llar — <b>hatte</b>. Misol: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>",
+       "ru": "Правило как в Perfekt: движение или изменение состояния (<b>gehen, fahren, aufstehen, werden</b>), а также <b>bleiben, passieren, sein</b> — <b>war</b>; остальные, в том числе все возвратные глаголы, — <b>hatte</b>. Пример: <b>Ich war früh aufgestanden.</b> · <b>Sie hatte sich verletzt.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Plusquamperfekt.",
+      "bsp": "Ich ___ den Termin ___. (vergessen) → <b>hatte</b> … <b>vergessen</b>",
+      "s": "Leider ___ die Apotheke schon ___, als wir ankamen. (schließen)",
+      "a": [
+       [
+        "hatte"
+       ],
+       [
+        "geschlossen"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>hatte/war</b> ni egaga moslang (ich hatte, du hattest, wir waren …) va Partizip II ni qo‘ying. Nebensatzda (weil, nachdem) tartib: Partizip → <b>hatte/war</b> eng oxirida. Misol: <b>…, weil er zu viel Kaffee getrunken hatte.</b>",
+       "ru": "Согласуйте <b>hatte/war</b> с подлежащим (ich hatte, du hattest, wir waren …) и поставьте Partizip II. В Nebensatz (weil, nachdem) порядок: Partizip → <b>hatte/war</b> в самом конце. Пример: <b>…, weil er zu viel Kaffee getrunken hatte.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Plusquamperfekt.",
+      "bsp": "Ich ___ den Termin ___. (vergessen) → <b>hatte</b> … <b>vergessen</b>",
+      "s": "Nodir konnte nicht schlafen, weil er zu viel Kaffee ___ ___. (trinken)",
+      "a": [
+       [
+        "getrunken"
+       ],
+       [
+        "hatte"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>hatte/war</b> ni egaga moslang (ich hatte, du hattest, wir waren …) va Partizip II ni qo‘ying. Nebensatzda (weil, nachdem) tartib: Partizip → <b>hatte/war</b> eng oxirida. Misol: <b>…, weil er zu viel Kaffee getrunken hatte.</b>",
+       "ru": "Согласуйте <b>hatte/war</b> с подлежащим (ich hatte, du hattest, wir waren …) и поставьте Partizip II. В Nebensatz (weil, nachdem) порядок: Partizip → <b>hatte/war</b> в самом конце. Пример: <b>…, weil er zu viel Kaffee getrunken hatte.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Plusquamperfekt.",
+      "bsp": "Ich ___ den Termin ___. (vergessen) → <b>hatte</b> … <b>vergessen</b>",
+      "s": "Wir ___ zu spät aus dem Haus ___, deshalb verpassten wir den Bus. (gehen)",
+      "a": [
+       [
+        "waren"
+       ],
+       [
+        "gegangen"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>hatte/war</b> ni egaga moslang (ich hatte, du hattest, wir waren …) va Partizip II ni qo‘ying. Nebensatzda (weil, nachdem) tartib: Partizip → <b>hatte/war</b> eng oxirida. Misol: <b>…, weil er zu viel Kaffee getrunken hatte.</b>",
+       "ru": "Согласуйте <b>hatte/war</b> с подлежащим (ich hatte, du hattest, wir waren …) и поставьте Partizip II. В Nebensatz (weil, nachdem) порядок: Partizip → <b>hatte/war</b> в самом конце. Пример: <b>…, weil er zu viel Kaffee getrunken hatte.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Plusquamperfekt.",
+      "bsp": "Ich ___ den Termin ___. (vergessen) → <b>hatte</b> … <b>vergessen</b>",
+      "s": "Ich ___ mich gerade ins Wartezimmer ___, da rief die Ärztin schon meinen Namen. (setzen)",
+      "a": [
+       [
+        "hatte"
+       ],
+       [
+        "gesetzt"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>hatte/war</b> ni egaga moslang (ich hatte, du hattest, wir waren …) va Partizip II ni qo‘ying. Nebensatzda (weil, nachdem) tartib: Partizip → <b>hatte/war</b> eng oxirida. Misol: <b>…, weil er zu viel Kaffee getrunken hatte.</b>",
+       "ru": "Согласуйте <b>hatte/war</b> с подлежащим (ich hatte, du hattest, wir waren …) и поставьте Partizip II. В Nebensatz (weil, nachdem) порядок: Partizip → <b>hatte/war</b> в самом конце. Пример: <b>…, weil er zu viel Kaffee getrunken hatte.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Plusquamperfekt.",
+      "bsp": "Ich ___ den Termin ___. (vergessen) → <b>hatte</b> … <b>vergessen</b>",
+      "s": "Bis letzten Monat ___ Timur nie Probleme mit den Zähnen ___. (haben)",
+      "a": [
+       [
+        "hatte"
+       ],
+       [
+        "gehabt"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>hatte/war</b> ni egaga moslang (ich hatte, du hattest, wir waren …) va Partizip II ni qo‘ying. Nebensatzda (weil, nachdem) tartib: Partizip → <b>hatte/war</b> eng oxirida. Misol: <b>…, weil er zu viel Kaffee getrunken hatte.</b>",
+       "ru": "Согласуйте <b>hatte/war</b> с подлежащим (ich hatte, du hattest, wir waren …) и поставьте Partizip II. В Nebensatz (weil, nachdem) порядок: Partizip → <b>hatte/war</b> в самом конце. Пример: <b>…, weil er zu viel Kaffee getrunken hatte.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Plusquamperfekt.",
+      "bsp": "Ich ___ den Termin ___. (vergessen) → <b>hatte</b> … <b>vergessen</b>",
+      "s": "Hallo Anna,\nletzte Woche war ich richtig krank. Ich ___ mich auf der Reise ___. (sich erkälten)\nAls ich nach Hause kam, ___ ich schon hohes Fieber ___. (bekommen)\nNachdem ich zwei Tage im Bett ___ ___, bin ich endlich zum Arzt gegangen. (liegen)",
+      "a": [
+       [
+        "hatte"
+       ],
+       [
+        "erkältet"
+       ],
+       [
+        "hatte"
+       ],
+       [
+        "bekommen"
+       ],
+       [
+        "gelegen"
+       ],
+       [
+        "hatte"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>hatte/war</b> ni egaga moslang (ich hatte, du hattest, wir waren …) va Partizip II ni qo‘ying. Nebensatzda (weil, nachdem) tartib: Partizip → <b>hatte/war</b> eng oxirida. Misol: <b>…, weil er zu viel Kaffee getrunken hatte.</b>",
+       "ru": "Согласуйте <b>hatte/war</b> с подлежащим (ich hatte, du hattest, wir waren …) и поставьте Partizip II. В Nebensatz (weil, nachdem) порядок: Partizip → <b>hatte/war</b> в самом конце. Пример: <b>…, weil er zu viel Kaffee getrunken hatte.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Plusquamperfekt.",
+      "bsp": "Ich ___ den Termin ___. (vergessen) → <b>hatte</b> … <b>vergessen</b>",
+      "s": "▪ Warum warst du gestern nicht im Kurs?\n● Ich war in der Praxis. Ich ___ mir beim Kochen in den Finger ___. (sich schneiden)\n▪ Oh nein! War es schlimm?\n● Nein. Nachdem die Ärztin die Wunde ___ ___, durfte ich wieder nach Hause gehen. (verbinden)",
+      "a": [
+       [
+        "hatte"
+       ],
+       [
+        "geschnitten"
+       ],
+       [
+        "verbunden"
+       ],
+       [
+        "hatte"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>hatte/war</b> ni egaga moslang (ich hatte, du hattest, wir waren …) va Partizip II ni qo‘ying. Nebensatzda (weil, nachdem) tartib: Partizip → <b>hatte/war</b> eng oxirida. Misol: <b>…, weil er zu viel Kaffee getrunken hatte.</b>",
+       "ru": "Согласуйте <b>hatte/war</b> с подлежащим (ich hatte, du hattest, wir waren …) и поставьте Partizip II. В Nebensatz (weil, nachdem) порядок: Partizip → <b>hatte/war</b> в самом конце. Пример: <b>…, weil er zu viel Kaffee getrunken hatte.</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>nachdem: zuerst – danach</h4>\n<table class=\"ex-tb\"><tr><th>zuerst: nachdem-Satz</th><th>danach: Hauptsatz</th></tr>\n<tr><td>Plusquamperfekt</td><td>Präteritum oder Perfekt</td></tr>\n<tr><td><b>Nachdem</b> ich beim Arzt <b>gewesen war</b>,</td><td><b>ging</b> ich zur Apotheke.</td></tr>\n<tr><td><b>Nachdem</b> Mia die Tabletten <b>genommen hatte</b>,</td><td><b>ist</b> sie <b>eingeschlafen</b>.</td></tr>\n<tr><td>Ich <b>ging</b> zur Apotheke,</td><td><b>nachdem</b> ich beim Arzt <b>gewesen war</b>.</td></tr></table>\n<p class=\"ex-note\"><b>nachdem</b> — «…gandan keyin». nachdem-gapda <b>birinchi</b> bo‘lgan voqea turadi: Plusquamperfekt, fe’l oxirida. Asosiy gap (keyingi voqea) — Präteritum yoki Perfekt. nachdem-gap boshida bo‘lsa, asosiy gap fe’l bilan boshlanadi.</p>",
+      "ru": "<h4>nachdem: zuerst – danach</h4>\n<table class=\"ex-tb\"><tr><th>zuerst: nachdem-Satz</th><th>danach: Hauptsatz</th></tr>\n<tr><td>Plusquamperfekt</td><td>Präteritum oder Perfekt</td></tr>\n<tr><td><b>Nachdem</b> ich beim Arzt <b>gewesen war</b>,</td><td><b>ging</b> ich zur Apotheke.</td></tr>\n<tr><td><b>Nachdem</b> Mia die Tabletten <b>genommen hatte</b>,</td><td><b>ist</b> sie <b>eingeschlafen</b>.</td></tr>\n<tr><td>Ich <b>ging</b> zur Apotheke,</td><td><b>nachdem</b> ich beim Arzt <b>gewesen war</b>.</td></tr></table>\n<p class=\"ex-note\"><b>nachdem</b> — «после того как». В nachdem-предложении стоит то, что было <b>сначала</b>: Plusquamperfekt, глагол в конце. Главное предложение (что было потом) — Präteritum или Perfekt. Если nachdem-предложение стоит первым, главное начинается с глагола.</p>"
+     },
+     {
+      "t": "mc",
+      "h": "Was ist zuerst passiert?",
+      "bsp": "Nachdem ich gegessen hatte, rief Mia an. → zuerst: <b>Ich habe gegessen.</b>",
+      "q": "Nachdem Nodir den Arzt angerufen hatte, legte er sich ins Bett.",
+      "o": [
+       "Nodir hat den Arzt angerufen.",
+       "Nodir hat sich ins Bett gelegt."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Plusquamperfektdagi (nachdem-gapdagi) voqea doim <b>birinchi</b> bo‘lgan — nachdem-gap gapning oxirida tursa ham. Misol: <b>Ich schlief, nachdem ich gegessen hatte.</b> → avval ovqatlandim, keyin uxladim.",
+       "ru": "Действие в Plusquamperfekt (в nachdem-предложении) всегда было <b>первым</b> — даже если nachdem-предложение стоит в конце. Пример: <b>Ich schlief, nachdem ich gegessen hatte.</b> → сначала поел, потом спал."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was ist zuerst passiert?",
+      "bsp": "Nachdem ich gegessen hatte, rief Mia an. → zuerst: <b>Ich habe gegessen.</b>",
+      "q": "Laylo nahm die Tabletten, nachdem sie etwas gegessen hatte.",
+      "o": [
+       "Laylo hat die Tabletten genommen.",
+       "Laylo hat etwas gegessen."
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Plusquamperfektdagi (nachdem-gapdagi) voqea doim <b>birinchi</b> bo‘lgan — nachdem-gap gapning oxirida tursa ham. Misol: <b>Ich schlief, nachdem ich gegessen hatte.</b> → avval ovqatlandim, keyin uxladim.",
+       "ru": "Действие в Plusquamperfekt (в nachdem-предложении) всегда было <b>первым</b> — даже если nachdem-предложение стоит в конце. Пример: <b>Ich schlief, nachdem ich gegessen hatte.</b> → сначала поел, потом спал."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was ist zuerst passiert?",
+      "bsp": "Nachdem ich gegessen hatte, rief Mia an. → zuerst: <b>Ich habe gegessen.</b>",
+      "q": "Als die Ärztin endlich kam, hatte Ben schon eine Stunde gewartet.",
+      "o": [
+       "Die Ärztin ist gekommen.",
+       "Ben hat gewartet."
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Plusquamperfektdagi (nachdem-gapdagi) voqea doim <b>birinchi</b> bo‘lgan — nachdem-gap gapning oxirida tursa ham. Misol: <b>Ich schlief, nachdem ich gegessen hatte.</b> → avval ovqatlandim, keyin uxladim.",
+       "ru": "Действие в Plusquamperfekt (в nachdem-предложении) всегда было <b>первым</b> — даже если nachdem-предложение стоит в конце. Пример: <b>Ich schlief, nachdem ich gegessen hatte.</b> → сначала поел, потом спал."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was ist zuerst passiert?",
+      "bsp": "Nachdem ich gegessen hatte, rief Mia an. → zuerst: <b>Ich habe gegessen.</b>",
+      "q": "Anna ging wieder zum Sport, nachdem sie gesund geworden war.",
+      "o": [
+       "Anna ist gesund geworden.",
+       "Anna ist zum Sport gegangen."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Plusquamperfektdagi (nachdem-gapdagi) voqea doim <b>birinchi</b> bo‘lgan — nachdem-gap gapning oxirida tursa ham. Misol: <b>Ich schlief, nachdem ich gegessen hatte.</b> → avval ovqatlandim, keyin uxladim.",
+       "ru": "Действие в Plusquamperfekt (в nachdem-предложении) всегда было <b>первым</b> — даже если nachdem-предложение стоит в конце. Пример: <b>Ich schlief, nachdem ich gegessen hatte.</b> → сначала поел, потом спал."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *nachdem*.",
+      "bsp": "Zuerst habe ich die Tablette genommen. Dann habe ich geschlafen. → <b>Nachdem ich die Tablette genommen hatte, schlief ich.</b>",
+      "q": "Zuerst hat Anna gefrühstückt. Dann ist sie zur Praxis gegangen.",
+      "w": [
+       "Nachdem",
+       "Anna",
+       "gefrühstückt",
+       "hatte,",
+       "ging",
+       "sie",
+       "zur Praxis"
+      ],
+      "a": "Nachdem Anna gefrühstückt hatte, ging sie zur Praxis.",
+      "alt": [],
+      "gw": {
+       "uz": "Birinchi voqea nachdem-gapga o‘tadi va Plusquamperfektda bo‘ladi (<b>hatte/war</b> eng oxirida). Ikkinchi voqea — asosiy gap, Präteritum yoki Perfektda; nachdem-gapdan keyin u fe’l bilan boshlanadi. Misol: <b>Nachdem Lena gegessen hatte, ging sie los.</b>",
+       "ru": "Первое действие переходит в nachdem-предложение в Plusquamperfekt (<b>hatte/war</b> в самом конце). Второе — главное предложение в Präteritum или Perfekt; после nachdem-предложения оно начинается с глагола. Пример: <b>Nachdem Lena gegessen hatte, ging sie los.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *nachdem*.",
+      "bsp": "Zuerst habe ich die Tablette genommen. Dann habe ich geschlafen. → <b>Nachdem ich die Tablette genommen hatte, schlief ich.</b>",
+      "q": "Zuerst hat Timur die Grippe bekommen. Dann hat er zwei Wochen im Kurs gefehlt.",
+      "w": [
+       "Nachdem",
+       "Timur",
+       "die Grippe",
+       "bekommen",
+       "hatte,",
+       "fehlte",
+       "er",
+       "zwei Wochen im Kurs"
+      ],
+      "a": "Nachdem Timur die Grippe bekommen hatte, fehlte er zwei Wochen im Kurs.",
+      "alt": [],
+      "gw": {
+       "uz": "Birinchi voqea nachdem-gapga o‘tadi va Plusquamperfektda bo‘ladi (<b>hatte/war</b> eng oxirida). Ikkinchi voqea — asosiy gap, Präteritum yoki Perfektda; nachdem-gapdan keyin u fe’l bilan boshlanadi. Misol: <b>Nachdem Lena gegessen hatte, ging sie los.</b>",
+       "ru": "Первое действие переходит в nachdem-предложение в Plusquamperfekt (<b>hatte/war</b> в самом конце). Второе — главное предложение в Präteritum или Perfekt; после nachdem-предложения оно начинается с глагола. Пример: <b>Nachdem Lena gegessen hatte, ging sie los.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *nachdem*.",
+      "bsp": "Zuerst habe ich die Tablette genommen. Dann habe ich geschlafen. → <b>Nachdem ich die Tablette genommen hatte, schlief ich.</b>",
+      "q": "Zuerst ist Lena zur Apotheke gefahren. Dann hat sie die Medikamente abgeholt.",
+      "w": [
+       "Nachdem",
+       "Lena",
+       "zur Apotheke",
+       "gefahren",
+       "war,",
+       "hat",
+       "sie",
+       "die Medikamente",
+       "abgeholt"
+      ],
+      "a": "Nachdem Lena zur Apotheke gefahren war, hat sie die Medikamente abgeholt.",
+      "alt": [],
+      "gw": {
+       "uz": "Birinchi voqea nachdem-gapga o‘tadi va Plusquamperfektda bo‘ladi (<b>hatte/war</b> eng oxirida). Ikkinchi voqea — asosiy gap, Präteritum yoki Perfektda; nachdem-gapdan keyin u fe’l bilan boshlanadi. Misol: <b>Nachdem Lena gegessen hatte, ging sie los.</b>",
+       "ru": "Первое действие переходит в nachdem-предложение в Plusquamperfekt (<b>hatte/war</b> в самом конце). Второе — главное предложение в Präteritum или Perfekt; после nachdem-предложения оно начинается с глагола. Пример: <b>Nachdem Lena gegessen hatte, ging sie los.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *nachdem*.",
+      "bsp": "Zuerst habe ich die Tablette genommen. Dann habe ich geschlafen. → <b>Nachdem ich die Tablette genommen hatte, schlief ich.</b>",
+      "q": "Zuerst haben wir uns in der Praxis angemeldet. Dann haben wir im Wartezimmer gewartet.",
+      "w": [
+       "Nachdem",
+       "wir",
+       "uns",
+       "in der Praxis",
+       "angemeldet",
+       "hatten,",
+       "warteten wir",
+       "im Wartezimmer"
+      ],
+      "a": "Nachdem wir uns in der Praxis angemeldet hatten, warteten wir im Wartezimmer.",
+      "alt": [],
+      "gw": {
+       "uz": "Birinchi voqea nachdem-gapga o‘tadi va Plusquamperfektda bo‘ladi (<b>hatte/war</b> eng oxirida). Ikkinchi voqea — asosiy gap, Präteritum yoki Perfektda; nachdem-gapdan keyin u fe’l bilan boshlanadi. Misol: <b>Nachdem Lena gegessen hatte, ging sie los.</b>",
+       "ru": "Первое действие переходит в nachdem-предложение в Plusquamperfekt (<b>hatte/war</b> в самом конце). Второе — главное предложение в Präteritum или Perfekt; после nachdem-предложения оно начинается с глагола. Пример: <b>Nachdem Lena gegessen hatte, ging sie los.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *nachdem*.",
+      "bsp": "Zuerst habe ich die Tablette genommen. Dann habe ich geschlafen. → <b>Nachdem ich die Tablette genommen hatte, schlief ich.</b>",
+      "q": "Zuerst ist Malika aus dem Urlaub zurückgekommen. Dann hat sie sich impfen lassen.",
+      "w": [
+       "Nachdem",
+       "Malika",
+       "aus dem Urlaub",
+       "zurückgekommen",
+       "war,",
+       "ließ",
+       "sie",
+       "sich",
+       "impfen"
+      ],
+      "a": "Nachdem Malika aus dem Urlaub zurückgekommen war, ließ sie sich impfen.",
+      "alt": [],
+      "gw": {
+       "uz": "Birinchi voqea nachdem-gapga o‘tadi va Plusquamperfektda bo‘ladi (<b>hatte/war</b> eng oxirida). Ikkinchi voqea — asosiy gap, Präteritum yoki Perfektda; nachdem-gapdan keyin u fe’l bilan boshlanadi. Misol: <b>Nachdem Lena gegessen hatte, ging sie los.</b>",
+       "ru": "Первое действие переходит в nachdem-предложение в Plusquamperfekt (<b>hatte/war</b> в самом конце). Второе — главное предложение в Präteritum или Perfekt; после nachdem-предложения оно начинается с глагола. Пример: <b>Nachdem Lena gegessen hatte, ging sie los.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *nachdem*.",
+      "bsp": "Zuerst habe ich die Tablette genommen. Dann habe ich geschlafen. → <b>Nachdem ich die Tablette genommen hatte, schlief ich.</b>",
+      "q": "Zuerst hat Sevara die Tabletten genommen. Dann ging es ihr besser.",
+      "w": [
+       "Es",
+       "ging",
+       "Sevara",
+       "besser,",
+       "nachdem",
+       "sie",
+       "die Tabletten",
+       "genommen",
+       "hatte"
+      ],
+      "a": "Es ging Sevara besser, nachdem sie die Tabletten genommen hatte.",
+      "alt": [],
+      "gw": {
+       "uz": "Birinchi voqea nachdem-gapga o‘tadi va Plusquamperfektda bo‘ladi (<b>hatte/war</b> eng oxirida). Ikkinchi voqea — asosiy gap, Präteritum yoki Perfektda; nachdem-gapdan keyin u fe’l bilan boshlanadi. Misol: <b>Nachdem Lena gegessen hatte, ging sie los.</b>",
+       "ru": "Первое действие переходит в nachdem-предложение в Plusquamperfekt (<b>hatte/war</b> в самом конце). Второе — главное предложение в Präteritum или Perfekt; после nachdem-предложения оно начинается с глагола. Пример: <b>Nachdem Lena gegessen hatte, ging sie los.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *nachdem*.",
+      "bsp": "Zuerst habe ich die Tablette genommen. Dann habe ich geschlafen. → <b>Nachdem ich die Tablette genommen hatte, schlief ich.</b>",
+      "q": "Zuerst hat Paul sich am Fuß verletzt. Dann konnte er nicht mehr Fußball spielen.",
+      "w": [
+       "Nachdem",
+       "Paul",
+       "sich",
+       "am Fuß",
+       "verletzt",
+       "hatte,",
+       "konnte",
+       "er",
+       "nicht mehr",
+       "Fußball spielen"
+      ],
+      "a": "Nachdem Paul sich am Fuß verletzt hatte, konnte er nicht mehr Fußball spielen.",
+      "alt": [
+       "Nachdem sich Paul am Fuß verletzt hatte, konnte er nicht mehr Fußball spielen."
+      ],
+      "gw": {
+       "uz": "Birinchi voqea nachdem-gapga o‘tadi va Plusquamperfektda bo‘ladi (<b>hatte/war</b> eng oxirida). Ikkinchi voqea — asosiy gap, Präteritum yoki Perfektda; nachdem-gapdan keyin u fe’l bilan boshlanadi. Misol: <b>Nachdem Lena gegessen hatte, ging sie los.</b>",
+       "ru": "Первое действие переходит в nachdem-предложение в Plusquamperfekt (<b>hatte/war</b> в самом конце). Второе — главное предложение в Präteritum или Perfekt; после nachdem-предложения оно начинается с глагола. Пример: <b>Nachdem Lena gegessen hatte, ging sie los.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Nachdem ich gegessen habe, ging ich los. → <b>habe</b> → Nachdem ich gegessen hatte, …",
+      "s": "Nachdem ich die Tablette genommen habe , ging es mir besser .",
+      "a": [
+       5
+      ],
+      "fix": "Nachdem ich die Tablette genommen hatte, ging es mir besser.",
+      "gw": {
+       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; nachdem-gapdan keyin asosiy gap fe’l bilan boshlanadi; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>).",
+       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; после nachdem-предложения главное начинается с глагола; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>)."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Nachdem ich gegessen habe, ging ich los. → <b>habe</b> → Nachdem ich gegessen hatte, …",
+      "s": "Die Sprechstunde war vorbei , weil wir zu spät gekommen hatten .",
+      "a": [
+       10
+      ],
+      "fix": "Die Sprechstunde war vorbei, weil wir zu spät gekommen waren.",
+      "gw": {
+       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; nachdem-gapdan keyin asosiy gap fe’l bilan boshlanadi; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>).",
+       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; после nachdem-предложения главное начинается с глагола; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>)."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Nachdem ich gegessen habe, ging ich los. → <b>habe</b> → Nachdem ich gegessen hatte, …",
+      "s": "Ich ging zur Apotheke , weil der Arzt mir ein Rezept geschreibt hatte .",
+      "a": [
+       11
+      ],
+      "fix": "Ich ging zur Apotheke, weil der Arzt mir ein Rezept geschrieben hatte.",
+      "gw": {
+       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; nachdem-gapdan keyin asosiy gap fe’l bilan boshlanadi; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>).",
+       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; после nachdem-предложения главное начинается с глагола; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>)."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Nachdem ich gegessen habe, ging ich los. → <b>habe</b> → Nachdem ich gegessen hatte, …",
+      "s": "Nachdem Aziz die Grippe gehabt hatte , er war noch lange müde .",
+      "a": [
+       7
+      ],
+      "fix": "Nachdem Aziz die Grippe gehabt hatte, war er noch lange müde.",
+      "gw": {
+       "uz": "Tekshiring: nachdem-gapda <b>habe/bin</b> emas, <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; nachdem-gapdan keyin asosiy gap fe’l bilan boshlanadi; Partizip shakli to‘g‘rimi (<b>geschrieben</b>, <b>getrunken</b>).",
+       "ru": "Проверьте: в nachdem-предложении не <b>habe/bin</b>, а <b>hatte/war</b> (Plusquamperfekt); kommen, gehen — <b>war</b>; после nachdem-предложения главное начинается с глагола; правильна ли форма Partizip (<b>geschrieben</b>, <b>getrunken</b>)."
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

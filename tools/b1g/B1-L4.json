@@ -1,0 +1,555 @@
+{
+ "id": "B1-b11-4-G",
+ "meta": {
+  "title": "Grammatik · damit · um … zu",
+  "stitle": "um … zu · damit · Ziel · Infinitiv mit zu"
+ },
+ "ex": {
+  "title": "Lektion 4 · Grammatik",
+  "sub": "um … zu · damit · Ziel · Infinitiv mit zu",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Ziel: um … zu oder damit?</h4><table class=\"ex-tb\"><tr><th></th><th>Beispiel</th></tr><tr><td>gleiche Person → <b>um … zu</b> + Infinitiv</td><td><b>Ich</b> gehe früh ins Bett, <b>um</b> fit <b>zu sein</b>.</td></tr><tr><td>andere Person → <b>damit</b> + Subjekt + Verb</td><td><b>Ich</b> mache das Licht aus, <b>damit</b> <b>mein Bruder</b> schlafen <b>kann</b>.</td></tr><tr><td>trennbare Verben</td><td>um früh auf<b>zu</b>stehen · um die Wohnung auf<b>zu</b>räumen</td></tr></table><p class=\"ex-note\">Maqsadni bildiradi (Wozu? — Nima uchun?). Ikkala gapda ega bir xil bo‘lsa — <b>um … zu</b> + Infinitiv (ikkinchi ega yo‘q, Infinitiv oxirida). Ega har xil bo‘lsa — <b>damit</b> (Nebensatz, tuslangan fe’l oxirida). Ega bir xil bo‘lganda <b>damit</b> ham mumkin, lekin <b>um … zu</b> qisqaroq. Ajraladigan fe’llarda <b>zu</b> o‘rtaga kiradi: auf<b>zu</b>stehen.</p>",
+      "ru": "<h4>Ziel: um … zu oder damit?</h4><table class=\"ex-tb\"><tr><th></th><th>Beispiel</th></tr><tr><td>gleiche Person → <b>um … zu</b> + Infinitiv</td><td><b>Ich</b> gehe früh ins Bett, <b>um</b> fit <b>zu sein</b>.</td></tr><tr><td>andere Person → <b>damit</b> + Subjekt + Verb</td><td><b>Ich</b> mache das Licht aus, <b>damit</b> <b>mein Bruder</b> schlafen <b>kann</b>.</td></tr><tr><td>trennbare Verben</td><td>um früh auf<b>zu</b>stehen · um die Wohnung auf<b>zu</b>räumen</td></tr></table><p class=\"ex-note\">Выражает цель (Wozu? — Зачем?). Если подлежащее в обеих частях одно и то же — <b>um … zu</b> + инфинитив (второго подлежащего нет, инфинитив в конце). Если подлежащие разные — <b>damit</b> (придаточное, спрягаемый глагол в конце). При одном подлежащем <b>damit</b> тоже возможно, но <b>um … zu</b> короче. У отделяемых глаголов <b>zu</b> встаёт в середину: auf<b>zu</b>stehen.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *um … zu* oder *damit* und das Verb am Ende.",
+      "bsp": "Ich trinke Kaffee, um wach zu bleiben. → <b>um</b> … <b>zu bleiben</b>",
+      "s": "Ich stehe jeden Tag früh auf , um Sport zu machen .",
+      "a": [
+       7,
+       9,
+       10
+      ],
+      "gw": {
+       "uz": "<b>um … zu</b>: zu + Infinitiv eng oxirida; ajraladigan fe’lda zu ichida: <b>einzuschlafen</b>. <b>damit</b>: ega + … + tuslangan fe’l oxirida. Misol: <b>…, um Geld zu sparen.</b> · <b>…, damit er schläft.</b>",
+       "ru": "<b>um … zu</b>: zu + инфинитив в самом конце; у отделяемого глагола zu внутри: <b>einzuschlafen</b>. <b>damit</b>: подлежащее + … + спрягаемый глагол в конце. Пример: <b>…, um Geld zu sparen.</b> · <b>…, damit er schläft.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *um … zu* oder *damit* und das Verb am Ende.",
+      "s": "Meine Mutter kocht ohne Zucker , damit wir gesünder essen .",
+      "a": [
+       6,
+       9
+      ],
+      "gw": {
+       "uz": "<b>um … zu</b>: zu + Infinitiv eng oxirida; ajraladigan fe’lda zu ichida: <b>einzuschlafen</b>. <b>damit</b>: ega + … + tuslangan fe’l oxirida. Misol: <b>…, um Geld zu sparen.</b> · <b>…, damit er schläft.</b>",
+       "ru": "<b>um … zu</b>: zu + инфинитив в самом конце; у отделяемого глагола zu внутри: <b>einzuschlafen</b>. <b>damit</b>: подлежащее + … + спрягаемый глагол в конце. Пример: <b>…, um Geld zu sparen.</b> · <b>…, damit er schläft.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *um … zu* oder *damit* und das Verb am Ende.",
+      "s": "Jonas schaltet am Abend sein Handy aus , um besser einzuschlafen .",
+      "a": [
+       8,
+       10
+      ],
+      "gw": {
+       "uz": "<b>um … zu</b>: zu + Infinitiv eng oxirida; ajraladigan fe’lda zu ichida: <b>einzuschlafen</b>. <b>damit</b>: ega + … + tuslangan fe’l oxirida. Misol: <b>…, um Geld zu sparen.</b> · <b>…, damit er schläft.</b>",
+       "ru": "<b>um … zu</b>: zu + инфинитив в самом конце; у отделяемого глагола zu внутри: <b>einzuschlafen</b>. <b>damit</b>: подлежащее + … + спрягаемый глагол в конце. Пример: <b>…, um Geld zu sparen.</b> · <b>…, damit er schläft.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *um … zu* oder *damit* und das Verb am Ende.",
+      "s": "Ich erkläre meinem Bruder die Aufgabe , damit er sie versteht .",
+      "a": [
+       7,
+       10
+      ],
+      "gw": {
+       "uz": "<b>um … zu</b>: zu + Infinitiv eng oxirida; ajraladigan fe’lda zu ichida: <b>einzuschlafen</b>. <b>damit</b>: ega + … + tuslangan fe’l oxirida. Misol: <b>…, um Geld zu sparen.</b> · <b>…, damit er schläft.</b>",
+       "ru": "<b>um … zu</b>: zu + инфинитив в самом конце; у отделяемого глагола zu внутри: <b>einzuschlafen</b>. <b>damit</b>: подлежащее + … + спрягаемый глагол в конце. Пример: <b>…, um Geld zu sparen.</b> · <b>…, damit er schläft.</b>"
+      }
+     },
+     {
+      "t": "cat",
+      "h": "Gleiche Person oder andere Person? Ordnen Sie zu.",
+      "bsp": "Ich lerne viel. – Ich will die Prüfung bestehen. → ich / ich → <b>um … zu</b>",
+      "c": [
+       "um … zu",
+       "damit"
+      ],
+      "i": [
+       [
+        "Ich gehe zu Fuß. – Ich will fit bleiben.",
+        0
+       ],
+       [
+        "Ich spreche langsam. – Meine Oma soll mich verstehen.",
+        1
+       ],
+       [
+        "Wir machen das Fenster auf. – Wir wollen frische Luft haben.",
+        0
+       ],
+       [
+        "Lena kauft viel Obst. – Ihre Kinder sollen gesund essen.",
+        1
+       ],
+       [
+        "Aziz verzichtet auf Süßigkeiten. – Er will abnehmen.",
+        0
+       ],
+       [
+        "Ich stelle den Wecker. – Mein Bruder soll pünktlich aufstehen.",
+        1
+       ]
+      ],
+      "gw": {
+       "uz": "Ikkala gapning egasini solishtiring: <b>ich … ich</b> → um … zu; <b>ich … meine Oma</b> → damit. Misol: <b>Ich spreche langsam, damit meine Oma mich versteht.</b>",
+       "ru": "Сравните подлежащие обеих частей: <b>ich … ich</b> → um … zu; <b>ich … meine Oma</b> → damit. Пример: <b>Ich spreche langsam, damit meine Oma mich versteht.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "bsp": "Ich spare … (ein Fahrrad kaufen) → ✓ <b>…, um ein Fahrrad zu kaufen.</b>",
+      "q": "Ich gehe früh ins Bett … (früh aufstehen)",
+      "o": [
+       "…, um früh aufzustehen.",
+       "…, um früh zu aufstehen.",
+       "…, um früh aufstehen zu."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>um</b> dan keyin ega bo‘lmaydi, oxirida <b>zu</b> + Infinitiv (ajraladigan fe’lda bitta so‘z: aufzustehen). <b>damit</b> dan keyin ega bor, <b>zu</b> yo‘q, fe’l tuslanadi. Misol: <b>…, um Zeit zu sparen.</b> · <b>…, damit du Zeit sparst.</b>",
+       "ru": "После <b>um</b> нет подлежащего, в конце <b>zu</b> + инфинитив (у отделяемого глагола одним словом: aufzustehen). После <b>damit</b> есть подлежащее, <b>zu</b> нет, глагол спрягается. Пример: <b>…, um Zeit zu sparen.</b> · <b>…, damit du Zeit sparst.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "q": "Sevara lernt jeden Tag … (die Prüfung bestehen)",
+      "o": [
+       "…, um zu die Prüfung bestehen.",
+       "…, um die Prüfung bestehen.",
+       "…, um die Prüfung zu bestehen."
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "<b>um</b> dan keyin ega bo‘lmaydi, oxirida <b>zu</b> + Infinitiv (ajraladigan fe’lda bitta so‘z: aufzustehen). <b>damit</b> dan keyin ega bor, <b>zu</b> yo‘q, fe’l tuslanadi. Misol: <b>…, um Zeit zu sparen.</b> · <b>…, damit du Zeit sparst.</b>",
+       "ru": "После <b>um</b> нет подлежащего, в конце <b>zu</b> + инфинитив (у отделяемого глагола одним словом: aufzustehen). После <b>damit</b> есть подлежащее, <b>zu</b> нет, глагол спрягается. Пример: <b>…, um Zeit zu sparen.</b> · <b>…, damit du Zeit sparst.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "q": "Mein Vater fährt langsam … (wir — keine Angst haben)",
+      "o": [
+       "…, um wir keine Angst haben.",
+       "…, damit wir keine Angst haben.",
+       "…, damit wir keine Angst zu haben."
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "<b>um</b> dan keyin ega bo‘lmaydi, oxirida <b>zu</b> + Infinitiv (ajraladigan fe’lda bitta so‘z: aufzustehen). <b>damit</b> dan keyin ega bor, <b>zu</b> yo‘q, fe’l tuslanadi. Misol: <b>…, um Zeit zu sparen.</b> · <b>…, damit du Zeit sparst.</b>",
+       "ru": "После <b>um</b> нет подлежащего, в конце <b>zu</b> + инфинитив (у отделяемого глагола одним словом: aufzustehen). После <b>damit</b> есть подлежащее, <b>zu</b> нет, глагол спрягается. Пример: <b>…, um Zeit zu sparen.</b> · <b>…, damit du Zeit sparst.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "q": "Ich schreibe eine Liste … (nichts vergessen)",
+      "o": [
+       "…, um nichts zu vergessen.",
+       "…, damit nichts zu vergessen.",
+       "…, um ich nichts vergesse."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>um</b> dan keyin ega bo‘lmaydi, oxirida <b>zu</b> + Infinitiv (ajraladigan fe’lda bitta so‘z: aufzustehen). <b>damit</b> dan keyin ega bor, <b>zu</b> yo‘q, fe’l tuslanadi. Misol: <b>…, um Zeit zu sparen.</b> · <b>…, damit du Zeit sparst.</b>",
+       "ru": "После <b>um</b> нет подлежащего, в конце <b>zu</b> + инфинитив (у отделяемого глагола одним словом: aufzustehen). После <b>damit</b> есть подлежащее, <b>zu</b> нет, глагол спрягается. Пример: <b>…, um Zeit zu sparen.</b> · <b>…, damit du Zeit sparst.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *um* oder *damit*.",
+      "bsp": "Ich trinke viel Wasser, ___ gesund zu bleiben. → … zu bleiben → <b>um</b>",
+      "s": "Ich lese jeden Abend zehn Minuten, ___ mein Gehirn aktiv zu halten.",
+      "a": [
+       [
+        "um"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapning davomiga qarang: oxirida <b>zu</b> + Infinitiv va ega yo‘q → <b>um</b>; ega va tuslangan fe’l bor → <b>damit</b>. Gap boshida bosh harf: <b>Um</b>, <b>Damit</b>. Misol: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>",
+       "ru": "Смотрите на продолжение: в конце <b>zu</b> + инфинитив и нет подлежащего → <b>um</b>; есть подлежащее и спрягаемый глагол → <b>damit</b>. В начале предложения — с большой буквы: <b>Um</b>, <b>Damit</b>. Пример: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *um* oder *damit*.",
+      "s": "Meine Eltern schalten am Abend das WLAN aus, ___ wir früher schlafen gehen.",
+      "a": [
+       [
+        "damit"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapning davomiga qarang: oxirida <b>zu</b> + Infinitiv va ega yo‘q → <b>um</b>; ega va tuslangan fe’l bor → <b>damit</b>. Gap boshida bosh harf: <b>Um</b>, <b>Damit</b>. Misol: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>",
+       "ru": "Смотрите на продолжение: в конце <b>zu</b> + инфинитив и нет подлежащего → <b>um</b>; есть подлежащее и спрягаемый глагол → <b>damit</b>. В начале предложения — с большой буквы: <b>Um</b>, <b>Damit</b>. Пример: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *um* oder *damit*.",
+      "s": "Herr Karimov spricht im Unterricht sehr deutlich, ___ alle ihn verstehen.",
+      "a": [
+       [
+        "damit"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapning davomiga qarang: oxirida <b>zu</b> + Infinitiv va ega yo‘q → <b>um</b>; ega va tuslangan fe’l bor → <b>damit</b>. Gap boshida bosh harf: <b>Um</b>, <b>Damit</b>. Misol: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>",
+       "ru": "Смотрите на продолжение: в конце <b>zu</b> + инфинитив и нет подлежащего → <b>um</b>; есть подлежащее и спрягаемый глагол → <b>damit</b>. В начале предложения — с большой буквы: <b>Um</b>, <b>Damit</b>. Пример: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *um* oder *damit*.",
+      "s": "___ Energie zu sparen, machen wir das Licht aus.",
+      "a": [
+       [
+        "Um"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapning davomiga qarang: oxirida <b>zu</b> + Infinitiv va ega yo‘q → <b>um</b>; ega va tuslangan fe’l bor → <b>damit</b>. Gap boshida bosh harf: <b>Um</b>, <b>Damit</b>. Misol: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>",
+       "ru": "Смотрите на продолжение: в конце <b>zu</b> + инфинитив и нет подлежащего → <b>um</b>; есть подлежащее и спрягаемый глагол → <b>damit</b>. В начале предложения — с большой буквы: <b>Um</b>, <b>Damit</b>. Пример: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *um* oder *damit*.",
+      "s": "Ich habe meiner Freundin eine Studie über Schlaf geschickt, ___ sie endlich früher ins Bett geht.",
+      "a": [
+       [
+        "damit"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapning davomiga qarang: oxirida <b>zu</b> + Infinitiv va ega yo‘q → <b>um</b>; ega va tuslangan fe’l bor → <b>damit</b>. Gap boshida bosh harf: <b>Um</b>, <b>Damit</b>. Misol: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>",
+       "ru": "Смотрите на продолжение: в конце <b>zu</b> + инфинитив и нет подлежащего → <b>um</b>; есть подлежащее и спрягаемый глагол → <b>damit</b>. В начале предложения — с большой буквы: <b>Um</b>, <b>Damit</b>. Пример: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *um* oder *damit*.",
+      "s": "Anna: Warum stehst du so früh auf?\nLaylo: ___ vor dem Unterricht noch joggen zu gehen. Und ich mache das Frühstück, ___ meine Schwester nicht so früh aufstehen muss.",
+      "a": [
+       [
+        "Um"
+       ],
+       [
+        "damit"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapning davomiga qarang: oxirida <b>zu</b> + Infinitiv va ega yo‘q → <b>um</b>; ega va tuslangan fe’l bor → <b>damit</b>. Gap boshida bosh harf: <b>Um</b>, <b>Damit</b>. Misol: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>",
+       "ru": "Смотрите на продолжение: в конце <b>zu</b> + инфинитив и нет подлежащего → <b>um</b>; есть подлежащее и спрягаемый глагол → <b>damit</b>. В начале предложения — с большой буквы: <b>Um</b>, <b>Damit</b>. Пример: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *um* oder *damit*.",
+      "s": "Thema: Neue Gewohnheiten\nNodir: Ich lege mein Handy ins andere Zimmer, ___ nicht ständig auf den Bildschirm zu schauen.\nMia: Gute Idee! Ich stelle mir eine Wasserflasche auf den Tisch, ___ ich öfter trinke.\nTimur: Und ich gehe zu Fuß zur Uni, ___ mehr Bewegung zu haben.",
+      "a": [
+       [
+        "um"
+       ],
+       [
+        "damit"
+       ],
+       [
+        "um"
+       ]
+      ],
+      "gw": {
+       "uz": "Gapning davomiga qarang: oxirida <b>zu</b> + Infinitiv va ega yo‘q → <b>um</b>; ega va tuslangan fe’l bor → <b>damit</b>. Gap boshida bosh harf: <b>Um</b>, <b>Damit</b>. Misol: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>",
+       "ru": "Смотрите на продолжение: в конце <b>zu</b> + инфинитив и нет подлежащего → <b>um</b>; есть подлежащее и спрягаемый глагол → <b>damit</b>. В начале предложения — с большой буквы: <b>Um</b>, <b>Damit</b>. Пример: <b>…, um gesund zu bleiben.</b> · <b>…, damit alle mich verstehen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *zu* + Infinitiv.",
+      "bsp": "Ich spare, um ein Fahrrad ___. (kaufen) → <b>zu kaufen</b>",
+      "s": "Ich mache jeden Morgen Yoga, um ruhiger ___. (werden)",
+      "a": [
+       [
+        "zu werden"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>um</b> gapining oxirida <b>zu</b> + Infinitiv. Ajraladigan fe’llarda zu old qo‘shimcha va fe’l orasiga yoziladi, bitta so‘z: auf<b>zu</b>räumen, an<b>zu</b>kommen. Refleksiv fe’lda <b>sich</b> qoladi: um sich <b>zu konzentrieren</b>.",
+       "ru": "В конце <b>um</b>-оборота — <b>zu</b> + инфинитив. У отделяемых глаголов zu пишется между приставкой и глаголом, одним словом: auf<b>zu</b>räumen, an<b>zu</b>kommen. У возвратных глаголов <b>sich</b> остаётся: um sich <b>zu konzentrieren</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *zu* + Infinitiv.",
+      "s": "Wir stehen am Samstag früher auf, um die Wohnung ___. (aufräumen)",
+      "a": [
+       [
+        "aufzuräumen"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>um</b> gapining oxirida <b>zu</b> + Infinitiv. Ajraladigan fe’llarda zu old qo‘shimcha va fe’l orasiga yoziladi, bitta so‘z: auf<b>zu</b>räumen, an<b>zu</b>kommen. Refleksiv fe’lda <b>sich</b> qoladi: um sich <b>zu konzentrieren</b>.",
+       "ru": "В конце <b>um</b>-оборота — <b>zu</b> + инфинитив. У отделяемых глаголов zu пишется между приставкой и глаголом, одним словом: auf<b>zu</b>räumen, an<b>zu</b>kommen. У возвратных глаголов <b>sich</b> остаётся: um sich <b>zu konzentrieren</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *zu* + Infinitiv.",
+      "s": "Malika verzichtet beim Lernen auf ihr Handy, um sich besser ___. (konzentrieren)",
+      "a": [
+       [
+        "zu konzentrieren"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>um</b> gapining oxirida <b>zu</b> + Infinitiv. Ajraladigan fe’llarda zu old qo‘shimcha va fe’l orasiga yoziladi, bitta so‘z: auf<b>zu</b>räumen, an<b>zu</b>kommen. Refleksiv fe’lda <b>sich</b> qoladi: um sich <b>zu konzentrieren</b>.",
+       "ru": "В конце <b>um</b>-оборота — <b>zu</b> + инфинитив. У отделяемых глаголов zu пишется между приставкой и глаголом, одним словом: auf<b>zu</b>räumen, an<b>zu</b>kommen. У возвратных глаголов <b>sich</b> остаётся: um sich <b>zu konzentrieren</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *zu* + Infinitiv.",
+      "s": "Ich nehme den Bus um sieben Uhr, um nicht zu spät ___. (ankommen)",
+      "a": [
+       [
+        "anzukommen"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>um</b> gapining oxirida <b>zu</b> + Infinitiv. Ajraladigan fe’llarda zu old qo‘shimcha va fe’l orasiga yoziladi, bitta so‘z: auf<b>zu</b>räumen, an<b>zu</b>kommen. Refleksiv fe’lda <b>sich</b> qoladi: um sich <b>zu konzentrieren</b>.",
+       "ru": "В конце <b>um</b>-оборота — <b>zu</b> + инфинитив. У отделяемых глаголов zu пишется между приставкой и глаголом, одним словом: auf<b>zu</b>räumen, an<b>zu</b>kommen. У возвратных глаголов <b>sich</b> остаётся: um sich <b>zu konzentrieren</b>."
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wo steht der Satz mit um … zu / damit?</h4><table class=\"ex-tb\"><tr><th>1. Teil</th><th>2. Teil</th></tr><tr><td>Ich fahre Fahrrad,</td><td><b>um</b> fit <b>zu bleiben</b>.</td></tr><tr><td><b>Um</b> fit <b>zu bleiben</b>,</td><td><b>fahre</b> ich Fahrrad.</td></tr><tr><td><b>Damit</b> wir pünktlich <b>sind</b>,</td><td><b>nehmen</b> wir ein Taxi.</td></tr></table><div class=\"ex-sk\"><span>Um</span><span>fit</span><span class=\"v\">zu bleiben</span>,<span class=\"v\">fahre</span><span>ich</span><span>Fahrrad</span>.</div><p class=\"ex-note\"><b>um … zu</b> yoki <b>damit</b> qismi oldin kelsa, keyin vergul va darhol fe’l: <b>Um fit zu bleiben, fahre ich …</b></p>",
+      "ru": "<h4>Wo steht der Satz mit um … zu / damit?</h4><table class=\"ex-tb\"><tr><th>1. Teil</th><th>2. Teil</th></tr><tr><td>Ich fahre Fahrrad,</td><td><b>um</b> fit <b>zu bleiben</b>.</td></tr><tr><td><b>Um</b> fit <b>zu bleiben</b>,</td><td><b>fahre</b> ich Fahrrad.</td></tr><tr><td><b>Damit</b> wir pünktlich <b>sind</b>,</td><td><b>nehmen</b> wir ein Taxi.</td></tr></table><div class=\"ex-sk\"><span>Um</span><span>fit</span><span class=\"v\">zu bleiben</span>,<span class=\"v\">fahre</span><span>ich</span><span>Fahrrad</span>.</div><p class=\"ex-note\">Если часть с <b>um … zu</b> или <b>damit</b> стоит первой, после неё запятая и сразу глагол: <b>Um fit zu bleiben, fahre ich …</b></p>"
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *um … zu* oder *damit*.",
+      "bsp": "Ich lerne Wörter. Ich will die Prüfung bestehen. → <b>Ich lerne Wörter, um die Prüfung zu bestehen.</b>",
+      "q": "Ich verzichte auf Zucker. Ich will gesünder leben.",
+      "w": [
+       "Ich",
+       "verzichte",
+       "auf Zucker,",
+       "um",
+       "gesünder",
+       "zu",
+       "leben"
+      ],
+      "a": "Ich verzichte auf Zucker, um gesünder zu leben.",
+      "alt": [],
+      "gw": {
+       "uz": "Ega bir xil → <b>um … zu</b> (ikkinchi ega tushib qoladi, zu + Infinitiv oxirida). Ega har xil → <b>damit</b> + ega + fe’l oxirida. Bu qism oldin kelsa, keyin darhol fe’l: <b>Um Energie zu sparen, schalten wir …</b>",
+       "ru": "Подлежащее одно → <b>um … zu</b> (второе подлежащее исчезает, zu + инфинитив в конце). Подлежащие разные → <b>damit</b> + подлежащее + глагол в конце. Если эта часть стоит первой, после неё сразу глагол: <b>Um Energie zu sparen, schalten wir …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *um … zu* oder *damit*.",
+      "q": "Ich mache das Licht aus. Mein Bruder kann dann schlafen.",
+      "w": [
+       "Ich",
+       "mache",
+       "das Licht",
+       "aus,",
+       "damit",
+       "mein Bruder",
+       "schlafen",
+       "kann"
+      ],
+      "a": "Ich mache das Licht aus, damit mein Bruder schlafen kann.",
+      "alt": [],
+      "gw": {
+       "uz": "Ega bir xil → <b>um … zu</b> (ikkinchi ega tushib qoladi, zu + Infinitiv oxirida). Ega har xil → <b>damit</b> + ega + fe’l oxirida. Bu qism oldin kelsa, keyin darhol fe’l: <b>Um Energie zu sparen, schalten wir …</b>",
+       "ru": "Подлежащее одно → <b>um … zu</b> (второе подлежащее исчезает, zu + инфинитив в конце). Подлежащие разные → <b>damit</b> + подлежащее + глагол в конце. Если эта часть стоит первой, после неё сразу глагол: <b>Um Energie zu sparen, schalten wir …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *um … zu* oder *damit*.",
+      "q": "Meine Schwester will nicht zu spät ankommen. Sie nimmt ein Taxi.",
+      "w": [
+       "Meine Schwester",
+       "nimmt",
+       "ein Taxi,",
+       "um",
+       "nicht",
+       "zu spät",
+       "anzukommen"
+      ],
+      "a": "Meine Schwester nimmt ein Taxi, um nicht zu spät anzukommen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ega bir xil → <b>um … zu</b> (ikkinchi ega tushib qoladi, zu + Infinitiv oxirida). Ega har xil → <b>damit</b> + ega + fe’l oxirida. Bu qism oldin kelsa, keyin darhol fe’l: <b>Um Energie zu sparen, schalten wir …</b>",
+       "ru": "Подлежащее одно → <b>um … zu</b> (второе подлежащее исчезает, zu + инфинитив в конце). Подлежащие разные → <b>damit</b> + подлежащее + глагол в конце. Если эта часть стоит первой, после неё сразу глагол: <b>Um Energie zu sparen, schalten wir …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *um … zu* oder *damit*.",
+      "q": "Wir wollen Energie sparen. Wir schalten den Computer aus.",
+      "w": [
+       "Um",
+       "Energie",
+       "zu",
+       "sparen,",
+       "schalten",
+       "wir",
+       "den Computer",
+       "aus"
+      ],
+      "a": "Um Energie zu sparen, schalten wir den Computer aus.",
+      "alt": [],
+      "gw": {
+       "uz": "Ega bir xil → <b>um … zu</b> (ikkinchi ega tushib qoladi, zu + Infinitiv oxirida). Ega har xil → <b>damit</b> + ega + fe’l oxirida. Bu qism oldin kelsa, keyin darhol fe’l: <b>Um Energie zu sparen, schalten wir …</b>",
+       "ru": "Подлежащее одно → <b>um … zu</b> (второе подлежащее исчезает, zu + инфинитив в конце). Подлежащие разные → <b>damit</b> + подлежащее + глагол в конце. Если эта часть стоит первой, после неё сразу глагол: <b>Um Energie zu sparen, schalten wir …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *um … zu* oder *damit*.",
+      "q": "Timur will mehr Zeit für das Frühstück haben. Er steht früher auf.",
+      "w": [
+       "Timur",
+       "steht",
+       "früher",
+       "auf,",
+       "um",
+       "mehr Zeit",
+       "für das Frühstück",
+       "zu",
+       "haben"
+      ],
+      "a": "Timur steht früher auf, um mehr Zeit für das Frühstück zu haben.",
+      "alt": [
+       "Timur steht früher auf, um für das Frühstück mehr Zeit zu haben."
+      ],
+      "gw": {
+       "uz": "Ega bir xil → <b>um … zu</b> (ikkinchi ega tushib qoladi, zu + Infinitiv oxirida). Ega har xil → <b>damit</b> + ega + fe’l oxirida. Bu qism oldin kelsa, keyin darhol fe’l: <b>Um Energie zu sparen, schalten wir …</b>",
+       "ru": "Подлежащее одно → <b>um … zu</b> (второе подлежащее исчезает, zu + инфинитив в конце). Подлежащие разные → <b>damit</b> + подлежащее + глагол в конце. Если эта часть стоит первой, после неё сразу глагол: <b>Um Energie zu sparen, schalten wir …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *um … zu* oder *damit*.",
+      "q": "Ich erkläre Anna die Grammatik. Sie versteht die Regeln dann besser.",
+      "w": [
+       "Ich",
+       "erkläre",
+       "Anna",
+       "die Grammatik,",
+       "damit",
+       "sie",
+       "die Regeln",
+       "besser",
+       "versteht"
+      ],
+      "a": "Ich erkläre Anna die Grammatik, damit sie die Regeln besser versteht.",
+      "alt": [],
+      "gw": {
+       "uz": "Ega bir xil → <b>um … zu</b> (ikkinchi ega tushib qoladi, zu + Infinitiv oxirida). Ega har xil → <b>damit</b> + ega + fe’l oxirida. Bu qism oldin kelsa, keyin darhol fe’l: <b>Um Energie zu sparen, schalten wir …</b>",
+       "ru": "Подлежащее одно → <b>um … zu</b> (второе подлежащее исчезает, zu + инфинитив в конце). Подлежащие разные → <b>damit</b> + подлежащее + глагол в конце. Если эта часть стоит первой, после неё сразу глагол: <b>Um Energie zu sparen, schalten wir …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *um … zu* oder *damit*.",
+      "q": "Die Kinder sollen nicht krank werden. Die Mutter kocht viel Gemüse.",
+      "w": [
+       "Damit",
+       "die Kinder",
+       "nicht",
+       "krank",
+       "werden,",
+       "kocht",
+       "die Mutter",
+       "viel Gemüse"
+      ],
+      "a": "Damit die Kinder nicht krank werden, kocht die Mutter viel Gemüse.",
+      "alt": [],
+      "gw": {
+       "uz": "Ega bir xil → <b>um … zu</b> (ikkinchi ega tushib qoladi, zu + Infinitiv oxirida). Ega har xil → <b>damit</b> + ega + fe’l oxirida. Bu qism oldin kelsa, keyin darhol fe’l: <b>Um Energie zu sparen, schalten wir …</b>",
+       "ru": "Подлежащее одно → <b>um … zu</b> (второе подлежащее исчезает, zu + инфинитив в конце). Подлежащие разные → <b>damit</b> + подлежащее + глагол в конце. Если эта часть стоит первой, после неё сразу глагол: <b>Um Energie zu sparen, schalten wir …</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "…, um ich fit bleibe. → …, <b>damit</b> ich fit bleibe / …, um fit <b>zu</b> bleiben.",
+      "s": "Ich spreche langsam , um meine Oma mich versteht .",
+      "a": [
+       4
+      ],
+      "fix": "Ich spreche langsam, damit meine Oma mich versteht.",
+      "gw": {
+       "uz": "Ikki xil ega (ich — meine Oma) va tuslangan fe’l bor → <b>damit</b>: <b>…, damit meine Oma mich versteht.</b>",
+       "ru": "Два разных подлежащих (ich — meine Oma) и спрягаемый глагол → <b>damit</b>: <b>…, damit meine Oma mich versteht.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich gehe heute früher ins Bett , um morgen pünktlich zu aufstehen .",
+      "a": [
+       10,
+       11
+      ],
+      "fix": "Ich gehe heute früher ins Bett, um morgen pünktlich aufzustehen.",
+      "gw": {
+       "uz": "<b>aufstehen</b> — ajraladigan fe’l: zu o‘rtaga kiradi va bitta so‘z bo‘ladi: <b>aufzustehen</b>.",
+       "ru": "<b>aufstehen</b> — отделяемый глагол: zu встаёт в середину, получается одно слово: <b>aufzustehen</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich mache das Fenster auf , damit frische Luft ins Zimmer zu kommen .",
+      "a": [
+       11,
+       12
+      ],
+      "fix": "Ich mache das Fenster auf, damit frische Luft ins Zimmer kommt.",
+      "gw": {
+       "uz": "<b>damit</b> dan keyin <b>zu</b> yo‘q — fe’l egaga moslab tuslanadi va oxirda turadi: <b>…, damit frische Luft ins Zimmer kommt.</b>",
+       "ru": "После <b>damit</b> нет <b>zu</b> — глагол спрягается по подлежащему и стоит в конце: <b>…, damit frische Luft ins Zimmer kommt.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Um gesund zu bleiben , ich esse jeden Tag Obst .",
+      "a": [
+       6
+      ],
+      "fix": "Um gesund zu bleiben, esse ich jeden Tag Obst.",
+      "gw": {
+       "uz": "<b>Um … zu</b> qismi oldin kelgan — keyin darhol fe’l, keyin ega: <b>…, esse ich jeden Tag Obst.</b>",
+       "ru": "Часть с <b>um … zu</b> стоит первой — сразу после неё глагол, потом подлежащее: <b>…, esse ich jeden Tag Obst.</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

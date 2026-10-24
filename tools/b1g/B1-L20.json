@@ -1,0 +1,590 @@
+{
+ "id": "B1-b12-20-G",
+ "meta": {
+  "title": "Grammatik · brauchen … zu · ohne / statt … zu",
+  "stitle": "brauchen + nicht/nur + zu · ohne … zu · (an)statt … zu"
+ },
+ "ex": {
+  "title": "Lektion 20 · Grammatik",
+  "sub": "brauchen + nicht/nur + zu · ohne … zu · (an)statt … zu",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>brauchen + nicht / kein / nur + zu + Infinitiv</h4>\n<table class=\"ex-tb\"><tr><th>müssen</th><th>brauchen … zu</th></tr>\n<tr><td>Du <b>musst nicht</b> kommen.</td><td>Du <b>brauchst nicht zu</b> kommen.</td></tr>\n<tr><td>Ihr <b>müsst keine</b> Angst haben.</td><td>Ihr <b>braucht keine</b> Angst <b>zu</b> haben.</td></tr>\n<tr><td>Man <b>muss nur</b> die Quelle prüfen.</td><td>Man <b>braucht nur</b> die Quelle <b>zu</b> prüfen.</td></tr>\n<tr><td>Sie <b>müssen</b> mich nicht anrufen.</td><td>Sie <b>brauchen</b> mich nicht an<b>zu</b>rufen.</td></tr></table>\n<p class=\"ex-note\"><b>brauchen … zu</b> faqat <b>nicht, kein</b> yoki <b>nur</b> bilan ishlatiladi: «shart emas» / «faqat … kifoya». Infinitiv oxirida, oldida <b>zu</b>; ajraluvchi fe’lda zu o‘rtada: <b>anzurufen</b>. Diqqat: <b>nicht dürfen</b> = mumkin emas — bu boshqa ma’no!</p>",
+      "ru": "<h4>brauchen + nicht / kein / nur + zu + Infinitiv</h4>\n<table class=\"ex-tb\"><tr><th>müssen</th><th>brauchen … zu</th></tr>\n<tr><td>Du <b>musst nicht</b> kommen.</td><td>Du <b>brauchst nicht zu</b> kommen.</td></tr>\n<tr><td>Ihr <b>müsst keine</b> Angst haben.</td><td>Ihr <b>braucht keine</b> Angst <b>zu</b> haben.</td></tr>\n<tr><td>Man <b>muss nur</b> die Quelle prüfen.</td><td>Man <b>braucht nur</b> die Quelle <b>zu</b> prüfen.</td></tr>\n<tr><td>Sie <b>müssen</b> mich nicht anrufen.</td><td>Sie <b>brauchen</b> mich nicht an<b>zu</b>rufen.</td></tr></table>\n<p class=\"ex-note\"><b>brauchen … zu</b> употребляется только с <b>nicht, kein</b> или <b>nur</b>: «не нужно» / «нужно только». Инфинитив в конце, перед ним <b>zu</b>; у отделяемых глаголов zu в середине: <b>anzurufen</b>. Внимание: <b>nicht dürfen</b> = нельзя — это другое значение!</p>"
+     },
+     {
+      "t": "info",
+      "h": "<h4>ohne … zu · (an)statt … zu</h4>\n<table class=\"ex-tb\"><tr><th></th><th>Bedeutung</th><th>Beispiel</th></tr>\n<tr><td><b>ohne</b> … <b>zu</b></td><td>etwas passiert <b>nicht</b></td><td>Er teilt das Video, <b>ohne</b> es <b>zu</b> prüfen.</td></tr>\n<tr><td><b>(an)statt</b> … <b>zu</b></td><td>etwas <b>anderes</b> passiert</td><td><b>Statt</b> Zeitung <b>zu</b> lesen, schaut sie Videos.</td></tr>\n<tr><td><b>um</b> … <b>zu</b></td><td>Ziel</td><td>Ich lese Zeitung, <b>um</b> informiert <b>zu</b> sein.</td></tr></table>\n<div class=\"ex-sk\"><span>Viele Leute</span><span class=\"v\">glauben</span><span>alles,</span><span>ohne</span><span>die Quelle</span><span class=\"v\">zu prüfen</span>.</div>\n<p class=\"ex-note\"><b>ohne … zu</b> — «…masdan» (tekshirmasdan ulashadi); <b>(an)statt … zu</b> — «…ish o‘rniga». Ikkala gapda ega bir xil bo‘ladi va ikkinchi gapda u tushib qoladi. zu + Infinitiv oxirida; ohne-/statt-gap boshida bo‘lsa, keyin fe’l keladi: <b>Statt zu lernen, spielt er.</b></p>",
+      "ru": "<h4>ohne … zu · (an)statt … zu</h4>\n<table class=\"ex-tb\"><tr><th></th><th>Bedeutung</th><th>Beispiel</th></tr>\n<tr><td><b>ohne</b> … <b>zu</b></td><td>etwas passiert <b>nicht</b></td><td>Er teilt das Video, <b>ohne</b> es <b>zu</b> prüfen.</td></tr>\n<tr><td><b>(an)statt</b> … <b>zu</b></td><td>etwas <b>anderes</b> passiert</td><td><b>Statt</b> Zeitung <b>zu</b> lesen, schaut sie Videos.</td></tr>\n<tr><td><b>um</b> … <b>zu</b></td><td>Ziel</td><td>Ich lese Zeitung, <b>um</b> informiert <b>zu</b> sein.</td></tr></table>\n<div class=\"ex-sk\"><span>Viele Leute</span><span class=\"v\">glauben</span><span>alles,</span><span>ohne</span><span>die Quelle</span><span class=\"v\">zu prüfen</span>.</div>\n<p class=\"ex-note\"><b>ohne … zu</b> — «не делая чего-то» (делится, не проверив); <b>(an)statt … zu</b> — «вместо того чтобы». Подлежащее в обеих частях одно и то же, во второй части его нет. zu + Infinitiv в конце; если ohne-/statt-часть стоит первой, дальше идёт глагол: <b>Statt zu lernen, spielt er.</b></p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Infinitiv mit *zu*.",
+      "bsp": "Du brauchst nicht zu kommen. → <b>zu kommen</b>",
+      "s": "Du brauchst die Meldung nicht sofort zu teilen .",
+      "a": [
+       6,
+       7
+      ],
+      "gw": {
+       "uz": "zu + Infinitiv gapning (yoki ohne-/statt-qismning) oxirida turadi. Ajraluvchi fe’lda zu so‘z ichida: nach<b>zu</b>denken, an<b>zu</b>rufen. Asosiy gapdagi boshqa fe’lni belgilamang. Misol: <b>Du brauchst nur zu klicken.</b>",
+       "ru": "zu + Infinitiv стоит в конце предложения (или ohne-/statt-части). У отделяемых глаголов zu внутри слова: nach<b>zu</b>denken, an<b>zu</b>rufen. Другой глагол главного предложения не отмечайте. Пример: <b>Du brauchst nur zu klicken.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Infinitiv mit *zu*.",
+      "bsp": "Du brauchst nicht zu kommen. → <b>zu kommen</b>",
+      "s": "Man braucht nur die Quelle zu prüfen .",
+      "a": [
+       5,
+       6
+      ],
+      "gw": {
+       "uz": "zu + Infinitiv gapning (yoki ohne-/statt-qismning) oxirida turadi. Ajraluvchi fe’lda zu so‘z ichida: nach<b>zu</b>denken, an<b>zu</b>rufen. Asosiy gapdagi boshqa fe’lni belgilamang. Misol: <b>Du brauchst nur zu klicken.</b>",
+       "ru": "zu + Infinitiv стоит в конце предложения (или ohne-/statt-части). У отделяемых глаголов zu внутри слова: nach<b>zu</b>denken, an<b>zu</b>rufen. Другой глагол главного предложения не отмечайте. Пример: <b>Du brauchst nur zu klicken.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Infinitiv mit *zu*.",
+      "bsp": "Du brauchst nicht zu kommen. → <b>zu kommen</b>",
+      "s": "Viele Leute glauben alles , ohne nachzudenken .",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "zu + Infinitiv gapning (yoki ohne-/statt-qismning) oxirida turadi. Ajraluvchi fe’lda zu so‘z ichida: nach<b>zu</b>denken, an<b>zu</b>rufen. Asosiy gapdagi boshqa fe’lni belgilamang. Misol: <b>Du brauchst nur zu klicken.</b>",
+       "ru": "zu + Infinitiv стоит в конце предложения (или ohne-/statt-части). У отделяемых глаголов zu внутри слова: nach<b>zu</b>denken, an<b>zu</b>rufen. Другой глагол главного предложения не отмечайте. Пример: <b>Du brauchst nur zu klicken.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Infinitiv mit *zu*.",
+      "bsp": "Du brauchst nicht zu kommen. → <b>zu kommen</b>",
+      "s": "Statt nur die Überschrift zu lesen , solltest du den ganzen Artikel lesen .",
+      "a": [
+       4,
+       5
+      ],
+      "gw": {
+       "uz": "zu + Infinitiv gapning (yoki ohne-/statt-qismning) oxirida turadi. Ajraluvchi fe’lda zu so‘z ichida: nach<b>zu</b>denken, an<b>zu</b>rufen. Asosiy gapdagi boshqa fe’lni belgilamang. Misol: <b>Du brauchst nur zu klicken.</b>",
+       "ru": "zu + Infinitiv стоит в конце предложения (или ohne-/statt-части). У отделяемых глаголов zu внутри слова: nach<b>zu</b>denken, an<b>zu</b>rufen. Другой глагол главного предложения не отмечайте. Пример: <b>Du brauchst nur zu klicken.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was bedeutet das?",
+      "bsp": "Du brauchst nicht zu kommen. → ✓ <b>Du musst nicht kommen.</b>",
+      "q": "Du brauchst mir nicht zu helfen.",
+      "o": [
+       "Du musst mir nicht helfen.",
+       "Du darfst mir nicht helfen.",
+       "Du musst mir helfen."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>nicht brauchen … zu</b> = <b>nicht müssen</b> (shart emas), <b>nur brauchen … zu</b> = <b>nur müssen</b>. «nicht dürfen» (mumkin emas) bilan adashtirmang. <b>ohne … zu</b> = buni qilmaydi; <b>statt … zu</b> = buning o‘rniga boshqa ish qiladi.",
+       "ru": "<b>nicht brauchen … zu</b> = <b>nicht müssen</b> (не нужно), <b>nur brauchen … zu</b> = <b>nur müssen</b>. Не путайте с «nicht dürfen» (нельзя). <b>ohne … zu</b> = этого не делает; <b>statt … zu</b> = вместо этого делает другое."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was bedeutet das?",
+      "bsp": "Du brauchst nicht zu kommen. → ✓ <b>Du musst nicht kommen.</b>",
+      "q": "Ihr braucht nur auf den Link zu klicken.",
+      "o": [
+       "Ihr dürft nicht auf den Link klicken.",
+       "Ihr müsst nur auf den Link klicken.",
+       "Ihr braucht den Link nicht."
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "<b>nicht brauchen … zu</b> = <b>nicht müssen</b> (shart emas), <b>nur brauchen … zu</b> = <b>nur müssen</b>. «nicht dürfen» (mumkin emas) bilan adashtirmang. <b>ohne … zu</b> = buni qilmaydi; <b>statt … zu</b> = buning o‘rniga boshqa ish qiladi.",
+       "ru": "<b>nicht brauchen … zu</b> = <b>nicht müssen</b> (не нужно), <b>nur brauchen … zu</b> = <b>nur müssen</b>. Не путайте с «nicht dürfen» (нельзя). <b>ohne … zu</b> = этого не делает; <b>statt … zu</b> = вместо этого делает другое."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was bedeutet das?",
+      "bsp": "Du brauchst nicht zu kommen. → ✓ <b>Du musst nicht kommen.</b>",
+      "q": "Sie teilt das Video, ohne es anzusehen.",
+      "o": [
+       "Sie sieht das Video an und teilt es.",
+       "Sie teilt das Video, aber sie sieht es nicht an.",
+       "Sie sieht das Video an, aber sie teilt es nicht."
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "<b>nicht brauchen … zu</b> = <b>nicht müssen</b> (shart emas), <b>nur brauchen … zu</b> = <b>nur müssen</b>. «nicht dürfen» (mumkin emas) bilan adashtirmang. <b>ohne … zu</b> = buni qilmaydi; <b>statt … zu</b> = buning o‘rniga boshqa ish qiladi.",
+       "ru": "<b>nicht brauchen … zu</b> = <b>nicht müssen</b> (не нужно), <b>nur brauchen … zu</b> = <b>nur müssen</b>. Не путайте с «nicht dürfen» (нельзя). <b>ohne … zu</b> = этого не делает; <b>statt … zu</b> = вместо этого делает другое."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was bedeutet das?",
+      "bsp": "Du brauchst nicht zu kommen. → ✓ <b>Du musst nicht kommen.</b>",
+      "q": "Statt die Nachricht zu prüfen, teilt Ben sie sofort.",
+      "o": [
+       "Ben teilt die Nachricht nicht.",
+       "Ben prüft die Nachricht und teilt sie dann.",
+       "Ben prüft die Nachricht nicht. Er teilt sie sofort."
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "<b>nicht brauchen … zu</b> = <b>nicht müssen</b> (shart emas), <b>nur brauchen … zu</b> = <b>nur müssen</b>. «nicht dürfen» (mumkin emas) bilan adashtirmang. <b>ohne … zu</b> = buni qilmaydi; <b>statt … zu</b> = buning o‘rniga boshqa ish qiladi.",
+       "ru": "<b>nicht brauchen … zu</b> = <b>nicht müssen</b> (не нужно), <b>nur brauchen … zu</b> = <b>nur müssen</b>. Не путайте с «nicht dürfen» (нельзя). <b>ohne … zu</b> = этого не делает; <b>statt … zu</b> = вместо этого делает другое."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was bedeutet das?",
+      "bsp": "Du brauchst nicht zu kommen. → ✓ <b>Du musst nicht kommen.</b>",
+      "q": "Sie brauchen keine Angst zu haben. Das Video ist ein Fake.",
+      "o": [
+       "Sie müssen keine Angst haben.",
+       "Sie sollen Angst haben.",
+       "Sie dürfen keine Angst haben."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>nicht brauchen … zu</b> = <b>nicht müssen</b> (shart emas), <b>nur brauchen … zu</b> = <b>nur müssen</b>. «nicht dürfen» (mumkin emas) bilan adashtirmang. <b>ohne … zu</b> = buni qilmaydi; <b>statt … zu</b> = buning o‘rniga boshqa ish qiladi.",
+       "ru": "<b>nicht brauchen … zu</b> = <b>nicht müssen</b> (не нужно), <b>nur brauchen … zu</b> = <b>nur müssen</b>. Не путайте с «nicht dürfen» (нельзя). <b>ohne … zu</b> = этого не делает; <b>statt … zu</b> = вместо этого делает другое."
+      }
+     },
+     {
+      "t": "cat",
+      "h": "*brauchen* + Nomen oder *brauchen* … *zu*? Ordnen Sie zu.",
+      "bsp": "Ich brauche eine Quelle. → <b>brauchen + Nomen</b>",
+      "c": [
+       "brauchen + Nomen (= nötig haben)",
+       "brauchen … zu (= müssen)"
+      ],
+      "i": [
+       [
+        "Ich brauche einen neuen Laptop.",
+        0
+       ],
+       [
+        "Du brauchst nicht zu kommen.",
+        1
+       ],
+       [
+        "Wir brauchen mehr Informationen.",
+        0
+       ],
+       [
+        "Ihr braucht nur zu klicken.",
+        1
+       ],
+       [
+        "Brauchst du Hilfe?",
+        0
+       ],
+       [
+        "Sie brauchen keine Angst zu haben.",
+        1
+       ]
+      ],
+      "gw": {
+       "uz": "<b>brauchen</b> + ot (Akkusativ) = «kerak, zarur»: <b>Ich brauche Hilfe.</b> <b>brauchen</b> + nicht/kein/nur + <b>zu</b> + Infinitiv = «shart emas / faqat … kerak»: <b>Du brauchst nicht zu warten.</b>",
+       "ru": "<b>brauchen</b> + существительное (Akkusativ) = «нуждаться»: <b>Ich brauche Hilfe.</b> <b>brauchen</b> + nicht/kein/nur + <b>zu</b> + Infinitiv = «не нужно / нужно только»: <b>Du brauchst nicht zu warten.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: brauchen + zu.",
+      "bsp": "Du ___ heute nicht ___ kommen. → <b>brauchst</b> … <b>zu</b>",
+      "s": "Ihr ___ die Zeitung nicht ___ kaufen. Der Artikel ist online kostenlos.",
+      "a": [
+       [
+        "braucht"
+       ],
+       [
+        "zu"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>brauchen</b> egaga moslanadi (du brauchst, ihr braucht, Sie brauchen), Infinitiv oxirida <b>zu</b> bilan. Ajraluvchi fe’lda zu o‘rtada: <b>anzurufen</b>. Misol: <b>Sie brauchen nur zu unterschreiben.</b>",
+       "ru": "<b>brauchen</b> согласуется с подлежащим (du brauchst, ihr braucht, Sie brauchen), инфинитив в конце с <b>zu</b>. У отделяемого глагола zu в середине: <b>anzurufen</b>. Пример: <b>Sie brauchen nur zu unterschreiben.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: brauchen + zu.",
+      "bsp": "Du ___ heute nicht ___ kommen. → <b>brauchst</b> … <b>zu</b>",
+      "s": "Laylo ___ nur kurz im Internet ___ suchen, dann findet sie die richtige Quelle.",
+      "a": [
+       [
+        "braucht"
+       ],
+       [
+        "zu"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>brauchen</b> egaga moslanadi (du brauchst, ihr braucht, Sie brauchen), Infinitiv oxirida <b>zu</b> bilan. Ajraluvchi fe’lda zu o‘rtada: <b>anzurufen</b>. Misol: <b>Sie brauchen nur zu unterschreiben.</b>",
+       "ru": "<b>brauchen</b> согласуется с подлежащим (du brauchst, ihr braucht, Sie brauchen), инфинитив в конце с <b>zu</b>. У отделяемого глагола zu в середине: <b>anzurufen</b>. Пример: <b>Sie brauchen nur zu unterschreiben.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: brauchen + zu.",
+      "bsp": "Du ___ heute nicht ___ kommen. → <b>brauchst</b> … <b>zu</b>",
+      "s": "Du ___ mir nur den Link ___ schicken.",
+      "a": [
+       [
+        "brauchst"
+       ],
+       [
+        "zu"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>brauchen</b> egaga moslanadi (du brauchst, ihr braucht, Sie brauchen), Infinitiv oxirida <b>zu</b> bilan. Ajraluvchi fe’lda zu o‘rtada: <b>anzurufen</b>. Misol: <b>Sie brauchen nur zu unterschreiben.</b>",
+       "ru": "<b>brauchen</b> согласуется с подлежащим (du brauchst, ihr braucht, Sie brauchen), инфинитив в конце с <b>zu</b>. У отделяемого глагола zu в середине: <b>anzurufen</b>. Пример: <b>Sie brauchen nur zu unterschreiben.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: brauchen + zu.",
+      "bsp": "Du ___ heute nicht ___ kommen. → <b>brauchst</b> … <b>zu</b>",
+      "s": "Sie ___ mich nicht ___. Ich schreibe Ihnen eine E-Mail. (anrufen)",
+      "a": [
+       [
+        "brauchen"
+       ],
+       [
+        "anzurufen"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>brauchen</b> egaga moslanadi (du brauchst, ihr braucht, Sie brauchen), Infinitiv oxirida <b>zu</b> bilan. Ajraluvchi fe’lda zu o‘rtada: <b>anzurufen</b>. Misol: <b>Sie brauchen nur zu unterschreiben.</b>",
+       "ru": "<b>brauchen</b> согласуется с подлежащим (du brauchst, ihr braucht, Sie brauchen), инфинитив в конце с <b>zu</b>. У отделяемого глагола zu в середине: <b>anzurufen</b>. Пример: <b>Sie brauchen nur zu unterschreiben.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *ohne*, *statt* oder *um*.",
+      "bsp": "Er geht aus dem Haus, ___ zu frühstücken. → <b>ohne</b>",
+      "s": "Viele Menschen teilen Meldungen, ___ sie zu prüfen.",
+      "a": [
+       [
+        "ohne"
+       ]
+      ],
+      "gw": {
+       "uz": "Qilmaslik — <b>ohne</b>; boshqa ish o‘rniga — <b>(an)statt</b>; maqsad — <b>um</b>. Uchalasi ham <b>zu</b> + Infinitiv bilan, Infinitiv oxirida. Misol: <b>Er geht, ohne Tschüss zu sagen.</b>",
+       "ru": "Не делать — <b>ohne</b>; вместо другого действия — <b>(an)statt</b>; цель — <b>um</b>. Все три — с <b>zu</b> + Infinitiv, инфинитив в конце. Пример: <b>Er geht, ohne Tschüss zu sagen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *ohne*, *statt* oder *um*.",
+      "bsp": "Er geht aus dem Haus, ___ zu frühstücken. → <b>ohne</b>",
+      "s": "___ die Nachrichten im Fernsehen zu sehen, liest Timur lieber Zeitung.",
+      "a": [
+       [
+        "Statt",
+        "Anstatt"
+       ]
+      ],
+      "gw": {
+       "uz": "Qilmaslik — <b>ohne</b>; boshqa ish o‘rniga — <b>(an)statt</b>; maqsad — <b>um</b>. Uchalasi ham <b>zu</b> + Infinitiv bilan, Infinitiv oxirida. Misol: <b>Er geht, ohne Tschüss zu sagen.</b>",
+       "ru": "Не делать — <b>ohne</b>; вместо другого действия — <b>(an)statt</b>; цель — <b>um</b>. Все три — с <b>zu</b> + Infinitiv, инфинитив в конце. Пример: <b>Er geht, ohne Tschüss zu sagen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *ohne*, *statt* oder *um*.",
+      "bsp": "Er geht aus dem Haus, ___ zu frühstücken. → <b>ohne</b>",
+      "s": "Ich lese oft mehrere Zeitungen, ___ mir eine eigene Meinung zu bilden.",
+      "a": [
+       [
+        "um"
+       ]
+      ],
+      "gw": {
+       "uz": "Qilmaslik — <b>ohne</b>; boshqa ish o‘rniga — <b>(an)statt</b>; maqsad — <b>um</b>. Uchalasi ham <b>zu</b> + Infinitiv bilan, Infinitiv oxirida. Misol: <b>Er geht, ohne Tschüss zu sagen.</b>",
+       "ru": "Не делать — <b>ohne</b>; вместо другого действия — <b>(an)statt</b>; цель — <b>um</b>. Все три — с <b>zu</b> + Infinitiv, инфинитив в конце. Пример: <b>Er geht, ohne Tschüss zu sagen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den Text.",
+      "bsp": "Du ___ nicht ___ warten. → <b>brauchst</b> … <b>zu</b> · Er geht, ___ zu fragen. → <b>ohne</b>",
+      "s": "▪ Hast du das Video über den Bürgermeister gesehen? Alle teilen es!\n● Ja, aber das ist ein Fake. Viele Leute teilen es, ___ nachzudenken.\n▪ Wirklich? Wie kann ich das prüfen?\n● Ganz einfach: Du ___ nur nach der Quelle ___ suchen.",
+      "a": [
+       [
+        "ohne"
+       ],
+       [
+        "brauchst"
+       ],
+       [
+        "zu"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval ma’noni tanlang: shart emas — <b>brauchen nicht … zu</b>; faqat — <b>brauchen nur … zu</b>; qilmasdan — <b>ohne … zu</b>; o‘rniga — <b>(an)statt … zu</b>. Infinitiv doim oxirida, oldida <b>zu</b>.",
+       "ru": "Сначала выберите смысл: не нужно — <b>brauchen nicht … zu</b>; нужно только — <b>brauchen nur … zu</b>; не делая — <b>ohne … zu</b>; вместо — <b>(an)statt … zu</b>. Инфинитив всегда в конце, перед ним <b>zu</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den Text.",
+      "bsp": "Du ___ nicht ___ warten. → <b>brauchst</b> … <b>zu</b> · Er geht, ___ zu fragen. → <b>ohne</b>",
+      "s": "Tipps gegen Fake News:\n1. Lies den ganzen Artikel, ___ nur die Überschrift zu lesen.\n2. Teile keine Meldung, ___ die Quelle zu prüfen.\n3. Du ___ nicht alles sofort ___ glauben – warte lieber einen Tag.",
+      "a": [
+       [
+        "statt",
+        "anstatt"
+       ],
+       [
+        "ohne"
+       ],
+       [
+        "brauchst"
+       ],
+       [
+        "zu"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval ma’noni tanlang: shart emas — <b>brauchen nicht … zu</b>; faqat — <b>brauchen nur … zu</b>; qilmasdan — <b>ohne … zu</b>; o‘rniga — <b>(an)statt … zu</b>. Infinitiv doim oxirida, oldida <b>zu</b>.",
+       "ru": "Сначала выберите смысл: не нужно — <b>brauchen nicht … zu</b>; нужно только — <b>brauchen nur … zu</b>; не делая — <b>ohne … zu</b>; вместо — <b>(an)statt … zu</b>. Инфинитив всегда в конце, перед ним <b>zu</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *brauchen … zu*.",
+      "bsp": "Du musst nicht kommen. → <b>Du brauchst nicht zu kommen.</b>",
+      "q": "Du musst die Meldung nicht teilen.",
+      "w": [
+       "Du",
+       "brauchst",
+       "die Meldung",
+       "nicht",
+       "zu",
+       "teilen"
+      ],
+      "a": "Du brauchst die Meldung nicht zu teilen.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>müssen</b> o‘rniga <b>brauchen</b> qo‘ying (egaga mos) va Infinitiv oldiga <b>zu</b>: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> Ajraluvchi fe’lda zu ichida: <b>herunterzuladen</b>.",
+       "ru": "Вместо <b>müssen</b> поставьте <b>brauchen</b> (по подлежащему) и <b>zu</b> перед инфинитивом: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> У отделяемого глагола zu внутри: <b>herunterzuladen</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *brauchen … zu*.",
+      "bsp": "Du musst nicht kommen. → <b>Du brauchst nicht zu kommen.</b>",
+      "q": "Ihr müsst nur den Artikel lesen.",
+      "w": [
+       "Ihr",
+       "braucht",
+       "nur",
+       "den Artikel",
+       "zu",
+       "lesen"
+      ],
+      "a": "Ihr braucht nur den Artikel zu lesen.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>müssen</b> o‘rniga <b>brauchen</b> qo‘ying (egaga mos) va Infinitiv oldiga <b>zu</b>: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> Ajraluvchi fe’lda zu ichida: <b>herunterzuladen</b>.",
+       "ru": "Вместо <b>müssen</b> поставьте <b>brauchen</b> (по подлежащему) и <b>zu</b> перед инфинитивом: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> У отделяемого глагола zu внутри: <b>herunterzuladen</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *brauchen … zu*.",
+      "bsp": "Du musst nicht kommen. → <b>Du brauchst nicht zu kommen.</b>",
+      "q": "Sie müssen keine Angst haben.",
+      "w": [
+       "Sie",
+       "brauchen",
+       "keine Angst",
+       "zu",
+       "haben"
+      ],
+      "a": "Sie brauchen keine Angst zu haben.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>müssen</b> o‘rniga <b>brauchen</b> qo‘ying (egaga mos) va Infinitiv oldiga <b>zu</b>: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> Ajraluvchi fe’lda zu ichida: <b>herunterzuladen</b>.",
+       "ru": "Вместо <b>müssen</b> поставьте <b>brauchen</b> (по подлежащему) и <b>zu</b> перед инфинитивом: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> У отделяемого глагола zu внутри: <b>herunterzuladen</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *brauchen … zu*.",
+      "bsp": "Du musst nicht kommen. → <b>Du brauchst nicht zu kommen.</b>",
+      "q": "Man muss das Video nicht herunterladen.",
+      "w": [
+       "Man",
+       "braucht",
+       "das Video",
+       "nicht",
+       "herunterzuladen"
+      ],
+      "a": "Man braucht das Video nicht herunterzuladen.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>müssen</b> o‘rniga <b>brauchen</b> qo‘ying (egaga mos) va Infinitiv oldiga <b>zu</b>: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> Ajraluvchi fe’lda zu ichida: <b>herunterzuladen</b>.",
+       "ru": "Вместо <b>müssen</b> поставьте <b>brauchen</b> (по подлежащему) и <b>zu</b> перед инфинитивом: Du musst nicht warten → <b>Du brauchst nicht zu warten.</b> У отделяемого глагола zu внутри: <b>herunterzuladen</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *ohne … zu* oder *(an)statt … zu*.",
+      "bsp": "Er geht los. Er frühstückt nicht. → <b>Er geht los, ohne zu frühstücken.</b>",
+      "q": "Mia teilt die Nachricht. Sie prüft sie nicht. (ohne)",
+      "w": [
+       "Mia",
+       "teilt",
+       "die Nachricht,",
+       "ohne",
+       "sie",
+       "zu",
+       "prüfen"
+      ],
+      "a": "Mia teilt die Nachricht, ohne sie zu prüfen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapning egasi tushib qoladi: <b>ohne/statt</b> + … + <b>zu</b> + Infinitiv. «nicht» ham tushadi — ohne o‘zi inkor ma’nosini beradi. Gap statt bilan boshlansa, keyin fe’l, so‘ng ega: <b>Statt zu lesen, schaut er fern.</b>",
+       "ru": "Подлежащее второго предложения исчезает: <b>ohne/statt</b> + … + <b>zu</b> + Infinitiv. «nicht» тоже исчезает — ohne уже содержит отрицание. Если предложение начинается со statt, дальше глагол, потом подлежащее: <b>Statt zu lesen, schaut er fern.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *ohne … zu* oder *(an)statt … zu*.",
+      "bsp": "Er geht los. Er frühstückt nicht. → <b>Er geht los, ohne zu frühstücken.</b>",
+      "q": "Viele Leute schreiben Kommentare. Sie lesen den Artikel nicht. (ohne)",
+      "w": [
+       "Viele Leute",
+       "schreiben",
+       "Kommentare,",
+       "ohne",
+       "den Artikel",
+       "zu",
+       "lesen"
+      ],
+      "a": "Viele Leute schreiben Kommentare, ohne den Artikel zu lesen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapning egasi tushib qoladi: <b>ohne/statt</b> + … + <b>zu</b> + Infinitiv. «nicht» ham tushadi — ohne o‘zi inkor ma’nosini beradi. Gap statt bilan boshlansa, keyin fe’l, so‘ng ega: <b>Statt zu lesen, schaut er fern.</b>",
+       "ru": "Подлежащее второго предложения исчезает: <b>ohne/statt</b> + … + <b>zu</b> + Infinitiv. «nicht» тоже исчезает — ohne уже содержит отрицание. Если предложение начинается со statt, дальше глагол, потом подлежащее: <b>Statt zu lesen, schaut er fern.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *ohne … zu* oder *(an)statt … zu*.",
+      "bsp": "Er geht los. Er frühstückt nicht. → <b>Er geht los, ohne zu frühstücken.</b>",
+      "q": "Jonas liest keine Zeitung. Er schaut nur Videos im Internet. (Statt …)",
+      "w": [
+       "Statt",
+       "Zeitung",
+       "zu",
+       "lesen,",
+       "schaut",
+       "Jonas",
+       "nur Videos im Internet"
+      ],
+      "a": "Statt Zeitung zu lesen, schaut Jonas nur Videos im Internet.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapning egasi tushib qoladi: <b>ohne/statt</b> + … + <b>zu</b> + Infinitiv. «nicht» ham tushadi — ohne o‘zi inkor ma’nosini beradi. Gap statt bilan boshlansa, keyin fe’l, so‘ng ega: <b>Statt zu lesen, schaut er fern.</b>",
+       "ru": "Подлежащее второго предложения исчезает: <b>ohne/statt</b> + … + <b>zu</b> + Infinitiv. «nicht» тоже исчезает — ohne уже содержит отрицание. Если предложение начинается со statt, дальше глагол, потом подлежащее: <b>Statt zu lesen, schaut er fern.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *ohne … zu* oder *(an)statt … zu*.",
+      "bsp": "Er geht los. Er frühstückt nicht. → <b>Er geht los, ohne zu frühstücken.</b>",
+      "q": "Anna sucht nicht selbst im Internet. Sie fragt lieber eine Expertin. (anstatt)",
+      "w": [
+       "Anna",
+       "fragt",
+       "lieber",
+       "eine Expertin,",
+       "anstatt",
+       "selbst im Internet",
+       "zu",
+       "suchen"
+      ],
+      "a": "Anna fragt lieber eine Expertin, anstatt selbst im Internet zu suchen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapning egasi tushib qoladi: <b>ohne/statt</b> + … + <b>zu</b> + Infinitiv. «nicht» ham tushadi — ohne o‘zi inkor ma’nosini beradi. Gap statt bilan boshlansa, keyin fe’l, so‘ng ega: <b>Statt zu lesen, schaut er fern.</b>",
+       "ru": "Подлежащее второго предложения исчезает: <b>ohne/statt</b> + … + <b>zu</b> + Infinitiv. «nicht» тоже исчезает — ohne уже содержит отрицание. Если предложение начинается со statt, дальше глагол, потом подлежащее: <b>Statt zu lesen, schaut er fern.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Du brauchst nicht kommen. → <b>kommen</b> → Du brauchst nicht zu kommen.",
+      "s": "Du brauchst die Zeitung nicht kaufen .",
+      "a": [
+       5
+      ],
+      "fix": "Du brauchst die Zeitung nicht zu kaufen.",
+      "gw": {
+       "uz": "Tekshiring: <b>brauchen</b> bilan <b>zu</b> shart; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); <b>zu</b> + Infinitiv doim oxirida; statt-/ohne-qismdan keyin asosiy gap fe’l bilan boshlanadi.",
+       "ru": "Проверьте: с <b>brauchen</b> обязательно <b>zu</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); <b>zu</b> + Infinitiv всегда в конце; после statt-/ohne-части главное предложение начинается с глагола."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Du brauchst nicht kommen. → <b>kommen</b> → Du brauchst nicht zu kommen.",
+      "s": "Ihr braucht mich nicht zu anrufen .",
+      "a": [
+       4,
+       5
+      ],
+      "fix": "Ihr braucht mich nicht anzurufen.",
+      "gw": {
+       "uz": "Tekshiring: <b>brauchen</b> bilan <b>zu</b> shart; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); <b>zu</b> + Infinitiv doim oxirida; statt-/ohne-qismdan keyin asosiy gap fe’l bilan boshlanadi.",
+       "ru": "Проверьте: с <b>brauchen</b> обязательно <b>zu</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); <b>zu</b> + Infinitiv всегда в конце; после statt-/ohne-части главное предложение начинается с глагола."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Du brauchst nicht kommen. → <b>kommen</b> → Du brauchst nicht zu kommen.",
+      "s": "Statt zu lesen die Zeitung , schaut Ben fern .",
+      "a": [
+       1,
+       2
+      ],
+      "fix": "Statt die Zeitung zu lesen, schaut Ben fern.",
+      "gw": {
+       "uz": "Tekshiring: <b>brauchen</b> bilan <b>zu</b> shart; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); <b>zu</b> + Infinitiv doim oxirida; statt-/ohne-qismdan keyin asosiy gap fe’l bilan boshlanadi.",
+       "ru": "Проверьте: с <b>brauchen</b> обязательно <b>zu</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); <b>zu</b> + Infinitiv всегда в конце; после statt-/ohne-части главное предложение начинается с глагола."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Du brauchst nicht kommen. → <b>kommen</b> → Du brauchst nicht zu kommen.",
+      "s": "Statt die Quelle zu prüfen , sie glaubt alles .",
+      "a": [
+       6
+      ],
+      "fix": "Statt die Quelle zu prüfen, glaubt sie alles.",
+      "gw": {
+       "uz": "Tekshiring: <b>brauchen</b> bilan <b>zu</b> shart; ajraluvchi fe’lda <b>anzurufen</b> («zu anrufen» emas); <b>zu</b> + Infinitiv doim oxirida; statt-/ohne-qismdan keyin asosiy gap fe’l bilan boshlanadi.",
+       "ru": "Проверьте: с <b>brauchen</b> обязательно <b>zu</b>; у отделяемого глагола <b>anzurufen</b> (не «zu anrufen»); <b>zu</b> + Infinitiv всегда в конце; после statt-/ohne-части главное предложение начинается с глагола."
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

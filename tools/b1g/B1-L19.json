@@ -1,0 +1,623 @@
+{
+ "id": "B1-b12-19-G",
+ "meta": {
+  "title": "Grammatik · Passiv Präteritum · Passiv Perfekt",
+  "stitle": "Passiv Präteritum · Passiv Perfekt · -ei · -isch"
+ },
+ "ex": {
+  "title": "Lektion 19 · Grammatik",
+  "sub": "Passiv Präteritum · Passiv Perfekt · -ei · -isch",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Passiv Präteritum: wurde + Partizip II</h4>\n<table class=\"ex-tb\"><tr><th>Präsens</th><th>Präteritum</th></tr>\n<tr><td>Der Antrag <b>wird</b> geprüft.</td><td>Der Antrag <b>wurde</b> geprüft.</td></tr>\n<tr><td>Die Dokumente <b>werden</b> übersetzt.</td><td>Die Dokumente <b>wurden</b> übersetzt.</td></tr>\n<tr><td colspan=\"2\">ich <b>wurde</b> · du <b>wurdest</b> · er / es / sie <b>wurde</b> · wir <b>wurden</b> · ihr <b>wurdet</b> · sie / Sie <b>wurden</b></td></tr></table>\n<div class=\"ex-sk\"><span>Mein Zeugnis</span><span class=\"v\">wurde</span><span>von der Uni</span><span class=\"v\">anerkannt</span>.</div>\n<p class=\"ex-note\">Passivda muhimi — <b>nima qilingani</b>, kim qilgani emas. Präteritum: <b>wurde</b> (2-o‘rinda) + Partizip II (oxirida). Kim qilgani aytilsa — <b>von</b> + Dativ: <b>von der Behörde</b>, <b>vom Konsulat</b>.</p>",
+      "ru": "<h4>Passiv Präteritum: wurde + Partizip II</h4>\n<table class=\"ex-tb\"><tr><th>Präsens</th><th>Präteritum</th></tr>\n<tr><td>Der Antrag <b>wird</b> geprüft.</td><td>Der Antrag <b>wurde</b> geprüft.</td></tr>\n<tr><td>Die Dokumente <b>werden</b> übersetzt.</td><td>Die Dokumente <b>wurden</b> übersetzt.</td></tr>\n<tr><td colspan=\"2\">ich <b>wurde</b> · du <b>wurdest</b> · er / es / sie <b>wurde</b> · wir <b>wurden</b> · ihr <b>wurdet</b> · sie / Sie <b>wurden</b></td></tr></table>\n<div class=\"ex-sk\"><span>Mein Zeugnis</span><span class=\"v\">wurde</span><span>von der Uni</span><span class=\"v\">anerkannt</span>.</div>\n<p class=\"ex-note\">В пассиве важно, <b>что сделано</b>, а не кто это сделал. Präteritum: <b>wurde</b> (2-е место) + Partizip II (в конце). Если называем, кто сделал, — <b>von</b> + Dativ: <b>von der Behörde</b>, <b>vom Konsulat</b>.</p>"
+     },
+     {
+      "t": "info",
+      "h": "<h4>Passiv Perfekt: ist + Partizip II + worden</h4>\n<table class=\"ex-tb\"><tr><th>Präteritum</th><th>Perfekt</th></tr>\n<tr><td>Das Visum <b>wurde</b> verlängert.</td><td>Das Visum <b>ist</b> verlängert <b>worden</b>.</td></tr>\n<tr><td>Die Formulare <b>wurden</b> unterschrieben.</td><td>Die Formulare <b>sind</b> unterschrieben <b>worden</b>.</td></tr>\n<tr><td>Nebensatz</td><td>…, dass mein Diplom anerkannt <b>worden ist</b>.</td></tr></table>\n<div class=\"ex-sk\"><span>Mein Antrag</span><span class=\"v\">ist</span><span>leider</span><span class=\"v\">abgelehnt worden</span>.</div>\n<p class=\"ex-note\">Passiv Perfekt doim <b>sein</b> bilan (haben emas). Oxirida <b>worden</b> — «geworden» emas! Nebensatzda tartib: Partizip II → worden → <b>ist</b>.</p>",
+      "ru": "<h4>Passiv Perfekt: ist + Partizip II + worden</h4>\n<table class=\"ex-tb\"><tr><th>Präteritum</th><th>Perfekt</th></tr>\n<tr><td>Das Visum <b>wurde</b> verlängert.</td><td>Das Visum <b>ist</b> verlängert <b>worden</b>.</td></tr>\n<tr><td>Die Formulare <b>wurden</b> unterschrieben.</td><td>Die Formulare <b>sind</b> unterschrieben <b>worden</b>.</td></tr>\n<tr><td>Nebensatz</td><td>…, dass mein Diplom anerkannt <b>worden ist</b>.</td></tr></table>\n<div class=\"ex-sk\"><span>Mein Antrag</span><span class=\"v\">ist</span><span>leider</span><span class=\"v\">abgelehnt worden</span>.</div>\n<p class=\"ex-note\">Passiv Perfekt всегда с <b>sein</b> (не с haben). В конце <b>worden</b> — не «geworden»! В Nebensatz порядок: Partizip II → worden → <b>ist</b>.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Passiv-Form.",
+      "bsp": "Das Formular wurde gestern abgegeben. → <b>wurde</b> … <b>abgegeben</b>",
+      "s": "Mein Antrag wurde schnell bearbeitet .",
+      "a": [
+       2,
+       4
+      ],
+      "gw": {
+       "uz": "Passivni toping: <b>wurde/wurden</b> + Partizip II yoki <b>ist/sind</b> + Partizip II + <b>worden</b>. Barcha qismlarni belgilang. Misol: <b>Mein Visum ist verlängert worden.</b>",
+       "ru": "Найдите пассив: <b>wurde/wurden</b> + Partizip II или <b>ist/sind</b> + Partizip II + <b>worden</b>. Отметьте все части. Пример: <b>Mein Visum ist verlängert worden.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Passiv-Form.",
+      "bsp": "Das Formular wurde gestern abgegeben. → <b>wurde</b> … <b>abgegeben</b>",
+      "s": "Die Dokumente wurden von einem Übersetzer ins Deutsche übersetzt .",
+      "a": [
+       2,
+       8
+      ],
+      "gw": {
+       "uz": "Passivni toping: <b>wurde/wurden</b> + Partizip II yoki <b>ist/sind</b> + Partizip II + <b>worden</b>. Barcha qismlarni belgilang. Misol: <b>Mein Visum ist verlängert worden.</b>",
+       "ru": "Найдите пассив: <b>wurde/wurden</b> + Partizip II или <b>ist/sind</b> + Partizip II + <b>worden</b>. Отметьте все части. Пример: <b>Mein Visum ist verlängert worden.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Passiv-Form.",
+      "bsp": "Das Formular wurde gestern abgegeben. → <b>wurde</b> … <b>abgegeben</b>",
+      "s": "Die Unterlagen sind letzte Woche abgeschickt worden .",
+      "a": [
+       2,
+       5,
+       6
+      ],
+      "gw": {
+       "uz": "Passivni toping: <b>wurde/wurden</b> + Partizip II yoki <b>ist/sind</b> + Partizip II + <b>worden</b>. Barcha qismlarni belgilang. Misol: <b>Mein Visum ist verlängert worden.</b>",
+       "ru": "Найдите пассив: <b>wurde/wurden</b> + Partizip II или <b>ist/sind</b> + Partizip II + <b>worden</b>. Отметьте все части. Пример: <b>Mein Visum ist verlängert worden.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Passiv-Form.",
+      "bsp": "Das Formular wurde gestern abgegeben. → <b>wurde</b> … <b>abgegeben</b>",
+      "s": "Ich bin froh , dass mein Diplom anerkannt worden ist .",
+      "a": [
+       7,
+       8,
+       9
+      ],
+      "gw": {
+       "uz": "Passivni toping: <b>wurde/wurden</b> + Partizip II yoki <b>ist/sind</b> + Partizip II + <b>worden</b>. Barcha qismlarni belgilang. Misol: <b>Mein Visum ist verlängert worden.</b>",
+       "ru": "Найдите пассив: <b>wurde/wurden</b> + Partizip II или <b>ist/sind</b> + Partizip II + <b>worden</b>. Отметьте все части. Пример: <b>Mein Visum ist verlängert worden.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Gestern ___ mein Antrag geprüft. → Vergangenheit, Singular → ✓ <b>wurde</b>",
+      "q": "Im Oktober ___ alle neuen Studenten zu einem Infoabend eingeladen.",
+      "o": [
+       "wurde",
+       "wurden",
+       "werden"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "O‘tgan zamon: <b>wurde</b> (birlik) / <b>wurden</b> (ko‘plik). Perfekt: <b>ist/sind</b> … <b>worden</b> — «hat» va «geworden» emas. Kim qilgani: <b>von</b> + Dativ (<b>von der</b> Behörde). Misol: <b>Die Formulare wurden geprüft.</b>",
+       "ru": "Прошедшее время: <b>wurde</b> (ед. ч.) / <b>wurden</b> (мн. ч.). Perfekt: <b>ist/sind</b> … <b>worden</b> — не «hat» и не «geworden». Кто сделал: <b>von</b> + Dativ (<b>von der</b> Behörde). Пример: <b>Die Formulare wurden geprüft.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Gestern ___ mein Antrag geprüft. → Vergangenheit, Singular → ✓ <b>wurde</b>",
+      "q": "Mein Zeugnis ist endlich anerkannt ___.",
+      "o": [
+       "geworden",
+       "worden",
+       "wurde"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "O‘tgan zamon: <b>wurde</b> (birlik) / <b>wurden</b> (ko‘plik). Perfekt: <b>ist/sind</b> … <b>worden</b> — «hat» va «geworden» emas. Kim qilgani: <b>von</b> + Dativ (<b>von der</b> Behörde). Misol: <b>Die Formulare wurden geprüft.</b>",
+       "ru": "Прошедшее время: <b>wurde</b> (ед. ч.) / <b>wurden</b> (мн. ч.). Perfekt: <b>ist/sind</b> … <b>worden</b> — не «hat» и не «geworden». Кто сделал: <b>von</b> + Dativ (<b>von der</b> Behörde). Пример: <b>Die Formulare wurden geprüft.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Gestern ___ mein Antrag geprüft. → Vergangenheit, Singular → ✓ <b>wurde</b>",
+      "q": "Die Formulare ___ schon gestern abgeschickt.",
+      "o": [
+       "wurden",
+       "wurde",
+       "werden"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "O‘tgan zamon: <b>wurde</b> (birlik) / <b>wurden</b> (ko‘plik). Perfekt: <b>ist/sind</b> … <b>worden</b> — «hat» va «geworden» emas. Kim qilgani: <b>von</b> + Dativ (<b>von der</b> Behörde). Misol: <b>Die Formulare wurden geprüft.</b>",
+       "ru": "Прошедшее время: <b>wurde</b> (ед. ч.) / <b>wurden</b> (мн. ч.). Perfekt: <b>ist/sind</b> … <b>worden</b> — не «hat» и не «geworden». Кто сделал: <b>von</b> + Dativ (<b>von der</b> Behörde). Пример: <b>Die Formulare wurden geprüft.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Gestern ___ mein Antrag geprüft. → Vergangenheit, Singular → ✓ <b>wurde</b>",
+      "q": "Wann ___ dein Visum verlängert worden?",
+      "o": [
+       "hat",
+       "ist",
+       "wurde"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "O‘tgan zamon: <b>wurde</b> (birlik) / <b>wurden</b> (ko‘plik). Perfekt: <b>ist/sind</b> … <b>worden</b> — «hat» va «geworden» emas. Kim qilgani: <b>von</b> + Dativ (<b>von der</b> Behörde). Misol: <b>Die Formulare wurden geprüft.</b>",
+       "ru": "Прошедшее время: <b>wurde</b> (ед. ч.) / <b>wurden</b> (мн. ч.). Perfekt: <b>ist/sind</b> … <b>worden</b> — не «hat» и не «geworden». Кто сделал: <b>von</b> + Dativ (<b>von der</b> Behörde). Пример: <b>Die Formulare wurden geprüft.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Gestern ___ mein Antrag geprüft. → Vergangenheit, Singular → ✓ <b>wurde</b>",
+      "q": "Der Bescheid wurde ___ der Ausländerbehörde per Post geschickt.",
+      "o": [
+       "vom",
+       "mit",
+       "von"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "O‘tgan zamon: <b>wurde</b> (birlik) / <b>wurden</b> (ko‘plik). Perfekt: <b>ist/sind</b> … <b>worden</b> — «hat» va «geworden» emas. Kim qilgani: <b>von</b> + Dativ (<b>von der</b> Behörde). Misol: <b>Die Formulare wurden geprüft.</b>",
+       "ru": "Прошедшее время: <b>wurde</b> (ед. ч.) / <b>wurden</b> (мн. ч.). Perfekt: <b>ist/sind</b> … <b>worden</b> — не «hat» и не «geworden». Кто сделал: <b>von</b> + Dativ (<b>von der</b> Behörde). Пример: <b>Die Formulare wurden geprüft.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Passiv.",
+      "bsp": "Das Formular ___ gestern ___. (unterschreiben, Präteritum) → <b>wurde</b> … <b>unterschrieben</b> · Perfekt: <b>ist</b> … <b>unterschrieben worden</b>",
+      "s": "Meine Aufenthaltserlaubnis ___ um ein Jahr ___. (verlängern, Präteritum)",
+      "a": [
+       [
+        "wurde"
+       ],
+       [
+        "verlängert"
+       ]
+      ],
+      "gw": {
+       "uz": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. Nebensatzda tuslangan fe’l eng oxirida: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>",
+       "ru": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. В Nebensatz спрягаемый глагол в самом конце: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Passiv.",
+      "bsp": "Das Formular ___ gestern ___. (unterschreiben, Präteritum) → <b>wurde</b> … <b>unterschrieben</b> · Perfekt: <b>ist</b> … <b>unterschrieben worden</b>",
+      "s": "Alle Unterlagen ___ von der Uni genau ___. (prüfen, Präteritum)",
+      "a": [
+       [
+        "wurden"
+       ],
+       [
+        "geprüft"
+       ]
+      ],
+      "gw": {
+       "uz": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. Nebensatzda tuslangan fe’l eng oxirida: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>",
+       "ru": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. В Nebensatz спрягаемый глагол в самом конце: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Passiv.",
+      "bsp": "Das Formular ___ gestern ___. (unterschreiben, Präteritum) → <b>wurde</b> … <b>unterschrieben</b> · Perfekt: <b>ist</b> … <b>unterschrieben worden</b>",
+      "s": "Wir ___ zu einem Termin im Konsulat ___. (einladen, Präteritum)",
+      "a": [
+       [
+        "wurden"
+       ],
+       [
+        "eingeladen"
+       ]
+      ],
+      "gw": {
+       "uz": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. Nebensatzda tuslangan fe’l eng oxirida: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>",
+       "ru": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. В Nebensatz спрягаемый глагол в самом конце: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Passiv.",
+      "bsp": "Das Formular ___ gestern ___. (unterschreiben, Präteritum) → <b>wurde</b> … <b>unterschrieben</b> · Perfekt: <b>ist</b> … <b>unterschrieben worden</b>",
+      "s": "Laylo war sehr glücklich, weil ihr Antrag auf ein Stipendium ___ ___. (annehmen, Präteritum)",
+      "a": [
+       [
+        "angenommen"
+       ],
+       [
+        "wurde"
+       ]
+      ],
+      "gw": {
+       "uz": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. Nebensatzda tuslangan fe’l eng oxirida: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>",
+       "ru": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. В Nebensatz спрягаемый глагол в самом конце: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Passiv.",
+      "bsp": "Das Formular ___ gestern ___. (unterschreiben, Präteritum) → <b>wurde</b> … <b>unterschrieben</b> · Perfekt: <b>ist</b> … <b>unterschrieben worden</b>",
+      "s": "Die Studiengebühr ___ schon ___ ___. (bezahlen, Perfekt)",
+      "a": [
+       [
+        "ist"
+       ],
+       [
+        "bezahlt"
+       ],
+       [
+        "worden"
+       ]
+      ],
+      "gw": {
+       "uz": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. Nebensatzda tuslangan fe’l eng oxirida: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>",
+       "ru": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. В Nebensatz спрягаемый глагол в самом конце: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Passiv.",
+      "bsp": "Das Formular ___ gestern ___. (unterschreiben, Präteritum) → <b>wurde</b> … <b>unterschrieben</b> · Perfekt: <b>ist</b> … <b>unterschrieben worden</b>",
+      "s": "Ich bin froh, dass ich an der Uni ___ ___ ___. (registrieren, Perfekt)",
+      "a": [
+       [
+        "registriert"
+       ],
+       [
+        "worden"
+       ],
+       [
+        "bin"
+       ]
+      ],
+      "gw": {
+       "uz": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. Nebensatzda tuslangan fe’l eng oxirida: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>",
+       "ru": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. В Nebensatz спрягаемый глагол в самом конце: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Passiv.",
+      "bsp": "Das Formular ___ gestern ___. (unterschreiben, Präteritum) → <b>wurde</b> … <b>unterschrieben</b> · Perfekt: <b>ist</b> … <b>unterschrieben worden</b>",
+      "s": "Liebe Malika,\nich habe gute Nachrichten! Alle meine Dokumente ___ ins Deutsche ___ ___. (übersetzen, Perfekt)\nUnd stell dir vor: Mein Diplom ___ endlich ___ ___! (anerkennen, Perfekt)\nJetzt warte ich nur noch auf den Bescheid für mein Visum.",
+      "a": [
+       [
+        "sind"
+       ],
+       [
+        "übersetzt"
+       ],
+       [
+        "worden"
+       ],
+       [
+        "ist"
+       ],
+       [
+        "anerkannt"
+       ],
+       [
+        "worden"
+       ]
+      ],
+      "gw": {
+       "uz": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. Nebensatzda tuslangan fe’l eng oxirida: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>",
+       "ru": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. В Nebensatz спрягаемый глагол в самом конце: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Passiv.",
+      "bsp": "Das Formular ___ gestern ___. (unterschreiben, Präteritum) → <b>wurde</b> … <b>unterschrieben</b> · Perfekt: <b>ist</b> … <b>unterschrieben worden</b>",
+      "s": "Frage: Wie lange dauert ein Studentenvisum?\nTimur: Bei mir ging es schnell. Mein Visum ___ nach drei Wochen ___. (ausstellen, Präteritum)\nAnna: Bei mir hat es länger gedauert. Mein erster Antrag ___ ___ ___, weil ein Dokument gefehlt hat. (ablehnen, Perfekt)",
+      "a": [
+       [
+        "wurde"
+       ],
+       [
+        "ausgestellt"
+       ],
+       [
+        "ist"
+       ],
+       [
+        "abgelehnt"
+       ],
+       [
+        "worden"
+       ]
+      ],
+      "gw": {
+       "uz": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. Nebensatzda tuslangan fe’l eng oxirida: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>",
+       "ru": "Präteritum: <b>wurde/wurden</b> + Partizip II. Perfekt: <b>ist/sind</b> + Partizip II + <b>worden</b>. В Nebensatz спрягаемый глагол в самом конце: <b>…, weil er angenommen wurde.</b> · <b>…, dass ich registriert worden bin.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv Präteritum.",
+      "bsp": "Man prüfte den Antrag. → <b>Der Antrag wurde geprüft.</b>",
+      "q": "Die Uni schickte die Zulassung per E-Mail.",
+      "w": [
+       "Die Zulassung",
+       "wurde",
+       "per E-Mail",
+       "geschickt"
+      ],
+      "a": "Die Zulassung wurde per E-Mail geschickt.",
+      "alt": [],
+      "gw": {
+       "uz": "Aktivdagi to‘ldiruvchi (Akkusativ) Passivda egaga aylanadi: <b>den Antrag</b> → <b>der Antrag</b>. «man» tushib qoladi. <b>wurde/wurden</b> yangi egaga moslanadi, Partizip II oxirida. Kim qilgani muhim bo‘lsa — <b>von</b> + Dativ. Misol: <b>Man prüfte die Dokumente. → Die Dokumente wurden geprüft.</b>",
+       "ru": "Дополнение из Aktiv (Akkusativ) становится в Passiv подлежащим: <b>den Antrag</b> → <b>der Antrag</b>. «man» исчезает. <b>wurde/wurden</b> согласуется с новым подлежащим, Partizip II в конце. Если важно, кто сделал, — <b>von</b> + Dativ. Пример: <b>Man prüfte die Dokumente. → Die Dokumente wurden geprüft.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv Präteritum.",
+      "bsp": "Man prüfte den Antrag. → <b>Der Antrag wurde geprüft.</b>",
+      "q": "Man übersetzte meine Zeugnisse ins Deutsche.",
+      "w": [
+       "Meine Zeugnisse",
+       "wurden",
+       "ins Deutsche",
+       "übersetzt"
+      ],
+      "a": "Meine Zeugnisse wurden ins Deutsche übersetzt.",
+      "alt": [],
+      "gw": {
+       "uz": "Aktivdagi to‘ldiruvchi (Akkusativ) Passivda egaga aylanadi: <b>den Antrag</b> → <b>der Antrag</b>. «man» tushib qoladi. <b>wurde/wurden</b> yangi egaga moslanadi, Partizip II oxirida. Kim qilgani muhim bo‘lsa — <b>von</b> + Dativ. Misol: <b>Man prüfte die Dokumente. → Die Dokumente wurden geprüft.</b>",
+       "ru": "Дополнение из Aktiv (Akkusativ) становится в Passiv подлежащим: <b>den Antrag</b> → <b>der Antrag</b>. «man» исчезает. <b>wurde/wurden</b> согласуется с новым подлежащим, Partizip II в конце. Если важно, кто сделал, — <b>von</b> + Dativ. Пример: <b>Man prüfte die Dokumente. → Die Dokumente wurden geprüft.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv Präteritum.",
+      "bsp": "Man prüfte den Antrag. → <b>Der Antrag wurde geprüft.</b>",
+      "q": "Man verlängerte das Visum um drei Monate.",
+      "w": [
+       "Das Visum",
+       "wurde",
+       "um drei Monate",
+       "verlängert"
+      ],
+      "a": "Das Visum wurde um drei Monate verlängert.",
+      "alt": [],
+      "gw": {
+       "uz": "Aktivdagi to‘ldiruvchi (Akkusativ) Passivda egaga aylanadi: <b>den Antrag</b> → <b>der Antrag</b>. «man» tushib qoladi. <b>wurde/wurden</b> yangi egaga moslanadi, Partizip II oxirida. Kim qilgani muhim bo‘lsa — <b>von</b> + Dativ. Misol: <b>Man prüfte die Dokumente. → Die Dokumente wurden geprüft.</b>",
+       "ru": "Дополнение из Aktiv (Akkusativ) становится в Passiv подлежащим: <b>den Antrag</b> → <b>der Antrag</b>. «man» исчезает. <b>wurde/wurden</b> согласуется с новым подлежащим, Partizip II в конце. Если важно, кто сделал, — <b>von</b> + Dativ. Пример: <b>Man prüfte die Dokumente. → Die Dokumente wurden geprüft.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv Präteritum.",
+      "bsp": "Man prüfte den Antrag. → <b>Der Antrag wurde geprüft.</b>",
+      "q": "Eine Kommission prüfte die Bewerbungen für das Stipendium. (mit von)",
+      "w": [
+       "Die Bewerbungen",
+       "für das Stipendium",
+       "wurden",
+       "von einer Kommission",
+       "geprüft"
+      ],
+      "a": "Die Bewerbungen für das Stipendium wurden von einer Kommission geprüft.",
+      "alt": [],
+      "gw": {
+       "uz": "Aktivdagi to‘ldiruvchi (Akkusativ) Passivda egaga aylanadi: <b>den Antrag</b> → <b>der Antrag</b>. «man» tushib qoladi. <b>wurde/wurden</b> yangi egaga moslanadi, Partizip II oxirida. Kim qilgani muhim bo‘lsa — <b>von</b> + Dativ. Misol: <b>Man prüfte die Dokumente. → Die Dokumente wurden geprüft.</b>",
+       "ru": "Дополнение из Aktiv (Akkusativ) становится в Passiv подлежащим: <b>den Antrag</b> → <b>der Antrag</b>. «man» исчезает. <b>wurde/wurden</b> согласуется с новым подлежащим, Partizip II в конце. Если важно, кто сделал, — <b>von</b> + Dativ. Пример: <b>Man prüfte die Dokumente. → Die Dokumente wurden geprüft.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv Perfekt.",
+      "bsp": "Man hat den Antrag geprüft. → <b>Der Antrag ist geprüft worden.</b>",
+      "q": "Man hat mein Diplom anerkannt.",
+      "w": [
+       "Mein Diplom",
+       "ist",
+       "anerkannt",
+       "worden"
+      ],
+      "a": "Mein Diplom ist anerkannt worden.",
+      "alt": [],
+      "gw": {
+       "uz": "Passiv Perfekt: <b>ist/sind</b> 2-o‘rinda, oxirida Partizip II + <b>worden</b>. Nebensatzda (ob, dass) tartib: … Partizip II → worden → <b>ist</b>. Misol: <b>Ich weiß, dass das Visum verlängert worden ist.</b>",
+       "ru": "Passiv Perfekt: <b>ist/sind</b> на 2-м месте, в конце Partizip II + <b>worden</b>. В Nebensatz (ob, dass) порядок: … Partizip II → worden → <b>ist</b>. Пример: <b>Ich weiß, dass das Visum verlängert worden ist.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv Perfekt.",
+      "bsp": "Man hat den Antrag geprüft. → <b>Der Antrag ist geprüft worden.</b>",
+      "q": "Man hat alle Formulare unterschrieben.",
+      "w": [
+       "Alle Formulare",
+       "sind",
+       "unterschrieben",
+       "worden"
+      ],
+      "a": "Alle Formulare sind unterschrieben worden.",
+      "alt": [],
+      "gw": {
+       "uz": "Passiv Perfekt: <b>ist/sind</b> 2-o‘rinda, oxirida Partizip II + <b>worden</b>. Nebensatzda (ob, dass) tartib: … Partizip II → worden → <b>ist</b>. Misol: <b>Ich weiß, dass das Visum verlängert worden ist.</b>",
+       "ru": "Passiv Perfekt: <b>ist/sind</b> на 2-м месте, в конце Partizip II + <b>worden</b>. В Nebensatz (ob, dass) порядок: … Partizip II → worden → <b>ist</b>. Пример: <b>Ich weiß, dass das Visum verlängert worden ist.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv Perfekt.",
+      "bsp": "Man hat den Antrag geprüft. → <b>Der Antrag ist geprüft worden.</b>",
+      "q": "Hat man meinen Antrag schon bearbeitet? Ich weiß es nicht. → Ich weiß nicht, ob …",
+      "w": [
+       "Ich",
+       "weiß",
+       "nicht,",
+       "ob",
+       "mein Antrag",
+       "schon",
+       "bearbeitet",
+       "worden",
+       "ist"
+      ],
+      "a": "Ich weiß nicht, ob mein Antrag schon bearbeitet worden ist.",
+      "alt": [],
+      "gw": {
+       "uz": "Passiv Perfekt: <b>ist/sind</b> 2-o‘rinda, oxirida Partizip II + <b>worden</b>. Nebensatzda (ob, dass) tartib: … Partizip II → worden → <b>ist</b>. Misol: <b>Ich weiß, dass das Visum verlängert worden ist.</b>",
+       "ru": "Passiv Perfekt: <b>ist/sind</b> на 2-м месте, в конце Partizip II + <b>worden</b>. В Nebensatz (ob, dass) порядок: … Partizip II → worden → <b>ist</b>. Пример: <b>Ich weiß, dass das Visum verlängert worden ist.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Mein Visum ist verlängert geworden. → <b>geworden</b> → Mein Visum ist verlängert worden.",
+      "s": "Die Dokumente wurde schon übersetzt .",
+      "a": [
+       2
+      ],
+      "fix": "Die Dokumente wurden schon übersetzt.",
+      "gw": {
+       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Nebensatzda <b>ist</b> eng oxirida turadi.",
+       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в Nebensatz <b>ist</b> стоит в самом конце."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Mein Visum ist verlängert geworden. → <b>geworden</b> → Mein Visum ist verlängert worden.",
+      "s": "Mein Studentenausweis ist gestern ausgestellt geworden .",
+      "a": [
+       5
+      ],
+      "fix": "Mein Studentenausweis ist gestern ausgestellt worden.",
+      "gw": {
+       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Nebensatzda <b>ist</b> eng oxirida turadi.",
+       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в Nebensatz <b>ist</b> стоит в самом конце."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Mein Visum ist verlängert geworden. → <b>geworden</b> → Mein Visum ist verlängert worden.",
+      "s": "Mein Antrag hat leider abgelehnt worden .",
+      "a": [
+       2
+      ],
+      "fix": "Mein Antrag ist leider abgelehnt worden.",
+      "gw": {
+       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Nebensatzda <b>ist</b> eng oxirida turadi.",
+       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в Nebensatz <b>ist</b> стоит в самом конце."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Mein Visum ist verlängert geworden. → <b>geworden</b> → Mein Visum ist verlängert worden.",
+      "s": "Ich habe gehört , dass dein Stipendium ist verlängert worden .",
+      "a": [
+       7
+      ],
+      "fix": "Ich habe gehört, dass dein Stipendium verlängert worden ist.",
+      "gw": {
+       "uz": "Tekshiring: ko‘plikda <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> («geworden» emas, «hat» emas); Nebensatzda <b>ist</b> eng oxirida turadi.",
+       "ru": "Проверьте: во множественном числе <b>wurden</b>; Passiv Perfekt — <b>ist … worden</b> (не «geworden», не «hat»); в Nebensatz <b>ist</b> стоит в самом конце."
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wortbildung: -ei und -isch</h4>\n<table class=\"ex-tb\"><tr><th>Beruf → Ort: -ei</th><th>Nomen → Adjektiv: -isch</th></tr>\n<tr><td>der Bäcker → die Bäcker<b>ei</b></td><td>die Theorie → theoret<b>isch</b></td></tr>\n<tr><td>der Metzger → die Metzger<b>ei</b></td><td>die Praxis → prakt<b>isch</b></td></tr>\n<tr><td>der Konditor → die Konditor<b>ei</b></td><td>die Politik → polit<b>isch</b></td></tr>\n<tr><td></td><td>der Typ → typ<b>isch</b></td></tr>\n<tr><td></td><td>Usbekistan → usbek<b>isch</b></td></tr></table>\n<p class=\"ex-note\"><b>-ei</b>: kasb nomidan shu kasb egasi ishlaydigan joy yoki do‘kon yasaladi, artikl doim <b>die</b>. <b>-isch</b>: otdan sifat yasaladi, so‘z oxiri ko‘pincha o‘zgaradi (Theorie → theoretisch). Sifat ot oldida qo‘shimcha oladi: <b>ein typisches Gericht</b>.</p>",
+      "ru": "<h4>Wortbildung: -ei und -isch</h4>\n<table class=\"ex-tb\"><tr><th>Beruf → Ort: -ei</th><th>Nomen → Adjektiv: -isch</th></tr>\n<tr><td>der Bäcker → die Bäcker<b>ei</b></td><td>die Theorie → theoret<b>isch</b></td></tr>\n<tr><td>der Metzger → die Metzger<b>ei</b></td><td>die Praxis → prakt<b>isch</b></td></tr>\n<tr><td>der Konditor → die Konditor<b>ei</b></td><td>die Politik → polit<b>isch</b></td></tr>\n<tr><td></td><td>der Typ → typ<b>isch</b></td></tr>\n<tr><td></td><td>Usbekistan → usbek<b>isch</b></td></tr></table>\n<p class=\"ex-note\"><b>-ei</b>: от названия профессии образуется место или магазин, артикль всегда <b>die</b>. <b>-isch</b>: от существительного образуется прилагательное, конец слова часто меняется (Theorie → theoretisch). Перед существительным прилагательное получает окончание: <b>ein typisches Gericht</b>.</p>"
+     },
+     {
+      "t": "gap",
+      "h": "Bilden Sie Wörter mit -ei oder -isch.",
+      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
+      "s": "Frische Brötchen kaufe ich jeden Morgen in der ___ an der Ecke. (Bäcker)",
+      "a": [
+       [
+        "Bäckerei"
+       ]
+      ],
+      "gw": {
+       "uz": "Kasbdan joy: <b>-ei</b> qo‘shing (artikl doim <b>die</b>): Bäcker → <b>Bäckerei</b>. Otdan sifat: <b>-isch</b> (Praxis → <b>praktisch</b>). Sifat ot oldida bo‘lsa, qo‘shimcha oladi: <b>ein politisches Thema</b>.",
+       "ru": "Профессия → место: добавьте <b>-ei</b> (артикль всегда <b>die</b>): Bäcker → <b>Bäckerei</b>. Существительное → прилагательное: <b>-isch</b> (Praxis → <b>praktisch</b>). Перед существительным прилагательное получает окончание: <b>ein politisches Thema</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Bilden Sie Wörter mit -ei oder -isch.",
+      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
+      "s": "Fleisch und Wurst bekommt man in einer ___. (Metzger)",
+      "a": [
+       [
+        "Metzgerei"
+       ]
+      ],
+      "gw": {
+       "uz": "Kasbdan joy: <b>-ei</b> qo‘shing (artikl doim <b>die</b>): Bäcker → <b>Bäckerei</b>. Otdan sifat: <b>-isch</b> (Praxis → <b>praktisch</b>). Sifat ot oldida bo‘lsa, qo‘shimcha oladi: <b>ein politisches Thema</b>.",
+       "ru": "Профессия → место: добавьте <b>-ei</b> (артикль всегда <b>die</b>): Bäcker → <b>Bäckerei</b>. Существительное → прилагательное: <b>-isch</b> (Praxis → <b>praktisch</b>). Перед существительным прилагательное получает окончание: <b>ein politisches Thema</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Bilden Sie Wörter mit -ei oder -isch.",
+      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
+      "s": "Der Kurs war nicht nur theoretisch, sondern auch sehr ___. (Praxis)",
+      "a": [
+       [
+        "praktisch"
+       ]
+      ],
+      "gw": {
+       "uz": "Kasbdan joy: <b>-ei</b> qo‘shing (artikl doim <b>die</b>): Bäcker → <b>Bäckerei</b>. Otdan sifat: <b>-isch</b> (Praxis → <b>praktisch</b>). Sifat ot oldida bo‘lsa, qo‘shimcha oladi: <b>ein politisches Thema</b>.",
+       "ru": "Профессия → место: добавьте <b>-ei</b> (артикль всегда <b>die</b>): Bäcker → <b>Bäckerei</b>. Существительное → прилагательное: <b>-isch</b> (Praxis → <b>praktisch</b>). Перед существительным прилагательное получает окончание: <b>ein politisches Thema</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Bilden Sie Wörter mit -ei oder -isch.",
+      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
+      "s": "Mein Bruder liest jeden Tag Zeitung. Er ist sehr ___ interessiert. (Politik)",
+      "a": [
+       [
+        "politisch"
+       ]
+      ],
+      "gw": {
+       "uz": "Kasbdan joy: <b>-ei</b> qo‘shing (artikl doim <b>die</b>): Bäcker → <b>Bäckerei</b>. Otdan sifat: <b>-isch</b> (Praxis → <b>praktisch</b>). Sifat ot oldida bo‘lsa, qo‘shimcha oladi: <b>ein politisches Thema</b>.",
+       "ru": "Профессия → место: добавьте <b>-ei</b> (артикль всегда <b>die</b>): Bäcker → <b>Bäckerei</b>. Существительное → прилагательное: <b>-isch</b> (Praxis → <b>praktisch</b>). Перед существительным прилагательное получает окончание: <b>ein politisches Thema</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Bilden Sie Wörter mit -ei oder -isch.",
+      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
+      "s": "Heiße Sommer sind ___ für Taschkent. (Typ)",
+      "a": [
+       [
+        "typisch"
+       ]
+      ],
+      "gw": {
+       "uz": "Kasbdan joy: <b>-ei</b> qo‘shing (artikl doim <b>die</b>): Bäcker → <b>Bäckerei</b>. Otdan sifat: <b>-isch</b> (Praxis → <b>praktisch</b>). Sifat ot oldida bo‘lsa, qo‘shimcha oladi: <b>ein politisches Thema</b>.",
+       "ru": "Профессия → место: добавьте <b>-ei</b> (артикль всегда <b>die</b>): Bäcker → <b>Bäckerei</b>. Существительное → прилагательное: <b>-isch</b> (Praxis → <b>praktisch</b>). Перед существительным прилагательное получает окончание: <b>ein politisches Thema</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Bilden Sie Wörter mit -ei oder -isch.",
+      "bsp": "Kuchen und Torten kauft man in der ___. (Konditor) → <b>Konditorei</b>",
+      "s": "Plov ist ein ___ Gericht. (Usbekistan)",
+      "a": [
+       [
+        "usbekisches"
+       ]
+      ],
+      "gw": {
+       "uz": "Kasbdan joy: <b>-ei</b> qo‘shing (artikl doim <b>die</b>): Bäcker → <b>Bäckerei</b>. Otdan sifat: <b>-isch</b> (Praxis → <b>praktisch</b>). Sifat ot oldida bo‘lsa, qo‘shimcha oladi: <b>ein politisches Thema</b>.",
+       "ru": "Профессия → место: добавьте <b>-ei</b> (артикль всегда <b>die</b>): Bäcker → <b>Bäckerei</b>. Существительное → прилагательное: <b>-isch</b> (Praxis → <b>praktisch</b>). Перед существительным прилагательное получает окончание: <b>ein politisches Thema</b>."
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

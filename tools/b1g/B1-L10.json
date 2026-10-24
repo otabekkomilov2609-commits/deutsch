@@ -1,0 +1,587 @@
+{
+ "id": "B1-b11-10-G",
+ "meta": {
+  "title": "Grammatik · bevor · während · bis · seit",
+  "stitle": "bevor · während · bis · seit(dem) · Verb am Ende"
+ },
+ "ex": {
+  "title": "Lektion 10 · Grammatik",
+  "sub": "bevor · während · bis · seit(dem) · Verb am Ende",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Temporale Konnektoren: bevor · während · bis · seit(dem)</h4>\n<table class=\"ex-tb\"><tr><th>Konnektor</th><th>Wann?</th><th>Beispiel</th></tr>\n<tr><td><b>bevor</b></td><td>zuerst A, dann B</td><td><b>Bevor</b> ich nach Deutschland <b>fliege</b>, mache ich einen Sprachkurs.</td></tr>\n<tr><td><b>während</b></td><td>A und B gleichzeitig</td><td><b>Während</b> Laylo <b>kocht</b>, hört sie Podcasts.</td></tr>\n<tr><td><b>bis</b></td><td>bis zu diesem Moment (Ende)</td><td>Ich warte hier, <b>bis</b> der Kurs <b>anfängt</b>.</td></tr>\n<tr><td><b>seit / seitdem</b></td><td>ab diesem Moment bis heute (Anfang)</td><td><b>Seit</b> Timur in Wien <b>wohnt</b>, spricht er besser Deutsch.</td></tr></table>\n<p class=\"ex-note\">Hammasi Nebensatz ochadi: fe’l oxirida. Nebensatz oldin kelsa, Hauptsatz fe’l bilan boshlanadi: <b>Bevor ich fliege, mache ich …</b><br><b>seit</b> = <b>seitdem</b>, ma’nosi bir xil; hozirgacha davom etayotgan ish uchun odatda Präsens.</p>",
+      "ru": "<h4>Temporale Konnektoren: bevor · während · bis · seit(dem)</h4>\n<table class=\"ex-tb\"><tr><th>Konnektor</th><th>Wann?</th><th>Beispiel</th></tr>\n<tr><td><b>bevor</b></td><td>zuerst A, dann B</td><td><b>Bevor</b> ich nach Deutschland <b>fliege</b>, mache ich einen Sprachkurs.</td></tr>\n<tr><td><b>während</b></td><td>A und B gleichzeitig</td><td><b>Während</b> Laylo <b>kocht</b>, hört sie Podcasts.</td></tr>\n<tr><td><b>bis</b></td><td>bis zu diesem Moment (Ende)</td><td>Ich warte hier, <b>bis</b> der Kurs <b>anfängt</b>.</td></tr>\n<tr><td><b>seit / seitdem</b></td><td>ab diesem Moment bis heute (Anfang)</td><td><b>Seit</b> Timur in Wien <b>wohnt</b>, spricht er besser Deutsch.</td></tr></table>\n<p class=\"ex-note\">Все они открывают Nebensatz: глагол в конце. Если Nebensatz стоит первым, Hauptsatz начинается с глагола: <b>Bevor ich fliege, mache ich …</b><br><b>seit</b> = <b>seitdem</b>, значение одинаковое; для действия, которое длится до сих пор, обычно Präsens.</p>"
+     },
+     {
+      "t": "info",
+      "h": "<h4>Konnektor oder Präposition?</h4>\n<table class=\"ex-tb\"><tr><th>Konnektor + Nebensatz</th><th>Präposition + Nomen</th></tr>\n<tr><td><b>bevor</b> ich studiere</td><td><b>vor</b> dem Studium (+ Dat.)</td></tr>\n<tr><td><b>während</b> ich studiere</td><td><b>während</b> des Studiums (+ Gen.)</td></tr>\n<tr><td><b>seit(dem)</b> ich studiere</td><td><b>seit</b> dem Studium (+ Dat.)</td></tr>\n<tr><td><b>bis</b> der Kurs zu Ende ist</td><td><b>bis</b> zum Ende des Kurses</td></tr></table>\n<p class=\"ex-note\"><b>bevor</b> — faqat bog‘lovchi, <b>vor</b> — faqat predlog. <b>während, seit, bis</b> ikkalasi ham bo‘la oladi: keyin fe’lli gap kelsa — fe’l oxirga o‘tadi, faqat Nomen kelsa — kelishikka qarang.</p>",
+      "ru": "<h4>Konnektor oder Präposition?</h4>\n<table class=\"ex-tb\"><tr><th>Konnektor + Nebensatz</th><th>Präposition + Nomen</th></tr>\n<tr><td><b>bevor</b> ich studiere</td><td><b>vor</b> dem Studium (+ Dat.)</td></tr>\n<tr><td><b>während</b> ich studiere</td><td><b>während</b> des Studiums (+ Gen.)</td></tr>\n<tr><td><b>seit(dem)</b> ich studiere</td><td><b>seit</b> dem Studium (+ Dat.)</td></tr>\n<tr><td><b>bis</b> der Kurs zu Ende ist</td><td><b>bis</b> zum Ende des Kurses</td></tr></table>\n<p class=\"ex-note\"><b>bevor</b> — только союз, <b>vor</b> — только предлог. <b>während, seit, bis</b> могут быть и тем, и другим: если дальше идёт предложение с глаголом — глагол в конец, если только существительное — следите за падежом.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Konnektor und das Verb im Nebensatz.",
+      "bsp": "Ich lerne Wörter, <b>während</b> ich mit dem Bus <b>fahre</b>.",
+      "s": "Bevor Aziz nach Berlin fliegt , macht er einen Deutschkurs .",
+      "a": [
+       0,
+       4
+      ],
+      "gw": {
+       "uz": "Konnektor (<b>bevor, während, bis, seit(dem)</b>) Nebensatzni boshlaydi, fe’l esa uning oxirida turadi. Ajraladigan fe’l ham birga yoziladi: <b>aufräumt</b>. Misol: <b>…, bis der Film anfängt.</b>",
+       "ru": "Коннектор (<b>bevor, während, bis, seit(dem)</b>) начинает Nebensatz, а глагол стоит в его конце. Отделяемый глагол пишется слитно: <b>aufräumt</b>. Пример: <b>…, bis der Film anfängt.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Konnektor und das Verb im Nebensatz.",
+      "bsp": "Ich lerne Wörter, <b>während</b> ich mit dem Bus <b>fahre</b>.",
+      "s": "Sevara hört Musik , während sie ihr Zimmer aufräumt .",
+      "a": [
+       4,
+       8
+      ],
+      "gw": {
+       "uz": "Konnektor (<b>bevor, während, bis, seit(dem)</b>) Nebensatzni boshlaydi, fe’l esa uning oxirida turadi. Ajraladigan fe’l ham birga yoziladi: <b>aufräumt</b>. Misol: <b>…, bis der Film anfängt.</b>",
+       "ru": "Коннектор (<b>bevor, während, bis, seit(dem)</b>) начинает Nebensatz, а глагол стоит в его конце. Отделяемый глагол пишется слитно: <b>aufräumt</b>. Пример: <b>…, bis der Film anfängt.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Konnektor und das Verb im Nebensatz.",
+      "bsp": "Ich lerne Wörter, <b>während</b> ich mit dem Bus <b>fahre</b>.",
+      "s": "Seitdem Nodir ein Praktikum in Hamburg macht , hat er wenig Freizeit .",
+      "a": [
+       0,
+       6
+      ],
+      "gw": {
+       "uz": "Konnektor (<b>bevor, während, bis, seit(dem)</b>) Nebensatzni boshlaydi, fe’l esa uning oxirida turadi. Ajraladigan fe’l ham birga yoziladi: <b>aufräumt</b>. Misol: <b>…, bis der Film anfängt.</b>",
+       "ru": "Коннектор (<b>bevor, während, bis, seit(dem)</b>) начинает Nebensatz, а глагол стоит в его конце. Отделяемый глагол пишется слитно: <b>aufräumt</b>. Пример: <b>…, bis der Film anfängt.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Konnektor und das Verb im Nebensatz.",
+      "bsp": "Ich lerne Wörter, <b>während</b> ich mit dem Bus <b>fahre</b>.",
+      "s": "Wir bleiben in der Bibliothek , bis sie um 20 Uhr schließt .",
+      "a": [
+       6,
+       11
+      ],
+      "gw": {
+       "uz": "Konnektor (<b>bevor, während, bis, seit(dem)</b>) Nebensatzni boshlaydi, fe’l esa uning oxirida turadi. Ajraladigan fe’l ham birga yoziladi: <b>aufräumt</b>. Misol: <b>…, bis der Film anfängt.</b>",
+       "ru": "Коннектор (<b>bevor, während, bis, seit(dem)</b>) начинает Nebensatz, а глагол стоит в его конце. Отделяемый глагол пишется слитно: <b>aufräumt</b>. Пример: <b>…, bis der Film anfängt.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "___ ich ins Kino gehe, esse ich noch schnell etwas. → zuerst essen, dann Kino → ✓ <b>Bevor</b>",
+      "q": "Malika telefoniert mit ihrer Mutter, ___ sie auf den Bus wartet.",
+      "o": [
+       "bevor",
+       "während",
+       "bis"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: oldinmi (<b>bevor</b>), bir vaqtdami (<b>während</b>), qachongacha (<b>bis</b>), qachondan beri (<b>seit/seitdem</b>)? Misol: <b>Seit ich Sport mache, schlafe ich besser.</b> — boshlangan va hozir ham davom etyapti.",
+       "ru": "Спросите себя: раньше (<b>bevor</b>), одновременно (<b>während</b>), до какого момента (<b>bis</b>), с какого момента (<b>seit/seitdem</b>)? Пример: <b>Seit ich Sport mache, schlafe ich besser.</b> — началось и продолжается сейчас."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "___ ich ins Kino gehe, esse ich noch schnell etwas. → zuerst essen, dann Kino → ✓ <b>Bevor</b>",
+      "q": "___ Ben in Leipzig studiert, hat er viele neue Freunde gefunden.",
+      "o": [
+       "Seit",
+       "Bevor",
+       "Bis"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: oldinmi (<b>bevor</b>), bir vaqtdami (<b>während</b>), qachongacha (<b>bis</b>), qachondan beri (<b>seit/seitdem</b>)? Misol: <b>Seit ich Sport mache, schlafe ich besser.</b> — boshlangan va hozir ham davom etyapti.",
+       "ru": "Спросите себя: раньше (<b>bevor</b>), одновременно (<b>während</b>), до какого момента (<b>bis</b>), с какого момента (<b>seit/seitdem</b>)? Пример: <b>Seit ich Sport mache, schlafe ich besser.</b> — началось и продолжается сейчас."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "___ ich ins Kino gehe, esse ich noch schnell etwas. → zuerst essen, dann Kino → ✓ <b>Bevor</b>",
+      "q": "Kannst du bitte warten, ___ ich meine Tasche gepackt habe?",
+      "o": [
+       "während",
+       "seit",
+       "bis"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: oldinmi (<b>bevor</b>), bir vaqtdami (<b>während</b>), qachongacha (<b>bis</b>), qachondan beri (<b>seit/seitdem</b>)? Misol: <b>Seit ich Sport mache, schlafe ich besser.</b> — boshlangan va hozir ham davom etyapti.",
+       "ru": "Спросите себя: раньше (<b>bevor</b>), одновременно (<b>während</b>), до какого момента (<b>bis</b>), с какого момента (<b>seit/seitdem</b>)? Пример: <b>Seit ich Sport mache, schlafe ich besser.</b> — началось и продолжается сейчас."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "___ ich ins Kino gehe, esse ich noch schnell etwas. → zuerst essen, dann Kino → ✓ <b>Bevor</b>",
+      "q": "Ich muss mich für den Kurs anmelden, ___ das Semester beginnt.",
+      "o": [
+       "bevor",
+       "seitdem",
+       "während"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: oldinmi (<b>bevor</b>), bir vaqtdami (<b>während</b>), qachongacha (<b>bis</b>), qachondan beri (<b>seit/seitdem</b>)? Misol: <b>Seit ich Sport mache, schlafe ich besser.</b> — boshlangan va hozir ham davom etyapti.",
+       "ru": "Спросите себя: раньше (<b>bevor</b>), одновременно (<b>während</b>), до какого момента (<b>bis</b>), с какого момента (<b>seit/seitdem</b>)? Пример: <b>Seit ich Sport mache, schlafe ich besser.</b> — началось и продолжается сейчас."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "___ ich ins Kino gehe, esse ich noch schnell etwas. → zuerst essen, dann Kino → ✓ <b>Bevor</b>",
+      "q": "___ wir in den Ferien in Samarkand waren, hat es kein einziges Mal geregnet.",
+      "o": [
+       "Bis",
+       "Während",
+       "Bevor"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: oldinmi (<b>bevor</b>), bir vaqtdami (<b>während</b>), qachongacha (<b>bis</b>), qachondan beri (<b>seit/seitdem</b>)? Misol: <b>Seit ich Sport mache, schlafe ich besser.</b> — boshlangan va hozir ham davom etyapti.",
+       "ru": "Спросите себя: раньше (<b>bevor</b>), одновременно (<b>während</b>), до какого момента (<b>bis</b>), с какого момента (<b>seit/seitdem</b>)? Пример: <b>Seit ich Sport mache, schlafe ich besser.</b> — началось и продолжается сейчас."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Konnektor oder Präposition? Was passt?",
+      "bsp": "___ dem Studium möchte Aziz ein Jahr reisen. → + Nomen → ✓ <b>Vor</b> (nicht: Bevor)",
+      "q": "___ Laylo ihr Praktikum anfängt, möchte sie zwei Wochen Urlaub machen.",
+      "o": [
+       "Vor",
+       "Bevor"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Keyin nima keladi? Faqat Nomen — predlog: <b>vor</b> + Dat., <b>seit</b> + Dat., <b>während</b> + Gen. Fe’lli gap — bog‘lovchi: <b>bevor, während, seit(dem)</b>. Misol: <b>vor dem Kurs</b> · <b>bevor der Kurs beginnt</b>.",
+       "ru": "Что идёт дальше? Только существительное — предлог: <b>vor</b> + Dat., <b>seit</b> + Dat., <b>während</b> + Gen. Предложение с глаголом — союз: <b>bevor, während, seit(dem)</b>. Пример: <b>vor dem Kurs</b> · <b>bevor der Kurs beginnt</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Konnektor oder Präposition? Was passt?",
+      "bsp": "___ dem Studium möchte Aziz ein Jahr reisen. → + Nomen → ✓ <b>Vor</b> (nicht: Bevor)",
+      "q": "Während ___ Semesterferien besucht Timur seine Familie in Fergana.",
+      "o": [
+       "der",
+       "den",
+       "die"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Keyin nima keladi? Faqat Nomen — predlog: <b>vor</b> + Dat., <b>seit</b> + Dat., <b>während</b> + Gen. Fe’lli gap — bog‘lovchi: <b>bevor, während, seit(dem)</b>. Misol: <b>vor dem Kurs</b> · <b>bevor der Kurs beginnt</b>.",
+       "ru": "Что идёт дальше? Только существительное — предлог: <b>vor</b> + Dat., <b>seit</b> + Dat., <b>während</b> + Gen. Предложение с глаголом — союз: <b>bevor, während, seit(dem)</b>. Пример: <b>vor dem Kurs</b> · <b>bevor der Kurs beginnt</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Konnektor oder Präposition? Was passt?",
+      "bsp": "___ dem Studium möchte Aziz ein Jahr reisen. → + Nomen → ✓ <b>Vor</b> (nicht: Bevor)",
+      "q": "Anna lernt seit ___ Jahr Usbekisch.",
+      "o": [
+       "einen",
+       "eines",
+       "einem"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Keyin nima keladi? Faqat Nomen — predlog: <b>vor</b> + Dat., <b>seit</b> + Dat., <b>während</b> + Gen. Fe’lli gap — bog‘lovchi: <b>bevor, während, seit(dem)</b>. Misol: <b>vor dem Kurs</b> · <b>bevor der Kurs beginnt</b>.",
+       "ru": "Что идёт дальше? Только существительное — предлог: <b>vor</b> + Dat., <b>seit</b> + Dat., <b>während</b> + Gen. Предложение с глаголом — союз: <b>bevor, während, seit(dem)</b>. Пример: <b>vor dem Kurs</b> · <b>bevor der Kurs beginnt</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Konnektor oder Präposition? Was passt?",
+      "bsp": "___ dem Studium möchte Aziz ein Jahr reisen. → + Nomen → ✓ <b>Vor</b> (nicht: Bevor)",
+      "q": "Ich habe ___ der Prüfung sehr schlecht geschlafen.",
+      "o": [
+       "bevor",
+       "vor",
+       "bis"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Keyin nima keladi? Faqat Nomen — predlog: <b>vor</b> + Dat., <b>seit</b> + Dat., <b>während</b> + Gen. Fe’lli gap — bog‘lovchi: <b>bevor, während, seit(dem)</b>. Misol: <b>vor dem Kurs</b> · <b>bevor der Kurs beginnt</b>.",
+       "ru": "Что идёт дальше? Только существительное — предлог: <b>vor</b> + Dat., <b>seit</b> + Dat., <b>während</b> + Gen. Предложение с глаголом — союз: <b>bevor, während, seit(dem)</b>. Пример: <b>vor dem Kurs</b> · <b>bevor der Kurs beginnt</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *bevor*, *während*, *bis* oder *seit*.",
+      "bsp": "Ich warte, ___ du kommst. → <b>bis</b>",
+      "s": "___ Sevara den Kochkurs gemacht hat, kocht sie jeden Tag selbst.",
+      "a": [
+       [
+        "Seit",
+        "Seitdem"
+       ]
+      ],
+      "gw": {
+       "uz": "Mantiqni tekshiring: <b>bevor</b> — avval shu ish; <b>während</b> — bir vaqtda; <b>bis</b> — oxirgi nuqta; <b>seit</b> — boshlanish nuqtasi, hozirgacha. Nebensatz boshda bo‘lsa, Hauptsatz fe’l bilan boshlanadi. Misol: <b>Bis der Bus kommt, lese ich.</b>",
+       "ru": "Проверьте логику: <b>bevor</b> — сначала это действие; <b>während</b> — одновременно; <b>bis</b> — конечная точка; <b>seit</b> — начальная точка, до сих пор. Если Nebensatz в начале, Hauptsatz начинается с глагола. Пример: <b>Bis der Bus kommt, lese ich.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *bevor*, *während*, *bis* oder *seit*.",
+      "bsp": "Ich warte, ___ du kommst. → <b>bis</b>",
+      "s": "Ich trinke immer einen Tee, ___ ich mit den Hausaufgaben anfange.",
+      "a": [
+       [
+        "bevor"
+       ]
+      ],
+      "gw": {
+       "uz": "Mantiqni tekshiring: <b>bevor</b> — avval shu ish; <b>während</b> — bir vaqtda; <b>bis</b> — oxirgi nuqta; <b>seit</b> — boshlanish nuqtasi, hozirgacha. Nebensatz boshda bo‘lsa, Hauptsatz fe’l bilan boshlanadi. Misol: <b>Bis der Bus kommt, lese ich.</b>",
+       "ru": "Проверьте логику: <b>bevor</b> — сначала это действие; <b>während</b> — одновременно; <b>bis</b> — конечная точка; <b>seit</b> — начальная точка, до сих пор. Если Nebensatz в начале, Hauptsatz начинается с глагола. Пример: <b>Bis der Bus kommt, lese ich.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *bevor*, *während*, *bis* oder *seit*.",
+      "bsp": "Ich warte, ___ du kommst. → <b>bis</b>",
+      "s": "Jonas hat die ganze Nacht gelernt, ___ die Sonne aufgegangen ist.",
+      "a": [
+       [
+        "bis"
+       ]
+      ],
+      "gw": {
+       "uz": "Mantiqni tekshiring: <b>bevor</b> — avval shu ish; <b>während</b> — bir vaqtda; <b>bis</b> — oxirgi nuqta; <b>seit</b> — boshlanish nuqtasi, hozirgacha. Nebensatz boshda bo‘lsa, Hauptsatz fe’l bilan boshlanadi. Misol: <b>Bis der Bus kommt, lese ich.</b>",
+       "ru": "Проверьте логику: <b>bevor</b> — сначала это действие; <b>während</b> — одновременно; <b>bis</b> — конечная точка; <b>seit</b> — начальная точка, до сих пор. Если Nebensatz в начале, Hauptsatz начинается с глагола. Пример: <b>Bis der Bus kommt, lese ich.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *bevor*, *während*, *bis* oder *seit*.",
+      "bsp": "Ich warte, ___ du kommst. → <b>bis</b>",
+      "s": "▪ Hallo Kamola, wie ist dein Sommerkurs in Heidelberg?\n● Super! ___ ich hier bin, spreche ich nur Deutsch.\n● ___ die anderen in der Pause Kaffee trinken, lerne ich neue Wörter.\n▪ Toll! Und wann kommst du zurück?\n● Im August. Aber ___ ich zurückfliege, will ich noch Berlin sehen.",
+      "a": [
+       [
+        "Seit",
+        "Seitdem"
+       ],
+       [
+        "Während"
+       ],
+       [
+        "bevor"
+       ]
+      ],
+      "gw": {
+       "uz": "Mantiqni tekshiring: <b>bevor</b> — avval shu ish; <b>während</b> — bir vaqtda; <b>bis</b> — oxirgi nuqta; <b>seit</b> — boshlanish nuqtasi, hozirgacha. Nebensatz boshda bo‘lsa, Hauptsatz fe’l bilan boshlanadi. Misol: <b>Bis der Bus kommt, lese ich.</b>",
+       "ru": "Проверьте логику: <b>bevor</b> — сначала это действие; <b>während</b> — одновременно; <b>bis</b> — конечная точка; <b>seit</b> — начальная точка, до сих пор. Если Nebensatz в начале, Hauptsatz начинается с глагола. Пример: <b>Bis der Bus kommt, lese ich.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *bevor*, *während*, *bis* oder *seit*.",
+      "bsp": "Ich warte, ___ du kommst. → <b>bis</b>",
+      "s": "Bitte schreib mir keine Nachrichten, ___ ich im Unterricht bin.",
+      "a": [
+       [
+        "während"
+       ]
+      ],
+      "gw": {
+       "uz": "Mantiqni tekshiring: <b>bevor</b> — avval shu ish; <b>während</b> — bir vaqtda; <b>bis</b> — oxirgi nuqta; <b>seit</b> — boshlanish nuqtasi, hozirgacha. Nebensatz boshda bo‘lsa, Hauptsatz fe’l bilan boshlanadi. Misol: <b>Bis der Bus kommt, lese ich.</b>",
+       "ru": "Проверьте логику: <b>bevor</b> — сначала это действие; <b>während</b> — одновременно; <b>bis</b> — конечная точка; <b>seit</b> — начальная точка, до сих пор. Если Nebensatz в начале, Hauptsatz начинается с глагола. Пример: <b>Bis der Bus kommt, lese ich.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *bevor*, *während*, *bis* oder *seit*.",
+      "bsp": "Ich warte, ___ du kommst. → <b>bis</b>",
+      "s": "Meine Pläne nach der Schule\nIm Juni mache ich meine Abschlussprüfungen. ___ ich die Ergebnisse bekomme, mache ich keine Pläne.\nDanach möchte ich ein Jahr ins Ausland. Aber ___ ich fahre, muss ich noch mehr Deutsch lernen.\n___ ich im Ausland bin, möchte ich auch viel reisen.",
+      "a": [
+       [
+        "Bis"
+       ],
+       [
+        "bevor"
+       ],
+       [
+        "Während"
+       ]
+      ],
+      "gw": {
+       "uz": "Mantiqni tekshiring: <b>bevor</b> — avval shu ish; <b>während</b> — bir vaqtda; <b>bis</b> — oxirgi nuqta; <b>seit</b> — boshlanish nuqtasi, hozirgacha. Nebensatz boshda bo‘lsa, Hauptsatz fe’l bilan boshlanadi. Misol: <b>Bis der Bus kommt, lese ich.</b>",
+       "ru": "Проверьте логику: <b>bevor</b> — сначала это действие; <b>während</b> — одновременно; <b>bis</b> — конечная точка; <b>seit</b> — начальная точка, до сих пор. Если Nebensatz в начале, Hauptsatz начинается с глагола. Пример: <b>Bis der Bus kommt, lese ich.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *bevor*, *während*, *bis* oder *seit*.",
+      "bsp": "Ich warte, ___ du kommst. → <b>bis</b>",
+      "s": "Mein altes Handy war kaputt. ___ ich ein neues habe, schreibe ich wieder viele Nachrichten.",
+      "a": [
+       [
+        "Seit",
+        "Seitdem"
+       ]
+      ],
+      "gw": {
+       "uz": "Mantiqni tekshiring: <b>bevor</b> — avval shu ish; <b>während</b> — bir vaqtda; <b>bis</b> — oxirgi nuqta; <b>seit</b> — boshlanish nuqtasi, hozirgacha. Nebensatz boshda bo‘lsa, Hauptsatz fe’l bilan boshlanadi. Misol: <b>Bis der Bus kommt, lese ich.</b>",
+       "ru": "Проверьте логику: <b>bevor</b> — сначала это действие; <b>während</b> — одновременно; <b>bis</b> — конечная точка; <b>seit</b> — начальная точка, до сих пор. Если Nebensatz в начале, Hauptsatz начинается с глагола. Пример: <b>Bis der Bus kommt, lese ich.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *bevor*, *während*, *bis* oder *seit*.",
+      "bsp": "Ich warte, ___ du kommst. → <b>bis</b>",
+      "s": "Ich bleibe noch im Café, ___ der Regen aufhört.",
+      "a": [
+       [
+        "bis"
+       ]
+      ],
+      "gw": {
+       "uz": "Mantiqni tekshiring: <b>bevor</b> — avval shu ish; <b>während</b> — bir vaqtda; <b>bis</b> — oxirgi nuqta; <b>seit</b> — boshlanish nuqtasi, hozirgacha. Nebensatz boshda bo‘lsa, Hauptsatz fe’l bilan boshlanadi. Misol: <b>Bis der Bus kommt, lese ich.</b>",
+       "ru": "Проверьте логику: <b>bevor</b> — сначала это действие; <b>während</b> — одновременно; <b>bis</b> — конечная точка; <b>seit</b> — начальная точка, до сих пор. Если Nebensatz в начале, Hauptsatz начинается с глагола. Пример: <b>Bis der Bus kommt, lese ich.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Ich frühstücke. Dann gehe ich zur Uni. (bevor) → <b>Bevor ich zur Uni gehe, frühstücke ich.</b>",
+      "q": "Ich warte an der Haltestelle. Dann kommt mein Freund. (bis)",
+      "w": [
+       "Ich",
+       "warte",
+       "an der Haltestelle,",
+       "bis",
+       "mein Freund",
+       "kommt"
+      ],
+      "a": "Ich warte an der Haltestelle, bis mein Freund kommt.",
+      "alt": [],
+      "gw": {
+       "uz": "Konnektorli gap — Nebensatz: fe’l oxiriga o‘tadi (<b>…, bis mein Freund kommt</b>). Nebensatz birinchi kelsa, verguldan keyin darhol Hauptsatz fe’li turadi: <b>Bevor der Zug abfährt, kaufen wir …</b> <b>dann, gleichzeitig, seitdem, bis dahin</b> so‘zlari tushib qoladi.",
+       "ru": "Предложение с коннектором — Nebensatz: глагол уходит в конец (<b>…, bis mein Freund kommt</b>). Если Nebensatz первый, сразу после запятой стоит глагол Hauptsatz: <b>Bevor der Zug abfährt, kaufen wir …</b> Слова <b>dann, gleichzeitig, seitdem, bis dahin</b> исчезают."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Ich frühstücke. Dann gehe ich zur Uni. (bevor) → <b>Bevor ich zur Uni gehe, frühstücke ich.</b>",
+      "q": "Nodir lernt Deutsch. Dann geht er nach Deutschland. (bevor)",
+      "w": [
+       "Nodir",
+       "lernt",
+       "Deutsch,",
+       "bevor",
+       "er",
+       "nach Deutschland",
+       "geht"
+      ],
+      "a": "Nodir lernt Deutsch, bevor er nach Deutschland geht.",
+      "alt": [],
+      "gw": {
+       "uz": "Konnektorli gap — Nebensatz: fe’l oxiriga o‘tadi (<b>…, bis mein Freund kommt</b>). Nebensatz birinchi kelsa, verguldan keyin darhol Hauptsatz fe’li turadi: <b>Bevor der Zug abfährt, kaufen wir …</b> <b>dann, gleichzeitig, seitdem, bis dahin</b> so‘zlari tushib qoladi.",
+       "ru": "Предложение с коннектором — Nebensatz: глагол уходит в конец (<b>…, bis mein Freund kommt</b>). Если Nebensatz первый, сразу после запятой стоит глагол Hauptsatz: <b>Bevor der Zug abfährt, kaufen wir …</b> Слова <b>dann, gleichzeitig, seitdem, bis dahin</b> исчезают."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Ich frühstücke. Dann gehe ich zur Uni. (bevor) → <b>Bevor ich zur Uni gehe, frühstücke ich.</b>",
+      "q": "Laylo macht Hausaufgaben. Gleichzeitig läuft das Radio. (während)",
+      "w": [
+       "Während",
+       "Laylo",
+       "Hausaufgaben",
+       "macht,",
+       "läuft",
+       "das Radio"
+      ],
+      "a": "Während Laylo Hausaufgaben macht, läuft das Radio.",
+      "alt": [],
+      "gw": {
+       "uz": "Konnektorli gap — Nebensatz: fe’l oxiriga o‘tadi (<b>…, bis mein Freund kommt</b>). Nebensatz birinchi kelsa, verguldan keyin darhol Hauptsatz fe’li turadi: <b>Bevor der Zug abfährt, kaufen wir …</b> <b>dann, gleichzeitig, seitdem, bis dahin</b> so‘zlari tushib qoladi.",
+       "ru": "Предложение с коннектором — Nebensatz: глагол уходит в конец (<b>…, bis mein Freund kommt</b>). Если Nebensatz первый, сразу после запятой стоит глагол Hauptsatz: <b>Bevor der Zug abfährt, kaufen wir …</b> Слова <b>dann, gleichzeitig, seitdem, bis dahin</b> исчезают."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Ich frühstücke. Dann gehe ich zur Uni. (bevor) → <b>Bevor ich zur Uni gehe, frühstücke ich.</b>",
+      "q": "Malika wohnt in Bremen. Seit dieser Zeit fährt sie viel Fahrrad. (seit)",
+      "w": [
+       "Malika",
+       "fährt",
+       "viel Fahrrad,",
+       "seit",
+       "sie",
+       "in Bremen",
+       "wohnt"
+      ],
+      "a": "Malika fährt viel Fahrrad, seit sie in Bremen wohnt.",
+      "alt": [],
+      "gw": {
+       "uz": "Konnektorli gap — Nebensatz: fe’l oxiriga o‘tadi (<b>…, bis mein Freund kommt</b>). Nebensatz birinchi kelsa, verguldan keyin darhol Hauptsatz fe’li turadi: <b>Bevor der Zug abfährt, kaufen wir …</b> <b>dann, gleichzeitig, seitdem, bis dahin</b> so‘zlari tushib qoladi.",
+       "ru": "Предложение с коннектором — Nebensatz: глагол уходит в конец (<b>…, bis mein Freund kommt</b>). Если Nebensatz первый, сразу после запятой стоит глагол Hauptsatz: <b>Bevor der Zug abfährt, kaufen wir …</b> Слова <b>dann, gleichzeitig, seitdem, bis dahin</b> исчезают."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Ich frühstücke. Dann gehe ich zur Uni. (bevor) → <b>Bevor ich zur Uni gehe, frühstücke ich.</b>",
+      "q": "Der Zug fährt ab. Vorher kaufen wir noch Wasser. (bevor)",
+      "w": [
+       "Bevor",
+       "der Zug",
+       "abfährt,",
+       "kaufen",
+       "wir",
+       "noch Wasser"
+      ],
+      "a": "Bevor der Zug abfährt, kaufen wir noch Wasser.",
+      "alt": [],
+      "gw": {
+       "uz": "Konnektorli gap — Nebensatz: fe’l oxiriga o‘tadi (<b>…, bis mein Freund kommt</b>). Nebensatz birinchi kelsa, verguldan keyin darhol Hauptsatz fe’li turadi: <b>Bevor der Zug abfährt, kaufen wir …</b> <b>dann, gleichzeitig, seitdem, bis dahin</b> so‘zlari tushib qoladi.",
+       "ru": "Предложение с коннектором — Nebensatz: глагол уходит в конец (<b>…, bis mein Freund kommt</b>). Если Nebensatz первый, сразу после запятой стоит глагол Hauptsatz: <b>Bevor der Zug abfährt, kaufen wir …</b> Слова <b>dann, gleichzeitig, seitdem, bis dahin</b> исчезают."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Ich frühstücke. Dann gehe ich zur Uni. (bevor) → <b>Bevor ich zur Uni gehe, frühstücke ich.</b>",
+      "q": "Meine Geschwister schlafen. Gleichzeitig sehe ich einen Film. (während)",
+      "w": [
+       "Während",
+       "meine Geschwister",
+       "schlafen,",
+       "sehe",
+       "ich",
+       "einen Film"
+      ],
+      "a": "Während meine Geschwister schlafen, sehe ich einen Film.",
+      "alt": [],
+      "gw": {
+       "uz": "Konnektorli gap — Nebensatz: fe’l oxiriga o‘tadi (<b>…, bis mein Freund kommt</b>). Nebensatz birinchi kelsa, verguldan keyin darhol Hauptsatz fe’li turadi: <b>Bevor der Zug abfährt, kaufen wir …</b> <b>dann, gleichzeitig, seitdem, bis dahin</b> so‘zlari tushib qoladi.",
+       "ru": "Предложение с коннектором — Nebensatz: глагол уходит в конец (<b>…, bis mein Freund kommt</b>). Если Nebensatz первый, сразу после запятой стоит глагол Hauptsatz: <b>Bevor der Zug abfährt, kaufen wir …</b> Слова <b>dann, gleichzeitig, seitdem, bis dahin</b> исчезают."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Ich frühstücke. Dann gehe ich zur Uni. (bevor) → <b>Bevor ich zur Uni gehe, frühstücke ich.</b>",
+      "q": "Tom hat einen Hund. Seitdem geht er jeden Morgen spazieren. (seitdem)",
+      "w": [
+       "Tom",
+       "geht",
+       "jeden Morgen",
+       "spazieren,",
+       "seitdem",
+       "er",
+       "einen Hund",
+       "hat"
+      ],
+      "a": "Tom geht jeden Morgen spazieren, seitdem er einen Hund hat.",
+      "alt": [],
+      "gw": {
+       "uz": "Konnektorli gap — Nebensatz: fe’l oxiriga o‘tadi (<b>…, bis mein Freund kommt</b>). Nebensatz birinchi kelsa, verguldan keyin darhol Hauptsatz fe’li turadi: <b>Bevor der Zug abfährt, kaufen wir …</b> <b>dann, gleichzeitig, seitdem, bis dahin</b> so‘zlari tushib qoladi.",
+       "ru": "Предложение с коннектором — Nebensatz: глагол уходит в конец (<b>…, bis mein Freund kommt</b>). Если Nebensatz первый, сразу после запятой стоит глагол Hauptsatz: <b>Bevor der Zug abfährt, kaufen wir …</b> Слова <b>dann, gleichzeitig, seitdem, bis dahin</b> исчезают."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Ich frühstücke. Dann gehe ich zur Uni. (bevor) → <b>Bevor ich zur Uni gehe, frühstücke ich.</b>",
+      "q": "Der Film ist zu Ende. Bis dahin bleibe ich wach. (bis)",
+      "w": [
+       "Bis",
+       "der Film",
+       "zu Ende",
+       "ist,",
+       "bleibe",
+       "ich",
+       "wach"
+      ],
+      "a": "Bis der Film zu Ende ist, bleibe ich wach.",
+      "alt": [],
+      "gw": {
+       "uz": "Konnektorli gap — Nebensatz: fe’l oxiriga o‘tadi (<b>…, bis mein Freund kommt</b>). Nebensatz birinchi kelsa, verguldan keyin darhol Hauptsatz fe’li turadi: <b>Bevor der Zug abfährt, kaufen wir …</b> <b>dann, gleichzeitig, seitdem, bis dahin</b> so‘zlari tushib qoladi.",
+       "ru": "Предложение с коннектором — Nebensatz: глагол уходит в конец (<b>…, bis mein Freund kommt</b>). Если Nebensatz первый, сразу после запятой стоит глагол Hauptsatz: <b>Bevor der Zug abfährt, kaufen wir …</b> Слова <b>dann, gleichzeitig, seitdem, bis dahin</b> исчезают."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Seit ich <b>wohne</b> in Wien, … → Seit ich in Wien <b>wohne</b>, …",
+      "s": "Während ich koche , ich höre gern Radio .",
+      "a": [
+       4
+      ],
+      "fix": "Während ich koche, höre ich gern Radio.",
+      "gw": {
+       "uz": "Tekshiring: (1) Nebensatzda fe’l oxirida, ajraladigan fe’l qo‘shilib yoziladi (<b>anfängt</b>); (2) Nebensatzdan keyin Hauptsatz fe’l bilan boshlanadi; (3) gap oldidan <b>bevor</b>, Nomen oldidan <b>vor</b>. Misol: <b>Bevor der Film anfängt, kaufe ich Popcorn.</b>",
+       "ru": "Проверьте: (1) в Nebensatz глагол в конце, отделяемый глагол пишется слитно (<b>anfängt</b>); (2) после Nebensatz Hauptsatz начинается с глагола; (3) перед предложением — <b>bevor</b>, перед существительным — <b>vor</b>. Пример: <b>Bevor der Film anfängt, kaufe ich Popcorn.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Seit ich <b>wohne</b> in Wien, … → Seit ich in Wien <b>wohne</b>, …",
+      "s": "Vor ich ins Ausland gehe , mache ich einen Sprachkurs .",
+      "a": [
+       0
+      ],
+      "fix": "Bevor ich ins Ausland gehe, mache ich einen Sprachkurs.",
+      "gw": {
+       "uz": "Tekshiring: (1) Nebensatzda fe’l oxirida, ajraladigan fe’l qo‘shilib yoziladi (<b>anfängt</b>); (2) Nebensatzdan keyin Hauptsatz fe’l bilan boshlanadi; (3) gap oldidan <b>bevor</b>, Nomen oldidan <b>vor</b>. Misol: <b>Bevor der Film anfängt, kaufe ich Popcorn.</b>",
+       "ru": "Проверьте: (1) в Nebensatz глагол в конце, отделяемый глагол пишется слитно (<b>anfängt</b>); (2) после Nebensatz Hauptsatz начинается с глагола; (3) перед предложением — <b>bevor</b>, перед существительным — <b>vor</b>. Пример: <b>Bevor der Film anfängt, kaufe ich Popcorn.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Seit ich <b>wohne</b> in Wien, … → Seit ich in Wien <b>wohne</b>, …",
+      "s": "Ich warte hier , bis der Kurs fängt an .",
+      "a": [
+       7,
+       8
+      ],
+      "fix": "Ich warte hier, bis der Kurs anfängt.",
+      "gw": {
+       "uz": "Tekshiring: (1) Nebensatzda fe’l oxirida, ajraladigan fe’l qo‘shilib yoziladi (<b>anfängt</b>); (2) Nebensatzdan keyin Hauptsatz fe’l bilan boshlanadi; (3) gap oldidan <b>bevor</b>, Nomen oldidan <b>vor</b>. Misol: <b>Bevor der Film anfängt, kaufe ich Popcorn.</b>",
+       "ru": "Проверьте: (1) в Nebensatz глагол в конце, отделяемый глагол пишется слитно (<b>anfängt</b>); (2) после Nebensatz Hauptsatz начинается с глагола; (3) перед предложением — <b>bevor</b>, перед существительным — <b>vor</b>. Пример: <b>Bevor der Film anfängt, kaufe ich Popcorn.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Seit ich <b>wohne</b> in Wien, … → Seit ich in Wien <b>wohne</b>, …",
+      "s": "Seitdem Lena hat ein Fahrrad , fährt sie nicht mehr mit dem Bus .",
+      "a": [
+       2
+      ],
+      "fix": "Seitdem Lena ein Fahrrad hat, fährt sie nicht mehr mit dem Bus.",
+      "gw": {
+       "uz": "Tekshiring: (1) Nebensatzda fe’l oxirida, ajraladigan fe’l qo‘shilib yoziladi (<b>anfängt</b>); (2) Nebensatzdan keyin Hauptsatz fe’l bilan boshlanadi; (3) gap oldidan <b>bevor</b>, Nomen oldidan <b>vor</b>. Misol: <b>Bevor der Film anfängt, kaufe ich Popcorn.</b>",
+       "ru": "Проверьте: (1) в Nebensatz глагол в конце, отделяемый глагол пишется слитно (<b>anfängt</b>); (2) после Nebensatz Hauptsatz начинается с глагола; (3) перед предложением — <b>bevor</b>, перед существительным — <b>vor</b>. Пример: <b>Bevor der Film anfängt, kaufe ich Popcorn.</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

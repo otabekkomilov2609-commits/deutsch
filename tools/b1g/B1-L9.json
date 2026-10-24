@@ -1,0 +1,624 @@
+{
+ "id": "B1-b11-9-G",
+ "meta": {
+  "title": "Grammatik · wegen · trotz + Genitiv",
+  "stitle": "wegen · trotz · Genitiv · Adjektiv im Genitiv"
+ },
+ "ex": {
+  "title": "Lektion 9 · Grammatik",
+  "sub": "wegen · trotz · Genitiv · Adjektiv im Genitiv",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>wegen und trotz + Genitiv</h4>\n<table class=\"ex-tb\"><tr><th></th><th>Genitiv</th><th>Beispiel</th></tr>\n<tr><td>der (m)</td><td><b>des</b> / ein<b>es</b> / mein<b>es</b> … Nomen + <b>-(e)s</b></td><td>wegen des Kurs<b>es</b> · trotz eines Fehler<b>s</b></td></tr>\n<tr><td>das (n)</td><td><b>des</b> / ein<b>es</b> / mein<b>es</b> … Nomen + <b>-(e)s</b></td><td>trotz des Wetter<b>s</b> · wegen meines Zimmer<b>s</b></td></tr>\n<tr><td>die (f)</td><td><b>der</b> / ein<b>er</b> / mein<b>er</b></td><td>wegen der Prüfung · trotz einer Erkältung</td></tr>\n<tr><td>die (Pl.)</td><td><b>der</b> / mein<b>er</b></td><td>trotz der Kosten · wegen meiner Noten</td></tr></table>\n<p class=\"ex-note\"><b>wegen</b> — sabab (<i>weil</i> o‘rniga), <b>trotz</b> — kutilmagan natija (<i>obwohl</i> o‘rniga). Ulardan keyin gap emas, faqat Nomen keladi — Genitivda.<br>weil es regnet → <b>wegen des Regens</b> · obwohl es regnet → <b>trotz des Regens</b></p>",
+      "ru": "<h4>wegen und trotz + Genitiv</h4>\n<table class=\"ex-tb\"><tr><th></th><th>Genitiv</th><th>Beispiel</th></tr>\n<tr><td>der (m)</td><td><b>des</b> / ein<b>es</b> / mein<b>es</b> … Nomen + <b>-(e)s</b></td><td>wegen des Kurs<b>es</b> · trotz eines Fehler<b>s</b></td></tr>\n<tr><td>das (n)</td><td><b>des</b> / ein<b>es</b> / mein<b>es</b> … Nomen + <b>-(e)s</b></td><td>trotz des Wetter<b>s</b> · wegen meines Zimmer<b>s</b></td></tr>\n<tr><td>die (f)</td><td><b>der</b> / ein<b>er</b> / mein<b>er</b></td><td>wegen der Prüfung · trotz einer Erkältung</td></tr>\n<tr><td>die (Pl.)</td><td><b>der</b> / mein<b>er</b></td><td>trotz der Kosten · wegen meiner Noten</td></tr></table>\n<p class=\"ex-note\"><b>wegen</b> — причина (вместо <i>weil</i>), <b>trotz</b> — неожиданный результат (вместо <i>obwohl</i>). После них идёт не предложение, а только существительное — в Genitiv.<br>weil es regnet → <b>wegen des Regens</b> · obwohl es regnet → <b>trotz des Regens</b></p>"
+     },
+     {
+      "t": "info",
+      "h": "<h4>Adjektiv im Genitiv: immer -en</h4>\n<table class=\"ex-tb\"><tr><th></th><th>der / das / die</th><th>ein / mein …</th></tr>\n<tr><td>der (m)</td><td>wegen <b>des</b> stark<b>en</b> Regen<b>s</b></td><td>trotz <b>eines</b> klein<b>en</b> Fehler<b>s</b></td></tr>\n<tr><td>das (n)</td><td>trotz <b>des</b> schlecht<b>en</b> Wetter<b>s</b></td><td>wegen <b>meines</b> neu<b>en</b> Zimmer<b>s</b></td></tr>\n<tr><td>die (f)</td><td>wegen <b>der</b> hoh<b>en</b> Miete</td><td>trotz <b>einer</b> schwer<b>en</b> Prüfung</td></tr>\n<tr><td>die (Pl.)</td><td>trotz <b>der</b> nett<b>en</b> Mitbewohner</td><td>wegen <b>meiner</b> gut<b>en</b> Noten</td></tr></table>\n<p class=\"ex-note\">Artikl yoki mein/ihr… bilan Genitivda sifat oxiri doim <b>-en</b>. m/n otga <b>-s</b> yoki <b>-es</b> qo‘shiladi, f va Pluralda ot o‘zgarmaydi. Diqqat: hoch → <b>hohen</b>.</p>",
+      "ru": "<h4>Adjektiv im Genitiv: immer -en</h4>\n<table class=\"ex-tb\"><tr><th></th><th>der / das / die</th><th>ein / mein …</th></tr>\n<tr><td>der (m)</td><td>wegen <b>des</b> stark<b>en</b> Regen<b>s</b></td><td>trotz <b>eines</b> klein<b>en</b> Fehler<b>s</b></td></tr>\n<tr><td>das (n)</td><td>trotz <b>des</b> schlecht<b>en</b> Wetter<b>s</b></td><td>wegen <b>meines</b> neu<b>en</b> Zimmer<b>s</b></td></tr>\n<tr><td>die (f)</td><td>wegen <b>der</b> hoh<b>en</b> Miete</td><td>trotz <b>einer</b> schwer<b>en</b> Prüfung</td></tr>\n<tr><td>die (Pl.)</td><td>trotz <b>der</b> nett<b>en</b> Mitbewohner</td><td>wegen <b>meiner</b> gut<b>en</b> Noten</td></tr></table>\n<p class=\"ex-note\">С артиклем или mein/ihr… прилагательное в Genitiv всегда оканчивается на <b>-en</b>. К существительному m/n добавляется <b>-s</b> или <b>-es</b>, в f и Plural существительное не меняется. Внимание: hoch → <b>hohen</b>.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Genitiv.",
+      "bsp": "Trotz <b>der hohen Studiengebühren</b> möchte Nodir in London studieren.",
+      "s": "Wegen des starken Regens ist unser Flug nach Hamburg ausgefallen .",
+      "a": [
+       1,
+       2,
+       3
+      ],
+      "gw": {
+       "uz": "Genitiv guruhi <b>wegen</b> yoki <b>trotz</b>dan keyin keladi: artikl (<b>des, der, eines, ihres</b> …) + sifat (<b>-en</b>) + ot (m/n: <b>-(e)s</b>). Misol: <b>wegen des starken Regens</b>.",
+       "ru": "Группа в Genitiv стоит после <b>wegen</b> или <b>trotz</b>: артикль (<b>des, der, eines, ihres</b> …) + прилагательное (<b>-en</b>) + существительное (m/n: <b>-(e)s</b>). Пример: <b>wegen des starken Regens</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Genitiv.",
+      "bsp": "Trotz <b>der hohen Studiengebühren</b> möchte Nodir in London studieren.",
+      "s": "Sevara lernt wegen ihres Auslandssemesters jeden Tag Deutsch .",
+      "a": [
+       3,
+       4
+      ],
+      "gw": {
+       "uz": "Genitiv guruhi <b>wegen</b> yoki <b>trotz</b>dan keyin keladi: artikl (<b>des, der, eines, ihres</b> …) + sifat (<b>-en</b>) + ot (m/n: <b>-(e)s</b>). Misol: <b>wegen des starken Regens</b>.",
+       "ru": "Группа в Genitiv стоит после <b>wegen</b> или <b>trotz</b>: артикль (<b>des, der, eines, ihres</b> …) + прилагательное (<b>-en</b>) + существительное (m/n: <b>-(e)s</b>). Пример: <b>wegen des starken Regens</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Genitiv.",
+      "bsp": "Trotz <b>der hohen Studiengebühren</b> möchte Nodir in London studieren.",
+      "s": "Trotz der schweren Prüfung hat Malika eine gute Note bekommen .",
+      "a": [
+       1,
+       2,
+       3
+      ],
+      "gw": {
+       "uz": "Genitiv guruhi <b>wegen</b> yoki <b>trotz</b>dan keyin keladi: artikl (<b>des, der, eines, ihres</b> …) + sifat (<b>-en</b>) + ot (m/n: <b>-(e)s</b>). Misol: <b>wegen des starken Regens</b>.",
+       "ru": "Группа в Genitiv стоит после <b>wegen</b> или <b>trotz</b>: артикль (<b>des, der, eines, ihres</b> …) + прилагательное (<b>-en</b>) + существительное (m/n: <b>-(e)s</b>). Пример: <b>wegen des starken Regens</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Genitiv.",
+      "bsp": "Trotz <b>der hohen Studiengebühren</b> möchte Nodir in London studieren.",
+      "s": "Jonas wohnt trotz des kleinen Zimmers gern im Studentenwohnheim .",
+      "a": [
+       3,
+       4,
+       5
+      ],
+      "gw": {
+       "uz": "Genitiv guruhi <b>wegen</b> yoki <b>trotz</b>dan keyin keladi: artikl (<b>des, der, eines, ihres</b> …) + sifat (<b>-en</b>) + ot (m/n: <b>-(e)s</b>). Misol: <b>wegen des starken Regens</b>.",
+       "ru": "Группа в Genitiv стоит после <b>wegen</b> или <b>trotz</b>: артикль (<b>des, der, eines, ihres</b> …) + прилагательное (<b>-en</b>) + существительное (m/n: <b>-(e)s</b>). Пример: <b>wegen des starken Regens</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*wegen* oder *trotz*? Was passt?",
+      "bsp": "___ der langen Reise war Aziz am nächsten Tag fit. → Gegengrund → ✓ <b>Trotz</b>",
+      "q": "___ einer Erkältung konnte Laylo nicht zur Prüfung gehen.",
+      "o": [
+       "Wegen",
+       "Trotz"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>wegen</b> — sabab: natija mantiqiy (<i>weil</i>). <b>trotz</b> — sabab bor, lekin natija kutilganining teskarisi (<i>obwohl</i>). Misol: <b>Wegen des Regens bleiben wir zu Hause.</b> · <b>Trotz des Regens gehen wir spazieren.</b>",
+       "ru": "<b>wegen</b> — причина: результат логичен (<i>weil</i>). <b>trotz</b> — причина есть, но результат противоположен ожидаемому (<i>obwohl</i>). Пример: <b>Wegen des Regens bleiben wir zu Hause.</b> · <b>Trotz des Regens gehen wir spazieren.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*wegen* oder *trotz*? Was passt?",
+      "bsp": "___ der langen Reise war Aziz am nächsten Tag fit. → Gegengrund → ✓ <b>Trotz</b>",
+      "q": "___ des schlechten Wetters sind wir den ganzen Tag am Strand geblieben.",
+      "o": [
+       "Wegen",
+       "Trotz"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "<b>wegen</b> — sabab: natija mantiqiy (<i>weil</i>). <b>trotz</b> — sabab bor, lekin natija kutilganining teskarisi (<i>obwohl</i>). Misol: <b>Wegen des Regens bleiben wir zu Hause.</b> · <b>Trotz des Regens gehen wir spazieren.</b>",
+       "ru": "<b>wegen</b> — причина: результат логичен (<i>weil</i>). <b>trotz</b> — причина есть, но результат противоположен ожидаемому (<i>obwohl</i>). Пример: <b>Wegen des Regens bleiben wir zu Hause.</b> · <b>Trotz des Regens gehen wir spazieren.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*wegen* oder *trotz*? Was passt?",
+      "bsp": "___ der langen Reise war Aziz am nächsten Tag fit. → Gegengrund → ✓ <b>Trotz</b>",
+      "q": "Nodir versteht seine Nachbarn oft nicht – ___ ihres starken Dialekts.",
+      "o": [
+       "wegen",
+       "trotz"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>wegen</b> — sabab: natija mantiqiy (<i>weil</i>). <b>trotz</b> — sabab bor, lekin natija kutilganining teskarisi (<i>obwohl</i>). Misol: <b>Wegen des Regens bleiben wir zu Hause.</b> · <b>Trotz des Regens gehen wir spazieren.</b>",
+       "ru": "<b>wegen</b> — причина: результат логичен (<i>weil</i>). <b>trotz</b> — причина есть, но результат противоположен ожидаемому (<i>obwohl</i>). Пример: <b>Wegen des Regens bleiben wir zu Hause.</b> · <b>Trotz des Regens gehen wir spazieren.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*wegen* oder *trotz*? Was passt?",
+      "bsp": "___ der langen Reise war Aziz am nächsten Tag fit. → Gegengrund → ✓ <b>Trotz</b>",
+      "q": "___ der hohen Mieten wohnen viele Studenten in einer WG.",
+      "o": [
+       "Trotz",
+       "Wegen"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "<b>wegen</b> — sabab: natija mantiqiy (<i>weil</i>). <b>trotz</b> — sabab bor, lekin natija kutilganining teskarisi (<i>obwohl</i>). Misol: <b>Wegen des Regens bleiben wir zu Hause.</b> · <b>Trotz des Regens gehen wir spazieren.</b>",
+       "ru": "<b>wegen</b> — причина: результат логичен (<i>weil</i>). <b>trotz</b> — причина есть, но результат противоположен ожидаемому (<i>obwohl</i>). Пример: <b>Wegen des Regens bleiben wir zu Hause.</b> · <b>Trotz des Regens gehen wir spazieren.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*wegen* oder *trotz*? Was passt?",
+      "bsp": "___ der langen Reise war Aziz am nächsten Tag fit. → Gegengrund → ✓ <b>Trotz</b>",
+      "q": "Mia hat ___ ihrer guten Noten kein Stipendium bekommen.",
+      "o": [
+       "trotz",
+       "wegen"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>wegen</b> — sabab: natija mantiqiy (<i>weil</i>). <b>trotz</b> — sabab bor, lekin natija kutilganining teskarisi (<i>obwohl</i>). Misol: <b>Wegen des Regens bleiben wir zu Hause.</b> · <b>Trotz des Regens gehen wir spazieren.</b>",
+       "ru": "<b>wegen</b> — причина: результат логичен (<i>weil</i>). <b>trotz</b> — причина есть, но результат противоположен ожидаемому (<i>obwohl</i>). Пример: <b>Wegen des Regens bleiben wir zu Hause.</b> · <b>Trotz des Regens gehen wir spazieren.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welche Form ist richtig?",
+      "bsp": "wegen ___ → ✓ <b>des neuen Mitbewohners</b> (m: des + -en + -s)",
+      "q": "Trotz ___ war die Party sehr schön.",
+      "o": [
+       "des kleinen Zimmers",
+       "des kleinen Zimmer",
+       "dem kleinen Zimmer"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Uchta narsani tekshiring: artikl (m/n <b>des/eines</b>, f/Pl <b>der/einer</b>), sifat — doim <b>-en</b>, m/n ot — <b>-(e)s</b>. <b>dem, den</b> — Dativ, bu yerda Genitiv kerak. Misol: <b>trotz eines langen Tages</b>.",
+       "ru": "Проверьте три вещи: артикль (m/n <b>des/eines</b>, f/Pl <b>der/einer</b>), прилагательное — всегда <b>-en</b>, существительное m/n — <b>-(e)s</b>. <b>dem, den</b> — Dativ, а здесь нужен Genitiv. Пример: <b>trotz eines langen Tages</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welche Form ist richtig?",
+      "bsp": "wegen ___ → ✓ <b>des neuen Mitbewohners</b> (m: des + -en + -s)",
+      "q": "Wegen ___ kann Anna nicht in England studieren.",
+      "o": [
+       "der hohe Studiengebühren",
+       "der hohen Studiengebühren",
+       "den hohen Studiengebühren"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Uchta narsani tekshiring: artikl (m/n <b>des/eines</b>, f/Pl <b>der/einer</b>), sifat — doim <b>-en</b>, m/n ot — <b>-(e)s</b>. <b>dem, den</b> — Dativ, bu yerda Genitiv kerak. Misol: <b>trotz eines langen Tages</b>.",
+       "ru": "Проверьте три вещи: артикль (m/n <b>des/eines</b>, f/Pl <b>der/einer</b>), прилагательное — всегда <b>-en</b>, существительное m/n — <b>-(e)s</b>. <b>dem, den</b> — Dativ, а здесь нужен Genitiv. Пример: <b>trotz eines langen Tages</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welche Form ist richtig?",
+      "bsp": "wegen ___ → ✓ <b>des neuen Mitbewohners</b> (m: des + -en + -s)",
+      "q": "Paul hat trotz ___ alle Prüfungen bestanden.",
+      "o": [
+       "eines schweren Semester",
+       "einem schweren Semester",
+       "eines schweren Semesters"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Uchta narsani tekshiring: artikl (m/n <b>des/eines</b>, f/Pl <b>der/einer</b>), sifat — doim <b>-en</b>, m/n ot — <b>-(e)s</b>. <b>dem, den</b> — Dativ, bu yerda Genitiv kerak. Misol: <b>trotz eines langen Tages</b>.",
+       "ru": "Проверьте три вещи: артикль (m/n <b>des/eines</b>, f/Pl <b>der/einer</b>), прилагательное — всегда <b>-en</b>, существительное m/n — <b>-(e)s</b>. <b>dem, den</b> — Dativ, а здесь нужен Genitiv. Пример: <b>trotz eines langen Tages</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welche Form ist richtig?",
+      "bsp": "wegen ___ → ✓ <b>des neuen Mitbewohners</b> (m: des + -en + -s)",
+      "q": "Wegen ___ bin ich gestern nicht zum Sprachkurs gegangen.",
+      "o": [
+       "meiner starken Kopfschmerzen",
+       "meinen starken Kopfschmerzen",
+       "meiner starke Kopfschmerzen"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Uchta narsani tekshiring: artikl (m/n <b>des/eines</b>, f/Pl <b>der/einer</b>), sifat — doim <b>-en</b>, m/n ot — <b>-(e)s</b>. <b>dem, den</b> — Dativ, bu yerda Genitiv kerak. Misol: <b>trotz eines langen Tages</b>.",
+       "ru": "Проверьте три вещи: артикль (m/n <b>des/eines</b>, f/Pl <b>der/einer</b>), прилагательное — всегда <b>-en</b>, существительное m/n — <b>-(e)s</b>. <b>dem, den</b> — Dativ, а здесь нужен Genitiv. Пример: <b>trotz eines langen Tages</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endungen.",
+      "bsp": "Wegen d___ lang___ Reise … → wegen <b>der</b> lang<b>en</b> Reise",
+      "s": "Wegen d___ stark___ Verkehr___ kam der Bus zu spät.",
+      "a": [
+       [
+        "es"
+       ],
+       [
+        "en"
+       ],
+       [
+        "s"
+       ]
+      ],
+      "gw": {
+       "uz": "Genitivda artikl: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Sifat doim <b>-en</b>. m/n ot oxiriga <b>-s</b> (ba’zan <b>-es</b>), f va Plural otga hech narsa qo‘shilmaydi. Misol: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>.",
+       "ru": "Артикль в Genitiv: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Прилагательное всегда <b>-en</b>. К существительному m/n добавляется <b>-s</b> (иногда <b>-es</b>), к f и Plural — ничего. Пример: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endungen.",
+      "bsp": "Wegen d___ lang___ Reise … → wegen <b>der</b> lang<b>en</b> Reise",
+      "s": "Trotz d___ lang___ Reise war Kamola am Abend nicht müde.",
+      "a": [
+       [
+        "er"
+       ],
+       [
+        "en"
+       ]
+      ],
+      "gw": {
+       "uz": "Genitivda artikl: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Sifat doim <b>-en</b>. m/n ot oxiriga <b>-s</b> (ba’zan <b>-es</b>), f va Plural otga hech narsa qo‘shilmaydi. Misol: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>.",
+       "ru": "Артикль в Genitiv: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Прилагательное всегда <b>-en</b>. К существительному m/n добавляется <b>-s</b> (иногда <b>-es</b>), к f и Plural — ничего. Пример: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endungen.",
+      "bsp": "Wegen d___ lang___ Reise … → wegen <b>der</b> lang<b>en</b> Reise",
+      "s": "Wegen ein___ klein___ Problem___ musste Ben noch einmal zur Botschaft gehen.",
+      "a": [
+       [
+        "es"
+       ],
+       [
+        "en"
+       ],
+       [
+        "s"
+       ]
+      ],
+      "gw": {
+       "uz": "Genitivda artikl: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Sifat doim <b>-en</b>. m/n ot oxiriga <b>-s</b> (ba’zan <b>-es</b>), f va Plural otga hech narsa qo‘shilmaydi. Misol: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>.",
+       "ru": "Артикль в Genitiv: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Прилагательное всегда <b>-en</b>. К существительному m/n добавляется <b>-s</b> (иногда <b>-es</b>), к f и Plural — ничего. Пример: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endungen.",
+      "bsp": "Wegen d___ lang___ Reise … → wegen <b>der</b> lang<b>en</b> Reise",
+      "s": "Hallo aus Leipzig!\nMein Auslandssemester ist super. Trotz d___ viel___ Prüfungen habe ich viel Freizeit.\nWegen mein___ nett___ Mitbewohner fühle ich mich hier wie zu Hause.\nNur wegen d___ kalt___ Wetter___ bin ich manchmal schlecht gelaunt.",
+      "a": [
+       [
+        "er"
+       ],
+       [
+        "en"
+       ],
+       [
+        "er"
+       ],
+       [
+        "en"
+       ],
+       [
+        "es"
+       ],
+       [
+        "en"
+       ],
+       [
+        "s"
+       ]
+      ],
+      "gw": {
+       "uz": "Genitivda artikl: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Sifat doim <b>-en</b>. m/n ot oxiriga <b>-s</b> (ba’zan <b>-es</b>), f va Plural otga hech narsa qo‘shilmaydi. Misol: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>.",
+       "ru": "Артикль в Genitiv: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Прилагательное всегда <b>-en</b>. К существительному m/n добавляется <b>-s</b> (иногда <b>-es</b>), к f и Plural — ничего. Пример: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endungen.",
+      "bsp": "Wegen d___ lang___ Reise … → wegen <b>der</b> lang<b>en</b> Reise",
+      "s": "Trotz ihr___ stark___ Akzent___ versteht man Lena sehr gut.",
+      "a": [
+       [
+        "es"
+       ],
+       [
+        "en"
+       ],
+       [
+        "s",
+        "es"
+       ]
+      ],
+      "gw": {
+       "uz": "Genitivda artikl: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Sifat doim <b>-en</b>. m/n ot oxiriga <b>-s</b> (ba’zan <b>-es</b>), f va Plural otga hech narsa qo‘shilmaydi. Misol: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>.",
+       "ru": "Артикль в Genitiv: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Прилагательное всегда <b>-en</b>. К существительному m/n добавляется <b>-s</b> (иногда <b>-es</b>), к f и Plural — ничего. Пример: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endungen.",
+      "bsp": "Wegen d___ lang___ Reise … → wegen <b>der</b> lang<b>en</b> Reise",
+      "s": "Ich möchte ein Jahr in Österreich studieren.\nWegen d___ hoh___ Kosten habe ich aber ein bisschen Angst.\nTrotz ein___ gut___ Stipendium___ ist das Leben dort teuer, oder?",
+      "a": [
+       [
+        "er"
+       ],
+       [
+        "en"
+       ],
+       [
+        "es"
+       ],
+       [
+        "en"
+       ],
+       [
+        "s"
+       ]
+      ],
+      "gw": {
+       "uz": "Genitivda artikl: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Sifat doim <b>-en</b>. m/n ot oxiriga <b>-s</b> (ba’zan <b>-es</b>), f va Plural otga hech narsa qo‘shilmaydi. Misol: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>.",
+       "ru": "Артикль в Genitiv: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Прилагательное всегда <b>-en</b>. К существительному m/n добавляется <b>-s</b> (иногда <b>-es</b>), к f и Plural — ничего. Пример: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endungen.",
+      "bsp": "Wegen d___ lang___ Reise … → wegen <b>der</b> lang<b>en</b> Reise",
+      "s": "Wegen d___ neu___ Regeln muss man im Wohnheim ab 22 Uhr leise sein.",
+      "a": [
+       [
+        "er"
+       ],
+       [
+        "en"
+       ]
+      ],
+      "gw": {
+       "uz": "Genitivda artikl: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Sifat doim <b>-en</b>. m/n ot oxiriga <b>-s</b> (ba’zan <b>-es</b>), f va Plural otga hech narsa qo‘shilmaydi. Misol: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>.",
+       "ru": "Артикль в Genitiv: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Прилагательное всегда <b>-en</b>. К существительному m/n добавляется <b>-s</b> (иногда <b>-es</b>), к f и Plural — ничего. Пример: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie die Endungen.",
+      "bsp": "Wegen d___ lang___ Reise … → wegen <b>der</b> lang<b>en</b> Reise",
+      "s": "Wegen d___ schwierig___ Dialekt___ hat Sardor am Anfang wenig verstanden.",
+      "a": [
+       [
+        "es"
+       ],
+       [
+        "en"
+       ],
+       [
+        "s",
+        "es"
+       ]
+      ],
+      "gw": {
+       "uz": "Genitivda artikl: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Sifat doim <b>-en</b>. m/n ot oxiriga <b>-s</b> (ba’zan <b>-es</b>), f va Plural otga hech narsa qo‘shilmaydi. Misol: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>.",
+       "ru": "Артикль в Genitiv: m/n <b>des, eines, meines</b>; f/Pl <b>der, einer, meiner</b>. Прилагательное всегда <b>-en</b>. К существительному m/n добавляется <b>-s</b> (иногда <b>-es</b>), к f и Plural — ничего. Пример: <b>wegen des kalten Wetters</b> · <b>trotz der vielen Prüfungen</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz mit *wegen* oder *trotz*.",
+      "bsp": "Ich bleibe zu Hause, weil das Wetter schlecht ist. → <b>Wegen des schlechten Wetters bleibe ich zu Hause.</b>",
+      "q": "Weil die Mieten in München hoch sind, wohnt Jonas in einer WG.",
+      "w": [
+       "Wegen",
+       "der",
+       "hohen",
+       "Mieten in München",
+       "wohnt",
+       "Jonas",
+       "in einer WG"
+      ],
+      "a": "Wegen der hohen Mieten in München wohnt Jonas in einer WG.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Fe’l (<b>ist, war, hat</b>) tushib qoladi: sifat + ot olinadi va Genitivga qo‘yiladi. Bu endi Nebensatz emas: <b>Wegen …</b> 1-o‘rinda, fe’l 2-o‘rinda. Misol: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>",
+       "ru": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Глагол (<b>ist, war, hat</b>) исчезает: берём прилагательное + существительное и ставим в Genitiv. Это уже не Nebensatz: <b>Wegen …</b> на 1-м месте, глагол на 2-м. Пример: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz mit *wegen* oder *trotz*.",
+      "bsp": "Ich bleibe zu Hause, weil das Wetter schlecht ist. → <b>Wegen des schlechten Wetters bleibe ich zu Hause.</b>",
+      "q": "Obwohl die Prüfung schwer war, hat Malika eine sehr gute Note bekommen.",
+      "w": [
+       "Trotz",
+       "der",
+       "schweren",
+       "Prüfung",
+       "hat",
+       "Malika",
+       "eine sehr gute Note",
+       "bekommen"
+      ],
+      "a": "Trotz der schweren Prüfung hat Malika eine sehr gute Note bekommen.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Fe’l (<b>ist, war, hat</b>) tushib qoladi: sifat + ot olinadi va Genitivga qo‘yiladi. Bu endi Nebensatz emas: <b>Wegen …</b> 1-o‘rinda, fe’l 2-o‘rinda. Misol: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>",
+       "ru": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Глагол (<b>ist, war, hat</b>) исчезает: берём прилагательное + существительное и ставим в Genitiv. Это уже не Nebensatz: <b>Wegen …</b> на 1-м месте, глагол на 2-м. Пример: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz mit *wegen* oder *trotz*.",
+      "bsp": "Ich bleibe zu Hause, weil das Wetter schlecht ist. → <b>Wegen des schlechten Wetters bleibe ich zu Hause.</b>",
+      "q": "Weil der Eintritt sehr teuer war, haben wir das Museum nicht besucht.",
+      "w": [
+       "Wegen",
+       "des",
+       "teuren",
+       "Eintritts",
+       "haben",
+       "wir",
+       "das Museum",
+       "nicht besucht"
+      ],
+      "a": "Wegen des teuren Eintritts haben wir das Museum nicht besucht.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Fe’l (<b>ist, war, hat</b>) tushib qoladi: sifat + ot olinadi va Genitivga qo‘yiladi. Bu endi Nebensatz emas: <b>Wegen …</b> 1-o‘rinda, fe’l 2-o‘rinda. Misol: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>",
+       "ru": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Глагол (<b>ist, war, hat</b>) исчезает: берём прилагательное + существительное и ставим в Genitiv. Это уже не Nebensatz: <b>Wegen …</b> на 1-м месте, глагол на 2-м. Пример: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz mit *wegen* oder *trotz*.",
+      "bsp": "Ich bleibe zu Hause, weil das Wetter schlecht ist. → <b>Wegen des schlechten Wetters bleibe ich zu Hause.</b>",
+      "q": "Obwohl das Wetter schlecht war, haben wir einen Ausflug in die Berge gemacht.",
+      "w": [
+       "Trotz",
+       "des",
+       "schlechten",
+       "Wetters",
+       "haben",
+       "wir",
+       "einen Ausflug in die Berge",
+       "gemacht"
+      ],
+      "a": "Trotz des schlechten Wetters haben wir einen Ausflug in die Berge gemacht.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Fe’l (<b>ist, war, hat</b>) tushib qoladi: sifat + ot olinadi va Genitivga qo‘yiladi. Bu endi Nebensatz emas: <b>Wegen …</b> 1-o‘rinda, fe’l 2-o‘rinda. Misol: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>",
+       "ru": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Глагол (<b>ist, war, hat</b>) исчезает: берём прилагательное + существительное и ставим в Genitiv. Это уже не Nebensatz: <b>Wegen …</b> на 1-м месте, глагол на 2-м. Пример: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz mit *wegen* oder *trotz*.",
+      "bsp": "Ich bleibe zu Hause, weil das Wetter schlecht ist. → <b>Wegen des schlechten Wetters bleibe ich zu Hause.</b>",
+      "q": "Weil der Mitbewohner laut ist, kann Dilnoza nachts nicht schlafen.",
+      "w": [
+       "Wegen",
+       "des",
+       "lauten",
+       "Mitbewohners",
+       "kann",
+       "Dilnoza",
+       "nachts",
+       "nicht schlafen"
+      ],
+      "a": "Wegen des lauten Mitbewohners kann Dilnoza nachts nicht schlafen.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Fe’l (<b>ist, war, hat</b>) tushib qoladi: sifat + ot olinadi va Genitivga qo‘yiladi. Bu endi Nebensatz emas: <b>Wegen …</b> 1-o‘rinda, fe’l 2-o‘rinda. Misol: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>",
+       "ru": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Глагол (<b>ist, war, hat</b>) исчезает: берём прилагательное + существительное и ставим в Genitiv. Это уже не Nebensatz: <b>Wegen …</b> на 1-м месте, глагол на 2-м. Пример: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz mit *wegen* oder *trotz*.",
+      "bsp": "Ich bleibe zu Hause, weil das Wetter schlecht ist. → <b>Wegen des schlechten Wetters bleibe ich zu Hause.</b>",
+      "q": "Laylo ist sehr müde, weil der Flug lang war.",
+      "w": [
+       "Laylo",
+       "ist",
+       "wegen",
+       "des",
+       "langen",
+       "Flugs",
+       "sehr müde"
+      ],
+      "a": "Laylo ist wegen des langen Flugs sehr müde.",
+      "alt": [
+       "Laylo ist sehr müde wegen des langen Flugs."
+      ],
+      "gw": {
+       "uz": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Fe’l (<b>ist, war, hat</b>) tushib qoladi: sifat + ot olinadi va Genitivga qo‘yiladi. Bu endi Nebensatz emas: <b>Wegen …</b> 1-o‘rinda, fe’l 2-o‘rinda. Misol: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>",
+       "ru": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Глагол (<b>ist, war, hat</b>) исчезает: берём прилагательное + существительное и ставим в Genitiv. Это уже не Nebensatz: <b>Wegen …</b> на 1-м месте, глагол на 2-м. Пример: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz mit *wegen* oder *trotz*.",
+      "bsp": "Ich bleibe zu Hause, weil das Wetter schlecht ist. → <b>Wegen des schlechten Wetters bleibe ich zu Hause.</b>",
+      "q": "Obwohl Ben viele Freunde in Berlin hat, fühlt er sich manchmal allein.",
+      "w": [
+       "Trotz",
+       "seiner",
+       "vielen",
+       "Freunde in Berlin",
+       "fühlt",
+       "sich",
+       "Ben",
+       "manchmal",
+       "allein"
+      ],
+      "a": "Trotz seiner vielen Freunde in Berlin fühlt sich Ben manchmal allein.",
+      "alt": [
+       "Trotz seiner vielen Freunde in Berlin fühlt Ben sich manchmal allein."
+      ],
+      "gw": {
+       "uz": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Fe’l (<b>ist, war, hat</b>) tushib qoladi: sifat + ot olinadi va Genitivga qo‘yiladi. Bu endi Nebensatz emas: <b>Wegen …</b> 1-o‘rinda, fe’l 2-o‘rinda. Misol: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>",
+       "ru": "<b>weil</b> → <b>wegen</b>, <b>obwohl</b> → <b>trotz</b>. Глагол (<b>ist, war, hat</b>) исчезает: берём прилагательное + существительное и ставим в Genitiv. Это уже не Nebensatz: <b>Wegen …</b> на 1-м месте, глагол на 2-м. Пример: weil die Miete hoch ist → <b>Wegen der hohen Miete wohne ich …</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Trotz <b>dem</b> Regen … → Trotz <b>des Regens</b> …",
+      "s": "Trotz des schlechten Wetter sind wir an den See gefahren .",
+      "a": [
+       3
+      ],
+      "fix": "Trotz des schlechten Wetters sind wir an den See gefahren.",
+      "gw": {
+       "uz": "Genitivni tekshiring: m/n — <b>des … -en … -(e)s</b>, f/Pl — <b>der … -en</b>. <b>wegen/trotz</b> bilan boshlangan gapda fe’l 2-o‘rinda, ega undan keyin. Misol: <b>Trotz des Regens gehen wir spazieren.</b>",
+       "ru": "Проверьте Genitiv: m/n — <b>des … -en … -(e)s</b>, f/Pl — <b>der … -en</b>. Если предложение начинается с <b>wegen/trotz</b>, глагол на 2-м месте, подлежащее после него. Пример: <b>Trotz des Regens gehen wir spazieren.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Trotz <b>dem</b> Regen … → Trotz <b>des Regens</b> …",
+      "s": "Wegen der hohe Kosten studiert Kamola lieber in Taschkent .",
+      "a": [
+       2
+      ],
+      "fix": "Wegen der hohen Kosten studiert Kamola lieber in Taschkent.",
+      "gw": {
+       "uz": "Genitivni tekshiring: m/n — <b>des … -en … -(e)s</b>, f/Pl — <b>der … -en</b>. <b>wegen/trotz</b> bilan boshlangan gapda fe’l 2-o‘rinda, ega undan keyin. Misol: <b>Trotz des Regens gehen wir spazieren.</b>",
+       "ru": "Проверьте Genitiv: m/n — <b>des … -en … -(e)s</b>, f/Pl — <b>der … -en</b>. Если предложение начинается с <b>wegen/trotz</b>, глагол на 2-м месте, подлежащее после него. Пример: <b>Trotz des Regens gehen wir spazieren.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Trotz <b>dem</b> Regen … → Trotz <b>des Regens</b> …",
+      "s": "Trotz der netten Mitbewohner Timur möchte umziehen .",
+      "a": [
+       4
+      ],
+      "fix": "Trotz der netten Mitbewohner möchte Timur umziehen.",
+      "gw": {
+       "uz": "Genitivni tekshiring: m/n — <b>des … -en … -(e)s</b>, f/Pl — <b>der … -en</b>. <b>wegen/trotz</b> bilan boshlangan gapda fe’l 2-o‘rinda, ega undan keyin. Misol: <b>Trotz des Regens gehen wir spazieren.</b>",
+       "ru": "Проверьте Genitiv: m/n — <b>des … -en … -(e)s</b>, f/Pl — <b>der … -en</b>. Если предложение начинается с <b>wegen/trotz</b>, глагол на 2-м месте, подлежащее после него. Пример: <b>Trotz des Regens gehen wir spazieren.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Trotz <b>dem</b> Regen … → Trotz <b>des Regens</b> …",
+      "s": "Wegen den vielen Prüfungen hat Paul keine Zeit für Hobbys .",
+      "a": [
+       1
+      ],
+      "fix": "Wegen der vielen Prüfungen hat Paul keine Zeit für Hobbys.",
+      "gw": {
+       "uz": "Genitivni tekshiring: m/n — <b>des … -en … -(e)s</b>, f/Pl — <b>der … -en</b>. <b>wegen/trotz</b> bilan boshlangan gapda fe’l 2-o‘rinda, ega undan keyin. Misol: <b>Trotz des Regens gehen wir spazieren.</b>",
+       "ru": "Проверьте Genitiv: m/n — <b>des … -en … -(e)s</b>, f/Pl — <b>der … -en</b>. Если предложение начинается с <b>wegen/trotz</b>, глагол на 2-м месте, подлежащее после него. Пример: <b>Trotz des Regens gehen wir spazieren.</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

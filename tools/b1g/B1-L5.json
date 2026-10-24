@@ -1,0 +1,619 @@
+{
+ "id": "B1-b11-5-G",
+ "meta": {
+  "title": "Grammatik · Konjunktiv II · wenn",
+  "stitle": "Konjunktiv II · wenn-Satz · würde · Nomen + Nomen"
+ },
+ "ex": {
+  "title": "Lektion 5 · Grammatik",
+  "sub": "Konjunktiv II · wenn-Satz · würde · Nomen + Nomen",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Konjunktiv II: wäre · hätte · könnte · würde</h4><table class=\"ex-tb\"><tr><th></th><th>sein</th><th>haben</th><th>können</th><th>werden</th></tr><tr><td>ich</td><td><b>wäre</b></td><td><b>hätte</b></td><td><b>könnte</b></td><td><b>würde</b></td></tr><tr><td>du</td><td>wär<b>st</b></td><td>hätte<b>st</b></td><td>könnte<b>st</b></td><td>würde<b>st</b></td></tr><tr><td>er / es / sie</td><td><b>wäre</b></td><td><b>hätte</b></td><td><b>könnte</b></td><td><b>würde</b></td></tr><tr><td>wir</td><td>wäre<b>n</b></td><td>hätte<b>n</b></td><td>könnte<b>n</b></td><td>würde<b>n</b></td></tr><tr><td>ihr</td><td>wär<b>t</b></td><td>hätte<b>t</b></td><td>könnte<b>t</b></td><td>würde<b>t</b></td></tr><tr><td>sie / Sie</td><td>wäre<b>n</b></td><td>hätte<b>n</b></td><td>könnte<b>n</b></td><td>würde<b>n</b></td></tr></table><p class=\"ex-note\">Konjunktiv II — haqiqatda yo‘q, faqat tasavvurdagi holat yoki istak. <b>sein, haben, können</b> o‘z shakliga ega; qolgan fe’llar uchun <b>würde</b> + Infinitiv (gap oxirida): Ich <b>würde</b> gern in einer WG <b>wohnen</b>.</p>",
+      "ru": "<h4>Konjunktiv II: wäre · hätte · könnte · würde</h4><table class=\"ex-tb\"><tr><th></th><th>sein</th><th>haben</th><th>können</th><th>werden</th></tr><tr><td>ich</td><td><b>wäre</b></td><td><b>hätte</b></td><td><b>könnte</b></td><td><b>würde</b></td></tr><tr><td>du</td><td>wär<b>st</b></td><td>hätte<b>st</b></td><td>könnte<b>st</b></td><td>würde<b>st</b></td></tr><tr><td>er / es / sie</td><td><b>wäre</b></td><td><b>hätte</b></td><td><b>könnte</b></td><td><b>würde</b></td></tr><tr><td>wir</td><td>wäre<b>n</b></td><td>hätte<b>n</b></td><td>könnte<b>n</b></td><td>würde<b>n</b></td></tr><tr><td>ihr</td><td>wär<b>t</b></td><td>hätte<b>t</b></td><td>könnte<b>t</b></td><td>würde<b>t</b></td></tr><tr><td>sie / Sie</td><td>wäre<b>n</b></td><td>hätte<b>n</b></td><td>könnte<b>n</b></td><td>würde<b>n</b></td></tr></table><p class=\"ex-note\">Konjunktiv II — нереальная, воображаемая ситуация или желание. У <b>sein, haben, können</b> есть свои формы; для остальных глаголов — <b>würde</b> + Infinitiv (в конце предложения): Ich <b>würde</b> gern in einer WG <b>wohnen</b>.</p>"
+     },
+     {
+      "t": "info",
+      "h": "<h4>Irreale Bedingung: wenn + Konjunktiv II</h4><table class=\"ex-tb\"><tr><th>Wirklichkeit</th><th>Wunsch / irreal</th></tr><tr><td>Ich habe <b>kein</b> Zimmer mit Balkon.</td><td><b>Wenn</b> ich ein Zimmer mit Balkon <b>hätte</b>, <b>würde</b> ich dort frühstücken.</td></tr><tr><td>Die Wohnung ist zu klein.</td><td><b>Wenn</b> die Wohnung größer <b>wäre</b>, <b>könnten</b> wir eine Party machen.</td></tr><tr><td>Ich wohne nicht in einer WG.</td><td>Ich <b>würde</b> nie allein kochen, <b>wenn</b> ich in einer WG <b>wohnen würde</b>.</td></tr></table><div class=\"ex-sk\"><span>Wenn ich mehr Platz</span><span class=\"v\">hätte,</span><span class=\"v\">würde</span><span>ich eine Katze nehmen</span>.</div><p class=\"ex-note\">wenn-gap — Nebensatz: fe’l oxirida. U birinchi kelsa, asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>. Ikkala gapda ham Konjunktiv II bo‘ladi, haqiqatdagi <b>kein / nicht</b> odatda tushib qoladi.</p>",
+      "ru": "<h4>Irreale Bedingung: wenn + Konjunktiv II</h4><table class=\"ex-tb\"><tr><th>Wirklichkeit</th><th>Wunsch / irreal</th></tr><tr><td>Ich habe <b>kein</b> Zimmer mit Balkon.</td><td><b>Wenn</b> ich ein Zimmer mit Balkon <b>hätte</b>, <b>würde</b> ich dort frühstücken.</td></tr><tr><td>Die Wohnung ist zu klein.</td><td><b>Wenn</b> die Wohnung größer <b>wäre</b>, <b>könnten</b> wir eine Party machen.</td></tr><tr><td>Ich wohne nicht in einer WG.</td><td>Ich <b>würde</b> nie allein kochen, <b>wenn</b> ich in einer WG <b>wohnen würde</b>.</td></tr></table><div class=\"ex-sk\"><span>Wenn ich mehr Platz</span><span class=\"v\">hätte,</span><span class=\"v\">würde</span><span>ich eine Katze nehmen</span>.</div><p class=\"ex-note\">wenn-предложение — Nebensatz: глагол в конце. Если оно стоит первым, главное предложение начинается с глагола: <b>…, würde ich …</b>. В обеих частях — Konjunktiv II, а <b>kein / nicht</b> из реальности обычно исчезает.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Konjunktiv-II-Formen.",
+      "bsp": "Wenn ich Zeit hätte, würde ich kommen. → <b>hätte</b>, <b>würde</b>",
+      "s": "Wenn ich mehr Geld hätte , würde ich allein wohnen .",
+      "a": [
+       4,
+       6
+      ],
+      "gw": {
+       "uz": "Konjunktiv II shakllari: <b>wäre, hätte, könnte</b> va boshqa fe’llar uchun <b>würde</b>. wenn-gapda ular oxirida, asosiy gapda — boshida turadi. Infinitivni (kommen, wohnen) belgilamang. Misol: <b>Wenn ich Zeit hätte, würde ich kommen.</b>",
+       "ru": "Формы Konjunktiv II: <b>wäre, hätte, könnte</b>, для остальных глаголов — <b>würde</b>. В wenn-предложении они в конце, в главном — в начале. Инфинитив (kommen, wohnen) не отмечайте. Пример: <b>Wenn ich Zeit hätte, würde ich kommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Konjunktiv-II-Formen.",
+      "s": "Wenn die Küche größer wäre , könnten wir zusammen kochen .",
+      "a": [
+       4,
+       6
+      ],
+      "gw": {
+       "uz": "Konjunktiv II shakllari: <b>wäre, hätte, könnte</b> va boshqa fe’llar uchun <b>würde</b>. wenn-gapda ular oxirida, asosiy gapda — boshida turadi. Infinitivni (kommen, wohnen) belgilamang. Misol: <b>Wenn ich Zeit hätte, würde ich kommen.</b>",
+       "ru": "Формы Konjunktiv II: <b>wäre, hätte, könnte</b>, для остальных глаголов — <b>würde</b>. В wenn-предложении они в конце, в главном — в начале. Инфинитив (kommen, wohnen) не отмечайте. Пример: <b>Wenn ich Zeit hätte, würde ich kommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Konjunktiv-II-Formen.",
+      "s": "Ich würde sofort in eine WG ziehen , wenn ich nicht so viele Bücher hätte .",
+      "a": [
+       1,
+       14
+      ],
+      "gw": {
+       "uz": "Konjunktiv II shakllari: <b>wäre, hätte, könnte</b> va boshqa fe’llar uchun <b>würde</b>. wenn-gapda ular oxirida, asosiy gapda — boshida turadi. Infinitivni (kommen, wohnen) belgilamang. Misol: <b>Wenn ich Zeit hätte, würde ich kommen.</b>",
+       "ru": "Формы Konjunktiv II: <b>wäre, hätte, könnte</b>, для остальных глаголов — <b>würde</b>. В wenn-предложении они в конце, в главном — в начале. Инфинитив (kommen, wohnen) не отмечайте. Пример: <b>Wenn ich Zeit hätte, würde ich kommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die Konjunktiv-II-Formen.",
+      "s": "Wenn unsere Nachbarn mehr Rücksicht nehmen würden , wäre es im Haus ruhiger .",
+      "a": [
+       6,
+       8
+      ],
+      "gw": {
+       "uz": "Konjunktiv II shakllari: <b>wäre, hätte, könnte</b> va boshqa fe’llar uchun <b>würde</b>. wenn-gapda ular oxirida, asosiy gapda — boshida turadi. Infinitivni (kommen, wohnen) belgilamang. Misol: <b>Wenn ich Zeit hätte, würde ich kommen.</b>",
+       "ru": "Формы Konjunktiv II: <b>wäre, hätte, könnte</b>, для остальных глаголов — <b>würde</b>. В wenn-предложении они в конце, в главном — в начале. Инфинитив (kommen, wohnen) не отмечайте. Пример: <b>Wenn ich Zeit hätte, würde ich kommen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Wenn ich mehr Geld ___, würde ich ein Fahrrad kaufen. → ✓ <b>hätte</b> (nicht: habe)",
+      "q": "Wenn ich ein eigenes Zimmer ___, würde ich mehr lernen.",
+      "o": [
+       "habe",
+       "hätte",
+       "würde"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Irreal holatda ikkala gapda ham Konjunktiv II: <b>hätte, wäre, könnte, würde</b>. Indikativ (<b>habe, ist, kann</b>) bu yerda xato. Egaga qarang: du — <b>wärst</b>, ihr — <b>wärt</b>; lekin <b>Wenn ich du wäre, …</b> — ega <b>ich</b>.",
+       "ru": "В нереальной ситуации в обеих частях — Konjunktiv II: <b>hätte, wäre, könnte, würde</b>. Индикатив (<b>habe, ist, kann</b>) здесь ошибка. Смотрите на подлежащее: du — <b>wärst</b>, ihr — <b>wärt</b>; но <b>Wenn ich du wäre, …</b> — подлежащее <b>ich</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Wenn das Wohnheim näher an der Uni ___, könnte ich zu Fuß gehen.",
+      "o": [
+       "ist",
+       "hätte",
+       "wäre"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Irreal holatda ikkala gapda ham Konjunktiv II: <b>hätte, wäre, könnte, würde</b>. Indikativ (<b>habe, ist, kann</b>) bu yerda xato. Egaga qarang: du — <b>wärst</b>, ihr — <b>wärt</b>; lekin <b>Wenn ich du wäre, …</b> — ega <b>ich</b>.",
+       "ru": "В нереальной ситуации в обеих частях — Konjunktiv II: <b>hätte, wäre, könnte, würde</b>. Индикатив (<b>habe, ist, kann</b>) здесь ошибка. Смотрите на подлежащее: du — <b>wärst</b>, ihr — <b>wärt</b>; но <b>Wenn ich du wäre, …</b> — подлежащее <b>ich</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Wenn wir eine Waschküche im Haus hätten, ___ ich meine Wäsche zu Hause waschen.",
+      "o": [
+       "würde",
+       "werde",
+       "wäre"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Irreal holatda ikkala gapda ham Konjunktiv II: <b>hätte, wäre, könnte, würde</b>. Indikativ (<b>habe, ist, kann</b>) bu yerda xato. Egaga qarang: du — <b>wärst</b>, ihr — <b>wärt</b>; lekin <b>Wenn ich du wäre, …</b> — ega <b>ich</b>.",
+       "ru": "В нереальной ситуации в обеих частях — Konjunktiv II: <b>hätte, wäre, könnte, würde</b>. Индикатив (<b>habe, ist, kann</b>) здесь ошибка. Смотрите на подлежащее: du — <b>wärst</b>, ihr — <b>wärt</b>; но <b>Wenn ich du wäre, …</b> — подлежащее <b>ich</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Wenn meine Mitbewohnerin nicht so laut ___, könnte ich besser schlafen.",
+      "o": [
+       "wäre",
+       "ist",
+       "würde"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Irreal holatda ikkala gapda ham Konjunktiv II: <b>hätte, wäre, könnte, würde</b>. Indikativ (<b>habe, ist, kann</b>) bu yerda xato. Egaga qarang: du — <b>wärst</b>, ihr — <b>wärt</b>; lekin <b>Wenn ich du wäre, …</b> — ega <b>ich</b>.",
+       "ru": "В нереальной ситуации в обеих частях — Konjunktiv II: <b>hätte, wäre, könnte, würde</b>. Индикатив (<b>habe, ist, kann</b>) здесь ошибка. Смотрите на подлежащее: du — <b>wärst</b>, ihr — <b>wärt</b>; но <b>Wenn ich du wäre, …</b> — подлежащее <b>ich</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Wenn ich du ___, würde ich das Zimmer mit Balkon nehmen.",
+      "o": [
+       "wärst",
+       "wäre",
+       "bist"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Irreal holatda ikkala gapda ham Konjunktiv II: <b>hätte, wäre, könnte, würde</b>. Indikativ (<b>habe, ist, kann</b>) bu yerda xato. Egaga qarang: du — <b>wärst</b>, ihr — <b>wärt</b>; lekin <b>Wenn ich du wäre, …</b> — ega <b>ich</b>.",
+       "ru": "В нереальной ситуации в обеих частях — Konjunktiv II: <b>hätte, wäre, könnte, würde</b>. Индикатив (<b>habe, ist, kann</b>) здесь ошибка. Смотрите на подлежащее: du — <b>wärst</b>, ihr — <b>wärt</b>; но <b>Wenn ich du wäre, …</b> — подлежащее <b>ich</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Konjunktiv II.",
+      "bsp": "Wenn Ali mehr Zeit ___ (haben), ___ (können) er mitkommen. → <b>hätte</b> … <b>könnte</b>",
+      "s": "Wenn Laylo ein Fahrrad ___ (haben), ___ (können) sie schneller zur Uni fahren.",
+      "a": [
+       [
+        "hätte"
+       ],
+       [
+        "könnte"
+       ]
+      ],
+      "gw": {
+       "uz": "Qavsdagi fe’lning Konjunktiv II shakli, egaga mos: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, Infinitiv oxirida qoladi. Misol: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>",
+       "ru": "Форма Konjunktiv II глагола в скобках, по подлежащему: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, инфинитив остаётся в конце. Пример: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Konjunktiv II.",
+      "s": "Wenn unser Wohnheim eine Bibliothek ___ (haben), ___ (werden) ich dort jeden Abend lernen.",
+      "a": [
+       [
+        "hätte"
+       ],
+       [
+        "würde"
+       ]
+      ],
+      "gw": {
+       "uz": "Qavsdagi fe’lning Konjunktiv II shakli, egaga mos: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, Infinitiv oxirida qoladi. Misol: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>",
+       "ru": "Форма Konjunktiv II глагола в скобках, по подлежащему: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, инфинитив остаётся в конце. Пример: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Konjunktiv II.",
+      "s": "Wenn ihr nicht so laut ___ (sein), ___ (werden) die Nachbarn nicht immer an die Wand klopfen.",
+      "a": [
+       [
+        "wärt",
+        "wäret"
+       ],
+       [
+        "würden"
+       ]
+      ],
+      "gw": {
+       "uz": "Qavsdagi fe’lning Konjunktiv II shakli, egaga mos: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, Infinitiv oxirida qoladi. Misol: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>",
+       "ru": "Форма Konjunktiv II глагола в скобках, по подлежащему: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, инфинитив остаётся в конце. Пример: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Konjunktiv II.",
+      "s": "Was ___ (werden) du machen, wenn du eine eigene Wohnung ___ (haben)?",
+      "a": [
+       [
+        "würdest"
+       ],
+       [
+        "hättest"
+       ]
+      ],
+      "gw": {
+       "uz": "Qavsdagi fe’lning Konjunktiv II shakli, egaga mos: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, Infinitiv oxirida qoladi. Misol: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>",
+       "ru": "Форма Konjunktiv II глагола в скобках, по подлежащему: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, инфинитив остаётся в конце. Пример: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Konjunktiv II.",
+      "s": "Wenn Nodir ordentlicher ___ (sein), ___ (werden) sich seine Mitbewohner nicht so oft ärgern.",
+      "a": [
+       [
+        "wäre"
+       ],
+       [
+        "würden"
+       ]
+      ],
+      "gw": {
+       "uz": "Qavsdagi fe’lning Konjunktiv II shakli, egaga mos: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, Infinitiv oxirida qoladi. Misol: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>",
+       "ru": "Форма Konjunktiv II глагола в скобках, по подлежащему: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, инфинитив остаётся в конце. Пример: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Konjunktiv II.",
+      "s": "Hallo zusammen! Ich wohne mit meinen Eltern und drei Geschwistern in einer kleinen Wohnung.\nWenn ich ein eigenes Zimmer ___ (haben), ___ (können) ich viel ruhiger lernen.\nUnd wenn die Wohnung nicht so weit vom Zentrum entfernt ___ (sein), ___ (werden) ich meine Freunde öfter treffen.\nWas würdet ihr an meiner Stelle machen?",
+      "a": [
+       [
+        "hätte"
+       ],
+       [
+        "könnte"
+       ],
+       [
+        "wäre"
+       ],
+       [
+        "würde"
+       ]
+      ],
+      "gw": {
+       "uz": "Qavsdagi fe’lning Konjunktiv II shakli, egaga mos: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, Infinitiv oxirida qoladi. Misol: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>",
+       "ru": "Форма Konjunktiv II глагола в скобках, по подлежащему: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, инфинитив остаётся в конце. Пример: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie im Konjunktiv II.",
+      "s": "▪ Sag mal, Timur, wie ist das Leben in der WG?\n● Eigentlich gut. Aber wenn meine Mitbewohner die Küche öfter putzen ___ (werden), ___ (sein) alles perfekt.\n▪ Hast du schon mit ihnen gesprochen?\n● Ja, aber das hilft nichts. Wenn ich genug Geld ___ (haben), ___ (werden) ich sofort allein wohnen.",
+      "a": [
+       [
+        "würden"
+       ],
+       [
+        "wäre"
+       ],
+       [
+        "hätte"
+       ],
+       [
+        "würde"
+       ]
+      ],
+      "gw": {
+       "uz": "Qavsdagi fe’lning Konjunktiv II shakli, egaga mos: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, Infinitiv oxirida qoladi. Misol: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>",
+       "ru": "Форма Konjunktiv II глагола в скобках, по подлежащему: ich / er — <b>hätte, wäre, könnte, würde</b>; du — <b>-st</b> (hättest); wir / sie — <b>-n</b> (wären); ihr — <b>-t</b> (wärt). (werden) → <b>würde</b>, инфинитив остаётся в конце. Пример: <b>Wenn ihr leiser wärt, würden wir besser schlafen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Wirklichkeit → Wunsch: Schreiben Sie einen wenn-Satz.",
+      "bsp": "Ich habe keine Zeit. Ich kann nicht kommen. → <b>Wenn ich Zeit hätte, könnte ich kommen.</b>",
+      "q": "Die Wohnung ist zu klein. Wir können keine Gäste einladen.",
+      "w": [
+       "Wenn",
+       "die Wohnung",
+       "größer",
+       "wäre,",
+       "könnten",
+       "wir",
+       "Gäste",
+       "einladen"
+      ],
+      "a": "Wenn die Wohnung größer wäre, könnten wir Gäste einladen.",
+      "alt": [],
+      "gw": {
+       "uz": "Haqiqatni istakka aylantiring: <b>kein / nicht</b> tushib qoladi yoki ma’no teskari bo‘ladi (zu klein → <b>größer</b>), fe’llar Konjunktiv II ga o‘tadi. wenn-gapda fe’l oxirida, verguldan keyin asosiy gap fe’l bilan boshlanadi. Asosiy gap oldin kelsa: <b>Ich würde …, wenn …</b>",
+       "ru": "Превратите реальность в желание: <b>kein / nicht</b> исчезает или смысл меняется на противоположный (zu klein → <b>größer</b>), глаголы переходят в Konjunktiv II. В wenn-предложении глагол в конце, после запятой главное начинается с глагола. Если главное стоит первым: <b>Ich würde …, wenn …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Wirklichkeit → Wunsch: Schreiben Sie einen wenn-Satz.",
+      "q": "Ich habe kein Auto. Ich kann nicht zum See fahren.",
+      "w": [
+       "Wenn ich",
+       "ein Auto",
+       "hätte,",
+       "könnte ich",
+       "zum See",
+       "fahren"
+      ],
+      "a": "Wenn ich ein Auto hätte, könnte ich zum See fahren.",
+      "alt": [],
+      "gw": {
+       "uz": "Haqiqatni istakka aylantiring: <b>kein / nicht</b> tushib qoladi yoki ma’no teskari bo‘ladi (zu klein → <b>größer</b>), fe’llar Konjunktiv II ga o‘tadi. wenn-gapda fe’l oxirida, verguldan keyin asosiy gap fe’l bilan boshlanadi. Asosiy gap oldin kelsa: <b>Ich würde …, wenn …</b>",
+       "ru": "Превратите реальность в желание: <b>kein / nicht</b> исчезает или смысл меняется на противоположный (zu klein → <b>größer</b>), глаголы переходят в Konjunktiv II. В wenn-предложении глагол в конце, после запятой главное начинается с глагола. Если главное стоит первым: <b>Ich würde …, wenn …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Wirklichkeit → Wunsch: Schreiben Sie einen wenn-Satz.",
+      "q": "Mein Mitbewohner ist nicht ordentlich. Ich ärgere mich oft.",
+      "w": [
+       "Wenn",
+       "mein Mitbewohner",
+       "ordentlicher",
+       "wäre,",
+       "würde",
+       "ich",
+       "mich",
+       "seltener",
+       "ärgern"
+      ],
+      "a": "Wenn mein Mitbewohner ordentlicher wäre, würde ich mich seltener ärgern.",
+      "alt": [],
+      "gw": {
+       "uz": "Haqiqatni istakka aylantiring: <b>kein / nicht</b> tushib qoladi yoki ma’no teskari bo‘ladi (zu klein → <b>größer</b>), fe’llar Konjunktiv II ga o‘tadi. wenn-gapda fe’l oxirida, verguldan keyin asosiy gap fe’l bilan boshlanadi. Asosiy gap oldin kelsa: <b>Ich würde …, wenn …</b>",
+       "ru": "Превратите реальность в желание: <b>kein / nicht</b> исчезает или смысл меняется на противоположный (zu klein → <b>größer</b>), глаголы переходят в Konjunktiv II. В wenn-предложении глагол в конце, после запятой главное начинается с глагола. Если главное стоит первым: <b>Ich würde …, wenn …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Wirklichkeit → Wunsch: Schreiben Sie einen wenn-Satz.",
+      "q": "Wir haben keine Waschküche. Ich wasche meine Wäsche im Waschsalon.",
+      "w": [
+       "Wenn",
+       "wir",
+       "eine Waschküche",
+       "hätten,",
+       "würde",
+       "ich",
+       "meine Wäsche",
+       "zu Hause",
+       "waschen"
+      ],
+      "a": "Wenn wir eine Waschküche hätten, würde ich meine Wäsche zu Hause waschen.",
+      "alt": [
+       "Wenn wir eine Waschküche hätten, würde ich zu Hause meine Wäsche waschen."
+      ],
+      "gw": {
+       "uz": "Haqiqatni istakka aylantiring: <b>kein / nicht</b> tushib qoladi yoki ma’no teskari bo‘ladi (zu klein → <b>größer</b>), fe’llar Konjunktiv II ga o‘tadi. wenn-gapda fe’l oxirida, verguldan keyin asosiy gap fe’l bilan boshlanadi. Asosiy gap oldin kelsa: <b>Ich würde …, wenn …</b>",
+       "ru": "Превратите реальность в желание: <b>kein / nicht</b> исчезает или смысл меняется на противоположный (zu klein → <b>größer</b>), глаголы переходят в Konjunktiv II. В wenn-предложении глагол в конце, после запятой главное начинается с глагола. Если главное стоит первым: <b>Ich würde …, wenn …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Wirklichkeit → Wunsch: Schreiben Sie einen wenn-Satz.",
+      "q": "Ich ziehe nicht in die WG. Die Miete ist zu hoch.",
+      "w": [
+       "Ich",
+       "würde",
+       "in die WG",
+       "ziehen,",
+       "wenn",
+       "die Miete",
+       "niedriger",
+       "wäre"
+      ],
+      "a": "Ich würde in die WG ziehen, wenn die Miete niedriger wäre.",
+      "alt": [],
+      "gw": {
+       "uz": "Haqiqatni istakka aylantiring: <b>kein / nicht</b> tushib qoladi yoki ma’no teskari bo‘ladi (zu klein → <b>größer</b>), fe’llar Konjunktiv II ga o‘tadi. wenn-gapda fe’l oxirida, verguldan keyin asosiy gap fe’l bilan boshlanadi. Asosiy gap oldin kelsa: <b>Ich würde …, wenn …</b>",
+       "ru": "Превратите реальность в желание: <b>kein / nicht</b> исчезает или смысл меняется на противоположный (zu klein → <b>größer</b>), глаголы переходят в Konjunktiv II. В wenn-предложении глагол в конце, после запятой главное начинается с глагола. Если главное стоит первым: <b>Ich würde …, wenn …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Wirklichkeit → Wunsch: Schreiben Sie einen wenn-Satz.",
+      "q": "Du hörst so laut Musik. Ich kann nicht schlafen.",
+      "w": [
+       "Wenn",
+       "du",
+       "nicht so laut",
+       "Musik",
+       "hören",
+       "würdest,",
+       "könnte",
+       "ich",
+       "schlafen"
+      ],
+      "a": "Wenn du nicht so laut Musik hören würdest, könnte ich schlafen.",
+      "alt": [
+       "Wenn du Musik nicht so laut hören würdest, könnte ich schlafen."
+      ],
+      "gw": {
+       "uz": "Haqiqatni istakka aylantiring: <b>kein / nicht</b> tushib qoladi yoki ma’no teskari bo‘ladi (zu klein → <b>größer</b>), fe’llar Konjunktiv II ga o‘tadi. wenn-gapda fe’l oxirida, verguldan keyin asosiy gap fe’l bilan boshlanadi. Asosiy gap oldin kelsa: <b>Ich würde …, wenn …</b>",
+       "ru": "Превратите реальность в желание: <b>kein / nicht</b> исчезает или смысл меняется на противоположный (zu klein → <b>größer</b>), глаголы переходят в Konjunktiv II. В wenn-предложении глагол в конце, после запятой главное начинается с глагола. Если главное стоит первым: <b>Ich würde …, wenn …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Wirklichkeit → Wunsch: Schreiben Sie einen wenn-Satz.",
+      "q": "Ich wohne nicht in der Nähe. Ich besuche dich nicht oft.",
+      "w": [
+       "Wenn",
+       "ich",
+       "in der Nähe",
+       "wohnen würde,",
+       "würde ich",
+       "dich",
+       "öfter",
+       "besuchen"
+      ],
+      "a": "Wenn ich in der Nähe wohnen würde, würde ich dich öfter besuchen.",
+      "alt": [],
+      "gw": {
+       "uz": "Haqiqatni istakka aylantiring: <b>kein / nicht</b> tushib qoladi yoki ma’no teskari bo‘ladi (zu klein → <b>größer</b>), fe’llar Konjunktiv II ga o‘tadi. wenn-gapda fe’l oxirida, verguldan keyin asosiy gap fe’l bilan boshlanadi. Asosiy gap oldin kelsa: <b>Ich würde …, wenn …</b>",
+       "ru": "Превратите реальность в желание: <b>kein / nicht</b> исчезает или смысл меняется на противоположный (zu klein → <b>größer</b>), глаголы переходят в Konjunktiv II. В wenn-предложении глагол в конце, после запятой главное начинается с глагола. Если главное стоит первым: <b>Ich würde …, wenn …</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Wenn ich Zeit habe, würde ich kommen. → <b>habe</b> → Wenn ich Zeit hätte, würde ich kommen.",
+      "s": "Wenn unsere Wohnung größer ist , würden wir eine Party machen .",
+      "fix": "Wenn unsere Wohnung größer wäre, würden wir eine Party machen.",
+      "a": [
+       4
+      ],
+      "gw": {
+       "uz": "Tekshiring: (1) ikkala gapda Konjunktiv II bormi — <b>ist / habe</b> emas, <b>wäre / hätte</b>; (2) wenn-gapda fe’l oxirida; (3) wenn-gapdan keyin asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>; (4) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
+       "ru": "Проверьте: (1) есть ли Konjunktiv II в обеих частях — не <b>ist / habe</b>, а <b>wäre / hätte</b>; (2) в wenn-предложении глагол в конце; (3) после wenn-предложения главное начинается с глагола: <b>…, würde ich …</b>; (4) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Wenn ich hätte einen Balkon , würde ich dort frühstücken .",
+      "fix": "Wenn ich einen Balkon hätte, würde ich dort frühstücken.",
+      "a": [
+       2
+      ],
+      "gw": {
+       "uz": "Tekshiring: (1) ikkala gapda Konjunktiv II bormi — <b>ist / habe</b> emas, <b>wäre / hätte</b>; (2) wenn-gapda fe’l oxirida; (3) wenn-gapdan keyin asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>; (4) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
+       "ru": "Проверьте: (1) есть ли Konjunktiv II в обеих частях — не <b>ist / habe</b>, а <b>wäre / hätte</b>; (2) в wenn-предложении глагол в конце; (3) после wenn-предложения главное начинается с глагола: <b>…, würde ich …</b>; (4) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Wenn das Zimmer billiger wäre , ich würde es sofort mieten .",
+      "fix": "Wenn das Zimmer billiger wäre, würde ich es sofort mieten.",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "Tekshiring: (1) ikkala gapda Konjunktiv II bormi — <b>ist / habe</b> emas, <b>wäre / hätte</b>; (2) wenn-gapda fe’l oxirida; (3) wenn-gapdan keyin asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>; (4) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
+       "ru": "Проверьте: (1) есть ли Konjunktiv II в обеих частях — не <b>ist / habe</b>, а <b>wäre / hätte</b>; (2) в wenn-предложении глагол в конце; (3) после wenn-предложения главное начинается с глагола: <b>…, würde ich …</b>; (4) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Wenn ihr Zeit hättet , könnt ihr uns beim Umzug helfen .",
+      "fix": "Wenn ihr Zeit hättet, könntet ihr uns beim Umzug helfen.",
+      "a": [
+       5
+      ],
+      "gw": {
+       "uz": "Tekshiring: (1) ikkala gapda Konjunktiv II bormi — <b>ist / habe</b> emas, <b>wäre / hätte</b>; (2) wenn-gapda fe’l oxirida; (3) wenn-gapdan keyin asosiy gap fe’l bilan boshlanadi: <b>…, würde ich …</b>; (4) shaxs oxiri: ihr <b>könntet</b>. Misol: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>",
+       "ru": "Проверьте: (1) есть ли Konjunktiv II в обеих частях — не <b>ist / habe</b>, а <b>wäre / hätte</b>; (2) в wenn-предложении глагол в конце; (3) после wenn-предложения главное начинается с глагола: <b>…, würde ich …</b>; (4) окончание лица: ihr <b>könntet</b>. Пример: <b>Wenn das Zimmer billiger wäre, würde ich es mieten.</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wortbildung: Nomen + Nomen</h4><table class=\"ex-tb\"><tr><th>Nomen 1</th><th></th><th>Nomen 2</th><th>neues Wort</th></tr><tr><td>die Wohnung</td><td><b>-s-</b></td><td>die Tür</td><td>die Wohnung<b>s</b>tür</td></tr><tr><td>der Geburtstag</td><td><b>-s-</b></td><td>der Kuchen</td><td>der Geburtstag<b>s</b>kuchen</td></tr><tr><td>die Toilette</td><td><b>-n-</b></td><td>das Papier</td><td>das Toilette<b>n</b>papier</td></tr><tr><td>das Haus</td><td>–</td><td>der Schlüssel</td><td><b>der</b> Hausschlüssel</td></tr></table><p class=\"ex-note\">Artikl va asosiy ma’no <b>oxirgi</b> so‘zdan keladi: das Haus + <b>der</b> Schlüssel → <b>der</b> Hausschlüssel. <b>-ung, -heit, -keit, -schaft</b> dan keyin ko‘pincha <b>-s-</b>; <b>-e</b> bilan tugaydigan ko‘p ayol jinsidagi so‘zlardan keyin <b>-n-</b>. Yangi so‘z bitta qilib yoziladi.</p>",
+      "ru": "<h4>Wortbildung: Nomen + Nomen</h4><table class=\"ex-tb\"><tr><th>Nomen 1</th><th></th><th>Nomen 2</th><th>neues Wort</th></tr><tr><td>die Wohnung</td><td><b>-s-</b></td><td>die Tür</td><td>die Wohnung<b>s</b>tür</td></tr><tr><td>der Geburtstag</td><td><b>-s-</b></td><td>der Kuchen</td><td>der Geburtstag<b>s</b>kuchen</td></tr><tr><td>die Toilette</td><td><b>-n-</b></td><td>das Papier</td><td>das Toilette<b>n</b>papier</td></tr><tr><td>das Haus</td><td>–</td><td>der Schlüssel</td><td><b>der</b> Hausschlüssel</td></tr></table><p class=\"ex-note\">Артикль и основное значение — от <b>последнего</b> слова: das Haus + <b>der</b> Schlüssel → <b>der</b> Hausschlüssel. После <b>-ung, -heit, -keit, -schaft</b> часто <b>-s-</b>; после многих слов женского рода на <b>-e</b> — <b>-n-</b>. Новое слово пишется слитно.</p>"
+     },
+     {
+      "t": "cat",
+      "h": "Mit *-s-*, mit *-n-* oder ohne? Ordnen Sie zu.",
+      "bsp": "die Wohnung + die Tür → die Wohnung<b>s</b>tür → <b>mit -s-</b>",
+      "c": [
+       "mit -s-",
+       "mit -n-",
+       "ohne"
+      ],
+      "i": [
+       [
+        "die Gemeinschaft + die Küche",
+        0
+       ],
+       [
+        "die Küche + der Tisch",
+        1
+       ],
+       [
+        "das Haus + die Tür",
+        2
+       ],
+       [
+        "die Arbeit + das Zimmer",
+        0
+       ],
+       [
+        "die Straße + die Lampe",
+        1
+       ],
+       [
+        "der Balkon + die Tür",
+        2
+       ],
+       [
+        "der Müll + der Eimer",
+        2
+       ]
+      ],
+      "gw": {
+       "uz": "<b>-ung, -heit, -keit, -schaft</b> bilan tugagan so‘zdan keyin <b>-s-</b> qo‘shiladi: Wohnung<b>s</b>tür. <b>-e</b> bilan tugagan ayol jinsidagi so‘zdan keyin ko‘pincha <b>-n-</b>: Küche<b>n</b>tisch. Ko‘p so‘zlar to‘g‘ridan-to‘g‘ri qo‘shiladi: Haus + Tür → <b>Haustür</b>. <b>Arbeitszimmer</b> kabi so‘zlar yodlanadi.",
+       "ru": "После слов на <b>-ung, -heit, -keit, -schaft</b> добавляется <b>-s-</b>: Wohnung<b>s</b>tür. После слов женского рода на <b>-e</b> часто <b>-n-</b>: Küche<b>n</b>tisch. Многие слова соединяются напрямую: Haus + Tür → <b>Haustür</b>. Слова вроде <b>Arbeitszimmer</b> нужно запомнить."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Wie heißt das Wort? Ergänzen Sie.",
+      "bsp": "Hast du meinen ___ gesehen? (das Zimmer + der Schlüssel) → <b>Zimmerschlüssel</b>",
+      "s": "Mist! Ich habe meinen ___ in der Wohnung vergessen. (das Haus + der Schlüssel)",
+      "a": [
+       [
+        "Hausschlüssel"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki otdan bitta so‘z: artikl va ma’no <b>oxirgi</b> so‘zdan. Kerak bo‘lsa orasiga <b>-s-</b> yoki <b>-n-</b> qo‘shiladi, so‘z bitta qilib, bosh harf bilan yoziladi. Misol: <b>die Toilette + das Papier → das Toilettenpapier</b>",
+       "ru": "Из двух существительных — одно слово: артикль и значение от <b>последнего</b>. При необходимости вставляется <b>-s-</b> или <b>-n-</b>, слово пишется слитно и с заглавной буквы. Пример: <b>die Toilette + das Papier → das Toilettenpapier</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Wie heißt das Wort? Ergänzen Sie.",
+      "s": "Kannst du bitte ___ kaufen? Wir haben keins mehr. (die Toilette + das Papier)",
+      "a": [
+       [
+        "Toilettenpapier"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki otdan bitta so‘z: artikl va ma’no <b>oxirgi</b> so‘zdan. Kerak bo‘lsa orasiga <b>-s-</b> yoki <b>-n-</b> qo‘shiladi, so‘z bitta qilib, bosh harf bilan yoziladi. Misol: <b>die Toilette + das Papier → das Toilettenpapier</b>",
+       "ru": "Из двух существительных — одно слово: артикль и значение от <b>последнего</b>. При необходимости вставляется <b>-s-</b> или <b>-n-</b>, слово пишется слитно и с заглавной буквы. Пример: <b>die Toilette + das Papier → das Toilettenpapier</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Wie heißt das Wort? Ergänzen Sie.",
+      "s": "Am ___ besuche ich meine Großeltern. (die Woche + das Ende)",
+      "a": [
+       [
+        "Wochenende"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki otdan bitta so‘z: artikl va ma’no <b>oxirgi</b> so‘zdan. Kerak bo‘lsa orasiga <b>-s-</b> yoki <b>-n-</b> qo‘shiladi, so‘z bitta qilib, bosh harf bilan yoziladi. Misol: <b>die Toilette + das Papier → das Toilettenpapier</b>",
+       "ru": "Из двух существительных — одно слово: артикль и значение от <b>последнего</b>. При необходимости вставляется <b>-s-</b> или <b>-n-</b>, слово пишется слитно и с заглавной буквы. Пример: <b>die Toilette + das Papier → das Toilettenpapier</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Wie heißt das Wort? Ergänzen Sie.",
+      "s": "Für Sevaras ___ brauchen wir Mehl, Eier und Zucker. (der Geburtstag + der Kuchen)",
+      "a": [
+       [
+        "Geburtstagskuchen"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki otdan bitta so‘z: artikl va ma’no <b>oxirgi</b> so‘zdan. Kerak bo‘lsa orasiga <b>-s-</b> yoki <b>-n-</b> qo‘shiladi, so‘z bitta qilib, bosh harf bilan yoziladi. Misol: <b>die Toilette + das Papier → das Toilettenpapier</b>",
+       "ru": "Из двух существительных — одно слово: артикль и значение от <b>последнего</b>. При необходимости вставляется <b>-s-</b> или <b>-n-</b>, слово пишется слитно и с заглавной буквы. Пример: <b>die Toilette + das Papier → das Toilettenpapier</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Wie heißt das Wort? Ergänzen Sie.",
+      "s": "Ohne ___ kann man in der Bibliothek keine Bücher ausleihen. (die Bibliothek + der Ausweis)",
+      "a": [
+       [
+        "Bibliotheksausweis"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki otdan bitta so‘z: artikl va ma’no <b>oxirgi</b> so‘zdan. Kerak bo‘lsa orasiga <b>-s-</b> yoki <b>-n-</b> qo‘shiladi, so‘z bitta qilib, bosh harf bilan yoziladi. Misol: <b>die Toilette + das Papier → das Toilettenpapier</b>",
+       "ru": "Из двух существительных — одно слово: артикль и значение от <b>последнего</b>. При необходимости вставляется <b>-s-</b> или <b>-n-</b>, слово пишется слитно и с заглавной буквы. Пример: <b>die Toilette + das Papier → das Toilettenpapier</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

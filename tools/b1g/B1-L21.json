@@ -1,0 +1,644 @@
+{
+ "id": "B1-b12-21-G",
+ "meta": {
+  "title": "Grammatik · Passiv mit Modalverb",
+  "stitle": "Passiv mit Modalverb · Frage · Nebensatz · Aktiv → Passiv"
+ },
+ "ex": {
+  "title": "Lektion 21 · Grammatik",
+  "sub": "Passiv mit Modalverb · Frage · Nebensatz · Aktiv → Passiv",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Passiv mit Modalverb: Modalverb + Partizip II + werden</h4>\n<table class=\"ex-tb\"><tr><th>Aktiv (man …)</th><th>Passiv</th></tr>\n<tr><td>Man <b>muss</b> die Hausaufgaben <b>machen</b>.</td><td>Die Hausaufgaben <b>müssen</b> gemacht <b>werden</b>.</td></tr>\n<tr><td>Man <b>kann</b> den Test <b>wiederholen</b>.</td><td>Der Test <b>kann</b> wiederholt <b>werden</b>.</td></tr>\n<tr><td>Man <b>soll</b> das Formular <b>unterschreiben</b>.</td><td>Das Formular <b>soll</b> unterschrieben <b>werden</b>.</td></tr>\n<tr><td>Man <b>darf</b> im Unterricht nicht <b>essen</b>.</td><td>Im Unterricht <b>darf</b> nicht gegessen <b>werden</b>.</td></tr></table>\n<div class=\"ex-sk\"><span>Der Aufsatz</span><span class=\"v\">muss</span><span>bis Freitag</span><span class=\"v\">geschrieben werden</span>.</div>\n<p class=\"ex-note\">Kim qilishi muhim bo‘lmasa — Passiv. <b>man</b> yo‘qoladi, Aktivdagi Akkusativ endi ega bo‘ladi. Modalverb 2-o‘rinda va yangi egaga mos: <b>der Aufsatz muss</b>, <b>die Aufsätze müssen</b>. Oxirida doim <b>Partizip II + werden</b>.</p>",
+      "ru": "<h4>Passiv mit Modalverb: Modalverb + Partizip II + werden</h4>\n<table class=\"ex-tb\"><tr><th>Aktiv (man …)</th><th>Passiv</th></tr>\n<tr><td>Man <b>muss</b> die Hausaufgaben <b>machen</b>.</td><td>Die Hausaufgaben <b>müssen</b> gemacht <b>werden</b>.</td></tr>\n<tr><td>Man <b>kann</b> den Test <b>wiederholen</b>.</td><td>Der Test <b>kann</b> wiederholt <b>werden</b>.</td></tr>\n<tr><td>Man <b>soll</b> das Formular <b>unterschreiben</b>.</td><td>Das Formular <b>soll</b> unterschrieben <b>werden</b>.</td></tr>\n<tr><td>Man <b>darf</b> im Unterricht nicht <b>essen</b>.</td><td>Im Unterricht <b>darf</b> nicht gegessen <b>werden</b>.</td></tr></table>\n<div class=\"ex-sk\"><span>Der Aufsatz</span><span class=\"v\">muss</span><span>bis Freitag</span><span class=\"v\">geschrieben werden</span>.</div>\n<p class=\"ex-note\">Если неважно, кто делает действие, — Passiv. <b>man</b> исчезает, дополнение в Akkusativ становится подлежащим. Модальный глагол на 2-м месте и согласуется с новым подлежащим: <b>der Aufsatz muss</b>, <b>die Aufsätze müssen</b>. В конце всегда <b>Partizip II + werden</b>.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Modalverb, das Partizip II und *werden*.",
+      "bsp": "Die Tafel muss geputzt werden. → <b>muss</b> … <b>geputzt</b> <b>werden</b>",
+      "s": "Im Gymnasium müssen viele Aufsätze geschrieben werden .",
+      "a": [
+       2,
+       5,
+       6
+      ],
+      "gw": {
+       "uz": "Passiv mit Modalverb uch qismdan iborat: <b>Modalverb</b> (tuslangan, 2-o‘rinda yoki savolda 1-o‘rinda) + oxirida <b>Partizip II + werden</b>. Nebensatzda Modalverb eng oxirga o‘tadi. Misol: <b>Das Fenster kann geöffnet werden.</b>",
+       "ru": "Passiv с модальным глаголом состоит из трёх частей: <b>модальный глагол</b> (спрягается, на 2-м месте, в вопросе — на 1-м) + в конце <b>Partizip II + werden</b>. В придаточном модальный глагол уходит в самый конец. Пример: <b>Das Fenster kann geöffnet werden.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Modalverb, das Partizip II und *werden*.",
+      "s": "Kann das Diktat morgen wiederholt werden ?",
+      "a": [
+       0,
+       4,
+       5
+      ],
+      "gw": {
+       "uz": "Passiv mit Modalverb uch qismdan iborat: <b>Modalverb</b> (tuslangan, 2-o‘rinda yoki savolda 1-o‘rinda) + oxirida <b>Partizip II + werden</b>. Nebensatzda Modalverb eng oxirga o‘tadi. Misol: <b>Das Fenster kann geöffnet werden.</b>",
+       "ru": "Passiv с модальным глаголом состоит из трёх частей: <b>модальный глагол</b> (спрягается, на 2-м месте, в вопросе — на 1-м) + в конце <b>Partizip II + werden</b>. В придаточном модальный глагол уходит в самый конец. Пример: <b>Das Fenster kann geöffnet werden.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Modalverb, das Partizip II und *werden*.",
+      "s": "Auf dem Schulhof darf nicht geraucht werden .",
+      "a": [
+       3,
+       5,
+       6
+      ],
+      "gw": {
+       "uz": "Passiv mit Modalverb uch qismdan iborat: <b>Modalverb</b> (tuslangan, 2-o‘rinda yoki savolda 1-o‘rinda) + oxirida <b>Partizip II + werden</b>. Nebensatzda Modalverb eng oxirga o‘tadi. Misol: <b>Das Fenster kann geöffnet werden.</b>",
+       "ru": "Passiv с модальным глаголом состоит из трёх частей: <b>модальный глагол</b> (спрягается, на 2-м месте, в вопросе — на 1-м) + в конце <b>Partizip II + werden</b>. В придаточном модальный глагол уходит в самый конец. Пример: <b>Das Fenster kann geöffnet werden.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Modalverb, das Partizip II und *werden*.",
+      "s": "Der Lehrer sagt , dass die Klassenfahrt gut geplant werden muss .",
+      "a": [
+       8,
+       9,
+       10
+      ],
+      "gw": {
+       "uz": "Passiv mit Modalverb uch qismdan iborat: <b>Modalverb</b> (tuslangan, 2-o‘rinda yoki savolda 1-o‘rinda) + oxirida <b>Partizip II + werden</b>. Nebensatzda Modalverb eng oxirga o‘tadi. Misol: <b>Das Fenster kann geöffnet werden.</b>",
+       "ru": "Passiv с модальным глаголом состоит из трёх частей: <b>модальный глагол</b> (спрягается, на 2-м месте, в вопросе — на 1-м) + в конце <b>Partizip II + werden</b>. В придаточном модальный глагол уходит в самый конец. Пример: <b>Das Fenster kann geöffnet werden.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Die Bücher ___ zurückgegeben werden. → die Bücher = Plural → ✓ <b>müssen</b>",
+      "q": "Die Hefte ___ bis Montag abgegeben werden.",
+      "o": [
+       "muss",
+       "müssen",
+       "musst"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Modalverb yangi egaga mos keladi: birlik — <b>muss, kann, soll, darf</b>; ko‘plik — <b>müssen, können, sollen, dürfen</b>. Ega yo‘q bo‘lsa (<b>Im Unterricht darf nicht …</b>) — birlik. Oxirida Infinitiv emas, <b>Partizip II + werden</b>. Misol: <b>Die Fenster müssen geschlossen werden.</b>",
+       "ru": "Модальный глагол согласуется с новым подлежащим: ед. ч. — <b>muss, kann, soll, darf</b>; мн. ч. — <b>müssen, können, sollen, dürfen</b>. Если подлежащего нет (<b>Im Unterricht darf nicht …</b>) — ед. ч. В конце не инфинитив, а <b>Partizip II + werden</b>. Пример: <b>Die Fenster müssen geschlossen werden.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Das Klassenzimmer muss jeden Tag ___ werden.",
+      "o": [
+       "aufgeräumt",
+       "aufräumen",
+       "aufzuräumen"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Modalverb yangi egaga mos keladi: birlik — <b>muss, kann, soll, darf</b>; ko‘plik — <b>müssen, können, sollen, dürfen</b>. Ega yo‘q bo‘lsa (<b>Im Unterricht darf nicht …</b>) — birlik. Oxirida Infinitiv emas, <b>Partizip II + werden</b>. Misol: <b>Die Fenster müssen geschlossen werden.</b>",
+       "ru": "Модальный глагол согласуется с новым подлежащим: ед. ч. — <b>muss, kann, soll, darf</b>; мн. ч. — <b>müssen, können, sollen, dürfen</b>. Если подлежащего нет (<b>Im Unterricht darf nicht …</b>) — ед. ч. В конце не инфинитив, а <b>Partizip II + werden</b>. Пример: <b>Die Fenster müssen geschlossen werden.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Im Unterricht ___ nicht gegessen werden.",
+      "o": [
+       "dürfen",
+       "darf",
+       "darfst"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Modalverb yangi egaga mos keladi: birlik — <b>muss, kann, soll, darf</b>; ko‘plik — <b>müssen, können, sollen, dürfen</b>. Ega yo‘q bo‘lsa (<b>Im Unterricht darf nicht …</b>) — birlik. Oxirida Infinitiv emas, <b>Partizip II + werden</b>. Misol: <b>Die Fenster müssen geschlossen werden.</b>",
+       "ru": "Модальный глагол согласуется с новым подлежащим: ед. ч. — <b>muss, kann, soll, darf</b>; мн. ч. — <b>müssen, können, sollen, dürfen</b>. Если подлежащего нет (<b>Im Unterricht darf nicht …</b>) — ед. ч. В конце не инфинитив, а <b>Partizip II + werden</b>. Пример: <b>Die Fenster müssen geschlossen werden.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Die Noten können ab Freitag online gesehen ___.",
+      "o": [
+       "wird",
+       "worden",
+       "werden"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Modalverb yangi egaga mos keladi: birlik — <b>muss, kann, soll, darf</b>; ko‘plik — <b>müssen, können, sollen, dürfen</b>. Ega yo‘q bo‘lsa (<b>Im Unterricht darf nicht …</b>) — birlik. Oxirida Infinitiv emas, <b>Partizip II + werden</b>. Misol: <b>Die Fenster müssen geschlossen werden.</b>",
+       "ru": "Модальный глагол согласуется с новым подлежащим: ед. ч. — <b>muss, kann, soll, darf</b>; мн. ч. — <b>müssen, können, sollen, dürfen</b>. Если подлежащего нет (<b>Im Unterricht darf nicht …</b>) — ед. ч. В конце не инфинитив, а <b>Partizip II + werden</b>. Пример: <b>Die Fenster müssen geschlossen werden.</b>"
+      }
+     },
+     {
+      "t": "cat",
+      "h": "Aktiv oder Passiv? Ordnen Sie zu.",
+      "bsp": "Ein Aufsatz muss geschrieben werden. → <b>Passiv</b>",
+      "c": [
+       "Aktiv",
+       "Passiv"
+      ],
+      "i": [
+       [
+        "Die Schüler müssen einen Aufsatz schreiben.",
+        0
+       ],
+       [
+        "Das Diktat kann morgen korrigiert werden.",
+        1
+       ],
+       [
+        "Die Lehrerin kann das Diktat heute korrigieren.",
+        0
+       ],
+       [
+        "Die Bücher sollen bis Juni zurückgegeben werden.",
+        1
+       ],
+       [
+        "Wir sollen die Bücher bis Juni zurückgeben.",
+        0
+       ],
+       [
+        "Im Schulbus darf nicht gegessen werden.",
+        1
+       ]
+      ],
+      "gw": {
+       "uz": "Gap oxiriga qarang. Aktivda — <b>Infinitiv</b> (<b>muss … schreiben</b>), harakatni kim qilishi aytiladi. Passivda — <b>Partizip II + werden</b> (<b>muss … geschrieben werden</b>), ega — harakat ob’ekti. Misol: <b>Wir sollen die Bücher zurückgeben.</b> → Aktiv.",
+       "ru": "Смотрите на конец предложения. В Aktiv — <b>инфинитив</b> (<b>muss … schreiben</b>), назван тот, кто действует. В Passiv — <b>Partizip II + werden</b> (<b>muss … geschrieben werden</b>), подлежащее — объект действия. Пример: <b>Wir sollen die Bücher zurückgeben.</b> → Aktiv."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "bsp": "Man muss die Tür schließen. → ✓ <b>Die Tür muss geschlossen werden.</b>",
+      "q": "Man muss den Text noch korrigieren. → Passiv:",
+      "o": [
+       "Der Text muss noch werden korrigiert.",
+       "Der Text muss noch korrigiert werden.",
+       "Der Text muss noch korrigiert wird."
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "To‘g‘ri tartib: Modalverb 2-o‘rinda (savolda 1-o‘rinda), oxirida avval <b>Partizip II</b>, keyin <b>werden</b>. «werden + Partizip» yoki «Partizip + wird» — xato. Misol: <b>Kann der Test verschoben werden?</b>",
+       "ru": "Правильный порядок: модальный глагол на 2-м месте (в вопросе — на 1-м), в конце сначала <b>Partizip II</b>, потом <b>werden</b>. «werden + Partizip» или «Partizip + wird» — ошибка. Пример: <b>Kann der Test verschoben werden?</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "q": "Man darf im Klassenzimmer nicht essen. → Passiv:",
+      "o": [
+       "Im Klassenzimmer darf nicht gegessen werden.",
+       "Im Klassenzimmer dürfen nicht gegessen werden.",
+       "Im Klassenzimmer darf nicht essen werden."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "To‘g‘ri tartib: Modalverb 2-o‘rinda (savolda 1-o‘rinda), oxirida avval <b>Partizip II</b>, keyin <b>werden</b>. «werden + Partizip» yoki «Partizip + wird» — xato. Misol: <b>Kann der Test verschoben werden?</b>",
+       "ru": "Правильный порядок: модальный глагол на 2-м месте (в вопросе — на 1-м), в конце сначала <b>Partizip II</b>, потом <b>werden</b>. «werden + Partizip» или «Partizip + wird» — ошибка. Пример: <b>Kann der Test verschoben werden?</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "q": "Soll man das Formular mit Kugelschreiber ausfüllen? → Passiv:",
+      "o": [
+       "Soll das Formular mit Kugelschreiber ausgefüllt wird?",
+       "Soll das Formular mit Kugelschreiber werden ausgefüllt?",
+       "Soll das Formular mit Kugelschreiber ausgefüllt werden?"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "To‘g‘ri tartib: Modalverb 2-o‘rinda (savolda 1-o‘rinda), oxirida avval <b>Partizip II</b>, keyin <b>werden</b>. «werden + Partizip» yoki «Partizip + wird» — xato. Misol: <b>Kann der Test verschoben werden?</b>",
+       "ru": "Правильный порядок: модальный глагол на 2-м месте (в вопросе — на 1-м), в конце сначала <b>Partizip II</b>, потом <b>werden</b>. «werden + Partizip» или «Partizip + wird» — ошибка. Пример: <b>Kann der Test verschoben werden?</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Passiv mit Modalverb.",
+      "bsp": "Der Stundenplan ___ noch ___ ___. (müssen, ändern) → <b>muss</b> … <b>geändert werden</b>",
+      "s": "Die Handys ___ im Unterricht ___ ___. (müssen, ausschalten)",
+      "a": [
+       [
+        "müssen"
+       ],
+       [
+        "ausgeschaltet"
+       ],
+       [
+        "werden"
+       ]
+      ],
+      "gw": {
+       "uz": "Uch bo‘shliq: 1) Modalverb egaga mos (<b>das Formular muss</b>, <b>die Handys müssen</b>); 2) fe’lning <b>Partizip II</b> shakli; 3) <b>werden</b>. Ajraladigan fe’llarda <b>ge</b> o‘rtada: aus<b>ge</b>schaltet. Misol: <b>Die Tür muss abgeschlossen werden.</b>",
+       "ru": "Три пропуска: 1) модальный глагол по подлежащему (<b>das Formular muss</b>, <b>die Handys müssen</b>); 2) <b>Partizip II</b> глагола; 3) <b>werden</b>. У отделяемых глаголов <b>ge</b> в середине: aus<b>ge</b>schaltet. Пример: <b>Die Tür muss abgeschlossen werden.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Passiv mit Modalverb.",
+      "s": "Der Aufsatz ___ auch am Computer ___ ___. (können, schreiben)",
+      "a": [
+       [
+        "kann"
+       ],
+       [
+        "geschrieben"
+       ],
+       [
+        "werden"
+       ]
+      ],
+      "gw": {
+       "uz": "Uch bo‘shliq: 1) Modalverb egaga mos (<b>das Formular muss</b>, <b>die Handys müssen</b>); 2) fe’lning <b>Partizip II</b> shakli; 3) <b>werden</b>. Ajraladigan fe’llarda <b>ge</b> o‘rtada: aus<b>ge</b>schaltet. Misol: <b>Die Tür muss abgeschlossen werden.</b>",
+       "ru": "Три пропуска: 1) модальный глагол по подлежащему (<b>das Formular muss</b>, <b>die Handys müssen</b>); 2) <b>Partizip II</b> глагола; 3) <b>werden</b>. У отделяемых глаголов <b>ge</b> в середине: aus<b>ge</b>schaltet. Пример: <b>Die Tür muss abgeschlossen werden.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Passiv mit Modalverb.",
+      "s": "Während des Diktats ___ nicht ___ ___. (dürfen, sprechen)",
+      "a": [
+       [
+        "darf"
+       ],
+       [
+        "gesprochen"
+       ],
+       [
+        "werden"
+       ]
+      ],
+      "gw": {
+       "uz": "Uch bo‘shliq: 1) Modalverb egaga mos (<b>das Formular muss</b>, <b>die Handys müssen</b>); 2) fe’lning <b>Partizip II</b> shakli; 3) <b>werden</b>. Ajraladigan fe’llarda <b>ge</b> o‘rtada: aus<b>ge</b>schaltet. Misol: <b>Die Tür muss abgeschlossen werden.</b>",
+       "ru": "Три пропуска: 1) модальный глагол по подлежащему (<b>das Formular muss</b>, <b>die Handys müssen</b>); 2) <b>Partizip II</b> глагола; 3) <b>werden</b>. У отделяемых глаголов <b>ge</b> в середине: aus<b>ge</b>schaltet. Пример: <b>Die Tür muss abgeschlossen werden.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Passiv mit Modalverb.",
+      "s": "Die Klassenfahrt ___ schon im Herbst ___ ___. (sollen, planen)",
+      "a": [
+       [
+        "soll"
+       ],
+       [
+        "geplant"
+       ],
+       [
+        "werden"
+       ]
+      ],
+      "gw": {
+       "uz": "Uch bo‘shliq: 1) Modalverb egaga mos (<b>das Formular muss</b>, <b>die Handys müssen</b>); 2) fe’lning <b>Partizip II</b> shakli; 3) <b>werden</b>. Ajraladigan fe’llarda <b>ge</b> o‘rtada: aus<b>ge</b>schaltet. Misol: <b>Die Tür muss abgeschlossen werden.</b>",
+       "ru": "Три пропуска: 1) модальный глагол по подлежащему (<b>das Formular muss</b>, <b>die Handys müssen</b>); 2) <b>Partizip II</b> глагола; 3) <b>werden</b>. У отделяемых глаголов <b>ge</b> в середине: aus<b>ge</b>schaltet. Пример: <b>Die Tür muss abgeschlossen werden.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Passiv mit Modalverb.",
+      "s": "Malika: Was müssen wir für die Klassenfahrt noch machen?\nNodir: Das Formular ___ bis Freitag von den Eltern ___ ___. (müssen, unterschreiben)\nMalika: Und das Geld?\nNodir: Das ___ auch online ___ ___. (können, bezahlen)",
+      "a": [
+       [
+        "muss"
+       ],
+       [
+        "unterschrieben"
+       ],
+       [
+        "werden"
+       ],
+       [
+        "kann"
+       ],
+       [
+        "bezahlt"
+       ],
+       [
+        "werden"
+       ]
+      ],
+      "gw": {
+       "uz": "Uch bo‘shliq: 1) Modalverb egaga mos (<b>das Formular muss</b>, <b>die Handys müssen</b>); 2) fe’lning <b>Partizip II</b> shakli; 3) <b>werden</b>. Ajraladigan fe’llarda <b>ge</b> o‘rtada: aus<b>ge</b>schaltet. Misol: <b>Die Tür muss abgeschlossen werden.</b>",
+       "ru": "Три пропуска: 1) модальный глагол по подлежащему (<b>das Formular muss</b>, <b>die Handys müssen</b>); 2) <b>Partizip II</b> глагола; 3) <b>werden</b>. У отделяемых глаголов <b>ge</b> в середине: aus<b>ge</b>schaltet. Пример: <b>Die Tür muss abgeschlossen werden.</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Passiv mit Modalverb: Frage und Nebensatz</h4>\n<table class=\"ex-tb\"><tr><th>Satz</th><th>Beispiel</th></tr>\n<tr><td>Hauptsatz</td><td>Das Diktat <b>kann</b> morgen geschrieben <b>werden</b>.</td></tr>\n<tr><td>Ja/Nein-Frage</td><td><b>Kann</b> das Diktat morgen geschrieben <b>werden</b>?</td></tr>\n<tr><td>Nebensatz</td><td>Ich glaube, dass das Diktat morgen geschrieben <b>werden kann</b>.</td></tr></table>\n<div class=\"ex-sk\"><span>…, ob</span><span>das Diktat</span><span>morgen</span><span class=\"v\">geschrieben werden kann</span>?</div>\n<p class=\"ex-note\">Nebensatzda (dass, weil, ob, wenn) Modalverb eng oxirga o‘tadi: <b>Partizip II + werden + Modalverb</b>. Savolda Modalverb 1-o‘rinda turadi.</p>",
+      "ru": "<h4>Passiv mit Modalverb: Frage und Nebensatz</h4>\n<table class=\"ex-tb\"><tr><th>Satz</th><th>Beispiel</th></tr>\n<tr><td>Hauptsatz</td><td>Das Diktat <b>kann</b> morgen geschrieben <b>werden</b>.</td></tr>\n<tr><td>Ja/Nein-Frage</td><td><b>Kann</b> das Diktat morgen geschrieben <b>werden</b>?</td></tr>\n<tr><td>Nebensatz</td><td>Ich glaube, dass das Diktat morgen geschrieben <b>werden kann</b>.</td></tr></table>\n<div class=\"ex-sk\"><span>…, ob</span><span>das Diktat</span><span>morgen</span><span class=\"v\">geschrieben werden kann</span>?</div>\n<p class=\"ex-note\">В придаточном (dass, weil, ob, wenn) модальный глагол уходит в самый конец: <b>Partizip II + werden + модальный глагол</b>. В вопросе модальный глагол стоит на 1-м месте.</p>"
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den Nebensatz im Passiv.",
+      "bsp": "Ich weiß, dass das Zimmer heute ___ ___ ___. (müssen, putzen) → <b>geputzt werden muss</b>",
+      "s": "Wir fragen die Lehrerin, ob der Test ___ ___ ___. (können, verschieben)",
+      "a": [
+       [
+        "verschoben"
+       ],
+       [
+        "werden"
+       ],
+       [
+        "kann"
+       ]
+      ],
+      "gw": {
+       "uz": "Nebensatzda tartib: <b>Partizip II → werden → Modalverb</b>. Modalverb eng oxirida va egaga mos. Misol: <b>…, weil die Hausaufgaben bis morgen gemacht werden müssen.</b>",
+       "ru": "В придаточном порядок: <b>Partizip II → werden → модальный глагол</b>. Модальный глагол в самом конце и согласуется с подлежащим. Пример: <b>…, weil die Hausaufgaben bis morgen gemacht werden müssen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den Nebensatz im Passiv.",
+      "s": "Es ist wichtig, dass im Deutschunterricht viel ___ ___ ___. (sollen, sprechen)",
+      "a": [
+       [
+        "gesprochen"
+       ],
+       [
+        "werden"
+       ],
+       [
+        "soll"
+       ]
+      ],
+      "gw": {
+       "uz": "Nebensatzda tartib: <b>Partizip II → werden → Modalverb</b>. Modalverb eng oxirida va egaga mos. Misol: <b>…, weil die Hausaufgaben bis morgen gemacht werden müssen.</b>",
+       "ru": "В придаточном порядок: <b>Partizip II → werden → модальный глагол</b>. Модальный глагол в самом конце и согласуется с подлежащим. Пример: <b>…, weil die Hausaufgaben bis morgen gemacht werden müssen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den Nebensatz im Passiv.",
+      "s": "Paul ist sauer, weil sein Handy in der Schule nicht ___ ___ ___. (dürfen, benutzen)",
+      "a": [
+       [
+        "benutzt"
+       ],
+       [
+        "werden"
+       ],
+       [
+        "darf"
+       ]
+      ],
+      "gw": {
+       "uz": "Nebensatzda tartib: <b>Partizip II → werden → Modalverb</b>. Modalverb eng oxirida va egaga mos. Misol: <b>…, weil die Hausaufgaben bis morgen gemacht werden müssen.</b>",
+       "ru": "В придаточном порядок: <b>Partizip II → werden → модальный глагол</b>. Модальный глагол в самом конце и согласуется с подлежащим. Пример: <b>…, weil die Hausaufgaben bis morgen gemacht werden müssen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den Nebensatz im Passiv.",
+      "s": "Forum: Schule neu denken\nSevara: Ich finde, dass Sport jeden Tag ___ ___ ___. (sollen, machen)\nJonas: Ja, aber Mathe und Deutsch sind auch wichtig.\nAnna: Ich glaube, dass die Hausaufgaben ___ ___ ___. (können, reduzieren)\nDann haben wir mehr Zeit für Hobbys.",
+      "a": [
+       [
+        "gemacht"
+       ],
+       [
+        "werden"
+       ],
+       [
+        "soll"
+       ],
+       [
+        "reduziert"
+       ],
+       [
+        "werden"
+       ],
+       [
+        "können"
+       ]
+      ],
+      "gw": {
+       "uz": "Nebensatzda tartib: <b>Partizip II → werden → Modalverb</b>. Modalverb eng oxirida va egaga mos. Misol: <b>…, weil die Hausaufgaben bis morgen gemacht werden müssen.</b>",
+       "ru": "В придаточном порядок: <b>Partizip II → werden → модальный глагол</b>. Модальный глагол в самом конце и согласуется с подлежащим. Пример: <b>…, weil die Hausaufgaben bis morgen gemacht werden müssen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv.",
+      "bsp": "Man muss die Tafel putzen. → <b>Die Tafel muss geputzt werden.</b>",
+      "q": "Man muss die Hausaufgaben bis Montag machen.",
+      "w": [
+       "Die Hausaufgaben",
+       "müssen",
+       "bis Montag",
+       "gemacht",
+       "werden"
+      ],
+      "a": "Die Hausaufgaben müssen bis Montag gemacht werden.",
+      "alt": [],
+      "gw": {
+       "uz": "Aktivdagi Akkusativ (<b>die Tafel</b>) Passivda ega bo‘ladi va gap boshiga chiqadi; <b>man</b> tushib qoladi. Modalverb yangi egaga moslanadi, oxirida <b>Partizip II + werden</b>. Misol: <b>Man kann die Fenster öffnen. → Die Fenster können geöffnet werden.</b>",
+       "ru": "Дополнение в Akkusativ (<b>die Tafel</b>) в Passiv становится подлежащим и идёт в начало; <b>man</b> исчезает. Модальный глагол согласуется с новым подлежащим, в конце <b>Partizip II + werden</b>. Пример: <b>Man kann die Fenster öffnen. → Die Fenster können geöffnet werden.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv.",
+      "q": "Man kann das Diktat nächste Woche wiederholen.",
+      "w": [
+       "Das Diktat",
+       "kann",
+       "nächste Woche",
+       "wiederholt",
+       "werden"
+      ],
+      "a": "Das Diktat kann nächste Woche wiederholt werden.",
+      "alt": [],
+      "gw": {
+       "uz": "Aktivdagi Akkusativ (<b>die Tafel</b>) Passivda ega bo‘ladi va gap boshiga chiqadi; <b>man</b> tushib qoladi. Modalverb yangi egaga moslanadi, oxirida <b>Partizip II + werden</b>. Misol: <b>Man kann die Fenster öffnen. → Die Fenster können geöffnet werden.</b>",
+       "ru": "Дополнение в Akkusativ (<b>die Tafel</b>) в Passiv становится подлежащим и идёт в начало; <b>man</b> исчезает. Модальный глагол согласуется с новым подлежащим, в конце <b>Partizip II + werden</b>. Пример: <b>Man kann die Fenster öffnen. → Die Fenster können geöffnet werden.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv.",
+      "q": "Man darf in der Bibliothek nicht laut sprechen.",
+      "w": [
+       "In der Bibliothek",
+       "darf",
+       "nicht",
+       "laut",
+       "gesprochen",
+       "werden"
+      ],
+      "a": "In der Bibliothek darf nicht laut gesprochen werden.",
+      "alt": [],
+      "gw": {
+       "uz": "Aktivdagi Akkusativ (<b>die Tafel</b>) Passivda ega bo‘ladi va gap boshiga chiqadi; <b>man</b> tushib qoladi. Modalverb yangi egaga moslanadi, oxirida <b>Partizip II + werden</b>. Misol: <b>Man kann die Fenster öffnen. → Die Fenster können geöffnet werden.</b>",
+       "ru": "Дополнение в Akkusativ (<b>die Tafel</b>) в Passiv становится подлежащим и идёт в начало; <b>man</b> исчезает. Модальный глагол согласуется с новым подлежащим, в конце <b>Partizip II + werden</b>. Пример: <b>Man kann die Fenster öffnen. → Die Fenster können geöffnet werden.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv.",
+      "q": "Man soll die Schulbücher am Ende des Schuljahres zurückgeben.",
+      "w": [
+       "Die Schulbücher",
+       "sollen",
+       "am Ende des Schuljahres",
+       "zurückgegeben",
+       "werden"
+      ],
+      "a": "Die Schulbücher sollen am Ende des Schuljahres zurückgegeben werden.",
+      "alt": [],
+      "gw": {
+       "uz": "Aktivdagi Akkusativ (<b>die Tafel</b>) Passivda ega bo‘ladi va gap boshiga chiqadi; <b>man</b> tushib qoladi. Modalverb yangi egaga moslanadi, oxirida <b>Partizip II + werden</b>. Misol: <b>Man kann die Fenster öffnen. → Die Fenster können geöffnet werden.</b>",
+       "ru": "Дополнение в Akkusativ (<b>die Tafel</b>) в Passiv становится подлежащим и идёт в начало; <b>man</b> исчезает. Модальный глагол согласуется с новым подлежащим, в конце <b>Partizip II + werden</b>. Пример: <b>Man kann die Fenster öffnen. → Die Fenster können geöffnet werden.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie im Passiv.",
+      "q": "Muss man den Aufsatz mit der Hand schreiben?",
+      "w": [
+       "Muss",
+       "der Aufsatz",
+       "mit der Hand",
+       "geschrieben",
+       "werden"
+      ],
+      "a": "Muss der Aufsatz mit der Hand geschrieben werden?",
+      "alt": [],
+      "gw": {
+       "uz": "Aktivdagi Akkusativ (<b>die Tafel</b>) Passivda ega bo‘ladi va gap boshiga chiqadi; <b>man</b> tushib qoladi. Modalverb yangi egaga moslanadi, oxirida <b>Partizip II + werden</b>. Misol: <b>Man kann die Fenster öffnen. → Die Fenster können geöffnet werden.</b>",
+       "ru": "Дополнение в Akkusativ (<b>die Tafel</b>) в Passiv становится подлежащим и идёт в начало; <b>man</b> исчезает. Модальный глагол согласуется с новым подлежащим, в конце <b>Partizip II + werden</b>. Пример: <b>Man kann die Fenster öffnen. → Die Fenster können geöffnet werden.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Nebensatz im Passiv.",
+      "bsp": "Ich weiß, dass man das Formular unterschreiben muss. → <b>Ich weiß, dass das Formular unterschrieben werden muss.</b>",
+      "q": "Die Direktorin sagt, dass man die Schuluniform jeden Tag tragen muss.",
+      "w": [
+       "Die Direktorin sagt,",
+       "dass",
+       "die Schuluniform",
+       "jeden Tag",
+       "getragen",
+       "werden",
+       "muss"
+      ],
+      "a": "Die Direktorin sagt, dass die Schuluniform jeden Tag getragen werden muss.",
+      "alt": [
+       "Die Direktorin sagt, dass jeden Tag die Schuluniform getragen werden muss."
+      ],
+      "gw": {
+       "uz": "Nebensatzda ham <b>man</b> tushib qoladi, Akkusativ ega bo‘ladi. Fe’llar oxirida: <b>Partizip II + werden + Modalverb</b>. Misol: <b>…, ob man den Test verschieben kann. → …, ob der Test verschoben werden kann.</b>",
+       "ru": "В придаточном <b>man</b> тоже исчезает, Akkusativ становится подлежащим. Глаголы в конце: <b>Partizip II + werden + модальный глагол</b>. Пример: <b>…, ob man den Test verschieben kann. → …, ob der Test verschoben werden kann.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Nebensatz im Passiv.",
+      "q": "Weißt du, ob man das Diktat wiederholen kann?",
+      "w": [
+       "Weißt du,",
+       "ob",
+       "das Diktat",
+       "wiederholt",
+       "werden",
+       "kann"
+      ],
+      "a": "Weißt du, ob das Diktat wiederholt werden kann?",
+      "alt": [],
+      "gw": {
+       "uz": "Nebensatzda ham <b>man</b> tushib qoladi, Akkusativ ega bo‘ladi. Fe’llar oxirida: <b>Partizip II + werden + Modalverb</b>. Misol: <b>…, ob man den Test verschieben kann. → …, ob der Test verschoben werden kann.</b>",
+       "ru": "В придаточном <b>man</b> тоже исчезает, Akkusativ становится подлежащим. Глаголы в конце: <b>Partizip II + werden + модальный глагол</b>. Пример: <b>…, ob man den Test verschieben kann. → …, ob der Test verschoben werden kann.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Nebensatz im Passiv.",
+      "q": "Unsere Lehrerin sagt, dass man die Wörter jeden Tag wiederholen soll.",
+      "w": [
+       "Unsere Lehrerin sagt,",
+       "dass",
+       "die Wörter",
+       "jeden Tag",
+       "wiederholt",
+       "werden",
+       "sollen"
+      ],
+      "a": "Unsere Lehrerin sagt, dass die Wörter jeden Tag wiederholt werden sollen.",
+      "alt": [
+       "Unsere Lehrerin sagt, dass jeden Tag die Wörter wiederholt werden sollen."
+      ],
+      "gw": {
+       "uz": "Nebensatzda ham <b>man</b> tushib qoladi, Akkusativ ega bo‘ladi. Fe’llar oxirida: <b>Partizip II + werden + Modalverb</b>. Misol: <b>…, ob man den Test verschieben kann. → …, ob der Test verschoben werden kann.</b>",
+       "ru": "В придаточном <b>man</b> тоже исчезает, Akkusativ становится подлежащим. Глаголы в конце: <b>Partizip II + werden + модальный глагол</b>. Пример: <b>…, ob man den Test verschieben kann. → …, ob der Test verschoben werden kann.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Das Fenster muss geöffnet wird. → <b>wird</b> ✗ → geöffnet <b>werden</b>",
+      "s": "Die Hausaufgaben muss bis morgen gemacht werden .",
+      "a": [
+       2
+      ],
+      "fix": "Die Hausaufgaben müssen bis morgen gemacht werden.",
+      "gw": {
+       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b>; Partizip II o‘rniga Infinitiv; Nebensatzda Modalverb oxirida emas. Misol: <b>…, dass der Test verschoben werden muss.</b>",
+       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> вместо <b>werden</b>; инфинитив вместо Partizip II; в придаточном модальный глагол не в конце. Пример: <b>…, dass der Test verschoben werden muss.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Kann das Diktat morgen geschrieben wird ?",
+      "a": [
+       5
+      ],
+      "fix": "Kann das Diktat morgen geschrieben werden?",
+      "gw": {
+       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b>; Partizip II o‘rniga Infinitiv; Nebensatzda Modalverb oxirida emas. Misol: <b>…, dass der Test verschoben werden muss.</b>",
+       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> вместо <b>werden</b>; инфинитив вместо Partizip II; в придаточном модальный глагол не в конце. Пример: <b>…, dass der Test verschoben werden muss.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Im Unterricht dürfen keine Handys benutzen werden .",
+      "a": [
+       5
+      ],
+      "fix": "Im Unterricht dürfen keine Handys benutzt werden.",
+      "gw": {
+       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b>; Partizip II o‘rniga Infinitiv; Nebensatzda Modalverb oxirida emas. Misol: <b>…, dass der Test verschoben werden muss.</b>",
+       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> вместо <b>werden</b>; инфинитив вместо Partizip II; в придаточном модальный глагол не в конце. Пример: <b>…, dass der Test verschoben werden muss.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich glaube , dass der Aufsatz bis Freitag abgegeben muss werden .",
+      "a": [
+       9,
+       10
+      ],
+      "fix": "Ich glaube, dass der Aufsatz bis Freitag abgegeben werden muss.",
+      "gw": {
+       "uz": "Tez-tez uchraydigan xatolar: Modalverb egaga mos emas (<b>die Hausaufgaben muss</b> ✗); <b>werden</b> o‘rniga <b>wird</b>; Partizip II o‘rniga Infinitiv; Nebensatzda Modalverb oxirida emas. Misol: <b>…, dass der Test verschoben werden muss.</b>",
+       "ru": "Частые ошибки: модальный глагол не согласован с подлежащим (<b>die Hausaufgaben muss</b> ✗); <b>wird</b> вместо <b>werden</b>; инфинитив вместо Partizip II; в придаточном модальный глагол не в конце. Пример: <b>…, dass der Test verschoben werden muss.</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

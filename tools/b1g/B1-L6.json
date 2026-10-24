@@ -1,0 +1,549 @@
+{
+ "id": "B1-b11-6-G",
+ "meta": {
+  "title": "Grammatik · obwohl · trotzdem",
+  "stitle": "obwohl · trotzdem · Verb am Ende"
+ },
+ "ex": {
+  "title": "Lektion 6 · Grammatik",
+  "sub": "obwohl · trotzdem · Verb am Ende",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>obwohl: Gegengrund · Verb am Ende</h4><table class=\"ex-tb\"><tr><td><b>weil</b> (Grund)</td><td>Ich bleibe zu Hause, <b>weil</b> ich krank <b>bin</b>.</td></tr><tr><td><b>obwohl</b> (Gegengrund)</td><td>Ich gehe zum Kurs, <b>obwohl</b> ich krank <b>bin</b>.</td></tr><tr><td>obwohl-Satz zuerst</td><td><b>Obwohl</b> ich Angst <b>habe</b>, <b>springe</b> ich ins Wasser.</td></tr></table><div class=\"ex-sk\"><span>Obwohl ich Angst</span><span class=\"v\">habe,</span><span class=\"v\">springe</span><span>ich ins Wasser</span>.</div><p class=\"ex-note\"><b>obwohl</b> = garchi … bo‘lsa ham: natija kutilganidek emas. obwohl-gap — Nebensatz, tuslangan fe’l oxirida. U birinchi kelsa, asosiy gap fe’l bilan boshlanadi: <b>Obwohl …, springe ich …</b></p>",
+      "ru": "<h4>obwohl: Gegengrund · Verb am Ende</h4><table class=\"ex-tb\"><tr><td><b>weil</b> (Grund)</td><td>Ich bleibe zu Hause, <b>weil</b> ich krank <b>bin</b>.</td></tr><tr><td><b>obwohl</b> (Gegengrund)</td><td>Ich gehe zum Kurs, <b>obwohl</b> ich krank <b>bin</b>.</td></tr><tr><td>obwohl-Satz zuerst</td><td><b>Obwohl</b> ich Angst <b>habe</b>, <b>springe</b> ich ins Wasser.</td></tr></table><div class=\"ex-sk\"><span>Obwohl ich Angst</span><span class=\"v\">habe,</span><span class=\"v\">springe</span><span>ich ins Wasser</span>.</div><p class=\"ex-note\"><b>obwohl</b> = хотя: результат не такой, как ожидалось. obwohl-предложение — Nebensatz, спрягаемый глагол в конце. Если оно стоит первым, главное начинается с глагола: <b>Obwohl …, springe ich …</b></p>"
+     },
+     {
+      "t": "info",
+      "h": "<h4>trotzdem: Hauptsatz · Position 1 oder nach dem Verb</h4><table class=\"ex-tb\"><tr><td>Position 1</td><td>Ich habe Angst. <b>Trotzdem springe</b> ich ins Wasser.</td></tr><tr><td>nach dem Verb</td><td>Ich habe Angst. Ich <b>springe trotzdem</b> ins Wasser.</td></tr><tr><td>= obwohl</td><td><b>Obwohl</b> ich Angst <b>habe</b>, springe ich ins Wasser.</td></tr></table><p class=\"ex-note\"><b>trotzdem</b> = shunga qaramay. obwohl «muammo» gapida turadi, trotzdem esa «kutilmagan harakat» gapida. trotzdem — Hauptsatz: 1-o‘rinda bo‘lsa, fe’l darhol keyin, ega fe’ldan keyin keladi.</p>",
+      "ru": "<h4>trotzdem: Hauptsatz · Position 1 oder nach dem Verb</h4><table class=\"ex-tb\"><tr><td>Position 1</td><td>Ich habe Angst. <b>Trotzdem springe</b> ich ins Wasser.</td></tr><tr><td>nach dem Verb</td><td>Ich habe Angst. Ich <b>springe trotzdem</b> ins Wasser.</td></tr><tr><td>= obwohl</td><td><b>Obwohl</b> ich Angst <b>habe</b>, springe ich ins Wasser.</td></tr></table><p class=\"ex-note\"><b>trotzdem</b> = тем не менее, всё равно. obwohl стоит в предложении с «проблемой», а trotzdem — в предложении с «неожиданным действием». trotzdem — Hauptsatz: если оно на 1-м месте, сразу за ним глагол, подлежащее после глагола.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das konjugierte Verb im Nebensatz mit *obwohl*.",
+      "bsp": "Ich lerne weiter, obwohl ich müde bin. → <b>bin</b>",
+      "s": "Ich bin nach Taschkent gezogen , obwohl ich dort niemanden kannte .",
+      "a": [
+       10
+      ],
+      "gw": {
+       "uz": "<b>obwohl</b> — Nebensatz bog‘lovchisi: tuslangan fe’l gap oxiriga o‘tadi. Modal fe’l bo‘lsa, oxirida aynan u turadi: <b>…, obwohl sie nicht gut schwimmen kann.</b> Asosiy gapning fe’lini belgilamang.",
+       "ru": "<b>obwohl</b> — союз придаточного: спрягаемый глагол уходит в конец. Если есть модальный глагол, в конце стоит именно он: <b>…, obwohl sie nicht gut schwimmen kann.</b> Глагол главного предложения не отмечайте."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das konjugierte Verb im Nebensatz mit *obwohl*.",
+      "s": "Obwohl Aziz sehr aufgeregt war , hat er im Kurs eine Frage gestellt .",
+      "a": [
+       4
+      ],
+      "gw": {
+       "uz": "<b>obwohl</b> — Nebensatz bog‘lovchisi: tuslangan fe’l gap oxiriga o‘tadi. Modal fe’l bo‘lsa, oxirida aynan u turadi: <b>…, obwohl sie nicht gut schwimmen kann.</b> Asosiy gapning fe’lini belgilamang.",
+       "ru": "<b>obwohl</b> — союз придаточного: спрягаемый глагол уходит в конец. Если есть модальный глагол, в конце стоит именно он: <b>…, obwohl sie nicht gut schwimmen kann.</b> Глагол главного предложения не отмечайте."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das konjugierte Verb im Nebensatz mit *obwohl*.",
+      "s": "Obwohl Ben erst seit drei Monaten Spanisch lernt , kann er schon viel verstehen .",
+      "a": [
+       7
+      ],
+      "gw": {
+       "uz": "<b>obwohl</b> — Nebensatz bog‘lovchisi: tuslangan fe’l gap oxiriga o‘tadi. Modal fe’l bo‘lsa, oxirida aynan u turadi: <b>…, obwohl sie nicht gut schwimmen kann.</b> Asosiy gapning fe’lini belgilamang.",
+       "ru": "<b>obwohl</b> — союз придаточного: спрягаемый глагол уходит в конец. Если есть модальный глагол, в конце стоит именно он: <b>…, obwohl sie nicht gut schwimmen kann.</b> Глагол главного предложения не отмечайте."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das konjugierte Verb im Nebensatz mit *obwohl*.",
+      "s": "Malika ist ins Meer gesprungen , obwohl sie nicht gut schwimmen kann .",
+      "a": [
+       11
+      ],
+      "gw": {
+       "uz": "<b>obwohl</b> — Nebensatz bog‘lovchisi: tuslangan fe’l gap oxiriga o‘tadi. Modal fe’l bo‘lsa, oxirida aynan u turadi: <b>…, obwohl sie nicht gut schwimmen kann.</b> Asosiy gapning fe’lini belgilamang.",
+       "ru": "<b>obwohl</b> — союз придаточного: спрягаемый глагол уходит в конец. Если есть модальный глагол, в конце стоит именно он: <b>…, obwohl sie nicht gut schwimmen kann.</b> Глагол главного предложения не отмечайте."
+      }
+     },
+     {
+      "t": "cat",
+      "h": "Wo steht das Verb? Ordnen Sie zu.",
+      "bsp": "weil → <b>Verb am Ende</b>",
+      "c": [
+       "Verb am Ende",
+       "Verb direkt danach"
+      ],
+      "i": [
+       [
+        "obwohl",
+        0
+       ],
+       [
+        "trotzdem",
+        1
+       ],
+       [
+        "dass",
+        0
+       ],
+       [
+        "deshalb",
+        1
+       ],
+       [
+        "wenn",
+        0
+       ],
+       [
+        "darum",
+        1
+       ],
+       [
+        "als",
+        0
+       ],
+       [
+        "dann",
+        1
+       ]
+      ],
+      "gw": {
+       "uz": "Nebensatz bog‘lovchilari (<b>obwohl, weil, dass, wenn, als</b>) fe’lni oxiriga yuboradi. <b>trotzdem, deshalb, darum, dann</b> — ravishlar: ular 1-o‘rinni egallaydi, fe’l darhol keyin keladi. Misol: <b>…, obwohl es regnet.</b> · <b>Trotzdem gehe ich.</b>",
+       "ru": "Союзы придаточных (<b>obwohl, weil, dass, wenn, als</b>) отправляют глагол в конец. <b>trotzdem, deshalb, darum, dann</b> — наречия: они занимают 1-е место, глагол идёт сразу за ними. Пример: <b>…, obwohl es regnet.</b> · <b>Trotzdem gehe ich.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Es regnet. ___ gehen wir spazieren. → ✓ <b>Trotzdem</b>",
+      "q": "Sevara spricht schon gut Deutsch, ___ sie erst seit einem Jahr lernt.",
+      "o": [
+       "obwohl",
+       "trotzdem",
+       "weil"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Avval mantiq: <b>weil / deshalb</b> — sabab va kutilgan natija; <b>obwohl / trotzdem</b> — qarshilikka qaramay, kutilmagan natija. Keyin shakl: fe’l oxirida → <b>obwohl / weil</b>; fe’l darhol keyin → <b>trotzdem / deshalb</b>. Misol: <b>Ich bin krank. Trotzdem gehe ich zur Uni.</b>",
+       "ru": "Сначала логика: <b>weil / deshalb</b> — причина и ожидаемый результат; <b>obwohl / trotzdem</b> — вопреки чему-то, неожиданный результат. Затем форма: глагол в конце → <b>obwohl / weil</b>; глагол сразу после → <b>trotzdem / deshalb</b>. Пример: <b>Ich bin krank. Trotzdem gehe ich zur Uni.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Der Deutschkurs ist sehr schwer. ___ gibt Timur nicht auf.",
+      "o": [
+       "Obwohl",
+       "Deshalb",
+       "Trotzdem"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Avval mantiq: <b>weil / deshalb</b> — sabab va kutilgan natija; <b>obwohl / trotzdem</b> — qarshilikka qaramay, kutilmagan natija. Keyin shakl: fe’l oxirida → <b>obwohl / weil</b>; fe’l darhol keyin → <b>trotzdem / deshalb</b>. Misol: <b>Ich bin krank. Trotzdem gehe ich zur Uni.</b>",
+       "ru": "Сначала логика: <b>weil / deshalb</b> — причина и ожидаемый результат; <b>obwohl / trotzdem</b> — вопреки чему-то, неожиданный результат. Затем форма: глагол в конце → <b>obwohl / weil</b>; глагол сразу после → <b>trotzdem / deshalb</b>. Пример: <b>Ich bin krank. Trotzdem gehe ich zur Uni.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Ich war vor der Prüfung total aufgeregt, ___ ich gut vorbereitet war.",
+      "o": [
+       "weil",
+       "obwohl",
+       "deshalb"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Avval mantiq: <b>weil / deshalb</b> — sabab va kutilgan natija; <b>obwohl / trotzdem</b> — qarshilikka qaramay, kutilmagan natija. Keyin shakl: fe’l oxirida → <b>obwohl / weil</b>; fe’l darhol keyin → <b>trotzdem / deshalb</b>. Misol: <b>Ich bin krank. Trotzdem gehe ich zur Uni.</b>",
+       "ru": "Сначала логика: <b>weil / deshalb</b> — причина и ожидаемый результат; <b>obwohl / trotzdem</b> — вопреки чему-то, неожиданный результат. Затем форма: глагол в конце → <b>obwohl / weil</b>; глагол сразу после → <b>trotzdem / deshalb</b>. Пример: <b>Ich bin krank. Trotzdem gehe ich zur Uni.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Nodir hat jetzt keine Angst mehr vor Hunden, ___ er jeden Tag mit dem Hund von seiner Nachbarin spazieren geht.",
+      "o": [
+       "obwohl",
+       "trotzdem",
+       "weil"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Avval mantiq: <b>weil / deshalb</b> — sabab va kutilgan natija; <b>obwohl / trotzdem</b> — qarshilikka qaramay, kutilmagan natija. Keyin shakl: fe’l oxirida → <b>obwohl / weil</b>; fe’l darhol keyin → <b>trotzdem / deshalb</b>. Misol: <b>Ich bin krank. Trotzdem gehe ich zur Uni.</b>",
+       "ru": "Сначала логика: <b>weil / deshalb</b> — причина и ожидаемый результат; <b>obwohl / trotzdem</b> — вопреки чему-то, неожиданный результат. Затем форма: глагол в конце → <b>obwohl / weil</b>; глагол сразу после → <b>trotzdem / deshalb</b>. Пример: <b>Ich bin krank. Trotzdem gehe ich zur Uni.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Es ist schon spät und alle sind müde. Wir tanzen ___ weiter.",
+      "o": [
+       "trotzdem",
+       "obwohl",
+       "deshalb"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Avval mantiq: <b>weil / deshalb</b> — sabab va kutilgan natija; <b>obwohl / trotzdem</b> — qarshilikka qaramay, kutilmagan natija. Keyin shakl: fe’l oxirida → <b>obwohl / weil</b>; fe’l darhol keyin → <b>trotzdem / deshalb</b>. Misol: <b>Ich bin krank. Trotzdem gehe ich zur Uni.</b>",
+       "ru": "Сначала логика: <b>weil / deshalb</b> — причина и ожидаемый результат; <b>obwohl / trotzdem</b> — вопреки чему-то, неожиданный результат. Затем форма: глагол в конце → <b>obwohl / weil</b>; глагол сразу после → <b>trotzdem / deshalb</b>. Пример: <b>Ich bin krank. Trotzdem gehe ich zur Uni.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *obwohl* oder *trotzdem*.",
+      "bsp": "Ich bin müde. ___ lerne ich weiter. → Verb direkt danach → <b>Trotzdem</b>",
+      "s": "___ Laylo Angst vor dem Fliegen hat, fliegt sie im Sommer nach Berlin.",
+      "a": [
+       [
+        "Obwohl"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: bo‘shliqdan keyin fe’l gap oxirida bo‘lsa — <b>obwohl</b>; bo‘shliqdan keyin darhol fe’l kelsa yoki bo‘shliq fe’ldan keyin bo‘lsa — <b>trotzdem</b>. Misol: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>",
+       "ru": "Смотрите на глагол: если после пропуска глагол стоит в конце — <b>obwohl</b>; если сразу после пропуска идёт глагол или пропуск стоит после глагола — <b>trotzdem</b>. Пример: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *obwohl* oder *trotzdem*.",
+      "s": "Paul hat nur wenig Geld. ___ macht er eine Reise nach Asien.",
+      "a": [
+       [
+        "Trotzdem"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: bo‘shliqdan keyin fe’l gap oxirida bo‘lsa — <b>obwohl</b>; bo‘shliqdan keyin darhol fe’l kelsa yoki bo‘shliq fe’ldan keyin bo‘lsa — <b>trotzdem</b>. Misol: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>",
+       "ru": "Смотрите на глагол: если после пропуска глагол стоит в конце — <b>obwohl</b>; если сразу после пропуска идёт глагол или пропуск стоит после глагола — <b>trotzdem</b>. Пример: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *obwohl* oder *trotzdem*.",
+      "s": "Ich fühle mich in der neuen Stadt noch fremd, ___ die Leute sehr freundlich sind.",
+      "a": [
+       [
+        "obwohl"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: bo‘shliqdan keyin fe’l gap oxirida bo‘lsa — <b>obwohl</b>; bo‘shliqdan keyin darhol fe’l kelsa yoki bo‘shliq fe’ldan keyin bo‘lsa — <b>trotzdem</b>. Misol: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>",
+       "ru": "Смотрите на глагол: если после пропуска глагол стоит в конце — <b>obwohl</b>; если сразу после пропуска идёт глагол или пропуск стоит после глагола — <b>trotzdem</b>. Пример: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *obwohl* oder *trotzdem*.",
+      "s": "Das erste Training war schrecklich. Mia ist ___ am nächsten Tag wieder hingegangen.",
+      "a": [
+       [
+        "trotzdem"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: bo‘shliqdan keyin fe’l gap oxirida bo‘lsa — <b>obwohl</b>; bo‘shliqdan keyin darhol fe’l kelsa yoki bo‘shliq fe’ldan keyin bo‘lsa — <b>trotzdem</b>. Misol: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>",
+       "ru": "Смотрите на глагол: если после пропуска глагол стоит в конце — <b>obwohl</b>; если сразу после пропуска идёт глагол или пропуск стоит после глагола — <b>trotzdem</b>. Пример: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *obwohl* oder *trotzdem*.",
+      "s": "Anna ist allein nach Spanien gereist, ___ sie kein Spanisch sprechen konnte.",
+      "a": [
+       [
+        "obwohl"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: bo‘shliqdan keyin fe’l gap oxirida bo‘lsa — <b>obwohl</b>; bo‘shliqdan keyin darhol fe’l kelsa yoki bo‘shliq fe’ldan keyin bo‘lsa — <b>trotzdem</b>. Misol: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>",
+       "ru": "Смотрите на глагол: если после пропуска глагол стоит в конце — <b>obwohl</b>; если сразу после пропуска идёт глагол или пропуск стоит после глагола — <b>trotzdem</b>. Пример: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *obwohl* oder *trotzdem*.",
+      "s": "Mein Großvater ist schon 65. ___ lernt er jetzt Klavier.",
+      "a": [
+       [
+        "Trotzdem"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: bo‘shliqdan keyin fe’l gap oxirida bo‘lsa — <b>obwohl</b>; bo‘shliqdan keyin darhol fe’l kelsa yoki bo‘shliq fe’ldan keyin bo‘lsa — <b>trotzdem</b>. Misol: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>",
+       "ru": "Смотрите на глагол: если после пропуска глагол стоит в конце — <b>obwohl</b>; если сразу после пропуска идёт глагол или пропуск стоит после глагола — <b>trotzdem</b>. Пример: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *obwohl* oder *trotzdem*.",
+      "s": "Mein Neuanfang in Leipzig\nVor einem Jahr bin ich zum Studium nach Leipzig gezogen. ___ ich am Anfang kaum Deutsch verstanden habe, habe ich schnell Freunde gefunden.\nDer Winter war lang und dunkel. ___ war ich fast nie traurig.\nMein Tipp: Sprecht viel, ___ ihr noch Fehler macht!",
+      "a": [
+       [
+        "Obwohl"
+       ],
+       [
+        "Trotzdem"
+       ],
+       [
+        "obwohl"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: bo‘shliqdan keyin fe’l gap oxirida bo‘lsa — <b>obwohl</b>; bo‘shliqdan keyin darhol fe’l kelsa yoki bo‘shliq fe’ldan keyin bo‘lsa — <b>trotzdem</b>. Misol: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>",
+       "ru": "Смотрите на глагол: если после пропуска глагол стоит в конце — <b>obwohl</b>; если сразу после пропуска идёт глагол или пропуск стоит после глагола — <b>trotzdem</b>. Пример: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *obwohl* oder *trotzdem*.",
+      "s": "▪ Und, wie war deine erste Fahrstunde?\n● Super! ___ ich total aufgeregt war, habe ich keinen Fehler gemacht.\n▪ Toll! Und hattest du keine Angst auf der großen Straße?\n● Doch, ein bisschen. Aber ich bin ___ weitergefahren.",
+      "a": [
+       [
+        "Obwohl"
+       ],
+       [
+        "trotzdem"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lga qarang: bo‘shliqdan keyin fe’l gap oxirida bo‘lsa — <b>obwohl</b>; bo‘shliqdan keyin darhol fe’l kelsa yoki bo‘shliq fe’ldan keyin bo‘lsa — <b>trotzdem</b>. Misol: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>",
+       "ru": "Смотрите на глагол: если после пропуска глагол стоит в конце — <b>obwohl</b>; если сразу после пропуска идёт глагол или пропуск стоит после глагола — <b>trotzdem</b>. Пример: <b>Obwohl ich Angst hatte, bin ich gesprungen.</b> · <b>Ich hatte Angst. Ich bin trotzdem gesprungen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *obwohl*.",
+      "bsp": "Ich bin nervös. Ich spreche Deutsch. → <b>Obwohl ich nervös bin, spreche ich Deutsch.</b>",
+      "q": "Meine Oma ist schon 70. Sie lernt Englisch.",
+      "w": [
+       "Obwohl",
+       "meine Oma",
+       "schon 70",
+       "ist,",
+       "lernt",
+       "sie",
+       "Englisch"
+      ],
+      "a": "Obwohl meine Oma schon 70 ist, lernt sie Englisch.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>obwohl</b> «muammo» bo‘lgan gap oldiga qo‘yiladi, uning fe’li oxirga o‘tadi. obwohl-gap birinchi kelsa, asosiy gap fe’l bilan boshlanadi: <b>Obwohl …, lernt sie …</b>; ikkinchi kelsa — vergul + obwohl: <b>Sie lernt …, obwohl sie …</b>. Plitkadagi bosh harf va vergulga qarang.",
+       "ru": "<b>obwohl</b> ставится перед предложением с «проблемой», его глагол уходит в конец. Если obwohl-предложение первое, главное начинается с глагола: <b>Obwohl …, lernt sie …</b>; если второе — запятая + obwohl: <b>Sie lernt …, obwohl sie …</b>. Смотрите на заглавную букву и запятую на плитках."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *obwohl*.",
+      "q": "Sevara hat wenig Zeit. Sie besucht einen Tanzkurs.",
+      "w": [
+       "Sevara",
+       "besucht",
+       "einen Tanzkurs,",
+       "obwohl",
+       "sie",
+       "wenig Zeit",
+       "hat"
+      ],
+      "a": "Sevara besucht einen Tanzkurs, obwohl sie wenig Zeit hat.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>obwohl</b> «muammo» bo‘lgan gap oldiga qo‘yiladi, uning fe’li oxirga o‘tadi. obwohl-gap birinchi kelsa, asosiy gap fe’l bilan boshlanadi: <b>Obwohl …, lernt sie …</b>; ikkinchi kelsa — vergul + obwohl: <b>Sie lernt …, obwohl sie …</b>. Plitkadagi bosh harf va vergulga qarang.",
+       "ru": "<b>obwohl</b> ставится перед предложением с «проблемой», его глагол уходит в конец. Если obwohl-предложение первое, главное начинается с глагола: <b>Obwohl …, lernt sie …</b>; если второе — запятая + obwohl: <b>Sie lernt …, obwohl sie …</b>. Смотрите на заглавную букву и запятую на плитках."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *obwohl*.",
+      "q": "Aziz ist sehr schüchtern. Er hat sich im Kurs vorgestellt.",
+      "w": [
+       "Obwohl",
+       "Aziz",
+       "sehr schüchtern",
+       "ist,",
+       "hat",
+       "er",
+       "sich",
+       "im Kurs",
+       "vorgestellt"
+      ],
+      "a": "Obwohl Aziz sehr schüchtern ist, hat er sich im Kurs vorgestellt.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>obwohl</b> «muammo» bo‘lgan gap oldiga qo‘yiladi, uning fe’li oxirga o‘tadi. obwohl-gap birinchi kelsa, asosiy gap fe’l bilan boshlanadi: <b>Obwohl …, lernt sie …</b>; ikkinchi kelsa — vergul + obwohl: <b>Sie lernt …, obwohl sie …</b>. Plitkadagi bosh harf va vergulga qarang.",
+       "ru": "<b>obwohl</b> ставится перед предложением с «проблемой», его глагол уходит в конец. Если obwohl-предложение первое, главное начинается с глагола: <b>Obwohl …, lernt sie …</b>; если второе — запятая + obwohl: <b>Sie lernt …, obwohl sie …</b>. Смотрите на заглавную букву и запятую на плитках."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *obwohl*.",
+      "q": "Das Leben in Berlin ist teuer. Lena zieht nach Berlin.",
+      "w": [
+       "Lena",
+       "zieht",
+       "nach Berlin,",
+       "obwohl",
+       "das Leben",
+       "dort",
+       "teuer",
+       "ist"
+      ],
+      "a": "Lena zieht nach Berlin, obwohl das Leben dort teuer ist.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>obwohl</b> «muammo» bo‘lgan gap oldiga qo‘yiladi, uning fe’li oxirga o‘tadi. obwohl-gap birinchi kelsa, asosiy gap fe’l bilan boshlanadi: <b>Obwohl …, lernt sie …</b>; ikkinchi kelsa — vergul + obwohl: <b>Sie lernt …, obwohl sie …</b>. Plitkadagi bosh harf va vergulga qarang.",
+       "ru": "<b>obwohl</b> ставится перед предложением с «проблемой», его глагол уходит в конец. Если obwohl-предложение первое, главное начинается с глагола: <b>Obwohl …, lernt sie …</b>; если второе — запятая + obwohl: <b>Sie lernt …, obwohl sie …</b>. Смотрите на заглавную букву и запятую на плитках."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den zweiten Satz mit *trotzdem*.",
+      "bsp": "Ich bin müde. Ich lerne weiter. → <b>Trotzdem lerne ich weiter.</b> / <b>Ich lerne trotzdem weiter.</b>",
+      "q": "Das Wetter ist schlecht. Wir machen eine Radtour.",
+      "w": [
+       "Trotzdem",
+       "machen",
+       "wir",
+       "eine Radtour"
+      ],
+      "a": "Trotzdem machen wir eine Radtour.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>trotzdem</b> ikkinchi gapga — «kutilmagan harakat» gapiga qo‘yiladi. 1-o‘rinda: <b>Trotzdem</b> + fe’l + ega; yoki fe’ldan keyin: <b>Wir gehen trotzdem schwimmen.</b> Plitkadagi bosh harfga qarang: <b>Trotzdem</b> — gap boshida, <b>trotzdem</b> — o‘rtada.",
+       "ru": "<b>trotzdem</b> ставится во второе предложение — с «неожиданным действием». На 1-м месте: <b>Trotzdem</b> + глагол + подлежащее; или после глагола: <b>Wir gehen trotzdem schwimmen.</b> Смотрите на плитку: <b>Trotzdem</b> — в начале, <b>trotzdem</b> — в середине."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den zweiten Satz mit *trotzdem*.",
+      "q": "Nodir wohnt erst seit zwei Monaten in Hamburg. Er hat schon viele Freunde.",
+      "w": [
+       "Trotzdem",
+       "hat",
+       "er",
+       "schon",
+       "viele Freunde"
+      ],
+      "a": "Trotzdem hat er schon viele Freunde.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>trotzdem</b> ikkinchi gapga — «kutilmagan harakat» gapiga qo‘yiladi. 1-o‘rinda: <b>Trotzdem</b> + fe’l + ega; yoki fe’ldan keyin: <b>Wir gehen trotzdem schwimmen.</b> Plitkadagi bosh harfga qarang: <b>Trotzdem</b> — gap boshida, <b>trotzdem</b> — o‘rtada.",
+       "ru": "<b>trotzdem</b> ставится во второе предложение — с «неожиданным действием». На 1-м месте: <b>Trotzdem</b> + глагол + подлежащее; или после глагола: <b>Wir gehen trotzdem schwimmen.</b> Смотрите на плитку: <b>Trotzdem</b> — в начале, <b>trotzdem</b> — в середине."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den zweiten Satz mit *trotzdem*.",
+      "q": "Die erste Woche im Wohnheim war schwer. Ich bin dort geblieben.",
+      "w": [
+       "Ich",
+       "bin",
+       "trotzdem",
+       "dort",
+       "geblieben"
+      ],
+      "a": "Ich bin trotzdem dort geblieben.",
+      "alt": [
+       "Ich bin dort trotzdem geblieben."
+      ],
+      "gw": {
+       "uz": "<b>trotzdem</b> ikkinchi gapga — «kutilmagan harakat» gapiga qo‘yiladi. 1-o‘rinda: <b>Trotzdem</b> + fe’l + ega; yoki fe’ldan keyin: <b>Wir gehen trotzdem schwimmen.</b> Plitkadagi bosh harfga qarang: <b>Trotzdem</b> — gap boshida, <b>trotzdem</b> — o‘rtada.",
+       "ru": "<b>trotzdem</b> ставится во второе предложение — с «неожиданным действием». На 1-м месте: <b>Trotzdem</b> + глагол + подлежащее; или после глагола: <b>Wir gehen trotzdem schwimmen.</b> Смотрите на плитку: <b>Trotzdem</b> — в начале, <b>trotzdem</b> — в середине."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den zweiten Satz mit *trotzdem*.",
+      "q": "Mia hatte beim Lauf Schmerzen im Bein. Sie ist bis zum Ende gelaufen.",
+      "w": [
+       "Sie",
+       "ist",
+       "trotzdem",
+       "bis zum Ende",
+       "gelaufen"
+      ],
+      "a": "Sie ist trotzdem bis zum Ende gelaufen.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>trotzdem</b> ikkinchi gapga — «kutilmagan harakat» gapiga qo‘yiladi. 1-o‘rinda: <b>Trotzdem</b> + fe’l + ega; yoki fe’ldan keyin: <b>Wir gehen trotzdem schwimmen.</b> Plitkadagi bosh harfga qarang: <b>Trotzdem</b> — gap boshida, <b>trotzdem</b> — o‘rtada.",
+       "ru": "<b>trotzdem</b> ставится во второе предложение — с «неожиданным действием». На 1-м месте: <b>Trotzdem</b> + глагол + подлежащее; или после глагола: <b>Wir gehen trotzdem schwimmen.</b> Смотрите на плитку: <b>Trotzdem</b> — в начале, <b>trotzdem</b> — в середине."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Obwohl es regnet, wir gehen spazieren. → <b>wir</b> → Obwohl es regnet, gehen wir spazieren.",
+      "s": "Obwohl der Weg weit ist , Laylo fährt jeden Tag mit dem Fahrrad zur Uni .",
+      "fix": "Obwohl der Weg weit ist, fährt Laylo jeden Tag mit dem Fahrrad zur Uni.",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "Tipik xatolar: (1) obwohl-gapda fe’l oxirida emas; (2) obwohl-gapdan yoki <b>Trotzdem</b>dan keyin ega fe’ldan oldin turibdi — fe’l birinchi keladi; (3) mantiq: sabab bo‘lsa — <b>weil / deshalb</b>, qarshilik bo‘lsa — <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b>",
+       "ru": "Типичные ошибки: (1) в obwohl-предложении глагол не в конце; (2) после obwohl-предложения или после <b>Trotzdem</b> подлежащее стоит перед глаголом — глагол идёт первым; (3) логика: причина — <b>weil / deshalb</b>, противоречие — <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich habe auf der Party gesungen , obwohl ich war sehr nervös .",
+      "fix": "Ich habe auf der Party gesungen, obwohl ich sehr nervös war.",
+      "a": [
+       9
+      ],
+      "gw": {
+       "uz": "Tipik xatolar: (1) obwohl-gapda fe’l oxirida emas; (2) obwohl-gapdan yoki <b>Trotzdem</b>dan keyin ega fe’ldan oldin turibdi — fe’l birinchi keladi; (3) mantiq: sabab bo‘lsa — <b>weil / deshalb</b>, qarshilik bo‘lsa — <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b>",
+       "ru": "Типичные ошибки: (1) в obwohl-предложении глагол не в конце; (2) после obwohl-предложения или после <b>Trotzdem</b> подлежащее стоит перед глаголом — глагол идёт первым; (3) логика: причина — <b>weil / deshalb</b>, противоречие — <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Es war schon dunkel . Trotzdem wir sind in den Park gegangen .",
+      "fix": "Es war schon dunkel. Trotzdem sind wir in den Park gegangen.",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "Tipik xatolar: (1) obwohl-gapda fe’l oxirida emas; (2) obwohl-gapdan yoki <b>Trotzdem</b>dan keyin ega fe’ldan oldin turibdi — fe’l birinchi keladi; (3) mantiq: sabab bo‘lsa — <b>weil / deshalb</b>, qarshilik bo‘lsa — <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b>",
+       "ru": "Типичные ошибки: (1) в obwohl-предложении глагол не в конце; (2) после obwohl-предложения или после <b>Trotzdem</b> подлежащее стоит перед глаголом — глагол идёт первым; (3) логика: причина — <b>weil / deshalb</b>, противоречие — <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich bin in der neuen Stadt glücklich , obwohl ich dort schon viele Freunde habe .",
+      "fix": "Ich bin in der neuen Stadt glücklich, weil ich dort schon viele Freunde habe.",
+      "a": [
+       8
+      ],
+      "gw": {
+       "uz": "Tipik xatolar: (1) obwohl-gapda fe’l oxirida emas; (2) obwohl-gapdan yoki <b>Trotzdem</b>dan keyin ega fe’ldan oldin turibdi — fe’l birinchi keladi; (3) mantiq: sabab bo‘lsa — <b>weil / deshalb</b>, qarshilik bo‘lsa — <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b>",
+       "ru": "Типичные ошибки: (1) в obwohl-предложении глагол не в конце; (2) после obwohl-предложения или после <b>Trotzdem</b> подлежащее стоит перед глаголом — глагол идёт первым; (3) логика: причина — <b>weil / deshalb</b>, противоречие — <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ben hat jeden Tag trainiert . Trotzdem hat er das Spiel gewonnen .",
+      "fix": "Ben hat jeden Tag trainiert. Deshalb hat er das Spiel gewonnen.",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "Tipik xatolar: (1) obwohl-gapda fe’l oxirida emas; (2) obwohl-gapdan yoki <b>Trotzdem</b>dan keyin ega fe’ldan oldin turibdi — fe’l birinchi keladi; (3) mantiq: sabab bo‘lsa — <b>weil / deshalb</b>, qarshilik bo‘lsa — <b>obwohl / trotzdem</b>. Misol: <b>Obwohl es kalt war, sind wir geschwommen.</b>",
+       "ru": "Типичные ошибки: (1) в obwohl-предложении глагол не в конце; (2) после obwohl-предложения или после <b>Trotzdem</b> подлежащее стоит перед глаголом — глагол идёт первым; (3) логика: причина — <b>weil / deshalb</b>, противоречие — <b>obwohl / trotzdem</b>. Пример: <b>Obwohl es kalt war, sind wir geschwommen.</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

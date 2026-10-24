@@ -1,0 +1,607 @@
+{
+ "id": "B1-b11-12-G",
+ "meta": {
+  "title": "Grammatik · sodass · so … dass",
+  "stitle": "sodass · so …, dass · Folge · Verb → Nomen"
+ },
+ "ex": {
+  "title": "Lektion 12 · Grammatik",
+  "sub": "sodass · so …, dass · Folge · Verb → Nomen",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Folge: sodass · so …, dass</h4>\n<table class=\"ex-tb\"><tr><th>Hauptsatz (Grund)</th><th>Nebensatz (Folge)</th></tr>\n<tr><td>Die Suppe war sehr scharf,</td><td><b>sodass</b> niemand sie essen <b>konnte</b>.</td></tr>\n<tr><td>Die Suppe war <b>so</b> scharf,</td><td><b>dass</b> niemand sie essen <b>konnte</b>.</td></tr>\n<tr><td>Ich hatte <b>so</b> viel Hunger,</td><td><b>dass</b> ich zwei Teller gegessen <b>habe</b>.</td></tr></table>\n<p class=\"ex-note\">Ikkala shakl ham <b>natija</b>ni bildiradi: nima bo‘ldi? <b>so</b> Hauptsatzda sifat yoki ravish oldida turadi, <b>dass</b> — verguldan keyin. <b>sodass</b> — bitta so‘z, birinchi gap o‘zgarmaydi. Fe’l Nebensatz oxirida.<br>Taqqoslang: <b>weil</b> — sabab, <b>sodass</b> — natija.</p>",
+      "ru": "<h4>Folge: sodass · so …, dass</h4>\n<table class=\"ex-tb\"><tr><th>Hauptsatz (Grund)</th><th>Nebensatz (Folge)</th></tr>\n<tr><td>Die Suppe war sehr scharf,</td><td><b>sodass</b> niemand sie essen <b>konnte</b>.</td></tr>\n<tr><td>Die Suppe war <b>so</b> scharf,</td><td><b>dass</b> niemand sie essen <b>konnte</b>.</td></tr>\n<tr><td>Ich hatte <b>so</b> viel Hunger,</td><td><b>dass</b> ich zwei Teller gegessen <b>habe</b>.</td></tr></table>\n<p class=\"ex-note\">Обе формы выражают <b>следствие</b>: что получилось? <b>so</b> стоит в Hauptsatz перед прилагательным или наречием, <b>dass</b> — после запятой. <b>sodass</b> — одно слово, первое предложение не меняется. Глагол в конце Nebensatz.<br>Сравните: <b>weil</b> — причина, <b>sodass</b> — следствие.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *so … dass* oder *sodass*.",
+      "bsp": "Der Tee war <b>so</b> heiß, <b>dass</b> ich fünf Minuten warten musste.",
+      "s": "Der Kuchen war so süß , dass ich nur ein kleines Stück gegessen habe .",
+      "a": [
+       3,
+       6
+      ],
+      "gw": {
+       "uz": "Natijani bildiruvchi so‘zlarni toping: <b>so</b> (sifat oldida) + <b>dass</b> yoki bitta so‘z <b>sodass</b>. <b>sehr</b> — oddiy kuchaytiruvchi, u belgilanmaydi. Misol: <b>Es war so heiß, dass …</b> · <b>Es war sehr heiß, sodass …</b>",
+       "ru": "Найдите слова, которые выражают следствие: <b>so</b> (перед прилагательным) + <b>dass</b> или одно слово <b>sodass</b>. <b>sehr</b> — просто усиление, его не отмечаем. Пример: <b>Es war so heiß, dass …</b> · <b>Es war sehr heiß, sodass …</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *so … dass* oder *sodass*.",
+      "bsp": "Der Tee war <b>so</b> heiß, <b>dass</b> ich fünf Minuten warten musste.",
+      "s": "Es hat stark geregnet , sodass wir das Picknick abgesagt haben .",
+      "a": [
+       5
+      ],
+      "gw": {
+       "uz": "Natijani bildiruvchi so‘zlarni toping: <b>so</b> (sifat oldida) + <b>dass</b> yoki bitta so‘z <b>sodass</b>. <b>sehr</b> — oddiy kuchaytiruvchi, u belgilanmaydi. Misol: <b>Es war so heiß, dass …</b> · <b>Es war sehr heiß, sodass …</b>",
+       "ru": "Найдите слова, которые выражают следствие: <b>so</b> (перед прилагательным) + <b>dass</b> или одно слово <b>sodass</b>. <b>sehr</b> — просто усиление, его не отмечаем. Пример: <b>Es war so heiß, dass …</b> · <b>Es war sehr heiß, sodass …</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *so … dass* oder *sodass*.",
+      "bsp": "Der Tee war <b>so</b> heiß, <b>dass</b> ich fünf Minuten warten musste.",
+      "s": "Timur hat so viele Bohnen gegessen , dass ihm der Bauch wehtut .",
+      "a": [
+       2,
+       7
+      ],
+      "gw": {
+       "uz": "Natijani bildiruvchi so‘zlarni toping: <b>so</b> (sifat oldida) + <b>dass</b> yoki bitta so‘z <b>sodass</b>. <b>sehr</b> — oddiy kuchaytiruvchi, u belgilanmaydi. Misol: <b>Es war so heiß, dass …</b> · <b>Es war sehr heiß, sodass …</b>",
+       "ru": "Найдите слова, которые выражают следствие: <b>so</b> (перед прилагательным) + <b>dass</b> или одно слово <b>sodass</b>. <b>sehr</b> — просто усиление, его не отмечаем. Пример: <b>Es war so heiß, dass …</b> · <b>Es war sehr heiß, sodass …</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *so … dass* oder *sodass*.",
+      "bsp": "Der Tee war <b>so</b> heiß, <b>dass</b> ich fünf Minuten warten musste.",
+      "s": "Der Senf war sehr scharf , sodass Paul viel Wasser trinken musste .",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "Natijani bildiruvchi so‘zlarni toping: <b>so</b> (sifat oldida) + <b>dass</b> yoki bitta so‘z <b>sodass</b>. <b>sehr</b> — oddiy kuchaytiruvchi, u belgilanmaydi. Misol: <b>Es war so heiß, dass …</b> · <b>Es war sehr heiß, sodass …</b>",
+       "ru": "Найдите слова, которые выражают следствие: <b>so</b> (перед прилагательным) + <b>dass</b> или одно слово <b>sodass</b>. <b>sehr</b> — просто усиление, его не отмечаем. Пример: <b>Es war so heiß, dass …</b> · <b>Es war sehr heiß, sodass …</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Grund oder Folge? Was passt?",
+      "bsp": "Ich hatte großen Hunger, ___ ich zwei Portionen bestellt habe. → Folge → ✓ <b>sodass</b>",
+      "q": "Das Gericht war sehr salzig, ___ ich es nicht essen konnte.",
+      "o": [
+       "sodass",
+       "weil",
+       "obwohl"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>weil</b> — sabab (nega?), <b>sodass</b> — natija (nima bo‘ldi?). <b>dass</b> uchun Hauptsatzda <b>so</b> + sifat kerak; <b>sehr</b> + sifatdan keyin — <b>sodass</b>. Misol: <b>Ich war müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, sodass ich müde war.</b>",
+       "ru": "<b>weil</b> — причина (почему?), <b>sodass</b> — следствие (что получилось?). Для <b>dass</b> в Hauptsatz нужно <b>so</b> + прилагательное; после <b>sehr</b> + прилагательное — <b>sodass</b>. Пример: <b>Ich war müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, sodass ich müde war.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Grund oder Folge? Was passt?",
+      "bsp": "Ich hatte großen Hunger, ___ ich zwei Portionen bestellt habe. → Folge → ✓ <b>sodass</b>",
+      "q": "Wir sind in ein anderes Restaurant gegangen, ___ das erste geschlossen war.",
+      "o": [
+       "sodass",
+       "weil",
+       "dass"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "<b>weil</b> — sabab (nega?), <b>sodass</b> — natija (nima bo‘ldi?). <b>dass</b> uchun Hauptsatzda <b>so</b> + sifat kerak; <b>sehr</b> + sifatdan keyin — <b>sodass</b>. Misol: <b>Ich war müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, sodass ich müde war.</b>",
+       "ru": "<b>weil</b> — причина (почему?), <b>sodass</b> — следствие (что получилось?). Для <b>dass</b> в Hauptsatz нужно <b>so</b> + прилагательное; после <b>sehr</b> + прилагательное — <b>sodass</b>. Пример: <b>Ich war müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, sodass ich müde war.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Grund oder Folge? Was passt?",
+      "bsp": "Ich hatte großen Hunger, ___ ich zwei Portionen bestellt habe. → Folge → ✓ <b>sodass</b>",
+      "q": "Die Pizza sah toll aus. Aber sie hat ___ schlecht geschmeckt, dass wir enttäuscht waren.",
+      "o": [
+       "sehr",
+       "sodass",
+       "so"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "<b>weil</b> — sabab (nega?), <b>sodass</b> — natija (nima bo‘ldi?). <b>dass</b> uchun Hauptsatzda <b>so</b> + sifat kerak; <b>sehr</b> + sifatdan keyin — <b>sodass</b>. Misol: <b>Ich war müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, sodass ich müde war.</b>",
+       "ru": "<b>weil</b> — причина (почему?), <b>sodass</b> — следствие (что получилось?). Для <b>dass</b> в Hauptsatz нужно <b>so</b> + прилагательное; после <b>sehr</b> + прилагательное — <b>sodass</b>. Пример: <b>Ich war müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, sodass ich müde war.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Grund oder Folge? Was passt?",
+      "bsp": "Ich hatte großen Hunger, ___ ich zwei Portionen bestellt habe. → Folge → ✓ <b>sodass</b>",
+      "q": "Ich habe die Zwiebeln zu lange gebraten, ___ sie schwarz geworden sind.",
+      "o": [
+       "obwohl",
+       "weil",
+       "sodass"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "<b>weil</b> — sabab (nega?), <b>sodass</b> — natija (nima bo‘ldi?). <b>dass</b> uchun Hauptsatzda <b>so</b> + sifat kerak; <b>sehr</b> + sifatdan keyin — <b>sodass</b>. Misol: <b>Ich war müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, sodass ich müde war.</b>",
+       "ru": "<b>weil</b> — причина (почему?), <b>sodass</b> — следствие (что получилось?). Для <b>dass</b> в Hauptsatz нужно <b>so</b> + прилагательное; после <b>sehr</b> + прилагательное — <b>sodass</b>. Пример: <b>Ich war müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, sodass ich müde war.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Grund oder Folge? Was passt?",
+      "bsp": "Ich hatte großen Hunger, ___ ich zwei Portionen bestellt habe. → Folge → ✓ <b>sodass</b>",
+      "q": "Laylo war ___ hungrig, dass sie schon vor dem Essen ein Brot gegessen hat.",
+      "o": [
+       "so",
+       "sodass",
+       "sehr"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>weil</b> — sabab (nega?), <b>sodass</b> — natija (nima bo‘ldi?). <b>dass</b> uchun Hauptsatzda <b>so</b> + sifat kerak; <b>sehr</b> + sifatdan keyin — <b>sodass</b>. Misol: <b>Ich war müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, sodass ich müde war.</b>",
+       "ru": "<b>weil</b> — причина (почему?), <b>sodass</b> — следствие (что получилось?). Для <b>dass</b> в Hauptsatz нужно <b>so</b> + прилагательное; после <b>sehr</b> + прилагательное — <b>sodass</b>. Пример: <b>Ich war müde, weil ich wenig geschlafen habe.</b> · <b>Ich habe wenig geschlafen, sodass ich müde war.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *so*, *dass* oder *sodass*.",
+      "bsp": "Der Tee war ___ heiß, ___ ich warten musste. → <b>so</b> … <b>dass</b>",
+      "s": "Die Suppe war ___ lecker, ___ ich noch einen Teller genommen habe.",
+      "a": [
+       [
+        "so"
+       ],
+       [
+        "dass"
+       ]
+      ],
+      "gw": {
+       "uz": "Hauptsatzda sifat oldida <b>so</b> bo‘lsa, Nebensatz <b>dass</b> bilan boshlanadi. Sifat oldida <b>so</b> yo‘q bo‘lsa (yoki <b>sehr</b> bo‘lsa) — bitta so‘z <b>sodass</b>. Misol: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>",
+       "ru": "Если в Hauptsatz перед прилагательным стоит <b>so</b>, Nebensatz начинается с <b>dass</b>. Если <b>so</b> нет (или стоит <b>sehr</b>) — одно слово <b>sodass</b>. Пример: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *so*, *dass* oder *sodass*.",
+      "bsp": "Der Tee war ___ heiß, ___ ich warten musste. → <b>so</b> … <b>dass</b>",
+      "s": "Wir hatten kein Mehl mehr, ___ wir keinen Kuchen backen konnten.",
+      "a": [
+       [
+        "sodass"
+       ]
+      ],
+      "gw": {
+       "uz": "Hauptsatzda sifat oldida <b>so</b> bo‘lsa, Nebensatz <b>dass</b> bilan boshlanadi. Sifat oldida <b>so</b> yo‘q bo‘lsa (yoki <b>sehr</b> bo‘lsa) — bitta so‘z <b>sodass</b>. Misol: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>",
+       "ru": "Если в Hauptsatz перед прилагательным стоит <b>so</b>, Nebensatz начинается с <b>dass</b>. Если <b>so</b> нет (или стоит <b>sehr</b>) — одно слово <b>sodass</b>. Пример: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *so*, *dass* oder *sodass*.",
+      "bsp": "Der Tee war ___ heiß, ___ ich warten musste. → <b>so</b> … <b>dass</b>",
+      "s": "Mein Bruder kocht ___ gut, ___ alle Freunde bei ihm essen wollen.",
+      "a": [
+       [
+        "so"
+       ],
+       [
+        "dass"
+       ]
+      ],
+      "gw": {
+       "uz": "Hauptsatzda sifat oldida <b>so</b> bo‘lsa, Nebensatz <b>dass</b> bilan boshlanadi. Sifat oldida <b>so</b> yo‘q bo‘lsa (yoki <b>sehr</b> bo‘lsa) — bitta so‘z <b>sodass</b>. Misol: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>",
+       "ru": "Если в Hauptsatz перед прилагательным стоит <b>so</b>, Nebensatz начинается с <b>dass</b>. Если <b>so</b> нет (или стоит <b>sehr</b>) — одно слово <b>sodass</b>. Пример: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *so*, *dass* oder *sodass*.",
+      "bsp": "Der Tee war ___ heiß, ___ ich warten musste. → <b>so</b> … <b>dass</b>",
+      "s": "▪ Wie war das neue Restaurant?\n● Leider nicht gut. Wir haben ___ lange gewartet, ___ wir fast eingeschlafen sind.\n● Dann war das Fleisch kalt, ___ ich nur den Salat gegessen habe.\n▪ Oh nein! Und der Nachtisch?\n● Der war lecker, aber ___ teuer, ___ wir nur einen genommen haben.",
+      "a": [
+       [
+        "so"
+       ],
+       [
+        "dass"
+       ],
+       [
+        "sodass"
+       ],
+       [
+        "so"
+       ],
+       [
+        "dass"
+       ]
+      ],
+      "gw": {
+       "uz": "Hauptsatzda sifat oldida <b>so</b> bo‘lsa, Nebensatz <b>dass</b> bilan boshlanadi. Sifat oldida <b>so</b> yo‘q bo‘lsa (yoki <b>sehr</b> bo‘lsa) — bitta so‘z <b>sodass</b>. Misol: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>",
+       "ru": "Если в Hauptsatz перед прилагательным стоит <b>so</b>, Nebensatz начинается с <b>dass</b>. Если <b>so</b> нет (или стоит <b>sehr</b>) — одно слово <b>sodass</b>. Пример: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *so*, *dass* oder *sodass*.",
+      "bsp": "Der Tee war ___ heiß, ___ ich warten musste. → <b>so</b> … <b>dass</b>",
+      "s": "Das Gemüse war schon alt, ___ wir es wegwerfen mussten.",
+      "a": [
+       [
+        "sodass"
+       ]
+      ],
+      "gw": {
+       "uz": "Hauptsatzda sifat oldida <b>so</b> bo‘lsa, Nebensatz <b>dass</b> bilan boshlanadi. Sifat oldida <b>so</b> yo‘q bo‘lsa (yoki <b>sehr</b> bo‘lsa) — bitta so‘z <b>sodass</b>. Misol: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>",
+       "ru": "Если в Hauptsatz перед прилагательным стоит <b>so</b>, Nebensatz начинается с <b>dass</b>. Если <b>so</b> нет (или стоит <b>sehr</b>) — одно слово <b>sodass</b>. Пример: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *so*, *dass* oder *sodass*.",
+      "bsp": "Der Tee war ___ heiß, ___ ich warten musste. → <b>so</b> … <b>dass</b>",
+      "s": "Mein Foodtrend-Test\nAlle posten gerade Fotos von bunten Bowls, ___ ich auch eine machen wollte.\nIch habe ___ viele Zutaten gekauft, ___ mein Kühlschrank jetzt ganz voll ist.\nDie Bowl sah schön aus, aber sie war ___ scharf, ___ ich nur die Hälfte essen konnte.",
+      "a": [
+       [
+        "sodass"
+       ],
+       [
+        "so"
+       ],
+       [
+        "dass"
+       ],
+       [
+        "so"
+       ],
+       [
+        "dass"
+       ]
+      ],
+      "gw": {
+       "uz": "Hauptsatzda sifat oldida <b>so</b> bo‘lsa, Nebensatz <b>dass</b> bilan boshlanadi. Sifat oldida <b>so</b> yo‘q bo‘lsa (yoki <b>sehr</b> bo‘lsa) — bitta so‘z <b>sodass</b>. Misol: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>",
+       "ru": "Если в Hauptsatz перед прилагательным стоит <b>so</b>, Nebensatz начинается с <b>dass</b>. Если <b>so</b> нет (или стоит <b>sehr</b>) — одно слово <b>sodass</b>. Пример: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *so*, *dass* oder *sodass*.",
+      "bsp": "Der Tee war ___ heiß, ___ ich warten musste. → <b>so</b> … <b>dass</b>",
+      "s": "Die Portion war ___ groß, ___ zwei Personen satt geworden sind.",
+      "a": [
+       [
+        "so"
+       ],
+       [
+        "dass"
+       ]
+      ],
+      "gw": {
+       "uz": "Hauptsatzda sifat oldida <b>so</b> bo‘lsa, Nebensatz <b>dass</b> bilan boshlanadi. Sifat oldida <b>so</b> yo‘q bo‘lsa (yoki <b>sehr</b> bo‘lsa) — bitta so‘z <b>sodass</b>. Misol: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>",
+       "ru": "Если в Hauptsatz перед прилагательным стоит <b>so</b>, Nebensatz начинается с <b>dass</b>. Если <b>so</b> нет (или стоит <b>sehr</b>) — одно слово <b>sodass</b>. Пример: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *so*, *dass* oder *sodass*.",
+      "bsp": "Der Tee war ___ heiß, ___ ich warten musste. → <b>so</b> … <b>dass</b>",
+      "s": "Der Senf ist sehr stark, ___ man nur ganz wenig braucht.",
+      "a": [
+       [
+        "sodass"
+       ]
+      ],
+      "gw": {
+       "uz": "Hauptsatzda sifat oldida <b>so</b> bo‘lsa, Nebensatz <b>dass</b> bilan boshlanadi. Sifat oldida <b>so</b> yo‘q bo‘lsa (yoki <b>sehr</b> bo‘lsa) — bitta so‘z <b>sodass</b>. Misol: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>",
+       "ru": "Если в Hauptsatz перед прилагательным стоит <b>so</b>, Nebensatz начинается с <b>dass</b>. Если <b>so</b> нет (или стоит <b>sehr</b>) — одно слово <b>sodass</b>. Пример: <b>so kalt, dass …</b> · <b>sehr kalt, sodass …</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Der Kaffee war sehr heiß. Ich konnte ihn nicht trinken. (so … dass) → <b>Der Kaffee war so heiß, dass ich ihn nicht trinken konnte.</b>",
+      "q": "Das Restaurant war sehr voll. Wir haben keinen Platz bekommen. (so … dass)",
+      "w": [
+       "Das Restaurant",
+       "war",
+       "so",
+       "voll,",
+       "dass",
+       "wir",
+       "keinen Platz",
+       "bekommen",
+       "haben"
+      ],
+      "a": "Das Restaurant war so voll, dass wir keinen Platz bekommen haben.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>so … dass</b>: Hauptsatzdagi <b>sehr</b> o‘rniga <b>so</b> keladi (<b>viel → so viel</b>), keyin vergul va <b>dass</b>. <b>sodass</b>: birinchi gap o‘zgarmaydi, verguldan keyin <b>sodass</b>. Ikkalasida ham fe’l oxirida. Misol: <b>Es war so laut, dass ich nichts gehört habe.</b>",
+       "ru": "<b>so … dass</b>: вместо <b>sehr</b> в Hauptsatz ставим <b>so</b> (<b>viel → so viel</b>), потом запятая и <b>dass</b>. <b>sodass</b>: первое предложение не меняется, после запятой — <b>sodass</b>. В обоих случаях глагол в конце. Пример: <b>Es war so laut, dass ich nichts gehört habe.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Der Kaffee war sehr heiß. Ich konnte ihn nicht trinken. (so … dass) → <b>Der Kaffee war so heiß, dass ich ihn nicht trinken konnte.</b>",
+      "q": "Ich hatte kein Salz. Die Suppe hat nach nichts geschmeckt. (sodass)",
+      "w": [
+       "Ich",
+       "hatte",
+       "kein Salz,",
+       "sodass",
+       "die Suppe",
+       "nach nichts",
+       "geschmeckt",
+       "hat"
+      ],
+      "a": "Ich hatte kein Salz, sodass die Suppe nach nichts geschmeckt hat.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>so … dass</b>: Hauptsatzdagi <b>sehr</b> o‘rniga <b>so</b> keladi (<b>viel → so viel</b>), keyin vergul va <b>dass</b>. <b>sodass</b>: birinchi gap o‘zgarmaydi, verguldan keyin <b>sodass</b>. Ikkalasida ham fe’l oxirida. Misol: <b>Es war so laut, dass ich nichts gehört habe.</b>",
+       "ru": "<b>so … dass</b>: вместо <b>sehr</b> в Hauptsatz ставим <b>so</b> (<b>viel → so viel</b>), потом запятая и <b>dass</b>. <b>sodass</b>: первое предложение не меняется, после запятой — <b>sodass</b>. В обоих случаях глагол в конце. Пример: <b>Es war so laut, dass ich nichts gehört habe.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Der Kaffee war sehr heiß. Ich konnte ihn nicht trinken. (so … dass) → <b>Der Kaffee war so heiß, dass ich ihn nicht trinken konnte.</b>",
+      "q": "Malika ist sehr hungrig. Sie isst drei Brötchen. (so … dass)",
+      "w": [
+       "Malika",
+       "ist",
+       "so",
+       "hungrig,",
+       "dass",
+       "sie",
+       "drei Brötchen",
+       "isst"
+      ],
+      "a": "Malika ist so hungrig, dass sie drei Brötchen isst.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>so … dass</b>: Hauptsatzdagi <b>sehr</b> o‘rniga <b>so</b> keladi (<b>viel → so viel</b>), keyin vergul va <b>dass</b>. <b>sodass</b>: birinchi gap o‘zgarmaydi, verguldan keyin <b>sodass</b>. Ikkalasida ham fe’l oxirida. Misol: <b>Es war so laut, dass ich nichts gehört habe.</b>",
+       "ru": "<b>so … dass</b>: вместо <b>sehr</b> в Hauptsatz ставим <b>so</b> (<b>viel → so viel</b>), потом запятая и <b>dass</b>. <b>sodass</b>: первое предложение не меняется, после запятой — <b>sodass</b>. В обоих случаях глагол в конце. Пример: <b>Es war so laut, dass ich nichts gehört habe.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Der Kaffee war sehr heiß. Ich konnte ihn nicht trinken. (so … dass) → <b>Der Kaffee war so heiß, dass ich ihn nicht trinken konnte.</b>",
+      "q": "Der Zug hatte Verspätung. Wir haben das Abendessen verpasst. (sodass)",
+      "w": [
+       "Der Zug",
+       "hatte",
+       "Verspätung,",
+       "sodass",
+       "wir",
+       "das Abendessen",
+       "verpasst",
+       "haben"
+      ],
+      "a": "Der Zug hatte Verspätung, sodass wir das Abendessen verpasst haben.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>so … dass</b>: Hauptsatzdagi <b>sehr</b> o‘rniga <b>so</b> keladi (<b>viel → so viel</b>), keyin vergul va <b>dass</b>. <b>sodass</b>: birinchi gap o‘zgarmaydi, verguldan keyin <b>sodass</b>. Ikkalasida ham fe’l oxirida. Misol: <b>Es war so laut, dass ich nichts gehört habe.</b>",
+       "ru": "<b>so … dass</b>: вместо <b>sehr</b> в Hauptsatz ставим <b>so</b> (<b>viel → so viel</b>), потом запятая и <b>dass</b>. <b>sodass</b>: первое предложение не меняется, после запятой — <b>sodass</b>. В обоих случаях глагол в конце. Пример: <b>Es war so laut, dass ich nichts gehört habe.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Der Kaffee war sehr heiß. Ich konnte ihn nicht trinken. (so … dass) → <b>Der Kaffee war so heiß, dass ich ihn nicht trinken konnte.</b>",
+      "q": "Die Bohnen waren sehr hart. Wir mussten sie noch eine Stunde kochen. (so … dass)",
+      "w": [
+       "Die Bohnen",
+       "waren",
+       "so",
+       "hart,",
+       "dass",
+       "wir",
+       "sie",
+       "noch eine Stunde",
+       "kochen",
+       "mussten"
+      ],
+      "a": "Die Bohnen waren so hart, dass wir sie noch eine Stunde kochen mussten.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>so … dass</b>: Hauptsatzdagi <b>sehr</b> o‘rniga <b>so</b> keladi (<b>viel → so viel</b>), keyin vergul va <b>dass</b>. <b>sodass</b>: birinchi gap o‘zgarmaydi, verguldan keyin <b>sodass</b>. Ikkalasida ham fe’l oxirida. Misol: <b>Es war so laut, dass ich nichts gehört habe.</b>",
+       "ru": "<b>so … dass</b>: вместо <b>sehr</b> в Hauptsatz ставим <b>so</b> (<b>viel → so viel</b>), потом запятая и <b>dass</b>. <b>sodass</b>: первое предложение не меняется, после запятой — <b>sodass</b>. В обоих случаях глагол в конце. Пример: <b>Es war so laut, dass ich nichts gehört habe.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Der Kaffee war sehr heiß. Ich konnte ihn nicht trinken. (so … dass) → <b>Der Kaffee war so heiß, dass ich ihn nicht trinken konnte.</b>",
+      "q": "Ich habe viele Zwiebeln geschnitten. Ich musste weinen. (so … dass)",
+      "w": [
+       "Ich",
+       "habe",
+       "so viele",
+       "Zwiebeln",
+       "geschnitten,",
+       "dass",
+       "ich",
+       "weinen",
+       "musste"
+      ],
+      "a": "Ich habe so viele Zwiebeln geschnitten, dass ich weinen musste.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>so … dass</b>: Hauptsatzdagi <b>sehr</b> o‘rniga <b>so</b> keladi (<b>viel → so viel</b>), keyin vergul va <b>dass</b>. <b>sodass</b>: birinchi gap o‘zgarmaydi, verguldan keyin <b>sodass</b>. Ikkalasida ham fe’l oxirida. Misol: <b>Es war so laut, dass ich nichts gehört habe.</b>",
+       "ru": "<b>so … dass</b>: вместо <b>sehr</b> в Hauptsatz ставим <b>so</b> (<b>viel → so viel</b>), потом запятая и <b>dass</b>. <b>sodass</b>: первое предложение не меняется, после запятой — <b>sodass</b>. В обоих случаях глагол в конце. Пример: <b>Es war so laut, dass ich nichts gehört habe.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Der Kaffee war sehr heiß. Ich konnte ihn nicht trinken. (so … dass) → <b>Der Kaffee war so heiß, dass ich ihn nicht trinken konnte.</b>",
+      "q": "Das Wetter war schön. Wir haben im Garten gegrillt. (sodass)",
+      "w": [
+       "Das Wetter",
+       "war",
+       "schön,",
+       "sodass",
+       "wir",
+       "im Garten",
+       "gegrillt",
+       "haben"
+      ],
+      "a": "Das Wetter war schön, sodass wir im Garten gegrillt haben.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>so … dass</b>: Hauptsatzdagi <b>sehr</b> o‘rniga <b>so</b> keladi (<b>viel → so viel</b>), keyin vergul va <b>dass</b>. <b>sodass</b>: birinchi gap o‘zgarmaydi, verguldan keyin <b>sodass</b>. Ikkalasida ham fe’l oxirida. Misol: <b>Es war so laut, dass ich nichts gehört habe.</b>",
+       "ru": "<b>so … dass</b>: вместо <b>sehr</b> в Hauptsatz ставим <b>so</b> (<b>viel → so viel</b>), потом запятая и <b>dass</b>. <b>sodass</b>: первое предложение не меняется, после запятой — <b>sodass</b>. В обоих случаях глагол в конце. Пример: <b>Es war so laut, dass ich nichts gehört habe.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich hatte Hunger, <b>weil</b> ich drei Teller gegessen habe. → Ich hatte Hunger, <b>sodass</b> ich drei Teller gegessen habe.",
+      "s": "Der Kuchen war so trocken , dass niemand wollte ihn essen .",
+      "a": [
+       8
+      ],
+      "fix": "Der Kuchen war so trocken, dass niemand ihn essen wollte.",
+      "gw": {
+       "uz": "Tekshiring: (1) <b>dass</b> uchun Hauptsatzda <b>so</b> kerak (<b>sehr</b> emas); (2) <b>so …</b> bilan — <b>dass</b>, <b>sodass</b> emas; (3) natija — <b>sodass</b>, sabab — <b>weil</b>; (4) fe’l oxirida. Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
+       "ru": "Проверьте: (1) для <b>dass</b> в Hauptsatz нужно <b>so</b> (не <b>sehr</b>); (2) после <b>so …</b> — <b>dass</b>, а не <b>sodass</b>; (3) следствие — <b>sodass</b>, причина — <b>weil</b>; (4) глагол в конце. Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich hatte Hunger, <b>weil</b> ich drei Teller gegessen habe. → Ich hatte Hunger, <b>sodass</b> ich drei Teller gegessen habe.",
+      "s": "Das Brot war sehr alt , dass wir es nicht essen konnten .",
+      "a": [
+       3
+      ],
+      "fix": "Das Brot war so alt, dass wir es nicht essen konnten.",
+      "gw": {
+       "uz": "Tekshiring: (1) <b>dass</b> uchun Hauptsatzda <b>so</b> kerak (<b>sehr</b> emas); (2) <b>so …</b> bilan — <b>dass</b>, <b>sodass</b> emas; (3) natija — <b>sodass</b>, sabab — <b>weil</b>; (4) fe’l oxirida. Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
+       "ru": "Проверьте: (1) для <b>dass</b> в Hauptsatz нужно <b>so</b> (не <b>sehr</b>); (2) после <b>so …</b> — <b>dass</b>, а не <b>sodass</b>; (3) следствие — <b>sodass</b>, причина — <b>weil</b>; (4) глагол в конце. Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich hatte Hunger, <b>weil</b> ich drei Teller gegessen habe. → Ich hatte Hunger, <b>sodass</b> ich drei Teller gegessen habe.",
+      "s": "Ich habe zu viel Salz genommen , weil die Suppe jetzt nicht mehr schmeckt .",
+      "a": [
+       7
+      ],
+      "fix": "Ich habe zu viel Salz genommen, sodass die Suppe jetzt nicht mehr schmeckt.",
+      "gw": {
+       "uz": "Tekshiring: (1) <b>dass</b> uchun Hauptsatzda <b>so</b> kerak (<b>sehr</b> emas); (2) <b>so …</b> bilan — <b>dass</b>, <b>sodass</b> emas; (3) natija — <b>sodass</b>, sabab — <b>weil</b>; (4) fe’l oxirida. Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
+       "ru": "Проверьте: (1) для <b>dass</b> в Hauptsatz нужно <b>so</b> (не <b>sehr</b>); (2) после <b>so …</b> — <b>dass</b>, а не <b>sodass</b>; (3) следствие — <b>sodass</b>, причина — <b>weil</b>; (4) глагол в конце. Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich hatte Hunger, <b>weil</b> ich drei Teller gegessen habe. → Ich hatte Hunger, <b>sodass</b> ich drei Teller gegessen habe.",
+      "s": "Die Soße war so scharf , sodass Anna nichts mehr essen konnte .",
+      "a": [
+       6
+      ],
+      "fix": "Die Soße war so scharf, dass Anna nichts mehr essen konnte.",
+      "gw": {
+       "uz": "Tekshiring: (1) <b>dass</b> uchun Hauptsatzda <b>so</b> kerak (<b>sehr</b> emas); (2) <b>so …</b> bilan — <b>dass</b>, <b>sodass</b> emas; (3) natija — <b>sodass</b>, sabab — <b>weil</b>; (4) fe’l oxirida. Misol: <b>Der Tee war so heiß, dass ich warten musste.</b>",
+       "ru": "Проверьте: (1) для <b>dass</b> в Hauptsatz нужно <b>so</b> (не <b>sehr</b>); (2) после <b>so …</b> — <b>dass</b>, а не <b>sodass</b>; (3) следствие — <b>sodass</b>, причина — <b>weil</b>; (4) глагол в конце. Пример: <b>Der Tee war so heiß, dass ich warten musste.</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wortbildung: Verb → Nomen (das Essen)</h4>\n<table class=\"ex-tb\"><tr><th>Verb</th><th>Nomen</th><th>Beispiel</th></tr>\n<tr><td>essen</td><td><b>das</b> Essen</td><td>Das Essen ist fertig.</td></tr>\n<tr><td>kochen</td><td><b>das</b> Kochen</td><td><b>Beim</b> Kochen höre ich Musik.</td></tr>\n<tr><td>aussehen</td><td><b>das</b> Aussehen</td><td>Das Aussehen ist auch wichtig.</td></tr>\n<tr><td>einkaufen</td><td><b>das</b> Einkaufen</td><td><b>Nach dem</b> Einkaufen koche ich.</td></tr></table>\n<p class=\"ex-note\">Infinitiv katta harf bilan yozilsa — ot bo‘ladi, artikli doim <b>das</b>. Ko‘pincha <b>beim</b> (= bei dem), <b>zum</b>, <b>nach dem</b> bilan keladi.</p>",
+      "ru": "<h4>Wortbildung: Verb → Nomen (das Essen)</h4>\n<table class=\"ex-tb\"><tr><th>Verb</th><th>Nomen</th><th>Beispiel</th></tr>\n<tr><td>essen</td><td><b>das</b> Essen</td><td>Das Essen ist fertig.</td></tr>\n<tr><td>kochen</td><td><b>das</b> Kochen</td><td><b>Beim</b> Kochen höre ich Musik.</td></tr>\n<tr><td>aussehen</td><td><b>das</b> Aussehen</td><td>Das Aussehen ist auch wichtig.</td></tr>\n<tr><td>einkaufen</td><td><b>das</b> Einkaufen</td><td><b>Nach dem</b> Einkaufen koche ich.</td></tr></table>\n<p class=\"ex-note\">Инфинитив с большой буквы — это существительное, артикль всегда <b>das</b>. Часто идёт с <b>beim</b> (= bei dem), <b>zum</b>, <b>nach dem</b>.</p>"
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Nomen.",
+      "bsp": "Ich höre beim ___ (kochen) Musik. → <b>Kochen</b>",
+      "s": "Das ___ (essen) in der Mensa ist billig und lecker.",
+      "a": [
+       [
+        "Essen"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lning Infinitivi katta harf bilan yozilsa — ot bo‘ladi, artikli doim <b>das</b>: <b>kochen → das Kochen</b>. <b>beim</b> (bei dem), <b>zum</b>, <b>nach dem</b>dan keyin ko‘p ishlatiladi. Misol: <b>Beim Essen sehe ich nicht fern.</b>",
+       "ru": "Инфинитив глагола с большой буквы — это существительное, артикль всегда <b>das</b>: <b>kochen → das Kochen</b>. Часто после <b>beim</b> (bei dem), <b>zum</b>, <b>nach dem</b>. Пример: <b>Beim Essen sehe ich nicht fern.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Nomen.",
+      "bsp": "Ich höre beim ___ (kochen) Musik. → <b>Kochen</b>",
+      "s": "Beim ___ (backen) braucht man Mehl, Zucker und Eier.",
+      "a": [
+       [
+        "Backen"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lning Infinitivi katta harf bilan yozilsa — ot bo‘ladi, artikli doim <b>das</b>: <b>kochen → das Kochen</b>. <b>beim</b> (bei dem), <b>zum</b>, <b>nach dem</b>dan keyin ko‘p ishlatiladi. Misol: <b>Beim Essen sehe ich nicht fern.</b>",
+       "ru": "Инфинитив глагола с большой буквы — это существительное, артикль всегда <b>das</b>: <b>kochen → das Kochen</b>. Часто после <b>beim</b> (bei dem), <b>zum</b>, <b>nach dem</b>. Пример: <b>Beim Essen sehe ich nicht fern.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Nomen.",
+      "bsp": "Ich höre beim ___ (kochen) Musik. → <b>Kochen</b>",
+      "s": "Für mich ist das ___ (aussehen) von einem Gericht sehr wichtig.",
+      "a": [
+       [
+        "Aussehen"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lning Infinitivi katta harf bilan yozilsa — ot bo‘ladi, artikli doim <b>das</b>: <b>kochen → das Kochen</b>. <b>beim</b> (bei dem), <b>zum</b>, <b>nach dem</b>dan keyin ko‘p ishlatiladi. Misol: <b>Beim Essen sehe ich nicht fern.</b>",
+       "ru": "Инфинитив глагола с большой буквы — это существительное, артикль всегда <b>das</b>: <b>kochen → das Kochen</b>. Часто после <b>beim</b> (bei dem), <b>zum</b>, <b>nach dem</b>. Пример: <b>Beim Essen sehe ich nicht fern.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Nomen.",
+      "bsp": "Ich höre beim ___ (kochen) Musik. → <b>Kochen</b>",
+      "s": "Nach dem ___ (einkaufen) koche ich mit meiner Mitbewohnerin.",
+      "a": [
+       [
+        "Einkaufen"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lning Infinitivi katta harf bilan yozilsa — ot bo‘ladi, artikli doim <b>das</b>: <b>kochen → das Kochen</b>. <b>beim</b> (bei dem), <b>zum</b>, <b>nach dem</b>dan keyin ko‘p ishlatiladi. Misol: <b>Beim Essen sehe ich nicht fern.</b>",
+       "ru": "Инфинитив глагола с большой буквы — это существительное, артикль всегда <b>das</b>: <b>kochen → das Kochen</b>. Часто после <b>beim</b> (bei dem), <b>zum</b>, <b>nach dem</b>. Пример: <b>Beim Essen sehe ich nicht fern.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Nomen.",
+      "bsp": "Ich höre beim ___ (kochen) Musik. → <b>Kochen</b>",
+      "s": "Beim ___ (schneiden) von Zwiebeln muss ich immer weinen.",
+      "a": [
+       [
+        "Schneiden"
+       ]
+      ],
+      "gw": {
+       "uz": "Fe’lning Infinitivi katta harf bilan yozilsa — ot bo‘ladi, artikli doim <b>das</b>: <b>kochen → das Kochen</b>. <b>beim</b> (bei dem), <b>zum</b>, <b>nach dem</b>dan keyin ko‘p ishlatiladi. Misol: <b>Beim Essen sehe ich nicht fern.</b>",
+       "ru": "Инфинитив глагола с большой буквы — это существительное, артикль всегда <b>das</b>: <b>kochen → das Kochen</b>. Часто после <b>beim</b> (bei dem), <b>zum</b>, <b>nach dem</b>. Пример: <b>Beim Essen sehe ich nicht fern.</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,559 @@
+{
+ "id": "B1-b11-8-G",
+ "meta": {
+  "title": "Grammatik · Infinitiv mit zu",
+  "stitle": "Infinitiv mit zu · Lust haben, … zu · aufzuräumen"
+ },
+ "ex": {
+  "title": "Lektion 8 · Grammatik",
+  "sub": "Infinitiv mit zu · Lust haben, … zu · aufzuräumen",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Infinitiv mit zu</h4><table class=\"ex-tb\"><tr><th>nach …</th><th>Beispiel</th></tr><tr><td>versuchen, vergessen, anfangen, vorhaben, aufhören</td><td>Ich <b>versuche</b>, weniger Plastik <b>zu kaufen</b>.</td></tr><tr><td>Lust / Zeit / Angst haben</td><td>Hast du <b>Lust</b>, im Park <b>zu helfen</b>?</td></tr><tr><td>Es ist wichtig / schwer / schön … · Es macht Spaß</td><td><b>Es ist wichtig</b>, die Umwelt <b>zu schützen</b>.</td></tr></table><p class=\"ex-note\">Ikkinchi harakat <b>zu</b> + Infinitiv bilan gap oxirida keladi, oldidan vergul qo‘yiladi. Bu qismda ega yo‘q — u asosiy gapdan tushuniladi: Ich versuche, (ich) weniger Plastik zu kaufen.</p>",
+      "ru": "<h4>Infinitiv mit zu</h4><table class=\"ex-tb\"><tr><th>nach …</th><th>Beispiel</th></tr><tr><td>versuchen, vergessen, anfangen, vorhaben, aufhören</td><td>Ich <b>versuche</b>, weniger Plastik <b>zu kaufen</b>.</td></tr><tr><td>Lust / Zeit / Angst haben</td><td>Hast du <b>Lust</b>, im Park <b>zu helfen</b>?</td></tr><tr><td>Es ist wichtig / schwer / schön … · Es macht Spaß</td><td><b>Es ist wichtig</b>, die Umwelt <b>zu schützen</b>.</td></tr></table><p class=\"ex-note\">Второе действие выражается через <b>zu</b> + Infinitiv в конце предложения, перед ним ставится запятая. Подлежащего в этой части нет — оно понятно из главного предложения: Ich versuche, (ich) weniger Plastik zu kaufen.</p>"
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wo steht zu?</h4><table class=\"ex-tb\"><tr><td>einfaches Verb</td><td><b>zu</b> helfen · <b>zu</b> schützen · <b>zu</b> sammeln</td></tr><tr><td>trennbares Verb</td><td>auf<b>zu</b>räumen · mit<b>zu</b>machen · ein<b>zu</b>kaufen</td></tr><tr><td>Modalverb</td><td>Ich <b>will</b> helfen. · Wir <b>müssen</b> aufräumen. (ohne zu!)</td></tr></table><p class=\"ex-note\">Ajraladigan fe’llarda <b>zu</b> old qo‘shimcha bilan fe’l orasiga kiradi va hammasi bitta so‘z bo‘ladi: <b>aufzuräumen</b>. Modal fe’llardan keyin (<b>können, müssen, wollen, möchten, sollen, dürfen</b>) zu ishlatilmaydi.</p>",
+      "ru": "<h4>Wo steht zu?</h4><table class=\"ex-tb\"><tr><td>einfaches Verb</td><td><b>zu</b> helfen · <b>zu</b> schützen · <b>zu</b> sammeln</td></tr><tr><td>trennbares Verb</td><td>auf<b>zu</b>räumen · mit<b>zu</b>machen · ein<b>zu</b>kaufen</td></tr><tr><td>Modalverb</td><td>Ich <b>will</b> helfen. · Wir <b>müssen</b> aufräumen. (ohne zu!)</td></tr></table><p class=\"ex-note\">У отделяемых глаголов <b>zu</b> встаёт между приставкой и глаголом, и всё пишется одним словом: <b>aufzuräumen</b>. После модальных глаголов (<b>können, müssen, wollen, möchten, sollen, dürfen</b>) zu не используется.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *zu* und den Infinitiv.",
+      "bsp": "Ich habe keine Zeit, das Buch zu lesen. → <b>zu lesen</b>",
+      "s": "Es ist wichtig , die Umwelt zu schützen .",
+      "a": [
+       6,
+       7
+      ],
+      "gw": {
+       "uz": "Ba’zi fe’llar, iboralar va <b>Es ist</b> + sifatdan keyin ikkinchi harakat <b>zu</b> + Infinitiv bilan gap oxirida turadi. Ajraladigan fe’llarda <b>zu</b> o‘rtaga kiradi — bitta so‘z: mit<b>zu</b>machen. Misol: <b>Es ist wichtig, Wasser zu sparen.</b>",
+       "ru": "После некоторых глаголов, выражений и <b>Es ist</b> + прилагательное второе действие стоит в конце как <b>zu</b> + Infinitiv. У отделяемых глаголов <b>zu</b> встаёт в середину — одно слово: mit<b>zu</b>machen. Пример: <b>Es ist wichtig, Wasser zu sparen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *zu* und den Infinitiv.",
+      "s": "Wir versuchen , weniger Plastik zu benutzen .",
+      "a": [
+       5,
+       6
+      ],
+      "gw": {
+       "uz": "Ba’zi fe’llar, iboralar va <b>Es ist</b> + sifatdan keyin ikkinchi harakat <b>zu</b> + Infinitiv bilan gap oxirida turadi. Ajraladigan fe’llarda <b>zu</b> o‘rtaga kiradi — bitta so‘z: mit<b>zu</b>machen. Misol: <b>Es ist wichtig, Wasser zu sparen.</b>",
+       "ru": "После некоторых глаголов, выражений и <b>Es ist</b> + прилагательное второе действие стоит в конце как <b>zu</b> + Infinitiv. У отделяемых глаголов <b>zu</b> встаёт в середину — одно слово: mit<b>zu</b>machen. Пример: <b>Es ist wichtig, Wasser zu sparen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *zu* und den Infinitiv.",
+      "s": "Hast du Lust , mit uns Müll im Park zu sammeln ?",
+      "a": [
+       9,
+       10
+      ],
+      "gw": {
+       "uz": "Ba’zi fe’llar, iboralar va <b>Es ist</b> + sifatdan keyin ikkinchi harakat <b>zu</b> + Infinitiv bilan gap oxirida turadi. Ajraladigan fe’llarda <b>zu</b> o‘rtaga kiradi — bitta so‘z: mit<b>zu</b>machen. Misol: <b>Es ist wichtig, Wasser zu sparen.</b>",
+       "ru": "После некоторых глаголов, выражений и <b>Es ist</b> + прилагательное второе действие стоит в конце как <b>zu</b> + Infinitiv. У отделяемых глаголов <b>zu</b> встаёт в середину — одно слово: mit<b>zu</b>machen. Пример: <b>Es ist wichtig, Wasser zu sparen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *zu* und den Infinitiv.",
+      "s": "Viele junge Leute haben keine Zeit , im Verein mitzumachen .",
+      "a": [
+       9
+      ],
+      "gw": {
+       "uz": "Ba’zi fe’llar, iboralar va <b>Es ist</b> + sifatdan keyin ikkinchi harakat <b>zu</b> + Infinitiv bilan gap oxirida turadi. Ajraladigan fe’llarda <b>zu</b> o‘rtaga kiradi — bitta so‘z: mit<b>zu</b>machen. Misol: <b>Es ist wichtig, Wasser zu sparen.</b>",
+       "ru": "После некоторых глаголов, выражений и <b>Es ist</b> + прилагательное второе действие стоит в конце как <b>zu</b> + Infinitiv. У отделяемых глаголов <b>zu</b> встаёт в середину — одно слово: mit<b>zu</b>machen. Пример: <b>Es ist wichtig, Wasser zu sparen.</b>"
+      }
+     },
+     {
+      "t": "cat",
+      "h": "Mit *zu* oder ohne *zu*? Ordnen Sie zu.",
+      "bsp": "Ich kann … → <b>ohne zu</b>",
+      "c": [
+       "mit zu",
+       "ohne zu"
+      ],
+      "i": [
+       [
+        "Ich habe Lust, …",
+        0
+       ],
+       [
+        "Ich will …",
+        1
+       ],
+       [
+        "Es ist wichtig, …",
+        0
+       ],
+       [
+        "Ich muss …",
+        1
+       ],
+       [
+        "Ich vergesse oft, …",
+        0
+       ],
+       [
+        "Ich möchte …",
+        1
+       ],
+       [
+        "Ich fange an, …",
+        0
+       ],
+       [
+        "Wir dürfen …",
+        1
+       ]
+      ],
+      "gw": {
+       "uz": "Modal fe’llardan (<b>können, müssen, wollen, möchten, sollen, dürfen</b>) keyin <b>zu</b> yo‘q. <b>versuchen, vergessen, anfangen, vorhaben, Lust / Zeit haben, Es ist wichtig</b> dan keyin — <b>zu</b> + Infinitiv. Misol: <b>Ich will helfen.</b> · <b>Ich versuche zu helfen.</b>",
+       "ru": "После модальных глаголов (<b>können, müssen, wollen, möchten, sollen, dürfen</b>) <b>zu</b> нет. После <b>versuchen, vergessen, anfangen, vorhaben, Lust / Zeit haben, Es ist wichtig</b> — <b>zu</b> + Infinitiv. Пример: <b>Ich will helfen.</b> · <b>Ich versuche zu helfen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Ich habe vor, morgen früh ___. (aufstehen) → ✓ <b>aufzustehen</b>",
+      "q": "Hast du Zeit, mir bei der Rede ___?",
+      "o": [
+       "helfen",
+       "zu helfen",
+       "hilfst"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Avval gap boshini ko‘ring: modal fe’l bo‘lsa — zu siz Infinitiv; <b>versuchen, vorhaben, Lust / Zeit haben, Es ist …</b> bo‘lsa — <b>zu</b> + Infinitiv. Ajraladigan fe’l: <b>auf-zu-räumen</b>, «zu aufräumen» emas. Misol: <b>Ich möchte mitmachen.</b> · <b>Ich habe Lust, im Projekt mitzumachen.</b>",
+       "ru": "Сначала посмотрите на начало: модальный глагол — инфинитив без zu; <b>versuchen, vorhaben, Lust / Zeit haben, Es ist …</b> — <b>zu</b> + Infinitiv. Отделяемый глагол: <b>auf-zu-räumen</b>, а не «zu aufräumen». Пример: <b>Ich möchte mitmachen.</b> · <b>Ich habe Lust, im Projekt mitzumachen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Ich habe keine Lust, heute ins Kino ___.",
+      "o": [
+       "zu gehen",
+       "gehen",
+       "gehe"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Avval gap boshini ko‘ring: modal fe’l bo‘lsa — zu siz Infinitiv; <b>versuchen, vorhaben, Lust / Zeit haben, Es ist …</b> bo‘lsa — <b>zu</b> + Infinitiv. Ajraladigan fe’l: <b>auf-zu-räumen</b>, «zu aufräumen» emas. Misol: <b>Ich möchte mitmachen.</b> · <b>Ich habe Lust, im Projekt mitzumachen.</b>",
+       "ru": "Сначала посмотрите на начало: модальный глагол — инфинитив без zu; <b>versuchen, vorhaben, Lust / Zeit haben, Es ist …</b> — <b>zu</b> + Infinitiv. Отделяемый глагол: <b>auf-zu-räumen</b>, а не «zu aufräumen». Пример: <b>Ich möchte mitmachen.</b> · <b>Ich habe Lust, im Projekt mitzumachen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Ich möchte im Sommer bei einem Umweltprojekt ___.",
+      "o": [
+       "mitzumachen",
+       "mitmachen",
+       "zu mitmachen"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Avval gap boshini ko‘ring: modal fe’l bo‘lsa — zu siz Infinitiv; <b>versuchen, vorhaben, Lust / Zeit haben, Es ist …</b> bo‘lsa — <b>zu</b> + Infinitiv. Ajraladigan fe’l: <b>auf-zu-räumen</b>, «zu aufräumen» emas. Misol: <b>Ich möchte mitmachen.</b> · <b>Ich habe Lust, im Projekt mitzumachen.</b>",
+       "ru": "Сначала посмотрите на начало: модальный глагол — инфинитив без zu; <b>versuchen, vorhaben, Lust / Zeit haben, Es ist …</b> — <b>zu</b> + Infinitiv. Отделяемый глагол: <b>auf-zu-räumen</b>, а не «zu aufräumen». Пример: <b>Ich möchte mitmachen.</b> · <b>Ich habe Lust, im Projekt mitzumachen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Wir haben vor, am Samstag den Spielplatz ___.",
+      "o": [
+       "aufräumen",
+       "zu aufräumen",
+       "aufzuräumen"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Avval gap boshini ko‘ring: modal fe’l bo‘lsa — zu siz Infinitiv; <b>versuchen, vorhaben, Lust / Zeit haben, Es ist …</b> bo‘lsa — <b>zu</b> + Infinitiv. Ajraladigan fe’l: <b>auf-zu-räumen</b>, «zu aufräumen» emas. Misol: <b>Ich möchte mitmachen.</b> · <b>Ich habe Lust, im Projekt mitzumachen.</b>",
+       "ru": "Сначала посмотрите на начало: модальный глагол — инфинитив без zu; <b>versuchen, vorhaben, Lust / Zeit haben, Es ist …</b> — <b>zu</b> + Infinitiv. Отделяемый глагол: <b>auf-zu-räumen</b>, а не «zu aufräumen». Пример: <b>Ich möchte mitmachen.</b> · <b>Ich habe Lust, im Projekt mitzumachen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Mein Bruder kann sehr gut Reden ___.",
+      "o": [
+       "halten",
+       "zu halten"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Avval gap boshini ko‘ring: modal fe’l bo‘lsa — zu siz Infinitiv; <b>versuchen, vorhaben, Lust / Zeit haben, Es ist …</b> bo‘lsa — <b>zu</b> + Infinitiv. Ajraladigan fe’l: <b>auf-zu-räumen</b>, «zu aufräumen» emas. Misol: <b>Ich möchte mitmachen.</b> · <b>Ich habe Lust, im Projekt mitzumachen.</b>",
+       "ru": "Сначала посмотрите на начало: модальный глагол — инфинитив без zu; <b>versuchen, vorhaben, Lust / Zeit haben, Es ist …</b> — <b>zu</b> + Infinitiv. Отделяемый глагол: <b>auf-zu-räumen</b>, а не «zu aufräumen». Пример: <b>Ich möchte mitmachen.</b> · <b>Ich habe Lust, im Projekt mitzumachen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Verb – mit oder ohne *zu*.",
+      "bsp": "Es ist schön, Freunde ___. (treffen) → <b>zu treffen</b>",
+      "s": "Es ist nicht schwer, Müll ___. (trennen)",
+      "a": [
+       [
+        "zu trennen"
+       ]
+      ],
+      "gw": {
+       "uz": "Gap boshiga qarang: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; modal fe’l (<b>wollen, müssen, sollen …</b>) → faqat Infinitiv. Ajraladigan fe’lda zu o‘rtada: aus<b>zu</b>machen. Misol: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>",
+       "ru": "Смотрите на начало предложения: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; модальный глагол (<b>wollen, müssen, sollen …</b>) → только инфинитив. У отделяемого глагола zu в середине: aus<b>zu</b>machen. Пример: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Verb – mit oder ohne *zu*.",
+      "s": "Ich versuche, jeden Tag mit dem Fahrrad zur Uni ___. (fahren)",
+      "a": [
+       [
+        "zu fahren"
+       ]
+      ],
+      "gw": {
+       "uz": "Gap boshiga qarang: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; modal fe’l (<b>wollen, müssen, sollen …</b>) → faqat Infinitiv. Ajraladigan fe’lda zu o‘rtada: aus<b>zu</b>machen. Misol: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>",
+       "ru": "Смотрите на начало предложения: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; модальный глагол (<b>wollen, müssen, sollen …</b>) → только инфинитив. У отделяемого глагола zu в середине: aus<b>zu</b>machen. Пример: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Verb – mit oder ohne *zu*.",
+      "s": "Meine Eltern wollen am Sonntag im Park Bäume ___. (pflanzen)",
+      "a": [
+       [
+        "pflanzen"
+       ]
+      ],
+      "gw": {
+       "uz": "Gap boshiga qarang: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; modal fe’l (<b>wollen, müssen, sollen …</b>) → faqat Infinitiv. Ajraladigan fe’lda zu o‘rtada: aus<b>zu</b>machen. Misol: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>",
+       "ru": "Смотрите на начало предложения: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; модальный глагол (<b>wollen, müssen, sollen …</b>) → только инфинитив. У отделяемого глагола zu в середине: aus<b>zu</b>machen. Пример: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Verb – mit oder ohne *zu*.",
+      "s": "Vergiss nicht, das Licht ___! (ausmachen)",
+      "a": [
+       [
+        "auszumachen"
+       ]
+      ],
+      "gw": {
+       "uz": "Gap boshiga qarang: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; modal fe’l (<b>wollen, müssen, sollen …</b>) → faqat Infinitiv. Ajraladigan fe’lda zu o‘rtada: aus<b>zu</b>machen. Misol: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>",
+       "ru": "Смотрите на начало предложения: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; модальный глагол (<b>wollen, müssen, sollen …</b>) → только инфинитив. У отделяемого глагола zu в середине: aus<b>zu</b>machen. Пример: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Verb – mit oder ohne *zu*.",
+      "s": "Viele Bürger haben keine Zeit, sich über Politik ___. (informieren)",
+      "a": [
+       [
+        "zu informieren"
+       ]
+      ],
+      "gw": {
+       "uz": "Gap boshiga qarang: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; modal fe’l (<b>wollen, müssen, sollen …</b>) → faqat Infinitiv. Ajraladigan fe’lda zu o‘rtada: aus<b>zu</b>machen. Misol: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>",
+       "ru": "Смотрите на начало предложения: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; модальный глагол (<b>wollen, müssen, sollen …</b>) → только инфинитив. У отделяемого глагола zu в середине: aus<b>zu</b>machen. Пример: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Verb – mit oder ohne *zu*.",
+      "s": "Ich habe vor, nach der Schule ein Freiwilliges Soziales Jahr ___. (machen)",
+      "a": [
+       [
+        "zu machen"
+       ]
+      ],
+      "gw": {
+       "uz": "Gap boshiga qarang: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; modal fe’l (<b>wollen, müssen, sollen …</b>) → faqat Infinitiv. Ajraladigan fe’lda zu o‘rtada: aus<b>zu</b>machen. Misol: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>",
+       "ru": "Смотрите на начало предложения: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; модальный глагол (<b>wollen, müssen, sollen …</b>) → только инфинитив. У отделяемого глагола zu в середине: aus<b>zu</b>machen. Пример: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Verb – mit oder ohne *zu*.",
+      "s": "Forum: Soziales Pflichtjahr – ja oder nein?\nSevara: Ich finde die Idee gut. Es ist wichtig, anderen Menschen ___ (helfen).\nIch habe auch schon angefangen, einmal pro Woche im Altenheim ___ (vorlesen).\nTimur: Ich bin dagegen. Junge Leute sollen selbst ___ (entscheiden), was sie machen.",
+      "a": [
+       [
+        "zu helfen"
+       ],
+       [
+        "vorzulesen"
+       ],
+       [
+        "entscheiden"
+       ]
+      ],
+      "gw": {
+       "uz": "Gap boshiga qarang: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; modal fe’l (<b>wollen, müssen, sollen …</b>) → faqat Infinitiv. Ajraladigan fe’lda zu o‘rtada: aus<b>zu</b>machen. Misol: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>",
+       "ru": "Смотрите на начало предложения: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; модальный глагол (<b>wollen, müssen, sollen …</b>) → только инфинитив. У отделяемого глагола zu в середине: aus<b>zu</b>machen. Пример: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Verb – mit oder ohne *zu*.",
+      "s": "▪ Hast du Lust, am Samstag beim Stadtfest ___ (mitmachen)?\n● Gern! Aber ich muss am Vormittag noch mein Zimmer ___ (aufräumen).\n▪ Kein Problem. Vergiss nicht, deine Gitarre ___ (mitbringen)!",
+      "a": [
+       [
+        "mitzumachen"
+       ],
+       [
+        "aufräumen"
+       ],
+       [
+        "mitzubringen"
+       ]
+      ],
+      "gw": {
+       "uz": "Gap boshiga qarang: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; modal fe’l (<b>wollen, müssen, sollen …</b>) → faqat Infinitiv. Ajraladigan fe’lda zu o‘rtada: aus<b>zu</b>machen. Misol: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>",
+       "ru": "Смотрите на начало предложения: <b>versuchen, vergessen, vorhaben, Lust / Zeit haben, Es ist …</b> → <b>zu</b> + Infinitiv; модальный глагол (<b>wollen, müssen, sollen …</b>) → только инфинитив. У отделяемого глагола zu в середине: aus<b>zu</b>machen. Пример: <b>Vergiss nicht, einzukaufen!</b> · <b>Wir müssen einkaufen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz mit *zu*.",
+      "bsp": "Ich lerne Gitarre. Ich habe Lust darauf. → <b>Ich habe Lust, Gitarre zu lernen.</b>",
+      "q": "Wir sparen Wasser. Das ist wichtig.",
+      "w": [
+       "Es",
+       "ist",
+       "wichtig,",
+       "Wasser",
+       "zu",
+       "sparen"
+      ],
+      "a": "Es ist wichtig, Wasser zu sparen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gap (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) asosiy gap bo‘ladi. Birinchi gapdan ega tushib qoladi, fe’l <b>zu</b> + Infinitiv bo‘lib oxiriga o‘tadi, oldidan vergul. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Misol: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>",
+       "ru": "Второе предложение (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) становится главным. В первом исчезает подлежащее, глагол переходит в конец как <b>zu</b> + Infinitiv, перед ним запятая. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Пример: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz mit *zu*.",
+      "q": "Paul räumt sein Zimmer nicht auf. Er vergisst es immer.",
+      "w": [
+       "Paul",
+       "vergisst",
+       "immer,",
+       "sein Zimmer",
+       "aufzuräumen"
+      ],
+      "a": "Paul vergisst immer, sein Zimmer aufzuräumen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gap (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) asosiy gap bo‘ladi. Birinchi gapdan ega tushib qoladi, fe’l <b>zu</b> + Infinitiv bo‘lib oxiriga o‘tadi, oldidan vergul. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Misol: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>",
+       "ru": "Второе предложение (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) становится главным. В первом исчезает подлежащее, глагол переходит в конец как <b>zu</b> + Infinitiv, перед ним запятая. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Пример: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz mit *zu*.",
+      "q": "Ich gehe heute nicht zum Treffen. Ich habe keine Zeit.",
+      "w": [
+       "Ich",
+       "habe",
+       "heute",
+       "keine Zeit,",
+       "zum Treffen",
+       "zu",
+       "gehen"
+      ],
+      "a": "Ich habe heute keine Zeit, zum Treffen zu gehen.",
+      "alt": [
+       "Ich habe keine Zeit, heute zum Treffen zu gehen."
+      ],
+      "gw": {
+       "uz": "Ikkinchi gap (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) asosiy gap bo‘ladi. Birinchi gapdan ega tushib qoladi, fe’l <b>zu</b> + Infinitiv bo‘lib oxiriga o‘tadi, oldidan vergul. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Misol: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>",
+       "ru": "Второе предложение (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) становится главным. В первом исчезает подлежащее, глагол переходит в конец как <b>zu</b> + Infinitiv, перед ним запятая. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Пример: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz mit *zu*.",
+      "q": "Ich lerne jeden Tag zehn neue Wörter. Das versuche ich.",
+      "w": [
+       "Ich",
+       "versuche,",
+       "jeden Tag",
+       "zehn neue Wörter",
+       "zu",
+       "lernen"
+      ],
+      "a": "Ich versuche, jeden Tag zehn neue Wörter zu lernen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gap (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) asosiy gap bo‘ladi. Birinchi gapdan ega tushib qoladi, fe’l <b>zu</b> + Infinitiv bo‘lib oxiriga o‘tadi, oldidan vergul. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Misol: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>",
+       "ru": "Второе предложение (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) становится главным. В первом исчезает подлежащее, глагол переходит в конец как <b>zu</b> + Infinitiv, перед ним запятая. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Пример: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz mit *zu*.",
+      "q": "Wir sammeln Geld für das Tierheim. Das haben wir vor.",
+      "w": [
+       "Wir",
+       "haben",
+       "vor,",
+       "Geld",
+       "für das Tierheim",
+       "zu",
+       "sammeln"
+      ],
+      "a": "Wir haben vor, Geld für das Tierheim zu sammeln.",
+      "alt": [
+       "Wir haben vor, für das Tierheim Geld zu sammeln."
+      ],
+      "gw": {
+       "uz": "Ikkinchi gap (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) asosiy gap bo‘ladi. Birinchi gapdan ega tushib qoladi, fe’l <b>zu</b> + Infinitiv bo‘lib oxiriga o‘tadi, oldidan vergul. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Misol: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>",
+       "ru": "Второе предложение (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) становится главным. В первом исчезает подлежащее, глагол переходит в конец как <b>zu</b> + Infinitiv, перед ним запятая. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Пример: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz mit *zu*.",
+      "q": "Malika macht beim Umweltprojekt mit. Das macht ihr Spaß.",
+      "w": [
+       "Es",
+       "macht",
+       "Malika",
+       "Spaß,",
+       "beim Umweltprojekt",
+       "mitzumachen"
+      ],
+      "a": "Es macht Malika Spaß, beim Umweltprojekt mitzumachen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gap (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) asosiy gap bo‘ladi. Birinchi gapdan ega tushib qoladi, fe’l <b>zu</b> + Infinitiv bo‘lib oxiriga o‘tadi, oldidan vergul. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Misol: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>",
+       "ru": "Второе предложение (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) становится главным. В первом исчезает подлежащее, глагол переходит в конец как <b>zu</b> + Infinitiv, перед ним запятая. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Пример: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz mit *zu*.",
+      "q": "Laylo hält eine Rede vor der Klasse. Sie hat Angst davor.",
+      "w": [
+       "Laylo",
+       "hat",
+       "Angst,",
+       "eine Rede",
+       "vor der Klasse",
+       "zu",
+       "halten"
+      ],
+      "a": "Laylo hat Angst, eine Rede vor der Klasse zu halten.",
+      "alt": [
+       "Laylo hat Angst, vor der Klasse eine Rede zu halten."
+      ],
+      "gw": {
+       "uz": "Ikkinchi gap (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) asosiy gap bo‘ladi. Birinchi gapdan ega tushib qoladi, fe’l <b>zu</b> + Infinitiv bo‘lib oxiriga o‘tadi, oldidan vergul. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Misol: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>",
+       "ru": "Второе предложение (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) становится главным. В первом исчезает подлежащее, глагол переходит в конец как <b>zu</b> + Infinitiv, перед ним запятая. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Пример: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz mit *zu*.",
+      "q": "Die Bürger diskutieren über den neuen Park. Sie haben morgen die Möglichkeit dazu.",
+      "w": [
+       "Die Bürger",
+       "haben",
+       "morgen",
+       "die Möglichkeit,",
+       "über den neuen Park",
+       "zu",
+       "diskutieren"
+      ],
+      "a": "Die Bürger haben morgen die Möglichkeit, über den neuen Park zu diskutieren.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gap (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) asosiy gap bo‘ladi. Birinchi gapdan ega tushib qoladi, fe’l <b>zu</b> + Infinitiv bo‘lib oxiriga o‘tadi, oldidan vergul. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Misol: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>",
+       "ru": "Второе предложение (<b>Lust haben, versuchen, vorhaben, Das ist wichtig</b> …) становится главным. В первом исчезает подлежащее, глагол переходит в конец как <b>zu</b> + Infinitiv, перед ним запятая. <b>Das ist wichtig</b> → <b>Es ist wichtig, …</b> Пример: <b>Ich trenne Müll. Das ist wichtig. → Es ist wichtig, Müll zu trennen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich will dir zu helfen. → <b>zu</b> → Ich will dir helfen.",
+      "s": "Wir möchten am Wochenende im Park zu helfen .",
+      "fix": "Wir möchten am Wochenende im Park helfen.",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "To‘rt tipik xato: (1) modal fe’ldan keyin <b>zu</b> bo‘lmaydi; (2) <b>Es ist wichtig, versuchen, Lust haben</b> dan keyin <b>zu</b> kerak; (3) ajraladigan fe’lda zu o‘rtada: weg<b>zu</b>bringen; (4) zu fe’l oldida, keyin doim Infinitiv: <b>zu trinken</b>. Misol: <b>Ich habe vergessen, dich anzurufen.</b>",
+       "ru": "Четыре типичные ошибки: (1) после модального глагола <b>zu</b> нет; (2) после <b>Es ist wichtig, versuchen, Lust haben</b> нужен <b>zu</b>; (3) у отделяемого глагола zu в середине: weg<b>zu</b>bringen; (4) zu стоит прямо перед глаголом, после него всегда инфинитив: <b>zu trinken</b>. Пример: <b>Ich habe vergessen, dich anzurufen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Es ist wichtig , die Natur schützen .",
+      "fix": "Es ist wichtig, die Natur zu schützen.",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "To‘rt tipik xato: (1) modal fe’ldan keyin <b>zu</b> bo‘lmaydi; (2) <b>Es ist wichtig, versuchen, Lust haben</b> dan keyin <b>zu</b> kerak; (3) ajraladigan fe’lda zu o‘rtada: weg<b>zu</b>bringen; (4) zu fe’l oldida, keyin doim Infinitiv: <b>zu trinken</b>. Misol: <b>Ich habe vergessen, dich anzurufen.</b>",
+       "ru": "Четыре типичные ошибки: (1) после модального глагола <b>zu</b> нет; (2) после <b>Es ist wichtig, versuchen, Lust haben</b> нужен <b>zu</b>; (3) у отделяемого глагола zu в середине: weg<b>zu</b>bringen; (4) zu стоит прямо перед глаголом, после него всегда инфинитив: <b>zu trinken</b>. Пример: <b>Ich habe vergessen, dich anzurufen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich habe keine Lust , den Müll zu wegbringen .",
+      "fix": "Ich habe keine Lust, den Müll wegzubringen.",
+      "a": [
+       7,
+       8
+      ],
+      "gw": {
+       "uz": "To‘rt tipik xato: (1) modal fe’ldan keyin <b>zu</b> bo‘lmaydi; (2) <b>Es ist wichtig, versuchen, Lust haben</b> dan keyin <b>zu</b> kerak; (3) ajraladigan fe’lda zu o‘rtada: weg<b>zu</b>bringen; (4) zu fe’l oldida, keyin doim Infinitiv: <b>zu trinken</b>. Misol: <b>Ich habe vergessen, dich anzurufen.</b>",
+       "ru": "Четыре типичные ошибки: (1) после модального глагола <b>zu</b> нет; (2) после <b>Es ist wichtig, versuchen, Lust haben</b> нужен <b>zu</b>; (3) у отделяемого глагола zu в середине: weg<b>zu</b>bringen; (4) zu стоит прямо перед глаголом, после него всегда инфинитив: <b>zu trinken</b>. Пример: <b>Ich habe vergessen, dich anzurufen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich versuche , mehr Wasser zu trinke .",
+      "fix": "Ich versuche, mehr Wasser zu trinken.",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "To‘rt tipik xato: (1) modal fe’ldan keyin <b>zu</b> bo‘lmaydi; (2) <b>Es ist wichtig, versuchen, Lust haben</b> dan keyin <b>zu</b> kerak; (3) ajraladigan fe’lda zu o‘rtada: weg<b>zu</b>bringen; (4) zu fe’l oldida, keyin doim Infinitiv: <b>zu trinken</b>. Misol: <b>Ich habe vergessen, dich anzurufen.</b>",
+       "ru": "Четыре типичные ошибки: (1) после модального глагола <b>zu</b> нет; (2) после <b>Es ist wichtig, versuchen, Lust haben</b> нужен <b>zu</b>; (3) у отделяемого глагола zu в середине: weg<b>zu</b>bringen; (4) zu стоит прямо перед глаголом, после него всегда инфинитив: <b>zu trinken</b>. Пример: <b>Ich habe vergessen, dich anzurufen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Sevara hat versucht , zu ihre Meinung erklären .",
+      "fix": "Sevara hat versucht, ihre Meinung zu erklären.",
+      "a": [
+       4
+      ],
+      "gw": {
+       "uz": "To‘rt tipik xato: (1) modal fe’ldan keyin <b>zu</b> bo‘lmaydi; (2) <b>Es ist wichtig, versuchen, Lust haben</b> dan keyin <b>zu</b> kerak; (3) ajraladigan fe’lda zu o‘rtada: weg<b>zu</b>bringen; (4) zu fe’l oldida, keyin doim Infinitiv: <b>zu trinken</b>. Misol: <b>Ich habe vergessen, dich anzurufen.</b>",
+       "ru": "Четыре типичные ошибки: (1) после модального глагола <b>zu</b> нет; (2) после <b>Es ist wichtig, versuchen, Lust haben</b> нужен <b>zu</b>; (3) у отделяемого глагола zu в середине: weg<b>zu</b>bringen; (4) zu стоит прямо перед глаголом, после него всегда инфинитив: <b>zu trinken</b>. Пример: <b>Ich habe vergessen, dich anzurufen.</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,570 @@
+{
+ "id": "B1-b12-17-G",
+ "meta": {
+  "title": "Grammatik · indem · miss-",
+  "stitle": "indem · Wie? · Verb am Ende · miss-"
+ },
+ "ex": {
+  "title": "Lektion 17 · Grammatik",
+  "sub": "indem · Wie? · Verb am Ende · miss-",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>indem – Wie? Auf welche Art?</h4>\n<table class=\"ex-tb\"><tr><th>Frage: Wie …?</th><th>Antwort mit indem</th></tr>\n<tr><td>Wie findet die Künstlerin Ideen?</td><td>Sie findet Ideen, <b>indem</b> sie viel <b>fotografiert</b>.</td></tr>\n<tr><td>Wie lernt man zeichnen?</td><td>Man lernt zeichnen, <b>indem</b> man jeden Tag <b>übt</b>.</td></tr>\n<tr><td>Wie macht ihr die Wand schöner?</td><td><b>Indem</b> wir sie bunt <b>bemalen</b>.</td></tr></table>\n<div class=\"ex-sk\"><span>Ich lerne viel,</span><span>indem</span><span>ich</span><span>Galerien</span><span class=\"v\">besuche</span>.</div>\n<div class=\"ex-sk\"><span>Indem ich Galerien besuche,</span><span class=\"v\">lerne</span><span>ich</span><span>viel</span>.</div>\n<p class=\"ex-note\"><b>indem</b> «Qanday qilib? Nima yordamida?» savoliga javob beradi — usul yoki vositani bildiradi. Bu Nebensatz: oldidan vergul, tuslangan fe’l <b>oxirida</b>. indem-gap birinchi kelsa, asosiy gap fe’l bilan boshlanadi: <b>Indem ich übe, lerne ich.</b></p>",
+      "ru": "<h4>indem – Wie? Auf welche Art?</h4>\n<table class=\"ex-tb\"><tr><th>Frage: Wie …?</th><th>Antwort mit indem</th></tr>\n<tr><td>Wie findet die Künstlerin Ideen?</td><td>Sie findet Ideen, <b>indem</b> sie viel <b>fotografiert</b>.</td></tr>\n<tr><td>Wie lernt man zeichnen?</td><td>Man lernt zeichnen, <b>indem</b> man jeden Tag <b>übt</b>.</td></tr>\n<tr><td>Wie macht ihr die Wand schöner?</td><td><b>Indem</b> wir sie bunt <b>bemalen</b>.</td></tr></table>\n<div class=\"ex-sk\"><span>Ich lerne viel,</span><span>indem</span><span>ich</span><span>Galerien</span><span class=\"v\">besuche</span>.</div>\n<div class=\"ex-sk\"><span>Indem ich Galerien besuche,</span><span class=\"v\">lerne</span><span>ich</span><span>viel</span>.</div>\n<p class=\"ex-note\"><b>indem</b> отвечает на вопрос «Как? Каким способом?» — называет способ или средство. Это Nebensatz: перед ним запятая, спрягаемый глагол в <b>конце</b>. Если indem-предложение стоит первым, главное начинается с глагола: <b>Indem ich übe, lerne ich.</b></p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Verb im indem-Satz.",
+      "bsp": "Man lernt malen, indem man viel übt. → <b>übt</b>",
+      "s": "Die Künstlerin findet neue Ideen , indem sie durch die Stadt spaziert .",
+      "a": [
+       11
+      ],
+      "gw": {
+       "uz": "indem-gapda tuslangan fe’l eng oxirida turadi. Ajraluvchi fe’l oxirida qo‘shilib yoziladi: <b>…, indem sie alte Fotos anschaut.</b> Asosiy gapdagi fe’lni belgilamang.",
+       "ru": "В предложении с indem спрягаемый глагол стоит в самом конце. Отделяемый глагол в конце пишется слитно: <b>…, indem sie alte Fotos anschaut.</b> Глагол главного предложения не отмечайте."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Verb im indem-Satz.",
+      "bsp": "Man lernt malen, indem man viel übt. → <b>übt</b>",
+      "s": "Timur macht seine Fotos interessanter , indem er mit dem Licht spielt .",
+      "a": [
+       11
+      ],
+      "gw": {
+       "uz": "indem-gapda tuslangan fe’l eng oxirida turadi. Ajraluvchi fe’l oxirida qo‘shilib yoziladi: <b>…, indem sie alte Fotos anschaut.</b> Asosiy gapdagi fe’lni belgilamang.",
+       "ru": "В предложении с indem спрягаемый глагол стоит в самом конце. Отделяемый глагол в конце пишется слитно: <b>…, indem sie alte Fotos anschaut.</b> Глагол главного предложения не отмечайте."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Verb im indem-Satz.",
+      "bsp": "Man lernt malen, indem man viel übt. → <b>übt</b>",
+      "s": "Indem wir die alte Wand bunt bemalen , machen wir die Straße schöner .",
+      "a": [
+       6
+      ],
+      "gw": {
+       "uz": "indem-gapda tuslangan fe’l eng oxirida turadi. Ajraluvchi fe’l oxirida qo‘shilib yoziladi: <b>…, indem sie alte Fotos anschaut.</b> Asosiy gapdagi fe’lni belgilamang.",
+       "ru": "В предложении с indem спрягаемый глагол стоит в самом конце. Отделяемый глагол в конце пишется слитно: <b>…, indem sie alte Fotos anschaut.</b> Глагол главного предложения не отмечайте."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Verb im indem-Satz.",
+      "bsp": "Man lernt malen, indem man viel übt. → <b>übt</b>",
+      "s": "Malika sammelt Ideen für ihre Ausstellung , indem sie alte Fotos anschaut .",
+      "a": [
+       11
+      ],
+      "gw": {
+       "uz": "indem-gapda tuslangan fe’l eng oxirida turadi. Ajraluvchi fe’l oxirida qo‘shilib yoziladi: <b>…, indem sie alte Fotos anschaut.</b> Asosiy gapdagi fe’lni belgilamang.",
+       "ru": "В предложении с indem спрягаемый глагол стоит в самом конце. Отделяемый глагол в конце пишется слитно: <b>…, indem sie alte Fotos anschaut.</b> Глагол главного предложения не отмечайте."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Wie? oder Wozu? Was passt?",
+      "bsp": "Ich lerne viel über Kunst, ___ ich oft ins Museum gehe. → Wie? → ✓ <b>indem</b>",
+      "q": "Sevara übt jeden Tag, ___ ihre Zeichnungen besser werden.",
+      "o": [
+       "indem",
+       "obwohl",
+       "damit"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Savolni o‘zingizga bering: «Qanday qilib?» → <b>indem</b>; «Nima maqsadda?» → <b>damit</b>; «…ga qaramay» → <b>obwohl</b>; natija → <b>sodass</b>. <b>um</b> faqat <b>um … zu</b> bilan ishlatiladi. Misol: <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+       "ru": "Задайте себе вопрос: «Как? Каким способом?» → <b>indem</b>; «Для чего?» → <b>damit</b>; «Несмотря на что?» → <b>obwohl</b>; следствие → <b>sodass</b>. <b>um</b> работает только как <b>um … zu</b>. Пример: <b>Ich lerne Wörter, indem ich Karten schreibe.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Wie? oder Wozu? Was passt?",
+      "bsp": "Ich lerne viel über Kunst, ___ ich oft ins Museum gehe. → Wie? → ✓ <b>indem</b>",
+      "q": "Jonas zeigt seine Fotos einem großen Publikum, ___ er sie ins Internet stellt.",
+      "o": [
+       "damit",
+       "indem",
+       "obwohl"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Savolni o‘zingizga bering: «Qanday qilib?» → <b>indem</b>; «Nima maqsadda?» → <b>damit</b>; «…ga qaramay» → <b>obwohl</b>; natija → <b>sodass</b>. <b>um</b> faqat <b>um … zu</b> bilan ishlatiladi. Misol: <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+       "ru": "Задайте себе вопрос: «Как? Каким способом?» → <b>indem</b>; «Для чего?» → <b>damit</b>; «Несмотря на что?» → <b>obwohl</b>; следствие → <b>sodass</b>. <b>um</b> работает только как <b>um … zu</b>. Пример: <b>Ich lerne Wörter, indem ich Karten schreibe.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Wie? oder Wozu? Was passt?",
+      "bsp": "Ich lerne viel über Kunst, ___ ich oft ins Museum gehe. → Wie? → ✓ <b>indem</b>",
+      "q": "▪ Wie hast du so gut zeichnen gelernt?\n● ___ ich jeden Tag Menschen im Park gezeichnet habe.",
+      "o": [
+       "Indem",
+       "Damit",
+       "Obwohl"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Savolni o‘zingizga bering: «Qanday qilib?» → <b>indem</b>; «Nima maqsadda?» → <b>damit</b>; «…ga qaramay» → <b>obwohl</b>; natija → <b>sodass</b>. <b>um</b> faqat <b>um … zu</b> bilan ishlatiladi. Misol: <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+       "ru": "Задайте себе вопрос: «Как? Каким способом?» → <b>indem</b>; «Для чего?» → <b>damit</b>; «Несмотря на что?» → <b>obwohl</b>; следствие → <b>sodass</b>. <b>um</b> работает только как <b>um … zu</b>. Пример: <b>Ich lerne Wörter, indem ich Karten schreibe.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Wie? oder Wozu? Was passt?",
+      "bsp": "Ich lerne viel über Kunst, ___ ich oft ins Museum gehe. → Wie? → ✓ <b>indem</b>",
+      "q": "Die Galerie findet neue Besucher, ___ sie den Eintritt am Sonntag kostenlos macht.",
+      "o": [
+       "sodass",
+       "damit",
+       "indem"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Savolni o‘zingizga bering: «Qanday qilib?» → <b>indem</b>; «Nima maqsadda?» → <b>damit</b>; «…ga qaramay» → <b>obwohl</b>; natija → <b>sodass</b>. <b>um</b> faqat <b>um … zu</b> bilan ishlatiladi. Misol: <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+       "ru": "Задайте себе вопрос: «Как? Каким способом?» → <b>indem</b>; «Для чего?» → <b>damit</b>; «Несмотря на что?» → <b>obwohl</b>; следствие → <b>sodass</b>. <b>um</b> работает только как <b>um … zu</b>. Пример: <b>Ich lerne Wörter, indem ich Karten schreibe.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Wie? oder Wozu? Was passt?",
+      "bsp": "Ich lerne viel über Kunst, ___ ich oft ins Museum gehe. → Wie? → ✓ <b>indem</b>",
+      "q": "Viele Künstler malen in der Öffentlichkeit, ___ alle Menschen ihre Kunst sehen können.",
+      "o": [
+       "damit",
+       "indem",
+       "um"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Savolni o‘zingizga bering: «Qanday qilib?» → <b>indem</b>; «Nima maqsadda?» → <b>damit</b>; «…ga qaramay» → <b>obwohl</b>; natija → <b>sodass</b>. <b>um</b> faqat <b>um … zu</b> bilan ishlatiladi. Misol: <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+       "ru": "Задайте себе вопрос: «Как? Каким способом?» → <b>indem</b>; «Для чего?» → <b>damit</b>; «Несмотря на что?» → <b>obwohl</b>; следствие → <b>sodass</b>. <b>um</b> работает только как <b>um … zu</b>. Пример: <b>Ich lerne Wörter, indem ich Karten schreibe.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie.",
+      "bsp": "Man lernt zeichnen, indem man jeden Tag ___. (üben) → <b>übt</b>",
+      "s": "Laylo macht ihr Zimmer schöner, indem sie eigene Zeichnungen an die Wand ___. (hängen)",
+      "a": [
+       [
+        "hängt"
+       ]
+      ],
+      "gw": {
+       "uz": "indem-gapda fe’lni egaga moslab tuslang va eng oxiriga qo‘ying. Ajraluvchi fe’l qo‘shilib yoziladi (<b>anschaut, teilnimmt</b>), Perfektda — Partizip II + <b>habe/hat</b>. Misol: <b>…, indem ich Plakate aufgehängt habe.</b>",
+       "ru": "В indem-предложении спрягайте глагол по подлежащему и ставьте в самый конец. Отделяемый глагол пишется слитно (<b>anschaut, teilnimmt</b>), в Perfekt — Partizip II + <b>habe/hat</b>. Пример: <b>…, indem ich Plakate aufgehängt habe.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie.",
+      "bsp": "Man lernt zeichnen, indem man jeden Tag ___. (üben) → <b>übt</b>",
+      "s": "Man lernt viel über Fotografie, indem man alte Fotos genau ___. (anschauen)",
+      "a": [
+       [
+        "anschaut"
+       ]
+      ],
+      "gw": {
+       "uz": "indem-gapda fe’lni egaga moslab tuslang va eng oxiriga qo‘ying. Ajraluvchi fe’l qo‘shilib yoziladi (<b>anschaut, teilnimmt</b>), Perfektda — Partizip II + <b>habe/hat</b>. Misol: <b>…, indem ich Plakate aufgehängt habe.</b>",
+       "ru": "В indem-предложении спрягайте глагол по подлежащему и ставьте в самый конец. Отделяемый глагол пишется слитно (<b>anschaut, teilnimmt</b>), в Perfekt — Partizip II + <b>habe/hat</b>. Пример: <b>…, indem ich Plakate aufgehängt habe.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie.",
+      "bsp": "Man lernt zeichnen, indem man jeden Tag ___. (üben) → <b>übt</b>",
+      "s": "Ihr könnt die Ausstellung kostenlos besuchen, indem ihr euch vorher online ___. (anmelden)",
+      "a": [
+       [
+        "anmeldet"
+       ]
+      ],
+      "gw": {
+       "uz": "indem-gapda fe’lni egaga moslab tuslang va eng oxiriga qo‘ying. Ajraluvchi fe’l qo‘shilib yoziladi (<b>anschaut, teilnimmt</b>), Perfektda — Partizip II + <b>habe/hat</b>. Misol: <b>…, indem ich Plakate aufgehängt habe.</b>",
+       "ru": "В indem-предложении спрягайте глагол по подлежащему и ставьте в самый конец. Отделяемый глагол пишется слитно (<b>anschaut, teilnimmt</b>), в Perfekt — Partizip II + <b>habe/hat</b>. Пример: <b>…, indem ich Plakate aufgehängt habe.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie.",
+      "bsp": "Man lernt zeichnen, indem man jeden Tag ___. (üben) → <b>übt</b>",
+      "s": "Anna und Ben zeigen ihre Fotos einem großen Publikum, indem sie eine Ausstellung im Café ___. (organisieren)",
+      "a": [
+       [
+        "organisieren"
+       ]
+      ],
+      "gw": {
+       "uz": "indem-gapda fe’lni egaga moslab tuslang va eng oxiriga qo‘ying. Ajraluvchi fe’l qo‘shilib yoziladi (<b>anschaut, teilnimmt</b>), Perfektda — Partizip II + <b>habe/hat</b>. Misol: <b>…, indem ich Plakate aufgehängt habe.</b>",
+       "ru": "В indem-предложении спрягайте глагол по подлежащему и ставьте в самый конец. Отделяемый глагол пишется слитно (<b>anschaut, teilnimmt</b>), в Perfekt — Partizip II + <b>habe/hat</b>. Пример: <b>…, indem ich Plakate aufgehängt habe.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie.",
+      "bsp": "Man lernt zeichnen, indem man jeden Tag ___. (üben) → <b>übt</b>",
+      "s": "Wie findet ihr Ideen für eure Zeichnungen?\nPaul: Ich finde Ideen, indem ich mit offenen Augen durch die Stadt ___. (gehen)\nMia: Indem ich mir alte Fotos ___, bekomme ich oft neue Ideen. (ansehen)\nBen: Ich sammle Ideen, indem ich jeden Tag ein kleines Bild ___. (zeichnen)",
+      "a": [
+       [
+        "gehe"
+       ],
+       [
+        "ansehe"
+       ],
+       [
+        "zeichne"
+       ]
+      ],
+      "gw": {
+       "uz": "indem-gapda fe’lni egaga moslab tuslang va eng oxiriga qo‘ying. Ajraluvchi fe’l qo‘shilib yoziladi (<b>anschaut, teilnimmt</b>), Perfektda — Partizip II + <b>habe/hat</b>. Misol: <b>…, indem ich Plakate aufgehängt habe.</b>",
+       "ru": "В indem-предложении спрягайте глагол по подлежащему и ставьте в самый конец. Отделяемый глагол пишется слитно (<b>anschaut, teilnimmt</b>), в Perfekt — Partizip II + <b>habe/hat</b>. Пример: <b>…, indem ich Plakate aufgehängt habe.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie.",
+      "bsp": "Man lernt zeichnen, indem man jeden Tag ___. (üben) → <b>übt</b>",
+      "s": "▪ Lena, wie hast du so viele Besucher für deine Ausstellung bekommen?\n● Ich habe viel Werbung gemacht, indem ich Plakate in der ganzen Stadt ___ ___. (aufhängen, Perfekt)\n▪ Und im Internet?\n● Da habe ich viele Leute erreicht, indem ich jeden Tag Fotos von meinen Bildern ___ ___. (posten, Perfekt)",
+      "a": [
+       [
+        "aufgehängt"
+       ],
+       [
+        "habe"
+       ],
+       [
+        "gepostet"
+       ],
+       [
+        "habe"
+       ]
+      ],
+      "gw": {
+       "uz": "indem-gapda fe’lni egaga moslab tuslang va eng oxiriga qo‘ying. Ajraluvchi fe’l qo‘shilib yoziladi (<b>anschaut, teilnimmt</b>), Perfektda — Partizip II + <b>habe/hat</b>. Misol: <b>…, indem ich Plakate aufgehängt habe.</b>",
+       "ru": "В indem-предложении спрягайте глагол по подлежащему и ставьте в самый конец. Отделяемый глагол пишется слитно (<b>anschaut, teilnimmt</b>), в Perfekt — Partizip II + <b>habe/hat</b>. Пример: <b>…, indem ich Plakate aufgehängt habe.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie.",
+      "bsp": "Man lernt zeichnen, indem man jeden Tag ___. (üben) → <b>übt</b>",
+      "s": "▪ Wie kann man Street-Art in unserer Stadt finden?\n● Ganz einfach: indem man eine spezielle App ___. (benutzen)\n▪ Und wie erfährt man etwas über die Künstler?\n● ___ man an einer Führung ___. (teilnehmen)",
+      "a": [
+       [
+        "benutzt"
+       ],
+       [
+        "Indem"
+       ],
+       [
+        "teilnimmt"
+       ]
+      ],
+      "gw": {
+       "uz": "indem-gapda fe’lni egaga moslab tuslang va eng oxiriga qo‘ying. Ajraluvchi fe’l qo‘shilib yoziladi (<b>anschaut, teilnimmt</b>), Perfektda — Partizip II + <b>habe/hat</b>. Misol: <b>…, indem ich Plakate aufgehängt habe.</b>",
+       "ru": "В indem-предложении спрягайте глагол по подлежащему и ставьте в самый конец. Отделяемый глагол пишется слитно (<b>anschaut, teilnimmt</b>), в Perfekt — Partizip II + <b>habe/hat</b>. Пример: <b>…, indem ich Plakate aufgehängt habe.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *indem*.",
+      "bsp": "Ich lerne Wörter. Ich schreibe Karten. → <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+      "q": "Aziz lernt viel über Kunst. Er besucht oft Galerien.",
+      "w": [
+       "Aziz",
+       "lernt",
+       "viel über Kunst,",
+       "indem",
+       "er",
+       "oft Galerien",
+       "besucht"
+      ],
+      "a": "Aziz lernt viel über Kunst, indem er oft Galerien besucht.",
+      "alt": [],
+      "gw": {
+       "uz": "Usulni bildiruvchi gap indem-gapga aylanadi: vergul → <b>indem</b> → ega → … → fe’l oxirida. Ikkinchi gapdagi ism olmoshga aylanadi (Aziz → <b>er</b>). indem-gap boshida bo‘lsa, asosiy gap fe’l bilan boshlanadi: <b>Indem Nodir übt, wird er besser.</b>",
+       "ru": "Предложение со способом становится indem-предложением: запятая → <b>indem</b> → подлежащее → … → глагол в конце. Имя во втором предложении заменяется местоимением (Aziz → <b>er</b>). Если indem-предложение стоит первым, главное начинается с глагола: <b>Indem Nodir übt, wird er besser.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *indem*.",
+      "bsp": "Ich lerne Wörter. Ich schreibe Karten. → <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+      "q": "Die Malerin macht die Wand bunt. Sie benutzt viele Farben.",
+      "w": [
+       "Die Malerin",
+       "macht",
+       "die Wand",
+       "bunt,",
+       "indem",
+       "sie",
+       "viele Farben",
+       "benutzt"
+      ],
+      "a": "Die Malerin macht die Wand bunt, indem sie viele Farben benutzt.",
+      "alt": [],
+      "gw": {
+       "uz": "Usulni bildiruvchi gap indem-gapga aylanadi: vergul → <b>indem</b> → ega → … → fe’l oxirida. Ikkinchi gapdagi ism olmoshga aylanadi (Aziz → <b>er</b>). indem-gap boshida bo‘lsa, asosiy gap fe’l bilan boshlanadi: <b>Indem Nodir übt, wird er besser.</b>",
+       "ru": "Предложение со способом становится indem-предложением: запятая → <b>indem</b> → подлежащее → … → глагол в конце. Имя во втором предложении заменяется местоимением (Aziz → <b>er</b>). Если indem-предложение стоит первым, главное начинается с глагола: <b>Indem Nodir übt, wird er besser.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *indem*.",
+      "bsp": "Ich lerne Wörter. Ich schreibe Karten. → <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+      "q": "Man kann Street-Art in Berlin entdecken. Man nimmt an einer Führung teil.",
+      "w": [
+       "Man",
+       "kann",
+       "Street-Art in Berlin",
+       "entdecken,",
+       "indem",
+       "man",
+       "an einer Führung",
+       "teilnimmt"
+      ],
+      "a": "Man kann Street-Art in Berlin entdecken, indem man an einer Führung teilnimmt.",
+      "alt": [],
+      "gw": {
+       "uz": "Usulni bildiruvchi gap indem-gapga aylanadi: vergul → <b>indem</b> → ega → … → fe’l oxirida. Ikkinchi gapdagi ism olmoshga aylanadi (Aziz → <b>er</b>). indem-gap boshida bo‘lsa, asosiy gap fe’l bilan boshlanadi: <b>Indem Nodir übt, wird er besser.</b>",
+       "ru": "Предложение со способом становится indem-предложением: запятая → <b>indem</b> → подлежащее → … → глагол в конце. Имя во втором предложении заменяется местоимением (Aziz → <b>er</b>). Если indem-предложение стоит первым, главное начинается с глагола: <b>Indem Nodir übt, wird er besser.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *indem*.",
+      "bsp": "Ich lerne Wörter. Ich schreibe Karten. → <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+      "q": "Die Studenten informieren sich über die Ausstellung. Sie lesen die Webseite der Galerie.",
+      "w": [
+       "Die Studenten",
+       "informieren",
+       "sich",
+       "über die Ausstellung,",
+       "indem",
+       "sie",
+       "die Webseite der Galerie",
+       "lesen"
+      ],
+      "a": "Die Studenten informieren sich über die Ausstellung, indem sie die Webseite der Galerie lesen.",
+      "alt": [],
+      "gw": {
+       "uz": "Usulni bildiruvchi gap indem-gapga aylanadi: vergul → <b>indem</b> → ega → … → fe’l oxirida. Ikkinchi gapdagi ism olmoshga aylanadi (Aziz → <b>er</b>). indem-gap boshida bo‘lsa, asosiy gap fe’l bilan boshlanadi: <b>Indem Nodir übt, wird er besser.</b>",
+       "ru": "Предложение со способом становится indem-предложением: запятая → <b>indem</b> → подлежащее → … → глагол в конце. Имя во втором предложении заменяется местоимением (Aziz → <b>er</b>). Если indem-предложение стоит первым, главное начинается с глагола: <b>Indem Nodir übt, wird er besser.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *indem*.",
+      "bsp": "Ich lerne Wörter. Ich schreibe Karten. → <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+      "q": "Nodir übt jeden Tag. So wird er ein besserer Fotograf. (Beginnen Sie mit Indem.)",
+      "w": [
+       "Indem",
+       "Nodir",
+       "jeden Tag",
+       "übt,",
+       "wird",
+       "er",
+       "ein besserer Fotograf"
+      ],
+      "a": "Indem Nodir jeden Tag übt, wird er ein besserer Fotograf.",
+      "alt": [],
+      "gw": {
+       "uz": "Usulni bildiruvchi gap indem-gapga aylanadi: vergul → <b>indem</b> → ega → … → fe’l oxirida. Ikkinchi gapdagi ism olmoshga aylanadi (Aziz → <b>er</b>). indem-gap boshida bo‘lsa, asosiy gap fe’l bilan boshlanadi: <b>Indem Nodir übt, wird er besser.</b>",
+       "ru": "Предложение со способом становится indem-предложением: запятая → <b>indem</b> → подлежащее → … → глагол в конце. Имя во втором предложении заменяется местоимением (Aziz → <b>er</b>). Если indem-предложение стоит первым, главное начинается с глагола: <b>Indem Nodir übt, wird er besser.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *indem*.",
+      "bsp": "Ich lerne Wörter. Ich schreibe Karten. → <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+      "q": "▪ Wie lernt Timur fotografieren?\n● Er sieht sich viele Videos an.",
+      "w": [
+       "Indem",
+       "er",
+       "sich",
+       "viele Videos",
+       "ansieht"
+      ],
+      "a": "Indem er sich viele Videos ansieht.",
+      "alt": [],
+      "gw": {
+       "uz": "Usulni bildiruvchi gap indem-gapga aylanadi: vergul → <b>indem</b> → ega → … → fe’l oxirida. Ikkinchi gapdagi ism olmoshga aylanadi (Aziz → <b>er</b>). indem-gap boshida bo‘lsa, asosiy gap fe’l bilan boshlanadi: <b>Indem Nodir übt, wird er besser.</b>",
+       "ru": "Предложение со способом становится indem-предложением: запятая → <b>indem</b> → подлежащее → … → глагол в конце. Имя во втором предложении заменяется местоимением (Aziz → <b>er</b>). Если indem-предложение стоит первым, главное начинается с глагола: <b>Indem Nodir übt, wird er besser.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *indem*.",
+      "bsp": "Ich lerne Wörter. Ich schreibe Karten. → <b>Ich lerne Wörter, indem ich Karten schreibe.</b>",
+      "q": "Laylo hat ihre Angst verloren. Sie hat ihre Bilder im Café gezeigt.",
+      "w": [
+       "Laylo hat",
+       "ihre Angst",
+       "verloren,",
+       "indem",
+       "sie",
+       "ihre Bilder im Café",
+       "gezeigt",
+       "hat"
+      ],
+      "a": "Laylo hat ihre Angst verloren, indem sie ihre Bilder im Café gezeigt hat.",
+      "alt": [],
+      "gw": {
+       "uz": "Usulni bildiruvchi gap indem-gapga aylanadi: vergul → <b>indem</b> → ega → … → fe’l oxirida. Ikkinchi gapdagi ism olmoshga aylanadi (Aziz → <b>er</b>). indem-gap boshida bo‘lsa, asosiy gap fe’l bilan boshlanadi: <b>Indem Nodir übt, wird er besser.</b>",
+       "ru": "Предложение со способом становится indem-предложением: запятая → <b>indem</b> → подлежащее → … → глагол в конце. Имя во втором предложении заменяется местоимением (Aziz → <b>er</b>). Если indem-предложение стоит первым, главное начинается с глагола: <b>Indem Nodir übt, wird er besser.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich lerne, indem ich lese viel. → <b>lese</b> → …, indem ich viel lese.",
+      "s": "Anna verbessert ihre Zeichnungen , indem sie übt jeden Tag .",
+      "a": [
+       7
+      ],
+      "fix": "Anna verbessert ihre Zeichnungen, indem sie jeden Tag übt.",
+      "gw": {
+       "uz": "Tekshiring: indem-gapda fe’l eng oxirida (ajraluvchi fe’l qo‘shilib yoziladi); indem-gapdan keyin asosiy gap fe’l bilan boshlanadi; «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
+       "ru": "Проверьте: в indem-предложении глагол в самом конце (отделяемый пишется слитно); после indem-предложения главное начинается с глагола; на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich lerne, indem ich lese viel. → <b>lese</b> → …, indem ich viel lese.",
+      "s": "Wie macht man gute Fotos ? – Damit man auf das Licht achtet .",
+      "a": [
+       7
+      ],
+      "fix": "Wie macht man gute Fotos? – Indem man auf das Licht achtet.",
+      "gw": {
+       "uz": "Tekshiring: indem-gapda fe’l eng oxirida (ajraluvchi fe’l qo‘shilib yoziladi); indem-gapdan keyin asosiy gap fe’l bilan boshlanadi; «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
+       "ru": "Проверьте: в indem-предложении глагол в самом конце (отделяемый пишется слитно); после indem-предложения главное начинается с глагола; на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich lerne, indem ich lese viel. → <b>lese</b> → …, indem ich viel lese.",
+      "s": "Indem wir die Wand bemalen , wir machen den Park schöner .",
+      "a": [
+       6
+      ],
+      "fix": "Indem wir die Wand bemalen, machen wir den Park schöner.",
+      "gw": {
+       "uz": "Tekshiring: indem-gapda fe’l eng oxirida (ajraluvchi fe’l qo‘shilib yoziladi); indem-gapdan keyin asosiy gap fe’l bilan boshlanadi; «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
+       "ru": "Проверьте: в indem-предложении глагол в самом конце (отделяемый пишется слитно); после indem-предложения главное начинается с глагола; на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich lerne, indem ich lese viel. → <b>lese</b> → …, indem ich viel lese.",
+      "s": "Lena lernt die Künstler kennen , indem sie an Workshops nimmt teil .",
+      "a": [
+       10,
+       11
+      ],
+      "fix": "Lena lernt die Künstler kennen, indem sie an Workshops teilnimmt.",
+      "gw": {
+       "uz": "Tekshiring: indem-gapda fe’l eng oxirida (ajraluvchi fe’l qo‘shilib yoziladi); indem-gapdan keyin asosiy gap fe’l bilan boshlanadi; «Wie?» savoliga <b>damit</b> emas, <b>indem</b> bilan javob beriladi. Misol: <b>…, indem sie an Workshops teilnimmt.</b>",
+       "ru": "Проверьте: в indem-предложении глагол в самом конце (отделяемый пишется слитно); после indem-предложения главное начинается с глагола; на вопрос «Wie?» отвечают не <b>damit</b>, а <b>indem</b>. Пример: <b>…, indem sie an Workshops teilnimmt.</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wortbildung: miss-</h4>\n<table class=\"ex-tb\"><tr><th>Wort</th><th>mit miss-</th><th>Bedeutung</th></tr>\n<tr><td>der Erfolg</td><td>der <b>Miss</b>erfolg</td><td>kein Erfolg</td></tr>\n<tr><td>das Vertrauen</td><td>das <b>Miss</b>trauen</td><td>kein Vertrauen</td></tr>\n<tr><td>das Verständnis</td><td>das <b>Miss</b>verständnis</td><td>etwas falsch verstehen</td></tr>\n<tr><td>verstehen</td><td><b>miss</b>verstehen</td><td>falsch verstehen</td></tr>\n<tr><td>trauen</td><td><b>miss</b>trauen + Dat.</td><td>nicht vertrauen</td></tr></table>\n<p class=\"ex-note\"><b>miss-</b> = «noto‘g‘ri, muvaffaqiyatsiz» yoki teskari ma’no. Artikl o‘zgarmaydi. Diqqat: Vertrauen → <b>Misstrauen</b>. miss- fe’llari ajralmaydi va Partizipda <b>ge-</b> olmaydi: <b>Du hast mich missverstanden.</b></p>",
+      "ru": "<h4>Wortbildung: miss-</h4>\n<table class=\"ex-tb\"><tr><th>Wort</th><th>mit miss-</th><th>Bedeutung</th></tr>\n<tr><td>der Erfolg</td><td>der <b>Miss</b>erfolg</td><td>kein Erfolg</td></tr>\n<tr><td>das Vertrauen</td><td>das <b>Miss</b>trauen</td><td>kein Vertrauen</td></tr>\n<tr><td>das Verständnis</td><td>das <b>Miss</b>verständnis</td><td>etwas falsch verstehen</td></tr>\n<tr><td>verstehen</td><td><b>miss</b>verstehen</td><td>falsch verstehen</td></tr>\n<tr><td>trauen</td><td><b>miss</b>trauen + Dat.</td><td>nicht vertrauen</td></tr></table>\n<p class=\"ex-note\"><b>miss-</b> = «неправильно, неудачно» или противоположный смысл. Артикль не меняется. Внимание: Vertrauen → <b>Misstrauen</b>. Глаголы с miss- не отделяются и в Partizip не получают <b>ge-</b>: <b>Du hast mich missverstanden.</b></p>"
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Wort mit miss-.",
+      "bsp": "Ich habe dich falsch verstanden. Das war ein ___. → <b>Missverständnis</b>",
+      "s": "Die erste Ausstellung war leider ein ___: Nur fünf Besucher sind gekommen.",
+      "a": [
+       [
+        "Misserfolg"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>miss-</b> so‘z boshiga qo‘shiladi va «noto‘g‘ri, yo‘q» ma’nosini beradi. Ot — bosh harf bilan (<b>der Misserfolg</b>), fe’l — kichik harf va egaga mos shaklda (<b>du misstraust</b>; Partizip: <b>missverstanden</b>).",
+       "ru": "<b>miss-</b> ставится в начало слова и даёт значение «неправильно, нет». Существительное — с большой буквы (<b>der Misserfolg</b>), глагол — с маленькой и в нужной форме (<b>du misstraust</b>; Partizip: <b>missverstanden</b>)."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Wort mit miss-.",
+      "bsp": "Ich habe dich falsch verstanden. Das war ein ___. → <b>Missverständnis</b>",
+      "s": "Nach dem Streit gab es zwischen den beiden Malerinnen viel ___.",
+      "a": [
+       [
+        "Misstrauen"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>miss-</b> so‘z boshiga qo‘shiladi va «noto‘g‘ri, yo‘q» ma’nosini beradi. Ot — bosh harf bilan (<b>der Misserfolg</b>), fe’l — kichik harf va egaga mos shaklda (<b>du misstraust</b>; Partizip: <b>missverstanden</b>).",
+       "ru": "<b>miss-</b> ставится в начало слова и даёт значение «неправильно, нет». Существительное — с большой буквы (<b>der Misserfolg</b>), глагол — с маленькой и в нужной форме (<b>du misstraust</b>; Partizip: <b>missverstanden</b>)."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Wort mit miss-.",
+      "bsp": "Ich habe dich falsch verstanden. Das war ein ___. → <b>Missverständnis</b>",
+      "s": "Entschuldigung, du hast mich ___. Das habe ich nicht so gemeint!",
+      "a": [
+       [
+        "missverstanden"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>miss-</b> so‘z boshiga qo‘shiladi va «noto‘g‘ri, yo‘q» ma’nosini beradi. Ot — bosh harf bilan (<b>der Misserfolg</b>), fe’l — kichik harf va egaga mos shaklda (<b>du misstraust</b>; Partizip: <b>missverstanden</b>).",
+       "ru": "<b>miss-</b> ставится в начало слова и даёт значение «неправильно, нет». Существительное — с большой буквы (<b>der Misserfolg</b>), глагол — с маленькой и в нужной форме (<b>du misstraust</b>; Partizip: <b>missverstanden</b>)."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Wort mit miss-.",
+      "bsp": "Ich habe dich falsch verstanden. Das war ein ___. → <b>Missverständnis</b>",
+      "s": "Sprich bitte langsam, damit wir uns nicht ___.",
+      "a": [
+       [
+        "missverstehen"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>miss-</b> so‘z boshiga qo‘shiladi va «noto‘g‘ri, yo‘q» ma’nosini beradi. Ot — bosh harf bilan (<b>der Misserfolg</b>), fe’l — kichik harf va egaga mos shaklda (<b>du misstraust</b>; Partizip: <b>missverstanden</b>).",
+       "ru": "<b>miss-</b> ставится в начало слова и даёт значение «неправильно, нет». Существительное — с большой буквы (<b>der Misserfolg</b>), глагол — с маленькой и в нужной форме (<b>du misstraust</b>; Partizip: <b>missverstanden</b>)."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Wort mit miss-.",
+      "bsp": "Ich habe dich falsch verstanden. Das war ein ___. → <b>Missverständnis</b>",
+      "s": "Warum ___ du mir? Ich sage doch die Wahrheit!",
+      "a": [
+       [
+        "misstraust"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>miss-</b> so‘z boshiga qo‘shiladi va «noto‘g‘ri, yo‘q» ma’nosini beradi. Ot — bosh harf bilan (<b>der Misserfolg</b>), fe’l — kichik harf va egaga mos shaklda (<b>du misstraust</b>; Partizip: <b>missverstanden</b>).",
+       "ru": "<b>miss-</b> ставится в начало слова и даёт значение «неправильно, нет». Существительное — с большой буквы (<b>der Misserfolg</b>), глагол — с маленькой и в нужной форме (<b>du misstraust</b>; Partizip: <b>missverstanden</b>)."
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

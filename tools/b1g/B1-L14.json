@@ -1,0 +1,525 @@
+{
+ "id": "B1-b12-14-G",
+ "meta": {
+  "title": "Grammatik · Relativsätze mit was und wo",
+  "stitle": "Relativsatz mit was · Relativsatz mit wo · wo = in dem / in der"
+ },
+ "ex": {
+  "title": "Lektion 14 · Grammatik",
+  "sub": "Relativsatz mit was · Relativsatz mit wo · wo = in dem / in der",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Relativsätze mit <i>was</i></h4>\n<table class=\"ex-tb\"><tr><th>nach …</th><th>Beispiel</th></tr>\n<tr><td><b>alles</b></td><td>Das ist alles, <b>was</b> ich für die Bewerbung brauche.</td></tr>\n<tr><td><b>etwas</b> · <b>nichts</b> · <b>vieles</b></td><td>Gibt es etwas, <b>was</b> du nicht verstehst?</td></tr>\n<tr><td><b>das</b> (Pronomen)</td><td>Das ist genau das, <b>was</b> ich suche.</td></tr>\n<tr><td><b>das Beste</b> · das Schönste … (Superlativ)</td><td>Das ist das Beste, <b>was</b> du machen kannst.</td></tr>\n<tr><td>ganzer Satz</td><td>Ich habe die Zusage bekommen, <b>was</b> mich sehr freut.</td></tr></table>\n<p class=\"ex-note\"><b>alles, etwas, nichts, vieles, das</b>, Superlativ (<b>das Beste</b>) va butun gapdan keyin relativ olmosh — <b>was</b> («das» emas!). Relativ gap vergul bilan boshlanadi, tuslangan fe’l — oxirida.</p>",
+      "ru": "<h4>Relativsätze mit <i>was</i></h4>\n<table class=\"ex-tb\"><tr><th>nach …</th><th>Beispiel</th></tr>\n<tr><td><b>alles</b></td><td>Das ist alles, <b>was</b> ich für die Bewerbung brauche.</td></tr>\n<tr><td><b>etwas</b> · <b>nichts</b> · <b>vieles</b></td><td>Gibt es etwas, <b>was</b> du nicht verstehst?</td></tr>\n<tr><td><b>das</b> (Pronomen)</td><td>Das ist genau das, <b>was</b> ich suche.</td></tr>\n<tr><td><b>das Beste</b> · das Schönste … (Superlativ)</td><td>Das ist das Beste, <b>was</b> du machen kannst.</td></tr>\n<tr><td>ganzer Satz</td><td>Ich habe die Zusage bekommen, <b>was</b> mich sehr freut.</td></tr></table>\n<p class=\"ex-note\">После <b>alles, etwas, nichts, vieles, das</b>, после превосходной степени (<b>das Beste</b>) и после целого предложения относительное местоимение — <b>was</b> (не «das»!). Придаточное начинается с запятой, спрягаемый глагол — в конце.</p>"
+     },
+     {
+      "t": "info",
+      "h": "<h4>Relativsätze mit <i>wo</i></h4>\n<table class=\"ex-tb\"><tr><th>Ort</th><th>mit <b>wo</b></th><th>= Präposition + Relativpronomen</th></tr>\n<tr><td>die Stadt</td><td>die Stadt, <b>wo</b> ich studiere</td><td>die Stadt, <b>in der</b> ich studiere</td></tr>\n<tr><td>das Dorf</td><td>das Dorf, <b>wo</b> sie wohnt</td><td>das Dorf, <b>in dem</b> sie wohnt</td></tr>\n<tr><td>Wien, Österreich …</td><td>Wien, <b>wo</b> mein Onkel lebt</td><td>—</td></tr></table>\n<p class=\"ex-note\">Joy haqida (Wo? — qayerda?) gapirganda — <b>wo</b>. U <b>in der / in dem</b> o‘rnida turadi. Shahar va mamlakat nomlaridan keyin — faqat <b>wo</b>.</p>",
+      "ru": "<h4>Relativsätze mit <i>wo</i></h4>\n<table class=\"ex-tb\"><tr><th>Ort</th><th>mit <b>wo</b></th><th>= Präposition + Relativpronomen</th></tr>\n<tr><td>die Stadt</td><td>die Stadt, <b>wo</b> ich studiere</td><td>die Stadt, <b>in der</b> ich studiere</td></tr>\n<tr><td>das Dorf</td><td>das Dorf, <b>wo</b> sie wohnt</td><td>das Dorf, <b>in dem</b> sie wohnt</td></tr>\n<tr><td>Wien, Österreich …</td><td>Wien, <b>wo</b> mein Onkel lebt</td><td>—</td></tr></table>\n<p class=\"ex-note\">Когда речь идёт о месте (Wo? — где?) — <b>wo</b>. Оно заменяет <b>in der / in dem</b>. После названий городов и стран — только <b>wo</b>.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *was* / *wo* und das konjugierte Verb im Relativsatz.",
+      "bsp": "Das ist etwas, was ich nicht weiß. → <b>was</b> … <b>weiß</b>",
+      "s": "Das ist alles , was ich für das Anschreiben brauche .",
+      "a": [
+       4,
+       9
+      ],
+      "gw": {
+       "uz": "Relativ gap vergul bilan ajraladi: boshida <b>was</b> yoki <b>wo</b>, tuslangan fe’l — oxirida. Modal fe’l bo‘lsa, u eng oxirida, infinitivdan keyin turadi. Misol: <b>…, was du im Kurs gelernt hast.</b>",
+       "ru": "Относительное придаточное отделяется запятой: в начале <b>was</b> или <b>wo</b>, спрягаемый глагол — в конце. Модальный глагол стоит в самом конце, после инфинитива. Пример: <b>…, was du im Kurs gelernt hast.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *was* / *wo* und das konjugierte Verb im Relativsatz.",
+      "s": "Ich suche eine Stadt , wo ich Deutsch lernen kann .",
+      "a": [
+       5,
+       9
+      ],
+      "gw": {
+       "uz": "Relativ gap vergul bilan ajraladi: boshida <b>was</b> yoki <b>wo</b>, tuslangan fe’l — oxirida. Modal fe’l bo‘lsa, u eng oxirida, infinitivdan keyin turadi. Misol: <b>…, was du im Kurs gelernt hast.</b>",
+       "ru": "Относительное придаточное отделяется запятой: в начале <b>was</b> или <b>wo</b>, спрягаемый глагол — в конце. Модальный глагол стоит в самом конце, после инфинитива. Пример: <b>…, was du im Kurs gelernt hast.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *was* / *wo* und das konjugierte Verb im Relativsatz.",
+      "s": "Gibt es etwas , was ich im Lebenslauf noch ändern soll ?",
+      "a": [
+       4,
+       10
+      ],
+      "gw": {
+       "uz": "Relativ gap vergul bilan ajraladi: boshida <b>was</b> yoki <b>wo</b>, tuslangan fe’l — oxirida. Modal fe’l bo‘lsa, u eng oxirida, infinitivdan keyin turadi. Misol: <b>…, was du im Kurs gelernt hast.</b>",
+       "ru": "Относительное придаточное отделяется запятой: в начале <b>was</b> или <b>wo</b>, спрягаемый глагол — в конце. Модальный глагол стоит в самом конце, после инфинитива. Пример: <b>…, was du im Kurs gelernt hast.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *was* / *wo* und das konjugierte Verb im Relativsatz.",
+      "s": "Die Stadt , wo Aziz studieren möchte , liegt im Osten von Deutschland .",
+      "a": [
+       3,
+       6
+      ],
+      "gw": {
+       "uz": "Relativ gap vergul bilan ajraladi: boshida <b>was</b> yoki <b>wo</b>, tuslangan fe’l — oxirida. Modal fe’l bo‘lsa, u eng oxirida, infinitivdan keyin turadi. Misol: <b>…, was du im Kurs gelernt hast.</b>",
+       "ru": "Относительное придаточное отделяется запятой: в начале <b>was</b> или <b>wo</b>, спрягаемый глагол — в конце. Модальный глагол стоит в самом конце, после инфинитива. Пример: <b>…, was du im Kurs gelernt hast.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*was* oder *wo*? Was passt?",
+      "bsp": "Hier ist etwas, ___ dich interessiert. → etwas → ✓ <b>was</b>",
+      "q": "Das Anschreiben ist das Wichtigste, ___ du für die Bewerbung schreibst.",
+      "o": [
+       "was",
+       "das",
+       "wo"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Verguldan oldingi so‘zga qarang: <b>alles, etwas, nichts, das Beste</b> yoki butun gap — <b>was</b>; joy (Stadt, Land, Dorf, Ort) — <b>wo</b>. «alles, das» — xato. Misol: <b>Das ist alles, was ich weiß.</b> · <b>Das ist der Ort, wo ich wohne.</b>",
+       "ru": "Смотрите на слово перед запятой: <b>alles, etwas, nichts, das Beste</b> или целое предложение — <b>was</b>; место (Stadt, Land, Dorf, Ort) — <b>wo</b>. «alles, das» — ошибка. Пример: <b>Das ist alles, was ich weiß.</b> · <b>Das ist der Ort, wo ich wohne.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*was* oder *wo*? Was passt?",
+      "q": "Ich möchte ein Praktikum in einer Stadt machen, ___ es viele Museen gibt.",
+      "o": [
+       "was",
+       "wo",
+       "die"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Verguldan oldingi so‘zga qarang: <b>alles, etwas, nichts, das Beste</b> yoki butun gap — <b>was</b>; joy (Stadt, Land, Dorf, Ort) — <b>wo</b>. «alles, das» — xato. Misol: <b>Das ist alles, was ich weiß.</b> · <b>Das ist der Ort, wo ich wohne.</b>",
+       "ru": "Смотрите на слово перед запятой: <b>alles, etwas, nichts, das Beste</b> или целое предложение — <b>was</b>; место (Stadt, Land, Dorf, Ort) — <b>wo</b>. «alles, das» — ошибка. Пример: <b>Das ist alles, was ich weiß.</b> · <b>Das ist der Ort, wo ich wohne.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*was* oder *wo*? Was passt?",
+      "q": "Ich habe im Internet nichts gefunden, ___ zu meiner Qualifikation passt.",
+      "o": [
+       "das",
+       "was",
+       "wo"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Verguldan oldingi so‘zga qarang: <b>alles, etwas, nichts, das Beste</b> yoki butun gap — <b>was</b>; joy (Stadt, Land, Dorf, Ort) — <b>wo</b>. «alles, das» — xato. Misol: <b>Das ist alles, was ich weiß.</b> · <b>Das ist der Ort, wo ich wohne.</b>",
+       "ru": "Смотрите на слово перед запятой: <b>alles, etwas, nichts, das Beste</b> или целое предложение — <b>was</b>; место (Stadt, Land, Dorf, Ort) — <b>wo</b>. «alles, das» — ошибка. Пример: <b>Das ist alles, was ich weiß.</b> · <b>Das ist der Ort, wo ich wohne.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*was* oder *wo*? Was passt?",
+      "q": "Das Dorf, ___ Sevara ihren Freiwilligendienst macht, liegt in den Bergen.",
+      "o": [
+       "was",
+       "das",
+       "wo"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Verguldan oldingi so‘zga qarang: <b>alles, etwas, nichts, das Beste</b> yoki butun gap — <b>was</b>; joy (Stadt, Land, Dorf, Ort) — <b>wo</b>. «alles, das» — xato. Misol: <b>Das ist alles, was ich weiß.</b> · <b>Das ist der Ort, wo ich wohne.</b>",
+       "ru": "Смотрите на слово перед запятой: <b>alles, etwas, nichts, das Beste</b> или целое предложение — <b>was</b>; место (Stadt, Land, Dorf, Ort) — <b>wo</b>. «alles, das» — ошибка. Пример: <b>Das ist alles, was ich weiß.</b> · <b>Das ist der Ort, wo ich wohne.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*was* oder *wo*? Was passt?",
+      "q": "Laylo hat den Studienplatz in Bonn bekommen, ___ ihre Eltern sehr freut.",
+      "o": [
+       "was",
+       "das",
+       "wo"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Verguldan oldingi so‘zga qarang: <b>alles, etwas, nichts, das Beste</b> yoki butun gap — <b>was</b>; joy (Stadt, Land, Dorf, Ort) — <b>wo</b>. «alles, das» — xato. Misol: <b>Das ist alles, was ich weiß.</b> · <b>Das ist der Ort, wo ich wohne.</b>",
+       "ru": "Смотрите на слово перед запятой: <b>alles, etwas, nichts, das Beste</b> или целое предложение — <b>was</b>; место (Stadt, Land, Dorf, Ort) — <b>wo</b>. «alles, das» — ошибка. Пример: <b>Das ist alles, was ich weiß.</b> · <b>Das ist der Ort, wo ich wohne.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *was* oder *wo*.",
+      "bsp": "Ist das alles, ___ du brauchst? → alles → <b>was</b>",
+      "s": "Das ist das Beste, ___ mir passieren konnte!",
+      "a": [
+       [
+        "was"
+       ]
+      ],
+      "gw": {
+       "uz": "Bo‘sh joydan oldingi so‘zni tekshiring: umumiy so‘z (<b>alles, etwas, nichts, viel</b>), Superlativ yoki butun gap → <b>was</b>; joy → <b>wo</b>. Misol: <b>Leipzig ist die Stadt, wo ich studiere.</b>",
+       "ru": "Проверьте слово перед пропуском: обобщающее слово (<b>alles, etwas, nichts, viel</b>), превосходная степень или целое предложение → <b>was</b>; место → <b>wo</b>. Пример: <b>Leipzig ist die Stadt, wo ich studiere.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *was* oder *wo*.",
+      "s": "Ich möchte in einer Stadt studieren, ___ es eine gute Bibliothek gibt.",
+      "a": [
+       [
+        "wo"
+       ]
+      ],
+      "gw": {
+       "uz": "Bo‘sh joydan oldingi so‘zni tekshiring: umumiy so‘z (<b>alles, etwas, nichts, viel</b>), Superlativ yoki butun gap → <b>was</b>; joy → <b>wo</b>. Misol: <b>Leipzig ist die Stadt, wo ich studiere.</b>",
+       "ru": "Проверьте слово перед пропуском: обобщающее слово (<b>alles, etwas, nichts, viel</b>), превосходная степень или целое предложение → <b>was</b>; место → <b>wo</b>. Пример: <b>Leipzig ist die Stadt, wo ich studiere.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *was* oder *wo*.",
+      "s": "Bei der Recherche haben wir nicht viel gefunden, ___ uns geholfen hat.",
+      "a": [
+       [
+        "was"
+       ]
+      ],
+      "gw": {
+       "uz": "Bo‘sh joydan oldingi so‘zni tekshiring: umumiy so‘z (<b>alles, etwas, nichts, viel</b>), Superlativ yoki butun gap → <b>was</b>; joy → <b>wo</b>. Misol: <b>Leipzig ist die Stadt, wo ich studiere.</b>",
+       "ru": "Проверьте слово перед пропуском: обобщающее слово (<b>alles, etwas, nichts, viel</b>), превосходная степень или целое предложение → <b>was</b>; место → <b>wo</b>. Пример: <b>Leipzig ist die Stadt, wo ich studiere.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *was* oder *wo*.",
+      "s": "Hallo Leute! Ich bewerbe mich für einen Freiwilligendienst in Österreich.\nIch suche ein Projekt in einem Ort, ___ es viel Natur gibt.\nIm Anschreiben steht schon alles, ___ ich gut kann.\nGibt es etwas, ___ ich noch schreiben soll?",
+      "a": [
+       [
+        "wo"
+       ],
+       [
+        "was"
+       ],
+       [
+        "was"
+       ]
+      ],
+      "gw": {
+       "uz": "Bo‘sh joydan oldingi so‘zni tekshiring: umumiy so‘z (<b>alles, etwas, nichts, viel</b>), Superlativ yoki butun gap → <b>was</b>; joy → <b>wo</b>. Misol: <b>Leipzig ist die Stadt, wo ich studiere.</b>",
+       "ru": "Проверьте слово перед пропуском: обобщающее слово (<b>alles, etwas, nichts, viel</b>), превосходная степень или целое предложение → <b>was</b>; место → <b>wo</b>. Пример: <b>Leipzig ist die Stadt, wo ich studiere.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *was* oder *wo*.",
+      "s": "▪ Hast du die Zusage für den Sprachkurs bekommen?\n● Ja! Der Kurs ist in Wien, ___ meine Tante wohnt.\n▪ Super! Das ist genau das, ___ du wolltest, oder?",
+      "a": [
+       [
+        "wo"
+       ],
+       [
+        "was"
+       ]
+      ],
+      "gw": {
+       "uz": "Bo‘sh joydan oldingi so‘zni tekshiring: umumiy so‘z (<b>alles, etwas, nichts, viel</b>), Superlativ yoki butun gap → <b>was</b>; joy → <b>wo</b>. Misol: <b>Leipzig ist die Stadt, wo ich studiere.</b>",
+       "ru": "Проверьте слово перед пропуском: обобщающее слово (<b>alles, etwas, nichts, viel</b>), превосходная степень или целое предложение → <b>was</b>; место → <b>wo</b>. Пример: <b>Leipzig ist die Stadt, wo ich studiere.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *was* oder *wo*.",
+      "s": "Ben hat die Sprachprüfung bestanden, ___ seine Chancen auf einen Studienplatz verbessert.",
+      "a": [
+       [
+        "was"
+       ]
+      ],
+      "gw": {
+       "uz": "Bo‘sh joydan oldingi so‘zni tekshiring: umumiy so‘z (<b>alles, etwas, nichts, viel</b>), Superlativ yoki butun gap → <b>was</b>; joy → <b>wo</b>. Misol: <b>Leipzig ist die Stadt, wo ich studiere.</b>",
+       "ru": "Проверьте слово перед пропуском: обобщающее слово (<b>alles, etwas, nichts, viel</b>), превосходная степень или целое предложение → <b>was</b>; место → <b>wo</b>. Пример: <b>Leipzig ist die Stadt, wo ich studiere.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *was* oder *wo*.",
+      "s": "Kennst du ein Café, ___ man in Ruhe lernen kann?",
+      "a": [
+       [
+        "wo"
+       ]
+      ],
+      "gw": {
+       "uz": "Bo‘sh joydan oldingi so‘zni tekshiring: umumiy so‘z (<b>alles, etwas, nichts, viel</b>), Superlativ yoki butun gap → <b>was</b>; joy → <b>wo</b>. Misol: <b>Leipzig ist die Stadt, wo ich studiere.</b>",
+       "ru": "Проверьте слово перед пропуском: обобщающее слово (<b>alles, etwas, nichts, viel</b>), превосходная степень или целое предложение → <b>was</b>; место → <b>wo</b>. Пример: <b>Leipzig ist die Stadt, wo ich studiere.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *in dem* oder *in der* (= wo).",
+      "bsp": "Das ist die Bibliothek, ___ ich oft lerne. → die Bibliothek → <b>in der</b>",
+      "s": "Das ist das Café, ___ wir unsere Bewerbungen geschrieben haben.",
+      "a": [
+       [
+        "in dem"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>wo</b> o‘rniga predlog + relativ olmosh ham ishlatiladi: der / das → <b>in dem</b>, die → <b>in der</b> (Dativ, chunki savol — Wo?). Artiklni otga qarab toping. Misol: <b>das Zimmer, in dem ich wohne</b>",
+       "ru": "Вместо <b>wo</b> можно сказать предлог + относительное местоимение: der / das → <b>in dem</b>, die → <b>in der</b> (Dativ, потому что вопрос — Wo?). Артикль определите по существительному. Пример: <b>das Zimmer, in dem ich wohne</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *in dem* oder *in der* (= wo).",
+      "s": "Leipzig ist eine Stadt, ___ viele Studenten leben.",
+      "a": [
+       [
+        "in der"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>wo</b> o‘rniga predlog + relativ olmosh ham ishlatiladi: der / das → <b>in dem</b>, die → <b>in der</b> (Dativ, chunki savol — Wo?). Artiklni otga qarab toping. Misol: <b>das Zimmer, in dem ich wohne</b>",
+       "ru": "Вместо <b>wo</b> можно сказать предлог + относительное местоимение: der / das → <b>in dem</b>, die → <b>in der</b> (Dativ, потому что вопрос — Wo?). Артикль определите по существительному. Пример: <b>das Zimmer, in dem ich wohne</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *in dem* oder *in der* (= wo).",
+      "s": "Das Büro, ___ man die Unterlagen abgibt, ist im ersten Stock.",
+      "a": [
+       [
+        "in dem"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>wo</b> o‘rniga predlog + relativ olmosh ham ishlatiladi: der / das → <b>in dem</b>, die → <b>in der</b> (Dativ, chunki savol — Wo?). Artiklni otga qarab toping. Misol: <b>das Zimmer, in dem ich wohne</b>",
+       "ru": "Вместо <b>wo</b> можно сказать предлог + относительное местоимение: der / das → <b>in dem</b>, die → <b>in der</b> (Dativ, потому что вопрос — Wo?). Артикль определите по существительному. Пример: <b>das Zimmer, in dem ich wohne</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *in dem* oder *in der* (= wo).",
+      "s": "Die Schule, ___ Laylo ihr Praktikum macht, ist sehr modern.",
+      "a": [
+       [
+        "in der"
+       ]
+      ],
+      "gw": {
+       "uz": "<b>wo</b> o‘rniga predlog + relativ olmosh ham ishlatiladi: der / das → <b>in dem</b>, die → <b>in der</b> (Dativ, chunki savol — Wo?). Artiklni otga qarab toping. Misol: <b>das Zimmer, in dem ich wohne</b>",
+       "ru": "Вместо <b>wo</b> можно сказать предлог + относительное местоимение: der / das → <b>in dem</b>, die → <b>in der</b> (Dativ, потому что вопрос — Wo?). Артикль определите по существительному. Пример: <b>das Zimmer, in dem ich wohne</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *was* oder *wo*.",
+      "bsp": "Ich verstehe nichts. Er sagt es. → <b>Ich verstehe nichts, was er sagt.</b>",
+      "q": "Ich habe alles vorbereitet. Die Beraterin hat es empfohlen.",
+      "w": [
+       "Ich",
+       "habe",
+       "alles",
+       "vorbereitet,",
+       "was",
+       "die Beraterin",
+       "empfohlen",
+       "hat"
+      ],
+      "a": "Ich habe alles vorbereitet, was die Beraterin empfohlen hat.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi <b>es / das / dort</b> o‘rniga <b>was</b> yoki <b>wo</b> keladi, fe’l esa oxirga o‘tadi. Relativ gap o‘zi bog‘langan so‘zdan keyin, vergul bilan turadi. Misol: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>",
+       "ru": "Вместо <b>es / das / dort</b> во втором предложении ставится <b>was</b> или <b>wo</b>, а глагол уходит в конец. Придаточное стоит после слова, к которому относится, через запятую. Пример: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *was* oder *wo*.",
+      "q": "Malika studiert in Mainz. Dort gibt es eine gute Universität.",
+      "w": [
+       "Malika",
+       "studiert",
+       "in Mainz,",
+       "wo",
+       "es",
+       "eine gute Universität",
+       "gibt"
+      ],
+      "a": "Malika studiert in Mainz, wo es eine gute Universität gibt.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi <b>es / das / dort</b> o‘rniga <b>was</b> yoki <b>wo</b> keladi, fe’l esa oxirga o‘tadi. Relativ gap o‘zi bog‘langan so‘zdan keyin, vergul bilan turadi. Misol: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>",
+       "ru": "Вместо <b>es / das / dort</b> во втором предложении ставится <b>was</b> или <b>wo</b>, а глагол уходит в конец. Придаточное стоит после слова, к которому относится, через запятую. Пример: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *was* oder *wo*.",
+      "q": "Timur sucht ein Praktikum in Hamburg. Sein Bruder lebt dort.",
+      "w": [
+       "Timur",
+       "sucht",
+       "ein Praktikum",
+       "in Hamburg,",
+       "wo",
+       "sein Bruder",
+       "lebt"
+      ],
+      "a": "Timur sucht ein Praktikum in Hamburg, wo sein Bruder lebt.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi <b>es / das / dort</b> o‘rniga <b>was</b> yoki <b>wo</b> keladi, fe’l esa oxirga o‘tadi. Relativ gap o‘zi bog‘langan so‘zdan keyin, vergul bilan turadi. Misol: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>",
+       "ru": "Вместо <b>es / das / dort</b> во втором предложении ставится <b>was</b> или <b>wo</b>, а глагол уходит в конец. Придаточное стоит после слова, к которому относится, через запятую. Пример: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *was* oder *wo*.",
+      "q": "Das ist das Wichtigste. Du musst es im Anschreiben zeigen.",
+      "w": [
+       "Das",
+       "ist",
+       "das Wichtigste,",
+       "was",
+       "du",
+       "im Anschreiben",
+       "zeigen",
+       "musst"
+      ],
+      "a": "Das ist das Wichtigste, was du im Anschreiben zeigen musst.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi <b>es / das / dort</b> o‘rniga <b>was</b> yoki <b>wo</b> keladi, fe’l esa oxirga o‘tadi. Relativ gap o‘zi bog‘langan so‘zdan keyin, vergul bilan turadi. Misol: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>",
+       "ru": "Вместо <b>es / das / dort</b> во втором предложении ставится <b>was</b> или <b>wo</b>, а глагол уходит в конец. Придаточное стоит после слова, к которому относится, через запятую. Пример: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *was* oder *wo*.",
+      "q": "Gibt es etwas? Ich kann es noch verbessern.",
+      "w": [
+       "Gibt",
+       "es",
+       "etwas,",
+       "was",
+       "ich",
+       "noch",
+       "verbessern",
+       "kann"
+      ],
+      "a": "Gibt es etwas, was ich noch verbessern kann?",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi <b>es / das / dort</b> o‘rniga <b>was</b> yoki <b>wo</b> keladi, fe’l esa oxirga o‘tadi. Relativ gap o‘zi bog‘langan so‘zdan keyin, vergul bilan turadi. Misol: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>",
+       "ru": "Вместо <b>es / das / dort</b> во втором предложении ставится <b>was</b> или <b>wo</b>, а глагол уходит в конец. Придаточное стоит после слова, к которому относится, через запятую. Пример: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *was* oder *wo*.",
+      "q": "Nodir hat alle Unterlagen pünktlich geschickt. Das war sehr wichtig.",
+      "w": [
+       "Nodir",
+       "hat",
+       "alle Unterlagen",
+       "pünktlich",
+       "geschickt,",
+       "was",
+       "sehr wichtig",
+       "war"
+      ],
+      "a": "Nodir hat alle Unterlagen pünktlich geschickt, was sehr wichtig war.",
+      "alt": [
+       "Nodir hat pünktlich alle Unterlagen geschickt, was sehr wichtig war."
+      ],
+      "gw": {
+       "uz": "Ikkinchi gapdagi <b>es / das / dort</b> o‘rniga <b>was</b> yoki <b>wo</b> keladi, fe’l esa oxirga o‘tadi. Relativ gap o‘zi bog‘langan so‘zdan keyin, vergul bilan turadi. Misol: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>",
+       "ru": "Вместо <b>es / das / dort</b> во втором предложении ставится <b>was</b> или <b>wo</b>, а глагол уходит в конец. Придаточное стоит после слова, к которому относится, через запятую. Пример: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *was* oder *wo*.",
+      "q": "Die Stadt ist sehr schön. Dort macht Paul seinen Sprachkurs.",
+      "w": [
+       "Die Stadt,",
+       "wo",
+       "Paul",
+       "seinen Sprachkurs",
+       "macht,",
+       "ist",
+       "sehr schön"
+      ],
+      "a": "Die Stadt, wo Paul seinen Sprachkurs macht, ist sehr schön.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi <b>es / das / dort</b> o‘rniga <b>was</b> yoki <b>wo</b> keladi, fe’l esa oxirga o‘tadi. Relativ gap o‘zi bog‘langan so‘zdan keyin, vergul bilan turadi. Misol: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>",
+       "ru": "Вместо <b>es / das / dort</b> во втором предложении ставится <b>was</b> или <b>wo</b>, а глагол уходит в конец. Придаточное стоит после слова, к которому относится, через запятую. Пример: Wir wohnen in Bonn. Dort studiert Aziz. → <b>Wir wohnen in Bonn, wo Aziz studiert.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich kenne ein Café, was man gut lernen kann. → <b>was</b> ✗ → Ort → <b>wo</b>",
+      "s": "Das ist alles , das ich über das Praktikum weiß .",
+      "a": [
+       4
+      ],
+      "fix": "Das ist alles, was ich über das Praktikum weiß.",
+      "gw": {
+       "uz": "Ikki xato ko‘p uchraydi: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va relativ gapda fe’lni oxirga qo‘ymaslik. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
+       "ru": "Две частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и глагол не в конце придаточного. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Berlin ist die Stadt , wo ich möchte studieren .",
+      "a": [
+       7
+      ],
+      "fix": "Berlin ist die Stadt, wo ich studieren möchte.",
+      "gw": {
+       "uz": "Ikki xato ko‘p uchraydi: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va relativ gapda fe’lni oxirga qo‘ymaslik. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
+       "ru": "Две частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и глагол не в конце придаточного. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Der Freiwilligendienst war das Beste , wo ich je gemacht habe .",
+      "a": [
+       6
+      ],
+      "fix": "Der Freiwilligendienst war das Beste, was ich je gemacht habe.",
+      "gw": {
+       "uz": "Ikki xato ko‘p uchraydi: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va relativ gapda fe’lni oxirga qo‘ymaslik. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
+       "ru": "Две частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и глагол не в конце придаточного. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich habe den Studienplatz bekommen , das meine Eltern sehr freut .",
+      "a": [
+       6
+      ],
+      "fix": "Ich habe den Studienplatz bekommen, was meine Eltern sehr freut.",
+      "gw": {
+       "uz": "Ikki xato ko‘p uchraydi: <b>alles / etwas / das Beste</b> yoki butun gapdan keyin <b>das</b> yoki <b>wo</b> yozish (to‘g‘risi — <b>was</b>) va relativ gapda fe’lni oxirga qo‘ymaslik. Misol: <b>Das ist das Beste, was ich gelesen habe.</b>",
+       "ru": "Две частые ошибки: <b>das</b> или <b>wo</b> после <b>alles / etwas / das Beste</b> или после целого предложения (правильно — <b>was</b>) и глагол не в конце придаточного. Пример: <b>Das ist das Beste, was ich gelesen habe.</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

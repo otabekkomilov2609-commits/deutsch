@@ -1,0 +1,570 @@
+{
+ "id": "B1-b11-11-G",
+ "meta": {
+  "title": "Grammatik · Relativsätze im Dativ",
+  "stitle": "Relativsatz · dem · der · denen · Präposition + Relativpronomen"
+ },
+ "ex": {
+  "title": "Lektion 11 · Grammatik",
+  "sub": "Relativsatz · dem · der · denen · Präposition + Relativpronomen",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Relativpronomen im Dativ: dem · der · dem · denen</h4>\n<table class=\"ex-tb\"><tr><th></th><th>maskulin</th><th>neutral</th><th>feminin</th><th>Plural</th></tr>\n<tr><td>Nominativ</td><td>der</td><td>das</td><td>die</td><td>die</td></tr>\n<tr><td>Akkusativ</td><td>den</td><td>das</td><td>die</td><td>die</td></tr>\n<tr><td><b>Dativ</b></td><td><b>dem</b></td><td><b>dem</b></td><td><b>der</b></td><td><b>denen</b></td></tr></table>\n<table class=\"ex-tb\"><tr><td>Das ist mein Nachbar. Ich habe <b>ihm</b> meine Lampe geliehen.</td><td>→ Das ist mein Nachbar, <b>dem</b> ich meine Lampe geliehen <b>habe</b>.</td></tr>\n<tr><td>Wo sind die Kinder? Das Fahrrad gehört <b>ihnen</b>.</td><td>→ Wo sind die Kinder, <b>denen</b> das Fahrrad <b>gehört</b>?</td></tr></table>\n<p class=\"ex-note\">Jins va son — oldingi Nomendan (der Nachbar → m.), kelishik — Relativsatzdagi fe’ldan (<b>wem?</b> → Dativ). Dativ fe’llari: <b>helfen, gehören, gefallen, passen, schmecken, danken, leihen, schenken, geben</b> (wem?). Plural Dativ — <b>denen</b> (den emas!).</p>",
+      "ru": "<h4>Relativpronomen im Dativ: dem · der · dem · denen</h4>\n<table class=\"ex-tb\"><tr><th></th><th>maskulin</th><th>neutral</th><th>feminin</th><th>Plural</th></tr>\n<tr><td>Nominativ</td><td>der</td><td>das</td><td>die</td><td>die</td></tr>\n<tr><td>Akkusativ</td><td>den</td><td>das</td><td>die</td><td>die</td></tr>\n<tr><td><b>Dativ</b></td><td><b>dem</b></td><td><b>dem</b></td><td><b>der</b></td><td><b>denen</b></td></tr></table>\n<table class=\"ex-tb\"><tr><td>Das ist mein Nachbar. Ich habe <b>ihm</b> meine Lampe geliehen.</td><td>→ Das ist mein Nachbar, <b>dem</b> ich meine Lampe geliehen <b>habe</b>.</td></tr>\n<tr><td>Wo sind die Kinder? Das Fahrrad gehört <b>ihnen</b>.</td><td>→ Wo sind die Kinder, <b>denen</b> das Fahrrad <b>gehört</b>?</td></tr></table>\n<p class=\"ex-note\">Род и число — от существительного (der Nachbar → m.), падеж — от глагола в Relativsatz (<b>wem?</b> → Dativ). Глаголы с Dativ: <b>helfen, gehören, gefallen, passen, schmecken, danken, leihen, schenken, geben</b> (wem?). Plural Dativ — <b>denen</b> (не den!).</p>"
+     },
+     {
+      "t": "info",
+      "h": "<h4>Präposition + Relativpronomen</h4>\n<table class=\"ex-tb\"><tr><th>Präposition</th><th>Beispiel</th></tr>\n<tr><td>aus + Dat.</td><td>der Becher, <b>aus dem</b> ich Tee trinke</td></tr>\n<tr><td>in + Dat. (Wo?)</td><td>die Tasche, <b>in der</b> mein Handy ist</td></tr>\n<tr><td>mit + Dat.</td><td>die Kopfhörer, <b>mit denen</b> ich Musik höre</td></tr>\n<tr><td>für + Akk.</td><td>die App, <b>für die</b> ich zehn Euro bezahlt habe</td></tr>\n<tr><td>warten auf + Akk.</td><td>das Paket, <b>auf das</b> ich warte</td></tr></table>\n<p class=\"ex-note\">Predlog Relativpronomen <b>oldida</b> turadi, vergul esa predlogdan oldin: <b>…, mit dem …</b> Kelishikni predlog belgilaydi: <b>mit, aus, bei, von, in</b> (wo?) → Dativ; <b>für, ohne, warten auf, sich freuen über</b> → Akkusativ. Fe’l oxirida.</p>",
+      "ru": "<h4>Präposition + Relativpronomen</h4>\n<table class=\"ex-tb\"><tr><th>Präposition</th><th>Beispiel</th></tr>\n<tr><td>aus + Dat.</td><td>der Becher, <b>aus dem</b> ich Tee trinke</td></tr>\n<tr><td>in + Dat. (Wo?)</td><td>die Tasche, <b>in der</b> mein Handy ist</td></tr>\n<tr><td>mit + Dat.</td><td>die Kopfhörer, <b>mit denen</b> ich Musik höre</td></tr>\n<tr><td>für + Akk.</td><td>die App, <b>für die</b> ich zehn Euro bezahlt habe</td></tr>\n<tr><td>warten auf + Akk.</td><td>das Paket, <b>auf das</b> ich warte</td></tr></table>\n<p class=\"ex-note\">Предлог стоит <b>перед</b> Relativpronomen, запятая — перед предлогом: <b>…, mit dem …</b> Падеж определяет предлог: <b>mit, aus, bei, von, in</b> (wo?) → Dativ; <b>für, ohne, warten auf, sich freuen über</b> → Akkusativ. Глагол в конце.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Relativpronomen (und die Präposition).",
+      "bsp": "Das ist die Lampe, <b>mit der</b> ich abends lese.",
+      "s": "Das ist der Mitbewohner , dem die Kaffeemaschine gehört .",
+      "a": [
+       5
+      ],
+      "gw": {
+       "uz": "Relativsatz verguldan keyin boshlanadi: avval (predlog +) Relativpronomen, oxirida fe’l. Pronomen oldingi Nomenga qaytadi: <b>die Freunde → denen</b>. Misol: <b>die Lampe, mit der ich lese</b>.",
+       "ru": "Relativsatz начинается после запятой: сначала (предлог +) Relativpronomen, в конце глагол. Местоимение относится к предыдущему существительному: <b>die Freunde → denen</b>. Пример: <b>die Lampe, mit der ich lese</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Relativpronomen (und die Präposition).",
+      "bsp": "Das ist die Lampe, <b>mit der</b> ich abends lese.",
+      "s": "Ich suche eine Tasche , in der mein Laptop Platz hat .",
+      "a": [
+       5,
+       6
+      ],
+      "gw": {
+       "uz": "Relativsatz verguldan keyin boshlanadi: avval (predlog +) Relativpronomen, oxirida fe’l. Pronomen oldingi Nomenga qaytadi: <b>die Freunde → denen</b>. Misol: <b>die Lampe, mit der ich lese</b>.",
+       "ru": "Relativsatz начинается после запятой: сначала (предлог +) Relativpronomen, в конце глагол. Местоимение относится к предыдущему существительному: <b>die Freunde → denen</b>. Пример: <b>die Lampe, mit der ich lese</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Relativpronomen (und die Präposition).",
+      "bsp": "Das ist die Lampe, <b>mit der</b> ich abends lese.",
+      "s": "Die Freunde , denen ich meine Bücher geliehen habe , wohnen jetzt in Samarkand .",
+      "a": [
+       3
+      ],
+      "gw": {
+       "uz": "Relativsatz verguldan keyin boshlanadi: avval (predlog +) Relativpronomen, oxirida fe’l. Pronomen oldingi Nomenga qaytadi: <b>die Freunde → denen</b>. Misol: <b>die Lampe, mit der ich lese</b>.",
+       "ru": "Relativsatz начинается после запятой: сначала (предлог +) Relativpronomen, в конце глагол. Местоимение относится к предыдущему существительному: <b>die Freunde → denen</b>. Пример: <b>die Lampe, mit der ich lese</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Relativpronomen (und die Präposition).",
+      "bsp": "Das ist die Lampe, <b>mit der</b> ich abends lese.",
+      "s": "Das Messer , mit dem ich Brot schneide , ist sehr scharf .",
+      "a": [
+       3,
+       4
+      ],
+      "gw": {
+       "uz": "Relativsatz verguldan keyin boshlanadi: avval (predlog +) Relativpronomen, oxirida fe’l. Pronomen oldingi Nomenga qaytadi: <b>die Freunde → denen</b>. Misol: <b>die Lampe, mit der ich lese</b>.",
+       "ru": "Relativsatz начинается после запятой: сначала (предлог +) Relativpronomen, в конце глагол. Местоимение относится к предыдущему существительному: <b>die Freunde → denen</b>. Пример: <b>die Lampe, mit der ich lese</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welches Relativpronomen passt?",
+      "bsp": "Das ist die Freundin, ___ ich mein Fahrrad geliehen habe. → leihen: wem? → f. → ✓ <b>der</b>",
+      "q": "Das ist der Junge, ___ der rote Rucksack gehört.",
+      "o": [
+       "den",
+       "dem",
+       "der"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Ikki savol: (1) Nomen qaysi jins/sonda? (2) Relativsatzdagi fe’l nimani so‘raydi — <b>wen?</b> (Akk.) yoki <b>wem?</b> (Dat.)? <b>helfen, gehören, gefallen, schenken</b> → <b>dem / der / dem / denen</b>. Misol: <b>die Nachbarn, denen ich helfe</b>.",
+       "ru": "Два вопроса: (1) какого рода/числа существительное? (2) что требует глагол в Relativsatz — <b>wen?</b> (Akk.) или <b>wem?</b> (Dat.)? <b>helfen, gehören, gefallen, schenken</b> → <b>dem / der / dem / denen</b>. Пример: <b>die Nachbarn, denen ich helfe</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welches Relativpronomen passt?",
+      "bsp": "Das ist die Freundin, ___ ich mein Fahrrad geliehen habe. → leihen: wem? → f. → ✓ <b>der</b>",
+      "q": "Wie heißen die Nachbarn, ___ du beim Umzug geholfen hast?",
+      "o": [
+       "denen",
+       "den",
+       "die"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Ikki savol: (1) Nomen qaysi jins/sonda? (2) Relativsatzdagi fe’l nimani so‘raydi — <b>wen?</b> (Akk.) yoki <b>wem?</b> (Dat.)? <b>helfen, gehören, gefallen, schenken</b> → <b>dem / der / dem / denen</b>. Misol: <b>die Nachbarn, denen ich helfe</b>.",
+       "ru": "Два вопроса: (1) какого рода/числа существительное? (2) что требует глагол в Relativsatz — <b>wen?</b> (Akk.) или <b>wem?</b> (Dat.)? <b>helfen, gehören, gefallen, schenken</b> → <b>dem / der / dem / denen</b>. Пример: <b>die Nachbarn, denen ich helfe</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welches Relativpronomen passt?",
+      "bsp": "Das ist die Freundin, ___ ich mein Fahrrad geliehen habe. → leihen: wem? → f. → ✓ <b>der</b>",
+      "q": "Die Lehrerin, ___ ich die Blumen geschenkt habe, hat sich sehr gefreut.",
+      "o": [
+       "die",
+       "dem",
+       "der"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Ikki savol: (1) Nomen qaysi jins/sonda? (2) Relativsatzdagi fe’l nimani so‘raydi — <b>wen?</b> (Akk.) yoki <b>wem?</b> (Dat.)? <b>helfen, gehören, gefallen, schenken</b> → <b>dem / der / dem / denen</b>. Misol: <b>die Nachbarn, denen ich helfe</b>.",
+       "ru": "Два вопроса: (1) какого рода/числа существительное? (2) что требует глагол в Relativsatz — <b>wen?</b> (Akk.) или <b>wem?</b> (Dat.)? <b>helfen, gehören, gefallen, schenken</b> → <b>dem / der / dem / denen</b>. Пример: <b>die Nachbarn, denen ich helfe</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welches Relativpronomen passt?",
+      "bsp": "Das ist die Freundin, ___ ich mein Fahrrad geliehen habe. → leihen: wem? → f. → ✓ <b>der</b>",
+      "q": "Ist das der Kaffeebecher, ___ du im Internet bestellt hast?",
+      "o": [
+       "dem",
+       "den",
+       "denen"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Ikki savol: (1) Nomen qaysi jins/sonda? (2) Relativsatzdagi fe’l nimani so‘raydi — <b>wen?</b> (Akk.) yoki <b>wem?</b> (Dat.)? <b>helfen, gehören, gefallen, schenken</b> → <b>dem / der / dem / denen</b>. Misol: <b>die Nachbarn, denen ich helfe</b>.",
+       "ru": "Два вопроса: (1) какого рода/числа существительное? (2) что требует глагол в Relativsatz — <b>wen?</b> (Akk.) или <b>wem?</b> (Dat.)? <b>helfen, gehören, gefallen, schenken</b> → <b>dem / der / dem / denen</b>. Пример: <b>die Nachbarn, denen ich helfe</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welches Relativpronomen passt?",
+      "bsp": "Das ist die Freundin, ___ ich mein Fahrrad geliehen habe. → leihen: wem? → f. → ✓ <b>der</b>",
+      "q": "Das Kind, ___ das neue Spiel so gut gefällt, spielt den ganzen Tag damit.",
+      "o": [
+       "dem",
+       "das",
+       "den"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Ikki savol: (1) Nomen qaysi jins/sonda? (2) Relativsatzdagi fe’l nimani so‘raydi — <b>wen?</b> (Akk.) yoki <b>wem?</b> (Dat.)? <b>helfen, gehören, gefallen, schenken</b> → <b>dem / der / dem / denen</b>. Misol: <b>die Nachbarn, denen ich helfe</b>.",
+       "ru": "Два вопроса: (1) какого рода/числа существительное? (2) что требует глагол в Relativsatz — <b>wen?</b> (Akk.) или <b>wem?</b> (Dat.)? <b>helfen, gehören, gefallen, schenken</b> → <b>dem / der / dem / denen</b>. Пример: <b>die Nachbarn, denen ich helfe</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Präposition + Relativpronomen: Was passt?",
+      "bsp": "Das ist der Stuhl, ___ ich am liebsten sitze. → sitzen auf (Wo?) + Dat. → ✓ <b>auf dem</b>",
+      "q": "Das ist die App, ___ ich jeden Tag Vokabeln lerne.",
+      "o": [
+       "mit die",
+       "mit der",
+       "mit dem"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Predlog o‘z kelishigini olib keladi: <b>mit, aus, bei, von</b> va <b>in/auf</b> (wo?) → Dativ; <b>für, ohne, warten auf</b> → Akkusativ. Jins — oldingi Nomendan. Misol: <b>der Laden, in dem ich einkaufe</b> · <b>das Geschenk, für das ich viel bezahlt habe</b>.",
+       "ru": "Предлог сам определяет падеж: <b>mit, aus, bei, von</b> и <b>in/auf</b> (wo?) → Dativ; <b>für, ohne, warten auf</b> → Akkusativ. Род — от предыдущего существительного. Пример: <b>der Laden, in dem ich einkaufe</b> · <b>das Geschenk, für das ich viel bezahlt habe</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Präposition + Relativpronomen: Was passt?",
+      "bsp": "Das ist der Stuhl, ___ ich am liebsten sitze. → sitzen auf (Wo?) + Dat. → ✓ <b>auf dem</b>",
+      "q": "Wo sind die Batterien, ___ meine Kamera funktioniert?",
+      "o": [
+       "mit denen",
+       "mit den",
+       "mit die"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Predlog o‘z kelishigini olib keladi: <b>mit, aus, bei, von</b> va <b>in/auf</b> (wo?) → Dativ; <b>für, ohne, warten auf</b> → Akkusativ. Jins — oldingi Nomendan. Misol: <b>der Laden, in dem ich einkaufe</b> · <b>das Geschenk, für das ich viel bezahlt habe</b>.",
+       "ru": "Предлог сам определяет падеж: <b>mit, aus, bei, von</b> и <b>in/auf</b> (wo?) → Dativ; <b>für, ohne, warten auf</b> → Akkusativ. Род — от предыдущего существительного. Пример: <b>der Laden, in dem ich einkaufe</b> · <b>das Geschenk, für das ich viel bezahlt habe</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Präposition + Relativpronomen: Was passt?",
+      "bsp": "Das ist der Stuhl, ___ ich am liebsten sitze. → sitzen auf (Wo?) + Dat. → ✓ <b>auf dem</b>",
+      "q": "Endlich ist das Paket da, ___ ich zwei Wochen gewartet habe.",
+      "o": [
+       "auf dem",
+       "auf den",
+       "auf das"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Predlog o‘z kelishigini olib keladi: <b>mit, aus, bei, von</b> va <b>in/auf</b> (wo?) → Dativ; <b>für, ohne, warten auf</b> → Akkusativ. Jins — oldingi Nomendan. Misol: <b>der Laden, in dem ich einkaufe</b> · <b>das Geschenk, für das ich viel bezahlt habe</b>.",
+       "ru": "Предлог сам определяет падеж: <b>mit, aus, bei, von</b> и <b>in/auf</b> (wo?) → Dativ; <b>für, ohne, warten auf</b> → Akkusativ. Род — от предыдущего существительного. Пример: <b>der Laden, in dem ich einkaufe</b> · <b>das Geschenk, für das ich viel bezahlt habe</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Präposition + Relativpronomen: Was passt?",
+      "bsp": "Das ist der Stuhl, ___ ich am liebsten sitze. → sitzen auf (Wo?) + Dat. → ✓ <b>auf dem</b>",
+      "q": "Das ist das Geschäft, ___ man alles für die Küche bekommt.",
+      "o": [
+       "in das",
+       "in dem",
+       "in den"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Predlog o‘z kelishigini olib keladi: <b>mit, aus, bei, von</b> va <b>in/auf</b> (wo?) → Dativ; <b>für, ohne, warten auf</b> → Akkusativ. Jins — oldingi Nomendan. Misol: <b>der Laden, in dem ich einkaufe</b> · <b>das Geschenk, für das ich viel bezahlt habe</b>.",
+       "ru": "Предлог сам определяет падеж: <b>mit, aus, bei, von</b> и <b>in/auf</b> (wo?) → Dativ; <b>für, ohne, warten auf</b> → Akkusativ. Род — от предыдущего существительного. Пример: <b>der Laden, in dem ich einkaufe</b> · <b>das Geschenk, für das ich viel bezahlt habe</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Relativpronomen.",
+      "bsp": "Das ist mein Bruder, ___ ich oft bei den Hausaufgaben helfe. → helfen + Dat. → <b>dem</b>",
+      "s": "Ich habe eine neue Geldbörse, in ___ alle meine Karten Platz haben.",
+      "a": [
+       [
+        "der"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval Nomenning jinsi/sonini toping, keyin kelishikni: fe’l (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) yoki predlog (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Misol: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>.",
+       "ru": "Сначала найдите род/число существительного, потом падеж: по глаголу (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) или по предлогу (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Пример: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Relativpronomen.",
+      "bsp": "Das ist mein Bruder, ___ ich oft bei den Hausaufgaben helfe. → helfen + Dat. → <b>dem</b>",
+      "s": "Das sind die Freunde, mit ___ ich am Wochenende gekocht habe.",
+      "a": [
+       [
+        "denen"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval Nomenning jinsi/sonini toping, keyin kelishikni: fe’l (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) yoki predlog (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Misol: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>.",
+       "ru": "Сначала найдите род/число существительного, потом падеж: по глаголу (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) или по предлогу (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Пример: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Relativpronomen.",
+      "bsp": "Das ist mein Bruder, ___ ich oft bei den Hausaufgaben helfe. → helfen + Dat. → <b>dem</b>",
+      "s": "Wie heißt der Laden, in ___ du die schöne Lampe gekauft hast?",
+      "a": [
+       [
+        "dem"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval Nomenning jinsi/sonini toping, keyin kelishikni: fe’l (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) yoki predlog (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Misol: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>.",
+       "ru": "Сначала найдите род/число существительного, потом падеж: по глаголу (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) или по предлогу (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Пример: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Relativpronomen.",
+      "bsp": "Das ist mein Bruder, ___ ich oft bei den Hausaufgaben helfe. → helfen + Dat. → <b>dem</b>",
+      "s": "Mein Lieblingsding\nDas ist mein alter Kaffeebecher, ___ ich seit fünf Jahren habe.\nIch habe ihn von meiner Oma bekommen, ___ ich jeden Sonntag beim Kochen helfe.\nDer Becher hat ein kleines Loch, aus ___ manchmal Tee läuft. Aber ich liebe ihn!",
+      "a": [
+       [
+        "den"
+       ],
+       [
+        "der"
+       ],
+       [
+        "dem"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval Nomenning jinsi/sonini toping, keyin kelishikni: fe’l (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) yoki predlog (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Misol: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>.",
+       "ru": "Сначала найдите род/число существительного, потом падеж: по глаголу (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) или по предлогу (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Пример: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Relativpronomen.",
+      "bsp": "Das ist mein Bruder, ___ ich oft bei den Hausaufgaben helfe. → helfen + Dat. → <b>dem</b>",
+      "s": "Der Mann, ___ wir den Weg zum Bahnhof gezeigt haben, war sehr dankbar.",
+      "a": [
+       [
+        "dem"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval Nomenning jinsi/sonini toping, keyin kelishikni: fe’l (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) yoki predlog (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Misol: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>.",
+       "ru": "Сначала найдите род/число существительного, потом падеж: по глаголу (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) или по предлогу (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Пример: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Relativpronomen.",
+      "bsp": "Das ist mein Bruder, ___ ich oft bei den Hausaufgaben helfe. → helfen + Dat. → <b>dem</b>",
+      "s": "Frage an alle: Kennt ihr eine gute Trinkflasche, in ___ man auch heißen Tee transportieren kann?\nMeine alte Flasche, ___ ich immer zur Uni mitgenommen habe, ist leider kaputt.\nDie Flaschen, von ___ meine Freunde erzählt haben, sind sehr teuer.",
+      "a": [
+       [
+        "der"
+       ],
+       [
+        "die"
+       ],
+       [
+        "denen"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval Nomenning jinsi/sonini toping, keyin kelishikni: fe’l (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) yoki predlog (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Misol: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>.",
+       "ru": "Сначала найдите род/число существительного, потом падеж: по глаголу (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) или по предлогу (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Пример: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Relativpronomen.",
+      "bsp": "Das ist mein Bruder, ___ ich oft bei den Hausaufgaben helfe. → helfen + Dat. → <b>dem</b>",
+      "s": "Die Kinder, ___ das Fahrrad gehört, spielen im Hof.",
+      "a": [
+       [
+        "denen"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval Nomenning jinsi/sonini toping, keyin kelishikni: fe’l (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) yoki predlog (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Misol: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>.",
+       "ru": "Сначала найдите род/число существительного, потом падеж: по глаголу (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) или по предлогу (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Пример: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Relativpronomen.",
+      "bsp": "Das ist mein Bruder, ___ ich oft bei den Hausaufgaben helfe. → helfen + Dat. → <b>dem</b>",
+      "s": "Das ist ein Produkt, für ___ ich gern mehr bezahle, weil es nicht giftig ist.",
+      "a": [
+       [
+        "das"
+       ]
+      ],
+      "gw": {
+       "uz": "Avval Nomenning jinsi/sonini toping, keyin kelishikni: fe’l (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) yoki predlog (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Misol: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>.",
+       "ru": "Сначала найдите род/число существительного, потом падеж: по глаголу (<b>helfen, gehören</b> → Dat.; <b>haben, kaufen, mitnehmen</b> → Akk.) или по предлогу (<b>mit, aus, von, in</b> wo? → Dat.; <b>für, ohne</b> → Akk.). Пример: <b>der Becher, aus dem ich trinke</b> · <b>der Becher, den ich habe</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit einem Relativsatz.",
+      "bsp": "Das ist meine Nachbarin. Ich helfe ihr oft. → <b>Das ist meine Nachbarin, der ich oft helfe.</b>",
+      "q": "Das ist mein Mitbewohner. Ich habe ihm meine Kopfhörer geliehen.",
+      "w": [
+       "Das",
+       "ist",
+       "mein Mitbewohner,",
+       "dem",
+       "ich",
+       "meine Kopfhörer",
+       "geliehen",
+       "habe"
+      ],
+      "a": "Das ist mein Mitbewohner, dem ich meine Kopfhörer geliehen habe.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi olmosh (<b>ihm, ihr, ihnen</b>) yoki <b>predlog + Nomen</b> o‘rniga Relativpronomen keladi va vergul bilan Nomendan keyin turadi. Fe’l Relativsatz oxiriga o‘tadi. Relativsatz o‘rtada bo‘lsa — ikki tomonida vergul. Misol: <b>Die Tasche, in der mein Handy ist, ist blau.</b>",
+       "ru": "Вместо местоимения (<b>ihm, ihr, ihnen</b>) или <b>предлога + существительного</b> во втором предложении ставится Relativpronomen — через запятую после существительного. Глагол уходит в конец Relativsatz. Если Relativsatz в середине — запятые с обеих сторон. Пример: <b>Die Tasche, in der mein Handy ist, ist blau.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit einem Relativsatz.",
+      "bsp": "Das ist meine Nachbarin. Ich helfe ihr oft. → <b>Das ist meine Nachbarin, der ich oft helfe.</b>",
+      "q": "Wo sind die Studenten? Diese Laptops gehören ihnen.",
+      "w": [
+       "Wo",
+       "sind",
+       "die Studenten,",
+       "denen",
+       "diese Laptops",
+       "gehören"
+      ],
+      "a": "Wo sind die Studenten, denen diese Laptops gehören?",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi olmosh (<b>ihm, ihr, ihnen</b>) yoki <b>predlog + Nomen</b> o‘rniga Relativpronomen keladi va vergul bilan Nomendan keyin turadi. Fe’l Relativsatz oxiriga o‘tadi. Relativsatz o‘rtada bo‘lsa — ikki tomonida vergul. Misol: <b>Die Tasche, in der mein Handy ist, ist blau.</b>",
+       "ru": "Вместо местоимения (<b>ihm, ihr, ihnen</b>) или <b>предлога + существительного</b> во втором предложении ставится Relativpronomen — через запятую после существительного. Глагол уходит в конец Relativsatz. Если Relativsatz в середине — запятые с обеих сторон. Пример: <b>Die Tasche, in der mein Handy ist, ist blau.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit einem Relativsatz.",
+      "bsp": "Das ist meine Nachbarin. Ich helfe ihr oft. → <b>Das ist meine Nachbarin, der ich oft helfe.</b>",
+      "q": "Hier sind die Tassen. Wir trinken aus den Tassen Kaffee.",
+      "w": [
+       "Hier",
+       "sind",
+       "die Tassen,",
+       "aus",
+       "denen",
+       "wir",
+       "Kaffee",
+       "trinken"
+      ],
+      "a": "Hier sind die Tassen, aus denen wir Kaffee trinken.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi olmosh (<b>ihm, ihr, ihnen</b>) yoki <b>predlog + Nomen</b> o‘rniga Relativpronomen keladi va vergul bilan Nomendan keyin turadi. Fe’l Relativsatz oxiriga o‘tadi. Relativsatz o‘rtada bo‘lsa — ikki tomonida vergul. Misol: <b>Die Tasche, in der mein Handy ist, ist blau.</b>",
+       "ru": "Вместо местоимения (<b>ihm, ihr, ihnen</b>) или <b>предлога + существительного</b> во втором предложении ставится Relativpronomen — через запятую после существительного. Глагол уходит в конец Relativsatz. Если Relativsatz в середине — запятые с обеих сторон. Пример: <b>Die Tasche, in der mein Handy ist, ist blau.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit einem Relativsatz.",
+      "bsp": "Das ist meine Nachbarin. Ich helfe ihr oft. → <b>Das ist meine Nachbarin, der ich oft helfe.</b>",
+      "q": "Ich habe einen neuen Rucksack. In dem Rucksack ist ein Fach für den Laptop.",
+      "w": [
+       "Ich",
+       "habe",
+       "einen neuen Rucksack,",
+       "in",
+       "dem",
+       "ein Fach für den Laptop",
+       "ist"
+      ],
+      "a": "Ich habe einen neuen Rucksack, in dem ein Fach für den Laptop ist.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi olmosh (<b>ihm, ihr, ihnen</b>) yoki <b>predlog + Nomen</b> o‘rniga Relativpronomen keladi va vergul bilan Nomendan keyin turadi. Fe’l Relativsatz oxiriga o‘tadi. Relativsatz o‘rtada bo‘lsa — ikki tomonida vergul. Misol: <b>Die Tasche, in der mein Handy ist, ist blau.</b>",
+       "ru": "Вместо местоимения (<b>ihm, ihr, ihnen</b>) или <b>предлога + существительного</b> во втором предложении ставится Relativpronomen — через запятую после существительного. Глагол уходит в конец Relativsatz. Если Relativsatz в середине — запятые с обеих сторон. Пример: <b>Die Tasche, in der mein Handy ist, ist blau.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit einem Relativsatz.",
+      "bsp": "Das ist meine Nachbarin. Ich helfe ihr oft. → <b>Das ist meine Nachbarin, der ich oft helfe.</b>",
+      "q": "Das ist ein Geschäft. In diesem Geschäft bekommt man Rabatt für Studenten.",
+      "w": [
+       "Das",
+       "ist",
+       "ein Geschäft,",
+       "in",
+       "dem",
+       "man",
+       "Rabatt für Studenten",
+       "bekommt"
+      ],
+      "a": "Das ist ein Geschäft, in dem man Rabatt für Studenten bekommt.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi olmosh (<b>ihm, ihr, ihnen</b>) yoki <b>predlog + Nomen</b> o‘rniga Relativpronomen keladi va vergul bilan Nomendan keyin turadi. Fe’l Relativsatz oxiriga o‘tadi. Relativsatz o‘rtada bo‘lsa — ikki tomonida vergul. Misol: <b>Die Tasche, in der mein Handy ist, ist blau.</b>",
+       "ru": "Вместо местоимения (<b>ihm, ihr, ihnen</b>) или <b>предлога + существительного</b> во втором предложении ставится Relativpronomen — через запятую после существительного. Глагол уходит в конец Relativsatz. Если Relativsatz в середине — запятые с обеих сторон. Пример: <b>Die Tasche, in der mein Handy ist, ist blau.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit einem Relativsatz.",
+      "bsp": "Das ist meine Nachbarin. Ich helfe ihr oft. → <b>Das ist meine Nachbarin, der ich oft helfe.</b>",
+      "q": "Die Lampe ist sehr hell. Ich lese abends mit der Lampe.",
+      "w": [
+       "Die Lampe,",
+       "mit",
+       "der",
+       "ich",
+       "abends",
+       "lese,",
+       "ist",
+       "sehr hell"
+      ],
+      "a": "Die Lampe, mit der ich abends lese, ist sehr hell.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi olmosh (<b>ihm, ihr, ihnen</b>) yoki <b>predlog + Nomen</b> o‘rniga Relativpronomen keladi va vergul bilan Nomendan keyin turadi. Fe’l Relativsatz oxiriga o‘tadi. Relativsatz o‘rtada bo‘lsa — ikki tomonida vergul. Misol: <b>Die Tasche, in der mein Handy ist, ist blau.</b>",
+       "ru": "Вместо местоимения (<b>ihm, ihr, ihnen</b>) или <b>предлога + существительного</b> во втором предложении ставится Relativpronomen — через запятую после существительного. Глагол уходит в конец Relativsatz. Если Relativsatz в середине — запятые с обеих сторон. Пример: <b>Die Tasche, in der mein Handy ist, ist blau.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit einem Relativsatz.",
+      "bsp": "Das ist meine Nachbarin. Ich helfe ihr oft. → <b>Das ist meine Nachbarin, der ich oft helfe.</b>",
+      "q": "Der Kaffeebecher ist aus Holz. Ich habe mich sehr über den Becher gefreut.",
+      "w": [
+       "Der Kaffeebecher,",
+       "über",
+       "den",
+       "ich",
+       "mich",
+       "sehr",
+       "gefreut",
+       "habe,",
+       "ist",
+       "aus Holz"
+      ],
+      "a": "Der Kaffeebecher, über den ich mich sehr gefreut habe, ist aus Holz.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikkinchi gapdagi olmosh (<b>ihm, ihr, ihnen</b>) yoki <b>predlog + Nomen</b> o‘rniga Relativpronomen keladi va vergul bilan Nomendan keyin turadi. Fe’l Relativsatz oxiriga o‘tadi. Relativsatz o‘rtada bo‘lsa — ikki tomonida vergul. Misol: <b>Die Tasche, in der mein Handy ist, ist blau.</b>",
+       "ru": "Вместо местоимения (<b>ihm, ihr, ihnen</b>) или <b>предлога + существительного</b> во втором предложении ставится Relativpronomen — через запятую после существительного. Глагол уходит в конец Relativsatz. Если Relativsatz в середине — запятые с обеих сторон. Пример: <b>Die Tasche, in der mein Handy ist, ist blau.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "die Frau, <b>die</b> ich helfe → die Frau, <b>der</b> ich helfe",
+      "s": "Das sind meine Freunde , den ich gestern geholfen habe .",
+      "a": [
+       5
+      ],
+      "fix": "Das sind meine Freunde, denen ich gestern geholfen habe.",
+      "gw": {
+       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni Nomenga, kelishigi fe’l yoki predlogga mosmi (Plural Dativ — <b>denen</b>); (2) predlog tushib qolmaganmi (<b>aus dem</b> trinken); (3) fe’l Relativsatz oxiridami. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
+       "ru": "Проверьте: (1) род/число Relativpronomen совпадают с существительным, а падеж — с глаголом или предлогом (Plural Dativ — <b>denen</b>); (2) не пропущен ли предлог (<b>aus dem</b> trinken); (3) стоит ли глагол в конце Relativsatz. Пример: <b>die Tasche, in der mein Laptop ist</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "die Frau, <b>die</b> ich helfe → die Frau, <b>der</b> ich helfe",
+      "s": "Das ist der Becher , dem ich jeden Morgen Tee trinke .",
+      "a": [
+       5
+      ],
+      "fix": "Das ist der Becher, aus dem ich jeden Morgen Tee trinke.",
+      "gw": {
+       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni Nomenga, kelishigi fe’l yoki predlogga mosmi (Plural Dativ — <b>denen</b>); (2) predlog tushib qolmaganmi (<b>aus dem</b> trinken); (3) fe’l Relativsatz oxiridami. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
+       "ru": "Проверьте: (1) род/число Relativpronomen совпадают с существительным, а падеж — с глаголом или предлогом (Plural Dativ — <b>denen</b>); (2) не пропущен ли предлог (<b>aus dem</b> trinken); (3) стоит ли глагол в конце Relativsatz. Пример: <b>die Tasche, in der mein Laptop ist</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "die Frau, <b>die</b> ich helfe → die Frau, <b>der</b> ich helfe",
+      "s": "Ich brauche eine Tasche , in die mein Laptop Platz hat .",
+      "a": [
+       6
+      ],
+      "fix": "Ich brauche eine Tasche, in der mein Laptop Platz hat.",
+      "gw": {
+       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni Nomenga, kelishigi fe’l yoki predlogga mosmi (Plural Dativ — <b>denen</b>); (2) predlog tushib qolmaganmi (<b>aus dem</b> trinken); (3) fe’l Relativsatz oxiridami. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
+       "ru": "Проверьте: (1) род/число Relativpronomen совпадают с существительным, а падеж — с глаголом или предлогом (Plural Dativ — <b>denen</b>); (2) не пропущен ли предлог (<b>aus dem</b> trinken); (3) стоит ли глагол в конце Relativsatz. Пример: <b>die Tasche, in der mein Laptop ist</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "die Frau, <b>die</b> ich helfe → die Frau, <b>der</b> ich helfe",
+      "s": "Der Nachbar , dem ich habe mein Fahrrad geliehen , wohnt im dritten Stock .",
+      "a": [
+       5
+      ],
+      "fix": "Der Nachbar, dem ich mein Fahrrad geliehen habe, wohnt im dritten Stock.",
+      "gw": {
+       "uz": "Tekshiring: (1) Relativpronomen jinsi/soni Nomenga, kelishigi fe’l yoki predlogga mosmi (Plural Dativ — <b>denen</b>); (2) predlog tushib qolmaganmi (<b>aus dem</b> trinken); (3) fe’l Relativsatz oxiridami. Misol: <b>die Tasche, in der mein Laptop ist</b>.",
+       "ru": "Проверьте: (1) род/число Relativpronomen совпадают с существительным, а падеж — с глаголом или предлогом (Plural Dativ — <b>denen</b>); (2) не пропущен ли предлог (<b>aus dem</b> trinken); (3) стоит ли глагол в конце Relativsatz. Пример: <b>die Tasche, in der mein Laptop ist</b>."
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

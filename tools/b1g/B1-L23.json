@@ -1,0 +1,654 @@
+{
+ "id": "B1-b12-23-G",
+ "meta": {
+  "title": "Grammatik · Konjunktiv II der Vergangenheit",
+  "stitle": "Konjunktiv II der Vergangenheit · hätte / wäre + Partizip II · irreales wenn"
+ },
+ "ex": {
+  "title": "Lektion 23 · Grammatik",
+  "sub": "Konjunktiv II der Vergangenheit · hätte / wäre + Partizip II · irreales wenn",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Konjunktiv II der Vergangenheit: hätte / wäre + Partizip II</h4>\n<table class=\"ex-tb\"><tr><th>Realität (Perfekt)</th><th>nur gedacht (Konjunktiv II)</th></tr>\n<tr><td>Der Turm war geschlossen. Wir <b>haben</b> nichts <b>gesehen</b>.</td><td>Wir <b>hätten</b> gern die Aussicht <b>gesehen</b>.</td></tr>\n<tr><td>Ich <b>bin</b> zu Hause <b>geblieben</b>.</td><td>Ich <b>wäre</b> gern <b>mitgefahren</b>.</td></tr></table>\n<table class=\"ex-tb\"><tr><th>Person</th><th>haben → hätte</th><th>sein → wäre</th></tr>\n<tr><td>ich</td><td><b>hätte</b> … gemacht</td><td><b>wäre</b> … gefahren</td></tr>\n<tr><td>du</td><td><b>hättest</b></td><td><b>wärst</b></td></tr>\n<tr><td>er / es / sie</td><td><b>hätte</b></td><td><b>wäre</b></td></tr>\n<tr><td>wir</td><td><b>hätten</b></td><td><b>wären</b></td></tr>\n<tr><td>ihr</td><td><b>hättet</b></td><td><b>wärt</b></td></tr>\n<tr><td>sie / Sie</td><td><b>hätten</b></td><td><b>wären</b></td></tr></table>\n<p class=\"ex-note\">O‘tmishda bo‘lmagan, faqat tasavvurdagi voqea. hätte yoki wäre — Perfektdagi kabi: Perfektda <b>haben</b> → <b>hätte</b>, <b>sein</b> → <b>wäre</b>. Partizip II gap oxirida. Misol: <b>Mit dem Auto wären wir schneller gewesen.</b></p>",
+      "ru": "<h4>Konjunktiv II der Vergangenheit: hätte / wäre + Partizip II</h4>\n<table class=\"ex-tb\"><tr><th>Realität (Perfekt)</th><th>nur gedacht (Konjunktiv II)</th></tr>\n<tr><td>Der Turm war geschlossen. Wir <b>haben</b> nichts <b>gesehen</b>.</td><td>Wir <b>hätten</b> gern die Aussicht <b>gesehen</b>.</td></tr>\n<tr><td>Ich <b>bin</b> zu Hause <b>geblieben</b>.</td><td>Ich <b>wäre</b> gern <b>mitgefahren</b>.</td></tr></table>\n<table class=\"ex-tb\"><tr><th>Person</th><th>haben → hätte</th><th>sein → wäre</th></tr>\n<tr><td>ich</td><td><b>hätte</b> … gemacht</td><td><b>wäre</b> … gefahren</td></tr>\n<tr><td>du</td><td><b>hättest</b></td><td><b>wärst</b></td></tr>\n<tr><td>er / es / sie</td><td><b>hätte</b></td><td><b>wäre</b></td></tr>\n<tr><td>wir</td><td><b>hätten</b></td><td><b>wären</b></td></tr>\n<tr><td>ihr</td><td><b>hättet</b></td><td><b>wärt</b></td></tr>\n<tr><td>sie / Sie</td><td><b>hätten</b></td><td><b>wären</b></td></tr></table>\n<p class=\"ex-note\">Событие в прошлом, которого не было, — только в мыслях. hätte или wäre — как в Perfekt: в Perfekt <b>haben</b> → <b>hätte</b>, <b>sein</b> → <b>wäre</b>. Partizip II в конце. Пример: <b>Mit dem Auto wären wir schneller gewesen.</b></p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *hätte* / *wäre* und das Partizip II.",
+      "bsp": "Ich hätte das Museum gern gesehen. → <b>hätte</b> … <b>gesehen</b>",
+      "s": "Ohne Karte hätten wir den Weg nicht gefunden .",
+      "a": [
+       2,
+       7
+      ],
+      "gw": {
+       "uz": "Konjunktiv II der Vergangenheit ikki qismli: <b>hätte/wäre</b> (2-o‘rinda yoki Nebensatz oxirida) + <b>Partizip II</b>. wenn-gapda ikkita juft bo‘ladi. Misol: <b>Ohne Hilfe wäre ich nicht angekommen.</b>",
+       "ru": "Konjunktiv II прошедшего времени из двух частей: <b>hätte/wäre</b> (на 2-м месте или в конце придаточного) + <b>Partizip II</b>. В предложении с wenn — две такие пары. Пример: <b>Ohne Hilfe wäre ich nicht angekommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *hätte* / *wäre* und das Partizip II.",
+      "s": "Bei Regen wären wir nicht auf den Turm gestiegen .",
+      "a": [
+       2,
+       8
+      ],
+      "gw": {
+       "uz": "Konjunktiv II der Vergangenheit ikki qismli: <b>hätte/wäre</b> (2-o‘rinda yoki Nebensatz oxirida) + <b>Partizip II</b>. wenn-gapda ikkita juft bo‘ladi. Misol: <b>Ohne Hilfe wäre ich nicht angekommen.</b>",
+       "ru": "Konjunktiv II прошедшего времени из двух частей: <b>hätte/wäre</b> (на 2-м месте или в конце придаточного) + <b>Partizip II</b>. В предложении с wenn — две такие пары. Пример: <b>Ohne Hilfe wäre ich nicht angekommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *hätte* / *wäre* und das Partizip II.",
+      "s": "Ich wäre gern länger in der Pension geblieben .",
+      "a": [
+       1,
+       7
+      ],
+      "gw": {
+       "uz": "Konjunktiv II der Vergangenheit ikki qismli: <b>hätte/wäre</b> (2-o‘rinda yoki Nebensatz oxirida) + <b>Partizip II</b>. wenn-gapda ikkita juft bo‘ladi. Misol: <b>Ohne Hilfe wäre ich nicht angekommen.</b>",
+       "ru": "Konjunktiv II прошедшего времени из двух частей: <b>hätte/wäre</b> (на 2-м месте или в конце придаточного) + <b>Partizip II</b>. В предложении с wenn — две такие пары. Пример: <b>Ohne Hilfe wäre ich nicht angekommen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *hätte* / *wäre* und das Partizip II.",
+      "s": "Wenn die Fähre pünktlich gewesen wäre , hätten wir mehr Zeit gehabt .",
+      "a": [
+       4,
+       5,
+       7,
+       11
+      ],
+      "gw": {
+       "uz": "Konjunktiv II der Vergangenheit ikki qismli: <b>hätte/wäre</b> (2-o‘rinda yoki Nebensatz oxirida) + <b>Partizip II</b>. wenn-gapda ikkita juft bo‘ladi. Misol: <b>Ohne Hilfe wäre ich nicht angekommen.</b>",
+       "ru": "Konjunktiv II прошедшего времени из двух частей: <b>hätte/wäre</b> (на 2-м месте или в конце придаточного) + <b>Partizip II</b>. В предложении с wenn — две такие пары. Пример: <b>Ohne Hilfe wäre ich nicht angekommen.</b>"
+      }
+     },
+     {
+      "t": "cat",
+      "h": "*hätte* oder *wäre*? Ordnen Sie zu.",
+      "bsp": "gefahren → <b>wäre + Partizip II</b>",
+      "c": [
+       "hätte + Partizip II",
+       "wäre + Partizip II"
+      ],
+      "i": [
+       [
+        "gesehen",
+        0
+       ],
+       [
+        "gekommen",
+        1
+       ],
+       [
+        "besucht",
+        0
+       ],
+       [
+        "geblieben",
+        1
+       ],
+       [
+        "fotografiert",
+        0
+       ],
+       [
+        "gewesen",
+        1
+       ],
+       [
+        "gemacht",
+        0
+       ],
+       [
+        "gefahren",
+        1
+       ]
+      ],
+      "gw": {
+       "uz": "Perfektdagi kabi: harakat yoki holat o‘zgarishi (<b>fahren, kommen, steigen</b>) hamda <b>sein, bleiben</b> → <b>wäre</b>; qolgan fe’llar (<b>sehen, machen, besuchen</b> …) → <b>hätte</b>. Misol: <b>Wir wären gekommen.</b> · <b>Wir hätten geholfen.</b>",
+       "ru": "Как в Perfekt: движение или изменение состояния (<b>fahren, kommen, steigen</b>), а также <b>sein, bleiben</b> → <b>wäre</b>; остальные глаголы (<b>sehen, machen, besuchen</b> …) → <b>hätte</b>. Пример: <b>Wir wären gekommen.</b> · <b>Wir hätten geholfen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Mit dem Bus ___ wir früher angekommen. → ankommen + sein → ✓ <b>wären</b>",
+      "q": "Ohne die Fähre ___ wir die Insel nie gesehen.",
+      "o": [
+       "hätten",
+       "wären",
+       "würden"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Avval Partizip II ni toping va Perfektini eslang: gesehen → hat → <b>hätte</b>; gestiegen → ist → <b>wäre</b>. <b>würde</b> bu yerda kerak emas. Partizip II — <b>an-ge-kommen</b>, Infinitiv emas. Misol: <b>Ohne dich hätte ich das nicht geschafft.</b>",
+       "ru": "Сначала найдите Partizip II и вспомните его Perfekt: gesehen → hat → <b>hätte</b>; gestiegen → ist → <b>wäre</b>. <b>würde</b> здесь не нужен. Partizip II — <b>an-ge-kommen</b>, не инфинитив. Пример: <b>Ohne dich hätte ich das nicht geschafft.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Bei Sonne ___ ich auf den Turm gestiegen.",
+      "o": [
+       "hätte",
+       "würde",
+       "wäre"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Avval Partizip II ni toping va Perfektini eslang: gesehen → hat → <b>hätte</b>; gestiegen → ist → <b>wäre</b>. <b>würde</b> bu yerda kerak emas. Partizip II — <b>an-ge-kommen</b>, Infinitiv emas. Misol: <b>Ohne dich hätte ich das nicht geschafft.</b>",
+       "ru": "Сначала найдите Partizip II и вспомните его Perfekt: gesehen → hat → <b>hätte</b>; gestiegen → ist → <b>wäre</b>. <b>würde</b> здесь не нужен. Partizip II — <b>an-ge-kommen</b>, не инфинитив. Пример: <b>Ohne dich hätte ich das nicht geschafft.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Mit dem Auto wären wir schneller an der Grenze ___.",
+      "o": [
+       "ankommen",
+       "angekommen",
+       "ankommt"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Avval Partizip II ni toping va Perfektini eslang: gesehen → hat → <b>hätte</b>; gestiegen → ist → <b>wäre</b>. <b>würde</b> bu yerda kerak emas. Partizip II — <b>an-ge-kommen</b>, Infinitiv emas. Misol: <b>Ohne dich hätte ich das nicht geschafft.</b>",
+       "ru": "Сначала найдите Partizip II и вспомните его Perfekt: gesehen → hat → <b>hätte</b>; gestiegen → ist → <b>wäre</b>. <b>würde</b> здесь не нужен. Partizip II — <b>an-ge-kommen</b>, не инфинитив. Пример: <b>Ohne dich hätte ich das nicht geschafft.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Ohne deine Hilfe ___ ich den Weg zur Pension nicht gefunden.",
+      "o": [
+       "würde",
+       "hätte",
+       "wäre"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Avval Partizip II ni toping va Perfektini eslang: gesehen → hat → <b>hätte</b>; gestiegen → ist → <b>wäre</b>. <b>würde</b> bu yerda kerak emas. Partizip II — <b>an-ge-kommen</b>, Infinitiv emas. Misol: <b>Ohne dich hätte ich das nicht geschafft.</b>",
+       "ru": "Сначала найдите Partizip II и вспомните его Perfekt: gesehen → hat → <b>hätte</b>; gestiegen → ist → <b>wäre</b>. <b>würde</b> здесь не нужен. Partizip II — <b>an-ge-kommen</b>, не инфинитив. Пример: <b>Ohne dich hätte ich das nicht geschafft.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *hätte*, *hätten*, *wäre* oder *wären*.",
+      "bsp": "Ohne Karte ___ ich mich verlaufen. → sich verlaufen + haben → <b>hätte</b>",
+      "s": "Ohne Regenschirm ___ wir ganz nass geworden.",
+      "a": [
+       [
+        "wären"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki savol: 1) Perfektda <b>haben</b> yoki <b>sein</b>? → hätte / wäre; 2) ega birlikmi, ko‘plikmi? → <b>hätte / hätten</b>, <b>wäre / wären</b>. Misol: <b>Meine Freunde wären gern mitgekommen.</b>",
+       "ru": "Два вопроса: 1) в Perfekt <b>haben</b> или <b>sein</b>? → hätte / wäre; 2) подлежащее в ед. или мн. ч.? → <b>hätte / hätten</b>, <b>wäre / wären</b>. Пример: <b>Meine Freunde wären gern mitgekommen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *hätte*, *hätten*, *wäre* oder *wären*.",
+      "s": "Ich ___ gern noch ein Foto vom Denkmal gemacht, aber mein Akku war leer.",
+      "a": [
+       [
+        "hätte"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki savol: 1) Perfektda <b>haben</b> yoki <b>sein</b>? → hätte / wäre; 2) ega birlikmi, ko‘plikmi? → <b>hätte / hätten</b>, <b>wäre / wären</b>. Misol: <b>Meine Freunde wären gern mitgekommen.</b>",
+       "ru": "Два вопроса: 1) в Perfekt <b>haben</b> или <b>sein</b>? → hätte / wäre; 2) подлежащее в ед. или мн. ч.? → <b>hätte / hätten</b>, <b>wäre / wären</b>. Пример: <b>Meine Freunde wären gern mitgekommen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *hätte*, *hätten*, *wäre* oder *wären*.",
+      "s": "Mit dem Fahrrad ___ Laylo schneller am See gewesen.",
+      "a": [
+       [
+        "wäre"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki savol: 1) Perfektda <b>haben</b> yoki <b>sein</b>? → hätte / wäre; 2) ega birlikmi, ko‘plikmi? → <b>hätte / hätten</b>, <b>wäre / wären</b>. Misol: <b>Meine Freunde wären gern mitgekommen.</b>",
+       "ru": "Два вопроса: 1) в Perfekt <b>haben</b> или <b>sein</b>? → hätte / wäre; 2) подлежащее в ед. или мн. ч.? → <b>hätte / hätten</b>, <b>wäre / wären</b>. Пример: <b>Meine Freunde wären gern mitgekommen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *hätte*, *hätten*, *wäre* oder *wären*.",
+      "s": "Bei schönem Wetter ___ meine Eltern im Garten der Pension gefrühstückt.",
+      "a": [
+       [
+        "hätten"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki savol: 1) Perfektda <b>haben</b> yoki <b>sein</b>? → hätte / wäre; 2) ega birlikmi, ko‘plikmi? → <b>hätte / hätten</b>, <b>wäre / wären</b>. Misol: <b>Meine Freunde wären gern mitgekommen.</b>",
+       "ru": "Два вопроса: 1) в Perfekt <b>haben</b> или <b>sein</b>? → hätte / wäre; 2) подлежащее в ед. или мн. ч.? → <b>hätte / hätten</b>, <b>wäre / wären</b>. Пример: <b>Meine Freunde wären gern mitgekommen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den Konjunktiv II der Vergangenheit.",
+      "bsp": "Wir ___ gern länger ___. (bleiben) → <b>wären</b> … <b>geblieben</b>",
+      "s": "Mit einem Stadtführer ___ wir mehr über die Geschichte der Stadt ___. (erfahren)",
+      "a": [
+       [
+        "hätten"
+       ],
+       [
+        "erfahren"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki bo‘shliq: <b>hätte/wäre</b> egaga mos (2-o‘rinda) va oxirida <b>Partizip II</b>. Ajraladigan fe’lda <b>ge</b> o‘rtada: an<b>ge</b>kommen; <b>er-, ver-</b> fe’llarida <b>ge-</b> yo‘q: erfahren. Misol: <b>Ohne Stau wäre ich pünktlich angekommen.</b>",
+       "ru": "Два пропуска: <b>hätte/wäre</b> по подлежащему (на 2-м месте) и в конце <b>Partizip II</b>. У отделяемых глаголов <b>ge</b> в середине: an<b>ge</b>kommen; у глаголов на <b>er-, ver-</b> нет <b>ge-</b>: erfahren. Пример: <b>Ohne Stau wäre ich pünktlich angekommen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den Konjunktiv II der Vergangenheit.",
+      "s": "Ohne den Stau ___ ich pünktlich am Bahnhof ___. (ankommen)",
+      "a": [
+       [
+        "wäre"
+       ],
+       [
+        "angekommen"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki bo‘shliq: <b>hätte/wäre</b> egaga mos (2-o‘rinda) va oxirida <b>Partizip II</b>. Ajraladigan fe’lda <b>ge</b> o‘rtada: an<b>ge</b>kommen; <b>er-, ver-</b> fe’llarida <b>ge-</b> yo‘q: erfahren. Misol: <b>Ohne Stau wäre ich pünktlich angekommen.</b>",
+       "ru": "Два пропуска: <b>hätte/wäre</b> по подлежащему (на 2-м месте) и в конце <b>Partizip II</b>. У отделяемых глаголов <b>ge</b> в середине: an<b>ge</b>kommen; у глаголов на <b>er-, ver-</b> нет <b>ge-</b>: erfahren. Пример: <b>Ohne Stau wäre ich pünktlich angekommen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den Konjunktiv II der Vergangenheit.",
+      "s": "Sevara: Wie war euer Ausflug zur Insel?\nBen: Na ja … Wir haben die letzte Fähre verpasst.\nMit dem früheren Bus ___ wir pünktlich am Hafen ___. (sein)\nSevara: Oh nein! Und wo habt ihr geschlafen?\nBen: In einer kleinen Pension. Aber es war super! Das ___ ich nie ___. (denken)",
+      "a": [
+       [
+        "wären"
+       ],
+       [
+        "gewesen"
+       ],
+       [
+        "hätte"
+       ],
+       [
+        "gedacht"
+       ]
+      ],
+      "gw": {
+       "uz": "Ikki bo‘shliq: <b>hätte/wäre</b> egaga mos (2-o‘rinda) va oxirida <b>Partizip II</b>. Ajraladigan fe’lda <b>ge</b> o‘rtada: an<b>ge</b>kommen; <b>er-, ver-</b> fe’llarida <b>ge-</b> yo‘q: erfahren. Misol: <b>Ohne Stau wäre ich pünktlich angekommen.</b>",
+       "ru": "Два пропуска: <b>hätte/wäre</b> по подлежащему (на 2-м месте) и в конце <b>Partizip II</b>. У отделяемых глаголов <b>ge</b> в середине: an<b>ge</b>kommen; у глаголов на <b>er-, ver-</b> нет <b>ge-</b>: erfahren. Пример: <b>Ohne Stau wäre ich pünktlich angekommen.</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Irreale Bedingung in der Vergangenheit: Wenn …, hätte / wäre …</h4>\n<table class=\"ex-tb\"><tr><th>Realität</th><th>irreal: wenn …</th></tr>\n<tr><td>Es <b>hat geregnet</b>. Wir <b>sind nicht gewandert</b>.</td><td>Wenn es <b>nicht</b> geregnet <b>hätte</b>, <b>wären</b> wir gewandert.</td></tr>\n<tr><td>Ich <b>hatte keine</b> Zeit. Ich <b>bin nicht</b> gekommen.</td><td>Wenn ich Zeit gehabt <b>hätte</b>, <b>wäre</b> ich gekommen.</td></tr></table>\n<div class=\"ex-sk\"><span>Wenn</span><span>wir</span><span>früher</span><span class=\"v\">losgefahren wären</span>,</div>\n<div class=\"ex-sk\"><span class=\"v\">hätten</span><span>wir</span><span>die Fähre</span><span class=\"v\">erreicht</span>.</div>\n<p class=\"ex-note\">wenn-gapda <b>Partizip II + hätte/wäre</b> oxirida. Keyin vergul va Hauptsatz <b>hätte/wäre</b> bilan boshlanadi (fe’l → ega). Ma’no teskari: haqiqatda <b>bo‘lgan</b> → wenn-gapda <b>nicht</b>; <b>bo‘lmagan</b> → <b>nicht</b> yo‘q.</p>",
+      "ru": "<h4>Irreale Bedingung in der Vergangenheit: Wenn …, hätte / wäre …</h4>\n<table class=\"ex-tb\"><tr><th>Realität</th><th>irreal: wenn …</th></tr>\n<tr><td>Es <b>hat geregnet</b>. Wir <b>sind nicht gewandert</b>.</td><td>Wenn es <b>nicht</b> geregnet <b>hätte</b>, <b>wären</b> wir gewandert.</td></tr>\n<tr><td>Ich <b>hatte keine</b> Zeit. Ich <b>bin nicht</b> gekommen.</td><td>Wenn ich Zeit gehabt <b>hätte</b>, <b>wäre</b> ich gekommen.</td></tr></table>\n<div class=\"ex-sk\"><span>Wenn</span><span>wir</span><span>früher</span><span class=\"v\">losgefahren wären</span>,</div>\n<div class=\"ex-sk\"><span class=\"v\">hätten</span><span>wir</span><span>die Fähre</span><span class=\"v\">erreicht</span>.</div>\n<p class=\"ex-note\">В придаточном с wenn <b>Partizip II + hätte/wäre</b> в конце. Затем запятая, и главное предложение начинается с <b>hätte/wäre</b> (глагол → подлежащее). Смысл обратный: было на самом деле → в wenn-части <b>nicht</b>; не было → без <b>nicht</b>.</p>"
+     },
+     {
+      "t": "mc",
+      "h": "Was bedeutet der Satz?",
+      "bsp": "Wenn ich Zeit gehabt hätte, wäre ich gekommen. → ✓ <b>Ich hatte keine Zeit. Ich bin nicht gekommen.</b>",
+      "q": "Wenn es nicht geregnet hätte, wären wir gewandert.",
+      "o": [
+       "Es hat geregnet. Wir sind nicht gewandert.",
+       "Es hat nicht geregnet. Wir sind gewandert.",
+       "Es hat geregnet. Wir sind gewandert."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Konjunktiv II der Vergangenheit haqiqatning teskarisini aytadi: <b>Wenn es nicht geregnet hätte …</b> = haqiqatda yomg‘ir <b>yoqqan</b>. Ijobiyni inkorga, inkorni ijobiyga aylantiring. Misol: <b>Wenn ich das gewusst hätte, …</b> = Men buni bilmaganman.",
+       "ru": "Konjunktiv II прошедшего времени говорит противоположное реальности: <b>Wenn es nicht geregnet hätte …</b> = на самом деле дождь <b>был</b>. Утверждение превращайте в отрицание и наоборот. Пример: <b>Wenn ich das gewusst hätte, …</b> = Я этого не знал."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was bedeutet der Satz?",
+      "q": "Wenn wir den Zug nicht verpasst hätten, wären wir pünktlich gewesen.",
+      "o": [
+       "Wir haben den Zug nicht verpasst. Wir waren pünktlich.",
+       "Wir haben den Zug verpasst. Wir waren zu spät.",
+       "Wir haben den Zug verpasst. Wir waren pünktlich."
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Konjunktiv II der Vergangenheit haqiqatning teskarisini aytadi: <b>Wenn es nicht geregnet hätte …</b> = haqiqatda yomg‘ir <b>yoqqan</b>. Ijobiyni inkorga, inkorni ijobiyga aylantiring. Misol: <b>Wenn ich das gewusst hätte, …</b> = Men buni bilmaganman.",
+       "ru": "Konjunktiv II прошедшего времени говорит противоположное реальности: <b>Wenn es nicht geregnet hätte …</b> = на самом деле дождь <b>был</b>. Утверждение превращайте в отрицание и наоборот. Пример: <b>Wenn ich das gewusst hätte, …</b> = Я этого не знал."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was bedeutet der Satz?",
+      "q": "Wenn ich mehr Geld gehabt hätte, hätte ich in einem Hotel übernachtet.",
+      "o": [
+       "Ich hatte genug Geld. Ich habe im Hotel übernachtet.",
+       "Ich hatte wenig Geld. Ich habe im Hotel übernachtet.",
+       "Ich hatte wenig Geld. Ich habe nicht im Hotel übernachtet."
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Konjunktiv II der Vergangenheit haqiqatning teskarisini aytadi: <b>Wenn es nicht geregnet hätte …</b> = haqiqatda yomg‘ir <b>yoqqan</b>. Ijobiyni inkorga, inkorni ijobiyga aylantiring. Misol: <b>Wenn ich das gewusst hätte, …</b> = Men buni bilmaganman.",
+       "ru": "Konjunktiv II прошедшего времени говорит противоположное реальности: <b>Wenn es nicht geregnet hätte …</b> = на самом деле дождь <b>был</b>. Утверждение превращайте в отрицание и наоборот. Пример: <b>Wenn ich das gewusst hätte, …</b> = Я этого не знал."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den wenn-Satz.",
+      "bsp": "Wenn wir früher ___ ___, hätten wir die Fähre erreicht. (losfahren) → <b>losgefahren wären</b>",
+      "s": "Wenn du mich ___ ___, hätte ich dich vom Bahnhof abgeholt. (anrufen)",
+      "a": [
+       [
+        "angerufen"
+       ],
+       [
+        "hättest"
+       ]
+      ],
+      "gw": {
+       "uz": "wenn-gapda tartib: avval <b>Partizip II</b>, keyin eng oxirida <b>hätte/wäre</b> (egaga mos: du <b>hättest</b>). Misol: <b>Wenn du früher gekommen wärst, hättest du ihn gesehen.</b>",
+       "ru": "В части с wenn порядок: сначала <b>Partizip II</b>, потом в самом конце <b>hätte/wäre</b> (по подлежащему: du <b>hättest</b>). Пример: <b>Wenn du früher gekommen wärst, hättest du ihn gesehen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den wenn-Satz.",
+      "s": "Wenn das Museum offen ___ ___, hätten wir die Ausstellung gesehen. (sein)",
+      "a": [
+       [
+        "gewesen"
+       ],
+       [
+        "wäre"
+       ]
+      ],
+      "gw": {
+       "uz": "wenn-gapda tartib: avval <b>Partizip II</b>, keyin eng oxirida <b>hätte/wäre</b> (egaga mos: du <b>hättest</b>). Misol: <b>Wenn du früher gekommen wärst, hättest du ihn gesehen.</b>",
+       "ru": "В части с wenn порядок: сначала <b>Partizip II</b>, потом в самом конце <b>hätte/wäre</b> (по подлежащему: du <b>hättest</b>). Пример: <b>Wenn du früher gekommen wärst, hättest du ihn gesehen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den wenn-Satz.",
+      "s": "Wenn ich das ___ ___, wäre ich mitgekommen. (wissen)",
+      "a": [
+       [
+        "gewusst"
+       ],
+       [
+        "hätte"
+       ]
+      ],
+      "gw": {
+       "uz": "wenn-gapda tartib: avval <b>Partizip II</b>, keyin eng oxirida <b>hätte/wäre</b> (egaga mos: du <b>hättest</b>). Misol: <b>Wenn du früher gekommen wärst, hättest du ihn gesehen.</b>",
+       "ru": "В части с wenn порядок: сначала <b>Partizip II</b>, потом в самом конце <b>hätte/wäre</b> (по подлежащему: du <b>hättest</b>). Пример: <b>Wenn du früher gekommen wärst, hättest du ihn gesehen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie den wenn-Satz.",
+      "s": "Reiseforum: Unser Ausflug in die Berge\nNodir: Leider war das Wetter schlecht.\nWenn die Sonne ___ ___, hätten wir eine Wanderung gemacht. (scheinen)\nAlso sind wir den ganzen Tag in der Pension geblieben.\nWenn wir den Wetterbericht ___ ___, wären wir zu Hause geblieben. (lesen)",
+      "a": [
+       [
+        "geschienen"
+       ],
+       [
+        "hätte"
+       ],
+       [
+        "gelesen"
+       ],
+       [
+        "hätten"
+       ]
+      ],
+      "gw": {
+       "uz": "wenn-gapda tartib: avval <b>Partizip II</b>, keyin eng oxirida <b>hätte/wäre</b> (egaga mos: du <b>hättest</b>). Misol: <b>Wenn du früher gekommen wärst, hättest du ihn gesehen.</b>",
+       "ru": "В части с wenn порядок: сначала <b>Partizip II</b>, потом в самом конце <b>hätte/wäre</b> (по подлежащему: du <b>hättest</b>). Пример: <b>Wenn du früher gekommen wärst, hättest du ihn gesehen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *wenn*.",
+      "bsp": "Es hat geregnet. Wir sind nicht gewandert. → <b>Wenn es nicht geregnet hätte, wären wir gewandert.</b>",
+      "q": "Es hat geregnet. Wir sind nicht auf den Turm gestiegen.",
+      "w": [
+       "Wenn",
+       "es",
+       "nicht",
+       "geregnet",
+       "hätte,",
+       "wären",
+       "wir",
+       "auf den Turm",
+       "gestiegen"
+      ],
+      "a": "Wenn es nicht geregnet hätte, wären wir auf den Turm gestiegen.",
+      "alt": [],
+      "gw": {
+       "uz": "Haqiqatni teskari qiling (<b>nicht</b> qo‘shing yoki olib tashlang, <b>keine</b> ↔ ein-). wenn-gapda <b>hätte/wäre</b> oxirida, vergul, keyin Hauptsatz <b>hätte/wäre</b> bilan boshlanadi. wenn-gap oxirda ham kelishi mumkin. Misol: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>",
+       "ru": "Переверните реальность (добавьте или уберите <b>nicht</b>, <b>keine</b> ↔ ein-). В части с wenn <b>hätte/wäre</b> в конце, запятая, затем главное начинается с <b>hätte/wäre</b>. Часть с wenn может стоять и в конце. Пример: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *wenn*.",
+      "q": "Laylo hat den Ausflug vergessen. Sie ist nicht mitgekommen.",
+      "w": [
+       "Wenn",
+       "Laylo",
+       "den Ausflug",
+       "nicht",
+       "vergessen",
+       "hätte,",
+       "wäre",
+       "sie",
+       "mitgekommen"
+      ],
+      "a": "Wenn Laylo den Ausflug nicht vergessen hätte, wäre sie mitgekommen.",
+      "alt": [],
+      "gw": {
+       "uz": "Haqiqatni teskari qiling (<b>nicht</b> qo‘shing yoki olib tashlang, <b>keine</b> ↔ ein-). wenn-gapda <b>hätte/wäre</b> oxirida, vergul, keyin Hauptsatz <b>hätte/wäre</b> bilan boshlanadi. wenn-gap oxirda ham kelishi mumkin. Misol: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>",
+       "ru": "Переверните реальность (добавьте или уберите <b>nicht</b>, <b>keine</b> ↔ ein-). В части с wenn <b>hätte/wäre</b> в конце, запятая, затем главное начинается с <b>hätte/wäre</b>. Часть с wenn может стоять и в конце. Пример: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *wenn*.",
+      "q": "Der Zug hatte Verspätung. Ich habe die Fähre verpasst.",
+      "w": [
+       "Wenn",
+       "der Zug",
+       "keine Verspätung",
+       "gehabt",
+       "hätte,",
+       "hätte",
+       "ich",
+       "die Fähre",
+       "nicht verpasst"
+      ],
+      "a": "Wenn der Zug keine Verspätung gehabt hätte, hätte ich die Fähre nicht verpasst.",
+      "alt": [],
+      "gw": {
+       "uz": "Haqiqatni teskari qiling (<b>nicht</b> qo‘shing yoki olib tashlang, <b>keine</b> ↔ ein-). wenn-gapda <b>hätte/wäre</b> oxirida, vergul, keyin Hauptsatz <b>hätte/wäre</b> bilan boshlanadi. wenn-gap oxirda ham kelishi mumkin. Misol: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>",
+       "ru": "Переверните реальность (добавьте или уберите <b>nicht</b>, <b>keine</b> ↔ ein-). В части с wenn <b>hätte/wäre</b> в конце, запятая, затем главное начинается с <b>hätte/wäre</b>. Часть с wenn может стоять и в конце. Пример: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *wenn*.",
+      "q": "Ihr seid zu spät gekommen. Ihr habt die Stadtführung verpasst.",
+      "w": [
+       "Wenn",
+       "ihr",
+       "pünktlich",
+       "gekommen",
+       "wärt,",
+       "hättet ihr",
+       "die Stadtführung",
+       "nicht",
+       "verpasst"
+      ],
+      "a": "Wenn ihr pünktlich gekommen wärt, hättet ihr die Stadtführung nicht verpasst.",
+      "alt": [],
+      "gw": {
+       "uz": "Haqiqatni teskari qiling (<b>nicht</b> qo‘shing yoki olib tashlang, <b>keine</b> ↔ ein-). wenn-gapda <b>hätte/wäre</b> oxirida, vergul, keyin Hauptsatz <b>hätte/wäre</b> bilan boshlanadi. wenn-gap oxirda ham kelishi mumkin. Misol: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>",
+       "ru": "Переверните реальность (добавьте или уберите <b>nicht</b>, <b>keine</b> ↔ ein-). В части с wenn <b>hätte/wäre</b> в конце, запятая, затем главное начинается с <b>hätte/wäre</b>. Часть с wenn может стоять и в конце. Пример: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit *wenn*.",
+      "q": "Ich hatte keine Zeit. Ich habe das Denkmal nicht besucht. (…, wenn …)",
+      "w": [
+       "Ich",
+       "hätte",
+       "das Denkmal",
+       "besucht,",
+       "wenn",
+       "ich",
+       "Zeit",
+       "gehabt hätte"
+      ],
+      "a": "Ich hätte das Denkmal besucht, wenn ich Zeit gehabt hätte.",
+      "alt": [],
+      "gw": {
+       "uz": "Haqiqatni teskari qiling (<b>nicht</b> qo‘shing yoki olib tashlang, <b>keine</b> ↔ ein-). wenn-gapda <b>hätte/wäre</b> oxirida, vergul, keyin Hauptsatz <b>hätte/wäre</b> bilan boshlanadi. wenn-gap oxirda ham kelishi mumkin. Misol: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>",
+       "ru": "Переверните реальность (добавьте или уберите <b>nicht</b>, <b>keine</b> ↔ ein-). В части с wenn <b>hätte/wäre</b> в конце, запятая, затем главное начинается с <b>hätte/wäre</b>. Часть с wenn может стоять и в конце. Пример: <b>Wenn wir Zeit gehabt hätten, hätten wir das Denkmal besucht.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Was wäre passiert? Schreiben Sie den Satz neu.",
+      "bsp": "Wir hatten eine Karte und haben den Weg gefunden. → Ohne Karte … → <b>Ohne Karte hätten wir den Weg nicht gefunden.</b>",
+      "q": "Wir hatten ein Navi und sind pünktlich angekommen. → Ohne Navi …",
+      "w": [
+       "Ohne Navi",
+       "wären",
+       "wir",
+       "nicht",
+       "pünktlich",
+       "angekommen"
+      ],
+      "a": "Ohne Navi wären wir nicht pünktlich angekommen.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>ohne / mit</b> + ot ham shartni bildiradi (wenn-gap o‘rniga). U 1-o‘rinda, keyin <b>hätte/wäre</b> (2-o‘rin) → ega → … → <b>Partizip II</b>. Ma’no teskari: bo‘lgan → <b>nicht</b>. Misol: <b>Mit Regenschirm wäre ich nicht nass geworden.</b>",
+       "ru": "<b>ohne / mit</b> + существительное тоже выражает условие (вместо wenn). Оно на 1-м месте, затем <b>hätte/wäre</b> (2-е место) → подлежащее → … → <b>Partizip II</b>. Смысл обратный: было → <b>nicht</b>. Пример: <b>Mit Regenschirm wäre ich nicht nass geworden.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Was wäre passiert? Schreiben Sie den Satz neu.",
+      "q": "Malika hatte keine Karte und hat sich verlaufen. → Mit Karte …",
+      "w": [
+       "Mit Karte",
+       "hätte",
+       "sie",
+       "sich",
+       "nicht",
+       "verlaufen"
+      ],
+      "a": "Mit Karte hätte sie sich nicht verlaufen.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>ohne / mit</b> + ot ham shartni bildiradi (wenn-gap o‘rniga). U 1-o‘rinda, keyin <b>hätte/wäre</b> (2-o‘rin) → ega → … → <b>Partizip II</b>. Ma’no teskari: bo‘lgan → <b>nicht</b>. Misol: <b>Mit Regenschirm wäre ich nicht nass geworden.</b>",
+       "ru": "<b>ohne / mit</b> + существительное тоже выражает условие (вместо wenn). Оно на 1-м месте, затем <b>hätte/wäre</b> (2-е место) → подлежащее → … → <b>Partizip II</b>. Смысл обратный: было → <b>nicht</b>. Пример: <b>Mit Regenschirm wäre ich nicht nass geworden.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Was wäre passiert? Schreiben Sie den Satz neu.",
+      "q": "Wir sind mit der Fähre gefahren und waren schnell auf der Insel. → Ohne Fähre …",
+      "w": [
+       "Ohne Fähre",
+       "wären",
+       "wir",
+       "nicht so schnell",
+       "auf der Insel",
+       "gewesen"
+      ],
+      "a": "Ohne Fähre wären wir nicht so schnell auf der Insel gewesen.",
+      "alt": [
+       "Ohne Fähre wären wir auf der Insel nicht so schnell gewesen."
+      ],
+      "gw": {
+       "uz": "<b>ohne / mit</b> + ot ham shartni bildiradi (wenn-gap o‘rniga). U 1-o‘rinda, keyin <b>hätte/wäre</b> (2-o‘rin) → ega → … → <b>Partizip II</b>. Ma’no teskari: bo‘lgan → <b>nicht</b>. Misol: <b>Mit Regenschirm wäre ich nicht nass geworden.</b>",
+       "ru": "<b>ohne / mit</b> + существительное тоже выражает условие (вместо wenn). Оно на 1-м месте, затем <b>hätte/wäre</b> (2-е место) → подлежащее → … → <b>Partizip II</b>. Смысл обратный: было → <b>nicht</b>. Пример: <b>Mit Regenschirm wäre ich nicht nass geworden.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ohne Stau hätte ich pünktlich gekommen. → <b>hätte</b> ✗ → <b>wäre</b> … gekommen",
+      "s": "Ohne Regenschirm hätten wir nass geworden .",
+      "a": [
+       2
+      ],
+      "fix": "Ohne Regenschirm wären wir nass geworden.",
+      "gw": {
+       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; Hauptsatz fe’l bilan boshlanmagan (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); Partizip o‘rniga Infinitiv.",
+       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; главное предложение начинается не с глагола (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); инфинитив вместо Partizip."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Wenn ich das gewusst habe , wäre ich mitgekommen .",
+      "a": [
+       4
+      ],
+      "fix": "Wenn ich das gewusst hätte, wäre ich mitgekommen.",
+      "gw": {
+       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; Hauptsatz fe’l bilan boshlanmagan (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); Partizip o‘rniga Infinitiv.",
+       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; главное предложение начинается не с глагола (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); инфинитив вместо Partizip."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Mit dem Auto wären wir schneller am Denkmal ankommen .",
+      "a": [
+       8
+      ],
+      "fix": "Mit dem Auto wären wir schneller am Denkmal angekommen.",
+      "gw": {
+       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; Hauptsatz fe’l bilan boshlanmagan (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); Partizip o‘rniga Infinitiv.",
+       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; главное предложение начинается не с глагола (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); инфинитив вместо Partizip."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Wenn wir früher losgefahren wären , wir hätten die Fähre erreicht .",
+      "a": [
+       6,
+       7
+      ],
+      "fix": "Wenn wir früher losgefahren wären, hätten wir die Fähre erreicht.",
+      "gw": {
+       "uz": "Tez-tez uchraydigan xatolar: hätte/wäre adashtirilgan (<b>werden, kommen</b> → wäre); wenn-gapda <b>habe</b> o‘rniga <b>hätte</b>; Hauptsatz fe’l bilan boshlanmagan (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); Partizip o‘rniga Infinitiv.",
+       "ru": "Частые ошибки: перепутаны hätte/wäre (<b>werden, kommen</b> → wäre); в части с wenn <b>habe</b> вместо <b>hätte</b>; главное предложение начинается не с глагола (<b>…, wir hätten</b> ✗ → <b>…, hätten wir</b>); инфинитив вместо Partizip."
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

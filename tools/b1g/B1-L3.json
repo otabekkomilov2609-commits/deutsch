@@ -1,0 +1,557 @@
+{
+ "id": "B1-b11-3-G",
+ "meta": {
+  "title": "Grammatik · Komparativ und Superlativ",
+  "stitle": "Komparativ · Superlativ · Adjektivendungen · -lich"
+ },
+ "ex": {
+  "title": "Lektion 3 · Grammatik",
+  "sub": "Komparativ · Superlativ · Adjektivendungen · -lich",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Komparativ vor dem Nomen: Adjektiv + -er + Endung</h4><table class=\"ex-tb\"><tr><th>Adjektiv</th><th>Komparativ</th><th>vor dem Nomen</th></tr><tr><td>geduldig</td><td>geduldiger</td><td>ein geduldiger<b>er</b> Lehrer</td></tr><tr><td>kreativ</td><td>kreativer</td><td>eine kreativer<b>e</b> Lösung</td></tr><tr><td>gut</td><td>besser</td><td>ein besser<b>es</b> Ergebnis</td></tr><tr><td>alt</td><td>älter</td><td>mit meinem älter<b>en</b> Bruder</td></tr><tr><td>groß</td><td>größer</td><td>die größer<b>en</b> Zimmer</td></tr></table><p class=\"ex-note\">Qiyosiy daraja (<b>-er</b>) otdan oldin kelsa, unga yana oddiy sifat qo‘shimchasi qo‘shiladi: <b>-er + -e / -er / -es / -en</b>. Misol: ein schneller Laptop → ein schneller<b>er</b> Laptop. Ko‘p qisqa sifatlarda umlaut: alt → <b>ä</b>lter, groß → gr<b>ö</b>ßer, jung → j<b>ü</b>nger. Diqqat: <b>mehr</b> va <b>weniger</b> o‘zgarmaydi: <b>mehr</b> Zeit.</p>",
+      "ru": "<h4>Komparativ vor dem Nomen: Adjektiv + -er + Endung</h4><table class=\"ex-tb\"><tr><th>Adjektiv</th><th>Komparativ</th><th>vor dem Nomen</th></tr><tr><td>geduldig</td><td>geduldiger</td><td>ein geduldiger<b>er</b> Lehrer</td></tr><tr><td>kreativ</td><td>kreativer</td><td>eine kreativer<b>e</b> Lösung</td></tr><tr><td>gut</td><td>besser</td><td>ein besser<b>es</b> Ergebnis</td></tr><tr><td>alt</td><td>älter</td><td>mit meinem älter<b>en</b> Bruder</td></tr><tr><td>groß</td><td>größer</td><td>die größer<b>en</b> Zimmer</td></tr></table><p class=\"ex-note\">Если сравнительная степень (<b>-er</b>) стоит перед существительным, к ней добавляется обычное окончание прилагательного: <b>-er + -e / -er / -es / -en</b>. Пример: ein schneller Laptop → ein schneller<b>er</b> Laptop. У многих коротких прилагательных умлаут: alt → <b>ä</b>lter, groß → gr<b>ö</b>ßer, jung → j<b>ü</b>nger. Внимание: <b>mehr</b> и <b>weniger</b> не изменяются: <b>mehr</b> Zeit.</p>"
+     },
+     {
+      "t": "info",
+      "h": "<h4>Superlativ vor dem Nomen: der / die / das …ste</h4><table class=\"ex-tb\"><tr><th>nach dem Verb: am …sten</th><th>vor dem Nomen: Artikel + …st + Endung</th></tr><tr><td>Timur ist <b>am geduldigsten</b>.</td><td>Timur ist der geduldig<b>ste</b> Schüler.</td></tr><tr><td>Diese Aufgabe ist <b>am schwierigsten</b>.</td><td>Das ist die schwierig<b>ste</b> Aufgabe.</td></tr><tr><td>Er ist <b>am besten</b>.</td><td>mit dem best<b>en</b> Freund · die best<b>en</b> Ideen</td></tr><tr><td>Ben ist <b>am ältesten</b>.</td><td>mein ält<b>ester</b> Freund</td></tr></table><p class=\"ex-note\">Otdan oldin <b>am …sten</b> ishlatilmaydi: artikl + <b>-st-</b> + qo‘shimcha. der / die / das → …st<b>e</b>; Akkusativ (m), Dativ va ko‘plik → …st<b>en</b>; mein (m, Nom.) → …st<b>er</b>. <b>-d, -t, -s, -z</b> bilan tugasa → <b>-est-</b>: der ält<b>est</b>e, die interessant<b>est</b>e. Notekis: gut → best-, viel → meist-, hoch → höchst-, gern → liebst-.</p>",
+      "ru": "<h4>Superlativ vor dem Nomen: der / die / das …ste</h4><table class=\"ex-tb\"><tr><th>nach dem Verb: am …sten</th><th>vor dem Nomen: Artikel + …st + Endung</th></tr><tr><td>Timur ist <b>am geduldigsten</b>.</td><td>Timur ist der geduldig<b>ste</b> Schüler.</td></tr><tr><td>Diese Aufgabe ist <b>am schwierigsten</b>.</td><td>Das ist die schwierig<b>ste</b> Aufgabe.</td></tr><tr><td>Er ist <b>am besten</b>.</td><td>mit dem best<b>en</b> Freund · die best<b>en</b> Ideen</td></tr><tr><td>Ben ist <b>am ältesten</b>.</td><td>mein ält<b>ester</b> Freund</td></tr></table><p class=\"ex-note\">Перед существительным <b>am …sten</b> не используется: артикль + <b>-st-</b> + окончание. der / die / das → …st<b>e</b>; Akkusativ (m), Dativ и множественное → …st<b>en</b>; mein (m, Nom.) → …st<b>er</b>. После <b>-d, -t, -s, -z</b> → <b>-est-</b>: der ält<b>est</b>e, die interessant<b>est</b>e. Неправильные: gut → best-, viel → meist-, hoch → höchst-, gern → liebst-.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Adjektiv im Komparativ oder Superlativ.",
+      "bsp": "Das ist die schwierigste Aufgabe. → <b>schwierigste</b>",
+      "s": "Mein älterer Bruder ist sehr geduldig .",
+      "a": [
+       1
+      ],
+      "gw": {
+       "uz": "Qiyosiy daraja: o‘zak + <b>-er</b> + qo‘shimcha (älter<b>er</b>, besser<b>en</b>). Orttirma daraja: o‘zak + <b>-(e)st</b> + qo‘shimcha (größt<b>e</b>, kreativst<b>en</b>). Misol: <b>ein schnellerer Weg</b> · <b>der schnellste Weg</b>.",
+       "ru": "Сравнительная степень: основа + <b>-er</b> + окончание (älter<b>er</b>, besser<b>en</b>). Превосходная: основа + <b>-(e)st</b> + окончание (größt<b>e</b>, kreativst<b>en</b>). Пример: <b>ein schnellerer Weg</b> · <b>der schnellste Weg</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Adjektiv im Komparativ oder Superlativ.",
+      "s": "Geduld ist meine größte Stärke .",
+      "a": [
+       3
+      ],
+      "gw": {
+       "uz": "Qiyosiy daraja: o‘zak + <b>-er</b> + qo‘shimcha (älter<b>er</b>, besser<b>en</b>). Orttirma daraja: o‘zak + <b>-(e)st</b> + qo‘shimcha (größt<b>e</b>, kreativst<b>en</b>). Misol: <b>ein schnellerer Weg</b> · <b>der schnellste Weg</b>.",
+       "ru": "Сравнительная степень: основа + <b>-er</b> + окончание (älter<b>er</b>, besser<b>en</b>). Превосходная: основа + <b>-(e)st</b> + окончание (größt<b>e</b>, kreativst<b>en</b>). Пример: <b>ein schnellerer Weg</b> · <b>der schnellste Weg</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Adjektiv im Komparativ oder Superlativ.",
+      "s": "Ich brauche einen besseren Plan für die Prüfung .",
+      "a": [
+       3
+      ],
+      "gw": {
+       "uz": "Qiyosiy daraja: o‘zak + <b>-er</b> + qo‘shimcha (älter<b>er</b>, besser<b>en</b>). Orttirma daraja: o‘zak + <b>-(e)st</b> + qo‘shimcha (größt<b>e</b>, kreativst<b>en</b>). Misol: <b>ein schnellerer Weg</b> · <b>der schnellste Weg</b>.",
+       "ru": "Сравнительная степень: основа + <b>-er</b> + окончание (älter<b>er</b>, besser<b>en</b>). Превосходная: основа + <b>-(e)st</b> + окончание (größt<b>e</b>, kreativst<b>en</b>). Пример: <b>ein schnellerer Weg</b> · <b>der schnellste Weg</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie das Adjektiv im Komparativ oder Superlativ.",
+      "s": "Malika hat die kreativsten Ideen in unserer Gruppe .",
+      "a": [
+       3
+      ],
+      "gw": {
+       "uz": "Qiyosiy daraja: o‘zak + <b>-er</b> + qo‘shimcha (älter<b>er</b>, besser<b>en</b>). Orttirma daraja: o‘zak + <b>-(e)st</b> + qo‘shimcha (größt<b>e</b>, kreativst<b>en</b>). Misol: <b>ein schnellerer Weg</b> · <b>der schnellste Weg</b>.",
+       "ru": "Сравнительная степень: основа + <b>-er</b> + окончание (älter<b>er</b>, besser<b>en</b>). Превосходная: основа + <b>-(e)st</b> + окончание (größt<b>e</b>, kreativst<b>en</b>). Пример: <b>ein schnellerer Weg</b> · <b>der schnellste Weg</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Ich suche eine ___ Wohnung. → eine (f, Akk.) → ✓ <b>größere</b>",
+      "q": "Ich wünsche mir einen ___ Laptop.",
+      "o": [
+       "schneller",
+       "schnelleren",
+       "schnellere"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Artikl va kelishikka qarang — qo‘shimcha oddiy sifatdagidek: der / die / das → -e, ein / mein (m, Nom.) → -er, ein (n) → -es, Akkusativ (m), Dativ va ko‘plik → -en. <b>am …sten</b> faqat fe’ldan keyin, otdan oldin emas. Misol: <b>mit dem besten Freund</b>.",
+       "ru": "Смотрите на артикль и падеж — окончание как у обычного прилагательного: der / die / das → -e, ein / mein (m, Nom.) → -er, ein (n) → -es, Akkusativ (m), Dativ и множественное → -en. <b>am …sten</b> — только после глагола, не перед существительным. Пример: <b>mit dem besten Freund</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Sevara ist die ___ Schülerin in unserer Klasse.",
+      "o": [
+       "zuverlässigste",
+       "zuverlässigsten",
+       "am zuverlässigsten"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Artikl va kelishikka qarang — qo‘shimcha oddiy sifatdagidek: der / die / das → -e, ein / mein (m, Nom.) → -er, ein (n) → -es, Akkusativ (m), Dativ va ko‘plik → -en. <b>am …sten</b> faqat fe’ldan keyin, otdan oldin emas. Misol: <b>mit dem besten Freund</b>.",
+       "ru": "Смотрите на артикль и падеж — окончание как у обычного прилагательного: der / die / das → -e, ein / mein (m, Nom.) → -er, ein (n) → -es, Akkusativ (m), Dativ и множественное → -en. <b>am …sten</b> — только после глагола, не перед существительным. Пример: <b>mit dem besten Freund</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Mit einem ___ Wörterbuch lernst du schneller.",
+      "o": [
+       "besseres",
+       "besseren",
+       "bessere"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Artikl va kelishikka qarang — qo‘shimcha oddiy sifatdagidek: der / die / das → -e, ein / mein (m, Nom.) → -er, ein (n) → -es, Akkusativ (m), Dativ va ko‘plik → -en. <b>am …sten</b> faqat fe’ldan keyin, otdan oldin emas. Misol: <b>mit dem besten Freund</b>.",
+       "ru": "Смотрите на артикль и падеж — окончание как у обычного прилагательного: der / die / das → -e, ein / mein (m, Nom.) → -er, ein (n) → -es, Akkusativ (m), Dativ и множественное → -en. <b>am …sten</b> — только после глагола, не перед существительным. Пример: <b>mit dem besten Freund</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Was war das ___ Erlebnis in deiner Kindheit?",
+      "o": [
+       "schönste",
+       "schönstes",
+       "schönsten"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Artikl va kelishikka qarang — qo‘shimcha oddiy sifatdagidek: der / die / das → -e, ein / mein (m, Nom.) → -er, ein (n) → -es, Akkusativ (m), Dativ va ko‘plik → -en. <b>am …sten</b> faqat fe’ldan keyin, otdan oldin emas. Misol: <b>mit dem besten Freund</b>.",
+       "ru": "Смотрите на артикль и падеж — окончание как у обычного прилагательного: der / die / das → -e, ein / mein (m, Nom.) → -er, ein (n) → -es, Akkusativ (m), Dativ и множественное → -en. <b>am …sten</b> — только после глагола, не перед существительным. Пример: <b>mit dem besten Freund</b>."
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Mein ___ Freund heißt Nodir.",
+      "o": [
+       "beste",
+       "bester",
+       "besten"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Artikl va kelishikka qarang — qo‘shimcha oddiy sifatdagidek: der / die / das → -e, ein / mein (m, Nom.) → -er, ein (n) → -es, Akkusativ (m), Dativ va ko‘plik → -en. <b>am …sten</b> faqat fe’ldan keyin, otdan oldin emas. Misol: <b>mit dem besten Freund</b>.",
+       "ru": "Смотрите на артикль и падеж — окончание как у обычного прилагательного: der / die / das → -e, ein / mein (m, Nom.) → -er, ein (n) → -es, Akkusativ (m), Dativ и множественное → -en. <b>am …sten</b> — только после глагола, не перед существительным. Пример: <b>mit dem besten Freund</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv im Komparativ.",
+      "bsp": "Ich brauche eine ___ Jacke. (warm) → eine (f, Akk.) → <b>wärmere</b>",
+      "s": "Wir brauchen einen ___ Tisch für unser Zimmer. (groß)",
+      "a": [
+       [
+        "größeren"
+       ]
+      ],
+      "gw": {
+       "uz": "Otdan oldin: o‘zak + <b>-er</b> + qo‘shimcha. Ko‘p qisqa sifatlarda umlaut: groß → <b>größer</b>, warm → <b>wärmer</b>, alt → <b>älter</b>. gut → <b>besser</b>. Misol: <b>in einer größeren Wohnung</b> · <b>kein besseres Foto</b>.",
+       "ru": "Перед существительным: основа + <b>-er</b> + окончание. У многих коротких прилагательных умлаут: groß → <b>größer</b>, warm → <b>wärmer</b>, alt → <b>älter</b>. gut → <b>besser</b>. Пример: <b>in einer größeren Wohnung</b> · <b>kein besseres Foto</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv im Komparativ.",
+      "s": "Ich möchte in einer ___ Stadt leben. Taschkent ist mir zu laut. (ruhig)",
+      "a": [
+       [
+        "ruhigeren"
+       ]
+      ],
+      "gw": {
+       "uz": "Otdan oldin: o‘zak + <b>-er</b> + qo‘shimcha. Ko‘p qisqa sifatlarda umlaut: groß → <b>größer</b>, warm → <b>wärmer</b>, alt → <b>älter</b>. gut → <b>besser</b>. Misol: <b>in einer größeren Wohnung</b> · <b>kein besseres Foto</b>.",
+       "ru": "Перед существительным: основа + <b>-er</b> + окончание. У многих коротких прилагательных умлаут: groß → <b>größer</b>, warm → <b>wärmer</b>, alt → <b>älter</b>. gut → <b>besser</b>. Пример: <b>in einer größeren Wohnung</b> · <b>kein besseres Foto</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv im Komparativ.",
+      "s": "Hast du kein ___ Foto von dir? Auf diesem siehst du so müde aus. (gut)",
+      "a": [
+       [
+        "besseres"
+       ]
+      ],
+      "gw": {
+       "uz": "Otdan oldin: o‘zak + <b>-er</b> + qo‘shimcha. Ko‘p qisqa sifatlarda umlaut: groß → <b>größer</b>, warm → <b>wärmer</b>, alt → <b>älter</b>. gut → <b>besser</b>. Misol: <b>in einer größeren Wohnung</b> · <b>kein besseres Foto</b>.",
+       "ru": "Перед существительным: основа + <b>-er</b> + окончание. У многих коротких прилагательных умлаут: groß → <b>größer</b>, warm → <b>wärmer</b>, alt → <b>älter</b>. gut → <b>besser</b>. Пример: <b>in einer größeren Wohnung</b> · <b>kein besseres Foto</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv im Komparativ.",
+      "s": "▪ Welche Jacke nimmst du, die rote oder die blaue?\n● Die blaue. Ich brauche eine ___ Jacke für den Winter, und die rote ist zu dünn. (warm)",
+      "a": [
+       [
+        "wärmere"
+       ]
+      ],
+      "gw": {
+       "uz": "Otdan oldin: o‘zak + <b>-er</b> + qo‘shimcha. Ko‘p qisqa sifatlarda umlaut: groß → <b>größer</b>, warm → <b>wärmer</b>, alt → <b>älter</b>. gut → <b>besser</b>. Misol: <b>in einer größeren Wohnung</b> · <b>kein besseres Foto</b>.",
+       "ru": "Перед существительным: основа + <b>-er</b> + окончание. У многих коротких прилагательных умлаут: groß → <b>größer</b>, warm → <b>wärmer</b>, alt → <b>älter</b>. gut → <b>besser</b>. Пример: <b>in einer größeren Wohnung</b> · <b>kein besseres Foto</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv im Superlativ.",
+      "bsp": "Das war der ___ Tag im Urlaub. (schön) → <b>schönste</b>",
+      "s": "Was ist deine ___ Stärke? (groß)",
+      "a": [
+       [
+        "größte"
+       ]
+      ],
+      "gw": {
+       "uz": "Otdan oldin: artikl + o‘zak + <b>-st</b> + qo‘shimcha: der größt<b>e</b>, mit dem best<b>en</b>, die einfachst<b>en</b> (Pl.). <b>-d, -t, -s, -z</b> bilan tugasa → <b>-est</b>: interessant<b>est</b>en, kürz<b>est</b>e. Misol: <b>die wichtigste Entscheidung</b>.",
+       "ru": "Перед существительным: артикль + основа + <b>-st</b> + окончание: der größt<b>e</b>, mit dem best<b>en</b>, die einfachst<b>en</b> (Pl.). После <b>-d, -t, -s, -z</b> → <b>-est</b>: interessant<b>est</b>en, kürz<b>est</b>e. Пример: <b>die wichtigste Entscheidung</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv im Superlativ.",
+      "s": "Mit meinem ___ Freund kann ich über alles sprechen. (gut)",
+      "a": [
+       [
+        "besten"
+       ]
+      ],
+      "gw": {
+       "uz": "Otdan oldin: artikl + o‘zak + <b>-st</b> + qo‘shimcha: der größt<b>e</b>, mit dem best<b>en</b>, die einfachst<b>en</b> (Pl.). <b>-d, -t, -s, -z</b> bilan tugasa → <b>-est</b>: interessant<b>est</b>en, kürz<b>est</b>e. Misol: <b>die wichtigste Entscheidung</b>.",
+       "ru": "Перед существительным: артикль + основа + <b>-st</b> + окончание: der größt<b>e</b>, mit dem best<b>en</b>, die einfachst<b>en</b> (Pl.). После <b>-d, -t, -s, -z</b> → <b>-est</b>: interessant<b>est</b>en, kürz<b>est</b>e. Пример: <b>die wichtigste Entscheidung</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv im Superlativ.",
+      "s": "Timur: Welches Buch soll ich für den Kurs lesen?\nAnna: Nimm das ___ Buch, du hast ja nicht viel Zeit. (kurz)",
+      "a": [
+       [
+        "kürzeste"
+       ]
+      ],
+      "gw": {
+       "uz": "Otdan oldin: artikl + o‘zak + <b>-st</b> + qo‘shimcha: der größt<b>e</b>, mit dem best<b>en</b>, die einfachst<b>en</b> (Pl.). <b>-d, -t, -s, -z</b> bilan tugasa → <b>-est</b>: interessant<b>est</b>en, kürz<b>est</b>e. Misol: <b>die wichtigste Entscheidung</b>.",
+       "ru": "Перед существительным: артикль + основа + <b>-st</b> + окончание: der größt<b>e</b>, mit dem best<b>en</b>, die einfachst<b>en</b> (Pl.). После <b>-d, -t, -s, -z</b> → <b>-est</b>: interessant<b>est</b>en, kürz<b>est</b>e. Пример: <b>die wichtigste Entscheidung</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv im Superlativ.",
+      "s": "Mein Lieblingslehrer\nHerr Karimov war der ___ Lehrer an unserer Schule. Er hat auch die ___ Fragen gern beantwortet. Und er hatte immer die ___ Ideen für den Unterricht. (geduldig · einfach · interessant)",
+      "a": [
+       [
+        "geduldigste"
+       ],
+       [
+        "einfachsten"
+       ],
+       [
+        "interessantesten"
+       ]
+      ],
+      "gw": {
+       "uz": "Otdan oldin: artikl + o‘zak + <b>-st</b> + qo‘shimcha: der größt<b>e</b>, mit dem best<b>en</b>, die einfachst<b>en</b> (Pl.). <b>-d, -t, -s, -z</b> bilan tugasa → <b>-est</b>: interessant<b>est</b>en, kürz<b>est</b>e. Misol: <b>die wichtigste Entscheidung</b>.",
+       "ru": "Перед существительным: артикль + основа + <b>-st</b> + окончание: der größt<b>e</b>, mit dem best<b>en</b>, die einfachst<b>en</b> (Pl.). После <b>-d, -t, -s, -z</b> → <b>-est</b>: interessant<b>est</b>en, kürz<b>est</b>e. Пример: <b>die wichtigste Entscheidung</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz: Komparativ vor dem Nomen.",
+      "bsp": "Ich brauche ein Handy. Es soll billiger sein. → <b>Ich brauche ein billigeres Handy.</b>",
+      "q": "Ich brauche einen Laptop. Er soll schneller sein.",
+      "w": [
+       "Ich",
+       "brauche",
+       "einen",
+       "schnelleren",
+       "Laptop"
+      ],
+      "a": "Ich brauche einen schnelleren Laptop.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikki gapni birlashtiramiz: qiyosiy sifat otdan oldin keladi va qo‘shimcha oladi: einen schneller<b>en</b> Laptop (Akk. m), ein leichter<b>es</b> Fahrrad (n), mit meiner jünger<b>en</b> Schwester (Dat.).",
+       "ru": "Соединяем два предложения: сравнительная степень встаёт перед существительным и получает окончание: einen schneller<b>en</b> Laptop (Akk. m), ein leichter<b>es</b> Fahrrad (n), mit meiner jünger<b>en</b> Schwester (Dat.)."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz: Komparativ vor dem Nomen.",
+      "q": "Laylo wünscht sich ein Fahrrad. Es soll leichter sein.",
+      "w": [
+       "Laylo",
+       "wünscht",
+       "sich",
+       "ein",
+       "leichteres",
+       "Fahrrad"
+      ],
+      "a": "Laylo wünscht sich ein leichteres Fahrrad.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikki gapni birlashtiramiz: qiyosiy sifat otdan oldin keladi va qo‘shimcha oladi: einen schneller<b>en</b> Laptop (Akk. m), ein leichter<b>es</b> Fahrrad (n), mit meiner jünger<b>en</b> Schwester (Dat.).",
+       "ru": "Соединяем два предложения: сравнительная степень встаёт перед существительным и получает окончание: einen schneller<b>en</b> Laptop (Akk. m), ein leichter<b>es</b> Fahrrad (n), mit meiner jünger<b>en</b> Schwester (Dat.)."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie einen Satz: Komparativ vor dem Nomen.",
+      "q": "Ich habe mit meiner Schwester gesprochen. Sie ist jünger als ich.",
+      "w": [
+       "Ich",
+       "habe",
+       "mit",
+       "meiner",
+       "jüngeren",
+       "Schwester",
+       "gesprochen"
+      ],
+      "a": "Ich habe mit meiner jüngeren Schwester gesprochen.",
+      "alt": [],
+      "gw": {
+       "uz": "Ikki gapni birlashtiramiz: qiyosiy sifat otdan oldin keladi va qo‘shimcha oladi: einen schneller<b>en</b> Laptop (Akk. m), ein leichter<b>es</b> Fahrrad (n), mit meiner jünger<b>en</b> Schwester (Dat.).",
+       "ru": "Соединяем два предложения: сравнительная степень встаёт перед существительным и получает окончание: einen schneller<b>en</b> Laptop (Akk. m), ein leichter<b>es</b> Fahrrad (n), mit meiner jünger<b>en</b> Schwester (Dat.)."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz neu: Superlativ vor dem Nomen.",
+      "bsp": "Dieses Foto ist am lustigsten. (Foto) → <b>Das ist das lustigste Foto.</b>",
+      "q": "Diese Aufgabe ist am schwierigsten. (Aufgabe)",
+      "w": [
+       "Das",
+       "ist",
+       "die",
+       "schwierigste",
+       "Aufgabe"
+      ],
+      "a": "Das ist die schwierigste Aufgabe.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>am …sten</b> → artikl + …st + qo‘shimcha + ot: <b>die schwierigste Aufgabe</b>. Egalik olmoshi bilan (mein, m, Nom.) qo‘shimcha <b>-er</b>: <b>mein zuverlässigster Freund</b>.",
+       "ru": "<b>am …sten</b> → артикль + …st + окончание + существительное: <b>die schwierigste Aufgabe</b>. С притяжательным местоимением (mein, m, Nom.) окончание <b>-er</b>: <b>mein zuverlässigster Freund</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz neu: Superlativ vor dem Nomen.",
+      "q": "Malika ist in unserer Gruppe am kreativsten. (Schülerin)",
+      "w": [
+       "Malika",
+       "ist",
+       "die",
+       "kreativste",
+       "Schülerin",
+       "in unserer Gruppe"
+      ],
+      "a": "Malika ist die kreativste Schülerin in unserer Gruppe.",
+      "alt": [
+       "Malika ist in unserer Gruppe die kreativste Schülerin."
+      ],
+      "gw": {
+       "uz": "<b>am …sten</b> → artikl + …st + qo‘shimcha + ot: <b>die schwierigste Aufgabe</b>. Egalik olmoshi bilan (mein, m, Nom.) qo‘shimcha <b>-er</b>: <b>mein zuverlässigster Freund</b>.",
+       "ru": "<b>am …sten</b> → артикль + …st + окончание + существительное: <b>die schwierigste Aufgabe</b>. С притяжательным местоимением (mein, m, Nom.) окончание <b>-er</b>: <b>mein zuverlässigster Freund</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz neu: Superlativ vor dem Nomen.",
+      "q": "Von meinen Freunden ist Ben am zuverlässigsten. (Freund)",
+      "w": [
+       "Ben",
+       "ist",
+       "mein",
+       "zuverlässigster",
+       "Freund"
+      ],
+      "a": "Ben ist mein zuverlässigster Freund.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>am …sten</b> → artikl + …st + qo‘shimcha + ot: <b>die schwierigste Aufgabe</b>. Egalik olmoshi bilan (mein, m, Nom.) qo‘shimcha <b>-er</b>: <b>mein zuverlässigster Freund</b>.",
+       "ru": "<b>am …sten</b> → артикль + …st + окончание + существительное: <b>die schwierigste Aufgabe</b>. С притяжательным местоимением (mein, m, Nom.) окончание <b>-er</b>: <b>mein zuverlässigster Freund</b>."
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie den Satz neu: Superlativ vor dem Nomen.",
+      "q": "Dieser Tag war in meiner Schulzeit am schönsten. (Tag)",
+      "w": [
+       "Das",
+       "war",
+       "der",
+       "schönste",
+       "Tag",
+       "in meiner Schulzeit"
+      ],
+      "a": "Das war der schönste Tag in meiner Schulzeit.",
+      "alt": [
+       "Das war in meiner Schulzeit der schönste Tag."
+      ],
+      "gw": {
+       "uz": "<b>am …sten</b> → artikl + …st + qo‘shimcha + ot: <b>die schwierigste Aufgabe</b>. Egalik olmoshi bilan (mein, m, Nom.) qo‘shimcha <b>-er</b>: <b>mein zuverlässigster Freund</b>.",
+       "ru": "<b>am …sten</b> → артикль + …st + окончание + существительное: <b>die schwierigste Aufgabe</b>. С притяжательным местоимением (mein, m, Nom.) окончание <b>-er</b>: <b>mein zuverlässigster Freund</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich suche eine größer Wohnung. → eine <b>größere</b> Wohnung",
+      "s": "Ich brauche einen besser Plan .",
+      "a": [
+       3
+      ],
+      "fix": "Ich brauche einen besseren Plan.",
+      "gw": {
+       "uz": "Qiyosiy daraja otdan oldin ham qo‘shimcha oladi: einen (Akk. m) → <b>besseren</b>.",
+       "ru": "Сравнительная степень перед существительным тоже получает окончание: einen (Akk. m) → <b>besseren</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Geduld ist nicht meine größten Stärke .",
+      "a": [
+       4
+      ],
+      "fix": "Geduld ist nicht meine größte Stärke.",
+      "gw": {
+       "uz": "<b>meine Stärke</b> — Nominativ, birlik, feminin → qo‘shimcha <b>-e</b>: <b>meine größte Stärke</b>.",
+       "ru": "<b>meine Stärke</b> — Nominativ, единственное число, женский род → окончание <b>-e</b>: <b>meine größte Stärke</b>."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Ich wohne jetzt mit meinem älterem Bruder zusammen .",
+      "a": [
+       5
+      ],
+      "fix": "Ich wohne jetzt mit meinem älteren Bruder zusammen.",
+      "gw": {
+       "uz": "Artikl bilan Dativda sifat qo‘shimchasi doim <b>-en</b>: mit meinem <b>älteren</b> Bruder. «-em» faqat artiklda.",
+       "ru": "После артикля в Dativ окончание прилагательного всегда <b>-en</b>: mit meinem <b>älteren</b> Bruder. «-em» — только у артикля."
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Das war die am schwierigsten Prüfung in diesem Jahr .",
+      "a": [
+       3,
+       4
+      ],
+      "fix": "Das war die schwierigste Prüfung in diesem Jahr.",
+      "gw": {
+       "uz": "<b>am …sten</b> otdan oldin turmaydi. Otdan oldin: <b>die schwierigste Prüfung</b>.",
+       "ru": "<b>am …sten</b> не ставится перед существительным. Перед существительным: <b>die schwierigste Prüfung</b>."
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wortbildung: Nomen + -lich → Adjektiv</h4><table class=\"ex-tb\"><tr><th>Nomen</th><th>Adjektiv</th></tr><tr><td>der Freund</td><td>freund<b>lich</b></td></tr><tr><td>das Ende</td><td>end<b>lich</b></td></tr><tr><td>die Gefahr</td><td>gef<b>ä</b>hr<b>lich</b></td></tr><tr><td>das Herz</td><td>herz<b>lich</b></td></tr><tr><td>der Tag</td><td>t<b>ä</b>g<b>lich</b></td></tr><tr><td>das Glück</td><td>glück<b>lich</b></td></tr><tr><td>die Natur</td><td>nat<b>ü</b>r<b>lich</b></td></tr></table><p class=\"ex-note\">Otga <b>-lich</b> qo‘shilsa, sifat hosil bo‘ladi; ko‘pincha umlaut paydo bo‘ladi (Gefahr → gef<b>ä</b>hrlich, Tag → t<b>ä</b>glich). Sifat bo‘lgani uchun kichik harf bilan yoziladi va otdan oldin qo‘shimcha oladi: <b>ein freundlicher Mensch</b>.</p>",
+      "ru": "<h4>Wortbildung: Nomen + -lich → Adjektiv</h4><table class=\"ex-tb\"><tr><th>Nomen</th><th>Adjektiv</th></tr><tr><td>der Freund</td><td>freund<b>lich</b></td></tr><tr><td>das Ende</td><td>end<b>lich</b></td></tr><tr><td>die Gefahr</td><td>gef<b>ä</b>hr<b>lich</b></td></tr><tr><td>das Herz</td><td>herz<b>lich</b></td></tr><tr><td>der Tag</td><td>t<b>ä</b>g<b>lich</b></td></tr><tr><td>das Glück</td><td>glück<b>lich</b></td></tr><tr><td>die Natur</td><td>nat<b>ü</b>r<b>lich</b></td></tr></table><p class=\"ex-note\">Если к существительному добавить <b>-lich</b>, получается прилагательное; часто появляется умлаут (Gefahr → gef<b>ä</b>hrlich, Tag → t<b>ä</b>glich). Это прилагательное: пишется с маленькой буквы и перед существительным получает окончание: <b>ein freundlicher Mensch</b>.</p>"
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv mit *-lich*.",
+      "bsp": "Sie lacht viel und hilft gern. Sie ist sehr ___. (Freund) → <b>freundlich</b>",
+      "s": "Die Straße ist im Winter sehr ___. Fahr bitte langsam! (Gefahr)",
+      "a": [
+       [
+        "gefährlich"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-lich</b> qo‘shing, ko‘pincha <b>a, o, u → ä, ö, ü</b>. Sifat otdan oldin kelsa, qo‘shimcha oladi: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>.",
+       "ru": "Добавьте к существительному <b>-lich</b>, часто <b>a, o, u → ä, ö, ü</b>. Перед существительным прилагательное получает окончание: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv mit *-lich*.",
+      "s": "Ich lerne ___ zwanzig neue Wörter. (Tag)",
+      "a": [
+       [
+        "täglich"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-lich</b> qo‘shing, ko‘pincha <b>a, o, u → ä, ö, ü</b>. Sifat otdan oldin kelsa, qo‘shimcha oladi: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>.",
+       "ru": "Добавьте к существительному <b>-lich</b>, часто <b>a, o, u → ä, ö, ü</b>. Перед существительным прилагательное получает окончание: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv mit *-lich*.",
+      "s": "Nach drei Stunden war die Prüfung ___ vorbei. (Ende)",
+      "a": [
+       [
+        "endlich"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-lich</b> qo‘shing, ko‘pincha <b>a, o, u → ä, ö, ü</b>. Sifat otdan oldin kelsa, qo‘shimcha oladi: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>.",
+       "ru": "Добавьте к существительному <b>-lich</b>, часто <b>a, o, u → ä, ö, ü</b>. Перед существительным прилагательное получает окончание: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv mit *-lich*.",
+      "s": "Die Verkäuferin war nicht sehr ___. Sie hat nicht einmal „Hallo“ gesagt. (Freund)",
+      "a": [
+       [
+        "freundlich"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-lich</b> qo‘shing, ko‘pincha <b>a, o, u → ä, ö, ü</b>. Sifat otdan oldin kelsa, qo‘shimcha oladi: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>.",
+       "ru": "Добавьте к существительному <b>-lich</b>, часто <b>a, o, u → ä, ö, ü</b>. Перед существительным прилагательное получает окончание: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv mit *-lich*.",
+      "s": "Mein Opa ist ein sehr ___ Mensch. Er lacht immer. (Glück)",
+      "a": [
+       [
+        "glücklicher"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-lich</b> qo‘shing, ko‘pincha <b>a, o, u → ä, ö, ü</b>. Sifat otdan oldin kelsa, qo‘shimcha oladi: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>.",
+       "ru": "Добавьте к существительному <b>-lich</b>, часто <b>a, o, u → ä, ö, ü</b>. Перед существительным прилагательное получает окончание: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Adjektiv mit *-lich*.",
+      "s": "___ Glückwunsch zum Geburtstag! (Herz)",
+      "a": [
+       [
+        "Herzlichen"
+       ]
+      ],
+      "gw": {
+       "uz": "Otga <b>-lich</b> qo‘shing, ko‘pincha <b>a, o, u → ä, ö, ü</b>. Sifat otdan oldin kelsa, qo‘shimcha oladi: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>.",
+       "ru": "Добавьте к существительному <b>-lich</b>, часто <b>a, o, u → ä, ö, ü</b>. Перед существительным прилагательное получает окончание: <b>ein glücklicher Mensch</b>, <b>herzlichen Glückwunsch</b>."
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

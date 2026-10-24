@@ -1,0 +1,540 @@
+{
+ "id": "B1-b12-15-G",
+ "meta": {
+  "title": "Grammatik · Verb lassen",
+  "stitle": "etwas machen lassen · jemanden etwas tun lassen · Perfekt: hat … machen lassen"
+ },
+ "ex": {
+  "title": "Lektion 15 · Grammatik",
+  "sub": "etwas machen lassen · jemanden etwas tun lassen · Perfekt: hat … machen lassen",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Das Verb <i>lassen</i></h4>\n<table class=\"ex-tb\"><tr><th>Person</th><th>lassen</th><th>Person</th><th>lassen</th></tr>\n<tr><td>ich</td><td>lasse</td><td>wir</td><td>lassen</td></tr>\n<tr><td>du</td><td><b>lässt</b></td><td>ihr</td><td>lasst</td></tr>\n<tr><td>er / es / sie</td><td><b>lässt</b></td><td>sie / Sie</td><td>lassen</td></tr></table>\n<table class=\"ex-tb\"><tr><th>Bedeutung</th><th>Beispiel</th></tr>\n<tr><td>1. etwas machen lassen<br>(eine andere Person macht es)</td><td>Ich <b>lasse</b> meinen Laptop <b>reparieren</b>.</td></tr>\n<tr><td>2. jemanden etwas tun lassen<br>(= erlauben)</td><td>Meine Schwester <b>lässt</b> mich ihr Fahrrad <b>benutzen</b>.</td></tr></table>\n<p class=\"ex-note\"><b>lassen</b> 2-o‘rinda, infinitiv oxirida, <b>zu</b> yo‘q. du / er shaklida umlaut: <b>lässt</b>. 2-ma’noda odam Akkusativda: lässt <b>mich / dich / ihn</b>.</p>",
+      "ru": "<h4>Das Verb <i>lassen</i></h4>\n<table class=\"ex-tb\"><tr><th>Person</th><th>lassen</th><th>Person</th><th>lassen</th></tr>\n<tr><td>ich</td><td>lasse</td><td>wir</td><td>lassen</td></tr>\n<tr><td>du</td><td><b>lässt</b></td><td>ihr</td><td>lasst</td></tr>\n<tr><td>er / es / sie</td><td><b>lässt</b></td><td>sie / Sie</td><td>lassen</td></tr></table>\n<table class=\"ex-tb\"><tr><th>Bedeutung</th><th>Beispiel</th></tr>\n<tr><td>1. etwas machen lassen<br>(eine andere Person macht es)</td><td>Ich <b>lasse</b> meinen Laptop <b>reparieren</b>.</td></tr>\n<tr><td>2. jemanden etwas tun lassen<br>(= erlauben)</td><td>Meine Schwester <b>lässt</b> mich ihr Fahrrad <b>benutzen</b>.</td></tr></table>\n<p class=\"ex-note\"><b>lassen</b> на 2-м месте, инфинитив в конце, без <b>zu</b>. У du / er умлаут: <b>lässt</b>. Во 2-м значении человек в Akkusativ: lässt <b>mich / dich / ihn</b>.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *lassen* und den Infinitiv.",
+      "bsp": "Wir lassen die Pizza liefern. → <b>lassen</b> … <b>liefern</b>",
+      "s": "Ich lasse meinen Koffer zum Hotel bringen .",
+      "a": [
+       1,
+       6
+      ],
+      "gw": {
+       "uz": "<b>lassen</b> + infinitiv birga ishlaydi: lassen tuslanadi va 2-o‘rinda (savolda 1-o‘rinda) turadi, infinitiv — gap oxirida. Misol: <b>Ali lässt sein Auto waschen.</b>",
+       "ru": "<b>lassen</b> + инфинитив работают вместе: lassen спрягается и стоит на 2-м месте (в вопросе — на 1-м), инфинитив — в конце предложения. Пример: <b>Ali lässt sein Auto waschen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *lassen* und den Infinitiv.",
+      "s": "Meine Eltern lassen mich am Wochenende lange schlafen .",
+      "a": [
+       2,
+       7
+      ],
+      "gw": {
+       "uz": "<b>lassen</b> + infinitiv birga ishlaydi: lassen tuslanadi va 2-o‘rinda (savolda 1-o‘rinda) turadi, infinitiv — gap oxirida. Misol: <b>Ali lässt sein Auto waschen.</b>",
+       "ru": "<b>lassen</b> + инфинитив работают вместе: lassen спрягается и стоит на 2-м месте (в вопросе — на 1-м), инфинитив — в конце предложения. Пример: <b>Ali lässt sein Auto waschen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *lassen* und den Infinitiv.",
+      "s": "Lässt du dein Handy reparieren ?",
+      "a": [
+       0,
+       4
+      ],
+      "gw": {
+       "uz": "<b>lassen</b> + infinitiv birga ishlaydi: lassen tuslanadi va 2-o‘rinda (savolda 1-o‘rinda) turadi, infinitiv — gap oxirida. Misol: <b>Ali lässt sein Auto waschen.</b>",
+       "ru": "<b>lassen</b> + инфинитив работают вместе: lassen спрягается и стоит на 2-м месте (в вопросе — на 1-м), инфинитив — в конце предложения. Пример: <b>Ali lässt sein Auto waschen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie *lassen* und den Infinitiv.",
+      "s": "Der Regisseur lässt die Darsteller die Szene noch einmal spielen .",
+      "a": [
+       2,
+       9
+      ],
+      "gw": {
+       "uz": "<b>lassen</b> + infinitiv birga ishlaydi: lassen tuslanadi va 2-o‘rinda (savolda 1-o‘rinda) turadi, infinitiv — gap oxirida. Misol: <b>Ali lässt sein Auto waschen.</b>",
+       "ru": "<b>lassen</b> + инфинитив работают вместе: lassen спрягается и стоит на 2-м месте (в вопросе — на 1-м), инфинитив — в конце предложения. Пример: <b>Ali lässt sein Auto waschen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "Du ___ dein Fahrrad reparieren. → du → ✓ <b>lässt</b>",
+      "q": "Nora ___ ihre Schuhe reparieren.",
+      "o": [
+       "lässt",
+       "lasst",
+       "lasse"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Shaklni egaga moslang: ich <b>lasse</b>, du / er / sie <b>lässt</b> (umlaut!), ihr <b>lasst</b> (umlautsiz), wir / sie / Sie <b>lassen</b>. lassen dan keyin infinitiv <b>zu</b>siz; odam — Akkusativda (<b>mich, sie, ihn</b>). Misol: <b>Er lässt sie fahren.</b>",
+       "ru": "Согласуйте с подлежащим: ich <b>lasse</b>, du / er / sie <b>lässt</b> (умлаут!), ihr <b>lasst</b> (без умлаута), wir / sie / Sie <b>lassen</b>. После lassen инфинитив без <b>zu</b>; человек — в Akkusativ (<b>mich, sie, ihn</b>). Пример: <b>Er lässt sie fahren.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Wir ___ unsere Fotos drucken.",
+      "o": [
+       "lässt",
+       "lassen",
+       "lasst"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Shaklni egaga moslang: ich <b>lasse</b>, du / er / sie <b>lässt</b> (umlaut!), ihr <b>lasst</b> (umlautsiz), wir / sie / Sie <b>lassen</b>. lassen dan keyin infinitiv <b>zu</b>siz; odam — Akkusativda (<b>mich, sie, ihn</b>). Misol: <b>Er lässt sie fahren.</b>",
+       "ru": "Согласуйте с подлежащим: ich <b>lasse</b>, du / er / sie <b>lässt</b> (умлаут!), ihr <b>lasst</b> (без умлаута), wir / sie / Sie <b>lassen</b>. После lassen инфинитив без <b>zu</b>; человек — в Akkusativ (<b>mich, sie, ihn</b>). Пример: <b>Er lässt sie fahren.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Warum ___ ihr den Fernseher nicht reparieren?",
+      "o": [
+       "lassen",
+       "lässt",
+       "lasst"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Shaklni egaga moslang: ich <b>lasse</b>, du / er / sie <b>lässt</b> (umlaut!), ihr <b>lasst</b> (umlautsiz), wir / sie / Sie <b>lassen</b>. lassen dan keyin infinitiv <b>zu</b>siz; odam — Akkusativda (<b>mich, sie, ihn</b>). Misol: <b>Er lässt sie fahren.</b>",
+       "ru": "Согласуйте с подлежащим: ich <b>lasse</b>, du / er / sie <b>lässt</b> (умлаут!), ihr <b>lasst</b> (без умлаута), wir / sie / Sie <b>lassen</b>. После lassen инфинитив без <b>zu</b>; человек — в Akkusativ (<b>mich, sie, ihn</b>). Пример: <b>Er lässt sie fahren.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Ich putze meine Wohnung nicht selbst, ich ___.",
+      "o": [
+       "lasse sie putzen",
+       "putze sie lassen",
+       "lasse sie zu putzen"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Shaklni egaga moslang: ich <b>lasse</b>, du / er / sie <b>lässt</b> (umlaut!), ihr <b>lasst</b> (umlautsiz), wir / sie / Sie <b>lassen</b>. lassen dan keyin infinitiv <b>zu</b>siz; odam — Akkusativda (<b>mich, sie, ihn</b>). Misol: <b>Er lässt sie fahren.</b>",
+       "ru": "Согласуйте с подлежащим: ich <b>lasse</b>, du / er / sie <b>lässt</b> (умлаут!), ihr <b>lasst</b> (без умлаута), wir / sie / Sie <b>lassen</b>. После lassen инфинитив без <b>zu</b>; человек — в Akkusativ (<b>mich, sie, ihn</b>). Пример: <b>Er lässt sie fahren.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Mia darf heute länger fernsehen. Ihre Mutter ___.",
+      "o": [
+       "lässt ihr länger fernsehen",
+       "lässt sie länger fernsehen",
+       "lässt sie länger fernzusehen"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Shaklni egaga moslang: ich <b>lasse</b>, du / er / sie <b>lässt</b> (umlaut!), ihr <b>lasst</b> (umlautsiz), wir / sie / Sie <b>lassen</b>. lassen dan keyin infinitiv <b>zu</b>siz; odam — Akkusativda (<b>mich, sie, ihn</b>). Misol: <b>Er lässt sie fahren.</b>",
+       "ru": "Согласуйте с подлежащим: ich <b>lasse</b>, du / er / sie <b>lässt</b> (умлаут!), ihr <b>lasst</b> (без умлаута), wir / sie / Sie <b>lassen</b>. После lassen инфинитив без <b>zu</b>; человек — в Akkusativ (<b>mich, sie, ihn</b>). Пример: <b>Er lässt sie fahren.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *lasse*, *lässt*, *lasst* oder *lassen*.",
+      "bsp": "Anna ___ ihre Uhr reparieren. → sie → <b>lässt</b>",
+      "s": "Ich ___ meine Schuhe reparieren, weil sie kaputt sind.",
+      "a": [
+       [
+        "lasse"
+       ]
+      ],
+      "gw": {
+       "uz": "Egaga qarab shaklni tanlang: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Infinitiv gap oxirida qoladi. Misol: <b>Lasst ihr eure Fotos drucken?</b>",
+       "ru": "Выберите форму по подлежащему: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Инфинитив остаётся в конце. Пример: <b>Lasst ihr eure Fotos drucken?</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *lasse*, *lässt*, *lasst* oder *lassen*.",
+      "s": "Meine Oma ___ mich nie allein Horrorfilme sehen.",
+      "a": [
+       [
+        "lässt"
+       ]
+      ],
+      "gw": {
+       "uz": "Egaga qarab shaklni tanlang: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Infinitiv gap oxirida qoladi. Misol: <b>Lasst ihr eure Fotos drucken?</b>",
+       "ru": "Выберите форму по подлежащему: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Инфинитив остаётся в конце. Пример: <b>Lasst ihr eure Fotos drucken?</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *lasse*, *lässt*, *lasst* oder *lassen*.",
+      "s": "▪ Wo ___ ihr eure Hochzeitstorte backen?\n● Wir ___ sie in der Bäckerei an der Ecke backen.",
+      "a": [
+       [
+        "lasst"
+       ],
+       [
+        "lassen"
+       ]
+      ],
+      "gw": {
+       "uz": "Egaga qarab shaklni tanlang: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Infinitiv gap oxirida qoladi. Misol: <b>Lasst ihr eure Fotos drucken?</b>",
+       "ru": "Выберите форму по подлежащему: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Инфинитив остаётся в конце. Пример: <b>Lasst ihr eure Fotos drucken?</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *lasse*, *lässt*, *lasst* oder *lassen*.",
+      "s": "Hallo! Morgen haben Lena und ich unseren ersten Jahrestag.\nIch ___ meinen Bruder einen Tisch im Restaurant reservieren – er kennt den Chef.\nLena ___ ihr Kleid reinigen, denn sie will schön aussehen.\nUnd nach dem Essen ___ wir uns mit dem Taxi nach Hause bringen.",
+      "a": [
+       [
+        "lasse"
+       ],
+       [
+        "lässt"
+       ],
+       [
+        "lassen"
+       ]
+      ],
+      "gw": {
+       "uz": "Egaga qarab shaklni tanlang: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Infinitiv gap oxirida qoladi. Misol: <b>Lasst ihr eure Fotos drucken?</b>",
+       "ru": "Выберите форму по подлежащему: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Инфинитив остаётся в конце. Пример: <b>Lasst ihr eure Fotos drucken?</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *lasse*, *lässt*, *lasst* oder *lassen*.",
+      "s": "Du ___ deine Schwester nie mit deinem Handy spielen!",
+      "a": [
+       [
+        "lässt"
+       ]
+      ],
+      "gw": {
+       "uz": "Egaga qarab shaklni tanlang: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Infinitiv gap oxirida qoladi. Misol: <b>Lasst ihr eure Fotos drucken?</b>",
+       "ru": "Выберите форму по подлежащему: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Инфинитив остаётся в конце. Пример: <b>Lasst ihr eure Fotos drucken?</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *lasse*, *lässt*, *lasst* oder *lassen*.",
+      "s": "Warum ___ Sie Ihr Auto nicht in der Werkstatt prüfen?",
+      "a": [
+       [
+        "lassen"
+       ]
+      ],
+      "gw": {
+       "uz": "Egaga qarab shaklni tanlang: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Infinitiv gap oxirida qoladi. Misol: <b>Lasst ihr eure Fotos drucken?</b>",
+       "ru": "Выберите форму по подлежащему: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Инфинитив остаётся в конце. Пример: <b>Lasst ihr eure Fotos drucken?</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *lasse*, *lässt*, *lasst* oder *lassen*.",
+      "s": "Der Trainer ___ uns heute früher nach Hause gehen.",
+      "a": [
+       [
+        "lässt"
+       ]
+      ],
+      "gw": {
+       "uz": "Egaga qarab shaklni tanlang: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Infinitiv gap oxirida qoladi. Misol: <b>Lasst ihr eure Fotos drucken?</b>",
+       "ru": "Выберите форму по подлежащему: ich → <b>lasse</b>, du / er / sie → <b>lässt</b>, ihr → <b>lasst</b>, wir / sie / Sie → <b>lassen</b>. Инфинитив остаётся в конце. Пример: <b>Lasst ihr eure Fotos drucken?</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4><i>lassen</i> im Perfekt und mit Modalverb</h4>\n<table class=\"ex-tb\"><tr><th></th><th>Position 2</th><th>…</th><th>Ende</th></tr>\n<tr><td>Präsens</td><td>Ich <b>lasse</b></td><td>meinen Laptop</td><td>reparieren.</td></tr>\n<tr><td>Perfekt</td><td>Ich <b>habe</b></td><td>meinen Laptop</td><td>reparieren <b>lassen</b>.</td></tr>\n<tr><td>mit Modalverb</td><td>Ich <b>muss</b></td><td>meinen Laptop</td><td>reparieren <b>lassen</b>.</td></tr></table>\n<p class=\"ex-note\">Infinitiv bilan Perfektda: <b>haben</b> + infinitiv + <b>lassen</b> (ikki infinitiv, «gelassen» emas!). <b>gelassen</b> faqat lassen yolg‘iz kelganda: Ich habe das Handy zu Hause <b>gelassen</b>.</p>",
+      "ru": "<h4><i>lassen</i> im Perfekt und mit Modalverb</h4>\n<table class=\"ex-tb\"><tr><th></th><th>Position 2</th><th>…</th><th>Ende</th></tr>\n<tr><td>Präsens</td><td>Ich <b>lasse</b></td><td>meinen Laptop</td><td>reparieren.</td></tr>\n<tr><td>Perfekt</td><td>Ich <b>habe</b></td><td>meinen Laptop</td><td>reparieren <b>lassen</b>.</td></tr>\n<tr><td>mit Modalverb</td><td>Ich <b>muss</b></td><td>meinen Laptop</td><td>reparieren <b>lassen</b>.</td></tr></table>\n<p class=\"ex-note\">С инфинитивом в Perfekt: <b>haben</b> + инфинитив + <b>lassen</b> (два инфинитива, не «gelassen»!). <b>gelassen</b> — только когда lassen без другого глагола: Ich habe das Handy zu Hause <b>gelassen</b>.</p>"
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Perfekt.",
+      "bsp": "Jonas ___ seine Jacke reinigen ___. → <b>hat</b> … <b>lassen</b>",
+      "s": "Gestern ___ ich mein Fahrrad reparieren ___.",
+      "a": [
+       [
+        "habe"
+       ],
+       [
+        "lassen"
+       ]
+      ],
+      "gw": {
+       "uz": "Perfekt: <b>haben</b> 2-o‘rinda, oxirida ikkita infinitiv — asosiy fe’l + <b>lassen</b>. «gelassen» yozilmaydi. Misol: <b>Er hat sein Handy reparieren lassen.</b>",
+       "ru": "Perfekt: <b>haben</b> на 2-м месте, в конце два инфинитива — основной глагол + <b>lassen</b>. «gelassen» не пишут. Пример: <b>Er hat sein Handy reparieren lassen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Perfekt.",
+      "s": "___ du deine Haare schneiden ___? Sie sehen super aus!",
+      "a": [
+       [
+        "Hast"
+       ],
+       [
+        "lassen"
+       ]
+      ],
+      "gw": {
+       "uz": "Perfekt: <b>haben</b> 2-o‘rinda, oxirida ikkita infinitiv — asosiy fe’l + <b>lassen</b>. «gelassen» yozilmaydi. Misol: <b>Er hat sein Handy reparieren lassen.</b>",
+       "ru": "Perfekt: <b>haben</b> на 2-м месте, в конце два инфинитива — основной глагол + <b>lassen</b>. «gelassen» не пишут. Пример: <b>Er hat sein Handy reparieren lassen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Perfekt.",
+      "s": "Meine Eltern ___ mich gestern nicht ins Kino gehen ___.",
+      "a": [
+       [
+        "haben"
+       ],
+       [
+        "lassen"
+       ]
+      ],
+      "gw": {
+       "uz": "Perfekt: <b>haben</b> 2-o‘rinda, oxirida ikkita infinitiv — asosiy fe’l + <b>lassen</b>. «gelassen» yozilmaydi. Misol: <b>Er hat sein Handy reparieren lassen.</b>",
+       "ru": "Perfekt: <b>haben</b> на 2-м месте, в конце два инфинитива — основной глагол + <b>lassen</b>. «gelassen» не пишут. Пример: <b>Er hat sein Handy reparieren lassen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie das Perfekt.",
+      "s": "Nodir ___ seinen Liebesbrief an Laylo von einem Freund korrigieren ___.",
+      "a": [
+       [
+        "hat"
+       ],
+       [
+        "lassen"
+       ]
+      ],
+      "gw": {
+       "uz": "Perfekt: <b>haben</b> 2-o‘rinda, oxirida ikkita infinitiv — asosiy fe’l + <b>lassen</b>. «gelassen» yozilmaydi. Misol: <b>Er hat sein Handy reparieren lassen.</b>",
+       "ru": "Perfekt: <b>haben</b> на 2-м месте, в конце два инфинитива — основной глагол + <b>lassen</b>. «gelassen» не пишут. Пример: <b>Er hat sein Handy reparieren lassen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *lassen*.",
+      "bsp": "Ein Fotograf macht unsere Hochzeitsfotos. → <b>Wir lassen unsere Hochzeitsfotos machen.</b>",
+      "q": "Ich repariere mein Handy nicht selbst. Das macht ein Techniker.",
+      "w": [
+       "Ich",
+       "lasse",
+       "mein Handy",
+       "reparieren"
+      ],
+      "a": "Ich lasse mein Handy reparieren.",
+      "alt": [],
+      "gw": {
+       "uz": "Kim bajaradi? Boshqa odam qilsa — <b>etwas machen lassen</b>; ruxsat bersa (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: odam Akkusativda, <b>zu</b> tushib qoladi. Perfektda: <b>hat … machen lassen</b>. Misol: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>",
+       "ru": "Кто выполняет действие? Если другой человек — <b>etwas machen lassen</b>; если разрешают (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: человек в Akkusativ, <b>zu</b> исчезает. В Perfekt: <b>hat … machen lassen</b>. Пример: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *lassen*.",
+      "q": "Laylo schneidet ihre Haare nicht selbst. (beim Friseur)",
+      "w": [
+       "Laylo",
+       "lässt",
+       "ihre Haare",
+       "beim Friseur",
+       "schneiden"
+      ],
+      "a": "Laylo lässt ihre Haare beim Friseur schneiden.",
+      "alt": [
+       "Laylo lässt beim Friseur ihre Haare schneiden."
+      ],
+      "gw": {
+       "uz": "Kim bajaradi? Boshqa odam qilsa — <b>etwas machen lassen</b>; ruxsat bersa (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: odam Akkusativda, <b>zu</b> tushib qoladi. Perfektda: <b>hat … machen lassen</b>. Misol: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>",
+       "ru": "Кто выполняет действие? Если другой человек — <b>etwas machen lassen</b>; если разрешают (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: человек в Akkusativ, <b>zu</b> исчезает. В Perfekt: <b>hat … machen lassen</b>. Пример: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *lassen*.",
+      "q": "Meine Eltern erlauben mir, allein nach Berlin zu fahren.",
+      "w": [
+       "Meine Eltern",
+       "lassen",
+       "mich",
+       "allein",
+       "nach Berlin",
+       "fahren"
+      ],
+      "a": "Meine Eltern lassen mich allein nach Berlin fahren.",
+      "alt": [],
+      "gw": {
+       "uz": "Kim bajaradi? Boshqa odam qilsa — <b>etwas machen lassen</b>; ruxsat bersa (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: odam Akkusativda, <b>zu</b> tushib qoladi. Perfektda: <b>hat … machen lassen</b>. Misol: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>",
+       "ru": "Кто выполняет действие? Если другой человек — <b>etwas machen lassen</b>; если разрешают (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: человек в Akkusativ, <b>zu</b> исчезает. В Perfekt: <b>hat … machen lassen</b>. Пример: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *lassen*.",
+      "q": "Meine Brille ist kaputt. (Ich muss …)",
+      "w": [
+       "Ich",
+       "muss",
+       "meine Brille",
+       "reparieren",
+       "lassen"
+      ],
+      "a": "Ich muss meine Brille reparieren lassen.",
+      "alt": [],
+      "gw": {
+       "uz": "Kim bajaradi? Boshqa odam qilsa — <b>etwas machen lassen</b>; ruxsat bersa (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: odam Akkusativda, <b>zu</b> tushib qoladi. Perfektda: <b>hat … machen lassen</b>. Misol: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>",
+       "ru": "Кто выполняет действие? Если другой человек — <b>etwas machen lassen</b>; если разрешают (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: человек в Akkusativ, <b>zu</b> исчезает. В Perfekt: <b>hat … machen lassen</b>. Пример: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *lassen*.",
+      "q": "Wir haben die Wohnung nicht selbst gestrichen. (Perfekt)",
+      "w": [
+       "Wir",
+       "haben",
+       "die Wohnung",
+       "streichen",
+       "lassen"
+      ],
+      "a": "Wir haben die Wohnung streichen lassen.",
+      "alt": [],
+      "gw": {
+       "uz": "Kim bajaradi? Boshqa odam qilsa — <b>etwas machen lassen</b>; ruxsat bersa (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: odam Akkusativda, <b>zu</b> tushib qoladi. Perfektda: <b>hat … machen lassen</b>. Misol: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>",
+       "ru": "Кто выполняет действие? Если другой человек — <b>etwas machen lassen</b>; если разрешают (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: человек в Akkusativ, <b>zu</b> исчезает. В Perfekt: <b>hat … machen lassen</b>. Пример: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *lassen*.",
+      "q": "Die Lehrerin erlaubt uns, den Film zu Ende zu sehen.",
+      "w": [
+       "Die Lehrerin",
+       "lässt",
+       "uns",
+       "den Film",
+       "zu Ende",
+       "sehen"
+      ],
+      "a": "Die Lehrerin lässt uns den Film zu Ende sehen.",
+      "alt": [],
+      "gw": {
+       "uz": "Kim bajaradi? Boshqa odam qilsa — <b>etwas machen lassen</b>; ruxsat bersa (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: odam Akkusativda, <b>zu</b> tushib qoladi. Perfektda: <b>hat … machen lassen</b>. Misol: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>",
+       "ru": "Кто выполняет действие? Если другой человек — <b>etwas machen lassen</b>; если разрешают (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: человек в Akkusativ, <b>zu</b> исчезает. В Perfekt: <b>hat … machen lassen</b>. Пример: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *lassen*.",
+      "q": "Die Mutter erlaubt den Kindern nicht, den Liebesfilm zu sehen.",
+      "w": [
+       "Die Mutter",
+       "lässt",
+       "die Kinder",
+       "den Liebesfilm",
+       "nicht",
+       "sehen"
+      ],
+      "a": "Die Mutter lässt die Kinder den Liebesfilm nicht sehen.",
+      "alt": [],
+      "gw": {
+       "uz": "Kim bajaradi? Boshqa odam qilsa — <b>etwas machen lassen</b>; ruxsat bersa (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: odam Akkusativda, <b>zu</b> tushib qoladi. Perfektda: <b>hat … machen lassen</b>. Misol: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>",
+       "ru": "Кто выполняет действие? Если другой человек — <b>etwas machen lassen</b>; если разрешают (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: человек в Akkusativ, <b>zu</b> исчезает. В Perfekt: <b>hat … machen lassen</b>. Пример: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Schreiben Sie die Sätze mit *lassen*.",
+      "q": "Mein Bruder lässt mich seinen Film sehen. (Perfekt)",
+      "w": [
+       "Mein Bruder",
+       "hat",
+       "mich",
+       "seinen Film",
+       "sehen",
+       "lassen"
+      ],
+      "a": "Mein Bruder hat mich seinen Film sehen lassen.",
+      "alt": [],
+      "gw": {
+       "uz": "Kim bajaradi? Boshqa odam qilsa — <b>etwas machen lassen</b>; ruxsat bersa (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: odam Akkusativda, <b>zu</b> tushib qoladi. Perfektda: <b>hat … machen lassen</b>. Misol: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>",
+       "ru": "Кто выполняет действие? Если другой человек — <b>etwas machen lassen</b>; если разрешают (<b>erlauben</b>) — <b>jemanden etwas tun lassen</b>: человек в Akkusativ, <b>zu</b> исчезает. В Perfekt: <b>hat … machen lassen</b>. Пример: Er erlaubt mir zu gehen. → <b>Er lässt mich gehen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich lasse mein Zimmer zu streichen. → <b>zu</b> ✗ → Ich lasse mein Zimmer streichen.",
+      "s": "Gestern habe ich meinen Computer reparieren gelassen .",
+      "a": [
+       6
+      ],
+      "fix": "Gestern habe ich meinen Computer reparieren lassen.",
+      "gw": {
+       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) infinitiv oldida <b>zu</b> yo‘q; 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
+       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) перед инфинитивом нет <b>zu</b>; 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Mein Vater lässt mir nicht mit dem Auto fahren .",
+      "a": [
+       3
+      ],
+      "fix": "Mein Vater lässt mich nicht mit dem Auto fahren.",
+      "gw": {
+       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) infinitiv oldida <b>zu</b> yo‘q; 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
+       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) перед инфинитивом нет <b>zu</b>; 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Er lässt seine Haare beim Friseur zu schneiden .",
+      "a": [
+       6
+      ],
+      "fix": "Er lässt seine Haare beim Friseur schneiden.",
+      "gw": {
+       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) infinitiv oldida <b>zu</b> yo‘q; 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
+       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) перед инфинитивом нет <b>zu</b>; 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Meine Freundin lasst mich nie ihr Tagebuch lesen .",
+      "a": [
+       2
+      ],
+      "fix": "Meine Freundin lässt mich nie ihr Tagebuch lesen.",
+      "gw": {
+       "uz": "Tekshiring: 1) Perfektda <b>lassen</b>, «gelassen» emas; 2) odam Akkusativda (<b>mich, dich</b>, «mir» emas); 3) infinitiv oldida <b>zu</b> yo‘q; 4) du / er → <b>lässt</b>. Misol: <b>Sie hat mich ihr Buch lesen lassen.</b>",
+       "ru": "Проверьте: 1) в Perfekt — <b>lassen</b>, не «gelassen»; 2) человек в Akkusativ (<b>mich, dich</b>, не «mir»); 3) перед инфинитивом нет <b>zu</b>; 4) du / er → <b>lässt</b>. Пример: <b>Sie hat mich ihr Buch lesen lassen.</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,576 @@
+{
+ "id": "B1-b11-1-G",
+ "meta": {
+  "title": "Grammatik · als · wenn",
+  "stitle": "als · wenn · immer wenn · Verb am Ende"
+ },
+ "ex": {
+  "title": "Lektion 1 · Grammatik",
+  "sub": "als · wenn · immer wenn · Verb am Ende",
+  "lv": "B1.1",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>als oder wenn?</h4><table class=\"ex-tb\"><tr><th></th><th>Vergangenheit</th><th>Gegenwart / Zukunft</th></tr><tr><td>einmal</td><td><b>als</b><br>Als ich sechs <b>war</b>, bin ich in die Schule gekommen.</td><td><b>wenn</b><br>Wenn ich morgen Zeit <b>habe</b>, rufe ich dich an.</td></tr><tr><td>mehrmals / immer</td><td><b>(immer) wenn</b><br>Immer wenn ich bei Oma <b>war</b>, haben wir Kuchen gebacken.</td><td><b>(immer) wenn</b><br>Wenn es <b>regnet</b>, bleibe ich zu Hause.</td></tr></table><p class=\"ex-note\"><b>als</b> — o‘tmishda bir marta bo‘lgan voqea yoki bitta davr (bolaligimda, 10 yoshimda). <b>wenn</b> — o‘tmishda ko‘p marta takrorlangan voqea (<b>immer wenn</b>, <b>jedes Mal, wenn</b>) yoki hozirgi va kelasi zamon. Ikkalasi ham Nebensatz: tuslangan fe’l oxirida. <b>wann</b> — faqat savol so‘zi: <b>Wann kommst du?</b></p>",
+      "ru": "<h4>als oder wenn?</h4><table class=\"ex-tb\"><tr><th></th><th>Vergangenheit</th><th>Gegenwart / Zukunft</th></tr><tr><td>einmal</td><td><b>als</b><br>Als ich sechs <b>war</b>, bin ich in die Schule gekommen.</td><td><b>wenn</b><br>Wenn ich morgen Zeit <b>habe</b>, rufe ich dich an.</td></tr><tr><td>mehrmals / immer</td><td><b>(immer) wenn</b><br>Immer wenn ich bei Oma <b>war</b>, haben wir Kuchen gebacken.</td><td><b>(immer) wenn</b><br>Wenn es <b>regnet</b>, bleibe ich zu Hause.</td></tr></table><p class=\"ex-note\"><b>als</b> — одно событие или один период в прошлом (в детстве, в 10 лет). <b>wenn</b> — многократное действие в прошлом (<b>immer wenn</b>, <b>jedes Mal, wenn</b>) или настоящее и будущее. Оба союза вводят придаточное: спрягаемый глагол в конце. <b>wann</b> — только вопросительное слово: <b>Wann kommst du?</b></p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Konnektor und das Verb im Nebensatz.",
+      "bsp": "Als ich klein war, hatte ich einen Hund. → <b>Als</b> … <b>war</b>",
+      "s": "Als ich sechs Jahre alt war , hatte ich einen kleinen Hund .",
+      "a": [
+       0,
+       5
+      ],
+      "gw": {
+       "uz": "Nebensatzda konnektor (<b>als</b>, <b>wenn</b>) boshida, tuslangan fe’l esa eng oxirida turadi. Misol: <b>Als ich klein war, …</b> · <b>…, wenn ich Zeit habe.</b>",
+       "ru": "В придаточном союз (<b>als</b>, <b>wenn</b>) стоит в начале, а спрягаемый глагол — в самом конце. Пример: <b>Als ich klein war, …</b> · <b>…, wenn ich Zeit habe.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Konnektor und das Verb im Nebensatz.",
+      "s": "Meine Oma hat immer gesungen , wenn sie in der Küche war .",
+      "a": [
+       6,
+       11
+      ],
+      "gw": {
+       "uz": "Nebensatzda konnektor (<b>als</b>, <b>wenn</b>) boshida, tuslangan fe’l esa eng oxirida turadi. Misol: <b>Als ich klein war, …</b> · <b>…, wenn ich Zeit habe.</b>",
+       "ru": "В придаточном союз (<b>als</b>, <b>wenn</b>) стоит в начале, а спрягаемый глагол — в самом конце. Пример: <b>Als ich klein war, …</b> · <b>…, wenn ich Zeit habe.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Konnektor und das Verb im Nebensatz.",
+      "s": "Ich erinnere mich noch genau an den Tag , als ich mein erstes Fahrrad bekam .",
+      "a": [
+       9,
+       14
+      ],
+      "gw": {
+       "uz": "Nebensatzda konnektor (<b>als</b>, <b>wenn</b>) boshida, tuslangan fe’l esa eng oxirida turadi. Misol: <b>Als ich klein war, …</b> · <b>…, wenn ich Zeit habe.</b>",
+       "ru": "В придаточном союз (<b>als</b>, <b>wenn</b>) стоит в начале, а спрягаемый глагол — в самом конце. Пример: <b>Als ich klein war, …</b> · <b>…, wenn ich Zeit habe.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Konnektor und das Verb im Nebensatz.",
+      "s": "Wenn ich später Kinder habe , erzähle ich ihnen von meiner Kindheit .",
+      "a": [
+       0,
+       4
+      ],
+      "gw": {
+       "uz": "Nebensatzda konnektor (<b>als</b>, <b>wenn</b>) boshida, tuslangan fe’l esa eng oxirida turadi. Misol: <b>Als ich klein war, …</b> · <b>…, wenn ich Zeit habe.</b>",
+       "ru": "В придаточном союз (<b>als</b>, <b>wenn</b>) стоит в начале, а спрягаемый глагол — в самом конце. Пример: <b>Als ich klein war, …</b> · <b>…, wenn ich Zeit habe.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*als* oder *wenn*? Was passt?",
+      "bsp": "___ ich 2015 in Samarkand war, habe ich viele Fotos gemacht. → einmal, Vergangenheit → ✓ <b>Als</b>",
+      "q": "___ ich klein war, wollte ich Pilot werden.",
+      "o": [
+       "Als",
+       "Wenn",
+       "Wann"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "O‘tmishda bir marta bo‘lgan voqea yoki bitta davr (bolalikda, 10 yoshda) → <b>als</b>. Ko‘p marta takrorlangan (immer, jedes Mal) yoki hozirgi / kelasi zamon → <b>wenn</b>. <b>wann</b> — faqat savol so‘zi. Misol: <b>Als ich 18 war, bin ich nach Taschkent gezogen.</b>",
+       "ru": "Одно событие или один период в прошлом (в детстве, в 10 лет) → <b>als</b>. Многократно (immer, jedes Mal) или настоящее / будущее → <b>wenn</b>. <b>wann</b> — только вопросительное слово. Пример: <b>Als ich 18 war, bin ich nach Taschkent gezogen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*als* oder *wenn*? Was passt?",
+      "q": "Immer ___ ich krank war, hat mir meine Mutter Tee gekocht.",
+      "o": [
+       "als",
+       "wenn"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "O‘tmishda bir marta bo‘lgan voqea yoki bitta davr (bolalikda, 10 yoshda) → <b>als</b>. Ko‘p marta takrorlangan (immer, jedes Mal) yoki hozirgi / kelasi zamon → <b>wenn</b>. <b>wann</b> — faqat savol so‘zi. Misol: <b>Als ich 18 war, bin ich nach Taschkent gezogen.</b>",
+       "ru": "Одно событие или один период в прошлом (в детстве, в 10 лет) → <b>als</b>. Многократно (immer, jedes Mal) или настоящее / будущее → <b>wenn</b>. <b>wann</b> — только вопросительное слово. Пример: <b>Als ich 18 war, bin ich nach Taschkent gezogen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*als* oder *wenn*? Was passt?",
+      "q": "___ du nächste Woche nach Buchara fährst, musst du unbedingt die Altstadt besuchen.",
+      "o": [
+       "Als",
+       "Wenn",
+       "Wann"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "O‘tmishda bir marta bo‘lgan voqea yoki bitta davr (bolalikda, 10 yoshda) → <b>als</b>. Ko‘p marta takrorlangan (immer, jedes Mal) yoki hozirgi / kelasi zamon → <b>wenn</b>. <b>wann</b> — faqat savol so‘zi. Misol: <b>Als ich 18 war, bin ich nach Taschkent gezogen.</b>",
+       "ru": "Одно событие или один период в прошлом (в детстве, в 10 лет) → <b>als</b>. Многократно (immer, jedes Mal) или настоящее / будущее → <b>wenn</b>. <b>wann</b> — только вопросительное слово. Пример: <b>Als ich 18 war, bin ich nach Taschkent gezogen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*als* oder *wenn*? Was passt?",
+      "q": "Ich habe mich sehr gefreut, ___ ich die Prüfung bestanden habe.",
+      "o": [
+       "wenn",
+       "als"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "O‘tmishda bir marta bo‘lgan voqea yoki bitta davr (bolalikda, 10 yoshda) → <b>als</b>. Ko‘p marta takrorlangan (immer, jedes Mal) yoki hozirgi / kelasi zamon → <b>wenn</b>. <b>wann</b> — faqat savol so‘zi. Misol: <b>Als ich 18 war, bin ich nach Taschkent gezogen.</b>",
+       "ru": "Одно событие или один период в прошлом (в детстве, в 10 лет) → <b>als</b>. Многократно (immer, jedes Mal) или настоящее / будущее → <b>wenn</b>. <b>wann</b> — только вопросительное слово. Пример: <b>Als ich 18 war, bin ich nach Taschkent gezogen.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "*als* oder *wenn*? Was passt?",
+      "q": "Jedes Mal, ___ ich dieses Lied höre, denke ich an meine Schulzeit.",
+      "o": [
+       "als",
+       "wann",
+       "wenn"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "O‘tmishda bir marta bo‘lgan voqea yoki bitta davr (bolalikda, 10 yoshda) → <b>als</b>. Ko‘p marta takrorlangan (immer, jedes Mal) yoki hozirgi / kelasi zamon → <b>wenn</b>. <b>wann</b> — faqat savol so‘zi. Misol: <b>Als ich 18 war, bin ich nach Taschkent gezogen.</b>",
+       "ru": "Одно событие или один период в прошлом (в детстве, в 10 лет) → <b>als</b>. Многократно (immer, jedes Mal) или настоящее / будущее → <b>wenn</b>. <b>wann</b> — только вопросительное слово. Пример: <b>Als ich 18 war, bin ich nach Taschkent gezogen.</b>"
+      }
+     },
+     {
+      "t": "cat",
+      "h": "Einmal oder mehrmals? Ordnen Sie zu.",
+      "bsp": "… ich geboren wurde → einmal, Vergangenheit → <b>als</b>",
+      "c": [
+       "als",
+       "wenn"
+      ],
+      "i": [
+       [
+        "… ich zum ersten Mal in Deutschland war",
+        0
+       ],
+       [
+        "immer … wir Ferien hatten",
+        1
+       ],
+       [
+        "… ich morgen früh aufstehe",
+        1
+       ],
+       [
+        "… mein Opa 80 Jahre alt wurde",
+        0
+       ],
+       [
+        "jedes Mal, … ich meine Oma besucht habe",
+        1
+       ],
+       [
+        "… ich mit der Schule fertig war",
+        0
+       ],
+       [
+        "… ich im Sommer Ferien habe",
+        1
+       ]
+      ],
+      "gw": {
+       "uz": "Avval vaqtni aniqlang: o‘tmishda bir martami → <b>als</b>; har gal (immer, jedes Mal) yoki hozir / kelajak → <b>wenn</b>. Misol: <b>als ich geboren wurde</b> · <b>immer wenn wir Ferien hatten</b>.",
+       "ru": "Сначала определите время: один раз в прошлом → <b>als</b>; каждый раз (immer, jedes Mal) или сейчас / в будущем → <b>wenn</b>. Пример: <b>als ich geboren wurde</b> · <b>immer wenn wir Ferien hatten</b>."
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *als* oder *wenn*.",
+      "bsp": "___ ich zehn war, hatte ich lange Haare. → einmal, Vergangenheit → <b>Als</b>",
+      "s": "Meine Eltern haben sich kennengelernt, ___ sie Studenten waren.",
+      "a": [
+       [
+        "als"
+       ]
+      ],
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: bir martami yoki ko‘p martami? O‘tmishdami? Bir marta, o‘tmish → <b>als</b>; har gal / hozir / kelajak → <b>wenn</b>. Gap boshida bosh harf: <b>Als</b>, <b>Wenn</b>. Misol: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>",
+       "ru": "Спросите себя: один раз или много раз? В прошлом? Один раз в прошлом → <b>als</b>; каждый раз / сейчас / в будущем → <b>wenn</b>. В начале предложения — с большой буквы: <b>Als</b>, <b>Wenn</b>. Пример: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *als* oder *wenn*.",
+      "s": "Ich bekomme immer gute Laune, ___ ich alte Fotos anschaue.",
+      "a": [
+       [
+        "wenn"
+       ]
+      ],
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: bir martami yoki ko‘p martami? O‘tmishdami? Bir marta, o‘tmish → <b>als</b>; har gal / hozir / kelajak → <b>wenn</b>. Gap boshida bosh harf: <b>Als</b>, <b>Wenn</b>. Misol: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>",
+       "ru": "Спросите себя: один раз или много раз? В прошлом? Один раз в прошлом → <b>als</b>; каждый раз / сейчас / в будущем → <b>wenn</b>. В начале предложения — с большой буквы: <b>Als</b>, <b>Wenn</b>. Пример: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *als* oder *wenn*.",
+      "s": "___ mein kleiner Bruder geboren wurde, war ich acht Jahre alt.",
+      "a": [
+       [
+        "Als"
+       ]
+      ],
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: bir martami yoki ko‘p martami? O‘tmishdami? Bir marta, o‘tmish → <b>als</b>; har gal / hozir / kelajak → <b>wenn</b>. Gap boshida bosh harf: <b>Als</b>, <b>Wenn</b>. Misol: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>",
+       "ru": "Спросите себя: один раз или много раз? В прошлом? Один раз в прошлом → <b>als</b>; каждый раз / сейчас / в будущем → <b>wenn</b>. В начале предложения — с большой буквы: <b>Als</b>, <b>Wenn</b>. Пример: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *als* oder *wenn*.",
+      "s": "___ ich mit der Schule fertig bin, möchte ich in Deutschland studieren.",
+      "a": [
+       [
+        "Wenn"
+       ]
+      ],
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: bir martami yoki ko‘p martami? O‘tmishdami? Bir marta, o‘tmish → <b>als</b>; har gal / hozir / kelajak → <b>wenn</b>. Gap boshida bosh harf: <b>Als</b>, <b>Wenn</b>. Misol: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>",
+       "ru": "Спросите себя: один раз или много раз? В прошлом? Один раз в прошлом → <b>als</b>; каждый раз / сейчас / в будущем → <b>wenn</b>. В начале предложения — с большой буквы: <b>Als</b>, <b>Wenn</b>. Пример: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *als* oder *wenn*.",
+      "s": "▪ Wann hast du mit Deutsch angefangen?\n● ___ ich 15 war. Und heute verstehe ich fast alles, ___ ich deutsche Filme sehe.",
+      "a": [
+       [
+        "Als"
+       ],
+       [
+        "wenn"
+       ]
+      ],
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: bir martami yoki ko‘p martami? O‘tmishdami? Bir marta, o‘tmish → <b>als</b>; har gal / hozir / kelajak → <b>wenn</b>. Gap boshida bosh harf: <b>Als</b>, <b>Wenn</b>. Misol: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>",
+       "ru": "Спросите себя: один раз или много раз? В прошлом? Один раз в прошлом → <b>als</b>; каждый раз / сейчас / в будущем → <b>wenn</b>. В начале предложения — с большой буквы: <b>Als</b>, <b>Wenn</b>. Пример: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *als* oder *wenn*.",
+      "s": "▪ Erinnerst du dich gern an deine Kindheit?\n● Ja, sehr! ___ ich klein war, haben wir auf dem Land gewohnt. Immer ___ es im Winter geschneit hat, sind wir Schlitten gefahren. ___ ich sieben war, sind wir nach Taschkent gezogen.",
+      "a": [
+       [
+        "Als"
+       ],
+       [
+        "wenn"
+       ],
+       [
+        "Als"
+       ]
+      ],
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: bir martami yoki ko‘p martami? O‘tmishdami? Bir marta, o‘tmish → <b>als</b>; har gal / hozir / kelajak → <b>wenn</b>. Gap boshida bosh harf: <b>Als</b>, <b>Wenn</b>. Misol: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>",
+       "ru": "Спросите себя: один раз или много раз? В прошлом? Один раз в прошлом → <b>als</b>; каждый раз / сейчас / в будущем → <b>wenn</b>. В начале предложения — с большой буквы: <b>Als</b>, <b>Wenn</b>. Пример: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *als* oder *wenn*.",
+      "s": "Laylo: Erinnerst du dich an die fünfte Klasse? Immer ___ der Lehrer nicht da war, haben wir gesungen.\nSevara: Ja! Und ___ wir den schweren Mathetest zurückbekommen haben, hast du geweint!",
+      "a": [
+       [
+        "wenn"
+       ],
+       [
+        "als"
+       ]
+      ],
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: bir martami yoki ko‘p martami? O‘tmishdami? Bir marta, o‘tmish → <b>als</b>; har gal / hozir / kelajak → <b>wenn</b>. Gap boshida bosh harf: <b>Als</b>, <b>Wenn</b>. Misol: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>",
+       "ru": "Спросите себя: один раз или много раз? В прошлом? Один раз в прошлом → <b>als</b>; каждый раз / сейчас / в будущем → <b>wenn</b>. В начале предложения — с большой буквы: <b>Als</b>, <b>Wenn</b>. Пример: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie *als* oder *wenn*.",
+      "s": "Meine Oma erzählt oft von früher: ___ sie jung war, gab es noch kein Internet. Immer ___ sie Freunde treffen wollte, ist sie einfach zu ihnen gegangen. Und heute? ___ ich sie besuche, zeigt sie mir Videos auf ihrem Handy!",
+      "a": [
+       [
+        "Als"
+       ],
+       [
+        "wenn"
+       ],
+       [
+        "Wenn"
+       ]
+      ],
+      "gw": {
+       "uz": "O‘zingizdan so‘rang: bir martami yoki ko‘p martami? O‘tmishdami? Bir marta, o‘tmish → <b>als</b>; har gal / hozir / kelajak → <b>wenn</b>. Gap boshida bosh harf: <b>Als</b>, <b>Wenn</b>. Misol: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>",
+       "ru": "Спросите себя: один раз или много раз? В прошлом? Один раз в прошлом → <b>als</b>; каждый раз / сейчас / в будущем → <b>wenn</b>. В начале предложения — с большой буквы: <b>Als</b>, <b>Wenn</b>. Пример: <b>Immer wenn es geschneit hat, haben wir draußen gespielt.</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4>Wo steht das Verb?</h4><table class=\"ex-tb\"><tr><th>1. Teil</th><th>2. Teil</th></tr><tr><td>Als ich klein <b>war</b>,</td><td><b>hatte</b> ich einen Hund.</td></tr><tr><td>Wenn ich Zeit <b>habe</b>,</td><td><b>lese</b> ich gern.</td></tr><tr><td>Ich <b>hatte</b> einen Hund,</td><td>als ich klein <b>war</b>.</td></tr></table><div class=\"ex-sk\"><span>Als</span><span>ich</span><span>klein</span><span class=\"v\">war</span>,<span class=\"v\">hatte</span><span>ich</span><span>einen Hund</span>.</div><p class=\"ex-note\">Nebensatzda tuslangan fe’l oxirida. Nebensatz birinchi kelsa, Hauptsatz fe’l bilan boshlanadi: fe’l, vergul, fe’l — <b>…war, hatte ich …</b> Perfektda: <b>Als wir umgezogen sind, war ich zwölf.</b></p>",
+      "ru": "<h4>Wo steht das Verb?</h4><table class=\"ex-tb\"><tr><th>1. Teil</th><th>2. Teil</th></tr><tr><td>Als ich klein <b>war</b>,</td><td><b>hatte</b> ich einen Hund.</td></tr><tr><td>Wenn ich Zeit <b>habe</b>,</td><td><b>lese</b> ich gern.</td></tr><tr><td>Ich <b>hatte</b> einen Hund,</td><td>als ich klein <b>war</b>.</td></tr></table><div class=\"ex-sk\"><span>Als</span><span>ich</span><span>klein</span><span class=\"v\">war</span>,<span class=\"v\">hatte</span><span>ich</span><span>einen Hund</span>.</div><p class=\"ex-note\">В придаточном спрягаемый глагол в конце. Если придаточное стоит первым, главное начинается с глагола: глагол, запятая, глагол — <b>…war, hatte ich …</b> В Perfekt: <b>Als wir umgezogen sind, war ich zwölf.</b></p>"
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "bsp": "wenn · es regnet · ich · zu Hause bleiben → ✓ <b>Wenn es regnet, bleibe ich zu Hause.</b>",
+      "q": "als · ich · jung sein · viel Sport machen",
+      "o": [
+       "Als ich jung war, ich habe viel Sport gemacht.",
+       "Als ich jung war, habe ich viel Sport gemacht.",
+       "Als ich war jung, habe ich viel Sport gemacht."
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Ikki qoida: 1) Nebensatzda tuslangan fe’l oxirida (<b>…, als ich jung war</b>). 2) Nebensatz oldin kelsa, Hauptsatz fe’l bilan boshlanadi: <b>…, habe ich …</b> Misol: <b>Wenn ich Zeit habe, gehe ich ins Kino.</b>",
+       "ru": "Два правила: 1) в придаточном спрягаемый глагол в конце (<b>…, als ich jung war</b>). 2) Если придаточное стоит первым, главное начинается с глагола: <b>…, habe ich …</b> Пример: <b>Wenn ich Zeit habe, gehe ich ins Kino.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "q": "wenn · ich · Zeit haben · ins Kino gehen",
+      "o": [
+       "Wenn ich habe Zeit, gehe ich ins Kino.",
+       "Wenn ich Zeit habe, ich gehe ins Kino.",
+       "Wenn ich Zeit habe, gehe ich ins Kino."
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Ikki qoida: 1) Nebensatzda tuslangan fe’l oxirida (<b>…, als ich jung war</b>). 2) Nebensatz oldin kelsa, Hauptsatz fe’l bilan boshlanadi: <b>…, habe ich …</b> Misol: <b>Wenn ich Zeit habe, gehe ich ins Kino.</b>",
+       "ru": "Два правила: 1) в придаточном спрягаемый глагол в конце (<b>…, als ich jung war</b>). 2) Если придаточное стоит первым, главное начинается с глагола: <b>…, habe ich …</b> Пример: <b>Wenn ich Zeit habe, gehe ich ins Kino.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "q": "ich · glücklich sein · als · die Nachricht bekommen",
+      "o": [
+       "Ich war glücklich, als ich die Nachricht bekommen habe.",
+       "Ich war glücklich, als ich habe die Nachricht bekommen.",
+       "Ich war glücklich, als habe ich die Nachricht bekommen."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Ikki qoida: 1) Nebensatzda tuslangan fe’l oxirida (<b>…, als ich jung war</b>). 2) Nebensatz oldin kelsa, Hauptsatz fe’l bilan boshlanadi: <b>…, habe ich …</b> Misol: <b>Wenn ich Zeit habe, gehe ich ins Kino.</b>",
+       "ru": "Два правила: 1) в придаточном спрягаемый глагол в конце (<b>…, als ich jung war</b>). 2) Если придаточное стоит первым, главное начинается с глагола: <b>…, habe ich …</b> Пример: <b>Wenn ich Zeit habe, gehe ich ins Kino.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "bsp": "Ich war klein. Ich hatte Angst vor Hunden. (als) → <b>Als ich klein war, hatte ich Angst vor Hunden.</b>",
+      "q": "Mein Bruder kommt nach Hause. Wir spielen zusammen Fußball. (wenn)",
+      "w": [
+       "Wenn",
+       "mein Bruder",
+       "nach Hause",
+       "kommt,",
+       "spielen",
+       "wir",
+       "zusammen Fußball"
+      ],
+      "a": "Wenn mein Bruder nach Hause kommt, spielen wir zusammen Fußball.",
+      "alt": [],
+      "gw": {
+       "uz": "Nebensatz birinchi kelsa: konnektor → ega → … → fe’l, vergul, keyin darhol Hauptsatz fe’li: <b>Als mein Opa jung war, hat er …</b> Nebensatz ikkinchi kelsa, Hauptsatz odatdagidek: <b>Malika hat …, als sie 16 war.</b>",
+       "ru": "Если придаточное первое: союз → подлежащее → … → глагол, запятая, затем сразу глагол главного: <b>Als mein Opa jung war, hat er …</b> Если придаточное второе, главное — как обычно: <b>Malika hat …, als sie 16 war.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "q": "Meine Mutter sieht dieses Foto. Sie lacht jedes Mal. (wenn)",
+      "w": [
+       "Meine Mutter",
+       "lacht",
+       "jedes Mal,",
+       "wenn",
+       "sie",
+       "dieses Foto",
+       "sieht"
+      ],
+      "a": "Meine Mutter lacht jedes Mal, wenn sie dieses Foto sieht.",
+      "alt": [],
+      "gw": {
+       "uz": "Nebensatz birinchi kelsa: konnektor → ega → … → fe’l, vergul, keyin darhol Hauptsatz fe’li: <b>Als mein Opa jung war, hat er …</b> Nebensatz ikkinchi kelsa, Hauptsatz odatdagidek: <b>Malika hat …, als sie 16 war.</b>",
+       "ru": "Если придаточное первое: союз → подлежащее → … → глагол, запятая, затем сразу глагол главного: <b>Als mein Opa jung war, hat er …</b> Если придаточное второе, главное — как обычно: <b>Malika hat …, als sie 16 war.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "q": "Mein Opa war jung. Er hat in Moskau studiert. (als)",
+      "w": [
+       "Als",
+       "mein Opa",
+       "jung",
+       "war,",
+       "hat",
+       "er",
+       "in Moskau studiert"
+      ],
+      "a": "Als mein Opa jung war, hat er in Moskau studiert.",
+      "alt": [],
+      "gw": {
+       "uz": "Nebensatz birinchi kelsa: konnektor → ega → … → fe’l, vergul, keyin darhol Hauptsatz fe’li: <b>Als mein Opa jung war, hat er …</b> Nebensatz ikkinchi kelsa, Hauptsatz odatdagidek: <b>Malika hat …, als sie 16 war.</b>",
+       "ru": "Если придаточное первое: союз → подлежащее → … → глагол, запятая, затем сразу глагол главного: <b>Als mein Opa jung war, hat er …</b> Если придаточное второе, главное — как обычно: <b>Malika hat …, als sie 16 war.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "q": "Meine Schwester sah das Geschenk. Sie hat laut gelacht. (als)",
+      "w": [
+       "Meine Schwester",
+       "hat",
+       "laut",
+       "gelacht,",
+       "als",
+       "sie",
+       "das Geschenk",
+       "sah"
+      ],
+      "a": "Meine Schwester hat laut gelacht, als sie das Geschenk sah.",
+      "alt": [],
+      "gw": {
+       "uz": "Nebensatz birinchi kelsa: konnektor → ega → … → fe’l, vergul, keyin darhol Hauptsatz fe’li: <b>Als mein Opa jung war, hat er …</b> Nebensatz ikkinchi kelsa, Hauptsatz odatdagidek: <b>Malika hat …, als sie 16 war.</b>",
+       "ru": "Если придаточное первое: союз → подлежащее → … → глагол, запятая, затем сразу глагол главного: <b>Als mein Opa jung war, hat er …</b> Если придаточное второе, главное — как обычно: <b>Malika hat …, als sie 16 war.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "q": "Malika war 16. Sie hat ihr erstes Gedicht geschrieben. (als)",
+      "w": [
+       "Malika",
+       "hat",
+       "ihr erstes Gedicht",
+       "geschrieben,",
+       "als",
+       "sie",
+       "16",
+       "war"
+      ],
+      "a": "Malika hat ihr erstes Gedicht geschrieben, als sie 16 war.",
+      "alt": [],
+      "gw": {
+       "uz": "Nebensatz birinchi kelsa: konnektor → ega → … → fe’l, vergul, keyin darhol Hauptsatz fe’li: <b>Als mein Opa jung war, hat er …</b> Nebensatz ikkinchi kelsa, Hauptsatz odatdagidek: <b>Malika hat …, als sie 16 war.</b>",
+       "ru": "Если придаточное первое: союз → подлежащее → … → глагол, запятая, затем сразу глагол главного: <b>Als mein Opa jung war, hat er …</b> Если придаточное второе, главное — как обычно: <b>Malika hat …, als sie 16 war.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "q": "Wir hatten Ferien. Mein Vater ist immer mit uns ans Meer gefahren. (immer wenn)",
+      "w": [
+       "Immer wenn",
+       "wir",
+       "Ferien",
+       "hatten,",
+       "ist",
+       "mein Vater",
+       "mit uns",
+       "ans Meer gefahren"
+      ],
+      "a": "Immer wenn wir Ferien hatten, ist mein Vater mit uns ans Meer gefahren.",
+      "alt": [],
+      "gw": {
+       "uz": "Nebensatz birinchi kelsa: konnektor → ega → … → fe’l, vergul, keyin darhol Hauptsatz fe’li: <b>Als mein Opa jung war, hat er …</b> Nebensatz ikkinchi kelsa, Hauptsatz odatdagidek: <b>Malika hat …, als sie 16 war.</b>",
+       "ru": "Если придаточное первое: союз → подлежащее → … → глагол, запятая, затем сразу глагол главного: <b>Als mein Opa jung war, hat er …</b> Если придаточное второе, главное — как обычно: <b>Malika hat …, als sie 16 war.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze.",
+      "q": "Timur ist in Deutschland angekommen. Er konnte nur wenig Deutsch. (als)",
+      "w": [
+       "Als",
+       "Timur",
+       "in Deutschland",
+       "angekommen",
+       "ist,",
+       "konnte",
+       "er",
+       "nur wenig Deutsch"
+      ],
+      "a": "Als Timur in Deutschland angekommen ist, konnte er nur wenig Deutsch.",
+      "alt": [],
+      "gw": {
+       "uz": "Nebensatz birinchi kelsa: konnektor → ega → … → fe’l, vergul, keyin darhol Hauptsatz fe’li: <b>Als mein Opa jung war, hat er …</b> Nebensatz ikkinchi kelsa, Hauptsatz odatdagidek: <b>Malika hat …, als sie 16 war.</b>",
+       "ru": "Если придаточное первое: союз → подлежащее → … → глагол, запятая, затем сразу глагол главного: <b>Als mein Opa jung war, hat er …</b> Если придаточное второе, главное — как обычно: <b>Malika hat …, als sie 16 war.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Wann ich klein war, … → <b>Als</b> ich klein war, …",
+      "s": "Wenn ich 2019 nach Deutschland gekommen bin , war ich 18 .",
+      "a": [
+       0
+      ],
+      "fix": "Als ich 2019 nach Deutschland gekommen bin, war ich 18.",
+      "gw": {
+       "uz": "2019-yil — o‘tmishda bir marta bo‘lgan voqea. Shuning uchun <b>als</b>, wenn emas: <b>Als ich 2019 nach Deutschland gekommen bin, …</b>",
+       "ru": "2019 год — однократное событие в прошлом. Поэтому <b>als</b>, а не wenn: <b>Als ich 2019 nach Deutschland gekommen bin, …</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Als ich morgen Zeit habe , rufe ich dich an .",
+      "a": [
+       0
+      ],
+      "fix": "Wenn ich morgen Zeit habe, rufe ich dich an.",
+      "gw": {
+       "uz": "<b>morgen</b> — kelajak. Hozirgi va kelasi zamonda faqat <b>wenn</b>: <b>Wenn ich morgen Zeit habe, …</b>",
+       "ru": "<b>morgen</b> — будущее. В настоящем и будущем только <b>wenn</b>: <b>Wenn ich morgen Zeit habe, …</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Wann ich ein Kind war , habe ich gern gemalt .",
+      "a": [
+       0
+      ],
+      "fix": "Als ich ein Kind war, habe ich gern gemalt.",
+      "gw": {
+       "uz": "<b>wann</b> — savol so‘zi (<b>Wann hast du Geburtstag?</b>). O‘tmishdagi bitta davr uchun <b>als</b>: <b>Als ich ein Kind war, …</b>",
+       "ru": "<b>wann</b> — вопросительное слово (<b>Wann hast du Geburtstag?</b>). Для одного периода в прошлом — <b>als</b>: <b>Als ich ein Kind war, …</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Als meine Schwester geheiratet hat , ich habe viel getanzt .",
+      "a": [
+       7
+      ],
+      "fix": "Als meine Schwester geheiratet hat, habe ich viel getanzt.",
+      "gw": {
+       "uz": "Nebensatz oldin kelgan — demak Hauptsatz fe’l bilan boshlanadi: <b>…, habe ich viel getanzt.</b> «…, ich habe …» — xato.",
+       "ru": "Придаточное стоит первым — значит, главное начинается с глагола: <b>…, habe ich viel getanzt.</b> «…, ich habe …» — ошибка."
+      }
+     }
+    ]
+   }
+  ]
+ }
+}
