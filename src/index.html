@@ -8776,8 +8776,13 @@ function cloudS(k,v){ try{ localStorage.setItem("cloud:"+k+":"+ACC.cur,String(v)
 let CLOUD_T=null, CLOUD_BUSY=false;
 function cloudDirty(){ if(!CLOUD_ON||!ACC.cur) return; clearTimeout(CLOUD_T); CLOUD_T=setTimeout(()=>cloudPush(),120000); } /* 45s→120s (2026-10-23, marafon oqimi: bazaga yozish yana ~2.5 barobar kam) · 12s→45s (2026-10-21): 1400+ o'quvchida bazaga yozish ~3 barobar kam; ilova yopilganda baribir darhol saqlanadi */
 async function cloudPush(ka){ const u=cloudUser(); if(!CLOUD_ON||!u||!u.c||CLOUD_BUSY||tchOk()) return; CLOUD_BUSY=true;
-  try{ const d=JSON.stringify(cloudDump(ACC.cur)), h=await cloudSha(d);
-    if(h!==cloudG("h")){ const t=Date.now(); await fsPut("p/"+u.c,{d:fsS(d),t:fsI(t)},ka&&d.length<60000); cloudS("h",h); cloudS("t",t); }
+  try{ let d=JSON.stringify(cloudDump(ACC.cur)), h=await cloudSha(d);
+    if(h!==cloudG("h")){
+      /* yozishdan oldin bazadagini tekshiramiz: ustoz akkauntlarni birlashtirgan (🔗) yoki boshqa qurilmada yangiroq natija bo'lsa — avval qo'shamiz, keyin yozamiz.
+         Aks holda ochiq turgan qurilma birlashtirilgan natijani o'zining eski holati bilan bosib ketardi (2026-10-24, Nargiza) */
+      const skipP=ka&&Date.now()-(+cloudG("ck")||0)>5*60e3; /* chiqishda tekshirib bo'lmaydi — oxirgi tekshiruv eski bo'lsa p/ ni yozmaymiz, keyingi ochilishda qo'shilib yoziladi */
+      if(!ka){ try{ const f=await fsGet("p/"+u.c); cloudS("ck",Date.now()); if(f&&f.d){ let o=null; try{ o=JSON.parse(f.d.stringValue||"{}"); }catch(e){} if(o&&o.__mv){ CLOUD_BUSY=false; accMoved(o); return; } const st=+((f.t||{}).integerValue||0); if(o&&st>(+cloudG("t")||0)){ cloudApply(ACC.cur,o); cloudS("t",st); d=JSON.stringify(cloudDump(ACC.cur)); h=await cloudSha(d); } } }catch(e){} }
+      if(!skipP){ const t=Date.now(); await fsPut("p/"+u.c,{d:fsS(d),t:fsI(t)},ka&&d.length<60000); cloudS("h",h); cloudS("t",t); } }
     if(!cloudG("n")){ await fsPut("n/"+await cloudNameId(ACC.cur),{t:fsI(Date.now())}).catch(()=>{}); cloudS("n",1); }
     const sm=stCollect(); sm.ak=ACC.cur; sm.c=u.c; /* c — tiklash kaliti, faqat ustoz ocha oladi */ const gp=gpGet(), sh=await cloudSha(JSON.stringify([sm.nm,sm.w,sm.k,sm.g,sm.y,sm.c,gp.p,gp.pp,sm.hp,sm.mr]));
     const ah=sm.a?JSON.stringify((sm.a.dd||[]).slice(-1)):""; if(sh!==cloudG("sh")||cloudG("rkv")!=="5"||Date.now()-(+cloudG("st")||0)>864e5||(ah!==cloudG("ah")&&Date.now()-(+cloudG("st")||0)>180000)){ cloudS("ah",ah); cloudS("rkv","5"); /* ochiq reyting maydonlari ham shu hujjatda: ism qisqa, so'z soni, daraja, 📲 — reyting MQTT'ga emas, bazaga tayanadi (2026-10-22, Otabek: «Azizbek reytingda yo'q») */
@@ -8785,7 +8790,7 @@ async function cloudPush(ka){ const u=cloudUser(); if(!CLOUD_ON||!u||!u.c||CLOUD
     try{ await axPush(u.c,ka); }catch(e){} /* 🔬 chuqur tahlil — a/<id> (2026-10-23); ka — saytdan chiqishda (2026-10-24) */
   }catch(e){} CLOUD_BUSY=false; }
 async function cloudPull(){ const u=cloudUser(); if(!CLOUD_ON||!u||!u.c) return;
-  try{ const f=await fsGet("p/"+u.c);
+  try{ const f=await fsGet("p/"+u.c); cloudS("ck",Date.now());
     if(f&&f.d){ let mv=null; try{ mv=JSON.parse(f.d.stringValue||"{}"); }catch(e){} if(mv&&mv.__mv){ accMoved(mv); return; } const st=+((f.t||{}).integerValue||0), lt=+(cloudG("t")||0);
       if(st>lt){ const ch=cloudApply(ACC.cur, JSON.parse(f.d.stringValue||"{}")); cloudS("t",st); cloudS("h","");
         if(ch){ let rl=null; try{ rl=sessionStorage.getItem("cloud:rl"); sessionStorage.setItem("cloud:rl","1"); }catch(e){} if(!rl){ location.reload(); return; } } } }

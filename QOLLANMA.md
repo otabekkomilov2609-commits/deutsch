@@ -1276,3 +1276,8 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - 📊 Tahlil → 📚 Materiallar: eski «Qism bo‘yicha» kartasi o‘rniga «⏱ Bo‘limlarda vaqt». Bo‘limlar: Grammatik, Wortschatz mashqi, Kommunikation, Sprechen, Hören, Lesen, Aussprache, So‘z yodlash (Yodlash + Esingizdami), O‘yinlar (Duel, Challenge, Kunlik, Live test, Sinf o‘yini), Varaqlar (PDF, Übersicht), Video, Sahifalar (bosh sahifa, Lektion ro‘yxati va b.).
 - 3 qism: (1) jadval — jami daqiqa, ulushi, nechta o‘quvchi, 1 o‘quvchiga o‘rtacha, kirgan kunida o‘rtacha, oldingi davrga nisbatan o‘zgarish, 1-urinish ✓; qatorni bosish — faqat shu bo‘lim; (2) 📅 kun kesimida — ustunlar (jami yoki 1 o‘quvchiga), kunni bosish — o‘sha kun tafsiloti va eng ko‘p ishlaganlar; (3) 👤 o‘quvchi kesimida — har o‘quvchi × bo‘lim daqiqalari, ismni bosish — o‘sha o‘quvchining to‘liq tahlili.
 - Manba: chuqur ma’lumot (a/), 23.10.2026 dan; undan oldingi kunlar chiziqli ko‘rinadi.
+
+## 🔗 Birlashtirish va ochiq qurilma (2026-10-24, Nargiza)
+- Muammo: ustoz 🔗 bilan eski akkauntni yangisiga qo‘shgan paytda o‘quvchining yangi akkaunti telefonda ochiq tursa, telefon 2 daqiqadan keyin o‘zidagi eski holatni bazaga yozib, birlashtirilgan natijani bosib ketardi (Nargiza: 12:43 birlashtirildi, 12:53 telefon bosib ketdi).
+- Tuzatish: sayt bazaga yozishdan oldin bazadagini o‘qiydi; u yangiroq bo‘lsa — avval qo‘shib oladi, keyin yozadi. Saytdan chiqishdagi tezkor yozuv — oxirgi 5 daqiqada tekshirilgan bo‘lsagina.
+- Yo‘qolgan natijani qaytarish: eski akkaunt ochilgan qurilmada saytni ochsa — sayt yangi akkauntga kirishni so‘raydi, kirgach eski qurilmadagi natijalar qo‘shiladi.
