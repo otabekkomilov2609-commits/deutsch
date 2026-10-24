@@ -1,0 +1,176 @@
+{
+ "title": "Lektion 24 · Kommunikation",
+ "sub": "Wichtige Tage · Gratulieren · Wünsche äußern",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Wow! Herzlichen Glückwunsch! | ▪ Danke! | ▪ Ich habe die Prüfung bestanden! → <b>▪ Ich habe die Prüfung bestanden!<br>● Wow! Herzlichen Glückwunsch!<br>▪ Danke!</b>",
+     "w": [
+      "▪ Hallo Mia! Heute ist doch der fünfte Juni, oder?",
+      "● Ja, genau. Heute habe ich Geburtstag.",
+      "▪ Oh! Herzlichen Glückwunsch! Alles Gute!",
+      "● Danke! Am Abend feiern wir im Garten. Kommst du?"
+     ],
+     "a": "▪ Hallo Mia! Heute ist doch der fünfte Juni, oder? ● Ja, genau. Heute habe ich Geburtstag. ▪ Oh! Herzlichen Glückwunsch! Alles Gute! ● Danke! Am Abend feiern wir im Garten. Kommst du?",
+     "gw": {
+      "uz": "Sana yoki yangilik aytiladi → tabrik (<b>Herzlichen Glückwunsch!</b>) → rahmat. Istak haqida: <b>Was würdest du gern …?</b> → <b>Ich würde gern …</b>. Misol: <b>▪ Ich habe heute Geburtstag! ● Alles Gute!</b>",
+      "ru": "Называют дату или новость → поздравление (<b>Herzlichen Glückwunsch!</b>) → благодарность. О желаниях: <b>Was würdest du gern …?</b> → <b>Ich würde gern …</b>. Пример: <b>▪ Ich habe heute Geburtstag! ● Alles Gute!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Morgen ist ein Feiertag. Was würdest du gern machen?",
+      "● Ich würde gern ein Picknick am See machen. Und du?",
+      "▪ Ich würde lieber zu Hause bleiben und faulenzen.",
+      "● Na gut. Dann gehe ich mit Paul."
+     ],
+     "a": "▪ Morgen ist ein Feiertag. Was würdest du gern machen? ● Ich würde gern ein Picknick am See machen. Und du? ▪ Ich würde lieber zu Hause bleiben und faulenzen. ● Na gut. Dann gehe ich mit Paul."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Heute habe ich Geburtstag.<br>● Alles ___ zum Geburtstag! → Alles <b>Gute</b> zum Geburtstag!",
+     "q": "Fest · herzlich · bestanden · Glückwunsch",
+     "s": "▪ Leon, was ist los? Ist heute ein Glückstag?\n● Ja! Ich habe heute die Prüfung ___!\n▪ Wow, herzlichen ___! Ich gratuliere dir ganz ___.\n● Danke. Am Samstag feiern wir ein ___. Kommst du?",
+     "a": [
+      [
+       "bestanden"
+      ],
+      [
+       "Glückwunsch"
+      ],
+      [
+       "herzlich"
+      ],
+      [
+       "Fest"
+      ]
+     ],
+     "gw": {
+      "uz": "Tabrik iboralari tayyor shaklda: <b>Herzlichen …</b>, <b>Alles Gute …</b>. Perfektda Partizip oxirida; <b>am …sten</b> — eng ko‘p. Misol: <b>Alles Gute zum Geburtstag!</b>",
+      "ru": "Поздравления — готовые фразы: <b>Herzlichen …</b>, <b>Alles Gute …</b>. В Perfekt Partizip в конце; <b>am …sten</b> — больше всего. Пример: <b>Alles Gute zum Geburtstag!</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "wunderbar · Führerschein · mag · liebsten",
+     "s": "▪ Welcher Tag ist für dich wichtig, Jonas?\n● Der zwölfte Mai. Da habe ich den ___ gemacht.\n▪ Und welches Fest magst du am ___?\n● Von allen Festen ___ ich Silvester am liebsten. Das Fest finde ich ___.",
+     "a": [
+      [
+       "Führerschein"
+      ],
+      [
+       "liebsten"
+      ],
+      [
+       "mag"
+      ],
+      [
+       "wunderbar"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Heute ist der 25. Dezember. Sie sagen: ___ → ✓ <b>Frohe Weihnachten!</b>",
+     "q": "Heute ist der 1. Januar. Sie sagen: ___",
+     "o": [
+      "Frohes neues Jahr!",
+      "Frohe Ostern!",
+      "Alles Gute zum Geburtstag!"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Sanaga yoki voqeaga mos tabrikni tanlang: har bir bayramning o‘z iborasi bor; muvaffaqiyat uchun — umumiy tabrik. Misol: <b>Am 25. Dezember → Frohe Weihnachten!</b>",
+      "ru": "Выберите поздравление по дате или событию: у каждого праздника своя фраза; за успех — общее поздравление. Пример: <b>Am 25. Dezember → Frohe Weihnachten!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Carla hat die Prüfung bestanden. Sie sagen: ___",
+     "o": [
+      "Frohe Weihnachten!",
+      "Herzlichen Glückwunsch!",
+      "Schönen Feiertag!"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Herr Yilmaz hat heute Geburtstag. Sie sagen: ___",
+     "o": [
+      "Frohes neues Jahr!",
+      "Frohe Ostern!",
+      "Alles Gute zum Geburtstag!"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Morgen ist ein Feiertag. Ihre Kollegin geht nach Hause. Sie sagen: ___",
+     "o": [
+      "Schönen Feiertag!",
+      "Herzlichen Glückwunsch!",
+      "Frohe Weihnachten!"
+     ],
+     "a": 0
+    },
+    {
+     "t": "cat",
+     "h": "Gratulieren oder Wunsch? Ordnen Sie zu.",
+     "bsp": "Frohe Weihnachten! → <b>gratulieren</b>",
+     "c": [
+      "🎉 gratulieren",
+      "💭 Wunsch äußern"
+     ],
+     "i": [
+      [
+       "Herzlichen Glückwunsch!",
+       0
+      ],
+      [
+       "Ich würde gern ans Meer fahren.",
+       1
+      ],
+      [
+       "Frohe Ostern!",
+       0
+      ],
+      [
+       "Ich würde lieber zu Hause bleiben.",
+       1
+      ],
+      [
+       "Alles Gute zum Geburtstag!",
+       0
+      ],
+      [
+       "Was würdest du gern machen?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Tabrik — boshqa odamga (<b>Herzlichen Glückwunsch!</b>, <b>Frohe …!</b>). Istak — o‘zingiz haqingizda: <b>Ich würde gern …</b>. Misol: <b>Ich würde gern tanzen.</b> → Wunsch äußern.",
+      "ru": "Поздравление — другому (<b>Herzlichen Glückwunsch!</b>, <b>Frohe …!</b>). Желание — о себе: <b>Ich würde gern …</b>. Пример: <b>Ich würde gern tanzen.</b> → Wunsch äußern."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,198 @@
+{
+ "title": "Lektion 11 · Kommunikation",
+ "sub": "Wünsche äußern · über Reisen sprechen · eine Statistik beschreiben",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Nein, noch nie. | ▪ Möchtest du gern mal hin? | ▪ Warst du schon mal in Berlin?<br>→ <b>▪ Warst du schon mal in Berlin?<br>● Nein, noch nie.<br>▪ Möchtest du gern mal hin?</b>",
+     "w": [
+      "▪ Hast du schon mal in einer Hütte übernachtet?",
+      "● Nein, noch nie. Aber ich würde es gern mal machen.",
+      "▪ Dann komm doch im Sommer mit! Wir fahren in die Berge.",
+      "● Super, das wäre toll!"
+     ],
+     "a": "▪ Hast du schon mal in einer Hütte übernachtet? ● Nein, noch nie. Aber ich würde es gern mal machen. ▪ Dann komm doch im Sommer mit! Wir fahren in die Berge. ● Super, das wäre toll!",
+     "gw": {
+      "uz": "Tartib: tajriba haqida savol → javob va istak → taklif → reaksiya. <b>schon mal</b> savoliga javob <b>Ja, schon oft</b> yoki <b>Nein, noch nie</b>. Misol: <b>Bist du schon mal geflogen? – Nein, noch nie.</b>",
+      "ru": "Порядок: вопрос об опыте → ответ и желание → предложение → реакция. На <b>schon mal</b> отвечают <b>Ja, schon oft</b> или <b>Nein, noch nie</b>. Пример: <b>Bist du schon mal geflogen? – Nein, noch nie.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Schau mal, ein Foto vom Strand!",
+      "● Oh, da wäre ich auch gern dabei!",
+      "▪ Ich auch. Ich hätte so gern mal Urlaub.",
+      "● Dann fahren wir doch zusammen ans Meer!"
+     ],
+     "a": "▪ Schau mal, ein Foto vom Strand! ● Oh, da wäre ich auch gern dabei! ▪ Ich auch. Ich hätte so gern mal Urlaub. ● Dann fahren wir doch zusammen ans Meer!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *schon mal*, *wäre*, *hätte*, *lieber*, *liebsten*.",
+     "bsp": "▪ ___ du gern mal in einer Hütte schlafen?<br>● Ja, sehr gern! → <b>Würdest</b>",
+     "s": "▪ Warst du ___ in Wien?\n● Nein, noch nie. Aber da ___ ich gern mal!\n▪ Ich auch. Ich ___ so gern mal eine Auszeit!",
+     "a": [
+      [
+       "schon mal"
+      ],
+      [
+       "wäre"
+      ],
+      [
+       "hätte"
+      ]
+     ],
+     "gw": {
+      "uz": "Istak Konjunktiv II bilan: joy yoki holat — <b>wäre</b>, narsa — <b>hätte</b>, harakat — <b>würde + Infinitiv</b>. Afzallik: <b>gern → lieber (als) → am liebsten</b>. Tajriba so‘rash — <b>schon mal</b>. Misol: <b>Ich hätte gern einen Hund.</b>",
+      "ru": "Желание — Konjunktiv II: место или состояние — <b>wäre</b>, вещь — <b>hätte</b>, действие — <b>würde + инфинитив</b>. Предпочтение: <b>gern → lieber (als) → am liebsten</b>. Об опыте — <b>schon mal</b>. Пример: <b>Ich hätte gern einen Hund.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *schon mal*, *wäre*, *hätte*, *lieber*, *liebsten*.",
+     "s": "▪ Bist du ___ in den Bergen gewandert?\n● Ja, schon oft! Und du?\n▪ Nein. Ich wäre ___ am Meer als in den Bergen.\n● Und wo wärst du jetzt am ___?\n▪ Am Strand in Italien!",
+     "a": [
+      [
+       "schon mal"
+      ],
+      [
+       "lieber"
+      ],
+      [
+       "liebsten"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Wunsch, Vorliebe oder Statistik? Ordnen Sie zu.",
+     "bsp": "Ich wäre gern am Meer. → <b>Wunsch</b>",
+     "c": [
+      "Wunsch (gern)",
+      "Vorliebe (lieber / am liebsten)",
+      "Statistik"
+     ],
+     "i": [
+      [
+       "Ich hätte jetzt so gern ein Eis!",
+       0
+      ],
+      [
+       "Ich wäre lieber am Meer als in den Bergen.",
+       1
+      ],
+      [
+       "Etwa die Hälfte wandert gern.",
+       2
+      ],
+      [
+       "Am liebsten hätte ich einen ganzen Monat frei.",
+       1
+      ],
+      [
+       "Da wäre ich auch gern dabei!",
+       0
+      ],
+      [
+       "Nur wenige machen im Urlaub Sport.",
+       2
+      ]
+     ],
+     "gw": {
+      "uz": "Afzallikda taqqoslash bor: <b>lieber … als</b>, <b>am liebsten</b>. Istakda faqat <b>gern</b> (+ wäre/hätte/würde). Statistika — odamlar ulushi: <b>viele, wenige, Prozent</b>. Misol: <b>Ich würde gern tanzen.</b> → Wunsch.",
+      "ru": "В предпочтении есть сравнение: <b>lieber … als</b>, <b>am liebsten</b>. В желании — только <b>gern</b> (+ wäre/hätte/würde). Статистика — доля людей: <b>viele, wenige, Prozent</b>. Пример: <b>Ich würde gern tanzen.</b> → Wunsch."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihre Freundin zeigt ein Foto aus den Bergen. Sie möchten auch dort sein. → <b>Da wäre ich jetzt auch gern mit dabei!</b>",
+     "q": "Sie haben sehr viel Arbeit und sind müde. Was sagen Sie?",
+     "o": [
+      "Ich hätte jetzt so gern eine Auszeit!",
+      "Würdest du gern mal in einer Hütte schlafen?",
+      "Etwa die Hälfte wandert gern."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyat maqsadini aniqlang: istak bildirish, tajriba so‘rash yoki statistika haqida gapirish. Tajriba so‘rash — <b>schon mal</b> + Perfekt. Foizni so‘zga aylantirib solishtiring. Misol: <b>Hast du schon mal Sushi gegessen?</b>",
+      "ru": "Определите цель: выразить желание, спросить об опыте или рассказать статистику. Вопрос об опыте — <b>schon mal</b> + Perfekt. Проценты переведите в слова и сравните. Пример: <b>Hast du schon mal Sushi gegessen?</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie fragen Ihren Freund nach seinen Reisen. Was sagen Sie?",
+     "o": [
+      "Ich wäre lieber zu Hause.",
+      "Bist du schon mal mit dem Schiff gefahren?",
+      "Die meisten fahren gern ans Meer."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie sprechen über eine Statistik: 49 Prozent machen gern Urlaub am Meer. Was sagen Sie?",
+     "o": [
+      "Nur wenige machen gern Urlaub am Meer.",
+      "Fast alle machen gern Urlaub am Meer.",
+      "Etwa die Hälfte macht gern Urlaub am Meer."
+     ],
+     "a": 2
+    },
+    {
+     "t": "cat",
+     "h": "Wie viel Prozent? Ordnen Sie zu.",
+     "bsp": "80 % → <b>die meisten</b>",
+     "c": [
+      "fast alle",
+      "etwa die Hälfte",
+      "nur wenige"
+     ],
+     "i": [
+      [
+       "95 %",
+       0
+      ],
+      [
+       "48 %",
+       1
+      ],
+      [
+       "7 %",
+       2
+      ],
+      [
+       "53 %",
+       1
+      ],
+      [
+       "12 %",
+       2
+      ],
+      [
+       "98 %",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Foizni taxminiy so‘zga aylantiring: ≈ 90–100 % → <b>fast alle</b>; ≈ 45–55 % → <b>etwa die Hälfte</b>; ≈ 5–15 % → <b>nur wenige</b>. Misol: <b>92 % → fast alle</b>, <b>10 % → nur wenige</b>.",
+      "ru": "Переведите процент в приблизительное слово: ≈ 90–100 % → <b>fast alle</b>; ≈ 45–55 % → <b>etwa die Hälfte</b>; ≈ 5–15 % → <b>nur wenige</b>. Пример: <b>92 % → fast alle</b>, <b>10 % → nur wenige</b>."
+     }
+    }
+   ]
+  }
+ ]
+}

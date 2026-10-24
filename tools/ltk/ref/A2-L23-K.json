@@ -1,0 +1,178 @@
+{
+ "title": "Lektion 23 · Kommunikation",
+ "sub": "über eine Biografie sprechen · eine Biografie schreiben",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Am 1. Mai 1965. | ▪ Und nach der Schule? | ▪ Wann ist dein Vater geboren?<br>→ <b>▪ Wann ist dein Vater geboren?<br>● Am 1. Mai 1965.<br>▪ Und nach der Schule?</b>",
+     "w": [
+      "▪ Und danach? Wann ist sie gestorben?",
+      "● Sie ist am 12. März 1948 geboren.",
+      "▪ Und was hat sie nach der Schule gemacht?",
+      "● 2019, mit 71 Jahren.",
+      "▪ Wann ist deine Oma geboren?",
+      "● Sie hat in Taschkent studiert und dann als Lehrerin gearbeitet."
+     ],
+     "a": "▪ Wann ist deine Oma geboren? ● Sie ist am 12. März 1948 geboren. ▪ Und was hat sie nach der Schule gemacht? ● Sie hat in Taschkent studiert und dann als Lehrerin gearbeitet. ▪ Und danach? Wann ist sie gestorben? ● 2019, mit 71 Jahren.",
+     "gw": {
+      "uz": "Tarjimai hol xronologiyasi: tug‘ilish → maktab/o‘qish → ish → keyingi voqealar → vafot. Har javob savolga mos: <b>Wann?</b> → sana, <b>Was?</b> → voqea. Misol: <b>Wann ist er geboren? – 1960.</b>",
+      "ru": "Хронология биографии: рождение → школа/учёба → работа → дальнейшие события → смерть. Ответ соответствует вопросу: <b>Wann?</b> → дата, <b>Was?</b> → событие. Пример: <b>Wann ist er geboren? – 1960.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Und was hat sie nach dem Studium gemacht?",
+      "● Da hat sie nach vielen Jahren am Theater ihren ersten Film gemacht.",
+      "▪ Weißt du, wann Carla Ruiz geboren ist?",
+      "● Sie hat als Schauspielerin am Theater in Wien gearbeitet.",
+      "▪ Was ist 1995 passiert?",
+      "● Ja, sie ist am 4. Juli 1960 geboren."
+     ],
+     "a": "▪ Weißt du, wann Carla Ruiz geboren ist? ● Ja, sie ist am 4. Juli 1960 geboren. ▪ Und was hat sie nach dem Studium gemacht? ● Sie hat als Schauspielerin am Theater in Wien gearbeitet. ▪ Was ist 1995 passiert? ● Da hat sie nach vielen Jahren am Theater ihren ersten Film gemacht."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *geboren*, *gemacht*, *passiert*, *gestorben*.",
+     "bsp": "▪ Wo hat dein Vater ___?<br>● In Taschkent, an der Uni. → <b>studiert</b>",
+     "s": "▪ Wann ist dein Opa ___?\n● Am 2. Mai 1938.\n▪ Was hat er nach dem Studium ___?\n● Er hat als Arzt in Samarkand gearbeitet.\n▪ Und was ist 1970 ___?\n● Da hat er seine eigene Praxis aufgemacht.\n▪ Wann ist er ___?\n● 2012, mit 74 Jahren.",
+     "a": [
+      [
+       "geboren"
+      ],
+      [
+       "gemacht"
+      ],
+      [
+       "passiert"
+      ],
+      [
+       "gestorben"
+      ]
+     ],
+     "gw": {
+      "uz": "Og‘zaki biografiyada Perfekt: <b>sein</b> bilan — holat o‘zgarishi va voqealar (<b>ist umgezogen</b>), <b>haben</b> bilan — boshqa harakatlar (<b>hat gearbeitet</b>). Avval yordamchi fe’lni ko‘ring, keyin ma’noni. Misol: <b>Wann ist er umgezogen?</b>",
+      "ru": "В устной биографии — Perfekt: с <b>sein</b> — изменение состояния и события (<b>ist umgezogen</b>), с <b>haben</b> — прочие действия (<b>hat gearbeitet</b>). Сначала смотрите на вспомогательный глагол, потом на смысл. Пример: <b>Wann ist er umgezogen?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Biografie: *Welt*, *Nach*, *als*, *Mit*, *später*, *starb*.",
+     "bsp": "1975 ___ sie in Wien einen Lehrer. → <b>heiratete</b>",
+     "s": "Lukas Fischer kam am 8. Mai 1931 in Zürich zur ___.\n___ der Schule studierte er in Berlin.\nDanach arbeitete er zehn Jahre ___ Lehrer.\n___ 40 Jahren gründete er eine eigene Schule.\nZwei Jahre ___ hatte die Schule schon 300 Schüler.\nLukas Fischer ___ mit 89 Jahren in Zürich.",
+     "a": [
+      [
+       "Welt"
+      ],
+      [
+       "Nach"
+      ],
+      [
+       "als"
+      ],
+      [
+       "Mit"
+      ],
+      [
+       "später"
+      ],
+      [
+       "starb"
+      ]
+     ],
+     "gw": {
+      "uz": "Yozma biografiyada Präteritum: <b>leben → lebte</b>, <b>gehen → ging</b>. Har bo‘shliq yonidagi so‘zga qarang: yosh (<b>Jahren</b>), kasb, vaqt yoki voqea — har biri o‘z predlogi yoki iborasi bilan. Gap boshida bosh harf.",
+      "ru": "В письменной биографии — Präteritum: <b>leben → lebte</b>, <b>gehen → ging</b>. Смотрите на слово рядом с пропуском: возраст (<b>Jahren</b>), профессия, время или событие — у каждого свой предлог или выражение. В начале предложения — заглавная буква."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Über eine Biografie sprechen oder eine Biografie schreiben? Ordnen Sie zu.",
+     "bsp": "Wann ist sie geboren? → <b>🗣️ sprechen</b>",
+     "c": [
+      "🗣️ sprechen",
+      "✍️ schreiben"
+     ],
+     "i": [
+      [
+       "Er kam 1950 in Wien zur Welt.",
+       1
+      ],
+      [
+       "Was hat sie nach dem Studium gemacht?",
+       0
+      ],
+      [
+       "Sie starb mit 80 Jahren in Berlin.",
+       1
+      ],
+      [
+       "Wann ist er gestorben?",
+       0
+      ],
+      [
+       "Nach dem Studium arbeitete er als Arzt.",
+       1
+      ],
+      [
+       "Was ist 1975 passiert?",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Og‘zaki nutqda — Perfekt va savollar; yozma tarjimai holda — Präteritum va kitobiy iboralar. Misol: <b>Er hat in Wien gewohnt.</b> → sprechen; <b>Er wohnte in Wien.</b> → schreiben.",
+      "ru": "В устной речи — Perfekt и вопросы; в письменной биографии — Präteritum и книжные выражения. Пример: <b>Er hat in Wien gewohnt.</b> → sprechen; <b>Er wohnte in Wien.</b> → schreiben."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Sie möchten den Geburtstag von Herrn Yilmaz wissen. → <b>Wann ist Herr Yilmaz geboren?</b>",
+     "q": "Sie möchten wissen, was Ihr Opa nach der Schule gemacht hat. Sie fragen:",
+     "o": [
+      "Wann ist er gestorben?",
+      "Was hat er nach der Schule gemacht?",
+      "Wann ist er geboren?"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Avval aniqlang: savol berasizmi yoki yozasizmi? Savol so‘zi so‘ralayotgan ma’lumotga mos bo‘lsin: sana → <b>Wann</b>, voqea yoki ish → <b>Was</b>. Yozma matnda — Präteritum. Misol: <b>Wo hat sie studiert?</b>",
+      "ru": "Сначала определите: вы спрашиваете или пишете? Вопросительное слово соответствует информации: дата → <b>Wann</b>, событие или дело → <b>Was</b>. В письменном тексте — Präteritum. Пример: <b>Wo hat sie studiert?</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie schreiben eine Biografie. Ein Schauspieler ist 2020 mit 81 Jahren in Berlin gestorben. Sie schreiben:",
+     "o": [
+      "Er starb mit 81 Jahren in Berlin.",
+      "Er kam mit 81 Jahren in Berlin zur Welt.",
+      "Wann ist er in Berlin gestorben?"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie möchten wissen, was im Jahr 1990 im Leben von Frau Keller passiert ist. Sie fragen:",
+     "o": [
+      "Was hat sie von 1990 bis 2000 gemacht?",
+      "Wann ist sie geboren?",
+      "Was ist 1990 passiert?"
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}

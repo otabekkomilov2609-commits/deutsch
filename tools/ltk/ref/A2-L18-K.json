@@ -1,0 +1,201 @@
+{
+ "title": "Lektion 18 · Kommunikation",
+ "sub": "Mediengewohnheiten beschreiben · ungenaue Angaben machen",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Nur zweimal? | ● Ich würde sagen, zweimal pro Woche. | ▪ Wie oft postest du Fotos?<br>→ <b>▪ Wie oft postest du Fotos?<br>● Ich würde sagen, zweimal pro Woche.<br>▪ Nur zweimal?</b>",
+     "w": [
+      "▪ So viel? Und wann chattest du?",
+      "▪ Sag mal, wie lange chattest du eigentlich pro Tag?",
+      "● Nein, das kommt eigentlich nie vor.",
+      "● Hm, ich würde sagen, zwischen zwei und drei Stunden.",
+      "▪ Und schaltest du das Handy manchmal aus?",
+      "● Normalerweise am Abend. Aber es kommt auch vor, dass ich in der Pause chatte."
+     ],
+     "a": "▪ Sag mal, wie lange chattest du eigentlich pro Tag? ● Hm, ich würde sagen, zwischen zwei und drei Stunden. ▪ So viel? Und wann chattest du? ● Normalerweise am Abend. Aber es kommt auch vor, dass ich in der Pause chatte. ▪ Und schaltest du das Handy manchmal aus? ● Nein, das kommt eigentlich nie vor.",
+     "gw": {
+      "uz": "Tartib: chastota yoki vaqt haqida savol → taxminiy javob → hayrat yoki yangi savol → javob. Satrlar aralash — <b>Sag mal</b> yoki muammo bilan boshlangan gapni toping. Misol: <b>Wie oft …? – Ungefähr dreimal. – So oft?</b>",
+      "ru": "Порядок: вопрос о частоте или времени → примерный ответ → удивление или новый вопрос → ответ. Реплики перемешаны — найдите начало с <b>Sag mal</b> или с проблемы. Пример: <b>Wie oft …? – Ungefähr dreimal. – So oft?</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "● Wie oft hast du denn heute schon aufs Handy geschaut?",
+      "● Hast du das Handy in der Nacht nicht aufgeladen?",
+      "● Siehst du? Das ist viel zu oft!",
+      "▪ Mensch, das nervt! Mein Akku ist schon wieder leer.",
+      "▪ Hm, ich schätze, ungefähr 50-mal.",
+      "▪ Doch. Trotzdem ist er jetzt schon leer."
+     ],
+     "a": "▪ Mensch, das nervt! Mein Akku ist schon wieder leer. ● Hast du das Handy in der Nacht nicht aufgeladen? ▪ Doch. Trotzdem ist er jetzt schon leer. ● Wie oft hast du denn heute schon aufs Handy geschaut? ▪ Hm, ich schätze, ungefähr 50-mal. ● Siehst du? Das ist viel zu oft!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *Normalerweise*, *vor*, *schätze*, *zwischen*, *wenn*, *nie*.",
+     "bsp": "▪ Wie lange surfst du pro Tag im Internet?<br>● ___ zwei Stunden. → <b>Ungefähr</b>",
+     "s": "▪ Postest du oft Fotos?\n● ___ poste ich nur im Urlaub Fotos.\n▪ Und sonst nie?\n● Doch, es kommt auch ___, dass ich mein Essen poste.\n▪ Und wie viele Fotos postest du im Urlaub?\n● Ich ___, ungefähr fünf pro Tag.",
+     "a": [
+      [
+       "Normalerweise"
+      ],
+      [
+       "vor"
+      ],
+      [
+       "schätze"
+      ]
+     ],
+     "gw": {
+      "uz": "Aniq bilmasangiz — taxmin iboralari (<b>ungefähr</b>, <b>etwa</b>, <b>vielleicht so</b>); odatda vaqt so‘zi gap boshida, fe’l ikkinchi o‘rinda. <b>wenn</b>-gapda fe’l oxirida. Misol: <b>Meistens esse ich zu Hause.</b>",
+      "ru": "Если точно не знаете — выражения оценки (<b>ungefähr</b>, <b>etwa</b>, <b>vielleicht so</b>); у привычки слово времени в начале, глагол на втором месте. В <b>wenn</b>-предложении глагол в конце. Пример: <b>Meistens esse ich zu Hause.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *Normalerweise*, *vor*, *schätze*, *zwischen*, *wenn*, *nie*.",
+     "s": "▪ Wie viele Nachrichten bekommst du pro Tag?\n● Puh, ___ 30 und 50.\n▪ Und antwortest du sofort?\n● Ja, immer ___ eine Nachricht kommt, schaue ich aufs Handy.\n▪ Und in der Nacht?\n● Nein, das kommt eigentlich ___ vor.",
+     "a": [
+      [
+       "zwischen"
+      ],
+      [
+       "wenn"
+      ],
+      [
+       "nie"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Wie oft? Ordnen Sie zu.",
+     "bsp": "Immer wenn ich im Bus sitze, chatte ich. → <b>🔁 oft</b>",
+     "c": [
+      "🔁 oft",
+      "🔀 manchmal",
+      "🚫 nie"
+     ],
+     "i": [
+      [
+       "Öfter als 100-mal pro Tag.",
+       0
+      ],
+      [
+       "Es kommt auch vor, dass ich offline bin.",
+       1
+      ],
+      [
+       "Das kommt eigentlich nie vor.",
+       2
+      ],
+      [
+       "Normalerweise jeden Abend.",
+       0
+      ],
+      [
+       "Das habe ich noch nie gemacht.",
+       2
+      ],
+      [
+       "Das mache ich nicht oft, aber es kommt vor.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Chastotani so‘z beradi: <b>immer, jeden …, oft</b> → oft; <b>manchmal, ab und zu</b>, «bo‘lib turadi» → manchmal; <b>nie, noch nie</b> → nie. Misol: <b>Ab und zu schaue ich Videos.</b> → manchmal.",
+      "ru": "Частоту передаёт слово: <b>immer, jeden …, oft</b> → oft; <b>manchmal, ab und zu</b>, «бывает» → manchmal; <b>nie, noch nie</b> → nie. Пример: <b>Ab und zu schaue ich Videos.</b> → manchmal."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Gewohnheiten beschreiben oder ungenaue Angaben machen? Ordnen Sie zu.",
+     "bsp": "Normalerweise … → <b>📱 Gewohnheiten beschreiben</b>",
+     "c": [
+      "📱 Gewohnheiten beschreiben",
+      "🤔 ungenaue Angaben machen"
+     ],
+     "i": [
+      [
+       "Das kommt eigentlich nie vor.",
+       0
+      ],
+      [
+       "Ich schätze, dass …",
+       1
+      ],
+      [
+       "Immer wenn …",
+       0
+      ],
+      [
+       "Zwischen … und …",
+       1
+      ],
+      [
+       "Es kommt vor, dass …",
+       0
+      ],
+      [
+       "Vielleicht so …",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Odat — qanchalik tez-tez qilinadi (<b>meistens</b>, <b>selten</b>). Noaniq ma’lumot — son yoki vaqtni taxmin qilish (<b>ungefähr</b>, <b>etwa</b>). Misol: <b>Meistens …</b> → Gewohnheit; <b>Etwa zwei Stunden.</b> → ungenau.",
+      "ru": "Привычка — как часто что-то делают (<b>meistens</b>, <b>selten</b>). Неточные данные — примерное число или время (<b>ungefähr</b>, <b>etwa</b>). Пример: <b>Meistens …</b> → Gewohnheit; <b>Etwa zwei Stunden.</b> → ungenau."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihr Freund fragt: Wie lange bist du online? Sie wissen es nicht genau. → <b>Vielleicht so drei Stunden.</b>",
+     "q": "Ihr Handy hat schon wieder kein Netz. Sie sind sauer.",
+     "o": [
+      "Es kommt auch vor, dass ich offline bin.",
+      "Bestimmt 20-mal pro Tag.",
+      "Mensch, das nervt!"
+     ],
+     "a": 2,
+     "gw": {
+      "uz": "Vaziyatni aniqlang: g‘azab (undov), odat haqida javob yoki taxminiy son? Raqam aniq bo‘lmasa — taxmin iborasi kerak. Misol: <b>Ich weiß nicht genau, vielleicht zehn.</b>",
+      "ru": "Определите ситуацию: раздражение (восклицание), ответ о привычке или примерное число? Если число неточное — нужно выражение оценки. Пример: <b>Ich weiß nicht genau, vielleicht zehn.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Freundin fragt: Liest du in der Nacht E-Mails? Das machen Sie nie.",
+     "o": [
+      "Das kommt eigentlich nie vor.",
+      "Immer wenn ich Zeit habe.",
+      "Ich würde sagen, ungefähr zweimal."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Freund fragt: Wie viele Apps hast du? Sie wissen die Zahl nicht genau.",
+     "o": [
+      "Das kommt eigentlich nie vor.",
+      "Ich schätze, zwischen 30 und 40.",
+      "Mensch, das nervt!"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

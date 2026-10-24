@@ -1,0 +1,242 @@
+{
+ "title": "Lektion 15 · Kommunikation",
+ "sub": "Wohnungen beschreiben · Wohnungen bewerten",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Sehr schön. | ▪ Und das Bad? | ▪ Wie findest du die Wohnung? | ● Zu klein. → <b>▪ Wie findest du die Wohnung?<br>● Sehr schön.<br>▪ Und das Bad?<br>● Zu klein.</b>",
+     "w": [
+      "▪ Guten Tag, ich bin Leon. Ist das Zimmer noch frei?",
+      "● Ja. Kommen Sie, hier vorn ist das Zimmer.",
+      "▪ Oh, es ist sehr gemütlich. Wie viel kostet es?",
+      "● 350 Euro plus Nebenkosten."
+     ],
+     "a": "▪ Guten Tag, ich bin Leon. Ist das Zimmer noch frei? ● Ja. Kommen Sie, hier vorn ist das Zimmer. ▪ Oh, es ist sehr gemütlich. Wie viel kostet es? ● 350 Euro plus Nebenkosten.",
+     "gw": {
+      "uz": "Kvartira ko‘rish: salom va savol (<b>frei?</b>) → ko‘rsatish → baho. Egalik: <b>ihr</b> — ayolniki, <b>sein</b> — erkakniki. Misol: <b>▪ Ist die Wohnung noch frei? ● Ja, kommen Sie!</b>",
+      "ru": "Осмотр квартиры: приветствие и вопрос (<b>frei?</b>) → показ → оценка. Притяжательные: <b>ihr</b> — её, <b>sein</b> — его. Пример: <b>▪ Ist die Wohnung noch frei? ● Ja, kommen Sie!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Wie findest du Elifs Wohnung?",
+      "● Ihre Wohnung mag ich sehr gern. Sie ist groß und hell.",
+      "▪ Und ihre Möbel?",
+      "● Die sind nicht so modern, aber gemütlich."
+     ],
+     "a": "▪ Wie findest du Elifs Wohnung? ● Ihre Wohnung mag ich sehr gern. Sie ist groß und hell. ▪ Und ihre Möbel? ● Die sind nicht so modern, aber gemütlich."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Wie findest du die Küche?<br>● Ich finde sie sehr ___. → sehr <b>gemütlich</b>",
+     "s": "▪ Wie ___ du mein Zimmer?\n● Ich finde es sehr gemütlich. Und der Sessel ist toll.\n▪ Ja, den ___ ich auch sehr gern. Und die Lampe?\n● Die ist ___ nicht modern.\n▪ Ja, die ist schon 20 Jahre ___.",
+     "a": [
+      [
+       "findest"
+      ],
+      [
+       "mag"
+      ],
+      [
+       "überhaupt",
+       "gar"
+      ],
+      [
+       "alt"
+      ]
+     ],
+     "gw": {
+      "uz": "Fikr bildirish: <b>Wie findest du …?</b>, <b>Ich mag …</b>. der-so‘z Akkusativda <b>den</b>, olmoshi ham <b>den</b>. Misol: <b>Den Teppich finde ich schön.</b>",
+      "ru": "Мнение: <b>Wie findest du …?</b>, <b>Ich mag …</b>. Слово с der в Akkusativ — <b>den</b>, местоимение тоже <b>den</b>. Пример: <b>Den Teppich finde ich schön.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Die Wohnung hat vier ___: ein Wohnzimmer, ein Schlafzimmer, ein Kinderzimmer und ein Arbeitszimmer.\n● Und ___ ist die Küche?\n▪ Gleich hier vorne rechts, neben dem Bad. Und ganz hinten ist das Schlafzimmer.\n● Wie viele ___ hat das Schlafzimmer?\n▪ 16. Das ist nicht so groß.\n● Und die Miete?\n▪ 500 Euro plus ___.",
+     "a": [
+      [
+       "Zimmer"
+      ],
+      [
+       "wo"
+      ],
+      [
+       "Quadratmeter"
+      ],
+      [
+       "Nebenkosten"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Beschreiben oder bewerten? Ordnen Sie zu.",
+     "bsp": "Die Wohnung hat drei Zimmer. → <b>beschreiben</b> · Ich finde das Bad zu klein. → <b>bewerten</b>",
+     "c": [
+      "🏠 Wohnung beschreiben",
+      "👍 Wohnung bewerten"
+     ],
+     "i": [
+      [
+       "Die Wohnung hat zwei Zimmer und einen Balkon.",
+       0
+      ],
+      [
+       "Ihren Teppich finde ich hässlich.",
+       1
+      ],
+      [
+       "Vorne links ist die Küche.",
+       0
+      ],
+      [
+       "Das Bad ist überhaupt nicht modern.",
+       1
+      ],
+      [
+       "Gleich neben der Küche ist das Bad.",
+       0
+      ],
+      [
+       "Das Wohnzimmer mag ich sehr gern.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Tasvir — faktlar: nechta xona, nima qayerda (<b>hat, ist vorn</b>). Baho — shaxsiy fikr: <b>finde, mag, gefällt</b>. Misol: <b>Die Küche ist rechts.</b> → beschreiben, <b>Die Küche gefällt mir.</b> → bewerten.",
+      "ru": "Описание — факты: сколько комнат, что где (<b>hat, ist vorn</b>). Оценка — мнение: <b>finde, mag, gefällt</b>. Пример: <b>Die Küche ist rechts.</b> → beschreiben, <b>Die Küche gefällt mir.</b> → bewerten."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "😀 oder 🙁? Ordnen Sie zu.",
+     "bsp": "Das Zimmer ist sehr schön. → <b>😀</b>",
+     "c": [
+      "😀",
+      "🙁"
+     ],
+     "i": [
+      [
+       "Ich finde das Zimmer sehr gemütlich.",
+       0
+      ],
+      [
+       "Die Lampe ist hässlich.",
+       1
+      ],
+      [
+       "Seinen Sessel mag ich nicht so gern.",
+       1
+      ],
+      [
+       "Die Küche ist überhaupt nicht modern.",
+       1
+      ],
+      [
+       "Ihren Balkon finde ich besonders schön.",
+       0
+      ],
+      [
+       "Das Zimmer ist zu klein.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Bahoga qarang: <b>gemütlich, toll, mag sehr</b> — ijobiy; <b>hässlich, nicht so gern</b> — salbiy. Misol: <b>Den Tisch finde ich toll.</b> → 😀",
+      "ru": "Смотрите на оценку: <b>gemütlich, toll, mag sehr</b> — положительно; <b>hässlich, nicht so gern</b> — отрицательно. Пример: <b>Den Tisch finde ich toll.</b> → 😀"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "bsp": "Das Bad ist ganz hinten rechts. → <b>Ganz hinten rechts ist das Bad.</b>",
+     "q": "Die Küche ist vorn rechts. Was sagen Sie?",
+     "o": [
+      "Vorne rechts ist die Küche.",
+      "Die Küche finde ich sehr schön.",
+      "Die Küche ist ganz hinten."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Egalik egasining jinsiga qarab: erkak — <b>sein</b>, ayol — <b>ihr</b>; der-so‘z Akkusativda <b>-en</b> oladi. Mazmunni ham tekshiring: joyni aytyapsizmi yoki baho beryapsizmi? Misol: <b>Leons Lampe → seine Lampe</b>, <b>Elifs Tisch → ihr Tisch</b>.",
+      "ru": "Притяжательное — по полу владельца: мужчина — <b>sein</b>, женщина — <b>ihr</b>; слово с der в Akkusativ получает <b>-en</b>. Проверьте смысл: место или оценка? Пример: <b>Leons Lampe → seine Lampe</b>, <b>Elifs Tisch → ihr Tisch</b>."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Sie finden Noras Sessel sehr schön. Was sagen Sie?",
+     "o": [
+      "Seinen Sessel finde ich sehr schön.",
+      "Ihr Sessel ist ganz hinten.",
+      "Ihren Sessel finde ich sehr schön."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Die Lampe gefällt Ihnen gar nicht. Was sagen Sie?",
+     "o": [
+      "Die Lampe mag ich sehr gern.",
+      "Die Lampe ist überhaupt nicht schön.",
+      "Die Lampe finde ich besonders schön."
+     ],
+     "a": 1
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Hast du einen Balkon? → <b>Mia (du)</b>",
+     "c": [
+      "Mia (du)",
+      "Herr Yilmaz (Sie)"
+     ],
+     "i": [
+      [
+       "Wie findest du meine Küche?",
+       0
+      ],
+      [
+       "Wie finden Sie das Zimmer?",
+       1
+      ],
+      [
+       "Magst du den Sessel?",
+       0
+      ],
+      [
+       "Ist Ihre Wohnung möbliert?",
+       1
+      ],
+      [
+       "Wo ist dein Schlafzimmer?",
+       0
+      ],
+      [
+       "Wohnen Sie im Erdgeschoss?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Fe’l shakliga qarang: <b>findest du, magst du</b> — norasmiy; <b>finden Sie, mögen Sie</b> — rasmiy. Misol: <b>Mögen Sie den Balkon?</b> → Sie.",
+      "ru": "Смотрите на форму глагола: <b>findest du, magst du</b> — неофициально; <b>finden Sie, mögen Sie</b> — официально. Пример: <b>Mögen Sie den Balkon?</b> → Sie."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,208 @@
+{
+ "title": "Lektion 4 · Kommunikation",
+ "sub": "Arbeitsaufträge · positiv / negativ reagieren",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Danke! | ▪ Frau Keller, können Sie bitte die Rechnung bezahlen? | ● Klar, das mache ich.<br>→ <b>▪ Frau Keller, können Sie bitte die Rechnung bezahlen?<br>● Klar, das mache ich.<br>▪ Danke!</b>",
+     "w": [
+      "▪ Herr Yilmaz, wir müssen noch die Einladungen verschicken. Können Sie das bitte übernehmen?",
+      "● Die Einladungen? Kein Problem, das mache ich gern.",
+      "▪ Ach ja, und noch etwas: Die Präsentation brauchen wir am besten bis Montag. Schaffen Sie das?",
+      "● Bis Montag? Das schaffe ich leider nicht. Ich muss noch dringend die Rechnungen bezahlen."
+     ],
+     "a": "▪ Herr Yilmaz, wir müssen noch die Einladungen verschicken. Können Sie das bitte übernehmen? ● Die Einladungen? Kein Problem, das mache ich gern. ▪ Ach ja, und noch etwas: Die Präsentation brauchen wir am besten bis Montag. Schaffen Sie das? ● Bis Montag? Das schaffe ich leider nicht. Ich muss noch dringend die Rechnungen bezahlen.",
+     "gw": {
+      "uz": "Ish suhbati: so‘rov (<b>Können Sie …?</b>) → javob (rozilik yoki rad + sabab) → qo‘shimcha so‘rov → rahmat. Javob ko‘pincha so‘rovdagi narsani takrorlaydi. Misol: <b>Können Sie den Bericht schreiben? – Den Bericht? Klar!</b>",
+      "ru": "Рабочий разговор: просьба (<b>Können Sie …?</b>) → ответ (согласие или отказ + причина) → ещё просьба → спасибо. Ответ часто повторяет предмет просьбы. Пример: <b>Können Sie den Bericht schreiben? – Den Bericht? Klar!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Hallo Tom, hast du kurz Zeit?",
+      "● Ja, klar. Was gibt’s?",
+      "▪ Wir müssen dringend einen Termin mit dem Kunden ausmachen. Kannst du ihn bitte anrufen?",
+      "● Klar, das mache ich. Ich rufe ihn gleich an.",
+      "▪ Super, danke!"
+     ],
+     "a": "▪ Hallo Tom, hast du kurz Zeit? ● Ja, klar. Was gibt’s? ▪ Wir müssen dringend einen Termin mit dem Kunden ausmachen. Kannst du ihn bitte anrufen? ● Klar, das mache ich. Ich rufe ihn gleich an. ▪ Super, danke!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Können Sie bitte den Kunden anrufen?<br>● Klar, das ___ ich. → <b>mache</b>",
+     "s": "▪ Frau Berger, wir brauchen die Präsentation am ___ bis Donnerstag. Schaffen Sie das?\n● Das geht leider ___. Ich muss heute noch zwei Meetings vorbereiten.\n▪ Hm. Und bis Freitag?\n● Ja, kein ___.",
+     "a": [
+      [
+       "besten"
+      ],
+      [
+       "nicht"
+      ],
+      [
+       "Problem"
+      ]
+     ],
+     "gw": {
+      "uz": "Iboralar qat’iy: rad etishda — afsus va sabab, rozilikda — qisqa «ha». Avval javob ijobiy yoki salbiy ekanini aniqlang, keyin iborani to‘liq eslang. Misol: <b>Tut mir leid, heute habe ich keine Zeit.</b>",
+      "ru": "Выражения устойчивые: при отказе — сожаление и причина, при согласии — короткое «да». Сначала определите, ответ положительный или отрицательный, затем вспомните фразу целиком. Пример: <b>Tut mir leid, heute habe ich keine Zeit.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Herr Schulz, können Sie bitte den Vertrag ___? Er ist auf Ihrem Tisch.\n● Klar, das mache ich.\n▪ Ach ja, und noch ___: Können Sie auch die Kunden kontaktieren?\n● Das geht ___ nicht. Ich muss heute noch dringend die Rechnungen bezahlen.",
+     "a": [
+      [
+       "unterschreiben"
+      ],
+      [
+       "etwas"
+      ],
+      [
+       "leider"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Positiv oder negativ? Ordnen Sie zu.",
+     "c": [
+      "👍 positiv",
+      "👎 negativ"
+     ],
+     "bsp": "Kein Problem. → <b>👍 positiv</b>",
+     "i": [
+      [
+       "Klar, das mache ich.",
+       0
+      ],
+      [
+       "Das geht leider nicht.",
+       1
+      ],
+      [
+       "Das geht auf jeden Fall.",
+       0
+      ],
+      [
+       "Das schaffe ich nicht.",
+       1
+      ],
+      [
+       "Ich erledige das.",
+       0
+      ],
+      [
+       "Deshalb schaffe ich das heute leider nicht.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Inkor so‘zlariga qarang: <b>nicht</b>, <b>leider</b> bo‘lsa — rad; ularsiz, <b>klar, gern, natürlich</b> bilan — rozilik. Bir xil fe’l ikkala guruhda ham uchrashi mumkin. Misol: <b>Gern, mache ich.</b> → positiv.",
+      "ru": "Ищите отрицание: <b>nicht</b>, <b>leider</b> — отказ; без них, с <b>klar, gern, natürlich</b> — согласие. Один и тот же глагол может быть в обеих группах. Пример: <b>Gern, mache ich.</b> → positiv."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Arbeitsauftrag oder Reaktion? Ordnen Sie zu.",
+     "c": [
+      "Arbeitsauftrag",
+      "Reaktion"
+     ],
+     "bsp": "Können Sie bitte den Kunden anrufen? → <b>Arbeitsauftrag</b>",
+     "i": [
+      [
+       "Können Sie das bitte übernehmen?",
+       0
+      ],
+      [
+       "Kein Problem.",
+       1
+      ],
+      [
+       "Schaffen Sie das bis Freitag?",
+       0
+      ],
+      [
+       "Ich erledige das.",
+       1
+      ],
+      [
+       "Wir brauchen die Einladungen am besten bis Montag.",
+       0
+      ],
+      [
+       "Ja, natürlich. Das schaffen wir schon.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Topshiriq — boshqa odamdan ish so‘rash: savol, <b>bitte</b>, muddat. Reaksiya — topshiriqqa javob: rozilik yoki rad. Misol: <b>Können Sie bitte den Bericht schreiben?</b> → Arbeitsauftrag; <b>Gern, das mache ich sofort.</b> → Reaktion.",
+      "ru": "Поручение — просьба к другому: вопрос, <b>bitte</b>, срок. Реакция — ответ на поручение: согласие или отказ. Пример: <b>Können Sie bitte den Bericht schreiben?</b> → Arbeitsauftrag; <b>Gern, das mache ich sofort.</b> → Reaktion."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Wählen Sie.",
+     "bsp": "Sie haben Zeit. Ihr Chef fragt: Schaffen Sie das? → <b>Ja, kein Problem.</b>",
+     "q": "Ihre Chefin hat eine Aufgabe für Sie. Sie haben wenig Zeit, aber Sie machen es.",
+     "o": [
+      "Das schaffe ich nicht.",
+      "Können Sie das bitte übernehmen?",
+      "Ja, natürlich. Das schaffen wir schon irgendwie."
+     ],
+     "a": 2,
+     "gw": {
+      "uz": "Avval rolingizni aniqlang: topshiriq berasizmi yoki olasizmi? Olsangiz va bajarsangiz — rozilik; vaqtingiz bo‘lmasa — rad va sabab. Misol: <b>Leider nicht, morgen bin ich nicht im Büro.</b>",
+      "ru": "Сначала определите свою роль: вы даёте поручение или получаете? Получаете и выполняете — согласие; нет времени — отказ с причиной. Пример: <b>Leider nicht, morgen bin ich nicht im Büro.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Wählen Sie.",
+     "q": "Sie haben eine Aufgabe für Ihren Kollegen.",
+     "o": [
+      "Können Sie das bitte übernehmen?",
+      "Klar, das mache ich.",
+      "Das geht leider nicht."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Wählen Sie.",
+     "q": "Sie haben heute zu viel Arbeit.",
+     "o": [
+      "Das geht auf jeden Fall.",
+      "Ich erledige das.",
+      "Das schaffe ich leider nicht. Ich muss noch dringend die Rechnungen bezahlen."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Wählen Sie.",
+     "q": "Sie brauchen den Vertrag bis Montag.",
+     "o": [
+      "Wir brauchen den Vertrag am besten bis Montag.",
+      "Das schaffe ich nicht.",
+      "Kein Problem."
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

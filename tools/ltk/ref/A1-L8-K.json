@@ -1,0 +1,216 @@
+{
+ "title": "Lektion 8 · Kommunikation",
+ "sub": "sich verabreden · Wie spät ist es?",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Gute Idee! | ▪ Hast du am Freitag Zeit? | ● Ja, klar. | ▪ Gehen wir ins Kino? → <b>▪ Hast du am Freitag Zeit?<br>● Ja, klar.<br>▪ Gehen wir ins Kino?<br>● Gute Idee!</b>",
+     "w": [
+      "▪ Hast du Lust auf Theater?",
+      "● Ja, gern. Wann denn?",
+      "▪ Am Samstag um halb acht?",
+      "● Okay. Bis dann!"
+     ],
+     "a": "▪ Hast du Lust auf Theater? ● Ja, gern. Wann denn? ▪ Am Samstag um halb acht? ● Okay. Bis dann!",
+     "gw": {
+      "uz": "Tartib: taklif → javob (rozi/rad) → vaqt kelishish → xayrlashuv. Rad etilsa, odatda sabab yoki boshqa vaqt aytiladi. Misol: <b>▪ Gehen wir schwimmen? ● Gute Idee!</b>",
+      "ru": "Порядок: предложение → ответ (да/нет) → договорённость о времени → прощание. При отказе обычно называют причину или другое время. Пример: <b>▪ Gehen wir schwimmen? ● Gute Idee!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Können wir mal wieder ins Museum gehen?",
+      "● Gute Idee! Wann hast du Zeit?",
+      "▪ Am Sonntag am Nachmittag.",
+      "● Tut mir leid, am Sonntag kann ich leider nicht.",
+      "▪ Und am Montag?",
+      "● Ja, da kann ich."
+     ],
+     "a": "▪ Können wir mal wieder ins Museum gehen? ● Gute Idee! Wann hast du Zeit? ▪ Am Sonntag am Nachmittag. ● Tut mir leid, am Sonntag kann ich leider nicht. ▪ Und am Montag? ● Ja, da kann ich."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Gehen wir ins Museum?<br>● Ja, ___! → Ja, <b>gern</b>!",
+     "s": "▪ Hast du am Freitag ___?\n● Ja, klar. Was machen wir?\n▪ Gehen wir ins Konzert?\n● Gute ___! Wann ___?\n▪ Um acht.\n● Okay, bis ___!",
+     "a": [
+      [
+       "Zeit"
+      ],
+      [
+       "Idee"
+      ],
+      [
+       "denn"
+      ],
+      [
+       "dann"
+      ]
+     ],
+     "gw": {
+      "uz": "Taklif, rozilik va rad etish uchun tayyor iboralar bor — ularni butunligicha eslang. Bo‘shliqdan oldingi va keyingi so‘zga qarang. Misol: <b>Gehen wir ins Café? – Ja, gern!</b>",
+      "ru": "Для предложения, согласия и отказа есть готовые фразы — вспоминайте их целиком. Смотрите на слова до и после пропуска. Пример: <b>Gehen wir ins Café? – Ja, gern!</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Lust ___ Kino?\n● Tut mir ___, ich kann leider nicht. Am Abend habe ich keine ___.\n▪ Und am Samstag?\n● Das ___ ich noch nicht.",
+     "a": [
+      [
+       "auf"
+      ],
+      [
+       "leid"
+      ],
+      [
+       "Zeit"
+      ],
+      [
+       "weiß"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Vorschlag oder Antwort? Ordnen Sie zu.",
+     "bsp": "Gehen wir ins Kino? → <b>Vorschlag</b> · Gute Idee! → <b>Antwort</b>",
+     "c": [
+      "Vorschlag / Frage",
+      "Antwort"
+     ],
+     "i": [
+      [
+       "Gehen wir ins Café?",
+       0
+      ],
+      [
+       "Ja, da kann ich.",
+       1
+      ],
+      [
+       "Hast du am Abend Zeit?",
+       0
+      ],
+      [
+       "Das weiß ich noch nicht.",
+       1
+      ],
+      [
+       "Lust auf Konzert?",
+       0
+      ],
+      [
+       "Nein, tut mir leid. Ich kann nicht.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Taklif — odatda savol (<b>Hast du …?</b>, <b>Gehen wir …?</b>); javob — <b>ja/nein</b>, rozilik yoki rad. Misol: <b>Kommst du mit?</b> → Vorschlag, <b>Ja, gern.</b> → Antwort.",
+      "ru": "Предложение — обычно вопрос (<b>Hast du …?</b>, <b>Gehen wir …?</b>); ответ — <b>ja/nein</b>, согласие или отказ. Пример: <b>Kommst du mit?</b> → Vorschlag, <b>Ja, gern.</b> → Antwort."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Ja, Nein oder Vielleicht? Ordnen Sie zu.",
+     "bsp": "Ja, gern. → <b>Ja</b> · Keine Lust. → <b>Nein</b>",
+     "c": [
+      "Ja 🙂",
+      "Nein 🙁",
+      "Vielleicht 🤔"
+     ],
+     "i": [
+      [
+       "Gute Idee!",
+       0
+      ],
+      [
+       "Am Abend habe ich keine Zeit.",
+       1
+      ],
+      [
+       "Ja, klar.",
+       0
+      ],
+      [
+       "Das weiß ich noch nicht.",
+       2
+      ],
+      [
+       "Nein, tut mir leid. Ich kann nicht.",
+       1
+      ],
+      [
+       "Okay, gern.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Javob qanchalik aniq? Rozilik — ijobiy, <b>keine Zeit / nicht</b> — rad, «hali bilmayman» — balki. Misol: <b>Super, gern!</b> → Ja, <b>Keine Lust.</b> → Nein, <b>Mal sehen.</b> → Vielleicht.",
+      "ru": "Насколько ответ определённый? Согласие — да, <b>keine Zeit / nicht</b> — нет, «ещё не знаю» — может быть. Пример: <b>Super, gern!</b> → Ja, <b>Keine Lust.</b> → Nein, <b>Mal sehen.</b> → Vielleicht."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Sie haben eine Idee: Kino! Sie sagen: <b>Gehen wir ins Kino?</b>",
+     "q": "Sie haben keine Zeit. Sie sagen:",
+     "o": [
+      "Ja, da kann ich.",
+      "Tut mir leid, ich kann nicht.",
+      "Wann denn?"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Vaziyatdagi his-tuyg‘uni aniqlang: rozimi, rad etyaptimi yoki hali bilmaydimi? Shunga mos iborani tanlang. Misol: <b>Sie haben Lust → Ja, gern!</b>",
+      "ru": "Определите отношение в ситуации: согласие, отказ или неуверенность? Выберите подходящую фразу. Пример: <b>Sie haben Lust → Ja, gern!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie finden den Vorschlag gut. Sie sagen:",
+     "o": [
+      "Gute Idee!",
+      "Das weiß ich noch nicht.",
+      "Keine Lust."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie wissen es noch nicht. Sie sagen:",
+     "o": [
+      "Ja, klar.",
+      "Bis dann!",
+      "Das weiß ich noch nicht."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Es ist 15:30 Uhr. Elif fragt: Wie spät ist es? Sie sagen:",
+     "o": [
+      "Es ist halb vier.",
+      "Es ist halb drei.",
+      "Es ist Viertel nach drei."
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

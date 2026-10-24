@@ -1555,6 +1555,20 @@ mark.trm.bad sup{color:#C62828}
 .ex-co{display:flex;flex-direction:column;gap:6px}.ex-co .ex-opt{text-align:left}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ex-cm.me.bad span{background:#47201F;color:#F4A5A5}:root:not([data-theme="light"]) .ex-cw{color:#F5D9A0;background:#3A2E14;border-color:#6B5520}:root:not([data-theme="light"]) .ex-cg span.ok{background:#173A27;color:#8FE0B0;border-color:#2E9E5B}}
 :root[data-theme="dark"] .ex-cm.me.bad span{background:#47201F;color:#F4A5A5}:root[data-theme="dark"] .ex-cw{color:#F5D9A0;background:#3A2E14;border-color:#6B5520}:root[data-theme="dark"] .ex-cg span.ok{background:#173A27;color:#8FE0B0;border-color:#2E9E5B}
+/* 💬 Live test · Kommunikation (2026-10-24) */
+.ltk-tag{font-size:13px;font-weight:800;color:var(--blue);margin-bottom:6px}
+.ltk-q{font-size:19px;font-weight:700;line-height:1.45;margin:0 0 14px}
+.ltk-os{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.ltk-o{display:flex;align-items:flex-start;gap:10px;width:100%;text-align:left;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:14px;padding:12px 14px;font:inherit;font-size:16.5px;font-weight:600;line-height:1.4;cursor:pointer;transition:transform .1s,border-color .15s}
+.ltk-o:active{transform:scale(.98)}.ltk-o:hover:not(:disabled){border-color:var(--blue)}
+.ltk-o i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--blue-soft,#e2eafa);color:var(--blue);font-style:normal;font-weight:800;font-size:13px;display:grid;place-items:center;margin-top:-1px}
+.ltk-o:disabled{cursor:default}.ltk-o.off{opacity:.3;text-decoration:line-through}
+.ltk-o.ok{border-color:#2E9E5B;background:#E3F4EA;color:#1d6b3e;animation:ltkPop .35s}.ltk-o.ok i{background:#2E9E5B;color:#fff}
+.ltk-o.bad{border-color:#D64545;background:#FBE9E9;color:#a12b2b;animation:ltshake .45s}.ltk-o.bad i{background:#D64545;color:#fff}
+@keyframes ltkPop{50%{transform:scale(1.03)}}
+.lt-mis li.ltk-m{flex-direction:column;align-items:flex-start;gap:2px}.lt-mis li.ltk-m b{color:#1d6b3e;font-weight:700}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ltk-o.ok{background:#173A27;color:#8FE0B0}:root:not([data-theme="light"]) .ltk-o.bad{background:#47201F;color:#F4A5A5}:root:not([data-theme="light"]) .lt-mis li.ltk-m b{color:#8FE0B0}}
+:root[data-theme="dark"] .ltk-o.ok{background:#173A27;color:#8FE0B0}:root[data-theme="dark"] .ltk-o.bad{background:#47201F;color:#F4A5A5}:root[data-theme="dark"] .lt-mis li.ltk-m b{color:#8FE0B0}
 /* 🧪 Beta — yangi o'quvchi paneli (2026-10-20) */
 .lek.bt .sx{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
 .lek.bt .sx-h{display:flex;align-items:baseline;gap:10px;margin:0 0 8px;flex-wrap:wrap}
@@ -7831,9 +7845,21 @@ function ltFmt(ms){ ms=Math.max(0,ms|0); const s=Math.round(ms/1000); return Mat
 function ltListId(h){ return Object.keys(lernData()).find(k=>chHash(k)===h); }
 function ltPool(c){ const id=ltListId(c.l), D=id&&lernData()[id]; if(!D) return [];
   const seen=new Set(), tr=lrnTrOf(id); return D.it.map((r,i)=>({i,l:r[0],de:r[3],q:r[4],red:r[6]})).filter(x=>{ if(!x.q||x.red||!c.s.includes(x.l)||x.de.length>40||/[…·]/.test(x.de)||LRN_PAIR.test(x.de)||seen.has(x.de)) return false; seen.add(x.de); return true; }).map(x=>{ const t=tr&&tr(x.i); if(t) x.q=t; return x; }); }
-function ltQs(c){ return chShuf(ltPool(c),chRng(c.r)).slice(0,c.n); }
+/* 💬 Live test · Kommunikation (2026-10-24, Otabek: «live testga kommunikatsiya qismini qo'sh — 1 savol nemischa, 4 javob nemischa»).
+   c.k: 0/yo'q — so'z yozish (eski testlar shunday qoladi) · 1 — Kommunikation (vaziyat + 4 variant) · 2 — aralash (yarmi so'z, yarmi Kommunikation).
+   Bank: ltk-data {A1:{"1":[{q,o:[4],a}]…},A2:…,B1:…} — tools/ltk/. */
+let LTKD=null; function ltkData(){ if(!LTKD){ try{ LTKD=JSON.parse(document.getElementById("ltk-data").textContent)||{}; }catch(e){ LTKD={}; } } return LTKD; }
+function ltLvOf(c){ return String(ltListId(c.l)||"").slice(0,2); }
+function ltkPool(c){ const B=ltkData()[ltLvOf(c)]||{}, out=[]; c.s.forEach(n=>(B[n]||[]).forEach((it,j)=>out.push({kom:1,n,j,q:it.q,o:it.o,a:it.a,de:it.o[it.a]}))); return out; }
+function ltkOrd(L,c){ L.forEach((x,i)=>{ if(x.kom) x.ord=chShuf([0,1,2,3],chRng(((c.r|0)+(i+1)*7919+x.n*131+x.j)>>>0)); }); return L; }
+function ltQs(c){ const k=c.k|0; if(!k) return chShuf(ltPool(c),chRng(c.r)).slice(0,c.n);
+  const r=chRng(c.r), K=chShuf(ltkPool(c),r); if(k===1) return ltkOrd(K.slice(0,c.n),c);
+  const W=chShuf(ltPool(c),r), nk0=Math.min(K.length,Math.ceil(c.n/2)), nw=Math.min(W.length,c.n-nk0), nk=Math.min(K.length,c.n-nw);
+  return ltkOrd(chShuf(W.slice(0,nw).concat(K.slice(0,nk)),r),c); }
+function ltAvail(c){ const k=c.k|0; return k===1? ltkPool(c).length : k===2? ltPool(c).length+ltkPool(c).length : ltPool(c).length; }
+function ltUnit(c,n,ru){ return (c.k|0)? (ru?`${n} вопр.`:`${n} ta savol`) : (ru?`${n} слов`:`${n} ta so‘z`); }
 function ltNameOf(k){ try{ const T=lernData()[k]; if(T&&T.title) return T.title; }catch(e){} const m=/^(A\d)-([ab]\d)(\d)-([ru])-(.+?)-Deutsch-(\w+?)(?:-L[\d-]+)?$/.exec(k); if(!m) return k; const L=m[5].replace(/-/g," ").replace(/L(\d+) (\d+)/,"L$1–$2"); return `${m[1]}.${m[3]} · ${L} · Deutsch–${m[4]==="u"?"O‘zbekcha":"Russisch"}`; } /* MATS'da yo'q ro'yxatlar uchun nom */
-function ltTitle(c){ const id0=ltListId(c.l), id=lrnTwinId(id0)||id0, m=byId[id], D=lernData()[id]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); return (m?m.title:ltNameOf(id))+" · "+c.s.map(lab).join(", "); }
+function ltTitle(c){ const id0=ltListId(c.l), id=lrnTwinId(id0)||id0, m=byId[id], D=lernData()[id]; const lab=n=>(D&&D.lab&&D.lab[n])||("L"+n); if((c.k|0)===1) return "💬 Kommunikation "+String(id||"").slice(0,2)+" · "+c.s.map(lab).join(", "); return (m?m.title:ltNameOf(id))+" · "+c.s.map(lab).join(", ")+((c.k|0)===2?" · 🔤+💬":""); }
 function ltLink(code){ return (/github\.io$/.test(location.hostname)||!/claude/.test(location.hostname)&&location.protocol!=="file:" ? location.origin+location.pathname : CH_SITE)+"?lt="+code; }
 function ltSc(v){ v=+v||0; return (Math.round(v*10)/10).toString().replace(".",","); }
 /* O'rin: 1) ko'p ball; 2) teng bo'lsa — o'sha ballga birinchi yetgan (oxirgi to'g'ri javob vaqti, tk). Tez taslim bo'lish ustunlik bermaydi. 2026-10-18 */
@@ -7849,6 +7875,13 @@ const LTUZ={uz:{t:"🎯 Live test", nm:"Ismingiz", nmPh:"Ism va familiya", join:
     bad1:"Ссылка неверная или устарела.", art:"Существительное пишите с артиклем: der / die / das", net0:"⏳ Подключение…", net1:"🟢 Подключено", netBad:"🔴 Нет связи", force:"Всё равно начать", you:"вы", rules:(n,m)=>`${n} слов · пишете только по-немецки${m?` · ${m} мин`:""}`, rules2:"✓ верно с первой попытки = 1 балл · исправили = 0,7 · ≈ почти = 0,5 · ошиблись — попробуйте ещё раз или пропустите (слово вернётся) · 💡 3 подсказки", again:"Слово вернётся позже", help:n=>`💡 Подсказка (${n})`, helpNo:"Подсказок нет", fin:"Завершить тест", left:n=>`Осталось слов: ${n}`, pts:s=>`${s} б.`, errNm:"Напишите имя"}};
 /* Live test: o‘quvchi interfeysi test tilida (uz ro‘yxat → o‘zbekcha, ru → ruscha), sayt tilidan qat’i nazar (2026-10-22) */
 const lz=k=>LTUZ[LTP&&LTP.lang?LTP.lang:(state.lang==="ru"?"ru":"uz")][k];
+function ltLeft(n){ return (LTP.c&&(LTP.c.k|0))? ((LTP.lang||state.lang)==="ru"?`Осталось вопросов: ${n}`:`${n} ta savol qoldi`) : lz("left")(n); }
+function ltRules(c){ const k=c.k|0, n=LTP.qs.length, m=c.tm, ru=(LTP.lang||state.lang)==="ru"; if(!k) return [lz("rules")(n,m),lz("rules2")];
+  const t=ru?(m?` · ${m} мин`:""):(m?` · ${m} daqiqa`:"");
+  if(k===1) return [ru?`${n} вопросов · прочитайте ситуацию и выберите ответ${t}`:`${n} ta savol · vaziyatni o‘qing va mos javobni tanlang${t}`,
+    ru?"✓ верно = 1 балл · ответ выбирается один раз — изменить нельзя · 💡 3 подсказки (убирают 2 неверных ответа)":"✓ to‘g‘ri = 1 ball · javob bir marta tanlanadi — o‘zgartirib bo‘lmaydi · 💡 3 ta yordam (2 ta noto‘g‘ri javobni yashiradi)"];
+  return [ru?`${n} вопросов: слова (пишете по-немецки) + 💬 ситуации (выбираете ответ)${t}`:`${n} ta savol: so‘zlar (nemischa yozasiz) + 💬 vaziyatlar (javob tanlaysiz)${t}`,
+    ru?"Слова: ✓ с первой попытки = 1 · исправили = 0,7 · ≈ почти = 0,5 · 💬 ситуации: ответ выбирается один раз · 💡 3 подсказки":"So‘zlar: ✓ birinchi urinishda = 1 · tuzatib topsangiz = 0,7 · ≈ deyarli = 0,5 · 💬 vaziyatlar: javob bir marta tanlanadi · 💡 3 ta yordam"]; }
 
 /* ---------- O'quvchi tomoni (?lt=) ---------- */
 const LTP={};
@@ -7900,7 +7933,7 @@ function ltpRender(){
   const el=ltpEl(), c=LTP.c;
   if(LTP.st==="join"||LTP.st==="wait"){
     if(LTP.ctl&&LTP.ctl.st==="end"&&LTP.st==="join"){ el.innerHTML=ltpHead()+`<div class="lrn-body"><div class="lrn-card"><h3>${esc(lz("ended"))}</h3></div><div class="lrn-card"><h3>${esc(lz("board"))}</h3><div id="lt-board"></div></div></div>`; ltpBoard(); return; }
-    el.innerHTML=ltpHead()+`<div class="lrn-body"><div class="lrn-card"><h3>${esc(ltTitle(c))}</h3><p class="ch-big">${esc(lz("rules")(LTP.qs.length,c.tm))}</p><p class="ch-net">${esc(lz("rules2"))}</p>
+    el.innerHTML=ltpHead()+`<div class="lrn-body"><div class="lrn-card"><h3>${esc(ltTitle(c))}</h3><p class="ch-big">${esc(ltRules(c)[0])}</p><p class="ch-net">${esc(ltRules(c)[1])}</p>
       ${LTP.st==="join"?`<label class="acc-lb">${esc(lz("nm"))}<input class="ch-in" id="lt-name" maxlength="30" placeholder="${esc(lz("nmPh"))}" value="${esc(LTP.name)}"></label><div class="acc-st err" id="lt-err"></div>
       <button type="button" class="btn primary" data-lt="join">${esc(lz("join"))} →</button>`
       :`<div class="lt-wait"><div class="lt-dots"><i></i><i></i><i></i></div><b>${esc(lz("wait"))}</b><span id="lt-joined"></span></div><button type="button" class="btn" data-lt="force" id="lt-force" hidden>${esc(lz("force"))}</button>`}
@@ -7919,10 +7952,11 @@ function ltpMask(de){ const v=lrnNorm(String(de).split(/\s\/\s/)[0].replace(/\([
   const m=v.match(/^((?:der|die|das) )?(.*)$/); return (m[1]||"")+m[2].split(" ").map(w=>[...w].map((ch,i)=>i===0||/[^A-Za-zÄÖÜäöüß]/.test(ch)?ch:"_").join(" ")).join("   "); }
 function ltpQ(){
   if(!LTP.q.length){ ltpFinish(); return; }
+  if(LTP.qs[LTP.q[0]]&&LTP.qs[LTP.q[0]].kom){ ltpQK(); return; }
   const k=LTP.q[0], x=LTP.qs[k], n=LTP.qs.length, noun=/^(der|die|das) /.test(x.de)||/\/ (der|die|das) /.test(x.de), sc=ltpScore(); LTP.lock=false;
   ltpEl().innerHTML=ltpHead(`<span class="ch-time" id="lt-time"></span>`)+`<div class="lrn-body">
     <div class="ch-bar"><i style="width:${sc/n*100}%;background:var(--green)"></i></div>
-    <div class="ch-top"><span class="ch-score">✓ ${ltSc(sc)} / ${n} · ${esc(lz("left")(LTP.q.length))}${(LTP.sr|0)>=3?` <b class="lt-fire">🔥×${LTP.sr}</b>`:""}</span><span class="ch-rank" id="lt-place"></span></div>
+    <div class="ch-top"><span class="ch-score">✓ ${ltSc(sc)} / ${n} · ${esc(ltLeft(LTP.q.length))}${(LTP.sr|0)>=3?` <b class="lt-fire">🔥×${LTP.sr}</b>`:""}</span><span class="ch-rank" id="lt-place"></span></div>
     <div class="lrn-card"><div class="ch-q">${esc(x.q)}</div><div class="lrn-ask">${esc(lz("write"))}${LTP.best[k]&&LTP.best[k]<1?` · <span class="lt-half">≈ ${ltSc(LTP.best[k])}</span>`:""}</div>
       ${LTP.hw[k]?`<div class="lt-mask" lang="de">${esc(ltpMask(x.de))}</div>`:""}
       <form class="lrn-wr" id="lt-wr" autocomplete="off"><div class="lrn-inw" id="lt-inw"><input id="lt-in" lang="de" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${esc(lz("ph"))}"><div class="lrn-ov" id="lt-ov" aria-hidden="true"></div></div>
@@ -7939,13 +7973,36 @@ function ltpQ(){
   const inp=document.getElementById("lt-in"); if(inp) inp.addEventListener("input",()=>{ clearTimeout(LTP.autoT); gmMarkClear("lt"); const kk=LTP.q[0], xx=LTP.qs[kk];
     i0rm(inp); LTP.autoT=setTimeout(()=>{ if(LTP.st!=="play"||LTP.lock||LTP.q[0]!==kk||!inp.isConnected) return; if(lrnJudge(inp.value,xx).ok) ltpAnswer(false); },350); });
 }
+/* 💬 Kommunikation savoli: vaziyat + 4 variant (nemischa), bitta urinish */
+function ltpQK(){ const k=LTP.q[0], x=LTP.qs[k], n=LTP.qs.length, sc=ltpScore(), hid=Array.isArray(LTP.hw[k])?LTP.hw[k]:[], ru=(LTP.lang||state.lang)==="ru"; LTP.lock=false;
+  ltpEl().innerHTML=ltpHead(`<span class="ch-time" id="lt-time"></span>`)+`<div class="lrn-body">
+    <div class="ch-bar"><i style="width:${sc/n*100}%;background:var(--green)"></i></div>
+    <div class="ch-top"><span class="ch-score">✓ ${ltSc(sc)} / ${n} · ${esc(ltLeft(LTP.q.length))}${(LTP.sr|0)>=3?` <b class="lt-fire">🔥×${LTP.sr}</b>`:""}</span><span class="ch-rank" id="lt-place"></span></div>
+    <div class="lrn-card ltk"><div class="ltk-tag">💬 Kommunikation · ${ru?"Что вы скажете?":"Nima deysiz?"}</div><div class="ltk-q" lang="de">${esc(x.q)}</div>
+      <div class="ltk-os">${x.ord.map((oi,p)=>`<button type="button" class="ltk-o${hid.includes(oi)?" off":""}" data-lt="opt" data-k="${oi}" lang="de"${hid.includes(oi)?" disabled":""}><i>${"ABCD"[p]}</i><span>${esc(x.o[oi])}</span></button>`).join("")}</div>
+      <div class="lt-kh"><button type="button" class="lt-help" data-lt="help"${LTP.hl>0&&!hid.length?"":" disabled"}>${esc(LTP.hl>0?lz("help")(LTP.hl):lz("helpNo"))}</button></div>
+      <div class="lt-nav"><button type="button" class="lrn-link" data-lt="back"${LTP.q.length>1?"":" disabled"}>${esc(lz("back"))}</button><button type="button" class="lrn-link lt-dn" data-lt="dunno">${esc(lz("dunno"))}</button><button type="button" class="lrn-link" data-lt="skip"${LTP.q.length>1?"":" disabled"}>${esc(lz("skip"))}</button></div>
+      <div class="lrn-fb" id="lt-fb"></div></div>
+    <div id="lt-board"></div>
+    <button type="button" class="lrn-link lt-fin" data-lt="fin">${esc(lz("fin"))}</button></div>`;
+  ltpTick(); ltpBoard(); }
+function ltkMark(x,oi){ document.querySelectorAll("#ltp .ltk-o").forEach(b=>{ b.disabled=true; const j=+b.dataset.k; if(j===x.a) b.classList.add("ok"); else if(j===oi) b.classList.add("bad"); }); }
+function ltpPick(oi){ if(LTP.st!=="play"||LTP.lock) return; const k=LTP.q[0], x=LTP.qs[k]; if(!x||!x.kom) return; const ok=oi===x.a, ru=(LTP.lang||state.lang)==="ru";
+  LTP.lock=true; LTP.a++; LTP.last[k]=x.o[oi]; ltkMark(x,oi);
+  if(ok){ LTP.best[k]=1; LTP.sr=(LTP.sr|0)+1; } else { LTP.sr=0; LTP.tr=LTP.tr||{}; LTP.tr[k]=1; }
+  LTP.q.shift(); LTP.ok=ltpScore(); ltpSave(); ltpPub(true);
+  const fb=document.getElementById("lt-fb"); if(fb){ fb.className="lrn-fb "+(ok?"ok":"bad"); fb.innerHTML=ok?`<div class="lrn-v">✓ ${esc(lz("ok"))} +1${LTP.sr>=3?` · <span class="lt-fire">🔥 ×${LTP.sr}</span>`:""}</div>`:`<div class="lrn-v">✗ ${ru?"Неверно · правильный ответ — зелёный":"Xato · to‘g‘ri javob — yashil"}</div>`; }
+  if(!ok&&navigator.vibrate) try{ navigator.vibrate([40,40,40]); }catch(err){}
+  setTimeout(()=>{ if(LTP.st==="play") ltpQ(); }, ok?900:2400); }
 /* «Bilmayman»: to'g'ri javob ko'rsatiladi, so'z 0 ball bilan o'tadi (qaytmaydi). «← Orqaga»: oxirgi o'tkazib yuborilgan so'zga qaytadi. */
 function ltpDunno(){ if(LTP.st!=="play"||LTP.lock) return; const k=LTP.q[0], x=LTP.qs[k], i=document.getElementById("lt-in");
   LTP.lock=true; LTP.sr=0; clearTimeout(LTP.autoT); if(i){ LTP.last[k]=i.value; i.disabled=true; } LTP.a++; LTP.q.shift(); LTP.ok=ltpScore(); ltpSave(); ltpPub(false);
-  const fb=document.getElementById("lt-fb"); if(fb){ fb.className="lrn-fb bad"; fb.innerHTML=`<div class="lrn-v">${esc(lz("corr"))}</div><div class="lrn-ans"><b>${esc(x.full||x.de)}</b></div>`; }
-  setTimeout(()=>{ if(LTP.st==="play") ltpQ(); }, 1800); }
+  const fb=document.getElementById("lt-fb"); if(x.kom){ ltkMark(x,-1); if(fb){ fb.className="lrn-fb bad"; fb.innerHTML=`<div class="lrn-v">${esc(lz("corr"))} ✓</div>`; } }
+  else if(fb){ fb.className="lrn-fb bad"; fb.innerHTML=`<div class="lrn-v">${esc(lz("corr"))}</div><div class="lrn-ans"><b>${esc(x.full||x.de)}</b></div>`; }
+  setTimeout(()=>{ if(LTP.st==="play") ltpQ(); }, x.kom?2400:1800); }
 function ltpBack(){ if(LTP.st!=="play"||LTP.lock||LTP.q.length<2) return; clearTimeout(LTP.autoT); LTP.q.unshift(LTP.q.pop()); ltpSave(); ltpQ(); }
 function ltpHelp(){ if(LTP.st!=="play"||LTP.lock||LTP.hl<=0) return; const k=LTP.q[0]; if(LTP.hw[k]) return;
+  if(LTP.qs[k]&&LTP.qs[k].kom){ const x=LTP.qs[k]; LTP.hl--; LTP.hw[k]=chShuf([0,1,2,3].filter(i=>i!==x.a),Math.random).slice(0,2); ltpSave(); ltpQK(); return; }
   LTP.hl--; LTP.hw[k]=1; ltpSave(); const v=document.getElementById("lt-in"), val=v?v.value:""; ltpQ(); const i=document.getElementById("lt-in"); if(i){ i.value=val; } }
 function i0rm(i){ if(i) i.classList.remove("lt-bad","lt-near"); }
 function ltpAnswer(skip){
@@ -7963,7 +8020,7 @@ function ltpAnswer(skip){
     if(fb){ if(j.art){ fb.className="lrn-fb bad"; fb.innerHTML=`<div class="lrn-v">✗ ${ru?"Неверный артикль":"Artikel xato"} · +0,5</div><div class="lrn-note">${ru?"Не":"Emas"} <s>${esc(j.art.bad)}</s> — ${ru?"проверьте артикль":"artiklni tekshiring"}</div>`; }
       else if(near){ fb.className="lrn-fb near"; fb.innerHTML=`<div class="lrn-v">≈ ${esc(lz("near"))} +0,5</div>${j.note?`<div class="lrn-note">${esc(j.note)}</div>`:""}`; }
       else { fb.className="lrn-fb bad"; fb.innerHTML=`<div class="lrn-v">✗ ${ru?"Неверно — попробуйте ещё раз":"Xato — yana urinib ko‘ring"}</div>`; } }
-    const sc=document.querySelector(".ch-score"); if(sc) sc.textContent=`✓ ${ltSc(LTP.ok)} / ${LTP.qs.length} · ${lz("left")(LTP.q.length)}`;
+    const sc=document.querySelector(".ch-score"); if(sc) sc.textContent=`✓ ${ltSc(LTP.ok)} / ${LTP.qs.length} · ${ltLeft(LTP.q.length)}`;
     if(i){ i.classList.remove("lt-shake","lt-near","lt-bad"); void i.offsetWidth; i.classList.add("lt-shake"); i.classList.add(near&&!j.art?"lt-near":"lt-bad"); i.focus(); if(!gmMark("lt",v,x.de,j)) i.select(); }
     if(navigator.vibrate) try{ navigator.vibrate(near?60:[40,40,40]); }catch(err){}
     return; }
@@ -7979,10 +8036,10 @@ function ltpDone(){
   const n=LTP.qs.length, miss=LTP.qs.map((x,k)=>({x,k})).filter(o=>(LTP.best[o.k]||0)<1);
   ltpEl().innerHTML=ltpHead()+`<div class="lrn-body"><div class="lrn-card lrn-end"><div class="big">🏁</div><h3>${esc(lz("done"))}</h3>
     <p class="ch-big"><b>✓ ${ltSc(LTP.ok)} / ${n}</b> · ⏱ ${ltFmt(LTP.ms)} · 💡 ${3-(LTP.hl??3)}/3</p><p class="ch-big" id="lt-place"></p></div>
-    ${miss.length?`<div class="lrn-card"><h3>${esc(lz("mist"))} (${miss.length})</h3><ul class="lt-mis">${miss.map(o=>`<li><span>${esc(o.x.q)}</span><b>${artCol(o.x.de)}</b>${LTP.last[o.k]?`<s>${esc(LTP.last[o.k])}</s>`:""}${LTP.best[o.k]&&LTP.best[o.k]<1?`<em>≈ ${ltSc(LTP.best[o.k])}</em>`:""}</li>`).join("")}</ul></div>`:""}
+    ${miss.length?`<div class="lrn-card"><h3>${esc((LTP.c.k|0)?((LTP.lang||state.lang)==="ru"?"Ошибки":"Xatolar"):lz("mist"))} (${miss.length})</h3><ul class="lt-mis">${miss.map(o=>`<li${o.x.kom?' class="ltk-m"':""}><span${o.x.kom?' lang="de"':""}>${esc(o.x.q)}</span><b>${o.x.kom?"✓ "+esc(o.x.de):artCol(o.x.de)}</b>${LTP.last[o.k]?`<s>${esc(LTP.last[o.k])}</s>`:""}${LTP.best[o.k]&&LTP.best[o.k]<1?`<em>≈ ${ltSc(LTP.best[o.k])}</em>`:""}</li>`).join("")}</ul></div>`:""}
     ${(()=>{ const ru=(LTP.lang||state.lang)==="ru", P=Object.assign({},LTP.players); P[LTP.me]={n:LTP.name,ok:LTP.ok,ms:LTP.ms,tk:LTP.tk||0,st:"done"}; const R=ltRank(P), pl=R.findIndex(p=>p.id===LTP.me)+1;
       const txt=ru?`🎯 Live test · ${ltTitle(LTP.c)}\nМой результат: ${ltSc(LTP.ok)} из ${n}${pl?` · ${pl}-е место из ${R.length}`:""} 🏁`:`🎯 Live test · ${ltTitle(LTP.c)}\nNatijam: ${ltSc(LTP.ok)} / ${n}${pl?` · ${pl}-o‘rin (${R.length} kishidan)`:""} 🏁`;
-      return gssHTML("lt",txt,miss.map(o=>({de:o.x.de,q:o.x.q})),"Live test",{kind:"🎯 Live test",title:ltTitle(LTP.c),name:LTP.name,ok:LTP.ok,okS:ltSc(LTP.ok),n,place:pl,tot:R.length}); })()}
+      return gssHTML("lt",txt,miss.filter(o=>!o.x.kom).map(o=>({de:o.x.de,q:o.x.q})),"Live test",{kind:"🎯 Live test",title:ltTitle(LTP.c),name:LTP.name,ok:LTP.ok,okS:ltSc(LTP.ok),n,place:pl,tot:R.length}); })()}
     <div class="lrn-card"><h3>${esc(lz("board"))}</h3><div id="lt-board"></div></div></div>`;
   ltpBoard();
 }
@@ -8245,27 +8302,28 @@ function tpLt(){
   const D=lernData(); TP.ltLv=TP.ltLv||(TABS[state.tab]&&/^(A[12]|B1)$/.test(TABS[state.tab].lvl)?TABS[state.tab].lvl:"A2"); TP.ltLang=TP.ltLang||(state.lang==="ru"?"ru":"uz");
   TP.lid=lrnAllId(TP.ltLv,TP.ltLang); const L=D[TP.lid]; TP.ltH=TP.ltH||1;
   const les=Object.keys(L.les).map(Number).filter(n=>TP.ltH===2?n>12:n<=12); [...TP.sel].forEach(n=>{ if(!les.includes(n)) TP.sel.delete(n); }); if(!TP.sel.size&&les.length) TP.sel.add(les[0]);
-  const lab=n=>(L.lab&&L.lab[n])||("L"+n), c={l:chHash(TP.lid),s:[...TP.sel],n:TP.n,r:1}, avail=ltPool(c).length;
+  TP.ltK=TP.ltK|0; const lab=n=>(L.lab&&L.lab[n])||("L"+n), c={l:chHash(TP.lid),s:[...TP.sel],n:TP.n,r:1,k:TP.ltK}, avail=ltAvail(c), aw=ltPool(c).length, ak=ltkPool(c).length;
   const games=(()=>{ try{ return JSON.parse(localStorage.getItem("tch:games")||"[]"); }catch(e){ return []; } })();
   document.getElementById("tp-body").innerHTML=`<div class="lrn-card"><h3>Yangi live test</h3>
     <div class="tp-row"><span>Daraja</span><div class="tp-seg">${["A1","A2","B1"].map(v=>`<button type="button" data-tplt="lv" data-v="${v}" aria-pressed="${TP.ltLv===v}">${v}</button>`).join("")}</div></div>
     <div class="tp-row"><span>Til</span><div class="tp-seg">${[["uz","O‘zbekcha"],["ru","Русский"]].map(([v,t])=>`<button type="button" data-tplt="lang" data-v="${v}" aria-pressed="${TP.ltLang===v}">${t}</button>`).join("")}</div></div>
     <div class="tp-row"><span>Lektionlar</span><div class="tp-seg">${[1,2].map(h=>`<button type="button" data-tplt="h" data-v="${h}" aria-pressed="${TP.ltH===h}">${TP.ltLv}.${h} · L${h===1?"1–12":"13–24"}</button>`).join("")}</div></div>
     <div class="lrn-les">${les.map(n=>`<button type="button" class="lrn-chip" aria-pressed="${TP.sel.has(n)}" data-tples="${n}"><b>${esc(lab(n))}</b><span>${esc(L.les[n])}</span></button>`).join("")}</div>
-    <div class="tp-row"><span>So‘zlar soni</span><div class="tp-seg">${[10,20,30,40].map(v=>`<button type="button" data-tpn="${v}" aria-pressed="${TP.n===v}">${v}</button>`).join("")}</div></div>
+    <div class="tp-row"><span>Turi</span><div class="tp-seg">${[[0,"🔤 So‘zlar"],[1,"💬 Kommunikation"],[2,"🔀 Aralash"]].map(([v,t])=>`<button type="button" data-tplt="k" data-v="${v}" aria-pressed="${TP.ltK===v}">${t}</button>`).join("")}</div></div>
+    <div class="tp-row"><span>${TP.ltK?"Savollar soni":"So‘zlar soni"}</span><div class="tp-seg">${[10,20,30,40].map(v=>`<button type="button" data-tpn="${v}" aria-pressed="${TP.n===v}">${v}</button>`).join("")}</div></div>
     <div class="tp-row"><span>Vaqt</span><div class="tp-seg">${[[0,"Cheksiz"],[5,"5 daq"],[10,"10 daq"],[15,"15 daq"]].map(([v,t])=>`<button type="button" data-tptm="${v}" aria-pressed="${TP.tm===v}">${t}</button>`).join("")}</div></div>
-    <p class="lrn-count">${avail} ta so‘z mavjud · testda ${Math.min(avail,TP.n)} ta · o‘quvchi faqat nemischa yozadi</p>
+    <p class="lrn-count">${TP.ltK===1?`${ak} ta vaziyat mavjud · testda ${Math.min(avail,TP.n)} ta · savol va 4 javob nemischa, o‘quvchi bittasini tanlaydi`:TP.ltK===2?`${aw} ta so‘z + ${ak} ta vaziyat mavjud · testda ${Math.min(avail,TP.n)} ta (yarmi 💬 Kommunikation)`:`${avail} ta so‘z mavjud · testda ${Math.min(avail,TP.n)} ta · o‘quvchi faqat nemischa yozadi`}</p>
     <button type="button" class="btn primary" data-tp="create"${avail?"":" disabled"}>🎯 Testni yaratish va doskaga chiqarish</button></div>
     ${tpLtReps().length?`<div class="lrn-card"><h3>💾 Saqlangan natijalar</h3>${tpLtReps().slice(0,15).map((R,i)=>`<details class="tp-rep"><summary><b>${esc(R.title)}</b> <small>${new Date(R.t).toLocaleString()} · ${R.pl.length} o‘quvchi</small></summary>
-      <ol class="tp-rep-l">${R.pl.map(p=>`<li>${esc(p[0])} <b>${ltSc(p[1])}/${R.n}</b></li>`).join("")}</ol>${R.mw.length?`<h4>❌ Ko‘p xato qilingan so‘zlar</h4><ul class="lt-mis">${R.mw.map(m=>`<li><span>${esc(m[1])}</span><b>${artCol(m[0])}</b><em>👥 ${m[2]}</em></li>`).join("")}</ul>`:""}
+      <ol class="tp-rep-l">${R.pl.map(p=>`<li>${esc(p[0])} <b>${ltSc(p[1])}/${R.n}</b></li>`).join("")}</ol>${R.mw.length?`<h4>❌ Ko‘p xato qilingan ${R.k?"savollar":"so‘zlar"}</h4><ul class="lt-mis">${R.mw.map(m=>`<li><span>${esc(m[1])}</span><b>${artCol(m[0])}</b><em>👥 ${m[2]}</em></li>`).join("")}</ul>`:""}
       <div class="ch-btns"><button type="button" class="btn" data-tpltr="share" data-i="${i}">📤 Telegram’ga</button><button type="button" class="btn" data-tpltr="del" data-i="${i}">🗑</button></div></details>`).join("")}</div>`:""}
     ${games.length?`<div class="lrn-card"><h3>Oldingi testlar</h3><ul class="tp-games">${games.slice(0,6).map(g=>`<li><button type="button" class="lrn-link" data-tpgame="${esc(g.code)}">${esc(g.title)}</button><small>${new Date(g.t).toLocaleString()}</small></li>`).join("")}</ul></div>`:""}`;
 }
 function tpCreate(){
-  const c={v:1,l:chHash(TP.lid),s:[...TP.sel].sort((a,b)=>a-b),n:TP.n,tm:TP.tm,r:Math.floor(Math.random()*2147483647),t:Date.now()};
+  const c={v:1,l:chHash(TP.lid),s:[...TP.sel].sort((a,b)=>a-b),n:TP.n,tm:TP.tm,r:Math.floor(Math.random()*2147483647),t:Date.now()}; if(TP.ltK) c.k=TP.ltK;
   const code=chB64e(JSON.stringify(c));
   let g=[]; try{ g=JSON.parse(localStorage.getItem("tch:games")||"[]"); }catch(e){}
-  g.unshift({code,title:ltTitle(c)+" · "+Math.min(c.n,ltPool(c).length)+" so‘z",t:Date.now()}); try{ localStorage.setItem("tch:games",JSON.stringify(g.slice(0,20))); }catch(e){}
+  g.unshift({code,title:ltTitle(c)+" · "+ltUnit(c,Math.min(c.n,ltAvail(c))),t:Date.now()}); try{ localStorage.setItem("tch:games",JSON.stringify(g.slice(0,20))); }catch(e){}
   tpBoardOpen(code,true);
 }
 /* --- Doska (proyektor uchun) --- */
@@ -8287,7 +8345,7 @@ function tpBoard(){
       <div class="tp-ctl"><div class="tp-st ${st}">${st==="lobby"?"⏳ Kutish — o‘quvchilar qo‘shilmoqda":st==="run"?"🔥 Musobaqa ketmoqda!":"🏁 Musobaqa tugadi"}</div>
         <div class="tp-clock" id="tp-clock"></div>
         ${st==="lobby"?`<button type="button" class="btn primary tp-big" data-tp="start">▶ Boshlash</button>`:st==="run"?`<button type="button" class="btn tp-big tp-stop" data-tp="stop">⏹ Tugatish</button>`:`<button type="button" class="btn primary" data-tp="again">🎯 Yangi test</button>`}</div>
-      <p class="ch-net">${esc(B.n+" ta so‘z")}${B.c.tm?` · ${B.c.tm} daqiqa`:" · vaqt cheklanmagan"}</p>
+      <p class="ch-net">${esc(ltUnit(B.c,B.n))}${B.c.tm?` · ${B.c.tm} daqiqa`:" · vaqt cheklanmagan"}</p>
       <div class="tp-feed" id="tp-feed"></div></aside>
     <section class="tp-lb"><div class="tp-lbh"><h2>${st==="end"?"🏆 G‘oliblar":st==="run"?"🔥 Jonli reyting":"👋 Qo‘shilganlar"}</h2><span id="tp-cnt"></span></div>
       <div id="tp-pod"></div><div class="tp-toast" id="tp-toast"></div><ol id="tp-rows" class="tp-rows"></ol>
@@ -8298,10 +8356,10 @@ function tpBoard(){
 }
 /* Live test yakuni: eng ko'p xato qilingan so'zlar, ulashish va saqlash (2026-10-22, Otabek) */
 function tpLtMiss(B){ const qs=ltQs(B.c), C={}; Object.values(B.players).forEach(p=>(p.mw||[]).forEach(k=>{ if(qs[k]) C[k]=(C[k]||0)+1; })); return Object.entries(C).sort((a,b)=>b[1]-a[1]).map(([k,c])=>[qs[k].de,qs[k].q,c]); }
-function tpLtRep(B){ return {t:Date.now(),title:ltTitle(B.c),n:B.n,pl:ltRank(B.players).map(p=>[p.n+(p.cx?` 👀×${p.cx}`:""),p.ok,p.ms]),mw:tpLtMiss(B).slice(0,20)}; }
+function tpLtRep(B){ return {k:B.c.k|0,t:Date.now(),title:ltTitle(B.c),n:B.n,pl:ltRank(B.players).map(p=>[p.n+(p.cx?` 👀×${p.cx}`:""),p.ok,p.ms]),mw:tpLtMiss(B).slice(0,20)}; }
 function tpLtImg(R){ return {kind:"🎯 Live test",title:R.title,rows:R.pl.map(p=>[p[0],`${ltSc(p[1])}/${R.n}`]),miss:R.mw.map(m=>`${m[0]} — ${m[1]}`)}; }
-function tpLtTxt(R){ const md=["🥇","🥈","🥉"]; return `🎯 Live test · ${R.title}\n${new Date(R.t).toLocaleDateString("uz-UZ")} · ${R.pl.length} o‘quvchi\n\n🏆 Natijalar:\n${R.pl.slice(0,10).map((p,i)=>`${md[i]||(i+1)+"."} ${p[0]} — ${ltSc(p[1])}/${R.n}`).join("\n")}${R.mw.length?`\n\n❌ Ko‘p xato qilingan so‘zlar:\n${R.mw.slice(0,8).map(m=>`• ${m[0]} — ${m[1]} (${m[2]})`).join("\n")}`:""}`; }
-function tpLtMwDraw(){ const B=TP.b, el=document.getElementById("tp-ltmw"); if(!B||!el) return; const M=tpLtMiss(B).slice(0,10); el.innerHTML=M.length?`<h3 class="tp-mwh">❌ Ko‘p xato qilingan so‘zlar</h3><ul class="lt-mis">${M.map(m=>`<li><span>${esc(m[1])}</span><b>${artCol(m[0])}</b><em>👥 ${m[2]}</em></li>`).join("")}</ul>`:""; }
+function tpLtTxt(R){ const md=["🥇","🥈","🥉"]; return `🎯 Live test · ${R.title}\n${new Date(R.t).toLocaleDateString("uz-UZ")} · ${R.pl.length} o‘quvchi\n\n🏆 Natijalar:\n${R.pl.slice(0,10).map((p,i)=>`${md[i]||(i+1)+"."} ${p[0]} — ${ltSc(p[1])}/${R.n}`).join("\n")}${R.mw.length?`\n\n❌ Ko‘p xato qilingan ${R.k?"savollar":"so‘zlar"}:\n${R.mw.slice(0,8).map(m=>`• ${m[0]} — ${m[1]} (${m[2]})`).join("\n")}`:""}`; }
+function tpLtMwDraw(){ const B=TP.b, el=document.getElementById("tp-ltmw"); if(!B||!el) return; const M=tpLtMiss(B).slice(0,10); el.innerHTML=M.length?`<h3 class="tp-mwh">❌ Ko‘p xato qilingan ${(B.c.k|0)?"savollar":"so‘zlar"}</h3><ul class="lt-mis">${M.map(m=>`<li><span>${esc(m[1])}</span><b>${artCol(m[0])}</b><em>👥 ${m[2]}</em></li>`).join("")}</ul>`:""; }
 function tpLtReps(){ return kgLS("tch:ltreps",[]); }
 function tpFeed(txt){ const f=document.getElementById("tp-feed"), B=TP.b; if(!B) return; B.feed=[txt,...(B.feed||[])].slice(0,6);
   if(f) f.innerHTML=B.feed.map((t,i)=>`<div class="${i===0?"new":""}">${t}</div>`).join(""); }
@@ -9980,12 +10038,12 @@ document.addEventListener("click",e=>{
   if(e.target.closest("#tch-btn")){ tpOpen(); return; }
   const k=e.target.closest("[data-ltk]"); if(k){ const i=document.getElementById("lt-in"); if(i&&!i.disabled){ const p=i.selectionStart??i.value.length; i.value=i.value.slice(0,p)+k.dataset.ltk+i.value.slice(i.selectionEnd??p); i.focus(); i.setSelectionRange(p+1,p+1); } return; }
   const l=e.target.closest("[data-lt]"); if(l){ const a=l.dataset.lt;
-    if(a==="close") ltpClose(); else if(a==="join") ltpJoin(); else if(a==="skip") ltpAnswer(true); else if(a==="back") ltpBack(); else if(a==="dunno") ltpDunno(); else if(a==="force"){ ltpStart(); } else if(a==="help") ltpHelp(); else if(a==="fin"){ ltpFinish(); } return; }
+    if(a==="close") ltpClose(); else if(a==="join") ltpJoin(); else if(a==="skip") ltpAnswer(true); else if(a==="back") ltpBack(); else if(a==="dunno") ltpDunno(); else if(a==="force"){ ltpStart(); } else if(a==="help") ltpHelp(); else if(a==="opt") ltpPick(+l.dataset.k); else if(a==="fin"){ ltpFinish(); } return; }
   const vq=e.target.closest("[data-tpvq]"); if(vq){ TP.vqTab=vq.dataset.tpvq; tpVq(); return; }
   const vo=e.target.closest("#tch [data-open]"); if(vo){ V.el.classList.add("over"); openViewer(byId[vo.dataset.open]); return; }
   const vd=e.target.closest("#tch [data-dl]"); if(vd){ downloadMat(byId[vd.dataset.dl]); return; }
   { const r=e.target.closest("#tch [data-tpltr]"); if(r){ const L=tpLtReps(), R=L[+r.dataset.i]; if(!R) return; if(r.dataset.tpltr==="share") gssShare(tpLtTxt(R),tpLtImg(R)); else if(confirm("O‘chirilsinmi?")){ L.splice(+r.dataset.i,1); kgLSset("tch:ltreps",L); tpLt(); } return; } }
-  const lt=e.target.closest("#tch [data-tplt]"); if(lt){ const k=lt.dataset.tplt, v=lt.dataset.v; if(k==="lv"){ TP.ltLv=v; TP.sel=new Set(); TP.ltH=1; } else if(k==="lang") TP.ltLang=v; else { TP.ltH=+v; TP.sel=new Set(); } tpLt(); return; }
+  const lt=e.target.closest("#tch [data-tplt]"); if(lt){ const k=lt.dataset.tplt, v=lt.dataset.v; if(k==="k") TP.ltK=+v; else if(k==="lv"){ TP.ltLv=v; TP.sel=new Set(); TP.ltH=1; } else if(k==="lang") TP.ltLang=v; else { TP.ltH=+v; TP.sel=new Set(); } tpLt(); return; }
   const ls=e.target.closest("[data-tples]"); if(ls){ const n=+ls.dataset.tples; TP.sel.has(n)?TP.sel.delete(n):TP.sel.add(n); tpLt(); return; }
   const tn=e.target.closest("[data-tpn]"); if(tn){ TP.n=+tn.dataset.tpn; tpLt(); return; }
   const tt=e.target.closest("[data-tptm]"); if(tt){ TP.tm=+tt.dataset.tptm; tpLt(); return; }

@@ -1,0 +1,209 @@
+{
+ "title": "Lektion 2 · Kommunikation",
+ "sub": "Beruf · Alter · Wohnort",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Ich bin Architektin. | ▪ Und wo arbeitest du? | ▪ Was bist du von Beruf? | ● In Wien. → <b>▪ Was bist du von Beruf?<br>● Ich bin Architektin.<br>▪ Und wo arbeitest du?<br>● In Wien.</b>",
+     "w": [
+      "▪ Was machst du beruflich, Sofia?",
+      "● Ich bin Verkäuferin. Ich arbeite bei BMW.",
+      "▪ Und wo wohnst du?",
+      "● In Hamburg."
+     ],
+     "a": "▪ Was machst du beruflich, Sofia? ● Ich bin Verkäuferin. Ich arbeite bei BMW. ▪ Und wo wohnst du? ● In Hamburg.",
+     "gw": {
+      "uz": "Har bir ● javob o‘zidan oldingi ▪ savolga javob beradi: kasb haqida savol — kasb javobi, yosh haqida — son. <b>Und …?</b> yangi savolni boshlaydi. Misol: <b>▪ Hast du Kinder? ● Ja, zwei.</b>",
+      "ru": "Каждый ответ ● отвечает на вопрос ▪ перед ним: вопрос о профессии — ответ о профессии, о возрасте — число. <b>Und …?</b> начинает новый вопрос. Пример: <b>▪ Hast du Kinder? ● Ja, zwei.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Wie alt seid ihr?",
+      "● Ich bin 25 und Ali ist 27.",
+      "▪ Und seid ihr verheiratet?",
+      "● Nein, aber wir wohnen zusammen."
+     ],
+     "a": "▪ Wie alt seid ihr? ● Ich bin 25 und Ali ist 27. ▪ Und seid ihr verheiratet? ● Nein, aber wir wohnen zusammen."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Wo ___ Sie?<br>● In Wien. → Wo <b>wohnen</b> Sie?",
+     "s": "▪ Was ___ Sie beruflich, Frau Keller?\n● Ich habe eine ___ als Kellnerin. Und Sie?\n▪ Ich arbeite im ___ nicht.",
+     "a": [
+      [
+       "machen"
+      ],
+      [
+       "Stelle"
+      ],
+      [
+       "Moment"
+      ]
+     ],
+     "gw": {
+      "uz": "Tayyor iboralarni butunligicha eslang (kasb, yosh, oilaviy holat haqida). Fe’l shaklini <b>du/Sie</b> ga moslang. Kasb <b>als</b> bilan artiklsiz keladi. Misol: <b>Ich arbeite als Koch.</b>",
+      "ru": "Вспоминайте готовые фразы целиком (о профессии, возрасте, семейном положении). Форму глагола согласуйте с <b>du/Sie</b>. Профессия после <b>als</b> — без артикля. Пример: <b>Ich arbeite als Koch.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Wie ___ bist du, Leon?\n● Ich bin 40 Jahre ___.\n▪ Und bist du verheiratet?\n● Nein, ich bin ___. Ich lebe allein.",
+     "a": [
+      [
+       "alt"
+      ],
+      [
+       "alt"
+      ],
+      [
+       "Single",
+       "geschieden"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Wie heißt du? → <b>Ali (du)</b> · Woher kommen Sie? → <b>Frau Keller (Sie)</b>",
+     "c": [
+      "Ali (du)",
+      "Frau Keller (Sie)"
+     ],
+     "i": [
+      [
+       "Was machst du beruflich?",
+       0
+      ],
+      [
+       "Wo wohnen Sie?",
+       1
+      ],
+      [
+       "Bist du verheiratet?",
+       0
+      ],
+      [
+       "Wie alt sind Sie?",
+       1
+      ],
+      [
+       "Wo lebst du?",
+       0
+      ],
+      [
+       "Was sind Sie von Beruf?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Fe’l va olmoshga qarang: <b>du</b> + fe’l <b>-st</b> (<b>bist, hast</b>) — norasmiy; <b>Sie</b> + fe’l <b>-en</b> (<b>sind, haben</b>) — rasmiy. Misol: <b>Arbeiten Sie hier?</b> → Sie.",
+      "ru": "Смотрите на глагол и местоимение: <b>du</b> + глагол на <b>-st</b> (<b>bist, hast</b>) — неофициально; <b>Sie</b> + глагол на <b>-en</b> (<b>sind, haben</b>) — официально. Пример: <b>Arbeiten Sie hier?</b> → Sie."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Beruf, Persönliches oder Wohnort? Ordnen Sie zu.",
+     "bsp": "Ich bin Ingenieur. → <b>Beruf</b>",
+     "c": [
+      "Beruf",
+      "Persönliches",
+      "Wohnort"
+     ],
+     "i": [
+      [
+       "Ich arbeite als Friseurin.",
+       0
+      ],
+      [
+       "Wir haben zwei Kinder.",
+       1
+      ],
+      [
+       "Ich wohne in Zürich.",
+       2
+      ],
+      [
+       "Ich mache ein Praktikum bei BMW.",
+       0
+      ],
+      [
+       "Ich bin 32 Jahre alt.",
+       1
+      ],
+      [
+       "Wir leben in Hamburg.",
+       2
+      ]
+     ],
+     "gw": {
+      "uz": "Gap nima haqida: ish/kasb, oila va shaxsiy ma’lumot yoki yashash joyi? Kalit so‘zni toping. Misol: <b>Ich bin Lehrerin.</b> → Beruf, <b>Ich bin ledig.</b> → Persönliches, <b>Ich lebe in Bonn.</b> → Wohnort.",
+      "ru": "О чём предложение: работа, семья и личное или место жительства? Найдите ключевое слово. Пример: <b>Ich bin Lehrerin.</b> → Beruf, <b>Ich bin ledig.</b> → Persönliches, <b>Ich lebe in Bonn.</b> → Wohnort."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "bsp": "Sie sind Lehrerin. → <b>Ich bin Lehrerin von Beruf.</b>",
+     "q": "Sie arbeiten nicht. Was sagen Sie?",
+     "o": [
+      "Ich arbeite im Moment nicht.",
+      "Ich arbeite als Kellner.",
+      "Ich habe eine Stelle als Kellner."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatni aniq o‘qing va unga to‘liq mos gapni tanlang: universitet — <b>Student</b>, maktab — <b>Schüler</b>. Misol: <b>Sie sind 15 und gehen zur Schule → Ich bin Schüler.</b>",
+      "ru": "Внимательно прочитайте ситуацию и выберите фразу, которая полностью ей соответствует: университет — <b>Student</b>, школа — <b>Schüler</b>. Пример: <b>Sie sind 15 und gehen zur Schule → Ich bin Schüler.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Sie studieren. Was sagen Sie?",
+     "o": [
+      "Ich bin Schüler.",
+      "Ich bin Student.",
+      "Ich bin Rentner."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Sie sind nicht verheiratet und leben allein. Was sagen Sie?",
+     "o": [
+      "Wir leben zusammen.",
+      "Ich bin verheiratet.",
+      "Ich bin Single."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Sie machen ein Praktikum bei BMW. Was sagen Sie?",
+     "o": [
+      "Ich habe eine Stelle bei BMW.",
+      "Ich mache ein Praktikum bei BMW.",
+      "Ich bin Ingenieur bei BMW."
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,241 @@
+{
+ "title": "Lektion 16 · Kommunikation",
+ "sub": "Hilfe anbieten · um Hilfe bitten · Termine verschieben",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Nein, leider nicht. | ▪ Und am Sonntag? | ▪ Hast du morgen Zeit? | ● Ja, da kann ich. → <b>▪ Hast du morgen Zeit?<br>● Nein, leider nicht.<br>▪ Und am Sonntag?<br>● Ja, da kann ich.</b>",
+     "w": [
+      "▪ Firma Schulz, guten Tag. Was kann ich heute für Sie tun?",
+      "● Guten Tag, Frau Berger hier. Wir haben ein Problem: Die Heizung funktioniert nicht.",
+      "▪ Kein Problem! Ich kann in einer Stunde kommen.",
+      "● Super, vielen Dank! Bis dann."
+     ],
+     "a": "▪ Firma Schulz, guten Tag. Was kann ich heute für Sie tun? ● Guten Tag, Frau Berger hier. Wir haben ein Problem: Die Heizung funktioniert nicht. ▪ Kein Problem! Ich kann in einer Stunde kommen. ● Super, vielen Dank! Bis dann.",
+     "gw": {
+      "uz": "Telefon: firma nomi va salom → qo‘ng‘iroq qiluvchi o‘zini tanishtiradi va muammoni aytadi → yordam taklifi → vaqt kelishish. Misol: <b>● Wann kann der Handwerker kommen? ▪ Am Montag.</b>",
+      "ru": "Телефон: название фирмы и приветствие → звонящий представляется и называет проблему → предложение помощи → договорённость о времени. Пример: <b>● Wann kann der Handwerker kommen? ▪ Am Montag.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Hallo Mia, hast du am Freitag Zeit? Wir können ins Kino gehen.",
+      "● Am Freitag habe ich leider keine Zeit, Jonas. Ich arbeite bis 20 Uhr.",
+      "▪ Schade. Und am Samstag?",
+      "● Am Samstag habe ich Zeit. Vielleicht um 19 Uhr?"
+     ],
+     "a": "▪ Hallo Mia, hast du am Freitag Zeit? Wir können ins Kino gehen. ● Am Freitag habe ich leider keine Zeit, Jonas. Ich arbeite bis 20 Uhr. ▪ Schade. Und am Samstag? ● Am Samstag habe ich Zeit. Vielleicht um 19 Uhr?"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Der Herd ist ___.<br>● Kein Problem, ich komme heute. → Der Herd ist <b>kaputt</b>.",
+     "q": "natürlich · Problem · reparieren · tun",
+     "s": "▪ Guten Tag, Frau Keller. Was kann ich für Sie ___?\n● Guten Tag. Ich habe ein ___: Die Dusche ist kaputt.\n▪ Kein Problem! Das kann ich ___.\n● Können Sie heute kommen?\n▪ Ja, ___! Ich kann um 15 Uhr kommen.",
+     "a": [
+      [
+       "tun"
+      ],
+      [
+       "Problem"
+      ],
+      [
+       "reparieren"
+      ],
+      [
+       "natürlich"
+      ]
+     ],
+     "gw": {
+      "uz": "Telefondagi tayyor iboralarni butunligicha eslang: yordam taklifi, muammo aytish, uchrashuv kelishish. Modal fe’l bilan Infinitiv oxirida. Misol: <b>Wie kann ich Ihnen helfen?</b>",
+      "ru": "Вспоминайте телефонные фразы целиком: предложить помощь, сказать о проблеме, договориться о встрече. С модальным глаголом инфинитив в конце. Пример: <b>Wie kann ich Ihnen helfen?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "kann · vereinbaren · Zeit",
+     "s": "▪ Guten Tag, hier ist Lukas Fischer. Ich möchte einen Termin ___.\n● Gern. Geht es am Dienstag um 9 Uhr?\n▪ Am Dienstag ___ ich leider nicht.\n● Und am Mittwoch um 10 Uhr?\n▪ Ja, am Mittwoch habe ich ___. Vielen Dank!",
+     "a": [
+      [
+       "vereinbaren"
+      ],
+      [
+       "kann"
+      ],
+      [
+       "Zeit"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Hilfe anbieten, um Hilfe bitten oder auf Bitten reagieren? Ordnen Sie zu.",
+     "bsp": "Was kann ich für Sie tun? → <b>Hilfe anbieten</b>",
+     "c": [
+      "Hilfe anbieten",
+      "um Hilfe bitten",
+      "auf Bitten reagieren"
+     ],
+     "i": [
+      [
+       "Wie kann ich Ihnen helfen, Frau Berger?",
+       0
+      ],
+      [
+       "Wir brauchen Ihre Hilfe, Herr Schulz.",
+       1
+      ],
+      [
+       "Tut mir leid, das geht heute leider nicht.",
+       2
+      ],
+      [
+       "Der Herd funktioniert nicht mehr.",
+       1
+      ],
+      [
+       "Ja, natürlich! Ich kann um 14 Uhr kommen.",
+       2
+      ],
+      [
+       "Was ist los, Tom? Kann ich dir helfen?",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Kim kimga yordam beradi? <b>Kann ich Ihnen helfen?</b> — taklif; <b>Können Sie mir helfen?</b> — iltimos; <b>Ja, gern / Leider nicht</b> — javob. Misol: <b>Brauchen Sie Hilfe?</b> → Hilfe anbieten.",
+      "ru": "Кто кому помогает? <b>Kann ich Ihnen helfen?</b> — предложение; <b>Können Sie mir helfen?</b> — просьба; <b>Ja, gern / Leider nicht</b> — реакция. Пример: <b>Brauchen Sie Hilfe?</b> → Hilfe anbieten."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*formell* oder *informell*? Ordnen Sie zu.",
+     "bsp": "Sehr geehrte Frau Weber, → <b>formell</b>",
+     "c": [
+      "formell",
+      "informell"
+     ],
+     "i": [
+      [
+       "Hallo Tom,",
+       1
+      ],
+      [
+       "Mit freundlichen Grüßen",
+       0
+      ],
+      [
+       "Lieber Paul,",
+       1
+      ],
+      [
+       "Sehr geehrter Herr Yilmaz,",
+       0
+      ],
+      [
+       "Viele Grüße",
+       1
+      ],
+      [
+       "Sehr geehrte Frau Keller,",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Rasmiy xat: <b>Sehr geehrte/r …</b>, <b>Mit freundlichen Grüßen</b>, familiya. Norasmiy: <b>Hallo / Liebe/r …</b>, <b>Viele Grüße</b>, ism. Misol: <b>Sehr geehrte Frau Weber,</b> → formell, <b>Viele Grüße</b> → informell.",
+      "ru": "Официальное письмо: <b>Sehr geehrte/r …</b>, <b>Mit freundlichen Grüßen</b>, фамилия. Неофициальное: <b>Hallo / Liebe/r …</b>, <b>Viele Grüße</b>, имя. Пример: <b>Sehr geehrte Frau Weber,</b> → formell, <b>Viele Grüße</b> → informell."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Termin absagen / verschieben oder Termin vorschlagen? Ordnen Sie zu.",
+     "bsp": "Am Montag habe ich Zeit. → <b>Termin vorschlagen</b>",
+     "c": [
+      "absagen / verschieben",
+      "vorschlagen"
+     ],
+     "i": [
+      [
+       "Am Samstag habe ich leider keine Zeit.",
+       0
+      ],
+      [
+       "Vielleicht am Donnerstag um 18 Uhr?",
+       1
+      ],
+      [
+       "Nach der Arbeit habe ich Zeit.",
+       1
+      ],
+      [
+       "Können wir das Treffen auf Montag verschieben?",
+       0
+      ],
+      [
+       "Am Montag kann ich leider nicht.",
+       0
+      ],
+      [
+       "In zwei Wochen habe ich wieder Zeit.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "<b>leider</b>, <b>keine Zeit</b>, <b>kann nicht</b> — bekor qilish yoki surish; savol shaklidagi vaqt (<b>Geht es am …?</b>) — taklif. Misol: <b>Geht es am Montag?</b> → vorschlagen.",
+      "ru": "<b>leider</b>, <b>keine Zeit</b>, <b>kann nicht</b> — отмена или перенос; время в форме вопроса (<b>Geht es am …?</b>) — предложение. Пример: <b>Geht es am Montag?</b> → vorschlagen."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Die Heizung ist kaputt. Sie rufen den Handwerker an. → <b>Wir brauchen Ihre Hilfe.</b>",
+     "q": "Sie arbeiten im Hotel. Ein Gast ruft an. Was sagen Sie?",
+     "o": [
+      "Was kann ich heute für Sie tun?",
+      "Ich habe ein Problem.",
+      "Am Montag habe ich Zeit."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Rolingizni aniqlang: xizmat qiluvchi yordam taklif qiladi, mijoz muammo aytadi, usta javob beradi. Misol: <b>Sie können helfen → Ja, natürlich!</b>",
+      "ru": "Определите свою роль: сотрудник предлагает помощь, клиент называет проблему, мастер отвечает. Пример: <b>Sie können helfen → Ja, natürlich!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Der Handwerker kann die Waschmaschine nicht reparieren. Was sagt er?",
+     "o": [
+      "Ja, natürlich!",
+      "Wir brauchen Ihre Hilfe.",
+      "Leider kann ich da gar nichts machen."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie haben am Freitag einen Termin, aber Sie können nicht. Sie möchten einen neuen Tag. Was schreiben Sie?",
+     "o": [
+      "Wie kann ich Ihnen helfen?",
+      "Kein Problem! Das kann ich morgen reparieren.",
+      "Können wir den Termin verschieben?"
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}

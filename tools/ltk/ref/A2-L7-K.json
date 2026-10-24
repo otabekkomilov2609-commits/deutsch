@@ -1,0 +1,251 @@
+{
+ "title": "Lektion 7 · Kommunikation",
+ "sub": "am Kiosk bestellen und bezahlen · die Meinung sagen",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Sonst noch etwas? | ▪ Was darf’s sein? | ● Ein Kakao, bitte.<br>→ <b>▪ Was darf’s sein?<br>● Ein Kakao, bitte.<br>▪ Sonst noch etwas?</b>",
+     "w": [
+      "▪ Guten Tag! Was darf’s sein?",
+      "● Einmal Bratwurst, bitte.",
+      "▪ Und möchten Sie auch etwas zu trinken?",
+      "● Ja, eine Limonade, bitte.",
+      "▪ Gern. Sonst noch etwas?",
+      "● Nein, danke, das ist alles."
+     ],
+     "a": "▪ Guten Tag! Was darf’s sein? ● Einmal Bratwurst, bitte. ▪ Und möchten Sie auch etwas zu trinken? ● Ja, eine Limonade, bitte. ▪ Gern. Sonst noch etwas? ● Nein, danke, das ist alles.",
+     "gw": {
+      "uz": "Buyurtma: sotuvchi so‘raydi → mijoz buyurtma beradi → ichimlik yoki boshqa narsa so‘raladi → «hammasi shu». To‘lov: chaqirish → birga/alohida → narx → pul → rahmat. Misol: <b>Was möchten Sie? – Einen Tee, bitte.</b>",
+      "ru": "Заказ: продавец спрашивает → гость заказывает → вопрос о напитке или чём-то ещё → «это всё». Оплата: позвать → вместе/раздельно → сумма → деньги → спасибо. Пример: <b>Was möchten Sie? – Einen Tee, bitte.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "● Entschuldigung! Wir zahlen dann gleich.",
+      "▪ Zusammen oder getrennt?",
+      "● Zusammen, bitte.",
+      "▪ Das macht neun Euro zwanzig.",
+      "● Zehn Euro, stimmt so.",
+      "▪ Oh, vielen Dank!"
+     ],
+     "a": "● Entschuldigung! Wir zahlen dann gleich. ▪ Zusammen oder getrennt? ● Zusammen, bitte. ▪ Das macht neun Euro zwanzig. ● Zehn Euro, stimmt so. ▪ Oh, vielen Dank!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *darf’s*, *hätte*, *macht*, *Sonst*, *trinken*.",
+     "bsp": "▪ ___ ich bitte ein Glas Wasser bekommen?<br>● Natürlich! → <b>Kann</b>",
+     "s": "▪ Guten Tag! Was ___ sein?\n● Ich ___ gern einen Marmorkuchen.\n▪ Möchten Sie auch etwas zu ___?\n● Ja, einen Kakao, bitte.\n▪ ___ noch etwas?\n● Nein, danke, das ist alles.\n▪ Das ___ fünf Euro, bitte.",
+     "a": [
+      [
+       "darf’s",
+       "darf's"
+      ],
+      [
+       "hätte",
+       "möchte"
+      ],
+      [
+       "trinken"
+      ],
+      [
+       "Sonst"
+      ],
+      [
+       "macht",
+       "kostet"
+      ]
+     ],
+     "gw": {
+      "uz": "Kafedagi qat’iy iboralar: sotuvchi so‘raydi va narxni aytadi, mijoz muloyim buyurtma beradi (Konjunktiv II). Bo‘shliqdan keyingi so‘zlarga qarang — bu iboraning qolgan qismi. Misol: <b>Ich möchte einen Tee.</b> <b>Das kostet drei Euro.</b>",
+      "ru": "Устойчивые фразы в кафе: продавец спрашивает и называет цену, гость вежливо заказывает (Konjunktiv II). Смотрите на слова после пропуска — это остаток фразы. Пример: <b>Ich möchte einen Tee.</b> <b>Das kostet drei Euro.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *getrennt*, *Karte*, *stimmt*, *zahlen*.",
+     "bsp": "▪ ___ macht das?<br>● Sieben Euro fünfzig, bitte. → <b>Was</b>",
+     "s": "● Entschuldigung! Wir ___ dann gleich.\n▪ Gern. Zusammen oder ___?\n● Zusammen, bitte.\n▪ Das macht elf Euro sechzig. Bar oder mit ___?\n● Bar. Zwölf Euro, ___ so.",
+     "a": [
+      [
+       "zahlen",
+       "bezahlen"
+      ],
+      [
+       "getrennt"
+      ],
+      [
+       "Karte"
+      ],
+      [
+       "stimmt"
+      ]
+     ],
+     "gw": {
+      "uz": "To‘lov iboralari juft-juft keladi: <b>zusammen ↔ …</b>, <b>bar ↔ …</b>. Qaytimni olmaslik uchun qisqa ibora bor. Fe’l <b>wir</b> bilan <b>-en</b> oladi. Misol: <b>Die Rechnung, bitte!</b>",
+      "ru": "Фразы оплаты идут парами: <b>zusammen ↔ …</b>, <b>bar ↔ …</b>. Чтобы не брать сдачу, есть короткая фраза. С <b>wir</b> глагол на <b>-en</b>. Пример: <b>Die Rechnung, bitte!</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *kochst*, *oft*, *online*, *Woche*.",
+     "bsp": "▪ Wo kaufst du Lebensmittel ein?<br>● Meistens auf dem ___. → <b>Markt</b>",
+     "s": "▪ Wie oft gehst du einkaufen?\n● Zweimal die ___. Meistens im Supermarkt.\n▪ Bestellst du auch Lebensmittel ___?\n● Nein, nie. Aber ich bestelle ___ Essen beim Lieferservice.\n▪ Und was ___ du besonders gern?\n● Pfannkuchen!",
+     "a": [
+      [
+       "Woche"
+      ],
+      [
+       "online"
+      ],
+      [
+       "oft",
+       "regelmäßig"
+      ],
+      [
+       "kochst"
+      ]
+     ],
+     "gw": {
+      "uz": "Javob savolga mos bo‘lishi kerak: <b>Wie oft?</b> → chastota (<b>einmal im Monat</b>), <b>Was?</b> → narsa. <b>du</b> bilan fe’l <b>-st</b> oladi. Misol: <b>Wie oft backst du? – Einmal im Monat.</b>",
+      "ru": "Ответ должен соответствовать вопросу: <b>Wie oft?</b> → частота (<b>einmal im Monat</b>), <b>Was?</b> → предмет. С <b>du</b> глагол на <b>-st</b>. Пример: <b>Wie oft backst du? – Einmal im Monat.</b>"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Wer sagt das? Ordnen Sie zu.",
+     "bsp": "Einen Moment bitte. → <b>Angestellte</b>",
+     "c": [
+      "Angestellte",
+      "Gast"
+     ],
+     "i": [
+      [
+       "Was darf’s sein?",
+       0
+      ],
+      [
+       "Ich hätte gern einen Saft.",
+       1
+      ],
+      [
+       "Sonst noch etwas?",
+       0
+      ],
+      [
+       "Wir zahlen dann gleich.",
+       1
+      ],
+      [
+       "Bar oder mit Karte?",
+       0
+      ],
+      [
+       "Kann ich den Kuchen mit Sahne bekommen?",
+       1
+      ],
+      [
+       "Zusammen oder getrennt?",
+       0
+      ],
+      [
+       "Nein, danke, das ist alles.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Kim savol beradi, kim buyurtma beradi? Xodim taklif qiladi, so‘raydi va to‘lov haqida gapiradi; mehmon o‘z xohishini aytadi (<b>ich, wir</b>). Misol: <b>Was möchten Sie trinken?</b> → Angestellte; <b>Ich nehme die Suppe.</b> → Gast.",
+      "ru": "Кто спрашивает, а кто заказывает? Сотрудник предлагает, спрашивает и говорит об оплате; гость говорит о своём желании (<b>ich, wir</b>). Пример: <b>Was möchten Sie trinken?</b> → Angestellte; <b>Ich nehme die Suppe.</b> → Gast."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "😀 oder 🙁? Ordnen Sie zu.",
+     "bsp": "Ich finde es toll, dass … → <b>😀</b>",
+     "c": [
+      "😀",
+      "🙁"
+     ],
+     "i": [
+      [
+       "Super, dass …",
+       0
+      ],
+      [
+       "Schade, dass …",
+       1
+      ],
+      [
+       "Ich hoffe, dass …",
+       0
+      ],
+      [
+       "Ich fürchte, dass …",
+       1
+      ],
+      [
+       "Schön, dass …",
+       0
+      ],
+      [
+       "Blöd, dass …",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "<b>dass</b> dan oldingi so‘z hisni beradi: xursandlik, umid → 😀; afsus, qo‘rquv → 🙁. Misol: <b>Ich bin froh, dass …</b> → 😀; <b>Ich bin traurig, dass …</b> → 🙁.",
+      "ru": "Слово перед <b>dass</b> передаёт чувство: радость, надежда → 😀; сожаление, страх → 🙁. Пример: <b>Ich bin froh, dass …</b> → 😀; <b>Ich bin traurig, dass …</b> → 🙁."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Sie sind am Kiosk und möchten bezahlen. → <b>Was macht das?</b>",
+     "q": "Ein Freund hat keine Zeit und kann nicht mit ins Café kommen. Was sagen Sie?",
+     "o": [
+      "Schade, dass du nicht kommen kannst.",
+      "Super, dass du nicht kommen kannst.",
+      "Ich hoffe, dass du nicht kommen kannst."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatni o‘qing: siz kimsiz (mehmon yoki do‘st) va nima istaysiz — buyurtma, to‘lov yoki his bildirish? <b>dass</b>-iborada his vaziyatga mos bo‘lsin. Misol: <b>Ich hätte gern einen Tee.</b>",
+      "ru": "Прочитайте ситуацию: кто вы (гость или друг) и чего хотите — заказать, заплатить или выразить чувство? В <b>dass</b>-фразе чувство должно соответствовать ситуации. Пример: <b>Ich hätte gern einen Tee.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie bezahlen 9,40 Euro. Sie geben zehn Euro und möchten kein Geld zurück. Was sagen Sie?",
+     "o": [
+      "Zusammen, bitte.",
+      "Zehn Euro, stimmt so.",
+      "Was macht das?"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie möchten Sahne auf Ihrem Kuchen. Was fragen Sie?",
+     "o": [
+      "Sonst noch etwas?",
+      "Was darf’s sein?",
+      "Kann ich den Kuchen mit Sahne bekommen?"
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}

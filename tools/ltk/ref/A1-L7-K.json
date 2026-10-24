@@ -1,0 +1,208 @@
+{
+ "title": "Lektion 7 · Kommunikation",
+ "sub": "Komplimente · Hobbys · Wie oft?",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Oft! | ▪ Du kannst ja super Schach spielen! | ▪ Wie oft spielst du? | ● Danke! → <b>▪ Du kannst ja super Schach spielen!<br>● Danke!<br>▪ Wie oft spielst du?<br>● Oft!</b>",
+     "w": [
+      "▪ Du kannst wirklich toll fotografieren!",
+      "● Oh, danke! Das ist mein Hobby.",
+      "▪ Wie oft fotografierst du?",
+      "● Oft. Das macht Spaß!"
+     ],
+     "a": "▪ Du kannst wirklich toll fotografieren! ● Oh, danke! Das ist mein Hobby. ▪ Wie oft fotografierst du? ● Oft. Das macht Spaß!",
+     "gw": {
+      "uz": "Kompliment → rahmat; <b>Wie oft …?</b> → chastota so‘zi (<b>oft, manchmal</b>); fikr → munosabat. Har bir javob oldingi gapga ulanadi. Misol: <b>▪ Du kochst super! ● Danke!</b>",
+      "ru": "Комплимент → благодарность; <b>Wie oft …?</b> → слово частоты (<b>oft, manchmal</b>); мнение → реакция. Каждый ответ связан с предыдущей фразой. Пример: <b>▪ Du kochst super! ● Danke!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Was machst du gern, Mia?",
+      "● Ich schwimme gern. Und du?",
+      "▪ Ich spiele gern Schach.",
+      "● Wirklich? Ich finde Schach interessant."
+     ],
+     "a": "▪ Was machst du gern, Mia? ● Ich schwimme gern. Und du? ▪ Ich spiele gern Schach. ● Wirklich? Ich finde Schach interessant."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ ___ du gut schwimmen?<br>● Ja, sehr gut! → <b>Kannst</b> du gut schwimmen?",
+     "s": "▪ Was sind deine Hobbys?\n● Singen und Tanzen. Singen macht ___!\n▪ Wie ___ singst du?\n● Immer! Ich singe überall.\n▪ Du kannst ja wirklich toll singen!\n● Oh, ___!",
+     "a": [
+      [
+       "Spaß",
+       "Spass"
+      ],
+      [
+       "oft"
+      ],
+      [
+       "danke"
+      ]
+     ],
+     "gw": {
+      "uz": "Bo‘shliqdan oldingi va keyingi so‘zga qarang: tayyor ibora qismi bo‘lishi mumkin. <b>können</b> bilan ikkinchi fe’l oxirida Infinitiv. Misol: <b>Kannst du schwimmen? – Ja, ich kann gut schwimmen.</b>",
+      "ru": "Смотрите на слова до и после пропуска: это может быть часть готовой фразы. С <b>können</b> второй глагол — инфинитив в конце. Пример: <b>Kannst du schwimmen? – Ja, ich kann gut schwimmen.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Kannst du gut kochen?\n● Nein, ich kann gar ___ kochen. Aber ich kann super backen.\n▪ ___? Ich finde das toll!\n● Danke. Backen ist mein ___.",
+     "a": [
+      [
+       "nicht"
+      ],
+      [
+       "Wirklich"
+      ],
+      [
+       "Hobby"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Kompliment oder Dank? Ordnen Sie zu.",
+     "bsp": "Du kannst ja super singen! → <b>Kompliment</b> · Danke sehr! → <b>Dank</b>",
+     "c": [
+      "Kompliment 👏",
+      "Dank 🙏"
+     ],
+     "i": [
+      [
+       "Du kannst ja toll malen!",
+       0
+      ],
+      [
+       "Herzlichen Dank!",
+       1
+      ],
+      [
+       "Sie können wirklich super kochen!",
+       0
+      ],
+      [
+       "Oh, danke!",
+       1
+      ],
+      [
+       "Du kannst aber gut Tennis spielen!",
+       0
+      ],
+      [
+       "Vielen Dank!",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Kompliment — boshqa odamni maqtash (<b>Du kannst ja toll …!</b>); Dank — o‘zingiz rahmat aytasiz. Misol: <b>Du tanzt super!</b> → Kompliment, <b>Danke sehr!</b> → Dank.",
+      "ru": "Комплимент — похвала другому (<b>Du kannst ja toll …!</b>); Dank — вы благодарите. Пример: <b>Du tanzt super!</b> → Kompliment, <b>Danke sehr!</b> → Dank."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Wie findet die Person das? Ordnen Sie zu.",
+     "bsp": "Das ist lustig! → <b>🙂</b>",
+     "c": [
+      "🙂",
+      "🙁"
+     ],
+     "i": [
+      [
+       "Ich finde das super.",
+       0
+      ],
+      [
+       "Ich finde das blöd.",
+       1
+      ],
+      [
+       "Das ist komisch.",
+       1
+      ],
+      [
+       "Ich finde das interessant.",
+       0
+      ],
+      [
+       "Das macht Spaß!",
+       0
+      ],
+      [
+       "Ich finde das nicht so gut.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Fikr bildiruvchi sifatga qarang: <b>super, interessant, toll</b> — yoqadi; <b>blöd, langweilig</b> — yoqmaydi. Misol: <b>Das ist langweilig.</b> → 🙁",
+      "ru": "Смотрите на прилагательное-оценку: <b>super, interessant, toll</b> — нравится; <b>blöd, langweilig</b> — не нравится. Пример: <b>Das ist langweilig.</b> → 🙁"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Wählen Sie.",
+     "bsp": "Elif tanzt super. → <b>Du kannst ja super tanzen!</b>",
+     "q": "Jonas spielt sehr gut Gitarre. Was sagen Sie?",
+     "o": [
+      "Wie oft spielst du Gitarre?",
+      "Ich spiele nie Gitarre.",
+      "Du kannst ja toll Gitarre spielen!"
+     ],
+     "a": 2,
+     "gw": {
+      "uz": "Vaziyatning maqsadini toping: maqtash, so‘rash yoki o‘zingiz haqida aytish. Maqtov: <b>Du kannst ja toll …!</b>; so‘rash: <b>Was sind …? / Wie oft …?</b> Misol: <b>Mia malt schön → Toll! Du malst super!</b>",
+      "ru": "Найдите цель: похвалить, спросить или рассказать о себе. Похвала: <b>Du kannst ja toll …!</b>; вопрос: <b>Was sind …? / Wie oft …?</b> Пример: <b>Mia malt schön → Toll! Du malst super!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Wählen Sie.",
+     "q": "Sie fragen Mia nach ihren Hobbys. Was sagen Sie?",
+     "o": [
+      "Was sind deine Hobbys?",
+      "Wie findest du das?",
+      "Kannst du gut Fußball spielen?"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Wählen Sie.",
+     "q": "Sie fragen Frau Berger: Kann sie schwimmen? Was sagen Sie?",
+     "o": [
+      "Kannst du schwimmen?",
+      "Schwimmen Sie oft?",
+      "Können Sie schwimmen?"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Wählen Sie.",
+     "q": "Lisa backt super. Was sagen Sie?",
+     "o": [
+      "Du kannst aber toll backen!",
+      "Ich kann nicht backen.",
+      "Backen macht Spaß."
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

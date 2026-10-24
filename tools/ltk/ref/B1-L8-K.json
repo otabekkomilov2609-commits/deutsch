@@ -1,0 +1,719 @@
+{
+ "title": "Lektion 8 · Kommunikation",
+ "sub": "Meinung äußern · zustimmen · widersprechen · Zweifel äußern",
+ "lv": "B1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "info",
+     "h": "<h4>Diskutieren: Meinung · Zustimmung · Widerspruch · Zweifel</h4><table class=\"ex-tb\"><tr><th>Funktion</th><th>Redemittel</th></tr><tr><td>Meinung äußern</td><td>Ich bin der Meinung, dass …<br>Meiner Meinung nach …<br>Ich finde / denke, dass …<br>Ich bin davon überzeugt, dass …</td></tr><tr><td>begründen</td><td>…, weil … / …, denn …<br>Ein wichtiges Argument dafür / dagegen ist, dass …</td></tr><tr><td>zustimmen</td><td>Da stimme ich dir / Ihnen zu.<br>Das sehe ich genauso.<br>Da hast du völlig recht.<br>Genau, das finde ich auch.</td></tr><tr><td>widersprechen</td><td>Da bin ich anderer Meinung.<br>Das stimmt so nicht, denn …<br>Das sehe ich anders.<br>Da muss ich dir widersprechen.</td></tr><tr><td>Zweifel äußern</td><td>Ich bin mir nicht sicher, ob …<br>Ich weiß nicht so recht.<br>Ich habe da meine Zweifel.<br>Ob das wirklich so ist?</td></tr><tr><td>zusammenfassen</td><td>Wir sind uns einig, dass …<br>…, aber … sehen wir unterschiedlich.</td></tr></table><p class=\"ex-note\">telc Mündlich, Teil 2: siz sherik bilan mavzu bo‘yicha munozara qilasiz. Faqat «Ja.» yoki «Gut.» uchun ball yo‘q — fikringizni to‘liq gap bilan ayting va <b>asoslang</b> (weil / denn). Sherik gapiga munosabat bildiring: rozi bo‘ling yoki e’tiroz qiling, ishonchingiz komil bo‘lmasa — shubha bildiring. Sherikka <b>du</b>, imtihonchi yoki notanish kattalarga <b>Sie</b>: Da stimme ich <b>Ihnen</b> zu.</p>",
+     "ru": "<h4>Diskutieren: Meinung · Zustimmung · Widerspruch · Zweifel</h4><table class=\"ex-tb\"><tr><th>Funktion</th><th>Redemittel</th></tr><tr><td>Meinung äußern</td><td>Ich bin der Meinung, dass …<br>Meiner Meinung nach …<br>Ich finde / denke, dass …<br>Ich bin davon überzeugt, dass …</td></tr><tr><td>begründen</td><td>…, weil … / …, denn …<br>Ein wichtiges Argument dafür / dagegen ist, dass …</td></tr><tr><td>zustimmen</td><td>Da stimme ich dir / Ihnen zu.<br>Das sehe ich genauso.<br>Da hast du völlig recht.<br>Genau, das finde ich auch.</td></tr><tr><td>widersprechen</td><td>Da bin ich anderer Meinung.<br>Das stimmt so nicht, denn …<br>Das sehe ich anders.<br>Da muss ich dir widersprechen.</td></tr><tr><td>Zweifel äußern</td><td>Ich bin mir nicht sicher, ob …<br>Ich weiß nicht so recht.<br>Ich habe da meine Zweifel.<br>Ob das wirklich so ist?</td></tr><tr><td>zusammenfassen</td><td>Wir sind uns einig, dass …<br>…, aber … sehen wir unterschiedlich.</td></tr></table><p class=\"ex-note\">telc, устный экзамен, часть 2: вы обсуждаете тему с партнёром. За одно «Ja.» или «Gut.» баллов нет — высказывайте мнение полным предложением и <b>обосновывайте</b> его (weil / denn). Реагируйте на слова партнёра: соглашайтесь или возражайте, а если не уверены — выражайте сомнение. С партнёром — <b>du</b>, с экзаменатором и незнакомыми взрослыми — <b>Sie</b>: Da stimme ich <b>Ihnen</b> zu.</p>"
+    },
+    {
+     "t": "cat",
+     "h": "Was ist das? Ordnen Sie zu.",
+     "bsp": "Da hast du völlig recht. → zustimmen",
+     "c": [
+      "Meinung äußern",
+      "zustimmen",
+      "widersprechen",
+      "Zweifel äußern"
+     ],
+     "i": [
+      [
+       "Meiner Meinung nach ist das sinnvoll.",
+       0
+      ],
+      [
+       "Da stimme ich dir zu.",
+       1
+      ],
+      [
+       "Da bin ich anderer Meinung.",
+       2
+      ],
+      [
+       "Ich bin mir nicht sicher, ob das funktioniert.",
+       3
+      ],
+      [
+       "Das sehe ich genauso.",
+       1
+      ],
+      [
+       "Das stimmt so nicht, denn viele haben wenig Zeit.",
+       2
+      ],
+      [
+       "Ich bin der Meinung, dass jeder helfen sollte.",
+       0
+      ],
+      [
+       "Ich weiß nicht so recht.",
+       3
+      ]
+     ],
+     "gw": {
+      "uz": "Fikr: <b>Meiner Meinung nach …</b> · rozilik: <b>Da stimme ich dir zu.</b> · e’tiroz: <b>Da bin ich anderer Meinung.</b> · shubha: <b>Ich bin mir nicht sicher, ob …</b>",
+      "ru": "Мнение: <b>Meiner Meinung nach …</b> · согласие: <b>Da stimme ich dir zu.</b> · возражение: <b>Da bin ich anderer Meinung.</b> · сомнение: <b>Ich bin mir nicht sicher, ob …</b>"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Was ist das? Ordnen Sie zu.",
+     "bsp": "Das sehe ich anders. → widersprechen",
+     "c": [
+      "zustimmen",
+      "widersprechen",
+      "Zweifel äußern"
+     ],
+     "i": [
+      [
+       "Genau, das finde ich auch.",
+       0
+      ],
+      [
+       "Ich habe da meine Zweifel.",
+       2
+      ],
+      [
+       "Da muss ich dir widersprechen.",
+       1
+      ],
+      [
+       "Da bin ich ganz deiner Meinung.",
+       0
+      ],
+      [
+       "Ob das wirklich so ist?",
+       2
+      ],
+      [
+       "Das stimmt so nicht.",
+       1
+      ],
+      [
+       "Da hast du völlig recht.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Rozilik: <b>Genau, das finde ich auch.</b> · e’tiroz: <b>Da muss ich dir widersprechen.</b> · shubha (na «ha», na «yo‘q»): <b>Ich habe da meine Zweifel.</b>",
+      "ru": "Согласие: <b>Genau, das finde ich auch.</b> · возражение: <b>Da muss ich dir widersprechen.</b> · сомнение (ни «да», ни «нет»): <b>Ich habe da meine Zweifel.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "bsp": "Ihr Freund: „Sport ist wichtig.“ Sie denken das auch. → Genau, das finde ich auch.",
+     "q": "Lena: „Ich finde, nach der Schule sollte jeder ein Jahr lang im Altenheim oder im Kindergarten helfen.“ – Sie denken das auch.",
+     "o": [
+      "Das sehe ich genauso.",
+      "Da bin ich anderer Meinung.",
+      "Ich bin mir nicht sicher, ob das gut ist.",
+      "Wie meinst du das?"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Siz ham shunday o‘ylaysiz — rozilik: <b>Das sehe ich genauso.</b> Qolganlari: e’tiroz, shubha va qayta so‘rash.",
+      "ru": "Вы думаете так же — согласие: <b>Das sehe ich genauso.</b> Остальные: возражение, сомнение и переспрос."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "q": "Timur: „Ein Pflichtjahr bringt nichts. Niemand hilft gern, wenn er muss.“ – Sie sehen das ganz anders.",
+     "o": [
+      "Da hast du völlig recht.",
+      "Ich weiß nicht so recht.",
+      "Das stimmt so nicht, denn viele lernen dabei sehr viel.",
+      "Wie meinst du das genau?"
+     ],
+     "a": 2,
+     "gw": {
+      "uz": "Butunlay boshqacha fikr — e’tiroz va asos: <b>Das stimmt so nicht, denn …</b> «Ich weiß nicht so recht» faqat shubha, «Da hast du völlig recht» — rozilik.",
+      "ru": "Совсем другое мнение — возражение с аргументом: <b>Das stimmt so nicht, denn …</b> «Ich weiß nicht so recht» — лишь сомнение, «Da hast du völlig recht» — согласие."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "q": "Paul im Deutschkurs: „Mit einem Pflichtjahr werden alle jungen Leute sozialer.“ – Sie sind nicht sicher, ob das stimmt.",
+     "o": [
+      "Das sehe ich genauso.",
+      "Da bin ich anderer Meinung.",
+      "Kannst du das bitte wiederholen?",
+      "Ich bin mir nicht sicher, ob das wirklich so ist."
+     ],
+     "a": 3,
+     "gw": {
+      "uz": "Ishonchingiz komil emas — shubha: <b>Ich bin mir nicht sicher, ob …</b> «Da bin ich anderer Meinung» — aniq e’tiroz, bu yerda kuchli.",
+      "ru": "Вы не уверены — сомнение: <b>Ich bin mir nicht sicher, ob …</b> «Da bin ich anderer Meinung» — явное возражение, здесь слишком сильно."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "q": "Die Prüferin fragt: „Was denken Sie: Soll ein soziales Jahr Pflicht sein?“ – Sie sind dafür.",
+     "o": [
+      "Da stimme ich Ihnen zu.",
+      "Meiner Meinung nach ist das eine gute Idee, weil man viel lernt.",
+      "Ich weiß nicht so recht.",
+      "Da bin ich anderer Meinung."
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Sizdan fikr so‘rashdi — o‘z fikringiz va asos: <b>Meiner Meinung nach …, weil …</b> Prüferin fikr aytmagan, shuning uchun rozilik yoki e’tiroz mos emas.",
+      "ru": "Вас спрашивают о мнении — своё мнение с аргументом: <b>Meiner Meinung nach …, weil …</b> Экзаменатор своего мнения не высказал, поэтому согласие или возражение не подходят."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "q": "Bei einem Infoabend in der Stadtbibliothek sagt ein älterer Herr, Herr Weber: „Ein soziales Jahr macht junge Menschen selbstständiger.“ – Sie stimmen höflich zu.",
+     "o": [
+      "Da stimme ich dir zu.",
+      "Da stimme ich Ihnen zu.",
+      "Das sehe ich anders.",
+      "Ich habe da meine Zweifel."
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Notanish katta odamga — <b>Sie</b>: <b>Da stimme ich Ihnen zu.</b> «dir» — faqat do‘st va oilaga.",
+      "ru": "Незнакомому взрослому — на <b>Sie</b>: <b>Da stimme ich Ihnen zu.</b> «dir» — только друзьям и семье."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "q": "Ihr Bruder Aziz: „Nach der Schule sofort studieren ist am besten. Ein Jahr Pause ist Zeitverschwendung.“ – Sie finden das nicht und widersprechen höflich.",
+     "o": [
+      "Genau, das finde ich auch.",
+      "Was meinst du dazu?",
+      "Das sehe ich ein bisschen anders. In so einem Jahr sammelt man viele Erfahrungen.",
+      "Da hast du völlig recht."
+     ],
+     "a": 2,
+     "gw": {
+      "uz": "Muloyim e’tiroz + asos: <b>Das sehe ich ein bisschen anders.</b> «ein bisschen» gapni yumshatadi. «Was meinst du dazu?» — fikr so‘rash, Aziz esa fikrini aytib bo‘ldi.",
+      "ru": "Вежливое возражение + аргумент: <b>Das sehe ich ein bisschen anders.</b> «ein bisschen» смягчает. «Was meinst du dazu?» — вопрос о мнении, а Азиз его уже высказал."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie das Redemittel.",
+     "bsp": "Ihr Freund findet Sport wichtig. Sie auch. → Das sehe ich genauso.",
+     "q": "Sie sind für ein Pflichtjahr. Sagen Sie Ihre Meinung.",
+     "w": [
+      "Meiner",
+      "Meinung",
+      "nach",
+      "ist",
+      "ein",
+      "Pflichtjahr",
+      "sinnvoll"
+     ],
+     "a": "Meiner Meinung nach ist ein Pflichtjahr sinnvoll.",
+     "alt": [],
+     "gw": {
+      "uz": "<b>Meiner Meinung nach</b> — birinchi o‘rinda, keyin fe’l (2-o‘rin): Meiner Meinung nach <b>ist</b> …",
+      "ru": "<b>Meiner Meinung nach</b> стоит на первом месте, затем глагол (2-е место): Meiner Meinung nach <b>ist</b> …"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie das Redemittel.",
+     "q": "Ihre Freundin sagt etwas, und Sie denken genauso.",
+     "w": [
+      "Da",
+      "stimme",
+      "ich",
+      "dir",
+      "völlig",
+      "zu"
+     ],
+     "a": "Da stimme ich dir völlig zu.",
+     "alt": [],
+     "gw": {
+      "uz": "Rozilik: <b>Da stimme ich dir zu.</b> «zustimmen» — ajraladigan fe’l, «zu» gap oxirida.",
+      "ru": "Согласие: <b>Da stimme ich dir zu.</b> «zustimmen» — глагол с отделяемой приставкой, «zu» в конце."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie das Redemittel.",
+     "q": "Timur sagt: „Ein Pflichtjahr ist verlorene Zeit.“ Widersprechen Sie mit Begründung.",
+     "w": [
+      "Das",
+      "stimmt",
+      "so",
+      "nicht,",
+      "denn",
+      "man",
+      "sammelt",
+      "Erfahrungen"
+     ],
+     "a": "Das stimmt so nicht, denn man sammelt Erfahrungen.",
+     "alt": [],
+     "gw": {
+      "uz": "E’tiroz + asos: <b>Das stimmt so nicht, denn …</b> «denn» dan keyin so‘z tartibi oddiy: denn man <b>sammelt</b> …",
+      "ru": "Возражение + аргумент: <b>Das stimmt so nicht, denn …</b> После «denn» прямой порядок слов: denn man <b>sammelt</b> …"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "Das Gespräch beginnt mit einer Frage: ▪ „Was meinst du: …?“",
+     "w": [
+      "● Das verstehe ich. Aber nach so einem Jahr weiß man oft besser, was man studieren will.",
+      "▪ Lena, was meinst du: Soll ein soziales Jahr nach der Schule Pflicht sein?",
+      "▪ Hm, ich bin mir nicht sicher, ob man das nach einem Jahr wirklich besser weiß.",
+      "● Ich bin der Meinung, dass das sinnvoll ist. Man hilft anderen und lernt viel.",
+      "● Doch, bei meiner Cousine war das genau so.",
+      "▪ Da bin ich anderer Meinung. Ich möchte nach der Schule sofort studieren."
+     ],
+     "a": "▪ Lena, was meinst du: Soll ein soziales Jahr nach der Schule Pflicht sein? ● Ich bin der Meinung, dass das sinnvoll ist. Man hilft anderen und lernt viel. ▪ Da bin ich anderer Meinung. Ich möchte nach der Schule sofort studieren. ● Das verstehe ich. Aber nach so einem Jahr weiß man oft besser, was man studieren will. ▪ Hm, ich bin mir nicht sicher, ob man das nach einem Jahr wirklich besser weiß. ● Doch, bei meiner Cousine war das genau so.",
+     "gw": {
+      "uz": "Tartib: savol → fikr (<b>Ich bin der Meinung, dass …</b>) → e’tiroz (<b>Da bin ich anderer Meinung.</b>) → asos → shubha (<b>Ich bin mir nicht sicher, ob …</b>) → «Doch» bilan javob.",
+      "ru": "Порядок: вопрос → мнение (<b>Ich bin der Meinung, dass …</b>) → возражение (<b>Da bin ich anderer Meinung.</b>) → аргумент → сомнение (<b>Ich bin mir nicht sicher, ob …</b>) → ответ с «Doch»."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Redemittel.",
+     "bsp": "M___ M___ n___ … → Meiner Meinung nach …",
+     "s": "▪ Ein soziales Jahr macht junge Leute selbstständiger. ● D___ s___ i___ g___.",
+     "a": [
+      [
+       "as"
+      ],
+      [
+       "ehe"
+      ],
+      [
+       "ch"
+      ],
+      [
+       "enauso"
+      ]
+     ],
+     "gw": {
+      "uz": "Rozilik: <b>Das sehe ich genauso.</b>",
+      "ru": "Согласие: <b>Das sehe ich genauso.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Redemittel.",
+     "s": "▪ Ein Pflichtjahr? Das ist doch Unsinn! ● D___ b___ i___ a___ M___. Man lernt dabei sehr viel.",
+     "a": [
+      [
+       "a"
+      ],
+      [
+       "in"
+      ],
+      [
+       "ch"
+      ],
+      [
+       "nderer"
+      ],
+      [
+       "einung"
+      ]
+     ],
+     "gw": {
+      "uz": "E’tiroz: <b>Da bin ich anderer Meinung.</b> — «anderer» (-er oxiri, chunki Genitiv).",
+      "ru": "Возражение: <b>Da bin ich anderer Meinung.</b> — «anderer» (окончание -er, генитив)."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Redemittel.",
+     "s": "I___ b___ m___ n___ s___, o___ ein Pflichtjahr wirklich allen hilft.",
+     "a": [
+      [
+       "ch"
+      ],
+      [
+       "in"
+      ],
+      [
+       "ir"
+      ],
+      [
+       "icht"
+      ],
+      [
+       "icher"
+      ],
+      [
+       "b"
+      ]
+     ],
+     "gw": {
+      "uz": "Shubha: <b>Ich bin mir nicht sicher, ob …</b> — «ob» dan keyin fe’l oxirida: … allen <b>hilft</b>.",
+      "ru": "Сомнение: <b>Ich bin mir nicht sicher, ob …</b> — после «ob» глагол в конце: … allen <b>hilft</b>."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Redemittel.",
+     "s": "M___ M___ n___ sollte jeder ein soziales Jahr machen, d___ man lernt dabei viel.",
+     "a": [
+      [
+       "einer"
+      ],
+      [
+       "einung"
+      ],
+      [
+       "ach"
+      ],
+      [
+       "enn"
+      ]
+     ],
+     "gw": {
+      "uz": "Fikr + asos: <b>Meiner Meinung nach …, denn …</b>",
+      "ru": "Мнение + аргумент: <b>Meiner Meinung nach …, denn …</b>"
+     }
+    },
+    {
+     "t": "chat",
+     "h": "Diskutieren Sie: Soll ein soziales Jahr nach der Schule Pflicht sein?",
+     "bsp": "Lena: „Was meinst du?“ → „Meiner Meinung nach …, weil …“",
+     "who": "Lena",
+     "goal": [
+      "Meinung",
+      "Begründung",
+      "Zustimmung",
+      "Widerspruch"
+     ],
+     "st": [
+      {
+       "p": "Hallo! Unser Thema ist: Soll ein soziales Jahr nach der Schule Pflicht sein? Was meinst du?",
+       "o": [
+        {
+         "s": "Ja, gut.",
+         "r": "Hm, „ja, gut“ – heißt das, du bist dafür? Sag doch mal deine Meinung!",
+         "why": {
+          "uz": "Faqat «Ja, gut.» — bu fikr emas, telc’da ball yo‘q. To‘liq gap bilan ayting: Ich bin der Meinung, dass …",
+          "ru": "Просто «Ja, gut.» — это не мнение, в telc баллов нет. Скажите полным предложением: Ich bin der Meinung, dass …"
+         }
+        },
+        {
+         "s": "Ich bin der Meinung, dass ein soziales Jahr Pflicht sein sollte.",
+         "ok": 1,
+         "g": 0
+        },
+        {
+         "s": "Da stimme ich dir zu.",
+         "r": "Zustimmen? Ich habe doch noch gar nichts gesagt! Was denkst du denn?",
+         "why": {
+          "uz": "Sherik hali fikr aytmagan — rozi bo‘ladigan narsa yo‘q. Avval o‘z fikringizni ayting.",
+          "ru": "Партнёр ещё не высказал мнения — соглашаться не с чем. Сначала скажите своё мнение."
+         }
+        }
+       ]
+      },
+      {
+       "p": "Aha. Und warum? Viele junge Leute wollen nach der Schule doch sofort studieren.",
+       "o": [
+        {
+         "s": "Das sehe ich genauso.",
+         "r": "Moment, du warst doch gerade für das Pflichtjahr! Warum findest du es gut?",
+         "why": {
+          "uz": "Sherik «warum?» deb so‘rayapti — asos kerak. «Das sehe ich genauso» bilan esa o‘z fikringizga qarshi chiqasiz.",
+          "ru": "Партнёр спрашивает «warum?» — нужен аргумент. А «Das sehe ich genauso» противоречит вашему собственному мнению."
+         }
+        },
+        {
+         "s": "Meine Schwester studiert in Samarkand.",
+         "r": "Aha, schön. Aber warum bist du denn für das Pflichtjahr?",
+         "why": {
+          "uz": "Mavzudan chiqish: savol — nega? Asos keltiring: …, weil … / …, denn …",
+          "ru": "Уход от темы: вопрос — почему? Приведите аргумент: …, weil … / …, denn …"
+         }
+        },
+        {
+         "s": "Ich finde das wichtig, weil man in so einem Jahr lernt, Verantwortung zu übernehmen.",
+         "ok": 1,
+         "g": 1
+        }
+       ]
+      },
+      {
+       "p": "Hm. Ich finde aber, das sollte jeder selbst entscheiden. Wer muss, hat doch keine Lust.",
+       "o": [
+        {
+         "s": "Da bin ich anderer Meinung. Viele merken erst im Pflichtjahr, dass ihnen das Helfen Spaß macht.",
+         "ok": 1,
+         "g": 3
+        },
+        {
+         "s": "Da hast du völlig recht, deshalb soll es Pflicht sein.",
+         "r": "Moment – du gibst mir recht, willst aber trotzdem eine Pflicht? Das passt nicht zusammen.",
+         "why": {
+          "uz": "«Da hast du völlig recht» — rozilik, ikkinchi qism esa e’tiroz. Funksiya mos emas; kerak: Da bin ich anderer Meinung.",
+          "ru": "«Da hast du völlig recht» — согласие, а вторая часть — возражение. Функция не совпадает; нужно: Da bin ich anderer Meinung."
+         }
+        },
+        {
+         "s": "Da bin ich anderer Meinung als Sie.",
+         "r": "„Sie“? Wir duzen uns doch! Und warum siehst du das anders?",
+         "why": {
+          "uz": "Register xatosi: sherik bilan «du». Bundan tashqari asos yo‘q — e’tirozdan keyin sababini ayting.",
+          "ru": "Ошибка регистра: с партнёром на «du». Кроме того, нет аргумента — после возражения назовите причину."
+         }
+        }
+       ]
+      },
+      {
+       "p": "Okay, das kann sein. Und ehrlich gesagt sehe ich auch einen Vorteil: Man lernt neue Leute kennen, zum Beispiel ältere Menschen oder kleine Kinder.",
+       "o": [
+        {
+         "s": "Das stimmt so nicht.",
+         "r": "Wieso nicht? Das ist doch ein Argument für deine Meinung!",
+         "why": {
+          "uz": "Sherik sizning tomoningizga dalil aytdi — e’tiroz mantiqsiz, asosi ham yo‘q. Rozi bo‘ling: Das sehe ich genauso.",
+          "ru": "Партнёр привёл аргумент в вашу пользу — возражение нелогично и без причины. Согласитесь: Das sehe ich genauso."
+         }
+        },
+        {
+         "s": "Das sehe ich genauso. So versteht man andere Generationen besser.",
+         "ok": 1,
+         "g": 2
+        },
+        {
+         "s": "Ja.",
+         "r": "Nur „ja“? Sag doch ein bisschen mehr dazu!",
+         "why": {
+          "uz": "Bitta so‘z — telc’da ball yo‘q. Rozilik iborasi + qo‘shimcha fikr: Das sehe ich genauso. …",
+          "ru": "Одно слово — в telc баллов нет. Фраза согласия + своя мысль: Das sehe ich genauso. …"
+         }
+        }
+       ]
+      },
+      {
+       "p": "Trotzdem: Für mich ist ein Pflichtjahr verlorene Zeit. Man fängt mit dem Studium ein Jahr später an.",
+       "o": [
+        {
+         "s": "Ja, gut.",
+         "r": "„Ja, gut“? Heißt das, für dich ist es jetzt auch verlorene Zeit?",
+         "why": {
+          "uz": "«Ja, gut.» — ball yo‘q, sherik esa buni rozilik deb tushunadi. E’tiroz va asos kerak.",
+          "ru": "«Ja, gut.» — баллов нет, а партнёр понимает это как согласие. Нужны возражение и аргумент."
+         }
+        },
+        {
+         "s": "Da stimme ich dir zu, ein Pflichtjahr ist super.",
+         "r": "Hä? Ich habe gesagt, es ist verlorene Zeit. Stimmst du mir jetzt zu oder nicht?",
+         "why": {
+          "uz": "«Da stimme ich dir zu» — rozilik, lekin siz aslida qarshisiz. E’tiroz iborasi kerak: Das sehe ich anders, denn …",
+          "ru": "«Da stimme ich dir zu» — согласие, но на самом деле вы против. Нужна фраза возражения: Das sehe ich anders, denn …"
+         }
+        },
+        {
+         "s": "Das sehe ich anders, denn in diesem Jahr sammelt man wichtige Erfahrungen für das Leben.",
+         "ok": 1,
+         "g": 3
+        }
+       ]
+      },
+      {
+       "p": "Hm, wir sehen das also unterschiedlich. Wie fassen wir das zusammen?",
+       "o": [
+        {
+         "s": "Wir sind uns einig, dass ein soziales Jahr viele Vorteile hat. Aber ob es Pflicht sein soll, sehen wir unterschiedlich.",
+         "ok": 1
+        },
+        {
+         "s": "Da bin ich anderer Meinung.",
+         "r": "Anderer Meinung? Ich wollte doch nur zusammenfassen. Was ist unser Ergebnis?",
+         "why": {
+          "uz": "Sherik xulosa so‘rayapti, yangi e’tiroz emas. Umumiy va farqli fikrni ayting: Wir sind uns einig, dass … / … sehen wir unterschiedlich.",
+          "ru": "Партнёр просит подвести итог, а не новое возражение. Назовите общее и различное: Wir sind uns einig, dass … / … sehen wir unterschiedlich."
+         }
+        },
+        {
+         "s": "Egal, das Thema ist langweilig.",
+         "r": "Na ja … Aber wir brauchen ein Ergebnis. Was sagen wir?",
+         "why": {
+          "uz": "Mavzudan voz kechish — telc’da salbiy baholanadi. Xulosa qiling: Wir sind uns einig, dass …",
+          "ru": "Отказ от темы — в telc оценивается негативно. Подведите итог: Wir sind uns einig, dass …"
+         }
+        }
+       ]
+      }
+     ],
+     "end": "Genau. Du bist dafür, ich bin dagegen – aber anderen zu helfen finden wir beide wichtig. Danke, das war eine gute Diskussion!",
+     "gw": {
+      "uz": "telc Teil 2: fikr ayting (<b>Ich bin der Meinung, dass …</b>), asoslang (<b>…, weil …</b>), sherikka rozi bo‘ling (<b>Das sehe ich genauso.</b>) yoki e’tiroz bildiring (<b>Das sehe ich anders, denn …</b>). Oxirida xulosa: <b>Wir sind uns einig, dass …</b>",
+      "ru": "telc, часть 2: выскажите мнение (<b>Ich bin der Meinung, dass …</b>), обоснуйте (<b>…, weil …</b>), согласитесь с партнёром (<b>Das sehe ich genauso.</b>) или возразите (<b>Das sehe ich anders, denn …</b>). В конце итог: <b>Wir sind uns einig, dass …</b>"
+     }
+    },
+    {
+     "t": "chat",
+     "h": "Diskutieren Sie: Ein freiwilliges Jahr im Ausland – eine gute Idee?",
+     "bsp": "Timur: „Was hältst du davon?“ → „Ich bin mir nicht sicher, ob …“",
+     "who": "Timur",
+     "goal": [
+      "Meinung",
+      "Zweifel",
+      "Widerspruch",
+      "Einigung"
+     ],
+     "st": [
+      {
+       "p": "Ich möchte nach der Schule ein freiwilliges Jahr in Deutschland machen, in einem Kindergarten. Was hältst du davon?",
+       "o": [
+        {
+         "s": "Meiner Meinung nach ist das eine tolle Erfahrung, weil du dein Deutsch verbessern kannst.",
+         "ok": 1,
+         "g": 0
+        },
+        {
+         "s": "Das sehe ich genauso.",
+         "r": "Genauso? Ich habe dich doch gefragt, was du davon hältst!",
+         "why": {
+          "uz": "Sherik savol berdi — rozilik emas, o‘z fikringiz kerak: Meiner Meinung nach …",
+          "ru": "Партнёр задал вопрос — нужно не согласие, а ваше мнение: Meiner Meinung nach …"
+         }
+        },
+        {
+         "s": "Ja.",
+         "r": "Nur „ja“? Erzähl mal, was denkst du genau?",
+         "why": {
+          "uz": "Bitta so‘z — telc’da ball yo‘q. Fikr + asos: Meiner Meinung nach …, weil …",
+          "ru": "Одно слово — в telc баллов нет. Мнение + аргумент: Meiner Meinung nach …, weil …"
+         }
+        }
+       ]
+      },
+      {
+       "p": "Und ich glaube, so ein Jahr ist ganz billig. Man braucht fast kein Geld.",
+       "o": [
+        {
+         "s": "Da stimme ich dir zu, denn im Ausland ist alles sehr teuer.",
+         "r": "Hä? Du stimmst mir zu, aber sagst, alles ist teuer? Was meinst du jetzt?",
+         "why": {
+          "uz": "Ibora va mazmun mos emas: «zustimmen» deb, qarama-qarshi asos keltirdingiz. Ishonchingiz komil bo‘lmasa — shubha: Ich bin mir nicht sicher, ob …",
+          "ru": "Фраза и смысл не совпадают: вы соглашаетесь, но приводите противоположный аргумент. Если не уверены — сомнение: Ich bin mir nicht sicher, ob …"
+         }
+        },
+        {
+         "s": "Ich bin mir nicht sicher, ob das stimmt. Die Wohnung und das Essen kosten doch auch Geld.",
+         "ok": 1,
+         "g": 1
+        },
+        {
+         "s": "Ja, gut.",
+         "r": "„Ja, gut“? Glaubst du das wirklich?",
+         "why": {
+          "uz": "«Ja, gut.» — ball yo‘q va munosabatingiz noaniq. Shubhani iboraga soling: Ich bin mir nicht sicher, ob …",
+          "ru": "«Ja, gut.» — баллов нет, и ваша позиция неясна. Выразите сомнение фразой: Ich bin mir nicht sicher, ob …"
+         }
+        }
+       ]
+      },
+      {
+       "p": "Ach, das klappt schon. Und weißt du was? Ich finde, so ein Jahr sollte für alle Pflicht sein.",
+       "o": [
+        {
+         "s": "Meiner Meinung nach.",
+         "r": "Meiner Meinung nach … was? Sag doch den ganzen Satz!",
+         "why": {
+          "uz": "Chala gap: «Meiner Meinung nach» dan keyin fe’l va fikr kerak — Meiner Meinung nach ist …",
+          "ru": "Незаконченная фраза: после «Meiner Meinung nach» нужен глагол и мысль — Meiner Meinung nach ist …"
+         }
+        },
+        {
+         "s": "Genau, das finde ich auch. Eine Pflicht finde ich schlecht.",
+         "r": "Hä? Du findest das auch, aber eine Pflicht ist schlecht? Bist du jetzt dafür oder dagegen?",
+         "why": {
+          "uz": "«Genau, das finde ich auch» — rozilik, keyingi gap esa e’tiroz. Kerak: Da bin ich anderer Meinung.",
+          "ru": "«Genau, das finde ich auch» — согласие, а следующая фраза — возражение. Нужно: Da bin ich anderer Meinung."
+         }
+        },
+        {
+         "s": "Da bin ich anderer Meinung. Nicht jeder hat Lust oder Zeit dafür.",
+         "ok": 1,
+         "g": 2
+        }
+       ]
+      },
+      {
+       "p": "Hm, vielleicht hast du recht. Am Ende muss jeder selbst entscheiden, oder?",
+       "o": [
+        {
+         "s": "Das stimmt so nicht.",
+         "r": "Nicht? Aber du hast doch gerade gesagt, dass nicht jeder Lust hat …",
+         "why": {
+          "uz": "O‘z gapingizga zid: sherik endi sizning fikringizni aytdi. Kelishing: Ja, da stimme ich dir zu.",
+          "ru": "Противоречит вашим же словам: партнёр теперь повторяет ваше мнение. Договоритесь: Ja, da stimme ich dir zu."
+         }
+        },
+        {
+         "s": "Da stimme ich Ihnen zu.",
+         "r": "„Ihnen“? Ich bin doch Timur, dein Freund! Aber okay, du bist also einverstanden?",
+         "why": {
+          "uz": "Register xatosi: do‘stga «du» — Da stimme ich <b>dir</b> zu.",
+          "ru": "Ошибка регистра: другу — на «du»: Da stimme ich <b>dir</b> zu."
+         }
+        },
+        {
+         "s": "Ja, da stimme ich dir zu. Das soll jeder für sich entscheiden.",
+         "ok": 1,
+         "g": 3
+        }
+       ]
+      }
+     ],
+     "end": "Super, dann sind wir uns einig. Und vielleicht besuchst du mich ja in Deutschland!",
+     "gw": {
+      "uz": "Ishonchingiz komil bo‘lmasa — shubha: <b>Ich bin mir nicht sicher, ob …</b> Qarshi bo‘lsangiz — <b>Da bin ich anderer Meinung.</b> Oxirida kelishuv: <b>Da stimme ich dir zu.</b> Ibora va mazmun bir-biriga mos bo‘lsin.",
+      "ru": "Если не уверены — сомнение: <b>Ich bin mir nicht sicher, ob …</b> Если против — <b>Da bin ich anderer Meinung.</b> В конце договорённость: <b>Da stimme ich dir zu.</b> Фраза и смысл должны совпадать."
+     }
+    },
+    {
+     "t": "say",
+     "h": "Sagen Sie es auf Deutsch.",
+     "bsp": "Ihr Freund findet Sport wichtig. Sie auch. → Das sehe ich genauso.",
+     "q": "Ihre Freundin Sevara findet ein Pflichtjahr gut. Sie denken das auch. Stimmen Sie zu und begründen Sie.",
+     "a": "Da stimme ich dir zu, denn in so einem Jahr lernt man sehr viel.",
+     "gw": {
+      "uz": "Rozilik + asos: <b>Da stimme ich dir zu, denn …</b>",
+      "ru": "Согласие + аргумент: <b>Da stimme ich dir zu, denn …</b>"
+     }
+    },
+    {
+     "t": "say",
+     "h": "Sagen Sie es auf Deutsch.",
+     "q": "Ein Freund aus dem Deutschkurs sagt: „Junge Leute helfen nie freiwillig.“ Widersprechen Sie.",
+     "a": "Da bin ich anderer Meinung. Viele helfen gern, zum Beispiel im Sportverein.",
+     "gw": {
+      "uz": "E’tiroz + misol: <b>Da bin ich anderer Meinung.</b> yoki <b>Das stimmt so nicht, denn …</b>",
+      "ru": "Возражение + пример: <b>Da bin ich anderer Meinung.</b> или <b>Das stimmt so nicht, denn …</b>"
+     }
+    },
+    {
+     "t": "say",
+     "h": "Sagen Sie es auf Deutsch.",
+     "q": "Ihre Nachbarin, Frau Karimova, sagt: „Ein Pflichtjahr macht alle jungen Menschen sozialer.“ Sie sind nicht sicher. Äußern Sie höflich Zweifel.",
+     "a": "Ich bin mir nicht sicher, ob das für alle jungen Menschen gilt.",
+     "gw": {
+      "uz": "Muloyim shubha: <b>Ich bin mir nicht sicher, ob …</b> — «ob» dan keyin fe’l oxirida (… <b>gilt</b>).",
+      "ru": "Вежливое сомнение: <b>Ich bin mir nicht sicher, ob …</b> — после «ob» глагол в конце (… <b>gilt</b>)."
+     }
+    }
+   ]
+  }
+ ]
+}

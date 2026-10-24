@@ -1,0 +1,241 @@
+{
+ "title": "Lektion 5 · Kommunikation",
+ "sub": "etwas vorschlagen · zustimmen / ablehnen · überreden",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Ja, gern! | ▪ Super, ich kaufe Tickets. | ▪ Wollen wir ins Kabarett gehen?<br>→ <b>▪ Wollen wir ins Kabarett gehen?<br>● Ja, gern!<br>▪ Super, ich kaufe Tickets.</b>",
+     "w": [
+      "▪ Ich habe zwei Tickets für ein Basketballspiel. Kommst du mit?",
+      "● Hm, meinst du? Basketball finde ich eher langweilig.",
+      "▪ Na los, das ist sicher aufregend!",
+      "● Okay, einverstanden. Ich komme mit."
+     ],
+     "a": "▪ Ich habe zwei Tickets für ein Basketballspiel. Kommst du mit? ● Hm, meinst du? Basketball finde ich eher langweilig. ▪ Na los, das ist sicher aufregend! ● Okay, einverstanden. Ich komme mit.",
+     "gw": {
+      "uz": "Tartib: taklif → ikkilanish yoki rad → ko‘ndirish → rozilik. Ko‘ndirish faqat «yo‘q» yoki «bilmadim»dan keyin keladi. Misol: <b>Kommst du mit ins Kino? – Hm, lieber nicht. – Komm, der Film ist toll! – Okay.</b>",
+      "ru": "Порядок: предложение → сомнение или отказ → уговоры → согласие. Уговоры идут только после «нет» или «не знаю». Пример: <b>Kommst du mit ins Kino? – Hm, lieber nicht. – Komm, der Film ist toll! – Okay.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Hast du am Samstag Zeit? Ich möchte in die Oper gehen.",
+      "● Also, ich weiß nicht. Opern finde ich eher langweilig.",
+      "▪ Ach, komm schon, Elif! Das macht bestimmt Spaß!",
+      "● Hm, vielleicht. Okay, das machen wir."
+     ],
+     "a": "▪ Hast du am Samstag Zeit? Ich möchte in die Oper gehen. ● Also, ich weiß nicht. Opern finde ich eher langweilig. ▪ Ach, komm schon, Elif! Das macht bestimmt Spaß! ● Hm, vielleicht. Okay, das machen wir."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Wollen wir am Freitag ins Musical ___?<br>● Ja, gern! → <b>gehen</b>",
+     "q": "einverstanden · davon · leider · mit",
+     "s": "▪ Ich habe Tickets für die Zaubershow. Kommst du ___?\n● Sehr nett, aber am Freitag kann ich ___ nicht. Ich muss lernen.\n▪ Schade! Und am Sonntag? Was hältst du ___?\n● Okay, ___. Ich komme mit.",
+     "a": [
+      [
+       "mit"
+      ],
+      [
+       "leider"
+      ],
+      [
+       "davon"
+      ],
+      [
+       "einverstanden"
+      ]
+     ],
+     "gw": {
+      "uz": "Avval so‘z bankidagi so‘zlarni turiga ajrating: fe’l qismi, ot, sifat, ravish. Keyin bo‘shliq atrofiga qarang — u qaysi turdagi so‘zni talab qiladi? Misol: <b>Hast du Zeit?</b> — haben + ot.",
+      "ru": "Сначала разделите слова из банка по типу: часть глагола, существительное, прилагательное, наречие. Затем смотрите на окружение пропуска — какое слово оно требует? Пример: <b>Hast du Zeit?</b> — haben + существительное."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "Spaß · weiß · Idee · Lust",
+     "s": "▪ Hast du am Samstag Zeit? Wollen wir zum Eishockeyspiel gehen?\n● Also, ich ___ nicht. Eishockey finde ich nicht so interessant.\n▪ Ach, komm schon, Lisa! Das macht bestimmt ___!\n● Hm, meinst du? Okay, ich komme mit. Das ist eine gute ___.",
+     "a": [
+      [
+       "weiß"
+      ],
+      [
+       "Spaß"
+      ],
+      [
+       "Idee"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Zustimmen, ablehnen oder zögern? Ordnen Sie zu.",
+     "bsp": "Okay, einverstanden. → <b>zustimmen</b>",
+     "c": [
+      "✅ zustimmen",
+      "❌ höflich ablehnen",
+      "🤔 zögernd reagieren"
+     ],
+     "i": [
+      [
+       "Okay, das machen wir.",
+       0
+      ],
+      [
+       "Tut mir leid, da kann ich nicht.",
+       1
+      ],
+      [
+       "Hm, meinst du? Vielleicht.",
+       2
+      ],
+      [
+       "Ja, gern. Das ist eine gute Idee.",
+       0
+      ],
+      [
+       "Also, ich weiß nicht.",
+       2
+      ],
+      [
+       "Ich möchte schon, aber da muss ich lernen.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Javobning yo‘nalishini aniqlang: «ha» — rozilik; «yo‘q» + afsus va sabab — muloyim rad; aniq javob yo‘q — ikkilanish. Misol: <b>Gute Idee, ich komme!</b> → zustimmen; <b>Schade, am Samstag arbeite ich.</b> → ablehnen; <b>Ich muss noch überlegen.</b> → zögern.",
+      "ru": "Определите направление ответа: «да» — согласие; «нет» + сожаление и причина — вежливый отказ; ясного ответа нет — колебание. Пример: <b>Gute Idee, ich komme!</b> → zustimmen; <b>Schade, am Samstag arbeite ich.</b> → ablehnen; <b>Ich muss noch überlegen.</b> → zögern."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Vorschlagen oder überreden? Ordnen Sie zu.",
+     "bsp": "Kommst du mit? → <b>etwas vorschlagen</b>",
+     "c": [
+      "💡 etwas vorschlagen",
+      "💪 jemanden überreden"
+     ],
+     "i": [
+      [
+       "Wollen wir ins Musical gehen?",
+       0
+      ],
+      [
+       "Na los, das ist sicher aufregend!",
+       1
+      ],
+      [
+       "Hast du am Freitag Zeit?",
+       0
+      ],
+      [
+       "Ach, komm schon, Paul! Das macht bestimmt Spaß!",
+       1
+      ],
+      [
+       "Was hältst du davon?",
+       0
+      ],
+      [
+       "Komm schon, Mia, das ist mal was anderes!",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Taklif birinchi marta aytiladi, ko‘pincha savol shaklida. Ko‘ndirish — boshqa odam «yo‘q» yoki «bilmadim» degandan keyin keladi va ishontiradi. Misol: <b>Bitte, nur einmal! Du wirst sehen, es ist toll!</b> → überreden.",
+      "ru": "Предложение звучит впервые, часто в форме вопроса. Уговоры — после «нет» или «не знаю», они убеждают. Пример: <b>Bitte, nur einmal! Du wirst sehen, es ist toll!</b> → überreden."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Begeistert oder enttäuscht? Ordnen Sie zu.",
+     "bsp": "Das Essen war extrem lecker. → <b>begeistert</b>",
+     "c": [
+      "😍 begeistert",
+      "😞 enttäuscht"
+     ],
+     "i": [
+      [
+       "Der Abend war einfach nur super!",
+       0
+      ],
+      [
+       "Die Story war eher langweilig.",
+       1
+      ],
+      [
+       "Die Schauspieler waren fantastisch!",
+       0
+      ],
+      [
+       "Das Essen war nicht so lecker.",
+       1
+      ],
+      [
+       "Das Spiel war von Anfang bis Ende spannend.",
+       0
+      ],
+      [
+       "Der Besuch hat sich nicht gelohnt.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Sifat va kuchaytiruvchiga qarang: <b>super, toll</b>, undov — xursandlik; salbiy sifat yoki <b>nicht so / eher</b> bilan yumshatilgan baho — hafsalasi pir bo‘lish. Misol: <b>Die Musik war nicht so gut.</b> → enttäuscht.",
+      "ru": "Смотрите на прилагательное и усилитель: <b>super, toll</b>, восклицание — восторг; отрицательное слово или смягчение <b>nicht so / eher</b> — разочарование. Пример: <b>Die Musik war nicht so gut.</b> → enttäuscht."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Ihre Freundin sagt: „Wollen wir ins Konzert gehen?“ Sie möchten mitkommen. Sie sagen: <b>Okay, einverstanden. Ich komme mit.</b>",
+     "q": "Jonas sagt: „Wollen wir zum Basketballspiel gehen?“ Sie haben keine Zeit. Sie sagen: ___",
+     "o": [
+      "Okay, das machen wir.",
+      "Na los, das ist bestimmt spannend!",
+      "Sehr nett, aber am Samstag kann ich leider nicht."
+     ],
+     "a": 2,
+     "gw": {
+      "uz": "Vaziyatdagi rolingizni aniqlang: taklif qilasizmi, rad etasizmi yoki ko‘ndirasizmi? Rad etishda muloyim bo‘ling va sabab ayting. Misol: <b>Danke, aber am Sonntag habe ich schon etwas vor.</b>",
+      "ru": "Определите свою роль: вы предлагаете, отказываетесь или уговариваете? Отказывайте вежливо и с причиной. Пример: <b>Danke, aber am Sonntag habe ich schon etwas vor.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie möchten mit Mia in die Oper gehen. Sie fragen: ___",
+     "o": [
+      "Wollen wir in die Oper gehen?",
+      "Ich bin begeistert! Alles war so aufregend!",
+      "Also, ich weiß nicht. Opern finde ich eher langweilig."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Lisa sagt: „Hm, ich weiß nicht. Zaubershows finde ich langweilig.“ Sie möchten Lisa überreden. Sie sagen: ___",
+     "o": [
+      "Das geht leider nicht. Schade.",
+      "Ach, komm schon, Lisa! Das macht bestimmt Spaß!",
+      "Okay, einverstanden. Ich komme mit."
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

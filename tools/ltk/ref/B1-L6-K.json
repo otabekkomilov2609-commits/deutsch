@@ -1,0 +1,706 @@
+{
+ "title": "Lektion 6 · Kommunikation",
+ "sub": "kritisch bewerten · Mut machen",
+ "lv": "B1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "info",
+     "h": "<h4>Kritisch bewerten · Mut machen</h4><table class=\"ex-tb\"><tr><th>Funktion</th><th>Redemittel</th></tr><tr><td>🤔 kritisch bewerten</td><td>Also, ich bezweifle, dass …<br>Man muss auch sehen, dass …<br>Ich bin mir nicht sicher, ob …<br>Das klingt gut, aber …</td></tr><tr><td>💪 Mut machen</td><td>Das schaffst du bestimmt! / Das schaffen Sie bestimmt!<br>Das wird schon gut gehen!<br>Ich bin sicher, dass du das schaffst.<br>Keine Sorge, … / Du musst keine Angst haben.</td></tr><tr><td>💡 Vorschlag machen</td><td>Wie wäre es, wenn …?<br>Wir könnten …<br>Was hältst du von …?</td></tr><tr><td>🤝 sich einigen</td><td>Gut, dann machen wir es so.<br>Einverstanden!<br>Ich mache …, und du machst …</td></tr></table><p class=\"ex-note\">Tanqid qilganda avval yaxshi tomonini, keyin muammoni ayting: <b>Das klingt gut, aber …</b>. <b>dass</b> va <b>ob</b> dan keyin tuslangan fe’l gap oxiriga o‘tadi. Dalda berganda du/Sie ni adashtirmang: do‘stga <b>Das schaffst du!</b>, kattalarga <b>Das schaffen Sie!</b> telc Teil 3 da faqat «Ja, gut.» ball bermaydi — har safar fikr va sabab ayting.</p>",
+     "ru": "<h4>Kritisch bewerten · Mut machen</h4><table class=\"ex-tb\"><tr><th>Funktion</th><th>Redemittel</th></tr><tr><td>🤔 kritisch bewerten</td><td>Also, ich bezweifle, dass …<br>Man muss auch sehen, dass …<br>Ich bin mir nicht sicher, ob …<br>Das klingt gut, aber …</td></tr><tr><td>💪 Mut machen</td><td>Das schaffst du bestimmt! / Das schaffen Sie bestimmt!<br>Das wird schon gut gehen!<br>Ich bin sicher, dass du das schaffst.<br>Keine Sorge, … / Du musst keine Angst haben.</td></tr><tr><td>💡 Vorschlag machen</td><td>Wie wäre es, wenn …?<br>Wir könnten …<br>Was hältst du von …?</td></tr><tr><td>🤝 sich einigen</td><td>Gut, dann machen wir es so.<br>Einverstanden!<br>Ich mache …, und du machst …</td></tr></table><p class=\"ex-note\">Критикуя, сначала назовите плюс, потом проблему: <b>Das klingt gut, aber …</b>. После <b>dass</b> и <b>ob</b> спрягаемый глагол уходит в конец. Подбадривая, не путайте du/Sie: другу — <b>Das schaffst du!</b>, старшим — <b>Das schaffen Sie!</b> В telc Teil 3 одно «Ja, gut.» баллов не даёт — всегда говорите мнение и причину.</p>"
+    },
+    {
+     "t": "cat",
+     "h": "Kritisch bewerten oder Mut machen? Ordnen Sie zu.",
+     "bsp": "Das wird schon gut gehen! → <b>Mut machen</b>",
+     "c": [
+      "🤔 kritisch bewerten",
+      "💪 Mut machen"
+     ],
+     "i": [
+      [
+       "Also, ich bezweifle, dass das klappt.",
+       0
+      ],
+      [
+       "Das schaffst du bestimmt!",
+       1
+      ],
+      [
+       "Man muss auch sehen, dass das sehr teuer ist.",
+       0
+      ],
+      [
+       "Keine Sorge, du bist gut vorbereitet.",
+       1
+      ],
+      [
+       "Ich bin mir nicht sicher, ob das eine gute Idee ist.",
+       0
+      ],
+      [
+       "Ich bin sicher, dass du das kannst.",
+       1
+      ],
+      [
+       "Das klingt gut, aber ist das nicht gefährlich?",
+       0
+      ],
+      [
+       "Du musst keine Angst haben.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Maqsadga qarang: muammo yoki shubhani aytsangiz — <b>kritisch bewerten</b> (<b>ich bezweifle</b>, <b>man muss auch sehen</b>, <b>ich bin mir nicht sicher, ob</b>); odamni qo‘llab-quvvatlasangiz — <b>Mut machen</b> (<b>schaffst</b>, <b>keine Sorge</b>, <b>keine Angst</b>). Diqqat: <b>Ich bin sicher, dass …</b> — dalda, <b>Ich bin mir nicht sicher, ob …</b> — shubha.",
+      "ru": "Смотрите на цель: называете проблему или сомнение — <b>kritisch bewerten</b> (<b>ich bezweifle</b>, <b>man muss auch sehen</b>, <b>ich bin mir nicht sicher, ob</b>); поддерживаете человека — <b>Mut machen</b> (<b>schaffst</b>, <b>keine Sorge</b>, <b>keine Angst</b>). Внимание: <b>Ich bin sicher, dass …</b> — поддержка, <b>Ich bin mir nicht sicher, ob …</b> — сомнение."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Vorschlag, Kritik oder Mut? Ordnen Sie zu.",
+     "bsp": "Wir könnten Musik spielen. → <b>Vorschlag machen</b>",
+     "c": [
+      "💡 Vorschlag machen",
+      "🤔 kritisch bewerten",
+      "💪 Mut machen"
+     ],
+     "i": [
+      [
+       "Wie wäre es, wenn wir Fotos von den Reisen zeigen?",
+       0
+      ],
+      [
+       "Man muss auch sehen, dass der Raum ziemlich klein ist.",
+       1
+      ],
+      [
+       "Du musst keine Angst haben, alle sind nett.",
+       2
+      ],
+      [
+       "Was hältst du davon, wenn Mia von ihrer Reise erzählt?",
+       0
+      ],
+      [
+       "Ich bezweifle, dass so viele Leute kommen.",
+       1
+      ],
+      [
+       "Du schaffst das, ganz sicher!",
+       2
+      ],
+      [
+       "Ich bin mir nicht sicher, ob der Freitag ein guter Termin ist.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "telc Teil 3 dagi uch qadam: yangi g‘oya — <b>Vorschlag</b> (<b>Wie wäre es, wenn …?</b>, <b>Was hältst du davon, wenn …?</b>); g‘oyadagi muammo — <b>Kritik</b> (<b>Ich bezweifle, dass …</b>, <b>Man muss auch sehen, dass …</b>); qo‘rqayotgan sherikka — <b>Mut</b> (<b>Du schaffst das!</b>).",
+      "ru": "Три шага в telc Teil 3: новая идея — <b>Vorschlag</b> (<b>Wie wäre es, wenn …?</b>, <b>Was hältst du davon, wenn …?</b>); проблема в идее — <b>Kritik</b> (<b>Ich bezweifle, dass …</b>, <b>Man muss auch sehen, dass …</b>); партнёру, который боится, — <b>Mut</b> (<b>Du schaffst das!</b>)."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "bsp": "Ihr Freund: „Morgen habe ich meine erste Fahrstunde. Ich bin so nervös!“ → <b>Das schaffst du bestimmt!</b>",
+     "q": "Ihre Freundin Sevara: „Nächste Woche halte ich mein erstes Referat an der Uni. Ich habe total Angst!“",
+     "o": [
+      "Also, ich bezweifle, dass das klappt.",
+      "Keine Sorge, das wird schon gut gehen!",
+      "Wie wäre es, wenn wir ins Kino gehen?",
+      "Gut, dann machen wir es so."
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Sevara qo‘rqyapti — unga dalda kerak: <b>Keine Sorge, das wird schon gut gehen!</b> <b>Ich bezweifle</b> — tanqid (uni yanada qo‘rqitadi), <b>Wie wäre es …</b> — mavzudan tashqari taklif, <b>Gut, dann machen wir es so</b> — kelishuv iborasi.",
+      "ru": "Севара боится — ей нужна поддержка: <b>Keine Sorge, das wird schon gut gehen!</b> <b>Ich bezweifle</b> — критика (испугает ещё больше), <b>Wie wäre es …</b> — предложение не по теме, <b>Gut, dann machen wir es so</b> — фраза договорённости."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "q": "Timur: „Im Januar will ich allein in den Bergen zelten. Cool, oder?“ Sie finden das gefährlich.",
+     "o": [
+      "Das schaffst du bestimmt!",
+      "Wie schön! Viel Spaß!",
+      "Einverstanden, dann machen wir es so.",
+      "Ich bin mir nicht sicher, ob das allein eine gute Idee ist."
+     ],
+     "a": 3,
+     "gw": {
+      "uz": "Siz xavf ko‘ryapsiz — rejani tanqidiy baholang: <b>Ich bin mir nicht sicher, ob …</b> Dalda (<b>Das schaffst du bestimmt!</b>), quvonch (<b>Wie schön!</b>) va rozilik (<b>Einverstanden</b>) sizning fikringizni bildirmaydi.",
+      "ru": "Вы видите опасность — оцените план критически: <b>Ich bin mir nicht sicher, ob …</b> Поддержка (<b>Das schaffst du bestimmt!</b>), радость (<b>Wie schön!</b>) и согласие (<b>Einverstanden</b>) не передают ваше мнение."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "q": "Paul schreibt im Forum: „Morgen ist meine Führerscheinprüfung. Ich kann vor Angst nicht schlafen.“",
+     "o": [
+      "Ich bin sicher, dass du die Prüfung bestehst.",
+      "Gute Idee!",
+      "Man muss auch sehen, dass viele beim ersten Mal durchfallen.",
+      "Da bin ich anderer Meinung."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Paul fikr emas, his aytyapti — unga dalda kerak: <b>Ich bin sicher, dass du …</b> <b>Man muss auch sehen</b> — tanqid (to‘g‘ri bo‘lsa ham, hozir yordam bermaydi); <b>Gute Idee!</b> va <b>Da bin ich anderer Meinung</b> — taklif yoki fikrga javob, bu yerda taklif ham, fikr ham yo‘q.",
+      "ru": "Пауль говорит о чувстве, а не о мнении — ему нужна поддержка: <b>Ich bin sicher, dass du …</b> <b>Man muss auch sehen</b> — критика (даже если правда, сейчас не помогает); <b>Gute Idee!</b> и <b>Da bin ich anderer Meinung</b> — ответ на предложение или мнение, а их здесь нет."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "q": "Sie planen mit Lena ein Fest. Lena: „Wir könnten das Fest im Park machen, draußen.“ Das Fest ist im November.",
+     "o": [
+      "Das wird schon gut gehen!",
+      "Man muss auch sehen, dass es im November abends sehr kalt ist.",
+      "Gute Idee, so machen wir es!",
+      "Viel Glück!"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Noyabrda bog‘da — muammo bor, uni ayting: <b>Man muss auch sehen, dass …</b> <b>Das wird schon gut gehen!</b> — dalda (Lena qo‘rqmayapti), <b>Gute Idee, so machen wir es!</b> — muammoni ko‘rmay rozi bo‘lish, <b>Viel Glück!</b> — tilak.",
+      "ru": "Парк в ноябре — есть проблема, назовите её: <b>Man muss auch sehen, dass …</b> <b>Das wird schon gut gehen!</b> — поддержка (Лена не боится), <b>Gute Idee, so machen wir es!</b> — согласие, не замечая проблемы, <b>Viel Glück!</b> — пожелание."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "q": "Ihre Deutschlehrerin, Frau Weber: „Am Samstag singe ich im Chor zum ersten Mal ein Solo. Ich bin so aufgeregt!“",
+     "o": [
+      "Ich bezweifle, dass das klappt.",
+      "Einverstanden!",
+      "Das schaffst du bestimmt!",
+      "Das schaffen Sie bestimmt!"
+     ],
+     "a": 3,
+     "gw": {
+      "uz": "Dalda kerak, lekin o‘qituvchiga — <b>Sie</b>: <b>Das schaffen Sie bestimmt!</b> <b>Das schaffst du</b> — funksiya to‘g‘ri, register noto‘g‘ri. <b>Ich bezweifle</b> — tanqid, <b>Einverstanden!</b> — rozilik.",
+      "ru": "Нужна поддержка, но учительнице — на <b>Sie</b>: <b>Das schaffen Sie bestimmt!</b> <b>Das schaffst du</b> — функция верная, регистр нет. <b>Ich bezweifle</b> — критика, <b>Einverstanden!</b> — согласие."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was passt? Reagieren Sie.",
+     "q": "Ihr Bruder Aziz: „Ich mache ein Jahr Pause vom Studium und fahre mit dem Fahrrad durch Asien. Toll, oder?“ Sie sehen auch Probleme.",
+     "o": [
+      "Gut, dann machen wir es so.",
+      "Das schaffst du bestimmt!",
+      "Das klingt spannend, aber man muss auch sehen, dass du dann ein Jahr später fertig bist.",
+      "Wie wäre es, wenn wir am Wochenende Rad fahren?"
+     ],
+     "a": 2,
+     "gw": {
+      "uz": "Yaxshi tomon + muammo — odobli tanqid: <b>Das klingt spannend, aber man muss auch sehen, dass …</b> Kelishuv (<b>Gut, dann …</b>), dalda (<b>Das schaffst du</b>) va boshqa taklif (<b>Wie wäre es …</b>) muammoni aytmaydi.",
+      "ru": "Плюс + проблема — вежливая критика: <b>Das klingt spannend, aber man muss auch sehen, dass …</b> Договорённость (<b>Gut, dann …</b>), поддержка (<b>Das schaffst du</b>) и другое предложение (<b>Wie wäre es …</b>) проблему не называют."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie den Satz.",
+     "bsp": "Ihre Freundin hat Angst. → du · schaffst · bestimmt · Das → <b>Das schaffst du bestimmt.</b>",
+     "q": "Ihre Freundin macht morgen ihren ersten Tauchkurs und ist nervös.",
+     "w": [
+      "Ich",
+      "bin",
+      "sicher,",
+      "dass",
+      "du",
+      "das",
+      "schaffst"
+     ],
+     "a": "Ich bin sicher, dass du das schaffst.",
+     "alt": [],
+     "gw": {
+      "uz": "Dalda: <b>Ich bin sicher, dass …</b> — <b>dass</b> dan keyin tuslangan fe’l oxirida: <b>… dass du das schaffst.</b>",
+      "ru": "Поддержка: <b>Ich bin sicher, dass …</b> — после <b>dass</b> спрягаемый глагол в конце: <b>… dass du das schaffst.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie den Satz.",
+     "q": "Nodir will ohne Training einen Halbmarathon laufen. Sie haben Zweifel.",
+     "w": [
+      "Also,",
+      "ich",
+      "bezweifle,",
+      "dass",
+      "du",
+      "ohne",
+      "Training",
+      "durchhältst"
+     ],
+     "a": "Also, ich bezweifle, dass du ohne Training durchhältst.",
+     "alt": [],
+     "gw": {
+      "uz": "Shubha: <b>Also, ich bezweifle, dass …</b> — <b>dass</b>-gapda ajraladigan fe’l qo‘shilib yoziladi va oxirida turadi: <b>durchhältst</b>.",
+      "ru": "Сомнение: <b>Also, ich bezweifle, dass …</b> — в <b>dass</b>-предложении отделяемый глагол пишется слитно и стоит в конце: <b>durchhältst</b>."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Bilden Sie den Satz.",
+     "q": "Ein Freund möchte ein Jahr in Kanada studieren. Sie sehen ein Problem: Das kostet viel Geld.",
+     "w": [
+      "Man",
+      "muss",
+      "auch",
+      "sehen,",
+      "dass",
+      "das",
+      "teuer",
+      "ist"
+     ],
+     "a": "Man muss auch sehen, dass das teuer ist.",
+     "alt": [],
+     "gw": {
+      "uz": "Muammoni betaraf aytish: <b>Man muss auch sehen, dass …</b> — «buni ham hisobga olish kerak». <b>man</b> — shaxssiz, shuning uchun tanqid yumshoqroq eshitiladi.",
+      "ru": "Нейтрально назвать проблему: <b>Man muss auch sehen, dass …</b> — «надо учитывать и то, что …». <b>man</b> безличное, поэтому критика звучит мягче."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Das schaffst du! | ▪ Ich habe Angst vor der Prüfung. | ▪ Danke!<br>→ <b>▪ Ich habe Angst vor der Prüfung.<br>● Das schaffst du!<br>▪ Danke!</b>",
+     "w": [
+      "▪ Ich bin mir nicht sicher, ob die Leute das interessant finden.",
+      "● Doch, ganz bestimmt! Allein mit dem Fahrrad bis nach Samarkand – das macht nicht jeder.",
+      "▪ Ich soll beim „Abend der Mutigen“ von meiner Reise erzählen. Aber ich bin so aufgeregt!",
+      "▪ Na gut, dann probiere ich es.",
+      "● Keine Sorge, das wird schon gut gehen! Deine Fotos sind toll."
+     ],
+     "a": "▪ Ich soll beim „Abend der Mutigen“ von meiner Reise erzählen. Aber ich bin so aufgeregt! ● Keine Sorge, das wird schon gut gehen! Deine Fotos sind toll. ▪ Ich bin mir nicht sicher, ob die Leute das interessant finden. ● Doch, ganz bestimmt! Allein mit dem Fahrrad bis nach Samarkand – das macht nicht jeder. ▪ Na gut, dann probiere ich es.",
+     "gw": {
+      "uz": "Tartib: hayajon → dalda (<b>Keine Sorge …</b>) → shubha (<b>Ich bin mir nicht sicher, ob …</b>) → shubhaga qarshi dalda (<b>Doch, ganz bestimmt!</b>) → qaror. <b>Doch</b> faqat inkor yoki shubhadan keyin keladi.",
+      "ru": "Порядок: волнение → поддержка (<b>Keine Sorge …</b>) → сомнение (<b>Ich bin mir nicht sicher, ob …</b>) → возражение сомнению (<b>Doch, ganz bestimmt!</b>) → решение. <b>Doch</b> стоит только после отрицания или сомнения."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Redemittel.",
+     "bsp": "D___ s___ du bestimmt! → D<b>as</b> s<b>chaffst</b> du bestimmt!",
+     "s": "▪ Morgen ist mein erster Tag im Fitnessstudio.\n● K___ S___, das w___ schon gut gehen!",
+     "a": [
+      [
+       "eine"
+      ],
+      [
+       "orge"
+      ],
+      [
+       "ird"
+      ]
+     ],
+     "gw": {
+      "uz": "Dalda: <b>Keine Sorge, das wird schon gut gehen!</b> — <b>schon</b> bu yerda «albatta, xavotir olma» ma’nosida.",
+      "ru": "Поддержка: <b>Keine Sorge, das wird schon gut gehen!</b> — <b>schon</b> здесь значит «наверняка, не волнуйся»."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Redemittel.",
+     "s": "▪ Wir könnten das Fest im Park machen.\n● Ich b___ m___ nicht s___, o___ das im November eine gute Idee ist.",
+     "a": [
+      [
+       "in"
+      ],
+      [
+       "ir"
+      ],
+      [
+       "icher"
+      ],
+      [
+       "b"
+      ]
+     ],
+     "gw": {
+      "uz": "Shubha: <b>Ich bin mir nicht sicher, ob …</b> — <b>mir</b> (Dativ) shart; «ha/yo‘q» shubhasida <b>ob</b>, <b>dass</b> emas.",
+      "ru": "Сомнение: <b>Ich bin mir nicht sicher, ob …</b> — <b>mir</b> (Dativ) обязательно; при сомнении «да/нет» — <b>ob</b>, не <b>dass</b>."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Redemittel.",
+     "s": "▪ Ich will nächsten Monat einen Halbmarathon laufen.\n● A___, ich b___, dass du das in vier Wochen schaffst. M___ muss auch s___, dass du lange nicht trainiert hast.",
+     "a": [
+      [
+       "lso"
+      ],
+      [
+       "ezweifle"
+      ],
+      [
+       "an"
+      ],
+      [
+       "ehen"
+      ]
+     ],
+     "gw": {
+      "uz": "Ikki tanqid iborasi: <b>Also, ich bezweifle, dass …</b> (shaxsiy shubha) va <b>Man muss auch sehen, dass …</b> (dalil). <b>Also</b> — fikrni boshlovchi so‘z.",
+      "ru": "Две фразы критики: <b>Also, ich bezweifle, dass …</b> (личное сомнение) и <b>Man muss auch sehen, dass …</b> (аргумент). <b>Also</b> — слово для начала мысли."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie die Redemittel.",
+     "s": "▪ Frau Karimova, morgen ist meine Sprachprüfung, und ich bin total nervös.\n● Ich b___ s___, dass S___ das s___!",
+     "a": [
+      [
+       "in"
+      ],
+      [
+       "icher"
+      ],
+      [
+       "ie"
+      ],
+      [
+       "chaffen"
+      ]
+     ],
+     "gw": {
+      "uz": "Rasmiy dalda: <b>Ich bin sicher, dass Sie das schaffen!</b> — <b>Sie</b> bilan fe’l <b>-en</b>: <b>schaffen</b> (du bilan — <b>schaffst</b>).",
+      "ru": "Официальная поддержка: <b>Ich bin sicher, dass Sie das schaffen!</b> — с <b>Sie</b> глагол на <b>-en</b>: <b>schaffen</b> (с du — <b>schaffst</b>)."
+     }
+    },
+    {
+     "t": "chat",
+     "h": "Planen Sie gemeinsam: einen „Abend der Mutigen“ im Jugendzentrum.",
+     "bsp": "▪ Wir könnten Musik machen. ● Gute Idee, aber man muss auch sehen, dass es dann sehr laut wird.",
+     "who": "Laylo",
+     "goal": [
+      "Vorschlag",
+      "kritisch bewerten",
+      "Mut machen",
+      "Einigung"
+     ],
+     "st": [
+      {
+       "p": "Hallo! Wir sollen ja den „Abend der Mutigen“ im Jugendzentrum planen. Was meinst du, was machen wir an dem Abend?",
+       "o": [
+        {
+         "s": "Wie wäre es, wenn ein paar Jugendliche erzählen, was sie Mutiges gemacht haben – zum Beispiel eine Reise allein, einen neuen Sport oder ein Studium im Ausland?",
+         "ok": 1,
+         "g": 0
+        },
+        {
+         "s": "Ja, gut.",
+         "r": "Hm, „ja, gut“ – aber was genau? Hast du eine Idee für das Programm?",
+         "why": {
+          "uz": "Faqat «Ja, gut.» — telc’da ball yo‘q: na fikr, na sabab bor. Laylo savol berdi — taklif kerak: <b>Wie wäre es, wenn …?</b>",
+          "ru": "Только «Ja, gut.» — в telc баллов нет: нет ни мнения, ни причины. Лайло спросила — нужно предложение: <b>Wie wäre es, wenn …?</b>"
+         }
+        },
+        {
+         "s": "Also, ich bezweifle, dass das klappt.",
+         "r": "Was meinst du? Wir haben doch noch gar nichts geplant! Was schlägst du vor?",
+         "why": {
+          "uz": "Hali hech qanday g‘oya yo‘q — tanqid qiladigan narsa ham yo‘q. Avval taklif: <b>Wie wäre es, wenn …?</b>",
+          "ru": "Ещё нет ни одной идеи — критиковать нечего. Сначала предложение: <b>Wie wäre es, wenn …?</b>"
+         }
+        }
+       ]
+      },
+      {
+       "p": "Super Idee! Und ich dachte, wir machen das Ganze draußen im Park, mit Lagerfeuer. Am 20. November.",
+       "o": [
+        {
+         "s": "Wie wäre es mit einem Kinoabend?",
+         "r": "Ein Kinoabend? Aber es geht doch um mutige Jugendliche! Was sagst du zu meiner Idee mit dem Park?",
+         "why": {
+          "uz": "Mavzudan chiqish: Laylo taklif qildi — unga baho bering. Noyabrda bog‘ — muammo: <b>Man muss auch sehen, dass …</b>",
+          "ru": "Уход от темы: Лайло предложила — оцените её идею. Парк в ноябре — проблема: <b>Man muss auch sehen, dass …</b>"
+         }
+        },
+        {
+         "s": "Hm, man muss auch sehen, dass es im November abends schon sehr kalt ist. Vielleicht lieber im großen Raum im Jugendzentrum?",
+         "ok": 1,
+         "g": 1
+        },
+        {
+         "s": "Das schaffst du bestimmt!",
+         "r": "Äh … ich habe doch keine Angst. Ich frage, ob der Park ein guter Ort ist. Was meinst du?",
+         "why": {
+          "uz": "Dalda noto‘g‘ri joyda: Laylo qo‘rqmayapti, joyni baholashni so‘rayapti — <b>Man muss auch sehen, dass …</b>",
+          "ru": "Поддержка не к месту: Лайло не боится, она просит оценить место — <b>Man muss auch sehen, dass …</b>"
+         }
+        }
+       ]
+      },
+      {
+       "p": "Stimmt, das ist ein Argument. Dann im Jugendzentrum. Und noch eine Idee: Jeder Gast muss am Ende eine Mutprobe machen – zum Beispiel vor allen singen.",
+       "o": [
+        {
+         "s": "Ja, gut.",
+         "r": "Nur „ja, gut“? Findest du das wirklich gut, oder siehst du ein Problem?",
+         "why": {
+          "uz": "Faqat «Ja, gut.» — telc’da ball yo‘q: na fikr, na sabab bor. Majburiy «Mutprobe» — muammo bor, ayting: <b>Ich bin mir nicht sicher, ob …</b>",
+          "ru": "Только «Ja, gut.» — в telc баллов нет: нет ни мнения, ни причины. Обязательная «Mutprobe» — есть проблема, скажите о ней: <b>Ich bin mir nicht sicher, ob …</b>"
+         }
+        },
+        {
+         "s": "Das schaffen Sie bestimmt!",
+         "r": "„Sie“? Wir sind doch Freunde! Und wer soll was schaffen? Was hältst du von der Mutprobe?",
+         "why": {
+          "uz": "Ikki xato: do‘stga <b>Sie</b> deyilmaydi, va bu yerda dalda emas, baho kerak: <b>Ich bin mir nicht sicher, ob …</b>",
+          "ru": "Две ошибки: другу не говорят <b>Sie</b>, и здесь нужна не поддержка, а оценка: <b>Ich bin mir nicht sicher, ob …</b>"
+         }
+        },
+        {
+         "s": "Ich bin mir nicht sicher, ob das eine gute Idee ist. Viele Gäste sind schüchtern und kommen dann vielleicht gar nicht.",
+         "ok": 1,
+         "g": 1
+        }
+       ]
+      },
+      {
+       "p": "Okay, keine Mutprobe für alle. Aber ehrlich gesagt: Ich soll an dem Abend erzählen, wie ich meinen ersten Halbmarathon gelaufen bin. Und ich habe jetzt schon Angst, vor so vielen Leuten zu sprechen.",
+       "o": [
+        {
+         "s": "Keine Sorge, das schaffst du bestimmt! Du erzählst so gut, und im Jugendzentrum kennen dich doch alle.",
+         "ok": 1,
+         "g": 2
+        },
+        {
+         "s": "Man muss auch sehen, dass sehr viele Leute kommen.",
+         "r": "Danke, jetzt bin ich noch nervöser! Kannst du mir nicht ein bisschen Mut machen?",
+         "why": {
+          "uz": "Laylo qo‘rqyapti — tanqid uni battar qo‘rqitadi. Dalda kerak: <b>Keine Sorge, das schaffst du bestimmt!</b>",
+          "ru": "Лайло боится — критика пугает ещё больше. Нужна поддержка: <b>Keine Sorge, das schaffst du bestimmt!</b>"
+         }
+        },
+        {
+         "s": "Wie wäre es, wenn wir Pizza bestellen?",
+         "r": "Pizza? Ich spreche gerade von meiner Angst! Was sagst du dazu?",
+         "why": {
+          "uz": "Mavzudan chiqish: sherik his-tuyg‘usini aytdi — javob bering: <b>Keine Sorge, …</b>",
+          "ru": "Уход от темы: партнёр сказал о своих чувствах — ответьте на это: <b>Keine Sorge, …</b>"
+         }
+        }
+       ]
+      },
+      {
+       "p": "Danke, das ist lieb. Aber was ist, wenn ich auf der Bühne alles vergesse?",
+       "o": [
+        {
+         "s": "Ich bezweifle, dass du dich gut vorbereitest.",
+         "r": "Hey, warum sagst du so etwas? Ich brauche jetzt ein bisschen Unterstützung!",
+         "why": {
+          "uz": "Shubha iborasi bu yerda haqoratdek eshitiladi. Dalda + maslahat: <b>Das wird schon gut gehen! …</b>",
+          "ru": "Фраза сомнения здесь звучит обидно. Поддержка + совет: <b>Das wird schon gut gehen! …</b>"
+         }
+        },
+        {
+         "s": "Da hast du recht.",
+         "r": "Recht? Also vergesse ich wirklich alles? Mach mir lieber Mut!",
+         "why": {
+          "uz": "Qo‘rquvga rozi bo‘lish — dalda emas. Kerak: <b>Das wird schon gut gehen!</b> va kichik maslahat.",
+          "ru": "Согласиться со страхом — не поддержка. Нужно: <b>Das wird schon gut gehen!</b> и маленький совет."
+         }
+        },
+        {
+         "s": "Das wird schon gut gehen! Schreib dir ein paar Stichwörter auf eine Karte, dann kann nichts passieren.",
+         "ok": 1,
+         "g": 2
+        }
+       ]
+      },
+      {
+       "p": "Okay, ich versuche es. Also: Erzählungen von mutigen Jugendlichen, im großen Raum, ohne Mutprobe für alle. Wer macht die Plakate?",
+       "o": [
+        {
+         "s": "Ja, gut.",
+         "r": "Ja, gut – aber wer macht denn jetzt die Plakate? Du oder ich?",
+         "why": {
+          "uz": "Faqat «Ja, gut.» — telc’da ball yo‘q: na fikr, na sabab bor. Oxirida vazifalarni bo‘lib, kelishing: <b>Gut, dann machen wir es so: …</b>",
+          "ru": "Только «Ja, gut.» — в telc баллов нет: нет ни мнения, ни причины. В конце распределите задачи и договоритесь: <b>Gut, dann machen wir es so: …</b>"
+         }
+        },
+        {
+         "s": "Gut, dann machen wir es so: Ich mache die Plakate, und du schreibst die Einladung für die Website. Einverstanden?",
+         "ok": 1,
+         "g": 3
+        },
+        {
+         "s": "Ich bin mir nicht sicher, ob wir den Abend überhaupt machen sollen.",
+         "r": "Was? Jetzt haben wir doch alles geplant! Komm, wir müssen nur noch die Arbeit verteilen.",
+         "why": {
+          "uz": "Oxirgi qadamda hammasini qaytadan shubha ostiga qo‘yish — kelishuvni buzadi. Kerak: <b>Gut, dann machen wir es so …</b>",
+          "ru": "На последнем шаге ставить всё под сомнение — значит сорвать договорённость. Нужно: <b>Gut, dann machen wir es so …</b>"
+         }
+        }
+       ]
+      }
+     ],
+     "end": "Einverstanden! Dann machen wir es so. Ich freue mich schon auf den Abend.",
+     "gw": {
+      "uz": "telc Teil 3 yo‘li: <b>taklif</b> (Wie wäre es, wenn …?) → sherik taklifini <b>tanqidiy baholash</b> va sabab (Man muss auch sehen, dass … / Ich bin mir nicht sicher, ob …) → qo‘rqqan sherikka <b>dalda</b> (Keine Sorge, das schaffst du bestimmt!) → <b>kelishuv</b> va vazifalarni bo‘lish (Gut, dann machen wir es so: Ich mache …, und du …).",
+      "ru": "Схема telc Teil 3: <b>предложение</b> (Wie wäre es, wenn …?) → <b>критическая оценка</b> идеи партнёра с причиной (Man muss auch sehen, dass … / Ich bin mir nicht sicher, ob …) → <b>поддержка</b> испуганного партнёра (Keine Sorge, das schaffst du bestimmt!) → <b>договорённость</b> и распределение задач (Gut, dann machen wir es so: Ich mache …, und du …)."
+     }
+    },
+    {
+     "t": "chat",
+     "h": "Sprechen Sie mit Ihrer Nachbarin: Sie möchte mit 68 schwimmen lernen.",
+     "bsp": "▪ Ich bin zu alt für einen Tanzkurs. ● Ach was, das schaffen Sie bestimmt!",
+     "who": "Frau Lehmann",
+     "goal": [
+      "Mut machen",
+      "kritisch bewerten",
+      "Vorschlag"
+     ],
+     "st": [
+      {
+       "p": "Wissen Sie was? Ich bin 68 und kann nicht schwimmen. Jetzt möchte ich es endlich lernen. Aber vielleicht bin ich zu alt dafür?",
+       "o": [
+        {
+         "s": "Das schaffst du bestimmt!",
+         "r": "Oh, wir duzen uns jetzt? … Aber meinen Sie wirklich, dass ich das noch lernen kann?",
+         "why": {
+          "uz": "Funksiya to‘g‘ri, register noto‘g‘ri: qo‘shni ayolga — <b>Sie</b>: <b>Das schaffen Sie bestimmt!</b>",
+          "ru": "Функция верная, регистр нет: соседке — на <b>Sie</b>: <b>Das schaffen Sie bestimmt!</b>"
+         }
+        },
+        {
+         "s": "Ich bin mir nicht sicher, ob das in Ihrem Alter eine gute Idee ist.",
+         "r": "Hm … Das hat mein Sohn auch gesagt. Ich dachte, Sie machen mir ein bisschen Mut!",
+         "why": {
+          "uz": "U o‘ziga ishonmayapti — dalda kerak, tanqid emas: <b>Das schaffen Sie bestimmt!</b>",
+          "ru": "Она не уверена в себе — нужна поддержка, а не критика: <b>Das schaffen Sie bestimmt!</b>"
+         }
+        },
+        {
+         "s": "Ach was, dafür ist man nie zu alt! Das schaffen Sie bestimmt.",
+         "ok": 1,
+         "g": 0
+        }
+       ]
+      },
+      {
+       "p": "Danke! Meine Idee: Ich gehe im Oktober einfach allein an den See und probiere es.",
+       "o": [
+        {
+         "s": "Also, ich bezweifle, dass das eine gute Idee ist. Das Wasser ist im Oktober schon sehr kalt, und allein ist es gefährlich.",
+         "ok": 1,
+         "g": 1
+        },
+        {
+         "s": "Das wird schon gut gehen!",
+         "r": "Wirklich? Ganz allein im kalten See? Sehen Sie da gar kein Problem?",
+         "why": {
+          "uz": "Xavfli rejaga dalda — xato. Muammoni sabab bilan ayting: <b>Also, ich bezweifle, dass …</b>",
+          "ru": "Поддерживать опасный план — ошибка. Назовите проблему с причиной: <b>Also, ich bezweifle, dass …</b>"
+         }
+        },
+        {
+         "s": "Ja, gut.",
+         "r": "„Ja, gut“? Und was denken Sie wirklich über meinen Plan?",
+         "why": {
+          "uz": "Faqat «Ja, gut.» — telc’da ball yo‘q: na fikr, na sabab bor. Rejani baholang: <b>Also, ich bezweifle, dass …</b>",
+          "ru": "Только «Ja, gut.» — в telc баллов нет: нет ни мнения, ни причины. Оцените план: <b>Also, ich bezweifle, dass …</b>"
+         }
+        }
+       ]
+      },
+      {
+       "p": "Hm, da haben Sie wahrscheinlich recht. Aber was soll ich dann machen?",
+       "o": [
+        {
+         "s": "Man muss auch sehen, dass Schwimmen schwer ist.",
+         "r": "Also soll ich es lieber lassen? Haben Sie keine bessere Idee für mich?",
+         "why": {
+          "uz": "Yana tanqid — yechim yo‘q. U «nima qilay?» deb so‘radi — taklif kerak: <b>Wie wäre es mit …?</b>",
+          "ru": "Снова критика без решения. Она спросила «что мне делать?» — нужно предложение: <b>Wie wäre es mit …?</b>"
+         }
+        },
+        {
+         "s": "Wie wäre es mit einem Schwimmkurs im Hallenbad? Dort gibt es auch Kurse für Erwachsene.",
+         "ok": 1,
+         "g": 2
+        },
+        {
+         "s": "Gut, dann machen wir es so.",
+         "r": "Wie denn? Wir haben doch noch gar nichts besprochen! Was schlagen Sie vor?",
+         "why": {
+          "uz": "Kelishuv iborasi, lekin hali taklif yo‘q. Avval: <b>Wie wäre es mit …?</b>",
+          "ru": "Фраза договорённости, но предложения ещё нет. Сначала: <b>Wie wäre es mit …?</b>"
+         }
+        }
+       ]
+      },
+      {
+       "p": "Ein Kurs … Aber da sind bestimmt nur junge Leute, und alle sehen mir zu. Das ist mir peinlich.",
+       "o": [
+        {
+         "s": "Ich bin mir nicht sicher, ob Sie das schaffen.",
+         "r": "Na, vielen Dank! Jetzt habe ich noch mehr Angst. Was meinen Sie denn wirklich?",
+         "why": {
+          "uz": "Uyalayotgan odamga shubha — uni to‘xtatadi. Dalda: <b>Keine Sorge, … Sie müssen keine Angst haben.</b>",
+          "ru": "Сомнение смущённому человеку — остановит его. Поддержка: <b>Keine Sorge, … Sie müssen keine Angst haben.</b>"
+         }
+        },
+        {
+         "s": "Wie wäre es, wenn wir zusammen Kaffee trinken?",
+         "r": "Kaffee? Ich spreche doch gerade vom Schwimmkurs! Was meinen Sie dazu?",
+         "why": {
+          "uz": "Mavzudan chiqish: uning xavotiriga javob bering — <b>Keine Sorge, …</b>",
+          "ru": "Уход от темы: ответьте на её беспокойство — <b>Keine Sorge, …</b>"
+         }
+        },
+        {
+         "s": "Keine Sorge, in den Kursen für Erwachsene sind oft auch ältere Leute. Sie müssen wirklich keine Angst haben.",
+         "ok": 1,
+         "g": 0
+        }
+       ]
+      }
+     ],
+     "end": "Sie haben recht. Morgen rufe ich im Hallenbad an. Danke, dass Sie mir Mut machen!",
+     "gw": {
+      "uz": "Kattalar bilan — <b>Sie</b>: <b>Das schaffen Sie bestimmt</b>, <b>Sie müssen keine Angst haben</b>. Qo‘rquvga — dalda, xavfli rejaga — sababli tanqid (<b>Also, ich bezweifle, dass …</b>), «nima qilay?» savoliga — taklif (<b>Wie wäre es mit …?</b>).",
+      "ru": "Со старшими — на <b>Sie</b>: <b>Das schaffen Sie bestimmt</b>, <b>Sie müssen keine Angst haben</b>. На страх — поддержка, на опасный план — критика с причиной (<b>Also, ich bezweifle, dass …</b>), на вопрос «что делать?» — предложение (<b>Wie wäre es mit …?</b>)."
+     }
+    },
+    {
+     "t": "say",
+     "h": "Sagen Sie es auf Deutsch.",
+     "bsp": "Ihre Schwester hat Angst vor dem Zahnarzt. Machen Sie ihr Mut. → <b>Keine Sorge, das wird schon gut gehen!</b>",
+     "q": "Ihr Freund Paul spielt am Samstag zum ersten Mal Basketball im Verein und ist sehr nervös. Machen Sie ihm Mut.",
+     "a": "Keine Sorge, Paul, das schaffst du bestimmt!",
+     "gw": {
+      "uz": "Do‘stga dalda — <b>du</b>: <b>Das schaffst du bestimmt!</b> yoki <b>Ich bin sicher, dass du das schaffst.</b>",
+      "ru": "Поддержка другу — на <b>du</b>: <b>Das schaffst du bestimmt!</b> или <b>Ich bin sicher, dass du das schaffst.</b>"
+     }
+    },
+    {
+     "t": "say",
+     "h": "Sagen Sie es auf Deutsch.",
+     "q": "Malika möchte das Fest im Jugendzentrum schon um 16 Uhr beginnen. Sie denken: Um 16 Uhr haben viele noch Unterricht. Bewerten Sie den Vorschlag kritisch.",
+     "a": "Man muss auch sehen, dass viele um 16 Uhr noch Unterricht haben.",
+     "gw": {
+      "uz": "Muammo + sabab: <b>Man muss auch sehen, dass …</b> yoki <b>Ich bin mir nicht sicher, ob 16 Uhr gut ist, weil …</b> Fe’l <b>dass</b>-gap oxirida: <b>… Unterricht haben.</b>",
+      "ru": "Проблема + причина: <b>Man muss auch sehen, dass …</b> или <b>Ich bin mir nicht sicher, ob 16 Uhr gut ist, weil …</b> Глагол в конце <b>dass</b>-предложения: <b>… Unterricht haben.</b>"
+     }
+    },
+    {
+     "t": "say",
+     "h": "Sagen Sie es auf Deutsch.",
+     "q": "Ihre Kursleiterin, Frau Schmidt, läuft am Sonntag ihren ersten Marathon und ist sehr aufgeregt. Machen Sie ihr Mut.",
+     "a": "Ich bin sicher, dass Sie das schaffen!",
+     "gw": {
+      "uz": "Rasmiy dalda — <b>Sie</b>: <b>Ich bin sicher, dass Sie das schaffen!</b> yoki <b>Das schaffen Sie bestimmt!</b>",
+      "ru": "Официальная поддержка — на <b>Sie</b>: <b>Ich bin sicher, dass Sie das schaffen!</b> или <b>Das schaffen Sie bestimmt!</b>"
+     }
+    }
+   ]
+  }
+ ]
+}

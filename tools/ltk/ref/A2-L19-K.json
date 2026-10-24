@@ -1,0 +1,213 @@
+{
+ "title": "Lektion 19 · Kommunikation",
+ "sub": "Überraschung ausdrücken · etwas kommentieren",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "cat",
+     "h": "Überraschung oder Kommentar? Ordnen Sie zu.",
+     "bsp": "Echt? Boah! → <b>😮 Überraschung ausdrücken</b>",
+     "c": [
+      "😮 Überraschung ausdrücken",
+      "💬 etwas kommentieren"
+     ],
+     "i": [
+      [
+       "Das ist ja unglaublich!",
+       0
+      ],
+      [
+       "So ein Pech!",
+       1
+      ],
+      [
+       "Das wundert mich jetzt aber.",
+       0
+      ],
+      [
+       "Das war bestimmt lustig.",
+       1
+      ],
+      [
+       "Nicht zu glauben!",
+       0
+      ],
+      [
+       "Das ist ja nervig!",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Hayrat — ishonmaslik va kutilmaganlik: <b>Wirklich?!</b>, <b>Das gibt’s doch nicht!</b> Izoh — voqeaga baho yoki taxmin: <b>Das war sicher schön.</b> Misol: <b>Was? Echt?</b> → Überraschung.",
+      "ru": "Удивление — недоверие и неожиданность: <b>Wirklich?!</b>, <b>Das gibt’s doch nicht!</b> Комментарий — оценка события или догадка: <b>Das war sicher schön.</b> Пример: <b>Was? Echt?</b> → Überraschung."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*So ein Glück!* oder *So ein Pech!*? Ordnen Sie zu.",
+     "bsp": "Ich habe 100 Euro gefunden. → <b>😀 So ein Glück!</b>",
+     "c": [
+      "😀 So ein Glück!",
+      "🙁 So ein Pech!"
+     ],
+     "i": [
+      [
+       "Ich habe die B1-Prüfung bestanden.",
+       0
+      ],
+      [
+       "Ich habe meinen Zug verpasst.",
+       1
+      ],
+      [
+       "Mein Handy ist kaputt.",
+       1
+      ],
+      [
+       "Ich habe ein Ticket für das Konzert gewonnen.",
+       0
+      ],
+      [
+       "Ich bin krank und kann nicht mit in den Urlaub fahren.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Voqea yaxshimi yoki yomonmi? Yutuq, sovg‘a, omad → <b>So ein Glück!</b>; yo‘qotish, kasallik, kechikish → <b>So ein Pech!</b> Misol: <b>Mein Fahrrad ist weg.</b> → Pech.",
+      "ru": "Событие хорошее или плохое? Выигрыш, подарок, удача → <b>So ein Glück!</b>; потеря, болезнь, опоздание → <b>So ein Pech!</b> Пример: <b>Mein Fahrrad ist weg.</b> → Pech."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihr Freund erzählt: Er hat mit 70 Jahren einen Salto gemacht. → <b>Das ist ja unglaublich!</b>",
+     "q": "Ihre Kollegin musste drei Stunden im Stau warten.",
+     "o": [
+      "So ein Glück!",
+      "Das war sicher nervig.",
+      "Das ist ja lustig!"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Avval vaziyatni baholang: kutilmaganmi (hayrat), yomonmi yoki yaxshimi (izoh)? <b>bestimmt/sicher</b> — taxminiy izoh: «shunday bo‘lgan bo‘lsa kerak». Misol: <b>Das war bestimmt anstrengend.</b>",
+      "ru": "Сначала оцените ситуацию: неожиданно (удивление), плохо или хорошо (комментарий)? <b>bestimmt/sicher</b> — комментарий-догадка: «наверное, так было». Пример: <b>Das war bestimmt anstrengend.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Opa hat sich mit 80 Jahren tätowieren lassen. Das finden Sie sehr überraschend.",
+     "o": [
+      "Das wundert mich jetzt aber.",
+      "So ein Pech!",
+      "Das war bestimmt nervig."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Freunde waren gestern in einer Karaoke-Bar. Sie denken: Sie hatten bestimmt viel Spaß.",
+     "o": [
+      "Das ist jetzt nicht wahr, oder?",
+      "Das war sicher lustig.",
+      "So ein Pech!"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ein Freund fragt: „Machst du mit mir einen Triathlon?“ Sie sind nicht sportlich und möchten das nicht.",
+     "o": [
+      "Das ist ja unglaublich!",
+      "So ein Glück!",
+      "Das wäre nichts für mich."
+     ],
+     "a": 2
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *wahr*, *stimmt*, *unglaublich*, *wundert*.",
+     "bsp": "▪ Ich habe zum ersten Mal Schnecken gegessen!<br>● ___? Boah! → <b>Echt</b>",
+     "s": "▪ Ich habe mit 50 Jahren zum ersten Mal einen Salto gemacht!\n● Was!? Das ist jetzt nicht ___, oder?\n▪ Doch, das ___! Ich mache seit einem Jahr Sport.\n● Das ist ja ___! Das ___ mich jetzt aber.",
+     "a": [
+      [
+       "wahr"
+      ],
+      [
+       "stimmt"
+      ],
+      [
+       "unglaublich"
+      ],
+      [
+       "wundert"
+      ]
+     ],
+     "gw": {
+      "uz": "Ishonmaslik va tasdiq iboralari: ● shubha bildiradi, ▪ «ha, rost» deydi, keyin ● hayratlanadi. <b>es/das</b> bilan fe’l <b>-t</b> oladi. Misol: <b>Echt? Das glaube ich nicht! – Doch!</b>",
+      "ru": "Выражения недоверия и подтверждения: ● сомневается, ▪ говорит «да, правда», затем ● удивляется. С <b>es/das</b> глагол на <b>-t</b>. Пример: <b>Echt? Das glaube ich nicht! – Doch!</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *nervig*, *Glück*, *nichts*.",
+     "bsp": "▪ Mein Opa hat mit 70 einen Salto gemacht!<br>● Das ist ja ___! → <b>unglaublich</b>",
+     "s": "▪ Gestern musste ich bis 22 Uhr im Büro bleiben.\n● Oh Mann! Das war sicher ___.\n▪ Ja, total. Aber dann hat mein Chef gesagt: Morgen hast du frei!\n● So ein ___!\n▪ Ja! Kommst du heute mit in die Karaoke-Bar?\n● Nein danke, das wäre ___ für mich.",
+     "a": [
+      [
+       "nervig"
+      ],
+      [
+       "Glück"
+      ],
+      [
+       "nichts"
+      ]
+     ],
+     "gw": {
+      "uz": "Har reaksiya voqeaga mos bo‘lsin: yomon voqeaga — hamdardlik izohi, yaxshisiga — quvonch, taklifga — rozilik yoki rad. Misol: <b>Das war sicher anstrengend.</b>",
+      "ru": "Реакция должна соответствовать событию: на плохое — сочувственный комментарий, на хорошее — радость, на предложение — согласие или отказ. Пример: <b>Das war sicher anstrengend.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Doch, das stimmt! | ▪ Ich habe einen Fisch gefangen! | ● Echt? Das ist ja unglaublich!<br>→ <b>▪ Ich habe einen Fisch gefangen!<br>● Echt? Das ist ja unglaublich!<br>▪ Doch, das stimmt!</b>",
+     "w": [
+      "▪ Wirklich? Warum denn so spät?",
+      "▪ Ich konnte mit fünf Jahren schon Fahrrad fahren.",
+      "▪ Oh, so ein Pech!",
+      "● Echt? Das wundert mich. Ich konnte das erst mit zehn.",
+      "● Ich durfte vorher kein Fahrrad haben. Meine Eltern wollten das nicht."
+     ],
+     "a": "▪ Ich konnte mit fünf Jahren schon Fahrrad fahren. ● Echt? Das wundert mich. Ich konnte das erst mit zehn. ▪ Wirklich? Warum denn so spät? ● Ich durfte vorher kein Fahrrad haben. Meine Eltern wollten das nicht. ▪ Oh, so ein Pech!",
+     "gw": {
+      "uz": "Tartib: yangilik → hayrat yoki shubha → tasdiq yoki izoh → reaksiya. Shubhadan (<b>…, oder?</b>) keyin tasdiq (<b>Doch!</b>) keladi; <b>Warum?</b> dan keyin sabab. Misol: <b>Ich habe gewonnen! – Echt? – Ja, wirklich!</b>",
+      "ru": "Порядок: новость → удивление или сомнение → подтверждение или пояснение → реакция. После сомнения (<b>…, oder?</b>) идёт подтверждение (<b>Doch!</b>); после <b>Warum?</b> — причина. Пример: <b>Ich habe gewonnen! – Echt? – Ja, wirklich!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "● Wow! Das Tattoo ist ja toll!",
+      "● Echt? Das ist jetzt nicht wahr, oder?",
+      "▪ Danke! Das wollte ich schon lange machen.",
+      "▪ Ich habe mich gestern tätowieren lassen!",
+      "▪ Doch, das stimmt! Hier, schau mal."
+     ],
+     "a": "▪ Ich habe mich gestern tätowieren lassen! ● Echt? Das ist jetzt nicht wahr, oder? ▪ Doch, das stimmt! Hier, schau mal. ● Wow! Das Tattoo ist ja toll! ▪ Danke! Das wollte ich schon lange machen."
+    }
+   ]
+  }
+ ]
+}

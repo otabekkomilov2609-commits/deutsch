@@ -1,0 +1,213 @@
+{
+ "title": "Lektion 12 · Kommunikation",
+ "sub": "höfliche Fragen · Enttäuschung äußern · reagieren",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Im ersten Stock. | ▪ Vielen Dank! | ▪ Könnten Sie mir sagen, wo der Kurs ist?<br>→ <b>▪ Könnten Sie mir sagen, wo der Kurs ist?<br>● Im ersten Stock.<br>▪ Vielen Dank!</b>",
+     "w": [
+      "▪ Guten Tag. Ich möchte wissen, ob ich für das FSJ einen Führerschein brauche.",
+      "● Nein, das ist keine Voraussetzung.",
+      "▪ Und wissen Sie, wann das FSJ beginnt?",
+      "● Im September. Sie können sich gern bewerben."
+     ],
+     "a": "▪ Guten Tag. Ich möchte wissen, ob ich für das FSJ einen Führerschein brauche. ● Nein, das ist keine Voraussetzung. ▪ Und wissen Sie, wann das FSJ beginnt? ● Im September. Sie können sich gern bewerben.",
+     "gw": {
+      "uz": "Rasmiy suhbat: salom + vositali savol (<b>Ich möchte wissen, ob …</b>) → javob → yana savol → javob. Har javob savolga mos bo‘lsin: «ha/yo‘q» yoki sana. Misol: <b>Wissen Sie, wann der Kurs beginnt? – Im Mai.</b>",
+      "ru": "Официальный разговор: приветствие + косвенный вопрос (<b>Ich möchte wissen, ob …</b>) → ответ → ещё вопрос → ответ. Ответ должен подходить к вопросу: «да/нет» или дата. Пример: <b>Wissen Sie, wann der Kurs beginnt? – Im Mai.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Hallo Lisa! Wie ist dein Praktikum?",
+      "● Ehrlich gesagt: Das habe ich mir anders vorgestellt! Ich koche nur Kaffee.",
+      "▪ Oh, das ist ja wirklich doof!",
+      "● Ja, das finde ich echt schade. Ich überlege, ob ich das Praktikum wechsle.",
+      "▪ Ich kann verstehen, dass du enttäuscht bist. Viel Glück und Kopf hoch!"
+     ],
+     "a": "▪ Hallo Lisa! Wie ist dein Praktikum? ● Ehrlich gesagt: Das habe ich mir anders vorgestellt! Ich koche nur Kaffee. ▪ Oh, das ist ja wirklich doof! ● Ja, das finde ich echt schade. Ich überlege, ob ich das Praktikum wechsle. ▪ Ich kann verstehen, dass du enttäuscht bist. Viel Glück und Kopf hoch!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *Könnten*, *ob*, *Weißt*, *wissen*, *Glück*.",
+     "bsp": "▪ ___ du mir sagen, wo Raum 12 ist?<br>● Im ersten Stock. → <b>Kannst</b>",
+     "s": "▪ Entschuldigung, ___ Sie mir bitte sagen, ___ ich für den Kurs ein Zeugnis brauche?\n● Nein, Sie brauchen nur Ihren Ausweis.\n▪ Und ich würde gern ___, wie lange der Kurs dauert.\n● Drei Monate.",
+     "a": [
+      [
+       "Könnten",
+       "Können"
+      ],
+      [
+       "ob"
+      ],
+      [
+       "wissen"
+      ]
+     ],
+     "gw": {
+      "uz": "Vositali savol: «ha/yo‘q» savoli → <b>ob</b>, W-savol → savol so‘zi (<b>wo, wann</b>); fe’l oxirida. Murojaat: <b>Sie</b> → <b>Können/Könnten Sie …?</b>, <b>du</b> → <b>Kannst du / Weißt du …?</b> Misol: <b>Wissen Sie, ob der Zug pünktlich ist?</b>",
+      "ru": "Косвенный вопрос: вопрос «да/нет» → <b>ob</b>, W-вопрос → вопросительное слово (<b>wo, wann</b>); глагол в конце. Обращение: <b>Sie</b> → <b>Können/Könnten Sie …?</b>, <b>du</b> → <b>Kannst du / Weißt du …?</b> Пример: <b>Wissen Sie, ob der Zug pünktlich ist?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *Könnten*, *ob*, *Weißt*, *wissen*, *Glück*.",
+     "s": "▪ Hallo Paul, ___ du, wo das Kinderhaus ist?\n● Ja, in der Bahnhofstraße. Warum?\n▪ Ich möchte dort ein FSJ machen. Ich überlege noch, ___ das zu mir passt.\n● Ich bin sicher, das passt. Viel ___!",
+     "a": [
+      [
+       "Weißt"
+      ],
+      [
+       "ob"
+      ],
+      [
+       "Glück"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Enttäuschung äußern oder auf Enttäuschung reagieren? Ordnen Sie zu.",
+     "bsp": "Ich bin total enttäuscht! → <b>Enttäuschung äußern</b>",
+     "c": [
+      "😞 Enttäuschung äußern",
+      "🤝 auf Enttäuschung reagieren"
+     ],
+     "i": [
+      [
+       "Das finde ich echt schade.",
+       0
+      ],
+      [
+       "Viel Glück und Kopf hoch!",
+       1
+      ],
+      [
+       "Ehrlich gesagt: Das habe ich mir anders vorgestellt!",
+       0
+      ],
+      [
+       "Ich kann verstehen, dass du traurig bist.",
+       1
+      ],
+      [
+       "Das gehört eben dazu.",
+       1
+      ],
+      [
+       "Ich bin total genervt!",
+       0
+      ],
+      [
+       "Das ist ja wirklich schlimm!",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "O‘zingiz haqida (<b>ich, mir</b>) norozilik — hafsala pir bo‘lganini bildirish. Boshqaga (<b>du, dich</b>) tushunish va tilak — reaksiya. Misol: <b>Ich bin so traurig.</b> → äußern; <b>Das wird schon wieder!</b> → reagieren.",
+      "ru": "О себе (<b>ich, mir</b>) и недовольство — выражение разочарования. Другому (<b>du, dich</b>) понимание и пожелание — реакция. Пример: <b>Ich bin so traurig.</b> → äußern; <b>Das wird schon wieder!</b> → reagieren."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Weißt du, wann der Kurs beginnt? → <b>du</b>",
+     "c": [
+      "Freund (du)",
+      "Chefin (Sie)"
+     ],
+     "i": [
+      [
+       "Könnten Sie mir bitte sagen, wann der Kurs beginnt?",
+       1
+      ],
+      [
+       "Weißt du, ob Mia heute kommt?",
+       0
+      ],
+      [
+       "Wissen Sie, wie lange das Praktikum dauert?",
+       1
+      ],
+      [
+       "Kannst du mir sagen, wo die Messe ist?",
+       0
+      ],
+      [
+       "Tut mir leid, dass Sie unzufrieden sind.",
+       1
+      ],
+      [
+       "Ich kann verstehen, dass du genervt bist.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Fe’l va olmoshga qarang: <b>du</b> → fe’l <b>-st</b>, <b>dir/dich/dein</b>; <b>Sie</b> → bosh harf bilan, fe’l <b>-en</b>, <b>Ihnen/Ihr</b>. Notanish odam yoki boshliq — <b>Sie</b>. Misol: <b>Hast du Zeit? – Haben Sie Zeit?</b>",
+      "ru": "Смотрите на глагол и местоимение: <b>du</b> → <b>-st</b>, <b>dir/dich/dein</b>; <b>Sie</b> → с большой буквы, глагол на <b>-en</b>, <b>Ihnen/Ihr</b>. Незнакомый или начальник — <b>Sie</b>. Пример: <b>Hast du Zeit? – Haben Sie Zeit?</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihr Freund hat die Stelle nicht bekommen. Er ist traurig. → <b>Ich kann verstehen, dass du enttäuscht bist.</b>",
+     "q": "Sie fragen eine Frau im Büro: Wie lange dauert der Kurs? Was sagen Sie?",
+     "o": [
+      "Weißt du, wie lange der Kurs dauert?",
+      "Könnten Sie mir bitte sagen, wie lange der Kurs dauert?",
+      "Ich kann verstehen, dass der Kurs lange dauert."
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Kimga gapiryapsiz (notanish → <b>Sie</b>) va maqsad nima: ma’lumot so‘rash, norozilik yoki qo‘llab-quvvatlash? Variantni ikkala belgi bo‘yicha tekshiring. Misol: do‘stingiz imtihonga ketyapti → <b>Du schaffst das!</b>",
+      "ru": "К кому вы обращаетесь (незнакомый → <b>Sie</b>) и какая цель: узнать информацию, выразить недовольство или поддержать? Проверьте вариант по обоим признакам. Пример: друг идёт на экзамен → <b>Du schaffst das!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie haben einen neuen Job. Aber die Arbeit ist ganz anders, und sie gefällt Ihnen nicht. Was sagen Sie?",
+     "o": [
+      "Viel Glück und Kopf hoch!",
+      "Ehrlich gesagt: Das habe ich mir anders vorgestellt!",
+      "Tut mir leid, dass du unzufrieden bist."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Freundin macht morgen die Führerscheinprüfung. Sie ist sehr nervös. Was sagen Sie?",
+     "o": [
+      "Das finde ich echt schade.",
+      "Tut mir leid, dass du unzufrieden bist.",
+      "Viel Glück und Kopf hoch!"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Kollegin sagt: „Ich bin neu im Job und muss so viel lernen!“ Sie meinen: Am Anfang ist das immer so. Was sagen Sie?",
+     "o": [
+      "Das gehört eben dazu.",
+      "Ich bin total enttäuscht!",
+      "Ehrlich gesagt: Das habe ich mir anders vorgestellt!"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

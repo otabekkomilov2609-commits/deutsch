@@ -1,0 +1,212 @@
+{
+ "title": "Lektion 2 · Kommunikation",
+ "sub": "Herzlichen Dank! · Viel Spaß! · Das ist mir wichtig · bewerten",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Dann viel Spaß! | ▪ Hier sind deine Freikarten. | ● Herzlichen Dank!<br>→ <b>▪ Hier sind deine Freikarten.<br>● Herzlichen Dank!<br>▪ Dann viel Spaß!</b>",
+     "w": [
+      "▪ Pannenhilfe, guten Tag. Was ist passiert?",
+      "● Mein Wagen ist kaputt. Und ich bin in Eile, ich habe um neun einen Termin.",
+      "▪ Kein Problem. Wo sind Sie genau?",
+      "● Vor der Messe in Berlin.",
+      "▪ Gut, ein Pannenhelfer kommt in 15 Minuten.",
+      "● Herzlichen Dank!"
+     ],
+     "a": "▪ Pannenhilfe, guten Tag. Was ist passiert? ● Mein Wagen ist kaputt. Und ich bin in Eile, ich habe um neun einen Termin. ▪ Kein Problem. Wo sind Sie genau? ● Vor der Messe in Berlin. ▪ Gut, ein Pannenhelfer kommt in 15 Minuten. ● Herzlichen Dank!",
+     "gw": {
+      "uz": "Telefon suhbati salom va xizmat nomi bilan boshlanadi; keyin muammo → savol → yordam. Yaxshi xabardan keyin tilak yoki rahmat keladi. Har replika oldingisiga mantiqan javob ekanini tekshiring. Misol: <b>Wie kann ich helfen? – Mein Fahrrad ist kaputt.</b>",
+      "ru": "Телефонный разговор начинается с приветствия и названия службы; дальше проблема → вопрос → помощь. После хорошей новости — пожелание или благодарность. Проверьте, что каждая реплика логично отвечает на предыдущую. Пример: <b>Wie kann ich helfen? – Mein Fahrrad ist kaputt.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Ich gehe heute Abend ins Theater. Ich habe zwei Freikarten bekommen!",
+      "● Toll! Dann viel Spaß!",
+      "▪ Danke! Und du? Was machst du heute Abend?",
+      "● Ich muss leider Überstunden machen.",
+      "▪ Oh, das finde ich ganz schlimm.",
+      "● Ach, das macht mir nichts aus. Ich arbeite gern abends."
+     ],
+     "a": "▪ Ich gehe heute Abend ins Theater. Ich habe zwei Freikarten bekommen! ● Toll! Dann viel Spaß! ▪ Danke! Und du? Was machst du heute Abend? ● Ich muss leider Überstunden machen. ▪ Oh, das finde ich ganz schlimm. ● Ach, das macht mir nichts aus. Ich arbeite gern abends."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Hier sind deine Schlüssel.<br>● ___ Dank! → <b>Herzlichen</b>",
+     "q": "Spaß · aus · wichtig",
+     "s": "▪ Heute Abend gehe ich ins Konzert. Mein Chef hat mir eine Freikarte geschenkt!\n● Toll! Dann viel ___!\n▪ Danke! Und du? Musst du heute Überstunden machen?\n● Ja, aber das macht mir nichts ___. Ich arbeite gern abends.\n▪ Wirklich? Für mich ist das nichts. Pünktlich frei haben ist mir total ___.",
+     "a": [
+      [
+       "Spaß"
+      ],
+      [
+       "aus"
+      ],
+      [
+       "wichtig"
+      ]
+     ],
+     "gw": {
+      "uz": "Bu iboralar qat’iy — bitta so‘zini bilsangiz, qolgani esga tushadi. Avval oldingi gapdan fikr ijobiy yoki salbiy ekanini aniqlang, keyin mos so‘zni qo‘ying. Misol: <b>Das ist mir egal.</b> <b>Gute Besserung!</b>",
+      "ru": "Это устойчивые выражения — зная одно слово, вспомните всё. Сначала по контексту определите, мнение положительное или отрицательное, затем вставьте слово. Пример: <b>Das ist mir egal.</b> <b>Gute Besserung!</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "Dank · gut · Spaß · schlimm",
+     "s": "▪ Frau Keller, Sie sind Krankenschwester. Wie finden Sie Ihre Arbeit?\n● Die Arbeit macht ___, weil ich gern mit Menschen arbeite. Aber ich muss oft nachts arbeiten. Das finde ich ganz ___.\n▪ Und was können Sie besonders ___?\n● Organisieren. Das kann ich wirklich gut.\n▪ Herzlichen ___ für das Gespräch!",
+     "a": [
+      [
+       "Spaß"
+      ],
+      [
+       "schlimm"
+      ],
+      [
+       "gut"
+      ],
+      [
+       "Dank"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Gut oder nicht gut? Ordnen Sie zu.",
+     "bsp": "Das finde ich furchtbar. → <b>nicht gut</b>",
+     "c": [
+      "👍 gut / okay",
+      "👎 nicht gut"
+     ],
+     "i": [
+      [
+       "Das finde ich ganz schlimm.",
+       1
+      ],
+      [
+       "Das mache ich besonders gern.",
+       0
+      ],
+      [
+       "Das macht mir nichts aus.",
+       0
+      ],
+      [
+       "Das mache ich überhaupt nicht gern.",
+       1
+      ],
+      [
+       "Das kann ich besonders gut.",
+       0
+      ],
+      [
+       "Das finde ich anstrengend.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Butun iborani tarjima qiling: <b>nicht/nichts</b> so‘zi doim salbiy degani emas. <b>gern, gut, toll</b> — ijobiy; <b>schlimm, schrecklich</b> — salbiy. Misol: <b>Das gefällt mir sehr.</b> → gut.",
+      "ru": "Переводите выражение целиком: <b>nicht/nichts</b> не всегда означает «плохо». <b>gern, gut, toll</b> — положительно; <b>schlimm, schrecklich</b> — отрицательно. Пример: <b>Das gefällt mir sehr.</b> → gut."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Wichtig oder nicht wichtig? Ordnen Sie zu.",
+     "bsp": "Das ist sehr wichtig für mich. → <b>wichtig</b>",
+     "c": [
+      "❗ wichtig",
+      "🤷 nicht wichtig"
+     ],
+     "i": [
+      [
+       "Das ist mir total wichtig.",
+       0
+      ],
+      [
+       "Das macht mir nichts aus.",
+       1
+      ],
+      [
+       "Das ist mir egal.",
+       1
+      ],
+      [
+       "Das ist für mich besonders wichtig.",
+       0
+      ],
+      [
+       "Das ist mir nicht so wichtig.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Kuchaytiruvchi so‘zlarga qarang: <b>total, besonders, sehr</b> + wichtig — muhim; <b>nicht so</b> yoki befarqlik — muhim emas. Misol: <b>Geld ist für mich sehr wichtig.</b> → wichtig.",
+      "ru": "Смотрите на усилители: <b>total, besonders, sehr</b> + wichtig — важно; <b>nicht so</b> или безразличие — неважно. Пример: <b>Geld ist für mich sehr wichtig.</b> → wichtig."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Eine Kollegin hat Ihnen geholfen. Sie sagen: <b>Herzlichen Dank für die Hilfe!</b>",
+     "q": "Ihr Freund geht heute Abend ins Konzert. Sie sagen: ___",
+     "o": [
+      "Dann viel Spaß!",
+      "Herzlichen Dank!",
+      "Das finde ich ganz schlimm."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatdagi asosiy fikrni toping: kimgadir tilak bildirasizmi, muammo yo‘qligini aytasizmi yoki mahoratingiz haqida gapirasizmi? Shu ma’noga mos iborani tanlang. Misol: do‘stingiz kasal — <b>Gute Besserung!</b>",
+      "ru": "Найдите главную мысль ситуации: вы чего-то желаете, говорите, что это не проблема, или рассказываете о своём умении? Выберите выражение с этим смыслом. Пример: друг болеет — <b>Gute Besserung!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie müssen oft am Wochenende arbeiten. Das ist für Sie kein Problem. Sie sagen: ___",
+     "o": [
+      "Das ist mir total wichtig.",
+      "Das macht mir nichts aus.",
+      "Das kann ich besonders gut."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie können sehr gut kochen. Sie sagen: ___",
+     "o": [
+      "Das finde ich ganz schlimm.",
+      "Das mache ich überhaupt nicht gern.",
+      "Das kann ich besonders gut."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie müssen an Feiertagen arbeiten. Sie finden das sehr schlecht. Sie sagen: ___",
+     "o": [
+      "Das finde ich ganz schlimm.",
+      "Dann viel Spaß!",
+      "Das kann ich besonders gut."
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

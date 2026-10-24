@@ -1,0 +1,242 @@
+{
+ "title": "Lektion 9 · Kommunikation",
+ "sub": "Im Café bestellen · Ich auch! / Ich nicht!",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch im Café.",
+     "dlg": 1,
+     "bsp": "▪ Gern. | ● Eine Tasse Tee, bitte. | ▪ Guten Tag! Sie wünschen? → <b>▪ Guten Tag! Sie wünschen?<br>● Eine Tasse Tee, bitte.<br>▪ Gern.</b>",
+     "w": [
+      "▪ Guten Abend! Sie wünschen?",
+      "● Ich möchte eine Suppe und ein Brot, bitte.",
+      "▪ Tut mir leid, wir haben keine Suppe mehr.",
+      "● Schade! Dann möchte ich einen Salat.",
+      "▪ Gern."
+     ],
+     "a": "▪ Guten Abend! Sie wünschen? ● Ich möchte eine Suppe und ein Brot, bitte. ▪ Tut mir leid, wir haben keine Suppe mehr. ● Schade! Dann möchte ich einen Salat. ▪ Gern.",
+     "gw": {
+      "uz": "Kafe suhbati: ofitsiant so‘raydi → mehmon buyurtma beradi → ofitsiant javob beradi (yo‘q bo‘lsa — uzr) → mehmon boshqasini tanlaydi. Misol: <b>▪ Sie wünschen? ● Einen Tee, bitte.</b>",
+      "ru": "Разговор в кафе: официант спрашивает → гость заказывает → официант отвечает (если нет — извиняется) → гость выбирает другое. Пример: <b>▪ Sie wünschen? ● Einen Tee, bitte.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch im Café.",
+     "dlg": 1,
+     "w": [
+      "▪ Möchten Sie vielleicht einen Nachtisch?",
+      "● Ja, gern. Was haben Sie?",
+      "▪ Eis, Kuchen mit Sahne oder Obst.",
+      "● Dann nehme ich ein Eis mit Sahne, bitte.",
+      "▪ Gern. Guten Appetit!",
+      "● Danke."
+     ],
+     "a": "▪ Möchten Sie vielleicht einen Nachtisch? ● Ja, gern. Was haben Sie? ▪ Eis, Kuchen mit Sahne oder Obst. ● Dann nehme ich ein Eis mit Sahne, bitte. ▪ Gern. Guten Appetit! ● Danke."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *wünschen*, *möchte*, *leid*, *nehme*.",
+     "bsp": "▪ Möchten Sie auch einen Nachtisch?<br>● Ja, ___. → Ja, <b>gern</b>.",
+     "s": "▪ Guten Tag! Sie ___?\n● Ich ___ einen Apfelkuchen, bitte.\n▪ Tut mir ___, wir haben keinen Apfelkuchen mehr.\n● Schade! Dann ___ ich einen Käsekuchen.",
+     "a": [
+      [
+       "wünschen"
+      ],
+      [
+       "möchte"
+      ],
+      [
+       "leid"
+      ],
+      [
+       "nehme"
+      ]
+     ],
+     "gw": {
+      "uz": "Kim gapirayotganini aniqlang: ofitsiant so‘raydi va uzr so‘raydi, mehmon <b>ich</b>-shaklda buyurtma qiladi (fe’l <b>-e</b>). Misol: <b>Ich trinke einen Saft, bitte.</b>",
+      "ru": "Определите, кто говорит: официант спрашивает и извиняется, гость заказывает в форме <b>ich</b> (глагол на <b>-e</b>). Пример: <b>Ich trinke einen Saft, bitte.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *auch*, *nicht*, *schon*, *gern*.",
+     "bsp": "▪ Ich mag Schokolade.<br>● Ich ___! Schokolade ist lecker. → Ich <b>auch</b>!",
+     "s": "▪ Ich esse ___ Fisch. Und du?\n● Ich ___! Fisch mag ich gar nicht.\n▪ Käse mag ich auch nicht.\n● Ich ___! Käse ist lecker.\n▪ Und Obst? Ich mag Obst.\n● Ich ___!",
+     "a": [
+      [
+       "gern"
+      ],
+      [
+       "nicht"
+      ],
+      [
+       "schon"
+      ],
+      [
+       "auch"
+      ]
+     ],
+     "gw": {
+      "uz": "Ijobiy gapga: rozi — <b>Ich auch!</b>, rozi emas — <b>Ich nicht!</b> Inkor gapga (<b>nicht, kein</b>): rozi — <b>Ich auch nicht!</b>, rozi emas — <b>Ich schon!</b> Misol: <b>▪ Ich mag keinen Tee. ● Ich schon!</b>",
+      "ru": "На утверждение: согласие — <b>Ich auch!</b>, несогласие — <b>Ich nicht!</b> На отрицание (<b>nicht, kein</b>): согласие — <b>Ich auch nicht!</b>, несогласие — <b>Ich schon!</b> Пример: <b>▪ Ich mag keinen Tee. ● Ich schon!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Sie sind im Café. Was sagt der Kellner? → <b>Guten Tag! Sie wünschen?</b>",
+     "q": "Sie möchten im Café bestellen. Was sagen Sie?",
+     "o": [
+      "Ich nehme eine Tasse Kaffee, bitte.",
+      "Ich auch!",
+      "Guten Appetit!"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatda kim va nima uchun gapiryapti: mehmon buyurtma qiladi, ofitsiant taklif qiladi yoki uzr so‘raydi. Misol: <b>Das Essen kommt → Guten Appetit!</b>",
+      "ru": "Кто и зачем говорит в ситуации: гость заказывает, официант предлагает или извиняется. Пример: <b>Das Essen kommt → Guten Appetit!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Das Café hat keinen Apfelkuchen mehr. Was sagt der Kellner?",
+     "o": [
+      "Ja, gern.",
+      "Tut mir leid, wir haben keinen Apfelkuchen mehr.",
+      "Was magst du besonders gern?"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Das Essen kommt. Was sagt der Kellner?",
+     "o": [
+      "Nein, danke.",
+      "Sie wünschen?",
+      "Guten Appetit!"
+     ],
+     "a": 2
+    },
+    {
+     "t": "cat",
+     "h": "Gast oder Kellner? Wer sagt das?",
+     "c": [
+      "🧑 Gast",
+      "🍽️ Kellner / Kellnerin"
+     ],
+     "i": [
+      [
+       "Sie wünschen?",
+       1
+      ],
+      [
+       "Eine Portion Pommes frites, bitte.",
+       0
+      ],
+      [
+       "Möchten Sie vielleicht einen Nachtisch?",
+       1
+      ],
+      [
+       "Die Speisekarte, bitte!",
+       0
+      ],
+      [
+       "Tut mir leid, wir haben keine Suppe mehr.",
+       1
+      ],
+      [
+       "Dann nehme ich einen Salat.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Ofitsiant so‘raydi va taklif qiladi (<b>Sie wünschen?</b>, <b>Möchten Sie …?</b>); mehmon buyurtma qiladi va hisobni so‘raydi. Misol: <b>Was möchten Sie trinken?</b> → Kellner, <b>Die Rechnung, bitte.</b> → Gast.",
+      "ru": "Официант спрашивает и предлагает (<b>Sie wünschen?</b>, <b>Möchten Sie …?</b>); гость заказывает и просит счёт. Пример: <b>Was möchten Sie trinken?</b> → Kellner, <b>Die Rechnung, bitte.</b> → Gast."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*Ich auch!* oder *Ich auch nicht!*? Ordnen Sie zu.",
+     "c": [
+      "👍 Ich auch!",
+      "👎 Ich auch nicht!"
+     ],
+     "i": [
+      [
+       "Ich mag Schokolade.",
+       0
+      ],
+      [
+       "Ich esse kein Fleisch.",
+       1
+      ],
+      [
+       "Ich liebe Eis!",
+       0
+      ],
+      [
+       "Fisch mag ich gar nicht.",
+       1
+      ],
+      [
+       "Ich trinke gern Tee.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Gapda inkor bormi? <b>nicht, kein, nie</b> bo‘lsa va siz ham shunday bo‘lsangiz — <b>Ich auch nicht!</b> Inkorsiz gapga — <b>Ich auch!</b> Misol: <b>Ich trinke keinen Kaffee.</b> → Ich auch nicht!",
+      "ru": "Есть ли отрицание? Если <b>nicht, kein, nie</b> и у вас так же — <b>Ich auch nicht!</b> На утверждение без отрицания — <b>Ich auch!</b> Пример: <b>Ich trinke keinen Kaffee.</b> → Ich auch nicht!"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Im Café (*Sie*) oder mit Freunden (*du*)? Ordnen Sie zu.",
+     "c": [
+      "☕ Im Café (Sie)",
+      "👫 Mit Freunden (du)"
+     ],
+     "i": [
+      [
+       "Möchten Sie einen Kaffee?",
+       0
+      ],
+      [
+       "Was magst du besonders gern?",
+       1
+      ],
+      [
+       "Sie wünschen?",
+       0
+      ],
+      [
+       "Magst du Pommes frites?",
+       1
+      ],
+      [
+       "Nimmst du auch ein Eis?",
+       1
+      ],
+      [
+       "Möchten Sie vielleicht eine Suppe?",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Kafeda xodim mehmonga rasmiy murojaat qiladi: <b>Sie</b>, fe’l <b>-en</b>. Do‘stlar o‘rtasida: <b>du</b>, fe’l <b>-st</b>. Misol: <b>Möchtest du Tee?</b> → du, <b>Möchten Sie Tee?</b> → Sie.",
+      "ru": "В кафе к гостю обращаются официально: <b>Sie</b>, глагол на <b>-en</b>. Между друзьями: <b>du</b>, глагол на <b>-st</b>. Пример: <b>Möchtest du Tee?</b> → du, <b>Möchten Sie Tee?</b> → Sie."
+     }
+    }
+   ]
+  }
+ ]
+}

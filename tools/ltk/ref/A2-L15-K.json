@@ -1,0 +1,180 @@
+{
+ "title": "Lektion 15 · Kommunikation",
+ "sub": "um eine Meinung bitten · einen Rat geben · Glück wünschen",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Ich würd’ sagen, Salat ist besser. | ▪ Danke für den Tipp! | ▪ Soll ich Kuchen mitbringen?<br>→ <b>▪ Soll ich Kuchen mitbringen?<br>● Ich würd’ sagen, Salat ist besser.<br>▪ Danke für den Tipp!</b>",
+     "w": [
+      "▪ Hallo Tom! Morgen ist mein erster Arbeitstag. Ich weiß nicht so genau, ob ich mit dem Fahrrad oder mit dem Bus fahren soll. Was meinst du?",
+      "● Vielleicht ist es besser, wenn du den Bus nimmst. Dann kommst du pünktlich.",
+      "▪ Wahrscheinlich hast du recht. Danke für den Tipp!",
+      "● Gern! Dann ganz viel Erfolg morgen!"
+     ],
+     "a": "▪ Hallo Tom! Morgen ist mein erster Arbeitstag. Ich weiß nicht so genau, ob ich mit dem Fahrrad oder mit dem Bus fahren soll. Was meinst du? ● Vielleicht ist es besser, wenn du den Bus nimmst. Dann kommst du pünktlich. ▪ Wahrscheinlich hast du recht. Danke für den Tipp! ● Gern! Dann ganz viel Erfolg morgen!",
+     "gw": {
+      "uz": "Tartib: muammo + fikr so‘rash (<b>Was meinst du?</b>) → maslahat → rozilik yoki savol → rahmat va tilak. Maslahat muammodagi tanlovga javob beradi. Misol: <b>Was meinst du? – Ich würde früher losgehen.</b>",
+      "ru": "Порядок: проблема + просьба о мнении (<b>Was meinst du?</b>) → совет → согласие или вопрос → спасибо и пожелание. Совет отвечает на выбор из проблемы. Пример: <b>Was meinst du? – Ich würde früher losgehen.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Hallo Paul, ich hab’ da noch eine Frage: Am Freitag ist das Sommerfest von meiner Firma.",
+      "● Schön! Und was ist das Problem?",
+      "▪ Ich weiß nicht so genau, ob ich ein Kleid oder eine Bluse anziehen soll. Was meinst du?",
+      "● Ich würd’ sagen, dass eine elegante Bluse besser ist.",
+      "▪ Okay, danke. Du hast mir echt geholfen."
+     ],
+     "a": "▪ Hallo Paul, ich hab’ da noch eine Frage: Am Freitag ist das Sommerfest von meiner Firma. ● Schön! Und was ist das Problem? ▪ Ich weiß nicht so genau, ob ich ein Kleid oder eine Bluse anziehen soll. Was meinst du? ● Ich würd’ sagen, dass eine elegante Bluse besser ist. ▪ Okay, danke. Du hast mir echt geholfen."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *sicher*, *siehst*, *besser*, *recht*, *ob*, *meinst*, *geholfen*, *Daumen*.",
+     "bsp": "▪ Nimm doch den Bus!<br>● Gute Idee. Danke für den ___! → <b>Tipp</b>",
+     "s": "▪ Ich bin nicht ___, ob ich Vollzeit oder Teilzeit arbeiten soll. Wie ___ du das?\n● Vielleicht ist es ___, wenn du zuerst Teilzeit arbeitest.\n▪ Wahrscheinlich hast du ___. Danke für den Tipp!",
+     "a": [
+      [
+       "sicher"
+      ],
+      [
+       "siehst"
+      ],
+      [
+       "besser"
+      ],
+      [
+       "recht"
+      ]
+     ],
+     "gw": {
+      "uz": "Har bo‘shliq bir iboraning qismi: fikr so‘rash, ishonchsizlik (<b>…, ob …</b>), maslahat (<b>…, wenn …</b>), rozilik, rahmat yoki omad tilash. Bo‘shliqdan keyingi so‘zga qarab iborani toping. Misol: <b>Ich weiß nicht, ob das passt.</b>",
+      "ru": "Каждый пропуск — часть выражения: спросить мнение, неуверенность (<b>…, ob …</b>), совет (<b>…, wenn …</b>), согласие, спасибо или пожелание удачи. Ищите фразу по слову после пропуска. Пример: <b>Ich weiß nicht, ob das passt.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *sicher*, *siehst*, *besser*, *recht*, *ob*, *meinst*, *geholfen*, *Daumen*.",
+     "s": "▪ Meine Chefin hat mich zum Essen eingeladen. Ich weiß nicht so genau, ___ ich etwas mitbringen soll. Was ___ du?\n● Ich würd’ sagen, dass Blumen eine gute Idee sind.\n▪ Okay, danke. Du hast mir echt ___.\n● Gern! Ich drück’ die ___!",
+     "a": [
+      [
+       "ob"
+      ],
+      [
+       "meinst"
+      ],
+      [
+       "geholfen"
+      ],
+      [
+       "Daumen"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Was macht man hier? Ordnen Sie zu.",
+     "bsp": "Ich hab’ da noch eine Frage: … → <b>um eine Meinung bitten</b>",
+     "c": [
+      "❓ um eine Meinung bitten",
+      "💡 einen Rat geben",
+      "🍀 danken / Glück wünschen"
+     ],
+     "i": [
+      [
+       "Wie siehst du das?",
+       0
+      ],
+      [
+       "Vielleicht ist es besser, wenn du früher kommst.",
+       1
+      ],
+      [
+       "Ich drück’ die Daumen!",
+       2
+      ],
+      [
+       "Ich weiß nicht so genau, ob das passt. Was meinst du?",
+       0
+      ],
+      [
+       "Ich würd’ sagen, dass der Bus besser ist.",
+       1
+      ],
+      [
+       "Du hast mir echt geholfen.",
+       2
+      ],
+      [
+       "Dann ganz viel Erfolg!",
+       2
+      ]
+     ],
+     "gw": {
+      "uz": "Savol bilan boshqaning fikrini so‘raysiz; maslahat — boshqaga taklif (<b>besser</b>, <b>würde</b>); rahmat va omad tilash — suhbat oxirida. Misol: <b>Was denkst du?</b> → Meinung; <b>Viel Erfolg!</b> → Glück wünschen.",
+      "ru": "Вопросом вы спрашиваете чужое мнение; совет — предложение другому (<b>besser</b>, <b>würde</b>); спасибо и пожелание удачи — в конце разговора. Пример: <b>Was denkst du?</b> → Meinung; <b>Viel Erfolg!</b> → Glück wünschen."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihre Freundin hat morgen eine Prüfung. → <b>Ich drück’ die Daumen!</b>",
+     "q": "Sie haben eine neue Stelle. Sie wissen nicht: Soll ich die Kollegen duzen oder siezen? Sie fragen Ihre Freundin.",
+     "o": [
+      "Wahrscheinlich hast du recht.",
+      "Ich bin nicht sicher, ob ich die Kollegen duzen soll. Wie siehst du das?",
+      "Dann ganz viel Erfolg!"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Vaziyatdagi rolingizni aniqlang: maslahat so‘raysizmi, berasizmi yoki rahmat aytasizmi? Maslahat berganda vaziyatdagi ma’lumotdan foydalaning. Misol: <b>Ich würde sagen, dass ein Kuchen gut ist.</b>",
+      "ru": "Определите свою роль: вы просите совета, советуете или благодарите? Давая совет, опирайтесь на данные ситуации. Пример: <b>Ich würde sagen, dass ein Kuchen gut ist.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Kollege gibt Ihnen einen guten Tipp. Das hilft Ihnen sehr. Was sagen Sie?",
+     "o": [
+      "Okay, danke. Du hast mir echt geholfen.",
+      "Was meinst du?",
+      "Vielleicht ist es besser, wenn du fragst."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Freund fragt: „Soll ich mit dem Auto oder mit der U-Bahn zur Arbeit fahren?“ Auf der Straße ist immer viel Verkehr. Was sagen Sie?",
+     "o": [
+      "Ich drück’ die Daumen!",
+      "Ich hab’ da noch eine Frage.",
+      "Ich würd’ sagen, dass die U-Bahn besser ist."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Bruder hat morgen seinen ersten Arbeitstag. Was sagen Sie?",
+     "o": [
+      "Dann ganz viel Glück!",
+      "Wie siehst du das?",
+      "Danke für den Tipp!"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

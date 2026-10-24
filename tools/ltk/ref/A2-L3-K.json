@@ -1,0 +1,198 @@
+{
+ "title": "Lektion 3 · Kommunikation",
+ "sub": "Ausflugstipps geben · etwas bewerten · … fehlt mir",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Super Idee, danke! | ● Macht doch mal eine Radtour! | ▪ Hast du einen Ausflugstipp für uns?<br>→ <b>▪ Hast du einen Ausflugstipp für uns?<br>● Macht doch mal eine Radtour!<br>▪ Super Idee, danke!</b>",
+     "w": [
+      "▪ Kennt ihr den Hafen schon?",
+      "● Nein, noch nicht. Ist er schön?",
+      "▪ Ja, den kann ich nur empfehlen. Dort kann man Schiffe beobachten.",
+      "● Super, dann fahren wir am Sonntag hin."
+     ],
+     "a": "▪ Kennt ihr den Hafen schon? ● Nein, noch nicht. Ist er schön? ▪ Ja, den kann ich nur empfehlen. Dort kann man Schiffe beobachten. ● Super, dann fahren wir am Sonntag hin.",
+     "gw": {
+      "uz": "Tartib: joy haqida savol → javob va qo‘shimcha savol → tavsiya → reaksiya (reja yoki rahmat). Javob ko‘pincha savoldagi narsaga ishora qiladi (<b>den, dort</b>). Misol: <b>Kennst du das Museum? – Nein. Ist es gut?</b>",
+      "ru": "Порядок: вопрос о месте → ответ и уточнение → рекомендация → реакция (план или спасибо). Ответ часто указывает на предмет вопроса (<b>den, dort</b>). Пример: <b>Kennst du das Museum? – Nein. Ist es gut?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *Kennt*, *empfehlen*, *alles*, *verpassen* oder *doch*.",
+     "bsp": "▪ Der Park ist sehr schön. ___ gibt es dort ein tolles Café. → <b>Außerdem</b>",
+     "s": "▪ ___ ihr den Wald im Süden schon?\n● Nein, noch nicht.\n▪ Den kann ich nur ___! Aber das ist noch nicht ___. Es gibt auch einen kleinen See. Den dürft ihr auf keinen Fall ___.\n● Toll!\n▪ Macht ___ mal eine Radtour dorthin!",
+     "a": [
+      [
+       "Kennt"
+      ],
+      [
+       "empfehlen"
+      ],
+      [
+       "alles"
+      ],
+      [
+       "verpassen"
+      ],
+      [
+       "doch"
+      ]
+     ],
+     "gw": {
+      "uz": "Har bo‘shliqni grammatika bilan tekshiring: savol boshida fe’l <b>ihr</b> shaklida; modal (<b>kann, dürft</b>) bo‘lsa — Infinitiv oxirida; buyruqda <b>doch mal</b> maslahatni yumshatadi. Misol: <b>Geht doch mal ins Kino!</b>",
+      "ru": "Проверяйте каждый пропуск грамматикой: в начале вопроса глагол в форме <b>ihr</b>; при модальном (<b>kann, dürft</b>) — инфинитив в конце; в повелительном <b>doch mal</b> смягчает совет. Пример: <b>Geht doch mal ins Kino!</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *fehlt*, *vermisse*, *findest* oder *gemütlich*.",
+     "bsp": "▪ Wie ___ dir Hamburg?<br>● Sehr gut! Die Stadt ist spannend. → <b>gefällt</b>",
+     "s": "▪ Wie gefällt dir Berlin?\n● Die Stadt ist toll, aber meine Familie ___ mir. Und ich ___ unsere Küche in Taschkent.\n▪ Und wie ___ du deine WG?\n● Ich finde das Leben in der WG spannend. Unser Wohnzimmer ist sehr ___.",
+     "a": [
+      [
+       "fehlt"
+      ],
+      [
+       "vermisse"
+      ],
+      [
+       "findest"
+      ],
+      [
+       "gemütlich"
+      ]
+     ],
+     "gw": {
+      "uz": "<b>fehlen</b> va <b>vermissen</b> bir ma’noda, lekin tuzilishi teskari: <b>X fehlt mir</b> (X — ega, men — Dativ), <b>Ich vermisse X</b> (men — ega). Misol: <b>Mein Hund fehlt mir. = Ich vermisse meinen Hund.</b>",
+      "ru": "<b>fehlen</b> и <b>vermissen</b> значат одно, но строятся наоборот: <b>X fehlt mir</b> (X — подлежащее, я — Dativ), <b>Ich vermisse X</b> (я — подлежащее). Пример: <b>Mein Hund fehlt mir. = Ich vermisse meinen Hund.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ausflugstipps: Bilden Sie Sätze.",
+     "bsp": "ich | nur empfehlen | Den See | kann → <b>Den See kann ich nur empfehlen.</b>",
+     "w": [
+      "Den Strand",
+      "kann",
+      "ich",
+      "nur empfehlen"
+     ],
+     "a": "Den Strand kann ich nur empfehlen.",
+     "gw": {
+      "uz": "Darak gapda fe’l doim 2-o‘rinda. Gap boshida to‘ldiruvchi yoki <b>außerdem</b> tursa, ega fe’ldan keyin keladi; modaldan keyingi fe’l — eng oxirida. Misol: <b>Das Museum müsst ihr unbedingt besuchen.</b>",
+      "ru": "В повествовательном предложении глагол всегда на 2-м месте. Если в начале дополнение или <b>außerdem</b>, подлежащее идёт после глагола; инфинитив после модального — в самом конце. Пример: <b>Das Museum müsst ihr unbedingt besuchen.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ausflugstipps: Bilden Sie Sätze.",
+     "w": [
+      "Das Dorf",
+      "dürft",
+      "ihr",
+      "auf keinen Fall",
+      "verpassen"
+     ],
+     "a": "Das Dorf dürft ihr auf keinen Fall verpassen."
+    },
+    {
+     "t": "order",
+     "h": "Ausflugstipps: Bilden Sie Sätze.",
+     "w": [
+      "Außerdem",
+      "gibt",
+      "es",
+      "einen schönen See"
+     ],
+     "a": "Außerdem gibt es einen schönen See."
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Sie empfehlen einen Ausflug. → <b>Den kann ich nur empfehlen!</b>",
+     "q": "Ihre Freunde haben am Sonntag Zeit. Sie geben einen Tipp.",
+     "o": [
+      "Macht doch mal eine Radtour!",
+      "Das macht mir nichts aus.",
+      "Herzlichen Dank!"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyat nimani talab qiladi: maslahat, qo‘shimcha ma’lumot yoki kuchli tavsiya? Shu maqsadga mos iborani tanlang; boshqa variantlar boshqa vaziyatdan. Misol: qo‘shimcha ma’lumot — <b>Außerdem gibt es dort ein Café.</b>",
+      "ru": "Что требует ситуация: совет, дополнительная информация или настойчивая рекомендация? Выберите выражение под эту цель; остальные — из других ситуаций. Пример: дополнение — <b>Außerdem gibt es dort ein Café.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie haben schon zwei Tipps gegeben und haben noch einen dritten.",
+     "o": [
+      "Das kann ich besonders gut.",
+      "Aber das ist noch nicht alles!",
+      "Dann viel Spaß!"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Ein Fest im Hafen ist sehr wichtig. Ihre Freunde müssen auch kommen.",
+     "o": [
+      "Das finde ich ganz schlimm.",
+      "Das macht mir nichts aus.",
+      "Das dürft ihr auf keinen Fall verpassen."
+     ],
+     "a": 2
+    },
+    {
+     "t": "cat",
+     "h": "Ausflugstipp oder Bewertung? Ordnen Sie zu.",
+     "bsp": "Fahrt doch mal ans Meer! → <b>Ausflugstipp</b>",
+     "c": [
+      "Ausflugstipp",
+      "Bewertung"
+     ],
+     "i": [
+      [
+       "Kennt ihr den See schon?",
+       0
+      ],
+      [
+       "Ich finde das anstrengend.",
+       1
+      ],
+      [
+       "Macht doch mal einen Ausflug ins Dorf!",
+       0
+      ],
+      [
+       "Das finde ich spannend.",
+       1
+      ],
+      [
+       "Außerdem gibt es einen Strand.",
+       0
+      ],
+      [
+       "Ich finde das furchtbar.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Tavsiya joy yoki harakatni taklif qiladi (buyruq, savol, <b>es gibt</b>). Baho — shaxsiy fikr: <b>Ich finde das …</b> + sifat. Misol: <b>Besucht doch das Museum!</b> → Ausflugstipp; <b>Ich finde den Park langweilig.</b> → Bewertung.",
+      "ru": "Совет предлагает место или действие (императив, вопрос, <b>es gibt</b>). Оценка — личное мнение: <b>Ich finde das …</b> + прилагательное. Пример: <b>Besucht doch das Museum!</b> → Ausflugstipp; <b>Ich finde den Park langweilig.</b> → Bewertung."
+     }
+    }
+   ]
+  }
+ ]
+}

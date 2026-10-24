@@ -1,0 +1,233 @@
+{
+ "title": "Lektion 16 · Kommunikation",
+ "sub": "Geht dir das auch so? · eine Serie beschreiben · bewerten",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Worum geht es? | ▪ Was siehst du gerade? | ● Eine Krimiserie. Sie ist total spannend!<br>→ <b>▪ Was siehst du gerade?<br>● Eine Krimiserie. Sie ist total spannend!<br>▪ Worum geht es?</b>",
+     "w": [
+      "▪ Wenn ich einen Podcast höre, mache ich immer Sport. Wie ist das bei dir?",
+      "● Hm, bei mir ist das anders. Ich höre Podcasts nur im Bus.",
+      "▪ Und wenn du eine Serie siehst?",
+      "● Dann vergesse ich die Zeit! Geht dir das auch so?",
+      "▪ Ja, das geht mir auch so."
+     ],
+     "a": "▪ Wenn ich einen Podcast höre, mache ich immer Sport. Wie ist das bei dir? ● Hm, bei mir ist das anders. Ich höre Podcasts nur im Bus. ▪ Und wenn du eine Serie siehst? ● Dann vergesse ich die Zeit! Geht dir das auch so? ▪ Ja, das geht mir auch so.",
+     "gw": {
+      "uz": "Tartib: savol → javob → aniqlashtiruvchi savol (<b>Worum geht es?</b>, <b>Und …?</b>) → batafsil javob. <b>Und …?</b> bilan boshlangan savol doim oldingi javobdan keyin keladi. Misol: <b>Was liest du? – Einen Roman. – Worum geht es?</b>",
+      "ru": "Порядок: вопрос → ответ → уточнение (<b>Worum geht es?</b>, <b>Und …?</b>) → подробный ответ. Вопрос с <b>Und …?</b> всегда идёт после предыдущего ответа. Пример: <b>Was liest du? – Einen Roman. – Worum geht es?</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Was siehst du gerade für eine Serie?",
+      "● „Die Nachbarn“. Sie ist total witzig!",
+      "▪ Und worum geht es?",
+      "● Es geht um eine Familie in Wien. Die Hauptfigur ist ein Hausmeister.",
+      "▪ Und die Schauspieler? Sind sie gut?",
+      "● Ja, sie spielen wirklich gut!"
+     ],
+     "a": "▪ Was siehst du gerade für eine Serie? ● „Die Nachbarn“. Sie ist total witzig! ▪ Und worum geht es? ● Es geht um eine Familie in Wien. Die Hauptfigur ist ein Hausmeister. ▪ Und die Schauspieler? Sind sie gut? ● Ja, sie spielen wirklich gut!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *geht*, *kenne*, *bei*, *ähnlich*, *anders*.",
+     "bsp": "▪ Nach einem Krimi kann ich nicht schlafen. ___ du das?<br>● Ja, genau! → <b>Kennst</b>",
+     "s": "▪ Wenn ich die Nachrichten sehe, werde ich nervös. ___ dir das auch so?\n● Nein, bei mir ist das ___. Ich bleibe ganz ruhig.\n▪ Und wenn du ein Videospiel spielst?\n● Dann höre ich nichts mehr.\n▪ Ach, das ___ ich!",
+     "a": [
+      [
+       "Geht"
+      ],
+      [
+       "anders"
+      ],
+      [
+       "kenne"
+      ]
+     ],
+     "gw": {
+      "uz": "O‘xshashlik va farq iboralari: so‘rash (<b>… dir das auch so?</b>) va javob (<b>Bei mir ist das …</b>). Javob mazmuniga qarang: ikkinchi odamda ham shundaymi yoki yo‘q? Misol: <b>Bei mir ist das genauso.</b>",
+      "ru": "Выражения сходства и различия: вопрос (<b>… dir das auch so?</b>) и ответ (<b>Bei mir ist das …</b>). Смотрите на смысл ответа: у второго человека так же или нет? Пример: <b>Bei mir ist das genauso.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *geht*, *kenne*, *bei*, *ähnlich*, *anders*.",
+     "s": "▪ Am Sonntag schlafe ich immer bis elf. Wie ist das ___ dir?\n● Bei mir ist das ___. Ich schlafe auch lange.\n▪ Und am Abend sehe ich oft eine Doku.\n● Echt? Das ___ ich nicht. Ich sehe nie Dokus.",
+     "a": [
+      [
+       "bei"
+      ],
+      [
+       "ähnlich"
+      ],
+      [
+       "kenne"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Eine Serie beschreiben: Ergänzen Sie *erzählt*, *spielt*, *Hauptfigur*, *geht*.",
+     "bsp": "Die Serie hat zehn ___. Jede dauert 40 Minuten. → <b>Folgen</b>",
+     "s": "„Das Hotel am See“ ___ die Geschichte von zwei Schwestern. Die Geschichte ___ in Österreich. Die ___ ist Nora, die kleine Schwester. Es ___ um Familie und um viel Geld.",
+     "a": [
+      [
+       "erzählt"
+      ],
+      [
+       "spielt"
+      ],
+      [
+       "Hauptfigur"
+      ],
+      [
+       "geht"
+      ]
+     ],
+     "gw": {
+      "uz": "Serial tavsifida har ma’lumot o‘z iborasi bilan: hikoya, joy/vaqt, bosh qahramon, mavzu. Bo‘shliqdan keyingi so‘zga qarang — predlog yoki ot iborani ko‘rsatadi. Misol: <b>Der Film spielt im Jahr 1990.</b>",
+      "ru": "В описании сериала у каждой информации своё выражение: сюжет, место/время, главный герой, тема. Смотрите на слово после пропуска — предлог или существительное подсказывает фразу. Пример: <b>Der Film spielt im Jahr 1990.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Eine Serie bewerten: Ergänzen Sie *witzig*, *spielen*, *unlogisch*.",
+     "bsp": "Die Musik ist ziemlich ___. Ich mag sie nicht. → <b>nervig</b>",
+     "s": "Die Geschichte ist sehr ___. Ich finde sie total lustig. Die Schauspieler ___ wirklich gut. Nur das Ende ist ein bisschen ___. Es passt nicht zur Geschichte.",
+     "a": [
+      [
+       "witzig"
+      ],
+      [
+       "spielen"
+      ],
+      [
+       "unlogisch"
+      ]
+     ],
+     "gw": {
+      "uz": "Har baho keyingi gap bilan izohlanadi — shu izohga mos sifat yoki fe’lni tanlang. <b>Die Schauspieler ___</b> → ko‘plikdagi fe’l. Misol: <b>Die Musik ist schön. Ich höre sie gern.</b>",
+      "ru": "Каждую оценку поясняет следующее предложение — выберите подходящее к нему прилагательное или глагол. <b>Die Schauspieler ___</b> → глагол во мн. ч. Пример: <b>Die Musik ist schön. Ich höre sie gern.</b>"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Gemeinsamkeit oder Unterschied? Ordnen Sie zu.",
+     "bsp": "Ja, genau! → <b>Gemeinsamkeit</b>",
+     "c": [
+      "🤝 Gemeinsamkeit",
+      "↔️ Unterschied"
+     ],
+     "i": [
+      [
+       "Das geht mir auch so.",
+       0
+      ],
+      [
+       "Das kenne ich nicht.",
+       1
+      ],
+      [
+       "Bei mir ist das ähnlich.",
+       0
+      ],
+      [
+       "Das geht mir nicht so.",
+       1
+      ],
+      [
+       "Das kenne ich.",
+       0
+      ],
+      [
+       "Bei mir ist das anders.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "O‘xshashlik — <b>auch</b>, <b>genauso</b>, «bu menga tanish»; farq — inkor (<b>nicht</b>) yoki qarama-qarshi so‘z. Misol: <b>Bei mir ist das genauso.</b> → Gemeinsamkeit; <b>Ich mache das nie.</b> → Unterschied.",
+      "ru": "Сходство — <b>auch</b>, <b>genauso</b>, «мне это знакомо»; различие — отрицание (<b>nicht</b>) или противоположное слово. Пример: <b>Bei mir ist das genauso.</b> → Gemeinsamkeit; <b>Ich mache das nie.</b> → Unterschied."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Positiv oder negativ? Ordnen Sie zu.",
+     "bsp": "Die Serie ist super! → <b>positiv</b>",
+     "c": [
+      "👍 positiv",
+      "👎 negativ"
+     ],
+     "i": [
+      [
+       "Die Schauspieler spielen wirklich gut.",
+       0
+      ],
+      [
+       "Die Musik ist ziemlich nervig.",
+       1
+      ],
+      [
+       "Die Geschichte ist total spannend.",
+       0
+      ],
+      [
+       "Das Ende ist ein bisschen unlogisch.",
+       1
+      ],
+      [
+       "Die Hauptfigur ist nicht so toll.",
+       1
+      ],
+      [
+       "Die Geschichte ist sehr interessant.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Sifatga qarang: <b>gut, toll, lustig</b> — ijobiy; <b>schlecht, langweilig</b> — salbiy. <b>nicht so</b> + ijobiy sifat ham salbiy baho. Misol: <b>Die Geschichte ist nicht so interessant.</b> → negativ.",
+      "ru": "Смотрите на прилагательное: <b>gut, toll, lustig</b> — положительно; <b>schlecht, langweilig</b> — отрицательно. <b>nicht so</b> + положительное слово — тоже отрицательная оценка. Пример: <b>Die Geschichte ist nicht so interessant.</b> → negativ."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Sie finden eine Serie schlecht. → <b>Die Geschichte ist ein bisschen langweilig.</b>",
+     "q": "Sie möchten wissen: Ist das bei Ihrem Freund auch so? Was fragen Sie?",
+     "o": [
+      "Bei mir ist das anders.",
+      "Die Geschichte spielt in Wien.",
+      "Geht dir das auch so?"
+     ],
+     "a": 2,
+     "gw": {
+      "uz": "Maqsadni aniqlang: savol berasizmi, tasvirlaysizmi yoki o‘xshashlik/farqni aytasizmi? Savol bo‘lsa — fe’l boshida va <b>?</b> bilan. Misol: <b>Kennst du das auch?</b>",
+      "ru": "Определите цель: спросить, описать или сказать о сходстве/различии? Вопрос — глагол в начале и <b>?</b>. Пример: <b>Kennst du das auch?</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie erzählen, wo der Film ist: in Berlin. Was sagen Sie?",
+     "o": [
+      "Die Schauspieler spielen wirklich gut.",
+      "Die Geschichte spielt in Berlin.",
+      "Bei mir ist das ähnlich."
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

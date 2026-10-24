@@ -1,0 +1,232 @@
+{
+ "title": "Lektion 6 · Kommunikation",
+ "sub": "Am Telefon · Danke – Bitte",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Am Telefon: Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Ist Herr Weber da? | ▪ Firma Weber, Keller, guten Tag. | ▪ Einen Moment, bitte. → <b>▪ Firma Weber, Keller, guten Tag.<br>● Ist Herr Weber da?<br>▪ Einen Moment, bitte.</b>",
+     "w": [
+      "▪ Firma Fischer, Karimova, guten Tag.",
+      "● Guten Tag, Ole Brandt hier. Ist Frau Fischer da?",
+      "▪ Einen Moment bitte. … Nein, Frau Fischer ist leider nicht da.",
+      "● Vielen Dank. Auf Wiederhören.",
+      "▪ Sehr gern. Auf Wiederhören, Herr Brandt."
+     ],
+     "a": "▪ Firma Fischer, Karimova, guten Tag. ● Guten Tag, Ole Brandt hier. Ist Frau Fischer da? ▪ Einen Moment bitte. … Nein, Frau Fischer ist leider nicht da. ● Vielen Dank. Auf Wiederhören. ▪ Sehr gern. Auf Wiederhören, Herr Brandt.",
+     "gw": {
+      "uz": "Telefon tartibi: firma nomi + ism + salom → qo‘ng‘iroq qiluvchi o‘zini tanishtiradi va kimnidir so‘raydi → <b>Einen Moment</b> → javob → xayrlashuv. Misol: <b>Auf Wiederhören!</b> — telefondagi xayrlashuv, oxirida.",
+      "ru": "Порядок по телефону: фирма + имя + приветствие → звонящий представляется и спрашивает кого-то → <b>Einen Moment</b> → ответ → прощание. Пример: <b>Auf Wiederhören!</b> — прощание по телефону, в конце."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Am Telefon: Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Firma Schulz, hier ist Hanna Weber, guten Tag.",
+      "● Hallo, mein Name ist Lukas Fischer.",
+      "▪ Guten Tag, Herr Fischer. Was kann ich für Sie tun?",
+      "● Ist Herr Yilmaz da?",
+      "▪ Einen Moment bitte. … Ja, hier ist Herr Yilmaz.",
+      "● Danke schön."
+     ],
+     "a": "▪ Firma Schulz, hier ist Hanna Weber, guten Tag. ● Hallo, mein Name ist Lukas Fischer. ▪ Guten Tag, Herr Fischer. Was kann ich für Sie tun? ● Ist Herr Yilmaz da? ▪ Einen Moment bitte. … Ja, hier ist Herr Yilmaz. ● Danke schön."
+    },
+    {
+     "t": "gap",
+     "h": "Am Telefon: Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Firma Schulz, Keller, guten Tag.<br>● Guten Tag. Mein ___ ist Ali Karimov. → Mein <b>Name</b> ist Ali Karimov.",
+     "s": "▪ Firma Brandt, Keller, guten Tag.\n● Guten Tag, Lisa Fischer ___. Ist Herr Brandt ___?\n▪ Einen ___ bitte. … Herr Brandt ist leider nicht ___.\n● Vielen Dank. Auf ___.",
+     "a": [
+      [
+       "hier"
+      ],
+      [
+       "da"
+      ],
+      [
+       "Moment"
+      ],
+      [
+       "da"
+      ],
+      [
+       "Wiederhören"
+      ]
+     ],
+     "gw": {
+      "uz": "Telefondagi tayyor iboralarni eslang: o‘zini tanishtirish (<b>… hier</b>), kimnidir so‘rash, kuttirish, yordam taklifi. Misol: <b>Tut mir leid, er ist nicht im Büro.</b>",
+      "ru": "Вспомните телефонные фразы: представиться (<b>… hier</b>), спросить кого-то, попросить подождать, предложить помощь. Пример: <b>Tut mir leid, er ist nicht im Büro.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Am Telefon: Ergänzen Sie das Gespräch.",
+     "s": "▪ Firma Yilmaz, Berger, guten Tag.\n● Hallo, hier ___ Nora Keller.\n▪ Guten Tag, Frau Keller. Was ___ ich für Sie tun?\n● ___ Frau Yilmaz da?\n▪ Ja, einen Moment ___.\n● Vielen ___.",
+     "a": [
+      [
+       "ist"
+      ],
+      [
+       "kann"
+      ],
+      [
+       "Ist"
+      ],
+      [
+       "bitte"
+      ],
+      [
+       "Dank"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Wer sagt das am Telefon? Ordnen Sie zu.",
+     "bsp": "„Was kann ich für Sie tun?“ → <b>Firma</b>",
+     "c": [
+      "📞 Anruferin / Anrufer",
+      "🏢 Firma"
+     ],
+     "i": [
+      [
+       "Ist Herr Schulz da?",
+       0
+      ],
+      [
+       "Einen Moment bitte.",
+       1
+      ],
+      [
+       "Firma Weber, Keller, guten Tag.",
+       1
+      ],
+      [
+       "Vielen Dank. Auf Wiederhören.",
+       0
+      ],
+      [
+       "Herr Schulz ist leider nicht da.",
+       1
+      ],
+      [
+       "Guten Tag, Tom Berger hier.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Qo‘ng‘iroq qiluvchi o‘zini tanishtiradi va kimnidir so‘raydi; firma xodimi firma nomini aytadi, kuttiradi, yordam taklif qiladi. Misol: <b>Ich rufe später noch einmal an.</b> → Anrufer.",
+      "ru": "Звонящий представляется и спрашивает кого-то; сотрудник называет фирму, просит подождать, предлагает помощь. Пример: <b>Ich rufe später noch einmal an.</b> → Anrufer."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Danke oder Bitte? Ordnen Sie zu.",
+     "bsp": "Danke sehr! → <b>🙏 sich bedanken</b>",
+     "c": [
+      "🙏 sich bedanken",
+      "😊 darauf reagieren"
+     ],
+     "i": [
+      [
+       "Vielen Dank.",
+       0
+      ],
+      [
+       "Sehr gern.",
+       1
+      ],
+      [
+       "Kein Problem.",
+       1
+      ],
+      [
+       "Danke schön.",
+       0
+      ],
+      [
+       "Bitte schön.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Rahmat aytish — <b>Danke</b> so‘zi bor gaplar; javob — «arzimaydi» ma’nosidagi iboralar. Misol: <b>Herzlichen Dank!</b> → sich bedanken, <b>Bitte sehr!</b> → darauf reagieren.",
+      "ru": "Благодарность — фразы со словом <b>Danke</b>; ответ — фразы со смыслом «не за что». Пример: <b>Herzlichen Dank!</b> → sich bedanken, <b>Bitte sehr!</b> → darauf reagieren."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Am Telefon: nicht „Auf Wiedersehen“ → <b>Auf Wiederhören.</b>",
+     "q": "Sie telefonieren. Sie suchen Frau Berger. Was sagen Sie?",
+     "o": [
+      "Ist Frau Berger da?",
+      "Frau Berger ist leider nicht da.",
+      "Was kann ich für Sie tun?"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Rolingizni aniqlang: siz qo‘ng‘iroq qilyapsizmi (kimnidir so‘raysiz) yoki firmada ishlaysizmi (firma nomi bilan javob berasiz)? Misol: <b>Sie möchten Schluss machen → Auf Wiederhören!</b>",
+      "ru": "Определите роль: вы звоните (спрашиваете кого-то) или работаете в фирме (отвечаете с названием фирмы)? Пример: <b>Sie möchten Schluss machen → Auf Wiederhören!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie arbeiten bei Firma Weber und telefonieren. Was sagen Sie?",
+     "o": [
+      "Hallo, Weber hier. Wie geht’s?",
+      "Firma Weber, Keller, guten Tag.",
+      "Vielen Dank. Auf Wiederhören."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Frau Keller ist heute nicht im Büro. Was sagen Sie am Telefon?",
+     "o": [
+      "Frau Keller ist leider nicht da.",
+      "Einen Moment bitte. Hier ist Frau Keller.",
+      "Guten Tag, Frau Keller. Was kann ich für Sie tun?"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "*formell* oder *informell*? Was passt?",
+     "bsp": "Sie telefonieren mit Mia (du): ___ → ✓ <b>Hallo Mia, Tom hier.</b>",
+     "q": "Sie telefonieren mit Firma Schulz (Sie): ___",
+     "o": [
+      "Hallo, Tom hier. Ist Ali da?",
+      "Guten Tag, mein Name ist Tom Berger. Ist Herr Schulz da?"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Firma va <b>Sie</b> — to‘liq ism, <b>Herr/Frau</b>, <b>Auf Wiederhören</b>. Do‘st va <b>du</b> — faqat ism, <b>Hallo</b>, <b>Tschüs</b>. Misol: <b>Hallo Lisa, hier ist Tom.</b> → informell.",
+      "ru": "С фирмой и на <b>Sie</b> — полное имя, <b>Herr/Frau</b>, <b>Auf Wiederhören</b>. С другом на <b>du</b> — только имя, <b>Hallo</b>, <b>Tschüs</b>. Пример: <b>Hallo Lisa, hier ist Tom.</b> → informell."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "*formell* oder *informell*? Was passt?",
+     "q": "Sie telefonieren mit Ali (du) und sagen Danke: ___",
+     "o": [
+      "Danke, Ali. Tschüs!",
+      "Vielen Dank, Herr Schulz. Auf Wiederhören."
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,211 @@
+{
+ "title": "Lektion 21 · Kommunikation",
+ "sub": "Missfallen ausdrücken · Meinung sagen · widersprechen",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Das ist doch Unsinn! | ▪ Wie meinen Sie das? | ▪ Lassen Sie uns Bäume pflanzen!<br>→ <b>▪ Lassen Sie uns Bäume pflanzen!<br>● Das ist doch Unsinn!<br>▪ Wie meinen Sie das?</b>",
+     "w": [
+      "● Ich will nur, dass Sie mal nachdenken. Plastik ist für uns alle ein Problem.",
+      "▪ Was soll denn das? Im ganzen Treppenhaus sind Plakate!",
+      "▪ Na gut, ich denke mal darüber nach.",
+      "▪ Ihre Meinung? Das kann man doch nicht machen! Das ist nicht Ihr Haus.",
+      "● Ich sage nur meine Meinung. Wir haben zu viel Plastik im Müll."
+     ],
+     "a": "▪ Was soll denn das? Im ganzen Treppenhaus sind Plakate! ● Ich sage nur meine Meinung. Wir haben zu viel Plastik im Müll. ▪ Ihre Meinung? Das kann man doch nicht machen! Das ist nicht Ihr Haus. ● Ich will nur, dass Sie mal nachdenken. Plastik ist für uns alle ein Problem. ▪ Na gut, ich denke mal darüber nach.",
+     "gw": {
+      "uz": "Tartib: norozilik yoki taklif → reaksiya (tushuntirish, savol) → muhokama → kelishuv yoki «o‘ylab ko‘raman». Satrlar aralash — avval boshlovchi gapni toping. Misol: <b>Das ist ja laut hier! – Entschuldigung, wir machen leiser. – Danke.</b>",
+      "ru": "Порядок: недовольство или предложение → реакция (объяснение, вопрос) → обсуждение → согласие или «подумаю». Реплики перемешаны — сначала найдите начало. Пример: <b>Das ist ja laut hier! – Entschuldigung, wir machen leiser. – Danke.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Wir können die Heizung in der Nacht ausschalten.",
+      "● Okay, das ist eine gute Idee.",
+      "▪ Ich kann dazu nur sagen, dass unsere Heizkosten zu hoch sind.",
+      "● Können Sie mir das genauer erklären? Ist es dann nicht zu kalt?",
+      "● Da haben Sie schon recht, aber was können wir denn machen?",
+      "▪ Nein, nur von 23 bis 6 Uhr. Lassen Sie uns das im Dezember probieren!"
+     ],
+     "a": "▪ Ich kann dazu nur sagen, dass unsere Heizkosten zu hoch sind. ● Da haben Sie schon recht, aber was können wir denn machen? ▪ Wir können die Heizung in der Nacht ausschalten. ● Können Sie mir das genauer erklären? Ist es dann nicht zu kalt? ▪ Nein, nur von 23 bis 6 Uhr. Lassen Sie uns das im Dezember probieren! ● Okay, das ist eine gute Idee."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *soll*, *machen*, *Problem*, *recht*, *anders*, *erklären*.",
+     "bsp": "▪ Bäume in der Stadt braucht man nicht.<br>● Das ist doch ___! → <b>Unsinn</b>",
+     "s": "▪ Was ___ denn das? Ihr Auto steht direkt vor dem Eingang!\n● Ich bin nur fünf Minuten im Supermarkt.\n▪ Das kann man doch nicht ___! Ich muss jetzt zum Arzt fahren.\n● Ach, fünf Minuten sind doch kein ___.",
+     "a": [
+      [
+       "soll"
+      ],
+      [
+       "machen"
+      ],
+      [
+       "Problem"
+      ]
+     ],
+     "gw": {
+      "uz": "Bo‘shliqlar — norozilik, qisman rozilik, e’tiroz va so‘rov iboralarining qismlari. Atrofdagi so‘zlarga qarang: modal (<b>kann man … nicht ___</b>) → Infinitiv. Misol: <b>Das darf man hier nicht tun!</b>",
+      "ru": "Пропуски — части фраз недовольства, частичного согласия, возражения и просьбы. Смотрите на слова вокруг: модальный глагол (<b>kann man … nicht ___</b>) → инфинитив. Пример: <b>Das darf man hier nicht tun!</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *soll*, *machen*, *Problem*, *recht*, *anders*, *erklären*.",
+     "s": "▪ Mit dem Fahrrad ist man in der Stadt oft schneller als mit dem Auto.\n● Da haben Sie schon ___, aber im Winter ist es sehr kalt.\n▪ Tut mir leid, das sehe ich ganz ___. Dann ziehen Sie eine warme Jacke an.\n● Hm. Können Sie mir das genauer ___?",
+     "a": [
+      [
+       "recht"
+      ],
+      [
+       "anders"
+      ],
+      [
+       "erklären"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Missfallen ausdrücken oder reagieren? Ordnen Sie zu.",
+     "bsp": "Das ist doch Unsinn! → <b>😠 Missfallen ausdrücken</b>",
+     "c": [
+      "😠 Missfallen ausdrücken",
+      "🙂 auf Missfallen reagieren"
+     ],
+     "i": [
+      [
+       "Was soll denn das?",
+       0
+      ],
+      [
+       "Ich sage nur meine Meinung.",
+       1
+      ],
+      [
+       "Das kann man doch nicht machen!",
+       0
+      ],
+      [
+       "Ich will nur, dass Sie mal nachdenken.",
+       1
+      ],
+      [
+       "Der Müll ist für uns alle ein Problem.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Norozilik — g‘azab, undov yoki ayblov savoli. Reaksiya — tinchlantirish, o‘z niyatini tushuntirish. Misol: <b>Das ist ja unmöglich!</b> → Missfallen; <b>Ich wollte nur helfen.</b> → reagieren.",
+      "ru": "Недовольство — гнев, восклицание или вопрос-упрёк. Реакция — успокоить, объяснить своё намерение. Пример: <b>Das ist ja unmöglich!</b> → Missfallen; <b>Ich wollte nur helfen.</b> → reagieren."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Meinung sagen, nachfragen oder widersprechen? Ordnen Sie zu.",
+     "bsp": "Ich finde es ungerecht, dass … → <b>💬 die Meinung sagen</b>",
+     "c": [
+      "💬 die Meinung sagen",
+      "❓ nachfragen",
+      "✋ widersprechen"
+     ],
+     "i": [
+      [
+       "Ich kann dazu nur sagen, dass …",
+       0
+      ],
+      [
+       "Können Sie mir das genauer erklären?",
+       1
+      ],
+      [
+       "Nein, das sehe ich nicht so.",
+       2
+      ],
+      [
+       "Ich finde es unfair, dass …",
+       0
+      ],
+      [
+       "Wie meinen Sie das?",
+       1
+      ],
+      [
+       "Da haben Sie schon recht, aber …",
+       2
+      ],
+      [
+       "Tut mir leid, das sehe ich ganz anders.",
+       2
+      ]
+     ],
+     "gw": {
+      "uz": "Fikr — o‘z qarashingiz (<b>Meiner Meinung nach …</b>); so‘rash — tushunmagan narsani aniqlash; e’tiroz — rozi emasligingiz. Misol: <b>Was bedeutet das genau?</b> → nachfragen; <b>Das stimmt nicht.</b> → widersprechen.",
+      "ru": "Мнение — ваша позиция (<b>Meiner Meinung nach …</b>); переспрос — уточнить непонятное; возражение — несогласие. Пример: <b>Was bedeutet das genau?</b> → nachfragen; <b>Das stimmt nicht.</b> → widersprechen."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Sie verstehen das Argument nicht ganz. → <b>Können Sie mir das genauer erklären?</b>",
+     "q": "Ihr Nachbar stellt seinen Müll ins Treppenhaus. Sie ärgern sich.",
+     "o": [
+      "Das kann man doch nicht machen!",
+      "Ich sage nur meine Meinung.",
+      "Da haben Sie schon recht, aber …"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatdagi hissiyotni aniqlang: jahlingiz chiqdimi, qisman rozimisiz yoki tinch qolasizmi? Qisman rozilik «ha, lekin …» tuzilishida bo‘ladi. Misol: <b>Das stimmt, aber …</b>",
+      "ru": "Определите чувство: вы злитесь, частично согласны или остаётесь спокойны? Частичное согласие строится как «да, но …». Пример: <b>Das stimmt, aber …</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Nachbarin sagt: „Regionale Lebensmittel sind teuer.“ Das stimmt, aber Sie haben noch ein anderes Argument.",
+     "o": [
+      "Das ist doch Unsinn!",
+      "Da haben Sie schon recht, aber …",
+      "Was soll denn das?"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Eine Frau ist sauer, weil Sie Ihre Meinung über das Klima sagen. Sie bleiben ruhig.",
+     "o": [
+      "Das ist doch Unsinn!",
+      "Können Sie mir das genauer erklären?",
+      "Ich sage nur meine Meinung."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie sind mit Freunden im Park. Sie möchten zusammen einen Baum pflanzen.",
+     "o": [
+      "Lasst uns hier einen Baum pflanzen!",
+      "Lassen Sie uns hier einen Baum pflanzen!",
+      "Pflanzt hier einen Baum!"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

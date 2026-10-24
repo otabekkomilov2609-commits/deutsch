@@ -1,0 +1,213 @@
+{
+ "title": "Lektion 13 · Kommunikation",
+ "sub": "Einen Ort bewerten · Über einen Ort sprechen",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Super! | ● Ja, er ist sehr groß. | ▪ Gibt es hier einen Zoo? → <b>▪ Gibt es hier einen Zoo?<br>● Ja, er ist sehr groß.<br>▪ Super!</b>",
+     "w": [
+      "▪ Ich fahre im Sommer nach Zürich. Gibt es dort einen See?",
+      "● Ja, der See ist sehr schön. Dort kann man schwimmen.",
+      "▪ Und gibt es auch eine Altstadt?",
+      "● Ja, die Altstadt gefällt mir besonders gut."
+     ],
+     "a": "▪ Ich fahre im Sommer nach Zürich. Gibt es dort einen See? ● Ja, der See ist sehr schön. Dort kann man schwimmen. ▪ Und gibt es auch eine Altstadt? ● Ja, die Altstadt gefällt mir besonders gut.",
+     "gw": {
+      "uz": "<b>Gibt es …?</b> savoliga javob — <b>Ja, es gibt …</b> yoki <b>Nein, …</b>; <b>Wie gefällt dir …?</b> — baho. Har bir javob oldingi savolga mos. Misol: <b>▪ Gibt es hier ein Kino? ● Ja, im Zentrum.</b>",
+      "ru": "На <b>Gibt es …?</b> отвечают <b>Ja, es gibt …</b> или <b>Nein, …</b>; на <b>Wie gefällt dir …?</b> — оценкой. Каждый ответ к предыдущему вопросу. Пример: <b>▪ Gibt es hier ein Kino? ● Ja, im Zentrum.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Hallo Ali, wie gefällt dir Taschkent?",
+      "● Sehr gut! Besonders schön sieht die Altstadt aus.",
+      "▪ Gibt es in der Nähe auch einen Park? Weißt du das?",
+      "● Ja, es gibt einen Park. Aber leider gibt es keinen See."
+     ],
+     "a": "▪ Hallo Ali, wie gefällt dir Taschkent? ● Sehr gut! Besonders schön sieht die Altstadt aus. ▪ Gibt es in der Nähe auch einen Park? Weißt du das? ● Ja, es gibt einen Park. Aber leider gibt es keinen See."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Wie gefällt dir Wien?<br>● Sehr gut. Mein ___ ist das Schloss. → Mein <b>Lieblingsort</b> ist das Schloss.",
+     "s": "▪ Hallo Nora! Ich bin am Wochenende in Hamburg. ___ es dort auch ein Schloss? Weißt du das?\n● Nein, aber es gibt einen Hafen. Der ___ mir besonders gut.\n▪ Und was ___ man dort machen?\n● Dort kann man spazieren gehen. Und ganz in der ___ gibt es viele Cafés.",
+     "a": [
+      [
+       "Gibt"
+      ],
+      [
+       "gefällt"
+      ],
+      [
+       "kann"
+      ],
+      [
+       "Nähe"
+      ]
+     ],
+     "gw": {
+      "uz": "<b>es gibt</b> + Akkusativ (<b>einen Park</b>); <b>gefallen</b> + Dativ: <b>mir, dir, Ihnen</b>. «Bilasizmi?» — <b>Weißt du das? / Wissen Sie das?</b> Misol: <b>Wie gefällt Ihnen Wien?</b>",
+      "ru": "<b>es gibt</b> + Akkusativ (<b>einen Park</b>); <b>gefallen</b> + Dativ: <b>mir, dir, Ihnen</b>. «Знаешь?» — <b>Weißt du das? / Wissen Sie das?</b> Пример: <b>Wie gefällt Ihnen Wien?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Hallo Mia! Wie gefällt ___ Berlin?\n● Berlin ist toll! Es gibt viele Museen und viele Parks.\n▪ Gibt es dort auch einen Zoo? ___ du das?\n● Ja, der Zoo ist sehr groß. Dort ___ man viele Tiere sehen. Er gefällt ___ besonders gut.",
+     "a": [
+      [
+       "dir"
+      ],
+      [
+       "Weißt"
+      ],
+      [
+       "kann"
+      ],
+      [
+       "mir"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Positiv oder negativ? Ordnen Sie zu.",
+     "bsp": "Der Park ist toll! → <b>positiv</b>",
+     "c": [
+      "👍 positiv",
+      "👎 negativ"
+     ],
+     "i": [
+      [
+       "Die Altstadt gefällt mir besonders gut.",
+       0
+      ],
+      [
+       "Leider gibt es keinen Park.",
+       1
+      ],
+      [
+       "Besonders schön sieht der Hafen aus.",
+       0
+      ],
+      [
+       "Das Kino ist viel zu teuer.",
+       1
+      ],
+      [
+       "Der Markt ist toll und interessant.",
+       0
+      ],
+      [
+       "Der Zoo gefällt mir nicht so gut.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "<b>leider</b>, <b>kein/keine</b> — odatda salbiy; <b>besonders schön</b>, <b>gefällt mir</b> — ijobiy. Misol: <b>Der Park gefällt mir sehr.</b> → 👍",
+      "ru": "<b>leider</b>, <b>kein/keine</b> — обычно отрицательно; <b>besonders schön</b>, <b>gefällt mir</b> — положительно. Пример: <b>Der Park gefällt mir sehr.</b> → 👍"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Wie gefällt dir Berlin? → <b>Leon (du)</b>",
+     "c": [
+      "Leon (du)",
+      "Frau Berger (Sie)"
+     ],
+     "i": [
+      [
+       "Wie gefällt Ihnen die Altstadt?",
+       1
+      ],
+      [
+       "Gibt es hier auch einen Markt? Weißt du das?",
+       0
+      ],
+      [
+       "Kannst du mir helfen?",
+       0
+      ],
+      [
+       "Wissen Sie das?",
+       1
+      ],
+      [
+       "Was ist dein Lieblingsort?",
+       0
+      ],
+      [
+       "Gefällt Ihnen der Park?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Belgilar: <b>dir, weißt du</b> — norasmiy; <b>Ihnen, wissen Sie</b> — rasmiy. Misol: <b>Wissen Sie, wo der Bahnhof ist?</b> → Sie.",
+      "ru": "Признаки: <b>dir, weißt du</b> — неофициально; <b>Ihnen, wissen Sie</b> — официально. Пример: <b>Wissen Sie, wo der Bahnhof ist?</b> → Sie."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "bsp": "Sie lieben den Park. → <b>Der Park gefällt mir besonders gut.</b>",
+     "q": "Sie finden das Rathaus sehr schön. Was sagen Sie?",
+     "o": [
+      "Besonders schön sieht das Rathaus aus.",
+      "Leider gibt es kein Rathaus.",
+      "Gibt es hier auch ein Rathaus?"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyat mazmunini aniq tekshiring: yoqadimi (<b>besonders schön</b>), bormi (<b>es gibt</b>) yoki yo‘qmi (<b>leider kein</b>)? Misol: <b>In der Stadt gibt es einen Zoo → Es gibt dort auch einen Zoo.</b>",
+      "ru": "Точно проверьте смысл ситуации: нравится (<b>besonders schön</b>), есть (<b>es gibt</b>) или нет (<b>leider kein</b>)? Пример: <b>In der Stadt gibt es einen Zoo → Es gibt dort auch einen Zoo.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "In der Stadt gibt es kein Schwimmbad. Was sagen Sie?",
+     "o": [
+      "Es gibt dort auch ein Schwimmbad.",
+      "Leider gibt es kein Schwimmbad.",
+      "Das Schwimmbad gefällt mir sehr gut."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Sie möchten wissen: Hat Samarkand einen Zoo? Was fragen Sie?",
+     "o": [
+      "Dort kann man einen Zoo sehen.",
+      "Mein Lieblingsort ist der Zoo.",
+      "Gibt es in Samarkand einen Zoo?"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Sie sprechen über Ihren Lieblingsort. Was sagen Sie?",
+     "o": [
+      "Mein Lieblingsort ist der Park am See.",
+      "Gibt es hier einen Park? Weißt du das?",
+      "Leider gibt es keinen Park."
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,207 @@
+{
+ "title": "Lektion 6 · Kommunikation",
+ "sub": "um Rat bitten · Ratschläge geben · Begeisterung und Unlust",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Geh doch schwimmen! | ▪ Gute Idee, danke! | ▪ Hast du einen Tipp für mich?<br>→ <b>▪ Hast du einen Tipp für mich?<br>● Geh doch schwimmen!<br>▪ Gute Idee, danke!</b>",
+     "w": [
+      "▪ Ich bin oft müde. Hast du vielleicht einen Tipp für mich?",
+      "● Du solltest mehr schlafen.",
+      "▪ Das geht nicht. Ich habe zu viel Arbeit.",
+      "● Dann solltest du mal Urlaub machen."
+     ],
+     "a": "▪ Ich bin oft müde. Hast du vielleicht einen Tipp für mich? ● Du solltest mehr schlafen. ▪ Das geht nicht. Ich habe zu viel Arbeit. ● Dann solltest du mal Urlaub machen.",
+     "gw": {
+      "uz": "Tartib: muammo + maslahat so‘rash → maslahat → e’tiroz (nega bo‘lmaydi) → yangi maslahat yoki rahmat. Har maslahat aytilgan muammoga javob bo‘lishi kerak. Misol: <b>Ich schlafe schlecht. – Trink abends keinen Kaffee!</b>",
+      "ru": "Порядок: проблема + просьба о совете → совет → возражение (почему нельзя) → новый совет или спасибо. Каждый совет отвечает на названную проблему. Пример: <b>Ich schlafe schlecht. – Trink abends keinen Kaffee!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Ich möchte eine neue Sportart ausprobieren. Welche passt zu mir?",
+      "● Magst du Wasser?",
+      "▪ Ja, sehr.",
+      "● Dann geh doch tauchen!"
+     ],
+     "a": "▪ Ich möchte eine neue Sportart ausprobieren. Welche passt zu mir? ● Magst du Wasser? ▪ Ja, sehr. ● Dann geh doch tauchen!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *Tipp*, *Stelle*, *passt*, *doch*, *solltest*.",
+     "bsp": "▪ Ich habe zu wenig Bewegung.<br>● Du ___ auch walken gehen. → <b>könntest</b>",
+     "s": "▪ Ich bin nicht fit. Hast du einen ___ für mich?\n● Du ___ mehr Sport machen. Mach ___ Gymnastik!",
+     "a": [
+      [
+       "Tipp"
+      ],
+      [
+       "solltest"
+      ],
+      [
+       "doch"
+      ]
+     ],
+     "gw": {
+      "uz": "Avval so‘z bankidagi har so‘z qaysi iboraga tegishli ekanini eslang: maslahat so‘rash yoki maslahat berish. Keyin grammatikani tekshiring: modal fe’l <b>du</b> bilan <b>-st</b> oladi, Infinitiv oxirida. Misol: <b>Sie sollten mehr laufen.</b>",
+      "ru": "Вспомните, к какому выражению относится каждое слово из списка: просить совета или давать его. Затем грамматика: модальный глагол с <b>du</b> на <b>-st</b>, инфинитив в конце. Пример: <b>Sie sollten mehr laufen.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *Tipp*, *Stelle*, *passt*, *doch*, *solltest*.",
+     "s": "▪ Ich möchte etwas für meine Fitness tun. Welche Sportart ___ zu mir?\n● Du bist gern draußen, oder? An deiner ___ würde ich Rad fahren.\n▪ Gute Idee! Danke für den ___!",
+     "a": [
+      [
+       "passt"
+      ],
+      [
+       "Stelle"
+      ],
+      [
+       "Tipp"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Begeisterung oder Unlust? Ordnen Sie zu.",
+     "bsp": "Wunderbar! → <b>Begeisterung</b>",
+     "c": [
+      "😀 Begeisterung",
+      "😩 Unlust"
+     ],
+     "i": [
+      [
+       "Au ja!",
+       0
+      ],
+      [
+       "Jetzt schon?",
+       1
+      ],
+      [
+       "Fantastisch!",
+       0
+      ],
+      [
+       "Muss das sein?",
+       1
+      ],
+      [
+       "Wie schön!",
+       0
+      ],
+      [
+       "Ich bin heute nicht fit.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Ohangni his qiling: quvonchli undov va «zo‘r» ma’nosidagi so‘zlar — Begeisterung; norozi savollar, charchoq va «xohlamayman» — Unlust. Misol: <b>Super, gehen wir!</b> → Begeisterung; <b>Ach nein, nicht heute!</b> → Unlust.",
+      "ru": "Почувствуйте тон: радостные восклицания и слова «здорово» — Begeisterung; недовольные вопросы, усталость, «не хочу» — Unlust. Пример: <b>Super, gehen wir!</b> → Begeisterung; <b>Ach nein, nicht heute!</b> → Unlust."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Um Rat bitten oder Rat geben? Ordnen Sie zu.",
+     "bsp": "Was kann ich tun? → <b>um Rat bitten</b>",
+     "c": [
+      "um Rat bitten",
+      "Rat geben"
+     ],
+     "i": [
+      [
+       "Hast du vielleicht einen Tipp für mich?",
+       0
+      ],
+      [
+       "Du solltest mehr trainieren.",
+       1
+      ],
+      [
+       "Welche Sportart passt zu mir?",
+       0
+      ],
+      [
+       "An deiner Stelle würde ich Yoga machen.",
+       1
+      ],
+      [
+       "Geh doch ins Fitnessstudio!",
+       1
+      ],
+      [
+       "Ich möchte eine neue Sportart ausprobieren.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Kim uchun? O‘zingizga yordam so‘rasangiz — savol, <b>ich/mir/mich</b>: um Rat bitten. Boshqaga yo‘l ko‘rsatsangiz — <b>du solltest</b>, buyruq, <b>würde ich</b>: Rat geben. Misol: <b>Was soll ich machen?</b> → bitten; <b>Trink mehr Wasser!</b> → geben.",
+      "ru": "Для кого? Просите помощь для себя — вопрос, <b>ich/mir/mich</b>: um Rat bitten. Советуете другому — <b>du solltest</b>, императив, <b>würde ich</b>: Rat geben. Пример: <b>Was soll ich machen?</b> → bitten; <b>Trink mehr Wasser!</b> → geben."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihre Freundin sagt: „Wir gehen heute klettern!“ Sie finden das super. → <b>Au ja!</b>",
+     "q": "Ihr Trainer sagt: „Jetzt noch 50 Squats!“ Sie haben keine Lust. Was sagen Sie?",
+     "o": [
+      "Muss das sein?",
+      "Wie schön!",
+      "Hast du einen Tipp?"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Avval vaziyatdagi his yoki maqsadni aniqlang: istamaslik, maslahat so‘rash yoki maslahat berish. Keyin shu maqsadga mos iborani tanlang. Misol: do‘stingiz juda ko‘p ishlaydi → <b>Du solltest mal Pause machen.</b>",
+      "ru": "Сначала определите чувство или цель: нежелание, просьба о совете или совет. Затем выберите подходящее выражение. Пример: друг очень много работает → <b>Du solltest mal Pause machen.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie möchten Sport machen, aber Sie wissen nicht, welchen. Was sagen Sie?",
+     "o": [
+      "Ich bin bereit!",
+      "Welche Sportart passt zu mir?",
+      "Du könntest auch walken gehen."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ein Freund ist oft müde. Was sagen Sie?",
+     "o": [
+      "Jetzt schon?",
+      "Muss das sein?",
+      "Du solltest mehr schlafen."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Das Fitnessprogramm startet und Sie freuen sich. Was sagen Sie?",
+     "o": [
+      "Es kann losgehen!",
+      "Muss das sein?",
+      "Ich bin heute nicht fit."
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

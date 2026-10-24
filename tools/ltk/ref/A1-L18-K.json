@@ -1,0 +1,176 @@
+{
+ "title": "Lektion 18 · Kommunikation",
+ "sub": "Schmerzen beschreiben · Ratschläge · Bei uns ist … üblich",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Machen Sie Übungen! | ▪ Mein Rücken tut weh. | ▪ Danke, das mache ich. → <b>▪ Mein Rücken tut weh.<br>● Machen Sie Übungen!<br>▪ Danke, das mache ich.</b>",
+     "w": [
+      "▪ Hallo Elif, was ist los?",
+      "● Mein Kopf tut weh. Hast du einen Tipp?",
+      "▪ Viel Wasser trinken und spazieren gehen. Das hilft wirklich gut.",
+      "● Danke, das mache ich."
+     ],
+     "a": "▪ Hallo Elif, was ist los? ● Mein Kopf tut weh. Hast du einen Tipp? ▪ Viel Wasser trinken und spazieren gehen. Das hilft wirklich gut. ● Danke, das mache ich.",
+     "gw": {
+      "uz": "Muammo so‘raladi (<b>Was ist los?</b>) → belgi aytiladi → maslahat beriladi → rahmat. Misol: <b>▪ Was ist los? ● Ich habe Fieber.</b>",
+      "ru": "Спрашивают о проблеме (<b>Was ist los?</b>) → называют симптом → дают совет → благодарят. Пример: <b>▪ Was ist los? ● Ich habe Fieber.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Guten Tag, Frau Berger. Wie geht es Ihnen?",
+      "● Nicht so gut. Ich habe Husten und Halsschmerzen.",
+      "▪ Gehen Sie doch zum Arzt!",
+      "● Ja, ich habe morgen einen Termin."
+     ],
+     "a": "▪ Guten Tag, Frau Berger. Wie geht es Ihnen? ● Nicht so gut. Ich habe Husten und Halsschmerzen. ▪ Gehen Sie doch zum Arzt! ● Ja, ich habe morgen einen Termin."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Was ist los?<br>● Mein Rücken ___ weh. → Mein Rücken <b>tut</b> weh.",
+     "q": "hilft · gegen · Tipp · weh",
+     "s": "▪ Meine Ohren tun ___. Was kann man ___ Ohrenschmerzen machen?\n● Haben Sie Fieber?\n▪ Nein. Haben Sie einen ___?\n● Gehen Sie zum Arzt. Das ___ sicher.",
+     "a": [
+      [
+       "weh"
+      ],
+      [
+       "gegen"
+      ],
+      [
+       "Tipp"
+      ],
+      [
+       "hilft"
+      ]
+     ],
+     "gw": {
+      "uz": "Tayyor iboralar: <b>… tut/tun weh</b>, <b>Was hilft gegen …?</b>, <b>Ich habe einen Tipp</b>. Ma’no: <b>üblich</b> — odatiy, <b>komisch</b> — g‘alati. Misol: <b>Bei uns trinkt man Tee mit Honig.</b>",
+      "ru": "Готовые фразы: <b>… tut/tun weh</b>, <b>Was hilft gegen …?</b>, <b>Ich habe einen Tipp</b>. Значения: <b>üblich</b> — обычно, <b>komisch</b> — странно. Пример: <b>Bei uns trinkt man Tee mit Honig.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "üblich · komisch · Wichtig · Erkältung",
+     "s": "▪ Ich habe eine ___. Was soll ich machen?\n● ___ ist: viel trinken und viel schlafen. Bei uns ist auch Milch mit Honig ___.\n▪ Milch mit Honig? Das finde ich etwas ___.",
+     "a": [
+      [
+       "Erkältung"
+      ],
+      [
+       "Wichtig"
+      ],
+      [
+       "üblich"
+      ],
+      [
+       "komisch"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Ihr Kopf tut weh. Sie sagen: ___ → ✓ <b>Ich habe Kopfschmerzen.</b>",
+     "q": "Sie haben Husten und brauchen einen Tipp. Sie fragen: ___",
+     "o": [
+      "Was hilft gegen Husten?",
+      "Das hilft gut gegen Husten.",
+      "Bei uns ist Husten üblich."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatga qarang: maslahat so‘rayapsizmi (<b>Was hilft gegen …?</b>) yoki og‘riqni aytyapsizmi? Birlik — <b>tut weh</b>, ko‘plik — <b>tun weh</b>. Misol: <b>Meine Augen tun weh.</b>",
+      "ru": "Смотрите на ситуацию: вы просите совет (<b>Was hilft gegen …?</b>) или говорите, что болит? Ед. число — <b>tut weh</b>, мн. — <b>tun weh</b>. Пример: <b>Meine Augen tun weh.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Ihre Ohren tun weh. Sie sagen: ___",
+     "o": [
+      "Ich habe Rückenschmerzen.",
+      "Meine Ohren tun weh.",
+      "Mein Hals tut weh."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Herr Schulz hat Fieber. Sie geben einen Ratschlag: ___",
+     "o": [
+      "Wer hat einen Ratschlag?",
+      "Was kann man gegen Fieber machen?",
+      "Bleiben Sie im Bett! Das hilft sicher."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "In Deutschland macht man im Büro Sport. Bei Ihnen zu Hause macht man das nicht. Sie sagen: ___",
+     "o": [
+      "Bei uns ist das nicht üblich.",
+      "Das hilft sicher.",
+      "Habt ihr einen Tipp?"
+     ],
+     "a": 0
+    },
+    {
+     "t": "cat",
+     "h": "Problem oder Ratschlag? Ordnen Sie zu.",
+     "bsp": "Mein Knie tut weh. → <b>Problem</b>",
+     "c": [
+      "🤒 Problem / Frage",
+      "💡 Ratschlag"
+     ],
+     "i": [
+      [
+       "Mein Hals tut weh.",
+       0
+      ],
+      [
+       "Trinken Sie Tee mit Honig!",
+       1
+      ],
+      [
+       "Ich habe Fieber und Husten.",
+       0
+      ],
+      [
+       "Wichtig ist: viel schlafen.",
+       1
+      ],
+      [
+       "Was hilft gegen Schnupfen?",
+       0
+      ],
+      [
+       "Das hilft wirklich gut gegen Rückenschmerzen.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Maslahat odatda buyruq shaklida (<b>Trinken Sie …!</b>, <b>Geh doch …!</b>); muammo — o‘zi haqida gap yoki savol. Misol: <b>Bleib im Bett!</b> → Ratschlag, <b>Ich bin müde.</b> → Problem.",
+      "ru": "Совет обычно в повелительном (<b>Trinken Sie …!</b>, <b>Geh doch …!</b>); проблема — фраза о себе или вопрос. Пример: <b>Bleib im Bett!</b> → Ratschlag, <b>Ich bin müde.</b> → Problem."
+     }
+    }
+   ]
+  }
+ ]
+}

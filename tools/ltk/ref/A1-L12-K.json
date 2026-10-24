@@ -1,0 +1,213 @@
+{
+ "title": "Lektion 12 · Kommunikation",
+ "sub": "Über Reisen sprechen · Über Feste sprechen",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● In Spanien. | ▪ Wo warst du im Sommer? | ▪ Und wie war das Wetter? | ● Super! → <b>▪ Wo warst du im Sommer?<br>● In Spanien.<br>▪ Und wie war das Wetter?<br>● Super!</b>",
+     "w": [
+      "▪ Hallo Nora! Wo warst du im August?",
+      "● Ich war in der Türkei.",
+      "▪ Warst du allein unterwegs?",
+      "● Nein, mit meiner Familie. Wir hatten viel Spaß."
+     ],
+     "a": "▪ Hallo Nora! Wo warst du im August? ● Ich war in der Türkei. ▪ Warst du allein unterwegs? ● Nein, mit meiner Familie. Wir hatten viel Spaß.",
+     "gw": {
+      "uz": "O‘tgan zamonda <b>war</b> (edi) va <b>hatte</b> (bor edi) ishlatiladi. Savol so‘zi (wo, wann, wie) javob turini aytadi: joy, vaqt yoki baho. Misol: <b>▪ Wie war der Urlaub? ● Super!</b>",
+      "ru": "О прошлом говорят <b>war</b> (был) и <b>hatte</b> (имел). Вопросительное слово (wo, wann, wie) задаёт тип ответа: место, время или оценка. Пример: <b>▪ Wie war der Urlaub? ● Super!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Wann hast du Geburtstag, Ali?",
+      "● Im Herbst, im Oktober.",
+      "▪ Und wie feierst du?",
+      "● Ich feiere mit Freunden zu Hause."
+     ],
+     "a": "▪ Wann hast du Geburtstag, Ali? ● Im Herbst, im Oktober. ▪ Und wie feierst du? ● Ich feiere mit Freunden zu Hause."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Wann hast du ___?<br>● Im Mai. → Wann hast du <b>Geburtstag</b>?",
+     "s": "▪ Hallo Elif! ___ warst du im Winter?\n● In Zürich, bei meinem Bruder.\n▪ Und wie war das ___?\n● Nicht so gut. Ich hatte kein ___.\n▪ Und war die Reise schön?\n● Ja, ich hatte viel ___.",
+     "a": [
+      [
+       "Wo"
+      ],
+      [
+       "Wetter"
+      ],
+      [
+       "Glück"
+      ],
+      [
+       "Spaß"
+      ]
+     ],
+     "gw": {
+      "uz": "Javobga qarab savol so‘zini toping: joy — <b>Wo</b>, vaqt — <b>Wann</b>, baho — <b>Wie</b>, boshlanish — <b>Seit wann</b>. Misol: <b>Wann warst du in Wien? – Im Mai.</b>",
+      "ru": "По ответу найдите вопросительное слово: место — <b>Wo</b>, время — <b>Wann</b>, оценка — <b>Wie</b>, с какого времени — <b>Seit wann</b>. Пример: <b>Wann warst du in Wien? – Im Mai.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Wie ___ das Fest in deiner Stadt?\n● Es heißt Stadtfest.\n▪ Seit ___ gibt es das Fest?\n● Oh, schon sehr lange.\n▪ Und wann ist es?\n● ___ Frühling, im März.\n▪ Wie viele ___ hat das Fest?\n● Etwa eine Million.",
+     "a": [
+      [
+       "heißt"
+      ],
+      [
+       "wann"
+      ],
+      [
+       "Im"
+      ],
+      [
+       "Besucher"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Reise oder Fest? Ordnen Sie zu.",
+     "bsp": "Die Reise war sehr schön. → <b>Reise</b>",
+     "c": [
+      "🧳 Reise",
+      "🎉 Fest"
+     ],
+     "i": [
+      [
+       "Wir hatten Glück mit dem Wetter.",
+       0
+      ],
+      [
+       "Es gibt das Fest seit 1810.",
+       1
+      ],
+      [
+       "Es dauert drei Tage und hat viele Besucher.",
+       1
+      ],
+      [
+       "Ich war mit Freunden unterwegs.",
+       0
+      ],
+      [
+       "Es ist jedes Jahr im Mai.",
+       1
+      ],
+      [
+       "Ich bin mit dem Zug nach Wien gefahren.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Gap nima haqida: safar (qayerda edi, ob-havo, kim bilan) yoki bayram (qachondan beri, qancha davom etadi, nima bo‘ladi)? Misol: <b>Wir waren zwei Wochen am Meer.</b> → Reise.",
+      "ru": "О чём предложение: поездка (где был, погода, с кем) или праздник (с каких пор, сколько длится, что там)? Пример: <b>Wir waren zwei Wochen am Meer.</b> → Reise."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Warst du in Berlin? → <b>Paul (du)</b>",
+     "c": [
+      "Paul (du)",
+      "Frau Berger (Sie)"
+     ],
+     "i": [
+      [
+       "Wann haben Sie Geburtstag?",
+       1
+      ],
+      [
+       "Wo warst du im Sommer?",
+       0
+      ],
+      [
+       "Hattest du viel Spaß?",
+       0
+      ],
+      [
+       "Waren Sie allein unterwegs?",
+       1
+      ],
+      [
+       "Wie war Ihre Reise?",
+       1
+      ],
+      [
+       "Bist du schon einmal nach Wien geflogen?",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "O‘tgan zamonda ham shaklga qarang: <b>warst du / hattest du</b> — norasmiy, <b>waren Sie / hatten Sie</b> — rasmiy. Misol: <b>Waren Sie schon in Berlin?</b> → Sie.",
+      "ru": "И в прошедшем смотрите на форму: <b>warst du / hattest du</b> — неофициально, <b>waren Sie / hatten Sie</b> — официально. Пример: <b>Waren Sie schon in Berlin?</b> → Sie."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "bsp": "Das Wetter war super. → <b>Ich hatte Glück mit dem Wetter.</b>",
+     "q": "Die Reise war nicht gut. Was sagen Sie?",
+     "o": [
+      "Die Reise war nicht so schön.",
+      "Ich hatte viel Spaß.",
+      "Die Reise war toll."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Ikki narsani tekshiring: zamon (o‘tgan voqea — <b>war/hatte</b>) va baho (yaxshi yoki yomon). Misol: <b>Letztes Jahr war ich in Italien.</b> — o‘tgan zamon.",
+      "ru": "Проверьте две вещи: время (прошлое — <b>war/hatte</b>) и оценку (хорошо или плохо). Пример: <b>Letztes Jahr war ich in Italien.</b> — прошедшее время."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Sie waren im Juli in Spanien. Was sagen Sie?",
+     "o": [
+      "Im Juli fahre ich nach Spanien.",
+      "Im Juli war ich in Spanien.",
+      "Seit Juli bin ich in Spanien."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Ihr Geburtstag ist im Oktober. Was sagen Sie?",
+     "o": [
+      "Ich habe im Oktober Geburtstag.",
+      "Ich hatte im Oktober Geburtstag.",
+      "Seit Oktober habe ich Geburtstag."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Das Fest in Ihrer Stadt ist sehr alt. Was sagen Sie?",
+     "o": [
+      "Das Fest dauert 1000 Jahre.",
+      "Das Fest gibt es seit 1000 Jahren.",
+      "Das Fest hat 1000 Besucher."
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

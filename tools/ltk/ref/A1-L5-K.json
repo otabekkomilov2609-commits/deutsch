@@ -1,0 +1,200 @@
+{
+ "title": "Lektion 5 · Kommunikation",
+ "sub": "Wie heißt das auf Deutsch? · Danke – Bitte · E-Mail-Adresse",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Bitte. | ▪ Was ist das? | ● Das ist ein Bleistift. | ▪ Danke. → <b>▪ Was ist das?<br>● Das ist ein Bleistift.<br>▪ Danke.<br>● Bitte.</b>",
+     "w": [
+      "▪ Wie heißt das auf Deutsch, bitte?",
+      "● Das ist eine Kette.",
+      "▪ Wie bitte? Noch einmal, bitte.",
+      "● Eine Kette. K – E – T – T – E.",
+      "▪ Danke schön.",
+      "● Bitte. Sehr gern."
+     ],
+     "a": "▪ Wie heißt das auf Deutsch, bitte? ● Das ist eine Kette. ▪ Wie bitte? Noch einmal, bitte. ● Eine Kette. K – E – T – T – E. ▪ Danke schön. ● Bitte. Sehr gern.",
+     "gw": {
+      "uz": "Savol (so‘z nima deyiladi?) → javob; <b>Wie bitte? / Noch einmal, bitte.</b> → qayta aytish yoki harflab aytish; oxirida <b>Danke</b> → <b>Bitte</b>. Misol: <b>● Danke! ▪ Bitte!</b> — suhbat oxiri.",
+      "ru": "Вопрос (как это называется?) → ответ; <b>Wie bitte? / Noch einmal, bitte.</b> → повтор или по буквам; в конце <b>Danke</b> → <b>Bitte</b>. Пример: <b>● Danke! ▪ Bitte!</b> — конец разговора."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Wie ist Ihre E-Mail-Adresse, Frau Keller?",
+      "● lisa.keller@mail.de",
+      "▪ Entschuldigung, wie bitte?",
+      "● L – I – S – A Punkt Keller ät mail Punkt de.",
+      "▪ Vielen Dank.",
+      "● Kein Problem."
+     ],
+     "a": "▪ Wie ist Ihre E-Mail-Adresse, Frau Keller? ● lisa.keller@mail.de ▪ Entschuldigung, wie bitte? ● L – I – S – A Punkt Keller ät mail Punkt de. ▪ Vielen Dank. ● Kein Problem."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Ist das ein Stift?<br>● Nein, das ist ___ Stift. Das ist ein Bleistift. → Das ist <b>kein</b> Stift.",
+     "s": "▪ Entschuldigung, wie ___ das auf Deutsch?\n● Das ist ein Schlüssel.\n▪ Wie ___ man das?\n● S – C – H – L – Ü – S – S – E – L.\n▪ Vielen ___!\n● Kein ___.",
+     "a": [
+      [
+       "heißt"
+      ],
+      [
+       "schreibt"
+      ],
+      [
+       "Dank"
+      ],
+      [
+       "Problem"
+      ]
+     ],
+     "gw": {
+      "uz": "Tayyor savollarni eslang: so‘zni so‘rash, yozilishini so‘rash, tushunmaslik. <b>man</b> bilan fe’l <b>-t</b> oladi. Misol: <b>Wie sagt man das auf Deutsch?</b>",
+      "ru": "Вспомните готовые вопросы: спросить слово, написание, сказать, что не понимаете. С <b>man</b> глагол на <b>-t</b>. Пример: <b>Wie sagt man das auf Deutsch?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Jonas, was ist das?\n● Ich ___ nicht. Ist das eine Kamera?\n▪ Nein, das ist ein Handy.\n● Wie ___? Noch einmal, bitte.\n▪ Ein Handy.\n● Ah, ___ schön.\n▪ Bitte ___.",
+     "a": [
+      [
+       "weiß"
+      ],
+      [
+       "bitte"
+      ],
+      [
+       "danke"
+      ],
+      [
+       "schön"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Danke oder Bitte? Ordnen Sie zu.",
+     "bsp": "Herzlichen Dank! → <b>🙏 Danke</b>",
+     "c": [
+      "🙏 Danke",
+      "😊 Bitte"
+     ],
+     "i": [
+      [
+       "Vielen Dank.",
+       0
+      ],
+      [
+       "Sehr gern.",
+       1
+      ],
+      [
+       "Kein Problem.",
+       1
+      ],
+      [
+       "Danke schön.",
+       0
+      ],
+      [
+       "Bitte schön.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Minnatdorchilik bildiruvchi gaplar — <b>Danke</b> guruhi; ularga javob («arzimaydi») — <b>Bitte</b> guruhi. Misol: <b>Danke sehr!</b> → Danke, <b>Gern geschehen.</b> → Bitte.",
+      "ru": "Фразы благодарности — группа <b>Danke</b>; ответ на них («не за что») — группа <b>Bitte</b>. Пример: <b>Danke sehr!</b> → Danke, <b>Gern geschehen.</b> → Bitte."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Was sagt man wann? Ordnen Sie zu.",
+     "bsp": "„Was ist das?“ → <b>nach Wörtern fragen</b>",
+     "c": [
+      "nach Wörtern fragen",
+      "um Wiederholung bitten",
+      "sich bedanken"
+     ],
+     "i": [
+      [
+       "Wie heißt das auf Deutsch?",
+       0
+      ],
+      [
+       "Noch einmal, bitte.",
+       1
+      ],
+      [
+       "Vielen Dank.",
+       2
+      ],
+      [
+       "Wie schreibt man das?",
+       0
+      ],
+      [
+       "Wie bitte?",
+       1
+      ],
+      [
+       "Danke schön.",
+       2
+      ]
+     ],
+     "gw": {
+      "uz": "Gapning maqsadini aniqlang: yangi so‘zni so‘rayapti, qaytarishni so‘rayapti yoki rahmat aytyapti? Misol: <b>Was ist das auf Deutsch?</b> → nach Wörtern fragen, <b>Bitte langsam!</b> → um Wiederholung bitten.",
+      "ru": "Определите цель фразы: спрашивают новое слово, просят повторить или благодарят? Пример: <b>Was ist das auf Deutsch?</b> → nach Wörtern fragen, <b>Bitte langsam!</b> → um Wiederholung bitten."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "*du* oder *Sie*? Was passt?",
+     "bsp": "▪ Hallo, Jonas! Wie ist ___ Telefonnummer? → ✓ <b>deine</b> (Jonas → du)",
+     "q": "▪ Guten Tag, Frau Berger. Wie ist ___ E-Mail-Adresse?",
+     "o": [
+      "deine",
+      "Ihre"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Ism → <b>du</b>: <b>dein/deine</b>, fe’l <b>-st</b>; <b>Herr/Frau</b> → <b>Sie</b>: <b>Ihr/Ihre</b>, fe’l <b>-en</b>. Ba’zi fe’llarda <b>du</b> bilan unli o‘zgaradi. Misol: <b>lesen → du liest</b>.",
+      "ru": "Имя → <b>du</b>: <b>dein/deine</b>, глагол на <b>-st</b>; <b>Herr/Frau</b> → <b>Sie</b>: <b>Ihr/Ihre</b>, глагол на <b>-en</b>. У некоторых глаголов с <b>du</b> меняется гласная. Пример: <b>lesen → du liest</b>."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "*du* oder *Sie*? Was passt?",
+     "q": "▪ Leon, ___ du das Auto?",
+     "o": [
+      "siehst",
+      "sehen"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "*du* oder *Sie*? Was passt?",
+     "q": "▪ Mia, wie ist ___ Postleitzahl?",
+     "o": [
+      "Ihre",
+      "deine"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

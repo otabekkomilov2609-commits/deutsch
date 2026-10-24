@@ -1,0 +1,181 @@
+{
+ "title": "Lektion 17 · Kommunikation",
+ "sub": "Verständnis äußern · kooperieren",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Danke, dass du das machst! | ▪ Kannst du das bitte machen? | ● Ja, klar. Kein Problem.<br>→ <b>▪ Kannst du das bitte machen?<br>● Ja, klar. Kein Problem.<br>▪ Danke, dass du das machst!</b>",
+     "w": [
+      "▪ Ach so, das habe ich nicht gewusst. Kein Problem.",
+      "▪ Mia, kannst du bitte das Meeting morgen vorbereiten?",
+      "▪ Gute Idee. Ich frage ihn gleich.",
+      "● Tut mir leid, das geht nicht. Ich habe morgen einen Arzttermin.",
+      "● Vielleicht kann Leon das übernehmen?"
+     ],
+     "a": "▪ Mia, kannst du bitte das Meeting morgen vorbereiten? ● Tut mir leid, das geht nicht. Ich habe morgen einen Arzttermin. ▪ Ach so, das habe ich nicht gewusst. Kein Problem. ● Vielleicht kann Leon das übernehmen? ▪ Gute Idee. Ich frage ihn gleich.",
+     "gw": {
+      "uz": "Jamoa suhbati: topshiriq yoki taklif → javob (rozilik/rad + sabab) → tushunish yoki yechim → kelishuv. Satrlar aralash — avval birinchi savolni toping, keyin har javobni unga bog‘lang. Misol: <b>Kannst du das machen? – Leider nicht, ich bin krank. – Kein Problem.</b>",
+      "ru": "Разговор в команде: поручение или предложение → ответ (согласие/отказ + причина) → понимание или решение → договорённость. Реплики перемешаны — найдите первый вопрос и связывайте ответы с ним. Пример: <b>Kannst du das machen? – Leider nicht, ich bin krank. – Kein Problem.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "● Aber sie ist schon am Montag. Das ist ziemlich viel.",
+      "● Ich würde gern die Präsentation machen. Einverstanden?",
+      "▪ Stresst dich das? Dann helfe ich dir gern.",
+      "▪ So, wer möchte die Präsentation übernehmen?",
+      "▪ Ja, super. Danke, dass du das übernimmst."
+     ],
+     "a": "▪ So, wer möchte die Präsentation übernehmen? ● Ich würde gern die Präsentation machen. Einverstanden? ▪ Ja, super. Danke, dass du das übernimmst. ● Aber sie ist schon am Montag. Das ist ziemlich viel. ▪ Stresst dich das? Dann helfe ich dir gern."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *gewusst*, *verstehen*, *übernehmen*, *recht*, *besser*, *zusammen*.",
+     "bsp": "▪ Ich habe so viel Arbeit.<br>● Stresst dich das? Dann ___ ich dir gern. → <b>helfe</b>",
+     "s": "▪ Elif, das Meeting ist heute schon um neun, nicht um zehn.\n● Ach so, das habe ich nicht ___. Danke!\n▪ Kannst du dort bitte über unser Projekt sprechen?\n● Hm, ich bin heute total müde.\n▪ Das kann ich ___. Ich kann das gern für dich ___.",
+     "a": [
+      [
+       "gewusst"
+      ],
+      [
+       "verstehen"
+      ],
+      [
+       "übernehmen"
+      ]
+     ],
+     "gw": {
+      "uz": "Bo‘shliq atrofidagi grammatika yordam beradi: <b>habe … ___</b> → Partizip II; <b>kann … ___</b> → Infinitiv; <b>es wäre ___, wenn</b> → sifat. Misol: <b>Das habe ich nicht gesehen.</b>",
+      "ru": "Помогает грамматика вокруг пропуска: <b>habe … ___</b> → Partizip II; <b>kann … ___</b> → инфинитив; <b>es wäre ___, wenn</b> → прилагательное. Пример: <b>Das habe ich nicht gesehen.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *gewusst*, *verstehen*, *übernehmen*, *recht*, *besser*, *zusammen*.",
+     "s": "▪ Die Stimmung im Team ist gerade nicht gut.\n● Du hast absolut ___. Es wäre vielleicht ___, wenn wir einmal pro Woche ein Meeting machen.\n▪ Gute Idee! Und wer bereitet das Meeting vor?\n● Vielleicht machen wir das ___?",
+     "a": [
+      [
+       "recht"
+      ],
+      [
+       "besser"
+      ],
+      [
+       "zusammen"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Verständnis äußern oder kooperieren? Ordnen Sie zu.",
+     "bsp": "Das kann ich verstehen. → <b>🤝 Verständnis äußern</b>",
+     "c": [
+      "🤝 Verständnis äußern",
+      "🧩 kooperieren"
+     ],
+     "i": [
+      [
+       "Ich verstehe dich.",
+       0
+      ],
+      [
+       "Wer möchte das übernehmen?",
+       1
+      ],
+      [
+       "Du hast absolut recht.",
+       0
+      ],
+      [
+       "Vielleicht machen wir das zusammen?",
+       1
+      ],
+      [
+       "Ach so, das habe ich nicht gewusst.",
+       0
+      ],
+      [
+       "Kannst du das bitte machen?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Tushunish — boshqaning holati yoki fikrini qabul qilish. Hamkorlik — ishni taqsimlash, yordam taklif qilish yoki so‘rash. Misol: <b>Das ist sicher schwer für dich.</b> → Verständnis; <b>Ich mache die Folien, du den Text.</b> → kooperieren.",
+      "ru": "Понимание — принять положение или мнение другого. Сотрудничество — распределить работу, предложить или попросить помощь. Пример: <b>Das ist sicher schwer für dich.</b> → Verständnis; <b>Ich mache die Folien, du den Text.</b> → kooperieren."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihr Kollege ist krank und kann heute nicht kommen. Sie zeigen Verständnis. → <b>Das kann ich verstehen.</b>",
+     "q": "Im Team-Meeting gibt es eine neue Aufgabe. Sie möchten wissen: Wer macht das?",
+     "o": [
+      "Wer möchte das übernehmen?",
+      "Danke, dass du das übernimmst.",
+      "Ich verstehe dich."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatdan maqsadni toping: ishni kim qilishini so‘rash, yordam taklif qilish yoki rahmat aytish. Shu maqsadga mos iborani tanlang. Misol: <b>Soll ich dir helfen?</b>",
+      "ru": "Определите цель: спросить, кто сделает работу, предложить помощь или поблагодарить. Выберите выражение под эту цель. Пример: <b>Soll ich dir helfen?</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Kollegin hat sehr viel Arbeit. Sie möchten ihr helfen.",
+     "o": [
+      "Kannst du das bitte machen?",
+      "Stresst dich das? Dann helfe ich dir gern.",
+      "Du hast absolut recht."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Kollege macht heute eine Aufgabe für Sie. Sie sind sehr froh.",
+     "o": [
+      "Ich kann das gern für dich übernehmen.",
+      "Ach so, das habe ich nicht gewusst.",
+      "Danke, dass du das übernimmst."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie möchten die Präsentation gern selbst machen. Sie fragen das Team.",
+     "o": [
+      "Ich würde gern die Präsentation machen. Einverstanden?",
+      "Vielleicht kann Ole die Präsentation übernehmen?",
+      "Wer möchte die Präsentation machen?"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Kollege kommt oft zu spät ins Meeting. Sie haben einen freundlichen Vorschlag.",
+     "o": [
+      "Das kann ich verstehen.",
+      "Es wäre vielleicht besser, wenn du früher aufstehst.",
+      "Vielleicht machen wir das zusammen?"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

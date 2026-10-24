@@ -1,0 +1,243 @@
+{
+ "title": "Lektion 1 · Kommunikation",
+ "sub": "Über die Kindheit sprechen · Geschichten erzählen · Zeitangaben",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Ja, total gern. Und du? | ▪ Nein, nie. | ▪ Hast du als Kind Comics gelesen?<br>→ <b>▪ Hast du als Kind Comics gelesen?<br>● Ja, total gern. Und du?<br>▪ Nein, nie.</b>",
+     "w": [
+      "▪ Bist du früher Skateboard gefahren?",
+      "● Nein, nie. Und du?",
+      "▪ Ja, ich bin jeden Tag Skateboard gefahren.",
+      "● Und hast du auch Fußballbilder gesammelt?",
+      "▪ Ja, sehr viele!"
+     ],
+     "a": "▪ Bist du früher Skateboard gefahren? ● Nein, nie. Und du? ▪ Ja, ich bin jeden Tag Skateboard gefahren. ● Und hast du auch Fußballbilder gesammelt? ▪ Ja, sehr viele!",
+     "gw": {
+      "uz": "Suhbat odatda savol yoki gap boshlovchi ibora bilan (▪) boshlanadi; har replika oldingisiga javob bo‘ladi. <b>Und du?</b> dan keyin ikkinchi odam o‘zi haqida aytadi; tabrik yoki xulosa — oxirida. Misol: <b>Hast du …? → Nein. Und du? → Ja, oft.</b>",
+      "ru": "Разговор обычно начинается с вопроса или вступительной фразы (▪); каждая реплика отвечает на предыдущую. После <b>Und du?</b> второй рассказывает о себе; поздравление или вывод — в конце. Пример: <b>Hast du …? → Nein. Und du? → Ja, oft.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Ich habe euch noch gar nicht von Nora erzählt, oder?",
+      "● Nein! Wer ist Nora?",
+      "▪ Also passt auf: Ich habe sie im Eiscafé kennengelernt.",
+      "● Und dann?",
+      "▪ Und stellt euch vor: Nächsten Monat heiraten wir!",
+      "● Oh! Herzlichen Glückwunsch!"
+     ],
+     "a": "▪ Ich habe euch noch gar nicht von Nora erzählt, oder? ● Nein! Wer ist Nora? ▪ Also passt auf: Ich habe sie im Eiscafé kennengelernt. ● Und dann? ▪ Und stellt euch vor: Nächsten Monat heiraten wir! ● Oh! Herzlichen Glückwunsch!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ ___ ihr meine Cousine Mia schon?<br>● Nein. Erzähl mal! → <b>Kennt</b>",
+     "q": "als · früher · nie · total",
+     "s": "▪ Hast du ___ Kind Tagebuch geschrieben?\n● Nein, ich habe ___ Tagebuch geschrieben. Und du?\n▪ Ja, ich habe ___ gern Tagebuch geschrieben.\n● Bist du ___ auf Bäume geklettert?\n▪ Ja, sehr oft!",
+     "a": [
+      [
+       "als"
+      ],
+      [
+       "nie"
+      ],
+      [
+       "total"
+      ],
+      [
+       "früher"
+      ]
+     ],
+     "gw": {
+      "uz": "Bo‘shliqdan keyingi so‘zlarga qarang: <b>auf</b> yoki <b>euch vor</b> bo‘lsa — ajraluvchi fe’lning birinchi qismi kerak; <b>ihr</b> bilan fe’l <b>-t</b> oladi. Bolalik haqida vaqt so‘zlari: <b>damals</b>, <b>in meiner Kindheit</b>. Misol: <b>Hört mal zu!</b>",
+      "ru": "Смотрите на слова после пропуска: если там <b>auf</b> или <b>euch vor</b> — нужна первая часть отделяемого глагола; с <b>ihr</b> глагол на <b>-t</b>. О детстве: <b>damals</b>, <b>in meiner Kindheit</b>. Пример: <b>Hört mal zu!</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "erzählt · passt · stellt · wisst",
+     "s": "▪ Ich habe euch noch gar nicht von Ali ___, oder?\n● Nein. Erzähl mal!\n▪ Also ___ auf: Ali war mein Nachbar. Und ___ ihr was: Er wohnt jetzt in Zürich!\n● Oh!\n▪ Und ___ euch vor: Nächste Woche besuche ich ihn!",
+     "a": [
+      [
+       "erzählt"
+      ],
+      [
+       "passt"
+      ],
+      [
+       "wisst"
+      ],
+      [
+       "stellt"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Eine Person (*du*) oder mehrere Personen (*ihr*)? Ordnen Sie zu.",
+     "bsp": "Hast du als Kind gemalt? → <b>du</b> · Und wisst ihr was: … → <b>ihr</b>",
+     "c": [
+      "du",
+      "ihr"
+     ],
+     "i": [
+      [
+       "Kennt ihr meinen Bruder schon?",
+       1
+      ],
+      [
+       "Bist du früher Seil gesprungen?",
+       0
+      ],
+      [
+       "Und stellt euch vor: …",
+       1
+      ],
+      [
+       "Hattest du in deiner Kindheit ein Skateboard?",
+       0
+      ],
+      [
+       "Ich habe euch noch gar nicht von Ali erzählt, oder?",
+       1
+      ],
+      [
+       "Hast du als Kind Schneemänner gebaut?",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Fe’l qo‘shimchasi va olmoshga qarang: <b>du</b> → fe’l <b>-st</b>, <b>dich/dir/dein</b>; <b>ihr</b> → fe’l <b>-t</b>, <b>euch/euer</b>. Buyruqda ham: <b>Komm!</b> (du) – <b>Kommt!</b> (ihr). Misol: <b>Kommst du mit? – Kommt ihr mit?</b>",
+      "ru": "Смотрите на окончание глагола и местоимение: <b>du</b> → <b>-st</b>, <b>dich/dir/dein</b>; <b>ihr</b> → <b>-t</b>, <b>euch/euer</b>. В повелительном тоже: <b>Komm!</b> (du) – <b>Kommt!</b> (ihr). Пример: <b>Kommst du mit? – Kommt ihr mit?</b>"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Geschichte anfangen oder etwas Besonderes erzählen? Ordnen Sie zu.",
+     "bsp": "Ich habe euch noch gar nicht von Mia erzählt, oder? → <b>Geschichte anfangen</b>",
+     "c": [
+      "Geschichte anfangen",
+      "etwas Besonderes erzählen"
+     ],
+     "i": [
+      [
+       "Kennt ihr meine Nachbarin Mia schon?",
+       0
+      ],
+      [
+       "Und stellt euch vor: Sie wohnt jetzt in Wien!",
+       1
+      ],
+      [
+       "Also passt auf: …",
+       0
+      ],
+      [
+       "Und wisst ihr was: Wir heiraten!",
+       1
+      ],
+      [
+       "Ich habe euch noch gar nicht von Leon erzählt, oder?",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Boshlash iboralari tinglovchini tayyorlaydi — savol yoki «quloq soling» ma’nosida, ichida yangi fakt yo‘q. Muhim xabar iboralaridan keyin esa ikki nuqta va kutilmagan yangilik keladi. Misol: <b>…: Ich habe im Lotto gewonnen!</b>",
+      "ru": "Фразы начала готовят слушателя — вопрос или «послушайте», нового факта в них нет. После фраз об особенном идёт двоеточие и неожиданная новость. Пример: <b>…: Ich habe im Lotto gewonnen!</b>"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Wann ist das? Ordnen Sie zu.",
+     "bsp": "Als Kind habe ich viel gemalt. → <b>früher</b>",
+     "c": [
+      "früher",
+      "jetzt",
+      "später"
+     ],
+     "i": [
+      [
+       "Das war letzten Monat.",
+       0
+      ],
+      [
+       "Nächstes Jahr heiraten wir.",
+       2
+      ],
+      [
+       "Jeden Mittwoch gehe ich schwimmen.",
+       1
+      ],
+      [
+       "Nächste Woche fängt der Kurs an.",
+       2
+      ],
+      [
+       "Im Sommer 1998 hat alles angefangen.",
+       0
+      ],
+      [
+       "Immer nach dem Sport trinke ich einen Kaffee.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Vaqt so‘zi va zamonni tekshiring: <b>gestern</b>, <b>vor zwei Jahren</b> + Perfekt → o‘tgan; <b>jeden Tag</b> + Präsens → hozir; <b>morgen</b>, <b>bald</b> → kelajak. Kelajak ham ko‘pincha Präsens bilan aytiladi — vaqt so‘ziga qarang.",
+      "ru": "Проверьте слово времени и время глагола: <b>gestern</b>, <b>vor zwei Jahren</b> + Perfekt → прошлое; <b>jeden Tag</b> + Präsens → сейчас; <b>morgen</b>, <b>bald</b> → будущее. Будущее часто тоже в Präsens — смотрите на слово времени."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Ihr Freund heiratet nächsten Monat. Was sagen Sie? → <b>Herzlichen Glückwunsch!</b>",
+     "q": "Sie wollen eine Geschichte über Ihre Freundin Nora anfangen. Was sagen Sie?",
+     "o": [
+      "Ich habe euch noch gar nicht von Nora erzählt, oder?",
+      "Nein, ich habe nie mit Nora gespielt.",
+      "Das war letztes Jahr."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Avval vaziyatdagi maqsadni aniqlang: hikoya boshlash, yangilik aytish yoki savol berish? Keyin murojaatni tekshiring: bitta odamga — <b>du</b>, guruhga — <b>ihr</b>. Misol: <b>Hast du als Kind Fußball gespielt?</b>",
+      "ru": "Сначала определите цель: начать историю, сообщить новость или спросить? Затем проверьте обращение: одному — <b>du</b>, группе — <b>ihr</b>. Пример: <b>Hast du als Kind Fußball gespielt?</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie erzählen etwas Besonderes. Was sagen Sie?",
+     "o": [
+      "Kennt ihr Nora schon?",
+      "Hast du in deiner Kindheit viel gelesen?",
+      "Und stellt euch vor: Nora wohnt jetzt in Wien!"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie fragen Elif nach ihrer Kindheit. Was sagen Sie?",
+     "o": [
+      "Und wisst ihr was: Elif fährt Skateboard!",
+      "Bist du früher Skateboard gefahren?",
+      "Das war letzten Monat."
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

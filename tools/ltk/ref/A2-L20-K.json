@@ -1,0 +1,170 @@
+{
+ "title": "Lektion 20 · Kommunikation",
+ "sub": "Unzufriedenheit ausdrücken · Zufriedenheit ausdrücken",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "cat",
+     "h": "Unzufrieden oder zufrieden? Ordnen Sie zu.",
+     "bsp": "Es hat mir irgendetwas gefehlt. → <b>🙁 unzufrieden</b>",
+     "c": [
+      "🙁 unzufrieden",
+      "😀 zufrieden / begeistert"
+     ],
+     "i": [
+      [
+       "Die Arbeit hat mir wirklich gut gefallen.",
+       1
+      ],
+      [
+       "Richtig glücklich war ich mit meiner Arbeit nicht.",
+       0
+      ],
+      [
+       "Und das fühlt sich gut an!",
+       1
+      ],
+      [
+       "Ich hab’ mich gefragt: Willst du das wirklich immer so machen?",
+       0
+      ],
+      [
+       "Da hab’ ich gemerkt: Genau das macht mir Spaß.",
+       1
+      ],
+      [
+       "Mir war klar: Ich muss mich beruflich verändern.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Hisni aniqlang: <b>gefallen</b>, <b>glücklich</b>, «yaxshi his» — mamnun; inkor (<b>nicht</b>), nimadir yetishmasligi yoki shubhali savol — norozi. Misol: <b>Ich war nicht zufrieden.</b> → unzufrieden.",
+      "ru": "Определите чувство: <b>gefallen</b>, <b>glücklich</b>, «хорошее ощущение» — доволен; отрицание (<b>nicht</b>), нехватка чего-то или сомнение — недоволен. Пример: <b>Ich war nicht zufrieden.</b> → unzufrieden."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Toll! Es hat mir gut gefallen. | ▪ Das freut mich! | ▪ Wie war dein Praktikum?<br>→ <b>▪ Wie war dein Praktikum?<br>● Toll! Es hat mir gut gefallen.<br>▪ Das freut mich!</b>",
+     "w": [
+      "▪ Echt? Was hat dir denn gefehlt?",
+      "▪ Paul, du bist jetzt Koch? Du warst doch bei einer Bank!",
+      "▪ Das finde ich ganz schön mutig!",
+      "● Ja, ich habe vor einem Jahr gekündigt. Richtig glücklich war ich da nicht.",
+      "● Ich wollte nicht mehr den ganzen Tag am Computer sitzen. Mir war klar: Ich muss mich beruflich verändern."
+     ],
+     "a": "▪ Paul, du bist jetzt Koch? Du warst doch bei einer Bank! ● Ja, ich habe vor einem Jahr gekündigt. Richtig glücklich war ich da nicht. ▪ Echt? Was hat dir denn gefehlt? ● Ich wollte nicht mehr den ganzen Tag am Computer sitzen. Mir war klar: Ich muss mich beruflich verändern. ▪ Das finde ich ganz schön mutig!",
+     "gw": {
+      "uz": "Satrlar aralash: avval suhbatni boshlaydigan savolni toping (ism + savol). Keyin har javobga mos aniqlashtiruvchi savolni bog‘lang: <b>Echt? Was …?</b> faqat yangilikdan keyin keladi. Misol: <b>Ich habe gekündigt. – Echt? Warum?</b>",
+      "ru": "Реплики перемешаны: сначала найдите начальный вопрос (имя + вопрос). Затем связывайте ответы с уточнениями: <b>Echt? Was …?</b> идёт только после новости. Пример: <b>Ich habe gekündigt. – Echt? Warum?</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "● Nein, gar nicht. Ich hab’ alles richtig gemacht!",
+      "● Super! Die Arbeit hat mir vom ersten Tag an gut gefallen.",
+      "▪ Das freut mich. Viel Erfolg!",
+      "▪ Und, Ali? Wie gefällt dir die neue Stelle?",
+      "▪ Und deine alte Firma? Fehlt sie dir nicht?"
+     ],
+     "a": "▪ Und, Ali? Wie gefällt dir die neue Stelle? ● Super! Die Arbeit hat mir vom ersten Tag an gut gefallen. ▪ Und deine alte Firma? Fehlt sie dir nicht? ● Nein, gar nicht. Ich hab’ alles richtig gemacht! ▪ Das freut mich. Viel Erfolg!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *gefehlt*, *gefragt*, *gemerkt*, *gefühlt*, *klar*, *verändern*, *an*.",
+     "bsp": "▪ Wie war die Arbeit im Garten?<br>● Toll! Ich habe mich so lebendig ___. → <b>gefühlt</b>",
+     "s": "▪ Warum hast du im Büro gekündigt?\n● Es hat mir irgendetwas ___. Ich habe mich oft ___: Willst du das wirklich immer so machen?\n▪ Und jetzt?\n● Jetzt arbeite ich auf einem Bauernhof. Da habe ich ___: Genau das macht mir Spaß.",
+     "a": [
+      [
+       "gefehlt"
+      ],
+      [
+       "gefragt"
+      ],
+      [
+       "gemerkt"
+      ]
+     ],
+     "gw": {
+      "uz": "Bo‘shliq grammatikasi: <b>hat/habe … ___</b> → Partizip II (<b>mich</b> bo‘lsa — refleksiv fe’l); <b>muss … ___</b> → Infinitiv; <b>war ___</b> → sifat. Misol: <b>Ich habe mich gefreut.</b>",
+      "ru": "Грамматика пропуска: <b>hat/habe … ___</b> → Partizip II (с <b>mich</b> — возвратный глагол); <b>muss … ___</b> → инфинитив; <b>war ___</b> → прилагательное. Пример: <b>Ich habe mich gefreut.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *gefehlt*, *gefragt*, *gemerkt*, *gefühlt*, *klar*, *verändern*, *an*.",
+     "s": "▪ Du bist jetzt selbstständig? Hattest du keine Angst?\n● Doch, ein bisschen. Aber mir war ___: Ich muss mich beruflich ___.\n▪ Und wie ist es jetzt?\n● Super! Und das fühlt sich gut ___!",
+     "a": [
+      [
+       "klar"
+      ],
+      [
+       "verändern"
+      ],
+      [
+       "an"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihr Praktikum war super. Sie erzählen es Ihrer Freundin. → <b>Die Arbeit hat mir wirklich gut gefallen.</b>",
+     "q": "Sie haben eine neue Stelle und sind sehr zufrieden. Der Wechsel war gut.",
+     "o": [
+      "Ich hab’ alles richtig gemacht!",
+      "Es hat mir irgendetwas gefehlt.",
+      "Mir war klar: Ich muss mich beruflich verändern."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatdagi hisni aniqlang: mamnunmisiz, nimadir yetishmadimi yoki boshqaning yangiligiga munosabat bildirasizmi? Shu hisga mos iborani tanlang. Misol: <b>Ich bin jetzt viel glücklicher.</b>",
+      "ru": "Определите чувство: вы довольны, вам чего-то не хватало или вы реагируете на чужую новость? Выберите фразу под это чувство. Пример: <b>Ich bin jetzt viel glücklicher.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie waren in Ihrem alten Job nicht zufrieden. Sie wissen aber nicht genau, warum.",
+     "o": [
+      "Die Arbeit hat mir wirklich gut gefallen.",
+      "Es hat mir irgendetwas gefehlt.",
+      "Und das fühlt sich gut an!"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Freundin erzählt: Sie hat gekündigt und ist jetzt selbstständig. Sie finden das toll.",
+     "o": [
+      "Mir wäre das zu unsicher.",
+      "Richtig glücklich war ich nicht.",
+      "Echt? Das ist ja spannend!"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie wollen nicht mehr im Büro arbeiten. Sie suchen eine ganz neue Arbeit.",
+     "o": [
+      "Mir war klar: Ich muss mich beruflich verändern.",
+      "Da hab’ ich gemerkt: Genau das macht mir Spaß.",
+      "Ich hab’ alles richtig gemacht!"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

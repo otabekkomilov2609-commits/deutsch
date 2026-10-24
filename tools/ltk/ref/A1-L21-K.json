@@ -1,0 +1,207 @@
+{
+ "title": "Lektion 21 · Kommunikation",
+ "sub": "Darf man …? · Meinung sagen · Vorsicht!",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Nein, das ist verboten. | ▪ Oh, schade. | ▪ Darf man hier zelten? → <b>▪ Darf man hier zelten?<br>● Nein, das ist verboten.<br>▪ Oh, schade.</b>",
+     "w": [
+      "▪ Entschuldigung, darf man hier grillen?",
+      "● Nein, das ist verboten. Schau mal, das Schild.",
+      "▪ Oh, schade. Und im Park?",
+      "● Ja, im Park ist Grillen erlaubt."
+     ],
+     "a": "▪ Entschuldigung, darf man hier grillen? ● Nein, das ist verboten. Schau mal, das Schild. ▪ Oh, schade. Und im Park? ● Ja, im Park ist Grillen erlaubt.",
+     "gw": {
+      "uz": "Ruxsat so‘raladi (<b>Darf man …?</b>) → javob (<b>erlaubt / verboten</b>) → sabab yoki munosabat. Ogohlantirish (<b>Vorsicht!</b>) → <b>Warum?</b> → sabab. Misol: <b>▪ Darf man hier schwimmen? ● Ja, das ist erlaubt.</b>",
+      "ru": "Спрашивают разрешение (<b>Darf man …?</b>) → ответ (<b>erlaubt / verboten</b>) → причина или реакция. Предупреждение (<b>Vorsicht!</b>) → <b>Warum?</b> → причина. Пример: <b>▪ Darf man hier schwimmen? ● Ja, das ist erlaubt.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Vorsicht! Hier darf man nicht baden.",
+      "● Wirklich? Warum nicht?",
+      "▪ Das Wasser ist nicht sauber. Das ist gefährlich.",
+      "● Oh, danke. Dann gehen wir zum See."
+     ],
+     "a": "▪ Vorsicht! Hier darf man nicht baden. ● Wirklich? Warum nicht? ▪ Das Wasser ist nicht sauber. Das ist gefährlich. ● Oh, danke. Dann gehen wir zum See."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Hier darf man nicht grillen.<br>● ___? Warum nicht? → <b>Wirklich</b>? Warum nicht?",
+     "q": "stört · erlaubt · sehe · Stimmt",
+     "s": "▪ Herr Schulz grillt jeden Abend auf dem Balkon. Das ___ mich total.\n● Wirklich? Das ___ ich nicht so. Grillen ist doch ___.\n▪ ___, aber der Rauch ist echt unangenehm.",
+     "a": [
+      [
+       "stört"
+      ],
+      [
+       "sehe"
+      ],
+      [
+       "erlaubt"
+      ],
+      [
+       "Stimmt"
+      ]
+     ],
+     "gw": {
+      "uz": "Fikr iboralari: <b>Das sehe ich auch so / nicht so</b>, <b>Stimmt</b>, <b>Ich denke …</b>; ogohlantirish — <b>Achtung!</b>. <b>darf/muss</b> bilan Infinitiv oxirida. Misol: <b>Hier darf man nicht rauchen.</b>",
+      "ru": "Фразы мнения: <b>Das sehe ich auch so / nicht so</b>, <b>Stimmt</b>, <b>Ich denke …</b>; предупреждение — <b>Achtung!</b>. С <b>darf/muss</b> инфинитив в конце. Пример: <b>Hier darf man nicht rauchen.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "Achtung · denke · Problem · muss",
+     "s": "▪ ___! Hier darf man nicht Fahrrad fahren.\n● Ich ___, das ist kein ___. Hier sind keine Kinder.\n▪ Doch, das ist verboten. Man ___ die Regeln lesen.",
+     "a": [
+      [
+       "Achtung"
+      ],
+      [
+       "denke"
+      ],
+      [
+       "Problem"
+      ],
+      [
+       "muss"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Sie denken: Das ist verboten. Sie sagen: ___ → ✓ <b>Das ist doch verboten.</b>",
+     "q": "Ein Kind geht bei Rot über die Straße. Sie sagen: ___",
+     "o": [
+      "Vorsicht!",
+      "Stimmt!",
+      "Das sehe ich auch so."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Xavf bo‘lsa — ogohlantirish (<b>Vorsicht! / Achtung!</b>); rozi bo‘lsangiz — <b>Stimmt / Das sehe ich auch so</b>; rozi bo‘lmasangiz — <b>Das sehe ich nicht so</b>. Misol: <b>▪ Rauchen ist ungesund. ● Stimmt!</b>",
+      "ru": "Опасность — предупреждение (<b>Vorsicht! / Achtung!</b>); согласие — <b>Stimmt / Das sehe ich auch so</b>; несогласие — <b>Das sehe ich nicht so</b>. Пример: <b>▪ Rauchen ist ungesund. ● Stimmt!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Elif sagt: „Grillen im Park ist super.“ Sie denken das auch. Sie sagen: ___",
+     "o": [
+      "Das sehe ich nicht so.",
+      "Das sehe ich auch so.",
+      "Vorsicht!"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie möchten wissen: Ist Zelten hier erlaubt? Sie fragen: ___",
+     "o": [
+      "Darf man hier zelten?",
+      "Man muss hier zelten.",
+      "Zelten stört mich nicht."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Herr Yilmaz telefoniert im Auto. Sie finden das sehr gefährlich. Sie sagen: ___",
+     "o": [
+      "Das stört mich gar nicht.",
+      "Ich denke, das ist echt gefährlich.",
+      "Das ist doch erlaubt."
+     ],
+     "a": 1
+    },
+    {
+     "t": "cat",
+     "h": "Ja oder nein? Ordnen Sie zu.",
+     "bsp": "Ja, genau! → <b>👍 Ich denke das auch.</b>",
+     "c": [
+      "👍 Ich denke das auch.",
+      "👎 Ich denke das nicht."
+     ],
+     "i": [
+      [
+       "Das stimmt!",
+       0
+      ],
+      [
+       "Das sehe ich nicht so.",
+       1
+      ],
+      [
+       "Das sehe ich auch so.",
+       0
+      ],
+      [
+       "Wirklich? Ich denke, das ist gefährlich.",
+       1
+      ],
+      [
+       "Ich sehe das auch so.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Gapda <b>nicht</b> bormi? <b>Das sehe ich auch so</b>, <b>stimmt</b> — rozilik; <b>nicht so</b>, <b>anders</b> — norozilik. Misol: <b>Genau!</b> → 👍, <b>Nein, das finde ich nicht.</b> → 👎",
+      "ru": "Есть ли <b>nicht</b>? <b>Das sehe ich auch so</b>, <b>stimmt</b> — согласие; <b>nicht so</b>, <b>anders</b> — несогласие. Пример: <b>Genau!</b> → 👍, <b>Nein, das finde ich nicht.</b> → 👎"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Das ist kein Problem oder das stört mich? Ordnen Sie zu.",
+     "bsp": "Das finde ich okay. → <b>😊 kein Problem</b>",
+     "c": [
+      "😊 kein Problem",
+      "😠 das stört mich"
+     ],
+     "i": [
+      [
+       "Das stört mich gar nicht.",
+       0
+      ],
+      [
+       "Das ist echt unangenehm.",
+       1
+      ],
+      [
+       "Das ist doch kein Problem.",
+       0
+      ],
+      [
+       "Das stört mich total.",
+       1
+      ],
+      [
+       "Das ist doch erlaubt.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Diqqat: <b>gar nicht</b> + <b>stören</b> — «umuman bezovta qilmaydi», ya’ni muammo yo‘q. <b>unangenehm</b>, <b>stört mich</b> — yoqmaydi. Misol: <b>Das ist okay für mich.</b> → kein Problem.",
+      "ru": "Внимание: <b>gar nicht</b> + <b>stören</b> — «совсем не мешает», т. е. нет проблемы. <b>unangenehm</b>, <b>stört mich</b> — неприятно. Пример: <b>Das ist okay für mich.</b> → kein Problem."
+     }
+    }
+   ]
+  }
+ ]
+}

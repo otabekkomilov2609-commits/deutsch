@@ -1,0 +1,181 @@
+{
+ "title": "Lektion 22 · Kommunikation",
+ "sub": "Ich weiß es nicht · Unsicherheit · Kann schon sein",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Sie ist wahrscheinlich krank. | ▪ Kommt Nora heute auch? | ● Da bin ich nicht sicher.<br>→ <b>▪ Kommt Nora heute auch?<br>● Da bin ich nicht sicher.<br>▪ Sie ist wahrscheinlich krank.</b>",
+     "w": [
+      "▪ Und wo ist der Kurs?",
+      "▪ Gute Idee, danke!",
+      "▪ Weißt du, wann der Deutschkurs morgen beginnt?",
+      "● Keine Ahnung! Frag doch Frau Keller.",
+      "● Ich weiß es nicht genau. Vielleicht um neun?"
+     ],
+     "a": "▪ Weißt du, wann der Deutschkurs morgen beginnt? ● Ich weiß es nicht genau. Vielleicht um neun? ▪ Und wo ist der Kurs? ● Keine Ahnung! Frag doch Frau Keller. ▪ Gute Idee, danke!",
+     "gw": {
+      "uz": "Tartib: savol → noaniq javob → yana savol yoki maslahat → rahmat. Bahsda: da’vo → shubha → qisman rozilik → o‘z fikri. Satrlar aralash — boshlovchi savolni toping. Misol: <b>Weißt du, wo Ali ist? – Vielleicht im Café.</b>",
+      "ru": "Порядок: вопрос → неточный ответ → ещё вопрос или совет → спасибо. В споре: утверждение → сомнение → частичное согласие → своё мнение. Реплики перемешаны — найдите начальный вопрос. Пример: <b>Weißt du, wo Ali ist? – Vielleicht im Café.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "● Kann schon sein. Aber für mich sind Freunde und Familie wichtiger.",
+      "● Ist das wirklich so? Ich kenne reiche Leute, die sehr traurig sind.",
+      "▪ Na ja, Mia hat vielleicht nicht immer recht. Aber mit Geld ist das Leben nicht so stressig.",
+      "▪ Mia sagt, reiche Menschen sind immer glücklich."
+     ],
+     "a": "▪ Mia sagt, reiche Menschen sind immer glücklich. ● Ist das wirklich so? Ich kenne reiche Leute, die sehr traurig sind. ▪ Na ja, Mia hat vielleicht nicht immer recht. Aber mit Geld ist das Leben nicht so stressig. ● Kann schon sein. Aber für mich sind Freunde und Familie wichtiger."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *weiß*, *sicher*, *Ahnung*, *recht*, *wirklich*, *sein*.",
+     "bsp": "▪ Kommt Leon heute auch zur Party?<br>● Er kommt ___ später. Er arbeitet noch. → <b>wahrscheinlich</b>",
+     "s": "▪ Wo ist denn Jonas? Ist er schon zu Hause?\n● Da bin ich nicht ___. Vielleicht ist er noch im Büro.\n▪ Und wann kommt er?\n● Ich ___ es nicht genau.\n▪ Hat er sein Handy dabei?\n● Keine ___!",
+     "a": [
+      [
+       "sicher"
+      ],
+      [
+       "weiß"
+      ],
+      [
+       "Ahnung"
+      ]
+     ],
+     "gw": {
+      "uz": "Ishonch darajasi iboralari: umuman bilmaslik, ishonchsizlik, shubha, qisman rozilik. Bo‘shliq atrofi so‘z turini ko‘rsatadi: ot, fe’l yoki sifat. Misol: <b>Das glaube ich nicht.</b>",
+      "ru": "Выражения степени уверенности: совсем не знаю, не уверен, сомневаюсь, частично согласен. Окружение пропуска показывает тип слова: существительное, глагол или прилагательное. Пример: <b>Das glaube ich nicht.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *weiß*, *sicher*, *Ahnung*, *recht*, *wirklich*, *sein*.",
+     "s": "▪ Elif sagt, man lernt am meisten aus Fehlern.\n● Sie hat bestimmt ___, aber ich mache nicht gern Fehler.\n▪ Ich finde, mutige Menschen haben ein spannendes Leben.\n● Ist das ___ so? Ich glaube, sie haben auch oft Probleme.\n▪ Kann schon ___.",
+     "a": [
+      [
+       "recht"
+      ],
+      [
+       "wirklich"
+      ],
+      [
+       "sein"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Wie sicher ist die Person? Ordnen Sie zu.",
+     "bsp": "Das Konzert beginnt bestimmt um acht. → <b>✅ ganz sicher</b>",
+     "c": [
+      "✅ ganz sicher",
+      "🤔 nicht ganz sicher",
+      "🤷 weiß es nicht"
+     ],
+     "i": [
+      [
+       "Der Bus kommt bestimmt gleich.",
+       0
+      ],
+      [
+       "Lisa ist wahrscheinlich schon zu Hause.",
+       1
+      ],
+      [
+       "Keine Ahnung!",
+       2
+      ],
+      [
+       "Kann schon sein.",
+       1
+      ],
+      [
+       "Ich weiß es nicht.",
+       2
+      ],
+      [
+       "Vielleicht regnet es morgen.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Ishonch darajasi so‘zda: <b>sicher</b>, «aniq» → 100 %; <b>ich glaube</b>, <b>vermutlich</b> → taxmin; javob yo‘q, «bilmayman» → umuman bilmaydi. Misol: <b>Ich glaube, er ist krank.</b> → nicht ganz sicher.",
+      "ru": "Степень уверенности — в слове: <b>sicher</b>, «точно» → 100 %; <b>ich glaube</b>, <b>vermutlich</b> → догадка; нет ответа, «не знаю» → не знает. Пример: <b>Ich glaube, er ist krank.</b> → nicht ganz sicher."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihr Freund fragt: „Kommt Nora heute auch?“ Sie wissen es nicht sicher. → <b>Da bin ich nicht sicher.</b>",
+     "q": "Ihre Freundin fragt: „Wann fährt der Zug nach Wien?“ Sie wissen es nicht.",
+     "o": [
+      "Ist das wirklich so?",
+      "Keine Ahnung!",
+      "Kann schon sein."
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Vaziyatni aniqlang: javobni umuman bilmaysizmi, gapga shubha qilasizmi yoki «ehtimol to‘g‘ri» deysizmi? Shubha ko‘pincha savol shaklida bo‘ladi. Misol: <b>Stimmt das wirklich?</b>",
+      "ru": "Определите ситуацию: вы совсем не знаете ответа, сомневаетесь в словах или говорите «возможно, так»? Сомнение часто звучит как вопрос. Пример: <b>Stimmt das wirklich?</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Nachbarin sagt: „Pessimistische Menschen sind immer krank.“ Sie glauben das nicht.",
+     "o": [
+      "Ist das wirklich so?",
+      "Keine Ahnung!",
+      "Kann schon sein."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Tom sagt: „Lisa ist wahrscheinlich schon im Kino.“ Sie denken: Vielleicht stimmt das.",
+     "o": [
+      "Kann schon sein.",
+      "Ist das wirklich so?",
+      "Keine Ahnung!"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Lehrerin fragt im Kurs: „Wann beginnt die Prüfung?“ Sie wissen es nicht genau.",
+     "o": [
+      "Keine Ahnung!",
+      "Ich weiß es nicht genau.",
+      "Ist das wirklich so?"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sofia sagt: „Freunde sind wichtiger als Geld.“ Das stimmt, aber Geld ist auch wichtig.",
+     "o": [
+      "Sofia hat bestimmt recht, aber …",
+      "Ist das wirklich so?",
+      "Keine Ahnung!"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

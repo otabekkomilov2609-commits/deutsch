@@ -1,0 +1,211 @@
+{
+ "title": "Lektion 19 · Kommunikation",
+ "sub": "Bitten äußern · Probleme benennen · auf Kritik reagieren",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Danke! | ● Ja, gern. | ▪ Sei so lieb und bring den Müll raus. → <b>▪ Sei so lieb und bring den Müll raus.<br>● Ja, gern.<br>▪ Danke!</b>",
+     "w": [
+      "▪ Du, Elif, ich habe ein Problem.",
+      "● Was ist los?",
+      "▪ Ich mache jeden Abend die Küche sauber. Das geht so nicht.",
+      "● Du hast recht. Tut mir leid. Morgen mache ich das."
+     ],
+     "a": "▪ Du, Elif, ich habe ein Problem. ● Was ist los? ▪ Ich mache jeden Abend die Küche sauber. Das geht so nicht. ● Du hast recht. Tut mir leid. Morgen mache ich das.",
+     "gw": {
+      "uz": "Muammo aytiladi → <b>Was ist los?</b> → tafsilot → javob (rozilik yoki uzr va sabab). Misol: <b>● Du hast recht. Ich mache das.</b> — suhbat oxiri.",
+      "ru": "Называют проблему → <b>Was ist los?</b> → подробности → ответ (согласие или извинение с причиной). Пример: <b>● Du hast recht. Ich mache das.</b> — конец разговора."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Hallo Tom, ich habe eine Bitte: Kannst du heute einkaufen?",
+      "● Tut mir leid, ich habe leider keine Zeit. Ich habe einen Termin.",
+      "▪ Und morgen? Vielleicht kannst du auch kochen?",
+      "● Also gut. Mache ich."
+     ],
+     "a": "▪ Hallo Tom, ich habe eine Bitte: Kannst du heute einkaufen? ● Tut mir leid, ich habe leider keine Zeit. Ich habe einen Termin. ▪ Und morgen? Vielleicht kannst du auch kochen? ● Also gut. Mache ich."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Bring bitte den Müll ___!<br>● Ja, mache ich. → Bring bitte den Müll <b>raus</b>!",
+     "q": "Bitte · nett · gern · leider",
+     "s": "▪ Jonas, ich habe eine ___: Sei so ___ und wasch das Geschirr ab!\n● Ja, das kann ich ___ machen. Und die Wäsche?\n▪ Die wasche ich. Aber ich habe ___ keine Zeit für den Boden.",
+     "a": [
+      [
+       "Bitte"
+      ],
+      [
+       "nett"
+      ],
+      [
+       "gern"
+      ],
+      [
+       "leider"
+      ]
+     ],
+     "gw": {
+      "uz": "Iltimos va tanqid iboralari tayyor shaklda: <b>eine Bitte haben</b>, <b>Sei so …</b>, <b>nicht in Ordnung</b>, <b>recht haben</b>. Bo‘shliq atrofidagi so‘zga qarang. Misol: <b>Kannst du bitte das Fenster zumachen?</b>",
+      "ru": "Фразы просьбы и критики — готовые: <b>eine Bitte haben</b>, <b>Sei so …</b>, <b>nicht in Ordnung</b>, <b>recht haben</b>. Смотрите на слова вокруг пропуска. Пример: <b>Kannst du bitte das Fenster zumachen?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "Problem · Ordnung · recht · böse",
+     "s": "▪ Du, Sofia, ich habe ein ___: Ich bringe immer den Müll raus. Das finde ich nicht in ___.\n● Du hast ___. Tut mir leid. Sei nicht ___. Ich mache das jetzt.",
+     "a": [
+      [
+       "Problem"
+      ],
+      [
+       "Ordnung"
+      ],
+      [
+       "recht"
+      ],
+      [
+       "böse"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Bitte oder Kritik? Ordnen Sie zu.",
+     "bsp": "Vergiss den Müll nicht! → <b>Bitte</b>",
+     "c": [
+      "🙏 Bitte",
+      "⚠️ Problem / Kritik"
+     ],
+     "i": [
+      [
+       "Sei so lieb und räum auf!",
+       0
+      ],
+      [
+       "Das geht so nicht.",
+       1
+      ],
+      [
+       "Vielleicht kannst du auch einkaufen?",
+       0
+      ],
+      [
+       "Ich habe ein Problem: Du kochst nie.",
+       1
+      ],
+      [
+       "Bring bitte den Müll raus!",
+       0
+      ],
+      [
+       "Das finde ich nicht in Ordnung.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Iltimos — yumshoq: <b>bitte</b>, <b>Sei so lieb …</b>, <b>Kannst du …?</b> Tanqid — norozilik: <b>nie, immer</b>, <b>Das geht so nicht</b>. Misol: <b>Du räumst nie auf!</b> → Kritik.",
+      "ru": "Просьба — мягко: <b>bitte</b>, <b>Sei so lieb …</b>, <b>Kannst du …?</b> Критика — недовольство: <b>nie, immer</b>, <b>Das geht so nicht</b>. Пример: <b>Du räumst nie auf!</b> → Kritik."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Wie reagiert die Person? Ordnen Sie zu.",
+     "bsp": "Ja, natürlich. → <b>👍</b>",
+     "c": [
+      "👍 Ja",
+      "👎 Nein"
+     ],
+     "i": [
+      [
+       "Ja, sicher.",
+       0
+      ],
+      [
+       "Tut mir leid, ich habe leider keine Zeit.",
+       1
+      ],
+      [
+       "Also gut. Mache ich.",
+       0
+      ],
+      [
+       "Nein, tut mir leid.",
+       1
+      ],
+      [
+       "Ja, das kann ich gern machen.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Javob rozimi yoki rad? <b>Ja, klar, gut</b> — rozilik; <b>leider, keine Zeit, nein</b> — rad. Misol: <b>Klar, mache ich!</b> → Ja, <b>Heute geht es leider nicht.</b> → Nein.",
+      "ru": "Ответ — согласие или отказ? <b>Ja, klar, gut</b> — да; <b>leider, keine Zeit, nein</b> — нет. Пример: <b>Klar, mache ich!</b> → Ja, <b>Heute geht es leider nicht.</b> → Nein."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Sie möchten etwas von Tom. Sie sagen: ___ → ✓ <b>Ich habe eine Bitte: …</b>",
+     "q": "Ihr Bruder räumt nie auf. Sie sagen: ___",
+     "o": [
+      "Das geht so nicht.",
+      "Ja, das kann ich gern machen.",
+      "Also gut. Mache ich."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatda siz nima qilyapsiz: tanqid qilyapsizmi, rozimisiz yoki rad etyapsizmi? Shunga mos iborani tanlang. Misol: <b>Sie können helfen → Ja, klar, mache ich.</b>",
+      "ru": "Что вы делаете в ситуации: критикуете, соглашаетесь или отказываетесь? Выберите подходящую фразу. Пример: <b>Sie können helfen → Ja, klar, mache ich.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Elif: „Du wäschst nie ab.“ Sie finden: Elif hat recht. Sie sagen: ___",
+     "o": [
+      "Tut mir leid, ich habe leider keine Zeit.",
+      "Du hast recht. Tut mir leid.",
+      "Sei so lieb und wasch ab!"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie möchten: Tom bringt den Müll raus. Sie sagen: ___",
+     "o": [
+      "Das finde ich nicht in Ordnung.",
+      "Ja, klar.",
+      "Sei so nett und bring den Müll raus!"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Lisa fragt: „Kannst du heute kochen?“ Sie haben Zeit. Sie sagen: ___",
+     "o": [
+      "Oh, wirklich?",
+      "Ja, sicher.",
+      "Das verstehe ich."
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

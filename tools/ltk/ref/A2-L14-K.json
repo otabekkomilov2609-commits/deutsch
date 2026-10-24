@@ -1,0 +1,211 @@
+{
+ "title": "Lektion 14 · Kommunikation",
+ "sub": "Hilfe anbieten · annehmen · ablehnen · Position beschreiben",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Moment, ich helfe Ihnen. | ▪ Danke, sehr lieb! | ▪ Der Koffer ist so schwer!<br>→ <b>▪ Der Koffer ist so schwer!<br>● Moment, ich helfe Ihnen.<br>▪ Danke, sehr lieb!</b>",
+     "w": [
+      "▪ Soll ich die Einkäufe für Sie in den vierten Stock tragen?",
+      "▪ Guten Tag, Frau Berger! Oh, Sie haben aber viele Einkäufe!",
+      "● Das wäre wirklich sehr nett von Ihnen. Vielen Dank!",
+      "● Ja, und wir haben keinen Aufzug."
+     ],
+     "a": "▪ Guten Tag, Frau Berger! Oh, Sie haben aber viele Einkäufe! ● Ja, und wir haben keinen Aufzug. ▪ Soll ich die Einkäufe für Sie in den vierten Stock tragen? ● Das wäre wirklich sehr nett von Ihnen. Vielen Dank!",
+     "gw": {
+      "uz": "Yordam suhbati: vaziyatni ko‘rish (og‘ir narsa) → yordam taklifi → qabul yoki rad → rahmat yoki yana taklif. Satrlar aralash — avval salomlashuvni toping. Misol: <b>Die Tasche ist schwer! – Soll ich helfen? – Ja, gern!</b>",
+      "ru": "Разговор о помощи: замечаем ситуацию (тяжёлая вещь) → предложение помощи → принять или отказаться → спасибо или ещё предложение. Реплики перемешаны — сначала найдите приветствие. Пример: <b>Die Tasche ist schwer! – Soll ich helfen? – Ja, gern!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "● Oh ja, gern. Vielen Dank!",
+      "● Danke, das geht schon! Ich bringe es nur in den Fahrradkeller.",
+      "▪ Hallo Jonas! Brauchst du Hilfe mit dem Fahrrad?",
+      "▪ Okay. Und soll ich dir die Tür aufmachen?"
+     ],
+     "a": "▪ Hallo Jonas! Brauchst du Hilfe mit dem Fahrrad? ● Danke, das geht schon! Ich bringe es nur in den Fahrradkeller. ▪ Okay. Und soll ich dir die Tür aufmachen? ● Oh ja, gern. Vielen Dank!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *Moment*, *nett*, *schaffe*, *Lassen* und *Hilfe*.",
+     "bsp": "▪ ___ ich die Tasche für Sie tragen?<br>● Oh, gern. Vielen Dank! → <b>Soll</b>",
+     "s": "▪ Oh nein, meine Äpfel!\n● ___, ich helfe Ihnen!\n▪ Oh, danke! Das ist sehr ___ von Ihnen.",
+     "a": [
+      [
+       "Moment"
+      ],
+      [
+       "nett",
+       "lieb",
+       "freundlich"
+      ]
+     ],
+     "gw": {
+      "uz": "Yordam iboralari qat’iy — iborani to‘liq eslang. So‘z turini aniqlang: ot, fe’l yoki sifat; fe’l egaga moslanadi (<b>ich → -e</b>). <b>Sie</b> bilan buyruq: <b>… Sie …!</b> Misol: <b>Kann ich Ihnen helfen?</b>",
+      "ru": "Выражения помощи устойчивые — вспомните фразу целиком. Определите тип слова: существительное, глагол или прилагательное; глагол согласуется (<b>ich → -e</b>). Императив на <b>Sie</b>: <b>… Sie …!</b> Пример: <b>Kann ich Ihnen helfen?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *Moment*, *nett*, *schaffe*, *Lassen* und *Hilfe*.",
+     "s": "▪ Soll ich den Koffer für Sie in den dritten Stock tragen?\n● Danke, ich ___ das schon. Aber vielen Dank!",
+     "a": [
+      [
+       "schaffe"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie *Moment*, *nett*, *schaffe*, *Lassen* und *Hilfe*.",
+     "s": "▪ Puh, die Tür ist so schwer!\n● ___ Sie mich das machen!\n▪ Besten Dank für Ihre ___!",
+     "a": [
+      [
+       "Lassen"
+      ],
+      [
+       "Hilfe"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Hilfe anbieten, annehmen oder ablehnen? Ordnen Sie zu.",
+     "bsp": "Moment, ich helfe dir. → <b>anbieten</b>",
+     "c": [
+      "🤝 anbieten",
+      "👍 annehmen",
+      "✋ ablehnen"
+     ],
+     "i": [
+      [
+       "Soll ich die Tasche für Sie tragen?",
+       0
+      ],
+      [
+       "Danke, das geht schon!",
+       2
+      ],
+      [
+       "Das wäre sehr lieb von dir.",
+       1
+      ],
+      [
+       "Lassen Sie mich das machen!",
+       0
+      ],
+      [
+       "Ich schaffe das schon, danke.",
+       2
+      ],
+      [
+       "Vielen Dank für deine Hilfe!",
+       1
+      ],
+      [
+       "Ich möchte Ihnen gern helfen.",
+       0
+      ],
+      [
+       "Oh, gern. Vielen Dank!",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Taklif — yordam berishga tayyorlik; qabul — rahmat va «ha»; rad — muloyim «kerak emas, o‘zim». Misol: <b>Kann ich Ihnen helfen?</b> → anbieten; <b>Nicht nötig, ich mache das allein.</b> → ablehnen.",
+      "ru": "Предложение — готовность помочь; принятие — спасибо и «да»; отказ — вежливое «не нужно, сам». Пример: <b>Kann ich Ihnen helfen?</b> → anbieten; <b>Nicht nötig, ich mache das allein.</b> → ablehnen."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Soll ich dir helfen? → <b>Mia (du)</b>",
+     "c": [
+      "Mia (du)",
+      "Herr Yilmaz (Sie)"
+     ],
+     "i": [
+      [
+       "Moment, ich helfe dir.",
+       0
+      ],
+      [
+       "Lassen Sie mich das machen!",
+       1
+      ],
+      [
+       "Das ist wirklich lieb von Ihnen.",
+       1
+      ],
+      [
+       "Lass mich das machen!",
+       0
+      ],
+      [
+       "Vielen Dank für deine Hilfe!",
+       0
+      ],
+      [
+       "Soll ich Ihnen die Einkäufe tragen?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Olmosh va buyruq shakliga qarang: <b>du</b> → <b>dir/dich/dein</b>, buyruq olmoshsiz: <b>Komm!</b>; <b>Sie</b> → <b>Ihnen/Ihr</b>, buyruq <b>… Sie!</b> Misol: <b>Komm rein! – Kommen Sie rein!</b>",
+      "ru": "Смотрите на местоимение и императив: <b>du</b> → <b>dir/dich/dein</b>, императив без местоимения: <b>Komm!</b>; <b>Sie</b> → <b>Ihnen/Ihr</b>, императив <b>… Sie!</b> Пример: <b>Komm rein! – Kommen Sie rein!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Sie und Ihre Familie wohnen im ersten Stock. Lisa wohnt im zweiten Stock. → <b>Über uns wohnt Lisa.</b>",
+     "q": "Sie und Ihre Familie wohnen im zweiten Stock. Herr Schulz wohnt im ersten Stock. Was sagen Sie?",
+     "o": [
+      "Über uns wohnt Herr Schulz.",
+      "Rechts neben uns wohnt Herr Schulz.",
+      "Unter uns wohnt Herr Schulz."
+     ],
+     "a": 2,
+     "gw": {
+      "uz": "Qavatlarni solishtiring: yuqori qavatdagi qo‘shni — <b>über uns</b>, pastdagi — <b>unter uns</b>, bir qavatda — <b>links/rechts neben uns</b> (eshiklar tartibiga qarang). Misol: biz 3-qavatda, Ali 4-qavatda → <b>Über uns wohnt Ali.</b>",
+      "ru": "Сравните этажи: сосед выше — <b>über uns</b>, ниже — <b>unter uns</b>, на том же этаже — <b>links/rechts neben uns</b> (смотрите на порядок дверей). Пример: мы на 3-м, Али на 4-м → <b>Über uns wohnt Ali.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Im dritten Stock: 🚪 Familie Weber · 🚪 Sie und Ihre Familie. Was sagen Sie?",
+     "o": [
+      "Links neben uns wohnt Familie Weber.",
+      "Über uns wohnt Familie Weber.",
+      "Rechts neben uns wohnt Familie Weber."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Nachbar trägt eine schwere Mülltonne in den Hof. Sie möchten helfen. Was sagen Sie?",
+     "o": [
+      "Danke, das geht schon!",
+      "Vielen Dank für Ihre Hilfe!",
+      "Moment, ich helfe Ihnen."
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}

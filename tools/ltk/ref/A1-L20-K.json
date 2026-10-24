@@ -1,0 +1,215 @@
+{
+ "title": "Lektion 20 · Kommunikation",
+ "sub": "Personen beschreiben · auf Aussagen reagieren",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Sie sieht sehr nett aus. | ● Das ist unsere Chefin. | ▪ Wer ist die Frau dort? → <b>▪ Wer ist die Frau dort?<br>● Das ist unsere Chefin.<br>▪ Sie sieht sehr nett aus.</b>",
+     "w": [
+      "▪ Wer ist denn der Mann mit dem Bart?",
+      "● Ja, das ist Herr Yilmaz, unser Chef.",
+      "▪ Er sieht sehr sympathisch aus.",
+      "● Ja, und er ist auch sehr freundlich."
+     ],
+     "a": "▪ Wer ist denn der Mann mit dem Bart? ● Ja, das ist Herr Yilmaz, unser Chef. ▪ Er sieht sehr sympathisch aus. ● Ja, und er ist auch sehr freundlich.",
+     "gw": {
+      "uz": "Odam haqida savol → tasvir (ko‘rinish, xarakter); yangilik → munosabat (<b>Echt?</b>, <b>Wow!</b>, <b>Oh nein!</b>). Misol: <b>▪ Ich habe Geburtstag! ● Wow, toll!</b>",
+      "ru": "Вопрос о человеке → описание (внешность, характер); новость → реакция (<b>Echt?</b>, <b>Wow!</b>, <b>Oh nein!</b>). Пример: <b>▪ Ich habe Geburtstag! ● Wow, toll!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Ich habe eine neue Stelle bekommen!",
+      "● Echt? Wo denn?",
+      "▪ Bei einer Firma in Wien. Das Team ist super!",
+      "● Wow, das freut mich so!"
+     ],
+     "a": "▪ Ich habe eine neue Stelle bekommen! ● Echt? Wo denn? ▪ Bei einer Firma in Wien. Das Team ist super! ● Wow, das freut mich so!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Ist dein Bruder groß?<br>● Nein, er ist ___. → er ist <b>klein</b>.",
+     "q": "aus · Haare · Bart · sympathisch",
+     "s": "▪ Herr Schulz ist der neue Chef.\n● Wie sieht er ___?\n▪ Er ist groß und hat kurze ___ und einen ___.\n● Und wie findest du ihn?\n▪ Ich finde, er sieht sehr ___ aus.",
+     "a": [
+      [
+       "aus"
+      ],
+      [
+       "Haare"
+      ],
+      [
+       "Bart"
+      ],
+      [
+       "sympathisch"
+      ]
+     ],
+     "gw": {
+      "uz": "Tashqi ko‘rinish: <b>aussehen</b> — ajraladigan fe’l, prefiks oxirga ketadi. Munosabat: yaxshi yangilikka — <b>Echt? Super!</b>, yomoniga — <b>Oje!</b>, <b>schade</b>. Misol: <b>Er trägt eine Brille.</b>",
+      "ru": "Внешность: <b>aussehen</b> — отделяемый глагол, приставка уходит в конец. Реакция: на хорошую новость — <b>Echt? Super!</b>, на плохую — <b>Oje!</b>, <b>schade</b>. Пример: <b>Er trägt eine Brille.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "schade · Echt · verpasst · Oje",
+     "s": "▪ Ich habe gestern den Flug nach Berlin ___!\n● ___! Was hast du dann gemacht?\n▪ Ich bin nach Hause gefahren.\n● Das ist aber ___!\n▪ Ja. Und heute habe ich auch noch meinen Schlüssel vergessen.\n● ___? Du hast wirklich kein Glück.",
+     "a": [
+      [
+       "verpasst"
+      ],
+      [
+       "Oje"
+      ],
+      [
+       "schade"
+      ],
+      [
+       "Echt"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Positiv oder negativ? Wie reagiert man? Ordnen Sie zu.",
+     "bsp": "Wow! → <b>positiv</b>",
+     "c": [
+      "🙂 positiv",
+      "🙁 negativ"
+     ],
+     "i": [
+      [
+       "Oh nein!",
+       1
+      ],
+      [
+       "Hey, super!",
+       0
+      ],
+      [
+       "Oje!",
+       1
+      ],
+      [
+       "Oh, cool!",
+       0
+      ],
+      [
+       "Das ist aber schade!",
+       1
+      ],
+      [
+       "Das freut mich so!",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Yangilik yaxshimi yoki yomonmi? Quvonch: <b>super, cool, wow</b>; afsus: <b>nein, schade, oje</b>. Misol: <b>Wie schön!</b> → 🙂, <b>So ein Pech!</b> → 🙁",
+      "ru": "Новость хорошая или плохая? Радость: <b>super, cool, wow</b>; сожаление: <b>nein, schade, oje</b>. Пример: <b>Wie schön!</b> → 🙂, <b>So ein Pech!</b> → 🙁"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Was passt? Ordnen Sie zu.",
+     "bsp": "Sie ist groß und schlank. → <b>Personen beschreiben</b>",
+     "c": [
+      "👤 Personen beschreiben",
+      "💬 auf Aussagen reagieren"
+     ],
+     "i": [
+      [
+       "Sie hat glatte, dunkle Haare.",
+       0
+      ],
+      [
+       "Ach komm!",
+       1
+      ],
+      [
+       "Er sieht sehr freundlich aus.",
+       0
+      ],
+      [
+       "Hey, super!",
+       1
+      ],
+      [
+       "Er ist alt und hat einen Bart.",
+       0
+      ],
+      [
+       "Puh!",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Tasvir — soch, ko‘z, bo‘y, xarakter haqida to‘liq gap. Munosabat — qisqa undov (<b>Echt?</b>, <b>Ach komm!</b>). Misol: <b>Er hat blaue Augen.</b> → beschreiben, <b>Wirklich?</b> → reagieren.",
+      "ru": "Описание — полное предложение о волосах, глазах, росте, характере. Реакция — короткое восклицание (<b>Echt?</b>, <b>Ach komm!</b>). Пример: <b>Er hat blaue Augen.</b> → beschreiben, <b>Wirklich?</b> → reagieren."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Ihre Freundin sagt: „Ich habe eine neue Stelle!“ Sie sagen: ___ → ✓ <b>Das freut mich so!</b>",
+     "q": "Jonas sagt: „Ich habe den Zug verpasst.“ Sie sagen: ___",
+     "o": [
+      "Oh nein!",
+      "Hey, super!",
+      "Das freut mich so!"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Avval yangilikni baholang: yaxshi yoki yomon? Keyin mos munosabatni tanlang: quvonch yoki afsus. Misol: <b>Lisa: „Ich habe ein Auto gewonnen!“ → Wow, super!</b>",
+      "ru": "Сначала оцените новость: хорошая или плохая? Потом выберите реакцию: радость или сожаление. Пример: <b>Lisa: „Ich habe ein Auto gewonnen!“ → Wow, super!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Mia sagt: „Ich kann am Samstag leider nicht kommen.“ Sie sagen: ___",
+     "o": [
+      "Wow!",
+      "Das ist aber schade!",
+      "Oh, cool!"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie finden das neue Team sehr nett. Sie sagen: ___",
+     "o": [
+      "Das Team ist sehr sympathisch und freundlich.",
+      "Das Team sieht ein bisschen unfreundlich aus.",
+      "Das Team ist wirklich unsympathisch."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Lisa sagt: „Mein Opa ist 70 Jahre alt und hat eine Firma gegründet!“ Sie sagen: ___",
+     "o": [
+      "Echt?",
+      "Oje!",
+      "Das ist aber schade!"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

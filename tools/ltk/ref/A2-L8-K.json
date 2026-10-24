@@ -1,0 +1,197 @@
+{
+ "title": "Lektion 8 · Kommunikation",
+ "sub": "die Meinung sagen · etwas vergleichen",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Schade! | ● Bei uns gibt es das nicht. | ▪ Wir haben eine Kantine. Und ihr?<br>→ <b>▪ Wir haben eine Kantine. Und ihr?<br>● Bei uns gibt es das nicht.<br>▪ Schade!</b>",
+     "w": [
+      "▪ Wie ist die Mittagspause in deiner Firma?",
+      "● Wir haben einen Fitnessraum und machen mittags Yoga.",
+      "▪ Echt? Bei uns gibt es das nicht.",
+      "● Schade. Ich finde es wichtig, dass man in der Pause Sport macht."
+     ],
+     "a": "▪ Wie ist die Mittagspause in deiner Firma? ● Wir haben einen Fitnessraum und machen mittags Yoga. ▪ Echt? Bei uns gibt es das nicht. ● Schade. Ich finde es wichtig, dass man in der Pause Sport macht.",
+     "gw": {
+      "uz": "Tartib: savol (<b>Wie ist … bei dir?</b>) → tavsif → solishtirish (<b>bei uns …</b>) → fikr. Fikr ko‘pincha oxirida: <b>Ich finde es …, dass …</b>. Misol: <b>Und bei euch? – Bei uns gibt es einen Garten.</b>",
+      "ru": "Порядок: вопрос (<b>Wie ist … bei dir?</b>) → описание → сравнение (<b>bei uns …</b>) → мнение. Мнение часто в конце: <b>Ich finde es …, dass …</b>. Пример: <b>Und bei euch? – Bei uns gibt es einen Garten.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Bei uns gibt es seit einem Monat einen Kicker in der Teeküche.",
+      "● Wirklich? Es wundert mich, dass eure Chefin das gut findet.",
+      "▪ Ja, und sie spielt oft mit uns!",
+      "● Das finde ich toll. Bei uns ist das ganz anders."
+     ],
+     "a": "▪ Bei uns gibt es seit einem Monat einen Kicker in der Teeküche. ● Wirklich? Es wundert mich, dass eure Chefin das gut findet. ▪ Ja, und sie spielt oft mit uns! ● Das finde ich toll. Bei uns ist das ganz anders."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *wundert*, *wichtig*, *anders*, *auch*, *nicht*, *wie*.",
+     "bsp": "▪ Bei uns gibt es einen Ruheraum.<br>● ___, dass eure Firma so etwas hat! → <b>Super</b>",
+     "s": "▪ In meiner Firma machen wir mittags Pilates. Die Firma bezahlt den Kurs.\n● Es ___ mich, dass eure Firma das bezahlt. Bei uns gibt es das ___.\n▪ Oh, schade! Dann ist die Mittagspause bei euch ganz ___ als bei uns.",
+     "a": [
+      [
+       "wundert"
+      ],
+      [
+       "nicht"
+      ],
+      [
+       "anders"
+      ]
+     ],
+     "gw": {
+      "uz": "Solishtirish: farq — <b>anders als</b>, bir xil — <b>so … wie</b> yoki <b>auch</b>. Hayrat — <b>Es überrascht mich, dass …</b>; <b>dass</b>-gapda fe’l oxirida. Misol: <b>Mein Bruder ist so groß wie ich.</b>",
+      "ru": "Сравнение: различие — <b>anders als</b>, сходство — <b>so … wie</b> или <b>auch</b>. Удивление — <b>Es überrascht mich, dass …</b>; в придаточном с <b>dass</b> глагол в конце. Пример: <b>Mein Bruder ist so groß wie ich.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *wundert*, *wichtig*, *anders*, *auch*, *nicht*, *wie*.",
+     "s": "▪ Wir haben eine Teeküche. Dort trinken wir zusammen Kaffee.\n● Bei uns gibt es das ___. Wir haben auch einen Kicker.\n▪ Dann ist die Mittagspause bei euch auch so ___ bei uns.\n● Ja. Ich finde es ___, dass man in der Pause mit den Kollegen spricht.",
+     "a": [
+      [
+       "auch"
+      ],
+      [
+       "wie"
+      ],
+      [
+       "wichtig"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Die Meinung sagen oder etwas vergleichen? Ordnen Sie zu.",
+     "bsp": "Ich finde es toll, dass wir einen Kicker haben. → <b>die Meinung sagen</b>",
+     "c": [
+      "die Meinung sagen",
+      "etwas vergleichen"
+     ],
+     "i": [
+      [
+       "Ich finde es seltsam, dass der Chef mittags tanzt.",
+       0
+      ],
+      [
+       "Bei uns ist es anders als bei euch.",
+       1
+      ],
+      [
+       "Es überrascht mich, dass es hier einen Kicker gibt.",
+       0
+      ],
+      [
+       "In unserer Firma gibt es das auch.",
+       1
+      ],
+      [
+       "Die Pause bei uns ist nicht so wie bei dir.",
+       1
+      ],
+      [
+       "Ich finde es wichtig, dass es eine Kantine gibt.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Fikrda baho bor: <b>Ich finde es …, dass</b>, hayrat yoki his. Solishtirishda ikki joy yoki odam yonma-yon: <b>bei uns / bei euch</b>, <b>anders als</b>. Misol: <b>Ich finde es gut, dass die Kantine billig ist.</b> → Meinung; <b>Bei mir ist die Pause länger als bei dir.</b> → vergleichen.",
+      "ru": "В мнении есть оценка: <b>Ich finde es …, dass</b>, удивление или чувство. В сравнении два места или человека рядом: <b>bei uns / bei euch</b>, <b>anders als</b>. Пример: <b>Ich finde es gut, dass die Kantine billig ist.</b> → Meinung; <b>Bei mir ist die Pause länger als bei dir.</b> → vergleichen."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Positiv, negativ oder überrascht? Ordnen Sie zu.",
+     "bsp": "Ich finde es toll, dass ihr Yoga macht. → <b>👍 positiv</b>",
+     "c": [
+      "👍 positiv",
+      "👎 negativ",
+      "😮 überrascht"
+     ],
+     "i": [
+      [
+       "Super, dass es jetzt Massagesessel gibt.",
+       0
+      ],
+      [
+       "Ich finde es peinlich, dass wir im Büro singen sollen.",
+       1
+      ],
+      [
+       "Es wundert mich, dass die Azubis nie in die Kantine gehen.",
+       2
+      ],
+      [
+       "Ich finde es wichtig, dass die Azubis Pausen machen.",
+       0
+      ],
+      [
+       "Schade, dass die Kantine so früh schließt.",
+       1
+      ],
+      [
+       "Es überrascht mich, dass so viele Kollegen Pilates machen.",
+       2
+      ]
+     ],
+     "gw": {
+      "uz": "<b>dass</b> dan oldingi so‘z bahoni beradi: <b>toll, schön, super</b> → ijobiy; <b>schlecht, blöd</b> → salbiy; <b>wundern, überraschen</b> → hayrat. Misol: <b>Schön, dass du da bist.</b> → positiv.",
+      "ru": "Слово перед <b>dass</b> даёт оценку: <b>toll, schön, super</b> → положительно; <b>schlecht, blöd</b> → отрицательно; <b>wundern, überraschen</b> → удивление. Пример: <b>Schön, dass du da bist.</b> → positiv."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihre Firma hat jetzt einen Ruheraum. Sie finden das super. → <b>Ich finde es toll, dass wir einen Ruheraum haben.</b>",
+     "q": "Ein Freund erzählt: In seiner Firma gibt es einen Kicker. In Ihrer Firma gibt es auch einen. Was sagen Sie?",
+     "o": [
+      "Bei uns gibt es das auch.",
+      "Bei uns gibt es das nicht.",
+      "Es wundert mich, dass ihr einen Kicker habt."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatda nima muhim: sizda ham shundaymi (solishtirish) yoki his-tuyg‘uingiz (fikr, hayrat)? Hisga mos so‘zni toping; <b>dass</b>-gapda fe’l oxirida. Misol: <b>Ich finde es schade, dass die Kantine zu ist.</b>",
+      "ru": "Что важно в ситуации: есть ли у вас так же (сравнение) или ваше чувство (мнение, удивление)? Найдите слово под это чувство; в <b>dass</b>-предложении глагол в конце. Пример: <b>Ich finde es schade, dass die Kantine zu ist.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Chefin tanzt mittags im Konferenzraum. Sie finden das sehr komisch. Was sagen Sie?",
+     "o": [
+      "Ich finde es wichtig, dass sie tanzt.",
+      "Ich finde es seltsam, dass sie im Konferenzraum tanzt.",
+      "Bei uns ist es auch so."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Die Firma von Ihrer Freundin bezahlt jetzt Yoga für alle. Sie sind überrascht. Was sagen Sie?",
+     "o": [
+      "Bei uns gibt es das auch.",
+      "Ich finde es peinlich, dass deine Firma das macht.",
+      "Es überrascht mich, dass deine Firma das bezahlt."
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,214 @@
+{
+ "title": "Lektion 22 · Kommunikation",
+ "sub": "Echt? · etwas vergleichen · Welcher gefällt dir?",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Diese hier. | ▪ Welche Mütze gefällt dir? | ▪ Die finde ich auch schön. → <b>▪ Welche Mütze gefällt dir?<br>● Diese hier.<br>▪ Die finde ich auch schön.</b>",
+     "w": [
+      "▪ Welcher Pullover gefällt dir am besten?",
+      "● Dieser hier. Die Farbe ist super.",
+      "▪ Findest du? Ich finde diesen hier viel schöner.",
+      "● Echt? Aber der ist teurer."
+     ],
+     "a": "▪ Welcher Pullover gefällt dir am besten? ● Dieser hier. Die Farbe ist super. ▪ Findest du? Ich finde diesen hier viel schöner. ● Echt? Aber der ist teurer.",
+     "gw": {
+      "uz": "<b>Welcher/Welche …?</b> → <b>Dieser/Diese hier</b>; fikr → <b>Findest du?</b> yoki o‘z fikri; taklif → rad va boshqa variant (<b>lieber</b>). Misol: <b>▪ Welche Jacke nimmst du? ● Diese hier.</b>",
+      "ru": "<b>Welcher/Welche …?</b> → <b>Dieser/Diese hier</b>; мнение → <b>Findest du?</b> или своё мнение; предложение → отказ и другой вариант (<b>lieber</b>). Пример: <b>▪ Welche Jacke nimmst du? ● Diese hier.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Kommst du am Samstag mit ins Theater?",
+      "● Hm, ich gehe lieber ins Kino.",
+      "▪ Wirklich? Ich finde Theater genauso interessant wie Kino.",
+      "● Na gut, dann komme ich mit."
+     ],
+     "a": "▪ Kommst du am Samstag mit ins Theater? ● Hm, ich gehe lieber ins Kino. ▪ Wirklich? Ich finde Theater genauso interessant wie Kino. ● Na gut, dann komme ich mit."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Der Rock kostet 80 Euro, die Hose 50 Euro.<br>● Der Rock ist ___ als die Hose. → Der Rock ist <b>teurer</b>.",
+     "q": "als · Echt · genauso · lieber",
+     "s": "▪ Ich gehe am Sonntag ins Konzert. Kommst du mit?\n● Nein, Kino finde ich besser ___ Konzerte. Ich gehe ___ ins Kino.\n▪ ___? Ich finde Konzerte ___ gut wie Kino.",
+     "a": [
+      [
+       "als"
+      ],
+      [
+       "lieber"
+      ],
+      [
+       "Echt"
+      ],
+      [
+       "genauso"
+      ]
+     ],
+     "gw": {
+      "uz": "Qiyos: qiyosiy daraja + <b>als</b>; bir xil — <b>genauso … wie</b>; afzallik — <b>lieber</b>. <b>Welcher</b> → <b>Dieser</b> (der-so‘z). Misol: <b>Der Rock ist kürzer als das Kleid.</b>",
+      "ru": "Сравнение: сравнительная степень + <b>als</b>; одинаково — <b>genauso … wie</b>; предпочтение — <b>lieber</b>. <b>Welcher</b> → <b>Dieser</b> (слово с der). Пример: <b>Der Rock ist kürzer als das Kleid.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "Dieser · Farbe · Findest · schöner · Welcher",
+     "s": "▪ ___ Mantel gefällt dir am besten?\n● ___ hier. Die ___ ist toll.\n▪ ___ du? Ich finde diesen hier ___.",
+     "a": [
+      [
+       "Welcher"
+      ],
+      [
+       "Dieser"
+      ],
+      [
+       "Farbe"
+      ],
+      [
+       "Findest"
+      ],
+      [
+       "schöner"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Jonas sagt: „Der Mantel kostet 300 Euro.“ Das ist sehr teuer! Sie sagen: ___ → ✓ <b>Wirklich?</b>",
+     "q": "Lisa sagt: „Die Stiefel kosten nur 9 Euro.“ Das ist sehr billig! Sie sagen: ___",
+     "o": [
+      "Echt?",
+      "Findest du?",
+      "Die Farbe ist toll."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Hayrat — <b>Echt?</b>, <b>Wirklich?</b>; fikr so‘rash — <b>Findest du?</b>; qiyos: ko‘proq yoqqani birinchi + <b>-er als</b>. Misol: <b>Ich finde Tee besser als Kaffee.</b>",
+      "ru": "Удивление — <b>Echt?</b>, <b>Wirklich?</b>; уточнить мнение — <b>Findest du?</b>; сравнение: то, что больше нравится, первым + <b>-er als</b>. Пример: <b>Ich finde Tee besser als Kaffee.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie finden Musik wichtig, Sport nicht so wichtig. Sie sagen: ___",
+     "o": [
+      "Ich finde Sport wichtiger als Musik.",
+      "Ich finde Musik wichtiger als Sport.",
+      "Ich finde Musik genauso wichtig wie Sport."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Elif findet den Hut schön. Sie finden einen anderen Hut schöner. Sie sagen: ___",
+     "o": [
+      "Echt? Der gefällt mir auch.",
+      "Die Farbe ist toll.",
+      "Findest du? Ich finde diesen hier schöner."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie möchten wissen: Welches Kleid gefällt Ihrer Freundin am besten? Sie fragen: ___",
+     "o": [
+      "Welches Kleid gefällt dir am besten?",
+      "Dieses Kleid gefällt mir am besten.",
+      "Findest du das Kleid schön?"
+     ],
+     "a": 0
+    },
+    {
+     "t": "cat",
+     "h": "Überraschung oder Vergleich? Ordnen Sie zu.",
+     "bsp": "Ich finde Rot schöner als Blau. → <b>Vergleich</b>",
+     "c": [
+      "😮 Überraschung",
+      "⚖️ Vergleich"
+     ],
+     "i": [
+      [
+       "Echt?",
+       0
+      ],
+      [
+       "Ich gehe lieber ins Konzert als ins Kino.",
+       1
+      ],
+      [
+       "Wirklich?",
+       0
+      ],
+      [
+       "Musik finde ich genauso wichtig wie Sport.",
+       1
+      ],
+      [
+       "Ich finde diesen hier schöner.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Hayrat — qisqa savol yoki undov. Qiyos — ikki narsa va <b>als, wie, lieber, besser</b>. Misol: <b>Was, so billig?</b> → Überraschung, <b>Der Hut ist schöner als die Mütze.</b> → Vergleich.",
+      "ru": "Удивление — короткий вопрос или восклицание. Сравнение — две вещи и <b>als, wie, lieber, besser</b>. Пример: <b>Was, so billig?</b> → Überraschung, <b>Der Hut ist schöner als die Mütze.</b> → Vergleich."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Ist das deine Mütze? → <b>Elif (du)</b>",
+     "c": [
+      "Elif (du)",
+      "Frau Keller (Sie)"
+     ],
+     "i": [
+      [
+       "Welcher Mantel gefällt dir am besten?",
+       0
+      ],
+      [
+       "Welche Jacke gefällt Ihnen besser?",
+       1
+      ],
+      [
+       "Findest du?",
+       0
+      ],
+      [
+       "Finden Sie?",
+       1
+      ],
+      [
+       "Was ziehst du heute an?",
+       0
+      ],
+      [
+       "Welchen Anzug nehmen Sie?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "<b>gefallen</b> bilan Dativ: <b>dir</b> — norasmiy, <b>Ihnen</b> — rasmiy. Fe’l shakliga ham qarang: <b>findest du / finden Sie</b>. Misol: <b>Wie gefällt Ihnen das Kleid?</b> → Sie.",
+      "ru": "С <b>gefallen</b> — Dativ: <b>dir</b> — неофициально, <b>Ihnen</b> — официально. Смотрите и на глагол: <b>findest du / finden Sie</b>. Пример: <b>Wie gefällt Ihnen das Kleid?</b> → Sie."
+     }
+    }
+   ]
+  }
+ ]
+}

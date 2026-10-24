@@ -1,0 +1,215 @@
+{
+ "title": "Lektion 14 · Kommunikation",
+ "sub": "Nach dem Weg fragen · Den Weg beschreiben · Sich bedanken",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Oh, danke schön. | ▪ Wo ist hier eine Bank? | ● Da vorne, neben der Post. → <b>▪ Wo ist hier eine Bank?<br>● Da vorne, neben der Post.<br>▪ Oh, danke schön.</b>",
+     "w": [
+      "▪ Entschuldigung, können Sie mir helfen?",
+      "● Ja, gern.",
+      "▪ Ich suche die Apotheke.",
+      "● Oh, tut mir leid. Ich bin auch nicht von hier."
+     ],
+     "a": "▪ Entschuldigung, können Sie mir helfen? ● Ja, gern. ▪ Ich suche die Apotheke. ● Oh, tut mir leid. Ich bin auch nicht von hier.",
+     "gw": {
+      "uz": "Yo‘l so‘rash tartibi: murojaat (<b>Entschuldigung</b>) → rozilik → savol → yo‘l tasviri yoki «bilmayman» → rahmat. Misol: <b>● Vielen Dank! ▪ Gern geschehen.</b> — oxiri.",
+      "ru": "Порядок: обращение (<b>Entschuldigung</b>) → согласие помочь → вопрос → описание пути или «не знаю» → благодарность. Пример: <b>● Vielen Dank! ▪ Gern geschehen.</b> — конец."
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Eine Frage bitte: Wo ist hier eine Bank?",
+      "● Sie gehen geradeaus und dann nach links.",
+      "▪ Ist das weit?",
+      "● Nein, das ist ganz nah.",
+      "▪ Herzlichen Dank."
+     ],
+     "a": "▪ Eine Frage bitte: Wo ist hier eine Bank? ● Sie gehen geradeaus und dann nach links. ▪ Ist das weit? ● Nein, das ist ganz nah. ▪ Herzlichen Dank."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Wo ist die Post?<br>● Gehen Sie ___ und dann links. → Gehen Sie <b>geradeaus</b>.",
+     "s": "▪ Entschuldigung, ich ___ den Hauptbahnhof.\n● Gehen Sie geradeaus und dann die ___ (2.) Straße nach rechts.\n▪ Kann ich zu ___ gehen?\n● Ja, das ist gar nicht ___.\n▪ Vielen ___.",
+     "a": [
+      [
+       "suche"
+      ],
+      [
+       "zweite"
+      ],
+      [
+       "Fuß"
+      ],
+      [
+       "weit"
+      ],
+      [
+       "Dank"
+      ]
+     ],
+     "gw": {
+      "uz": "Yo‘l iboralarini eslang: qidirish, tartib son bilan ko‘cha, piyoda; bilmasangiz — uzr va sabab. Misol: <b>Gehen Sie die dritte Straße links.</b>",
+      "ru": "Вспомните фразы о дороге: искать, улица с порядковым числом, пешком; если не знаете — извинение и причина. Пример: <b>Gehen Sie die dritte Straße links.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Entschuldigung, wo ist ___ hier eine Post?\n● Tut mir ___, das ___ ich leider nicht. Ich bin nicht von hier.\n▪ Oh, kein Problem.",
+     "a": [
+      [
+       "denn"
+      ],
+      [
+       "leid"
+      ],
+      [
+       "weiß"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Wer sagt das? Ordnen Sie zu.",
+     "bsp": "Ich suche die Post. → <b>fragt nach dem Weg</b>",
+     "c": [
+      "🙋 fragt nach dem Weg",
+      "🧭 beschreibt den Weg",
+      "🤷 kennt den Weg nicht"
+     ],
+     "i": [
+      [
+       "Hier biegen Sie links ab.",
+       1
+      ],
+      [
+       "Ich bin fremd hier.",
+       2
+      ],
+      [
+       "Ist das sehr weit?",
+       0
+      ],
+      [
+       "Da sehen Sie eine Brücke.",
+       1
+      ],
+      [
+       "Wo ist denn hier eine Apotheke?",
+       0
+      ],
+      [
+       "Das weiß ich leider nicht.",
+       2
+      ]
+     ],
+     "gw": {
+      "uz": "Savol — yo‘l so‘rayapti; buyruq va yo‘nalish so‘zlari (<b>geradeaus, links</b>) — yo‘lni tushuntiryapti; uzr va «bu yerlik emasman» — bilmaydi. Misol: <b>Das weiß ich leider nicht.</b> → kennt den Weg nicht.",
+      "ru": "Вопрос — спрашивает дорогу; повелительное и слова направления (<b>geradeaus, links</b>) — объясняет путь; извинение и «я не местный» — не знает. Пример: <b>Das weiß ich leider nicht.</b> → kennt den Weg nicht."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Gehst du hier geradeaus? → <b>Tom (du)</b>",
+     "c": [
+      "Tom (du)",
+      "Frau Berger (Sie)"
+     ],
+     "i": [
+      [
+       "Kannst du mir helfen?",
+       0
+      ],
+      [
+       "Sie gehen hier geradeaus.",
+       1
+      ],
+      [
+       "Wo ist die Post? Weißt du das?",
+       0
+      ],
+      [
+       "Können Sie mir helfen?",
+       1
+      ],
+      [
+       "Du gehst über die Brücke.",
+       0
+      ],
+      [
+       "Biegen Sie an der Ampel links ab.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Fe’l va olmoshga qarang: <b>kannst du, weißt du</b> — norasmiy; <b>können Sie, wissen Sie, Sie gehen</b> — rasmiy. Misol: <b>Wissen Sie den Weg?</b> → Sie.",
+      "ru": "Смотрите на глагол и местоимение: <b>kannst du, weißt du</b> — неофициально; <b>können Sie, wissen Sie, Sie gehen</b> — официально. Пример: <b>Wissen Sie den Weg?</b> → Sie."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "bsp": "Sie kennen den Weg nicht. → <b>Tut mir leid. Ich bin nicht von hier.</b>",
+     "q": "Sie suchen die Post. Was sagen Sie?",
+     "o": [
+      "Eine Frage bitte: Wo ist denn hier die Post?",
+      "Da sehen Sie die Post.",
+      "Die Post ist gar nicht weit."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatdagi rolingizni aniqlang: siz so‘rayapsizmi, tushuntiryapsizmi yoki rahmat aytyapsizmi? Shu rolga mos gapni tanlang. Misol: <b>Sie kennen den Weg nicht → Tut mir leid, ich bin nicht von hier.</b>",
+      "ru": "Определите свою роль: вы спрашиваете, объясняете или благодарите? Выберите фразу для этой роли. Пример: <b>Sie kennen den Weg nicht → Tut mir leid, ich bin nicht von hier.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Eine Frau beschreibt Ihnen den Weg. Was sagen Sie?",
+     "o": [
+      "Ich bin fremd hier.",
+      "Sehr nett. Vielen Dank.",
+      "Hier biegen Sie rechts ab."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Sie wissen nicht, wo das Kaufhaus ist. Was sagen Sie?",
+     "o": [
+      "Das ist gar nicht weit.",
+      "Herzlichen Dank.",
+      "Das weiß ich leider nicht."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Sie wissen: Die Apotheke ist nur 50 Meter weit. Was sagen Sie?",
+     "o": [
+      "Das ist gar nicht weit.",
+      "Ich bin nicht von hier.",
+      "Kann ich zu Fuß gehen?"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

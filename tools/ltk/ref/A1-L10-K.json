@@ -1,0 +1,200 @@
+{
+ "title": "Lektion 10 · Kommunikation",
+ "sub": "Wann kommst du an? · Hoffentlich … · Durchsagen",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Super, ich hole dich ab. | ● So um sieben. | ▪ Wann kommst du an? → <b>▪ Wann kommst du an?<br>● So um sieben.<br>▪ Super, ich hole dich ab.</b>",
+     "w": [
+      "▪ Hallo Jonas! Wann fliegst du denn ab?",
+      "● Mein Flug startet um 14 Uhr.",
+      "▪ Und wann kommst du in Berlin an?",
+      "● So kurz vor fünf. Kannst du mich abholen?",
+      "▪ Natürlich! Ich freue mich auf dich!"
+     ],
+     "a": "▪ Hallo Jonas! Wann fliegst du denn ab? ● Mein Flug startet um 14 Uhr. ▪ Und wann kommst du in Berlin an? ● So kurz vor fünf. Kannst du mich abholen? ▪ Natürlich! Ich freue mich auf dich!",
+     "gw": {
+      "uz": "Savol (qachon? qayerda?) → aniq javob (soat, joy) → keyingi savol yoki iltimos → javob. Oxirida xayrlashuv. Misol: <b>▪ Wo bist du? ● Noch im Zug.</b>",
+      "ru": "Вопрос (когда? где?) → конкретный ответ (время, место) → следующий вопрос или просьба → ответ. В конце прощание. Пример: <b>▪ Wo bist du? ● Noch im Zug.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Hallo Nora, hier ist Tom. Der Zug hat Verspätung.",
+      "● Oh nein! Wann kommst du denn an?",
+      "▪ So kurz nach neun. Holst du mich ab?",
+      "● Was für eine Frage? Natürlich!",
+      "▪ Danke! Bis gleich!"
+     ],
+     "a": "▪ Hallo Nora, hier ist Tom. Der Zug hat Verspätung. ● Oh nein! Wann kommst du denn an? ▪ So kurz nach neun. Holst du mich ab? ● Was für eine Frage? Natürlich! ▪ Danke! Bis gleich!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *Natürlich* · *Hoffentlich* · *Verstehe* · *sicher* · *gleich*",
+     "bsp": "▪ Mein Zug kommt um acht an.<br>● Gut, ich ___ dich ab. → ich <b>hole</b> dich ab.",
+     "s": "▪ Mein Flug startet schon um fünf Uhr.\n● So früh? Bist du ___?\n▪ Ja, alles klar. ___ hat die Maschine keine Verspätung!\n● Ich hole dich am Flughafen ab. Bis ___!",
+     "a": [
+      [
+       "sicher"
+      ],
+      [
+       "Hoffentlich"
+      ],
+      [
+       "gleich"
+      ]
+     ],
+     "gw": {
+      "uz": "Ma’nolar: <b>Natürlich</b> — albatta, <b>Hoffentlich</b> — umid qilamanki, <b>Verstehe</b> — tushunaman, <b>sicher</b> — ishonchingiz komilmi, <b>gleich</b> — hozir/tez orada. Gap boshidagi so‘z katta harf bilan. Misol: <b>Kannst du helfen? – Klar!</b> (= albatta).",
+      "ru": "Значения: <b>Natürlich</b> — конечно, <b>Hoffentlich</b> — надеюсь, <b>Verstehe</b> — понимаю, <b>sicher</b> — уверен(а), <b>gleich</b> — сейчас/скоро. Слово в начале предложения — с большой буквы. Пример: <b>Kannst du helfen? – Klar!</b> (= конечно)."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *Natürlich* · *Hoffentlich* · *Verstehe* · *sicher* · *gleich*",
+     "s": "▪ Ich kann nicht lange telefonieren. Mein Akku ist kaputt.\n● ___. Wann kommst du an?\n▪ Um 8:15 Uhr. Kannst du mich vom Bahnhof abholen?\n● ___! Ich freue mich auf dich.",
+     "a": [
+      [
+       "Verstehe"
+      ],
+      [
+       "Natürlich"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Was sagt man wann? Ordnen Sie zu.",
+     "bsp": "Wann kommst du an? → <b>sich informieren</b>",
+     "c": [
+      "sich informieren",
+      "Hoffnung und Freude",
+      "Verständnis zeigen"
+     ],
+     "i": [
+      [
+       "Wann fliegst du denn ab?",
+       0
+      ],
+      [
+       "Hoffentlich haben wir keine Verspätung!",
+       1
+      ],
+      [
+       "Verstehe!",
+       2
+      ],
+      [
+       "Kannst du mich abholen?",
+       0
+      ],
+      [
+       "Ja, alles klar!",
+       2
+      ],
+      [
+       "Ich freue mich so auf euch!",
+       1
+      ],
+      [
+       "Bist du sicher?",
+       2
+      ]
+     ],
+     "gw": {
+      "uz": "Savol bo‘lsa — <b>sich informieren</b>; <b>hoffentlich</b>, <b>freue mich</b> — umid va quvonch; <b>verstehe</b>, «muammo yo‘q» — tushunish. Misol: <b>Wann fährt der Zug ab?</b> → sich informieren.",
+      "ru": "Вопрос — <b>sich informieren</b>; <b>hoffentlich</b>, <b>freue mich</b> — надежда и радость; <b>verstehe</b>, «нет проблем» — понимание. Пример: <b>Wann fährt der Zug ab?</b> → sich informieren."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Durchsagen: Wo hört man das? Ordnen Sie zu.",
+     "bsp": "Der Zug nach München fährt von Gleis 7. → <b>am Bahnhof</b>",
+     "c": [
+      "🚆 am Bahnhof",
+      "✈️ am Flughafen"
+     ],
+     "i": [
+      [
+       "Der Zug nach Wien fährt von Bahnsteig 4.",
+       0
+      ],
+      [
+       "Das Flugzeug nach Berlin steht am Ausgang C12.",
+       1
+      ],
+      [
+       "Die S-Bahn Richtung Hauptbahnhof fährt an Gleis 1 ein.",
+       0
+      ],
+      [
+       "Die Maschine nach Istanbul landet um 9 Uhr.",
+       1
+      ],
+      [
+       "Bitte Vorsicht! Der Zug fährt ein.",
+       0
+      ],
+      [
+       "Der Flug nach Zürich startet um 11:20 Uhr.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Kalit so‘zni toping: <b>Zug, Gleis, Bahnsteig</b> — vokzal; <b>Flug, Flugzeug, Maschine, Ausgang, landen</b> — aeroport. Misol: <b>Der ICE hat 10 Minuten Verspätung.</b> → am Bahnhof.",
+      "ru": "Найдите ключевое слово: <b>Zug, Gleis, Bahnsteig</b> — вокзал; <b>Flug, Flugzeug, Maschine, Ausgang, landen</b> — аэропорт. Пример: <b>Der ICE hat 10 Minuten Verspätung.</b> → am Bahnhof."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man in dieser Situation?",
+     "bsp": "Carla kommt um acht am Bahnhof an. Sie fragt Paul: ___ → ✓ <b>Kannst du mich abholen?</b>",
+     "q": "Der Zug von Leon hat oft Verspätung. Leon sagt: ___",
+     "o": [
+      "Hoffentlich haben wir keine Verspätung!",
+      "Ich freue mich so auf euch!",
+      "Was für eine Frage?"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatdagi his-tuyg‘uni aniqlang: umid, quvonch, hayrat yoki tushunish — har biriga o‘z iborasi bor. Misol: <b>Sie kommen in 5 Minuten → Bis gleich!</b>",
+      "ru": "Определите чувство в ситуации: надежда, радость, удивление или понимание — у каждого своя фраза. Пример: <b>Sie kommen in 5 Minuten → Bis gleich!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man in dieser Situation?",
+     "q": "Mias Flug startet schon um fünf Uhr. Ali fragt: ___",
+     "o": [
+      "Bis gleich!",
+      "So früh? Bist du sicher?",
+      "Natürlich!"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man in dieser Situation?",
+     "q": "Dilnoza fragt Ali nach dem Flug. Sie sagt: ___",
+     "o": [
+      "Wann kommst du dort an?",
+      "Verstehe!",
+      "Wann fliegst du denn ab?"
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}

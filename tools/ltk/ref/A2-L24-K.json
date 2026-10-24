@@ -1,0 +1,199 @@
+{
+ "title": "Lektion 24 · Kommunikation",
+ "sub": "Vorschläge machen · positiv / negativ reagieren",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Super Vorschlag! | ▪ Perfekt, so machen wir es. | ▪ Wir könnten doch eine Radtour machen.<br>→ <b>▪ Wir könnten doch eine Radtour machen.<br>● Super Vorschlag!<br>▪ Perfekt, so machen wir es.</b>",
+     "w": [
+      "▪ Hmm, ich bin nicht so überzeugt. Sie hat schon so viele Bücher.",
+      "▪ Am Freitag hat Nora Geburtstag. Wir haben noch kein Geschenk für sie.",
+      "▪ Das gefällt mir! Perfekt, so machen wir es.",
+      "● Ich schlage vor, dass wir Nora ein Buch schenken.",
+      "● Was hältst du davon, wenn wir mit ihr ins Kino gehen?"
+     ],
+     "a": "▪ Am Freitag hat Nora Geburtstag. Wir haben noch kein Geschenk für sie. ● Ich schlage vor, dass wir Nora ein Buch schenken. ▪ Hmm, ich bin nicht so überzeugt. Sie hat schon so viele Bücher. ● Was hältst du davon, wenn wir mit ihr ins Kino gehen? ▪ Das gefällt mir! Perfekt, so machen wir es.",
+     "gw": {
+      "uz": "Tartib: muammo yoki savol → taklif → reaksiya (rozi yoki qarshi + yangi g‘oya) → yakuniy kelishuv. <b>Perfekt, so machen wir es</b> kabi gaplar oxirida. Misol: <b>Wie wäre es mit Pizza? – Gute Idee! – Dann machen wir das.</b>",
+      "ru": "Порядок: проблема или вопрос → предложение → реакция (за или против + новая идея) → итоговая договорённость. Фразы вроде <b>Perfekt, so machen wir es</b> — в конце. Пример: <b>Wie wäre es mit Pizza? – Gute Idee! – Dann machen wir das.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "● Gute Idee! Und wer kümmert sich um die Getränke?",
+      "▪ Wo machen wir die Party für den Deutschkurs?",
+      "● Alles klar!",
+      "▪ Da bin ich dagegen. Dort ist es immer sehr laut. Könnten wir nicht im Park feiern?",
+      "▪ Ich kaufe sie im Getränkemarkt.",
+      "● Sollen wir vielleicht in die Kneipe am Marktplatz gehen?"
+     ],
+     "a": "▪ Wo machen wir die Party für den Deutschkurs? ● Sollen wir vielleicht in die Kneipe am Marktplatz gehen? ▪ Da bin ich dagegen. Dort ist es immer sehr laut. Könnten wir nicht im Park feiern? ● Gute Idee! Und wer kümmert sich um die Getränke? ▪ Ich kaufe sie im Getränkemarkt. ● Alles klar!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *schlage*, *überzeugt*, *besser*, *haltet*, *Vorschlag*, *könnten*.",
+     "bsp": "▪ Sollen wir am Samstag grillen?<br>● Die Idee ___ ich wirklich gut! → <b>finde</b>",
+     "s": "▪ Am Samstag ist das Fest von unserem Verein. Wer macht die Dekoration?\n● Ich ___ vor, dass wir zusammen Plakate basteln.\n▪ Hmm, ich bin nicht so ___. Das dauert sehr lange.\n● Vielleicht wäre es ___, wenn wir Blumen im Blumenladen kaufen.\n▪ Ja, gute Idee!",
+     "a": [
+      [
+       "schlage"
+      ],
+      [
+       "überzeugt"
+      ],
+      [
+       "besser"
+      ]
+     ],
+     "gw": {
+      "uz": "Bo‘shliq atrofidagi grammatikaga qarang: ajraluvchi fe’l qismi, sifat yoki ot kerakmi; <b>ihr</b> bilan fe’l <b>-t</b>, <b>wir</b> bilan <b>-en</b>. Iborani to‘liq eslang. Misol: <b>Was meint ihr?</b>",
+      "ru": "Смотрите на грамматику вокруг: нужна часть отделяемого глагола, прилагательное или существительное; с <b>ihr</b> глагол на <b>-t</b>, с <b>wir</b> — на <b>-en</b>. Вспомните фразу целиком. Пример: <b>Was meint ihr?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch: *schlage*, *überzeugt*, *besser*, *haltet*, *Vorschlag*, *könnten*.",
+     "s": "▪ Was ___ ihr davon, wenn wir am Sonntag im Park grillen?\n● Ja, das ist ein super ___! Wir ___ doch auch Musik mitbringen.\n▪ Perfekt, so machen wir es.",
+     "a": [
+      [
+       "haltet"
+      ],
+      [
+       "Vorschlag"
+      ],
+      [
+       "könnten"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Vorschlag machen oder reagieren? Ordnen Sie zu.",
+     "bsp": "Wir könnten doch … → <b>💡 einen Vorschlag machen</b>",
+     "c": [
+      "💡 einen Vorschlag machen",
+      "💬 auf einen Vorschlag reagieren"
+     ],
+     "i": [
+      [
+       "Sollen wir vielleicht …?",
+       0
+      ],
+      [
+       "Da bin ich dagegen.",
+       1
+      ],
+      [
+       "Ich denke, wir sollten …",
+       0
+      ],
+      [
+       "Die Idee finde ich wirklich gut!",
+       1
+      ],
+      [
+       "Was haltet ihr davon, wenn …?",
+       0
+      ],
+      [
+       "Alles klar!",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Taklif — yangi g‘oya, ko‘pincha savol yoki <b>wir</b> bilan. Reaksiya — boshqaning g‘oyasiga baho: «ha» yoki «yo‘q». Misol: <b>Lasst uns ins Kino gehen!</b> → Vorschlag; <b>Lieber nicht.</b> → reagieren.",
+      "ru": "Предложение — новая идея, часто вопрос или с <b>wir</b>. Реакция — оценка чужой идеи: «да» или «нет». Пример: <b>Lasst uns ins Kino gehen!</b> → Vorschlag; <b>Lieber nicht.</b> → reagieren."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Positiv oder negativ reagieren? Ordnen Sie zu.",
+     "bsp": "Die Idee finde ich wirklich gut! → <b>👍 positiv</b>",
+     "c": [
+      "👍 positiv",
+      "👎 negativ"
+     ],
+     "i": [
+      [
+       "Das gefällt mir!",
+       0
+      ],
+      [
+       "Ich bin nicht so überzeugt.",
+       1
+      ],
+      [
+       "Ja, das ist ein super Vorschlag!",
+       0
+      ],
+      [
+       "Vielleicht wäre es besser, wenn …",
+       1
+      ],
+      [
+       "Perfekt, so machen wir es.",
+       0
+      ],
+      [
+       "Könnten wir nicht …?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Ijobiy — ochiq rozilik va maqtov. Salbiy — rad yoki shubha; boshqa variant taklif qilish ham muloyim rad hisoblanadi. Misol: <b>Super, machen wir!</b> → positiv; <b>Lieber am Sonntag?</b> → negativ.",
+      "ru": "Положительно — открытое согласие и похвала. Отрицательно — отказ или сомнение; предложить другой вариант — тоже вежливый отказ. Пример: <b>Super, machen wir!</b> → positiv; <b>Lieber am Sonntag?</b> → negativ."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Alle finden den Plan gut. Sie sagen am Ende: <b>Perfekt, so machen wir es.</b>",
+     "q": "Ihre Freundin sagt: „Wir könnten doch am Samstag grillen.“ Sie finden die Idee toll.",
+     "o": [
+      "Ja, das ist ein super Vorschlag!",
+      "Da bin ich dagegen.",
+      "Ich bin nicht so überzeugt."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Rolingizni aniqlang: taklif qilasizmi, fikr so‘raysizmi yoki boshqaning taklifiga javob berasizmi? Rozi bo‘lmasangiz, o‘z variantingizni muloyim taklif qiling. Misol: <b>Wie wäre es mit einem Picknick?</b>",
+      "ru": "Определите роль: вы предлагаете, спрашиваете мнение или отвечаете на чужую идею? Если не согласны — вежливо предложите свой вариант. Пример: <b>Wie wäre es mit einem Picknick?</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie planen mit Freunden einen Ausflug. Sie haben eine Idee und möchten wissen, was die anderen denken.",
+     "o": [
+      "Perfekt, so machen wir es.",
+      "Was haltet ihr davon, wenn …?",
+      "Da bin ich dagegen."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Freund möchte die Party in einer lauten Kneipe machen. Sie finden das nicht gut und haben eine andere Idee.",
+     "o": [
+      "Alles klar!",
+      "Das gefällt mir!",
+      "Könnten wir nicht im Park feiern?"
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}

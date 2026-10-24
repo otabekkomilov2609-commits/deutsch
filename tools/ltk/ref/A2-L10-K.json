@@ -1,0 +1,173 @@
+{
+ "title": "Lektion 10 · Kommunikation",
+ "sub": "etwas ablehnen · jemanden überreden · zustimmen",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Komm schon, das ist bequem! | ▪ Fahren wir mit dem Bus? | ● Muss das sein?<br>→ <b>▪ Fahren wir mit dem Bus?<br>● Muss das sein?<br>▪ Komm schon, das ist bequem!</b>",
+     "w": [
+      "▪ Wollen wir am Samstag mit dem Leihrad zum See fahren?",
+      "● Muss das sein? Ein Leihrad ist doch unpraktisch.",
+      "▪ Warum denn nicht? Ich verspreche dir, das macht Spaß!",
+      "● Na gut, wir probieren es."
+     ],
+     "a": "▪ Wollen wir am Samstag mit dem Leihrad zum See fahren? ● Muss das sein? Ein Leihrad ist doch unpraktisch. ▪ Warum denn nicht? Ich verspreche dir, das macht Spaß! ● Na gut, wir probieren es.",
+     "gw": {
+      "uz": "Tartib: taklif → rad yoki shubha → ko‘ndirish (va’da, ishonch) → rozilik yoki qat’iy rad. Har replika oldingisiga javob beradi. Misol: <b>Fahren wir mit dem Zug? – Nein, zu teuer! – Doch, es gibt billige Tickets. – Na gut.</b>",
+      "ru": "Порядок: предложение → отказ или сомнение → уговоры (обещание, уверенность) → согласие или твёрдый отказ. Каждая реплика отвечает на предыдущую. Пример: <b>Fahren wir mit dem Zug? – Nein, zu teuer! – Doch, es gibt billige Tickets. – Na gut.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Komm, wir fahren mit dem Motorrad nach Samarkand!",
+      "● Auf keinen Fall! Ohne mich!",
+      "▪ Komm schon! Das macht echt Spaß!",
+      "● Für dich vielleicht. Für mich ist das nichts!"
+     ],
+     "a": "▪ Komm, wir fahren mit dem Motorrad nach Samarkand! ● Auf keinen Fall! Ohne mich! ▪ Komm schon! Das macht echt Spaß! ● Für dich vielleicht. Für mich ist das nichts!"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Motorrad fahren macht so viel Spaß!<br>● Für dich vielleicht. Aber für mich ist das ___! → <b>nichts</b>",
+     "s": "▪ Fahren wir morgen mit dem E-Scooter zum Training?\n● Auf keinen ___! Ohne mich!\n▪ Komm schon! Ich ___ dir, das ist ganz toll!\n● Na gut, wir ___ es.",
+     "a": [
+      [
+       "Fall"
+      ],
+      [
+       "verspreche"
+      ],
+      [
+       "probieren"
+      ]
+     ],
+     "gw": {
+      "uz": "Bo‘shliqlar qat’iy iboralarning qismi — iborani to‘liq eslang. Odatda ● avval qarshi, ▪ ko‘ndiradi, oxirida ● istamay rozi bo‘ladi. Misol: <b>Ich glaube, das klappt!</b> (ko‘ndirish).",
+      "ru": "Пропуски — части устойчивых выражений, вспомните фразу целиком. Обычно ● сначала против, ▪ уговаривает, в конце ● неохотно соглашается. Пример: <b>Ich glaube, das klappt!</b> (уговоры)."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Holen wir das Sofa morgen mit dem Auto ab?\n● Muss das ___? Das Sofa ist doch viel zu groß.\n▪ Ich bin ___, das funktioniert. Unser Auto ist sehr groß.\n● Also gut, von mir ___.",
+     "a": [
+      [
+       "sein"
+      ],
+      [
+       "sicher"
+      ],
+      [
+       "aus"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Ablehnen, überreden oder zustimmen? Ordnen Sie zu.",
+     "bsp": "Dafür bin ich zu alt! → <b>etwas ablehnen</b>",
+     "c": [
+      "etwas ablehnen",
+      "jemanden überreden",
+      "zustimmen"
+     ],
+     "i": [
+      [
+       "Auf keinen Fall! Ohne mich!",
+       0
+      ],
+      [
+       "Ich verspreche dir, das macht Spaß!",
+       1
+      ],
+      [
+       "Also gut, von mir aus.",
+       2
+      ],
+      [
+       "Muss das sein?",
+       0
+      ],
+      [
+       "Ich bin sicher, das funktioniert.",
+       1
+      ],
+      [
+       "Na gut, wir probieren es.",
+       2
+      ],
+      [
+       "Für mich ist das nichts!",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Rad — qat’iy «yo‘q» yoki norozi savol; ko‘ndirish — va’da va ishonch; rozilik — istamay bo‘lsa ham «ha». Misol: <b>Glaub mir, das ist toll!</b> → überreden; <b>Okay, meinetwegen.</b> → zustimmen.",
+      "ru": "Отказ — твёрдое «нет» или недовольный вопрос; уговоры — обещание и уверенность; согласие — «да», пусть даже неохотное. Пример: <b>Glaub mir, das ist toll!</b> → überreden; <b>Okay, meinetwegen.</b> → zustimmen."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihre Freundin sagt: „Wir fahren mit dem Motorrad!“ Sie möchten das nicht. → <b>Für mich ist das nichts!</b>",
+     "q": "Ihr Freund sagt: „Wir fahren im Winter mit dem E-Scooter zur Arbeit!“ Sie finden das gefährlich. Was sagen Sie?",
+     "o": [
+      "Na gut, wir probieren es.",
+      "Auf keinen Fall! Ohne mich!",
+      "Ich bin sicher, das funktioniert."
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Kim nimani xohlashini aniqlang: siz rad etasizmi, ko‘ndirasizmi yoki nihoyat rozimisiz? Variantni vaziyatdagi his bilan solishtiring. Misol: do‘stingiz qo‘rqyapti, siz ishontirasiz → <b>Keine Angst, das ist ganz sicher!</b>",
+      "ru": "Определите, кто чего хочет: вы отказываетесь, уговариваете или наконец соглашаетесь? Сравните вариант с чувством в ситуации. Пример: друг боится, вы убеждаете → <b>Keine Angst, das ist ganz sicher!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Bruder will nicht E-Scooter fahren. Sie möchten ihn überreden. Was sagen Sie?",
+     "o": [
+      "Muss das sein?",
+      "Also gut, von mir aus.",
+      "Ich verspreche dir, das macht Spaß!"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Freund hat gute Argumente. Sie sagen jetzt Ja. Was sagen Sie?",
+     "o": [
+      "Für mich ist das nichts!",
+      "Also gut, von mir aus.",
+      "Muss das sein?"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Opa sagt: „Ein Leihrad? Dafür bin ich zu alt!“ Sie möchten ihn überreden. Was sagen Sie?",
+     "o": [
+      "Muss das sein?",
+      "Ohne mich!",
+      "Das gefällt dir sicher!"
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}

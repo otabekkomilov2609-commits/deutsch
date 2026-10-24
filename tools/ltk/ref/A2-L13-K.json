@@ -1,0 +1,219 @@
+{
+ "title": "Lektion 13 · Kommunikation",
+ "sub": "Gäste begrüßen · beim Essen · sich verabschieden",
+ "lv": "A2.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Komm doch rein! | ● Vielen Dank für die Einladung! | ▪ Herzlich willkommen!<br>→ <b>▪ Herzlich willkommen!<br>● Vielen Dank für die Einladung!<br>▪ Komm doch rein!</b>",
+     "w": [
+      "▪ Hallo Elif! Schön, dass du da bist!",
+      "● Hallo Marco! Vielen Dank für die Einladung! Hier, ein Geschenk für euch.",
+      "▪ Oh, Blumen! Ach, das ist aber nett!",
+      "● Und ich habe auch einen Kuchen gebacken.",
+      "▪ Der sieht ja super aus! Komm doch rein!"
+     ],
+     "a": "▪ Hallo Elif! Schön, dass du da bist! ● Hallo Marco! Vielen Dank für die Einladung! Hier, ein Geschenk für euch. ▪ Oh, Blumen! Ach, das ist aber nett! ● Und ich habe auch einen Kuchen gebacken. ▪ Der sieht ja super aus! Komm doch rein!",
+     "gw": {
+      "uz": "Mehmondorchilik tartibi: kelish (salom, sovg‘a) → stolda (ovqat, maqtov) → xayrlashish (ketish kerak, rahmat). Har replika oldingisiga javob. Misol: <b>Hier, ein Geschenk. – Oh, danke!</b>",
+      "ru": "Порядок визита: приход (приветствие, подарок) → за столом (еда, похвала) → прощание (пора идти, спасибо). Каждая реплика отвечает на предыдущую. Пример: <b>Hier, ein Geschenk. – Oh, danke!</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Oh, schon zehn Uhr! Ich muss jetzt leider gehen.",
+      "● Oh! Schade! Bleib doch noch ein bisschen!",
+      "▪ Leider nicht. Ich habe morgen früh einen Termin. Der Abend mit euch war wirklich schön.",
+      "● Ja, finde ich auch! Danke noch mal für die Blumen.",
+      "▪ Gern! Und das nächste Mal kommt ihr zu mir, ja?"
+     ],
+     "a": "▪ Oh, schon zehn Uhr! Ich muss jetzt leider gehen. ● Oh! Schade! Bleib doch noch ein bisschen! ▪ Leider nicht. Ich habe morgen früh einen Termin. Der Abend mit euch war wirklich schön. ● Ja, finde ich auch! Danke noch mal für die Blumen. ▪ Gern! Und das nächste Mal kommt ihr zu mir, ja?"
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *trinken*, *schmeckt*, *scharf*, *noch*, *satt*.",
+     "bsp": "▪ Hier, ein Geschenk für dich.<br>● Oh, Blumen! Das ist aber ___! → <b>nett</b>",
+     "s": "▪ Was möchtest du gern ___? Tee oder Saft?\n● Nur ein Glas Wasser, bitte.\n▪ Hier, bitte. Der Reis ist hoffentlich nicht zu ___?\n● Nein, gar nicht! Er ___ ja wirklich super!",
+     "a": [
+      [
+       "trinken"
+      ],
+      [
+       "scharf"
+      ],
+      [
+       "schmeckt"
+      ]
+     ],
+     "gw": {
+      "uz": "Stol atrofidagi iboralar: taklif (<b>Möchtest du …?</b>), ta’m haqida savol va maqtov, rad etish. Bo‘shliq turini aniqlang: fe’l (Infinitiv yoki tuslangan) yoki sifat. Misol: <b>Möchtest du etwas essen?</b>",
+      "ru": "Фразы за столом: угощение (<b>Möchtest du …?</b>), вопрос о вкусе и похвала, отказ. Определите тип пропуска: глагол (инфинитив или спрягаемый) или прилагательное. Пример: <b>Möchtest du etwas essen?</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *trinken*, *schmeckt*, *scharf*, *noch*, *satt*.",
+     "s": "▪ Möchtest du ___ etwas Kuchen?\n● Nein, danke. Ich bin schon ___.\n▪ Und einen Kaffee?\n● Oh ja, sehr gern!",
+     "a": [
+      [
+       "noch"
+      ],
+      [
+       "satt"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Wann sagt man das? Ordnen Sie zu.",
+     "bsp": "Schön, dass du da bist! → <b>Ankommen</b>",
+     "c": [
+      "🚪 Ankommen",
+      "🍽️ Beim Essen",
+      "👋 Abschied"
+     ],
+     "i": [
+      [
+       "Herzlich willkommen!",
+       0
+      ],
+      [
+       "Möchtest du noch etwas?",
+       1
+      ],
+      [
+       "Ich muss jetzt leider gehen.",
+       2
+      ],
+      [
+       "Hier, ein Geschenk für dich.",
+       0
+      ],
+      [
+       "Mmh, der Salat schmeckt ja wirklich super!",
+       1
+      ],
+      [
+       "Bleib doch noch ein bisschen!",
+       2
+      ],
+      [
+       "Komm doch rein!",
+       0
+      ],
+      [
+       "Nein, danke. Ich bin schon satt.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Ibora vizitning qaysi qismiga tegishli: kirishda salomlashish va sovg‘a, ovqat paytida taklif va maqtov, oxirida ketish va rahmat. Misol: <b>Kommt rein!</b> → Ankommen; <b>Gute Nacht und danke!</b> → Abschied.",
+      "ru": "К какой части визита относится фраза: при входе — приветствие и подарок, за едой — угощение и похвала, в конце — уход и спасибо. Пример: <b>Kommt rein!</b> → Ankommen; <b>Gute Nacht und danke!</b> → Abschied."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Wer sagt das? Ordnen Sie zu.",
+     "bsp": "Komm doch rein! → <b>Ich habe eingeladen.</b>",
+     "c": [
+      "🏠 Ich habe eingeladen.",
+      "🎁 Ich bin Gast."
+     ],
+     "i": [
+      [
+       "Schön, dass du da bist!",
+       0
+      ],
+      [
+       "Hier, ein Geschenk für euch.",
+       1
+      ],
+      [
+       "Was möchtest du gern trinken?",
+       0
+      ],
+      [
+       "Vielen Dank für die Einladung!",
+       1
+      ],
+      [
+       "Es ist hoffentlich nicht zu scharf?",
+       0
+      ],
+      [
+       "Ich muss jetzt leider gehen.",
+       1
+      ],
+      [
+       "Bleib doch noch ein bisschen!",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Uy egasi kutib oladi, taklif qiladi va so‘raydi; mehmon rahmat aytadi, sovg‘a beradi va ovqatni maqtaydi. Misol: <b>Nimm doch noch Brot!</b> → uy egasi; <b>Das Essen ist sehr lecker!</b> → mehmon.",
+      "ru": "Хозяин встречает, угощает и спрашивает; гость благодарит, дарит подарок и хвалит еду. Пример: <b>Nimm doch noch Brot!</b> → хозяин; <b>Das Essen ist sehr lecker!</b> → гость."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihre Freundin kommt zu Ihnen. Sie öffnen die Tür. → <b>Schön, dass du da bist!</b>",
+     "q": "Sie sind bei Freunden zum Essen. Der Reis ist sehr lecker. Was sagen Sie?",
+     "o": [
+      "Es ist hoffentlich nicht zu scharf?",
+      "Der Reis schmeckt ja wirklich super!",
+      "Ach, das ist aber nett!"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Siz uy egasimisiz yoki mehmon, va bu vizitning qaysi lahzasi? Shu rol va vaqtga mos iborani tanlang. Misol: eshikdan kirdingiz → <b>Hallo! Danke für die Einladung!</b>",
+      "ru": "Вы хозяин или гость, и какой это момент визита? Выберите фразу по роли и моменту. Пример: вы вошли в дом → <b>Hallo! Danke für die Einladung!</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihr Gast sagt: „Ich muss jetzt leider gehen.“ Sie möchten: Er soll noch bleiben. Was sagen Sie?",
+     "o": [
+      "Bleib doch noch ein bisschen!",
+      "Komm doch rein!",
+      "Möchtest du lieber Tee?"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie haben drei Teller Suppe gegessen und können nichts mehr essen. Ihre Freundin fragt: „Möchtest du noch etwas?“ Was sagen Sie?",
+     "o": [
+      "Oh ja, danke!",
+      "Nein, danke. Ich bin schon satt.",
+      "Ja, finde ich auch!"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ein Freund kommt zu Ihnen und bringt Ihnen Blumen mit. Was sagen Sie?",
+     "o": [
+      "Ach, das ist aber nett!",
+      "Vielen Dank für die Einladung!",
+      "Oh! Schade!"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

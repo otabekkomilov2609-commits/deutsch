@@ -1,0 +1,182 @@
+{
+ "title": "Lektion 1 · Kommunikation",
+ "sub": "Hallo! · Wie geht’s? · du oder Sie?",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Wie bitte? | ▪ Ich heiße Ole. | ▪ Ole. O – L – E. → <b>▪ Ich heiße Ole.<br>● Wie bitte?<br>▪ Ole. O – L – E.</b>",
+     "w": [
+      "▪ Guten Tag. Mein Name ist Hanna Weber.",
+      "● Wie bitte?",
+      "▪ Hanna Weber. W – E – B – E – R.",
+      "● Danke. Ich bin Carla."
+     ],
+     "a": "▪ Guten Tag. Mein Name ist Hanna Weber. ● Wie bitte? ▪ Hanna Weber. W – E – B – E – R. ● Danke. Ich bin Carla.",
+     "gw": {
+      "uz": "Suhbat salomlashish va tanishishdan boshlanadi. Har bir ● javob oldingi ▪ savolga mos keladi. <b>Wie bitte?</b> — «qaytaring»: undan keyin ism qayta aytiladi yoki harflab aytiladi. Misol: <b>▪ Wie heißen Sie? ● Ich heiße Anna Kaya.</b>",
+      "ru": "Разговор начинается с приветствия и знакомства. Каждый ответ ● подходит к предыдущему вопросу ▪. <b>Wie bitte?</b> — «повторите»: после этого имя повторяют или говорят по буквам. Пример: <b>▪ Wie heißen Sie? ● Ich heiße Anna Kaya.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Hallo, ich bin Mia. Wie ___ du?<br>● Ich heiße Tom. → Wie <b>heißt</b> du?",
+     "s": "▪ Guten Tag! Ich ___ Carla Ruiz.\n● Entschuldigung, wie ___?\n▪ Carla Ruiz. R – U – I – Z.\n● ___. Und woher ___ Sie?\n▪ Aus Spanien.",
+     "a": [
+      [
+       "heiße"
+      ],
+      [
+       "bitte"
+      ],
+      [
+       "Danke"
+      ],
+      [
+       "kommen"
+      ]
+     ],
+     "gw": {
+      "uz": "Fe’l oxiriga qarang: <b>ich</b> → -e, <b>du</b> → -st, <b>Sie</b> → -en. Savol so‘zlari: <b>wie</b> — qanday, <b>woher</b> — qayerdan. Misol: <b>ich wohne, du wohnst, Sie wohnen</b>.",
+      "ru": "Смотрите на окончание глагола: <b>ich</b> → -e, <b>du</b> → -st, <b>Sie</b> → -en. Вопросительные слова: <b>wie</b> — как, <b>woher</b> — откуда. Пример: <b>ich wohne, du wohnst, Sie wohnen</b>."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Hallo! Ich ___ Jonas. Und ___ bist du?\n● Ich bin Elif.\n▪ ___ kommst du?\n● Aus der Türkei. Und ___?\n▪ Aus Österreich.",
+     "a": [
+      [
+       "bin"
+      ],
+      [
+       "wer"
+      ],
+      [
+       "Woher"
+      ],
+      [
+       "du"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Wie geht’s? Ordnen Sie zu.",
+     "c": [
+      "😀",
+      "😐",
+      "🙁"
+     ],
+     "i": [
+      [
+       "Super, danke!",
+       0
+      ],
+      [
+       "Es geht.",
+       1
+      ],
+      [
+       "Nicht so gut.",
+       2
+      ],
+      [
+       "Sehr gut!",
+       0
+      ],
+      [
+       "Gut, danke.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Javobdagi so‘z kayfiyatni bildiradi: <b>super, sehr gut</b> — juda yaxshi; o‘rtacha holat uchun alohida ibora bor; <b>nicht</b> yoki <b>schlecht</b> bo‘lsa — yomon. Misol: <b>Prima!</b> → 😀, <b>Schlecht.</b> → 🙁",
+      "ru": "Слово в ответе показывает настроение: <b>super, sehr gut</b> — очень хорошо; для «так себе» есть своя фраза; <b>nicht</b> или <b>schlecht</b> — плохо. Пример: <b>Prima!</b> → 😀, <b>Schlecht.</b> → 🙁"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "c": [
+      "Jonas (du)",
+      "Frau Weber (Sie)"
+     ],
+     "i": [
+      [
+       "Wie geht’s dir?",
+       0
+      ],
+      [
+       "Woher kommen Sie?",
+       1
+      ],
+      [
+       "Wie heißen Sie?",
+       1
+      ],
+      [
+       "Und dir?",
+       0
+      ],
+      [
+       "Wer bist du?",
+       0
+      ],
+      [
+       "Und Ihnen?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "<b>du</b> — do‘st, bola, yaqin odam bilan; <b>Sie</b> — notanish yoki rasmiy odam bilan. Belgilar: <b>du, dir</b>, fe’l <b>-st</b> ↔ <b>Sie, Ihnen</b>, fe’l <b>-en</b>. Misol: <b>Wo wohnst du?</b> → du, <b>Wo wohnen Sie?</b> → Sie.",
+      "ru": "<b>du</b> — с друзьями, детьми, близкими; <b>Sie</b> — с незнакомыми и официально. Признаки: <b>du, dir</b>, глагол на <b>-st</b> ↔ <b>Sie, Ihnen</b>, глагол на <b>-en</b>. Пример: <b>Wo wohnst du?</b> → du, <b>Wo wohnen Sie?</b> → Sie."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "*du* oder *Sie*? Was passt?",
+     "bsp": "▪ Hallo, Elif! Wie geht’s ___? → ✓ <b>dir</b> (Elif → du)",
+     "q": "▪ Guten Tag, Herr Schulz. Wie geht’s ___?",
+     "o": [
+      "dir",
+      "Ihnen"
+     ],
+     "a": 1,
+     "gw": {
+      "uz": "Murojaatga qarang: faqat ism (Marco, Lisa) — <b>du</b>-shakl (<b>dir</b>); <b>Herr/Frau</b> + familiya — <b>Sie</b>-shakl (<b>Ihnen</b>). Misol: <b>Lisa</b> → du, <b>Frau Kaya</b> → Sie.",
+      "ru": "Смотрите на обращение: только имя (Marco, Lisa) — форма <b>du</b> (<b>dir</b>); <b>Herr/Frau</b> + фамилия — форма <b>Sie</b> (<b>Ihnen</b>). Пример: <b>Lisa</b> → du, <b>Frau Kaya</b> → Sie."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "*du* oder *Sie*? Was passt?",
+     "q": "▪ Wie geht’s dir, Marco?\n● Gut, danke. Und ___?",
+     "o": [
+      "dir",
+      "Ihnen"
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "*du* oder *Sie*? Was passt?",
+     "q": "▪ Guten Abend, Frau Weber. Woher ___ Sie?",
+     "o": [
+      "kommst",
+      "kommen"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

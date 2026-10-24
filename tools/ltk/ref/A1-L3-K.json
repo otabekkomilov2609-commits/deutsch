@@ -1,0 +1,200 @@
+{
+ "title": "Lektion 3 · Kommunikation",
+ "sub": "Ist das dein Vater? · Welche Sprachen sprichst du?",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Wie alt ist sie? | ▪ Ist das deine Oma? | ● Nein, das ist meine Mutter. → <b>▪ Ist das deine Oma?<br>● Nein, das ist meine Mutter.<br>▪ Wie alt ist sie?</b>",
+     "w": [
+      "▪ Ist das dein Bruder?",
+      "● Nein, das ist mein Onkel Paul.",
+      "▪ Und wer ist das?",
+      "● Das ist Mia, meine Schwester."
+     ],
+     "a": "▪ Ist das dein Bruder? ● Nein, das ist mein Onkel Paul. ▪ Und wer ist das? ● Das ist Mia, meine Schwester.",
+     "gw": {
+      "uz": "Savol–javob juftlarini toping: <b>Wer ist das?</b> → <b>Das ist …</b>; til haqida savol → til haqida javob. <b>Und du?</b> savolni qaytaradi. Misol: <b>▪ Hast du Geschwister? ● Ja, einen Bruder.</b>",
+      "ru": "Ищите пары вопрос–ответ: <b>Wer ist das?</b> → <b>Das ist …</b>; вопрос о языке → ответ о языке. <b>Und du?</b> возвращает вопрос. Пример: <b>▪ Hast du Geschwister? ● Ja, einen Bruder.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Sprichst du Englisch, Elif?",
+      "● Ja, ein bisschen. Und du?",
+      "▪ Ich spreche sehr gut Englisch.",
+      "● Und Französisch?",
+      "▪ Nein, gar nicht."
+     ],
+     "a": "▪ Sprichst du Englisch, Elif? ● Ja, ein bisschen. Und du? ▪ Ich spreche sehr gut Englisch. ● Und Französisch? ▪ Nein, gar nicht."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Wer ist das?<br>● Das ist ___ Schwester Anna. → Das ist <b>meine</b> Schwester Anna.",
+     "s": "▪ Wer ist das?\n● Ich ___, das ist Hannas Mutter.\n▪ Und das? Ist das ___ Bruder?\n● Ja, das ist mein Bruder Lukas.\n▪ Wie ___ ist er?\n● Er ist 20.",
+     "a": [
+      [
+       "glaube"
+      ],
+      [
+       "dein"
+      ],
+      [
+       "alt"
+      ]
+     ],
+     "gw": {
+      "uz": "Egalik olmoshi: <b>mein/dein</b> — der/das-so‘z bilan, <b>meine/deine</b> — die-so‘z va ko‘plik bilan. Til darajasi: <b>sehr gut → ein bisschen → gar nicht</b>. Misol: <b>deine Tante</b>, <b>dein Opa</b>.",
+      "ru": "Притяжательные: <b>mein/dein</b> — со словами der/das, <b>meine/deine</b> — со словами die и мн. ч. Уровень языка: <b>sehr gut → ein bisschen → gar nicht</b>. Пример: <b>deine Tante</b>, <b>dein Opa</b>."
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Welche ___ sprichst du?\n● Ich spreche Russisch und ___ bisschen Deutsch.\n▪ Und Englisch?\n● Nein, ___ nicht.",
+     "a": [
+      [
+       "Sprachen"
+      ],
+      [
+       "ein"
+      ],
+      [
+       "gar"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Sprichst du Englisch? → <b>Elif (du)</b>",
+     "c": [
+      "Elif (du)",
+      "Herr Schulz (Sie)"
+     ],
+     "i": [
+      [
+       "Welche Sprachen sprichst du?",
+       0
+      ],
+      [
+       "Ist das deine Tochter?",
+       0
+      ],
+      [
+       "Sprechen Sie Russisch?",
+       1
+      ],
+      [
+       "Hast du Geschwister?",
+       0
+      ],
+      [
+       "Welche Sprachen sprechen Sie?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "<b>du</b>-shakl: <b>dein/deine</b>, fe’l <b>-st</b>. <b>Sie</b>-shakl: <b>Ihr/Ihre</b> (bosh harf!), fe’l <b>-en</b>. Misol: <b>Ist das Ihre Mutter?</b> → Sie.",
+      "ru": "Форма <b>du</b>: <b>dein/deine</b>, глагол на <b>-st</b>. Форма <b>Sie</b>: <b>Ihr/Ihre</b> (с большой буквы!), глагол на <b>-en</b>. Пример: <b>Ist das Ihre Mutter?</b> → Sie."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Familie oder Sprachen? Ordnen Sie zu.",
+     "bsp": "Das ist meine Oma. → <b>Familie</b>",
+     "c": [
+      "👨‍👩‍👧 Familie",
+      "🗣️ Sprachen"
+     ],
+     "i": [
+      [
+       "Ist das dein Opa?",
+       0
+      ],
+      [
+       "Ich spreche ein bisschen Türkisch.",
+       1
+      ],
+      [
+       "Das sind meine Geschwister.",
+       0
+      ],
+      [
+       "Sprechen Sie Chinesisch? – Nein, gar nicht.",
+       1
+      ],
+      [
+       "Ich glaube, das ist Toms Mutter.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Kalit so‘zni toping: oila a’zosi (Opa, Schwester …) yoki til (<b>-isch</b>, <b>Deutsch</b>, <b>sprechen</b>). Misol: <b>Ich spreche Arabisch.</b> → Sprachen.",
+      "ru": "Найдите ключевое слово: член семьи (Opa, Schwester …) или язык (<b>-isch</b>, <b>Deutsch</b>, <b>sprechen</b>). Пример: <b>Ich spreche Arabisch.</b> → Sprachen."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "bsp": "Sie sprechen sehr gut Russisch. → <b>Ich spreche sehr gut Russisch.</b>",
+     "q": "Sie sprechen Englisch, aber nicht gut. Was sagen Sie?",
+     "o": [
+      "Ich spreche ein bisschen Englisch.",
+      "Ich spreche sehr gut Englisch.",
+      "Englisch? Nein, gar nicht."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatdagi darajani shkalaga qo‘ying: <b>sehr gut → gut → ein bisschen → gar nicht</b>. Javob vaziyatga aniq mos bo‘lsin. Misol: <b>Sie sprechen perfekt Russisch → Ich spreche sehr gut Russisch.</b>",
+      "ru": "Поставьте уровень из ситуации на шкалу: <b>sehr gut → gut → ein bisschen → gar nicht</b>. Ответ должен точно подходить. Пример: <b>Sie sprechen perfekt Russisch → Ich spreche sehr gut Russisch.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Sie sprechen nicht Chinesisch. Was sagen Sie?",
+     "o": [
+      "Nein, gar nicht.",
+      "Ich spreche gut Chinesisch.",
+      "Ja, ein bisschen."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Wer ist das? Sie glauben: Noras Mutter. Was sagen Sie?",
+     "o": [
+      "Das ist nicht Noras Mutter.",
+      "Nein, gar nicht.",
+      "Ich glaube, das ist Noras Mutter."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagen Sie?",
+     "q": "Das ist Ihr Vater. Was sagen Sie?",
+     "o": [
+      "Ist das dein Vater?",
+      "Das ist mein Vater.",
+      "Das ist dein Vater."
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

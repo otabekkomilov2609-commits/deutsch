@@ -1,0 +1,189 @@
+{
+ "title": "Lektion 23 · Kommunikation",
+ "sub": "Wie ist das Wetter? · Das Wetter bewerten · Gute Reise!",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Hier scheint die Sonne. | ▪ Wie ist das Wetter? | ● Es regnet. Und bei dir? → <b>▪ Wie ist das Wetter?<br>● Es regnet. Und bei dir?<br>▪ Hier scheint die Sonne.</b>",
+     "w": [
+      "▪ Hallo Elif! Wie ist das Wetter in Wien?",
+      "● Es ist kalt und es schneit. Und in Taschkent?",
+      "▪ Hier ist es sonnig, es sind 25 Grad.",
+      "● Wirklich? Dann komme ich zu dir!"
+     ],
+     "a": "▪ Hallo Elif! Wie ist das Wetter in Wien? ● Es ist kalt und es schneit. Und in Taschkent? ▪ Hier ist es sonnig, es sind 25 Grad. ● Wirklich? Dann komme ich zu dir!",
+     "gw": {
+      "uz": "Ob-havo haqida savol → tasvir (<b>Es regnet, es ist kalt</b>) → <b>Und bei dir?</b> → javob. Sayohatda: qayerga? → joy va sabab (<b>denn …</b>). Misol: <b>▪ Wie ist das Wetter? ● Es regnet.</b>",
+      "ru": "Вопрос о погоде → описание (<b>Es regnet, es ist kalt</b>) → <b>Und bei dir?</b> → ответ. В поездке: куда? → место и причина (<b>denn …</b>). Пример: <b>▪ Wie ist das Wetter? ● Es regnet.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Guten Tag, Frau Berger. Wohin möchten Sie fahren?",
+      "● Ans Meer, denn dort ist es schön warm.",
+      "▪ Sehr gut. Eine Woche oder zwei Wochen?",
+      "● Zwei Wochen, bitte.",
+      "▪ Alles klar. Wir wünschen Ihnen eine schöne Zeit!",
+      "● Danke schön! Auf Wiedersehen."
+     ],
+     "a": "▪ Guten Tag, Frau Berger. Wohin möchten Sie fahren? ● Ans Meer, denn dort ist es schön warm. ▪ Sehr gut. Eine Woche oder zwei Wochen? ● Zwei Wochen, bitte. ▪ Alles klar. Wir wünschen Ihnen eine schöne Zeit! ● Danke schön! Auf Wiedersehen."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Ist es heute warm?<br>● Nein, es ___. Alles ist weiß. → Es <b>schneit</b>.",
+     "q": "Grad · hasse · Wetter · scheint",
+     "s": "▪ Hallo Jonas! Wie ist das ___ in Berlin?\n● Nicht gut. Es regnet und es sind nur 8 ___.\n▪ Oh, ich ___ Regen! Hier in Samarkand ___ die Sonne.",
+     "a": [
+      [
+       "Wetter"
+      ],
+      [
+       "Grad"
+      ],
+      [
+       "hasse"
+      ],
+      [
+       "scheint"
+      ]
+     ],
+     "gw": {
+      "uz": "<b>denn</b> sabab bildiradi, undan keyin oddiy tartib: ega + fe’l. Ob-havo iboralari: <b>Es sind … Grad</b>, <b>Die Sonne scheint</b>; tilak — <b>Ich wünsche dir …</b>. Misol: <b>Wir bleiben zu Hause, denn es regnet.</b>",
+      "ru": "<b>denn</b> выражает причину, после него обычный порядок: подлежащее + глагол. Погода: <b>Es sind … Grad</b>, <b>Die Sonne scheint</b>; пожелание — <b>Ich wünsche dir …</b>. Пример: <b>Wir bleiben zu Hause, denn es regnet.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "q": "Glück · wünschen · denn · Zeit",
+     "s": "▪ Wir fahren morgen in die Berge.\n● Ihr habt ___ mit dem Wetter, ___ es ist wolkenlos.\n▪ Ja, super!\n● Dann ___ wir euch eine schöne ___ und eine gute Reise!",
+     "a": [
+      [
+       "Glück"
+      ],
+      [
+       "denn"
+      ],
+      [
+       "wünschen"
+      ],
+      [
+       "Zeit"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Es regnet. Sie finden Regen nicht gut. Sie sagen: ___ → ✓ <b>Das mag ich gar nicht.</b>",
+     "q": "Ihre Freundin fährt in den Urlaub. Sie sagen: ___",
+     "o": [
+      "Ich wünsche dir eine gute Reise!",
+      "Wie ist das Wetter?",
+      "Ich hasse Regen."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyat maqsadini aniqlang: ob-havoni so‘rash, yo‘nalishni so‘rash yoki tilak bildirish. Savol so‘ziga e’tibor bering: <b>Wie</b>, <b>Wohin</b>. Misol: <b>Sie wollen das Reiseziel wissen → Wohin fährst du?</b>",
+      "ru": "Определите цель: спросить о погоде, о направлении или пожелать. Обратите внимание на вопросительное слово: <b>Wie</b>, <b>Wohin</b>. Пример: <b>Sie wollen das Reiseziel wissen → Wohin fährst du?</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie möchten wissen: Regnet es in Berlin? Sie fragen: ___",
+     "o": [
+      "Wohin fährst du?",
+      "Wie ist das Wetter in Berlin?",
+      "Es sind minus 2 Grad."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Es schneit. Sie finden Schnee nicht gut. Sie sagen: ___",
+     "o": [
+      "Wir haben heute Glück mit dem Wetter.",
+      "Es ist sonnig.",
+      "Ich hasse Schnee."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Es sind 28 Grad und die Sonne scheint. Sie finden das toll. Sie sagen: ___",
+     "o": [
+      "Das mag ich gar nicht.",
+      "Wir haben heute Glück mit dem Wetter!",
+      "Es ist kühl."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Warum bleiben Sie zu Hause? Es regnet. Sie sagen: ___",
+     "o": [
+      "Ich bleibe zu Hause, denn es regnet.",
+      "Wie ist das Wetter?",
+      "Ich wünsche dir eine schöne Zeit."
+     ],
+     "a": 0
+    },
+    {
+     "t": "cat",
+     "h": "Findet die Person das Wetter gut oder schlecht? Ordnen Sie zu.",
+     "bsp": "Heute scheint die Sonne. Super! → <b>😀 gut</b>",
+     "c": [
+      "😀 gut",
+      "🙁 schlecht"
+     ],
+     "i": [
+      [
+       "Ich hasse Schnee.",
+       1
+      ],
+      [
+       "Das Wetter ist toll, denn es ist warm.",
+       0
+      ],
+      [
+       "Es regnet schon wieder. Das mag ich gar nicht.",
+       1
+      ],
+      [
+       "Wir haben heute Glück mit dem Wetter.",
+       0
+      ],
+      [
+       "Minus 10 Grad! Das ist zu kalt.",
+       1
+      ],
+      [
+       "Wolkenlos und 25 Grad – super!",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Fe’l va sifatga qarang: <b>lieben, toll, schön warm</b> — yoqadi; <b>hassen, schon wieder, leider</b> — yoqmaydi. Misol: <b>Ich liebe die Sonne!</b> → 😀",
+      "ru": "Смотрите на глагол и прилагательное: <b>lieben, toll, schön warm</b> — нравится; <b>hassen, schon wieder, leider</b> — не нравится. Пример: <b>Ich liebe die Sonne!</b> → 😀"
+     }
+    }
+   ]
+  }
+ ]
+}

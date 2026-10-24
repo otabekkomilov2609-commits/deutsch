@@ -1,0 +1,204 @@
+{
+ "title": "Lektion 17 · Kommunikation",
+ "sub": "Wünsche äußern · Über Pläne sprechen · Wichtigkeit ausdrücken",
+ "lv": "A1.2",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Ich will Menschen helfen. | ▪ Was willst du werden? | ▪ Warum? | ● Ärztin. → <b>▪ Was willst du werden?<br>● Ärztin.<br>▪ Warum?<br>● Ich will Menschen helfen.</b>",
+     "w": [
+      "▪ Sag mal, Leon, was willst du werden?",
+      "● Ich will unbedingt Lehrer werden.",
+      "▪ Lehrer? Warum?",
+      "● Ich arbeite gern mit Kindern."
+     ],
+     "a": "▪ Sag mal, Leon, was willst du werden? ● Ich will unbedingt Lehrer werden. ▪ Lehrer? Warum? ● Ich arbeite gern mit Kindern.",
+     "gw": {
+      "uz": "Reja haqida savol (<b>Was willst du …?</b>) → javob; <b>Warum?</b> → sabab; <b>Und dann?</b> → keyingi reja. Misol: <b>▪ Was willst du werden? ● Ärztin.</b>",
+      "ru": "Вопрос о планах (<b>Was willst du …?</b>) → ответ; <b>Warum?</b> → причина; <b>Und dann?</b> → следующий план. Пример: <b>▪ Was willst du werden? ● Ärztin.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Hast du schon Pläne für den Sommer, Sofia?",
+      "● Ja, ich will auf jeden Fall den Führerschein machen.",
+      "▪ Und dann? Willst du reisen?",
+      "● Vielleicht. Ich möchte bald mal durch Europa reisen."
+     ],
+     "a": "▪ Hast du schon Pläne für den Sommer, Sofia? ● Ja, ich will auf jeden Fall den Führerschein machen. ▪ Und dann? Willst du reisen? ● Vielleicht. Ich möchte bald mal durch Europa reisen."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *studieren*, *keinen*, *verdienen*, *finde*.",
+     "bsp": "▪ Was willst du ___?<br>● Ich will Journalist werden. → Was willst du <b>werden</b>?",
+     "s": "▪ Dilnoza, was willst du nach dem Schulabschluss machen?\n● Ich will in Berlin ___. Ich will Ärztin werden.\n▪ Und du, Lukas? Willst du auch studieren?\n● Nein, auf ___ Fall! Ich will jetzt Geld ___.\n▪ Das ___ ich auch wichtig.",
+     "a": [
+      [
+       "studieren"
+      ],
+      [
+       "keinen"
+      ],
+      [
+       "verdienen"
+      ],
+      [
+       "finde"
+      ]
+     ],
+     "gw": {
+      "uz": "<b>wollen</b> bilan ikkinchi fe’l oxirida Infinitiv. <b>kein</b> der-so‘z Akkusativda <b>keinen</b> bo‘ladi. Misol: <b>Ich will nach Spanien reisen.</b>",
+      "ru": "С <b>wollen</b> второй глагол — инфинитив в конце. <b>kein</b> со словом der в Akkusativ — <b>keinen</b>. Пример: <b>Ich will nach Spanien reisen.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *Kind*, *werden*, *unbedingt*, *machen*.",
+     "bsp": "▪ Willst du Ärztin werden?<br>● Nein, auf ___ Fall! → auf <b>keinen</b> Fall",
+     "s": "▪ Was war dein Traumberuf als ___, Ali?\n● Polizist. Und heute will ich Ingenieur ___.\n▪ Und was willst du noch machen?\n● Ich will ___ noch viele Fremdsprachen lernen. Und ich möchte bald den Führerschein ___.",
+     "a": [
+      [
+       "Kind"
+      ],
+      [
+       "werden"
+      ],
+      [
+       "unbedingt"
+      ],
+      [
+       "machen"
+      ]
+     ],
+     "gw": {
+      "uz": "Bo‘shliq qayerda: gap oxirida bo‘lsa — Infinitiv; <b>als</b> dan keyin — ot; <b>will</b> dan keyin kuchaytiruvchi so‘z bo‘lishi mumkin. Misol: <b>Ich will einen Kuchen backen.</b>",
+      "ru": "Где пропуск: в конце предложения — инфинитив; после <b>als</b> — существительное; после <b>will</b> может стоять усилительное слово. Пример: <b>Ich will einen Kuchen backen.</b>"
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Wie sicher ist das? Ordnen Sie zu.",
+     "bsp": "Ich will unbedingt Ärztin werden. → <b>auf jeden Fall</b>",
+     "c": [
+      "✅ auf jeden Fall",
+      "❓ vielleicht",
+      "❌ auf keinen Fall"
+     ],
+     "i": [
+      [
+       "Ich will unbedingt im Ausland leben.",
+       0
+      ],
+      [
+       "Mal sehen, ich will vielleicht Chefin werden.",
+       1
+      ],
+      [
+       "Ich werde nie Politiker.",
+       2
+      ],
+      [
+       "Ich will auf jeden Fall heiraten.",
+       0
+      ],
+      [
+       "Ich möchte vielleicht später studieren.",
+       1
+      ],
+      [
+       "Ich will auf keinen Fall Motorrad fahren.",
+       2
+      ]
+     ],
+     "gw": {
+      "uz": "Ishonch darajasi: <b>unbedingt / auf jeden Fall</b> — aniq; <b>vielleicht / mal sehen</b> — balki; <b>auf keinen Fall</b> — hech qachon. Misol: <b>Ich weiß noch nicht.</b> → vielleicht.",
+      "ru": "Степень уверенности: <b>unbedingt / auf jeden Fall</b> — точно; <b>vielleicht / mal sehen</b> — может быть; <b>auf keinen Fall</b> — ни в коем случае. Пример: <b>Ich weiß noch nicht.</b> → vielleicht."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "Wunsch oder Wichtigkeit? Ordnen Sie zu.",
+     "bsp": "Ich will bald heiraten. → <b>Wunsch / Plan</b>",
+     "c": [
+      "💭 Wunsch / Plan",
+      "⭐ Wichtigkeit"
+     ],
+     "i": [
+      [
+       "Ich will unbedingt Journalistin werden.",
+       0
+      ],
+      [
+       "Freunde finden wir besonders wichtig.",
+       1
+      ],
+      [
+       "Ich möchte bald den Führerschein machen.",
+       0
+      ],
+      [
+       "Das finde ich sehr wichtig.",
+       1
+      ],
+      [
+       "Als Kind will man gern Schauspieler werden.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "<b>will, möchte</b> — istak yoki reja; <b>wichtig</b> — nima muhim ekanini bildiradi. Misol: <b>Ich möchte ein Haus kaufen.</b> → Wunsch, <b>Gesundheit ist mir wichtig.</b> → Wichtigkeit.",
+      "ru": "<b>will, möchte</b> — желание или план; <b>wichtig</b> — что важно. Пример: <b>Ich möchte ein Haus kaufen.</b> → Wunsch, <b>Gesundheit ist mir wichtig.</b> → Wichtigkeit."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Sie wollen wissen: Was will Ihr Freund werden? → <b>Was willst du werden?</b>",
+     "q": "Nora will Ärztin werden. Sie fragen: Warum? Was sagen Sie?",
+     "o": [
+      "Du willst Ärztin werden. Warum?",
+      "Was willst du werden?",
+      "Was bist du von Beruf?"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyat maqsadini toping: sabab so‘rash, reja so‘rash yoki muhimlikni aytish. Har biriga o‘z iborasi: <b>Warum?</b>, <b>Was willst du …?</b>, <b>… finde ich wichtig</b>. Misol: <b>Sie wollen den Traumberuf wissen → Was willst du werden?</b>",
+      "ru": "Найдите цель: спросить причину, спросить о планах или сказать, что важно. Фразы: <b>Warum?</b>, <b>Was willst du …?</b>, <b>… finde ich wichtig</b>. Пример: <b>Sie wollen den Traumberuf wissen → Was willst du werden?</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Die Familie ist für Sie sehr wichtig. Was sagen Sie?",
+     "o": [
+      "Das finde ich interessant.",
+      "Das finde ich wichtig.",
+      "Das gefällt mir nicht."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie wollen nie Politiker werden. Was sagen Sie?",
+     "o": [
+      "Ich werde vielleicht Politiker.",
+      "Ich will unbedingt Politiker werden.",
+      "Ich werde auf keinen Fall Politiker."
+     ],
+     "a": 2
+    }
+   ]
+  }
+ ]
+}

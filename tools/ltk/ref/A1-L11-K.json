@@ -1,0 +1,194 @@
+{
+ "title": "Lektion 11 · Kommunikation",
+ "sub": "Was hast du gestern gemacht? · Wann ist … geöffnet?",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "● Ich habe gelesen. Und du? | ▪ Was hast du gestern gemacht? | ▪ Ich habe gekocht. → <b>▪ Was hast du gestern gemacht?<br>● Ich habe gelesen. Und du?<br>▪ Ich habe gekocht.</b>",
+     "w": [
+      "▪ Hallo Elif! Was hast du am Sonntag gemacht?",
+      "● Ich habe lange geschlafen und dann Kuchen gebacken.",
+      "▪ Und am Abend?",
+      "● Am Abend habe ich Freunde eingeladen."
+     ],
+     "a": "▪ Hallo Elif! Was hast du am Sonntag gemacht? ● Ich habe lange geschlafen und dann Kuchen gebacken. ▪ Und am Abend? ● Am Abend habe ich Freunde eingeladen.",
+     "gw": {
+      "uz": "O‘tgan zamon haqida savol (<b>Was hast du … gemacht?</b>) → Perfektdagi javob; ish vaqti haqida savol → <b>von … bis …</b>. Misol: <b>▪ Was hast du gestern gemacht? ● Ich habe gelesen.</b>",
+      "ru": "Вопрос о прошлом (<b>Was hast du … gemacht?</b>) → ответ в Perfekt; вопрос о часах работы → <b>von … bis …</b>. Пример: <b>▪ Was hast du gestern gemacht? ● Ich habe gelesen.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Guten Tag. Wann ist die Praxis geöffnet?",
+      "● Von Montag bis Freitag, von 8 bis 17 Uhr.",
+      "▪ Und am Samstag?",
+      "● Am Samstag ist die Praxis geschlossen.",
+      "▪ Danke. Auf Wiedersehen."
+     ],
+     "a": "▪ Guten Tag. Wann ist die Praxis geöffnet? ● Von Montag bis Freitag, von 8 bis 17 Uhr. ▪ Und am Samstag? ● Am Samstag ist die Praxis geschlossen. ▪ Danke. Auf Wiedersehen."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Was hast du am Sonntag ___?<br>● Ich habe gekocht. → Was hast du am Sonntag <b>gemacht</b>?",
+     "s": "▪ Was ___ du letzten Samstag gemacht?\n● Ich habe Handball gespielt. ___ habe ich einen Film geschaut.\n▪ Hast du auch Deutsch gelernt?\n● Nein, ___ ich nicht.",
+     "a": [
+      [
+       "hast"
+      ],
+      [
+       "Danach",
+       "Dann"
+      ],
+      [
+       "habe"
+      ]
+     ],
+     "gw": {
+      "uz": "Perfekt: <b>haben</b> 2-o‘rinda + Partizip II oxirida. Vaqt iboralari: <b>von … bis …</b>, <b>ab … Uhr</b>; vaqtni so‘rash — <b>wann</b>. Misol: <b>Wir haben gestern Pizza gegessen.</b>",
+      "ru": "Perfekt: <b>haben</b> на 2-м месте + Partizip II в конце. Выражения времени: <b>von … bis …</b>, <b>ab … Uhr</b>; спросить время — <b>wann</b>. Пример: <b>Wir haben gestern Pizza gegessen.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Entschuldigung, ___ ist der Laden geöffnet?\n● Von Montag ___ Samstag.\n▪ Und ab ___ Uhr?\n● Ab 9 Uhr.\n▪ Danke schön.",
+     "a": [
+      [
+       "wann"
+      ],
+      [
+       "bis"
+      ],
+      [
+       "wie viel"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Sie fragen: Praxis – wann? → <b>Wann ist die Praxis geöffnet?</b>",
+     "q": "Sie fragen die Kursleiterin: Deutschkurs – wann?",
+     "o": [
+      "Wann beginnt der Unterricht?",
+      "Wann ist die Praxis geöffnet?",
+      "Was hast du gestern gemacht?"
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Vaziyatdagi savol so‘ziga mos gapni tanlang: vaqt — <b>Wann …?</b>, o‘tgan ish — Perfekt. Qisqa javob: <b>Ja, habe ich. / Nein, habe ich nicht.</b> Misol: <b>Hast du gekocht? – Ja, habe ich.</b>",
+      "ru": "Выберите фразу по ситуации: время — <b>Wann …?</b>, прошлое — Perfekt. Краткий ответ: <b>Ja, habe ich. / Nein, habe ich nicht.</b> Пример: <b>Hast du gekocht? – Ja, habe ich.</b>"
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Ein Freund fragt: Hast du gestern aufgeräumt? Sie sagen: Nein.",
+     "o": [
+      "Ja, habe ich.",
+      "Nein, habe ich nicht.",
+      "Von Montag bis Freitag."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Ihre Freundin fragt: Was hast du am Nachmittag gemacht? (14:00–16:00 Fußball)",
+     "o": [
+      "Am Mittwoch um acht Uhr.",
+      "Nein, habe ich nicht.",
+      "Von zwei bis vier habe ich Fußball gespielt."
+     ],
+     "a": 2
+    },
+    {
+     "t": "cat",
+     "h": "Was passt? Ordnen Sie zu.",
+     "bsp": "Ich habe gestern Kaffee getrunken. → <b>über gestern sprechen</b>",
+     "c": [
+      "über gestern sprechen",
+      "nach Öffnungszeiten fragen"
+     ],
+     "i": [
+      [
+       "Was hast du letzte Woche gemacht?",
+       0
+      ],
+      [
+       "Wann ist der Laden geöffnet?",
+       1
+      ],
+      [
+       "Ich habe Zeitung gelesen.",
+       0
+      ],
+      [
+       "Von Montag bis Freitag.",
+       1
+      ],
+      [
+       "Danach habe ich eingekauft.",
+       0
+      ],
+      [
+       "Wann beginnt der Unterricht?",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "O‘tgan zamon belgilari: Perfekt (<b>hast … gemacht</b>), <b>gestern, letzte Woche</b>. Ish vaqti: <b>geöffnet, von … bis</b>. Misol: <b>Was hast du am Montag gemacht?</b> → über gestern sprechen.",
+      "ru": "Признаки прошлого: Perfekt (<b>hast … gemacht</b>), <b>gestern, letzte Woche</b>. Часы работы: <b>geöffnet, von … bis</b>. Пример: <b>Was hast du am Montag gemacht?</b> → über gestern sprechen."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Hast du gestern gearbeitet? → <b>Jonas (du)</b>",
+     "c": [
+      "Jonas (du)",
+      "Herr Schulz (Sie)"
+     ],
+     "i": [
+      [
+       "Was hast du gestern gemacht?",
+       0
+      ],
+      [
+       "Haben Sie am Wochenende gearbeitet?",
+       1
+      ],
+      [
+       "Hast du schon gefrühstückt?",
+       0
+      ],
+      [
+       "Was haben Sie letzte Woche gemacht?",
+       1
+      ],
+      [
+       "Wann hast du Unterricht?",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Perfektda ham yordamchi fe’l shaklga qarang: <b>du hast</b> — norasmiy, <b>Sie haben</b> — rasmiy. Misol: <b>Haben Sie gut geschlafen?</b> → Sie.",
+      "ru": "И в Perfekt смотрите на вспомогательный глагол: <b>du hast</b> — неофициально, <b>Sie haben</b> — официально. Пример: <b>Haben Sie gut geschlafen?</b> → Sie."
+     }
+    }
+   ]
+  }
+ ]
+}

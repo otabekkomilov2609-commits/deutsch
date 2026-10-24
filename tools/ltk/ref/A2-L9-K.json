@@ -1,0 +1,193 @@
+{
+ "title": "Lektion 9 · Kommunikation",
+ "sub": "über Gewohnheiten sprechen · Verständnis · Erstaunen",
+ "lv": "A2.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Wirklich? Du auch? | ● Das kenne ich! | ▪ Ich trinke immer zuerst einen Kaffee.<br>→ <b>▪ Ich trinke immer zuerst einen Kaffee.<br>● Das kenne ich!<br>▪ Wirklich? Du auch?</b>",
+     "w": [
+      "▪ Ich habe eine Gewohnheit: Immer wenn ich Tomaten esse, schneide ich sie ganz klein.",
+      "● Das kenne ich. Das mache ich auch oft.",
+      "▪ Wirklich? Meine Schwester lacht mich immer aus.",
+      "● Mich lachen meine Freunde auch aus. Aber das ist kein Problem."
+     ],
+     "a": "▪ Ich habe eine Gewohnheit: Immer wenn ich Tomaten esse, schneide ich sie ganz klein. ● Das kenne ich. Das mache ich auch oft. ▪ Wirklich? Meine Schwester lacht mich immer aus. ● Mich lachen meine Freunde auch aus. Aber das ist kein Problem.",
+     "gw": {
+      "uz": "Tartib: odat tasviri → reaksiya (tushunish yoki hayrat) → izoh yoki savol → javob. <b>Warum?</b> savolidan keyin sabab keladi. Misol: <b>Ich esse jeden Tag Reis. – Echt? Warum? – Ich mag ihn einfach.</b>",
+      "ru": "Порядок: описание привычки → реакция (понимание или удивление) → пояснение или вопрос → ответ. После <b>Warum?</b> идёт причина. Пример: <b>Ich esse jeden Tag Reis. – Echt? Warum? – Ich mag ihn einfach.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Jedes Mal, wenn ich eine Nachricht schreibe, lese ich sie dreimal.",
+      "● Wie ungewöhnlich! Warum machst du das?",
+      "▪ Ich habe Angst, dass ich etwas falsch schreibe.",
+      "● Das geht mir auch so. Ich kontrolliere auch immer alles."
+     ],
+     "a": "▪ Jedes Mal, wenn ich eine Nachricht schreibe, lese ich sie dreimal. ● Wie ungewöhnlich! Warum machst du das? ▪ Ich habe Angst, dass ich etwas falsch schreibe. ● Das geht mir auch so. Ich kontrolliere auch immer alles."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *kenne*, *ähnlich*, *Witzig*, *wenn*, *nie*.",
+     "bsp": "▪ Ich esse abends immer Schokolade.<br>● Das ___ mir auch so! → <b>geht</b>",
+     "s": "▪ Immer ___ ich Musik höre, tanze ich in der Küche.\n● Echt? ___! Warum machst du das?\n▪ Ich weiß nicht. Das ist einfach meine Gewohnheit.\n● Das mache ich ___. Aber gute Idee!",
+     "a": [
+      [
+       "wenn"
+      ],
+      [
+       "Witzig"
+      ],
+      [
+       "nie"
+      ]
+     ],
+     "gw": {
+      "uz": "Odat <b>Immer wenn / Jedes Mal, wenn …</b> bilan aytiladi: <b>wenn</b>-qismda fe’l oxirida, keyingi asosiy gap fe’l bilan boshlanadi. Reaksiya — tushunish yoki hayrat. Misol: <b>Immer wenn ich müde bin, trinke ich Tee.</b>",
+      "ru": "Привычку описывают с <b>Immer wenn / Jedes Mal, wenn …</b>: в части с <b>wenn</b> глагол в конце, главное предложение начинается с глагола. Реакция — понимание или удивление. Пример: <b>Immer wenn ich müde bin, trinke ich Tee.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie: *kenne*, *ähnlich*, *Witzig*, *wenn*, *nie*.",
+     "s": "▪ Jedes Mal, wenn ich die Wohnung verlasse, kontrolliere ich dreimal den Herd.\n● Das ___ ich. Bei mir ist das ___.\n▪ Wirklich? Du auch?\n● Ja, ich kontrolliere immer die Fenster.",
+     "a": [
+      [
+       "kenne"
+      ],
+      [
+       "ähnlich"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Verständnis oder Erstaunen? Ordnen Sie zu.",
+     "bsp": "Das mache ich auch oft. → <b>Verständnis</b>",
+     "c": [
+      "🙂 Verständnis",
+      "😮 Erstaunen"
+     ],
+     "i": [
+      [
+       "Das mache ich auch immer.",
+       0
+      ],
+      [
+       "Wie ungewöhnlich!",
+       1
+      ],
+      [
+       "Bei mir ist das ähnlich.",
+       0
+      ],
+      [
+       "Echt? Witzig!",
+       1
+      ],
+      [
+       "Das geht mir auch so.",
+       0
+      ],
+      [
+       "Das mache ich nie. Aber gute Idee!",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Tushunish — sizda ham shunday (<b>auch</b>, o‘xshashlik). Hayrat — siz uchun g‘alati yoki yangi narsa. Misol: <b>Ich auch!</b> → Verständnis; <b>Wirklich? Das ist ja komisch!</b> → Erstaunen.",
+      "ru": "Понимание — у вас так же (<b>auch</b>, сходство). Удивление — для вас это странно или ново. Пример: <b>Ich auch!</b> → Verständnis; <b>Wirklich? Das ist ja komisch!</b> → Erstaunen."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "bsp": "Ihr Bruder sagt: „Ich esse Pizza immer mit Honig.“ Sie finden das lustig. → <b>Echt? Witzig!</b>",
+     "q": "Ein Freund sagt: „Ich spreche jeden Morgen mit meinem Auto.“ Sie finden das sehr seltsam. Was sagen Sie?",
+     "o": [
+      "Das geht mir auch so.",
+      "Bei mir ist das ähnlich.",
+      "Wie ungewöhnlich! Aber warum nicht?!"
+     ],
+     "a": 2,
+     "gw": {
+      "uz": "Vaziyatdagi hisni aniqlang: sizda ham shundaymi (tushunish), sizga g‘alatimi (hayrat) yoki o‘zingiz odat haqida gapirasizmi? Odat tasvirida <b>wenn</b> va vaqt so‘zlari bo‘ladi. Misol: <b>Das ist ja lustig!</b> — hayrat.",
+      "ru": "Определите чувство: у вас так же (понимание), вам странно (удивление) или вы сами рассказываете о привычке? В описании привычки есть <b>wenn</b> и слова времени. Пример: <b>Das ist ja lustig!</b> — удивление."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Ihre Kollegin sagt: „Vor dem Schlafen schaue ich immer dreimal auf das Handy.“ Sie machen das auch. Was sagen Sie?",
+     "o": [
+      "Das kenne ich. Das mache ich auch immer.",
+      "Echt? Witzig!",
+      "Das mache ich nie."
+     ],
+     "a": 0
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man? Kreuzen Sie an.",
+     "q": "Sie möchten über Ihre Gewohnheit sprechen: abends immer die Wohnung aufräumen. Was sagen Sie?",
+     "o": [
+      "Jedes Mal, wenn ich nach Hause komme, räume ich die Wohnung auf.",
+      "Das geht mir auch so.",
+      "Echt? Witzig!"
+     ],
+     "a": 0
+    },
+    {
+     "t": "cat",
+     "h": "Gewohnheit beschreiben oder reagieren? Ordnen Sie zu.",
+     "bsp": "Morgens mache ich immer zuerst das Fenster auf. → <b>eine Gewohnheit beschreiben</b>",
+     "c": [
+      "eine Gewohnheit beschreiben",
+      "reagieren"
+     ],
+     "i": [
+      [
+       "Abends lese ich immer eine Stunde.",
+       0
+      ],
+      [
+       "Das kenne ich.",
+       1
+      ],
+      [
+       "Jedes Mal, wenn ich einkaufe, kaufe ich Schokolade.",
+       0
+      ],
+      [
+       "Echt? Witzig!",
+       1
+      ],
+      [
+       "Ich muss immer die Tür dreimal kontrollieren.",
+       0
+      ],
+      [
+       "Bei mir ist das auch so.",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Odat — «men» haqida, vaqt so‘zlari bilan (<b>immer, jeden Morgen</b>). Reaksiya — boshqaning gapiga qisqa javob. Misol: <b>Sonntags schlafe ich immer lange.</b> → beschreiben; <b>Ich auch!</b> → reagieren.",
+      "ru": "Привычка — о себе, со словами времени (<b>immer, jeden Morgen</b>). Реакция — короткий ответ на чужие слова. Пример: <b>Sonntags schlafe ich immer lange.</b> → beschreiben; <b>Ich auch!</b> → reagieren."
+     }
+    }
+   ]
+  }
+ ]
+}

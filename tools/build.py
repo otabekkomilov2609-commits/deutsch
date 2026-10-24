@@ -12,7 +12,7 @@ import re, hashlib, os, sys, json, glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "src", "index.html")
-BIG = ["doc-data","ex-data","tl-data","lern-data","ia-data","iam-data","tr-data","hint-data","wkj-data","vo-data","wk-data","aud-data","mud-data","say-data"]
+BIG = ["doc-data","ex-data","tl-data","ltk-data","lern-data","ia-data","iam-data","tr-data","hint-data","wkj-data","vo-data","wk-data","aud-data","mud-data","say-data"]
 
 def h8(b): return hashlib.sha1(b).hexdigest()[:8]
 

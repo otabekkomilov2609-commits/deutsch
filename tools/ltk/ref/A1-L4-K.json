@@ -1,0 +1,213 @@
+{
+ "title": "Lektion 4 · Kommunikation",
+ "sub": "Wie viel kostet …? · Das finde ich auch · du oder Sie?",
+ "lv": "A1.1",
+ "sec": [
+  {
+   "k": "komm",
+   "ic": "💬",
+   "t": "Kommunikation",
+   "items": [
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "bsp": "▪ Das ist aber günstig! | ▪ Was kostet der Sessel? | ● Nur 99 Euro. → <b>▪ Was kostet der Sessel?<br>● Nur 99 Euro.<br>▪ Das ist aber günstig!</b>",
+     "w": [
+      "▪ Schau mal, das Sofa! Es ist so schön.",
+      "● Das finde ich auch. Wie viel kostet es denn?",
+      "▪ Es kostet 350 Euro. Das ist ein Sonderangebot.",
+      "● Oh, das ist aber günstig!"
+     ],
+     "a": "▪ Schau mal, das Sofa! Es ist so schön. ● Das finde ich auch. Wie viel kostet es denn? ▪ Es kostet 350 Euro. Das ist ein Sonderangebot. ● Oh, das ist aber günstig!",
+     "gw": {
+      "uz": "Fikr bildirilsa, keyingi gap unga munosabat: <b>Das finde ich auch.</b> (rozi) yoki <b>Das finde ich nicht.</b> (rozi emas). Narx so‘ralsa — narx aytiladi. Misol: <b>▪ Der Tisch ist schön. ● Das finde ich auch.</b>",
+      "ru": "Если высказано мнение, следующая реплика — реакция: <b>Das finde ich auch.</b> (согласие) или <b>Das finde ich nicht.</b> (несогласие). Если спросили цену — называют цену. Пример: <b>▪ Der Tisch ist schön. ● Das finde ich auch.</b>"
+     }
+    },
+    {
+     "t": "order",
+     "h": "Ordnen Sie das Gespräch.",
+     "dlg": 1,
+     "w": [
+      "▪ Ich finde, das Zimmer ist sehr schön.",
+      "● Das finde ich nicht. Der Schrank ist zu groß.",
+      "▪ Findest du? Ich finde, er ist praktisch.",
+      "● Ja, aber das Bett ist wirklich schön."
+     ],
+     "a": "▪ Ich finde, das Zimmer ist sehr schön. ● Das finde ich nicht. Der Schrank ist zu groß. ▪ Findest du? Ich finde, er ist praktisch. ● Ja, aber das Bett ist wirklich schön."
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "bsp": "▪ Der Sessel kostet 900 Euro!<br>● Das ist zu ___. → Das ist zu <b>teuer</b>.",
+     "s": "▪ Entschuldigung, was ___ der Teppich?\n● Er kostet ___ 49 Euro. Das ist ein ___.\n▪ Oh, das ist ___ günstig!",
+     "a": [
+      [
+       "kostet"
+      ],
+      [
+       "nur"
+      ],
+      [
+       "Sonderangebot"
+      ],
+      [
+       "aber"
+      ]
+     ],
+     "gw": {
+      "uz": "Olmoshlar artiklga mos: <b>der → er</b>, <b>das → es</b>, <b>die → sie</b>. Narx so‘rash, fikr bildirish iboralarini butunligicha eslang. Misol: <b>Die Lampe? Sie ist sehr modern.</b>",
+      "ru": "Местоимения соответствуют артиклю: <b>der → er</b>, <b>das → es</b>, <b>die → sie</b>. Фразы о цене и мнении вспоминайте целиком. Пример: <b>Die Lampe? Sie ist sehr modern.</b>"
+     }
+    },
+    {
+     "t": "gap",
+     "h": "Ergänzen Sie das Gespräch.",
+     "s": "▪ Schau ___, die Lampe! Sie ist so modern.\n● Das finde ich ___. Sie ist wirklich schön.\n▪ Aber der Tisch ist zu ___. Er ist hässlich.\n● ___ du? Ich finde, er ist praktisch.",
+     "a": [
+      [
+       "mal"
+      ],
+      [
+       "auch"
+      ],
+      [
+       "alt"
+      ],
+      [
+       "Findest"
+      ]
+     ]
+    },
+    {
+     "t": "cat",
+     "h": "Wer sagt das? Ordnen Sie zu.",
+     "bsp": "„Schau mal, der Tisch!“ → <b>Kunde</b>",
+     "c": [
+      "Kunde / Kundin",
+      "Verkäufer / Verkäuferin"
+     ],
+     "i": [
+      [
+       "Wie viel kostet das Bett?",
+       0
+      ],
+      [
+       "Es kostet 199 Euro, nur heute.",
+       1
+      ],
+      [
+       "Das ist ein Sonderangebot, nur 80 Euro.",
+       1
+      ],
+      [
+       "Oh, das ist aber teuer!",
+       0
+      ],
+      [
+       "Der Preis ist 50 Euro.",
+       1
+      ],
+      [
+       "Ich finde, der Stuhl ist zu klein.",
+       0
+      ]
+     ],
+     "gw": {
+      "uz": "Xaridor narx so‘raydi va fikr bildiradi; sotuvchi narxni aytadi, mahsulotni maqtaydi, aksiya haqida gapiradi. Misol: <b>Kann ich Ihnen helfen?</b> → Verkäufer.",
+      "ru": "Покупатель спрашивает цену и высказывает мнение; продавец называет цену, хвалит товар, говорит об акции. Пример: <b>Kann ich Ihnen helfen?</b> → Verkäufer."
+     }
+    },
+    {
+     "t": "cat",
+     "h": "*du* oder *Sie*? Ordnen Sie zu.",
+     "bsp": "Wie findest du das Regal? → <b>du</b>",
+     "c": [
+      "du",
+      "Sie"
+     ],
+     "i": [
+      [
+       "Findest du?",
+       0
+      ],
+      [
+       "Finden Sie?",
+       1
+      ],
+      [
+       "Wie finden Sie das Zimmer?",
+       1
+      ],
+      [
+       "Schau mal, das Bild!",
+       0
+      ],
+      [
+       "Wie findest du die Lampe?",
+       0
+      ],
+      [
+       "Schauen Sie mal, der Sessel!",
+       1
+      ]
+     ],
+     "gw": {
+      "uz": "Fe’l shakliga qarang: <b>du</b> — <b>findest</b>, buyruqda <b>-en</b>siz (<b>Komm!</b>); <b>Sie</b> — <b>finden Sie</b>, buyruqda <b>Kommen Sie!</b>. Misol: <b>Wie findest du den Stuhl?</b> → du.",
+      "ru": "Смотрите на форму глагола: <b>du</b> — <b>findest</b>, в повелительном без <b>-en</b> (<b>Komm!</b>); <b>Sie</b> — <b>finden Sie</b>, <b>Kommen Sie!</b>. Пример: <b>Wie findest du den Stuhl?</b> → du."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "bsp": "Das Sofa ist schön. Sie finden das auch. → <b>Das finde ich auch.</b>",
+     "q": "Elif sagt: „Das Bild ist hässlich.“ Sie finden das Bild schön. Was sagen Sie?",
+     "o": [
+      "Das finde ich nicht.",
+      "Das finde ich auch.",
+      "Das ist ein Sonderangebot."
+     ],
+     "a": 0,
+     "gw": {
+      "uz": "Rozi bo‘lsangiz — <b>Das finde ich auch.</b>, rozi bo‘lmasangiz — <b>Das finde ich nicht.</b>, hayron bo‘lsangiz — <b>Findest du?</b>, narx bilmoqchi bo‘lsangiz — <b>Wie viel kostet …?</b> Misol: <b>▪ Das Sofa ist toll. ● Das finde ich auch.</b> — rozilik.",
+      "ru": "Согласны — <b>Das finde ich auch.</b>, не согласны — <b>Das finde ich nicht.</b>, удивлены — <b>Findest du?</b>, хотите узнать цену — <b>Wie viel kostet …?</b> Пример: <b>▪ Das Sofa ist toll. ● Das finde ich auch.</b> — согласие."
+     }
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Sie sind im Geschäft. Der Preis ist nicht da. Was sagen Sie?",
+     "o": [
+      "Das finde ich auch.",
+      "Wie viel kostet das?",
+      "Findest du?"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Der Stuhl kostet nur 19 Euro. Was sagt der Verkäufer?",
+     "o": [
+      "Finden Sie?",
+      "Das finde ich nicht.",
+      "Das ist ein Sonderangebot."
+     ],
+     "a": 2
+    },
+    {
+     "t": "mc",
+     "h": "Was sagt man wann?",
+     "q": "Tom sagt: „Der Schrank ist zu groß.“ Sie finden das nicht. Was sagen Sie?",
+     "o": [
+      "Findest du?",
+      "Schau mal!",
+      "Er kostet nur 300 Euro."
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}
