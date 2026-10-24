@@ -1,0 +1,31 @@
+{"id":"B1-b11-2-T","lek":2,"lv":"B1.1","part":"l1","title":"Leseverstehen Teil 1","sub":"Globalverstehen","min":15,
+"h":"Lesen Sie zuerst die zehn Überschriften (a–j). Lesen Sie dann die fünf Texte (1–5) und entscheiden Sie, welche Überschrift (a–j) am besten zu welchem Text passt. Sie können jede Überschrift nur einmal verwenden.",
+"tip":{"uz":"Har matnni o‘qib bo‘lgach, uning asosiy fikrini bitta gap bilan o‘zingizga ayting, keyin sarlavha tanlang. Sarlavhada matndagi so‘z takrorlansa-yu, ma’nosi boshqa bo‘lsa — bu qopqon.","ru":"После каждого текста сформулируйте его главную мысль одним предложением и только потом выбирайте заголовок. Если в заголовке есть слово из текста, но смысл другой, — это ловушка."},
+"src":"Text: streber.uz · Personen und Orte erfunden",
+"texts":[
+"Als Kind hatte ich eine beste Freundin, Dilnoza. Wir haben jeden Nachmittag zusammen gespielt. Dann ist ihre Familie in eine andere Stadt gezogen, und der Kontakt ist leider abgebrochen. Letzten Sommer war ich auf der Hochzeit meines Cousins. Plötzlich stand eine junge Frau vor mir und lachte – es war Dilnoza! Sie ist eine enge Freundin der Braut, deswegen war sie auch eingeladen. Wir haben den ganzen Abend geredet, fast wie früher. Sogar meine Verwandten haben gestaunt. Seitdem telefonieren wir jede Woche. (Laylo, 24)",
+"Seit drei Jahren spiele ich abends ein Online-Spiel. Dort habe ich Malte kennengelernt. Am Anfang war er für mich nur ein Name im Spiel, aber bald haben wir auch über die Schule, unsere Familien und unsere Probleme gesprochen. Viele Erwachsene sagen, dass eine virtuelle Freundschaft keine echte Freundschaft ist. Darum war ich ziemlich nervös, als wir uns im Frühling zum ersten Mal in Hamburg getroffen haben. Aber schon nach fünf Minuten war alles ganz normal. Jetzt besuchen wir uns in den Ferien. (Jonas, 17)",
+"Als ich für mein Studium nach Leipzig gezogen bin, kannte ich dort niemanden. Meine Nachbarin, Frau Krause, ist 82 Jahre alt und lebt allein. Am Anfang habe ich ihr nur die schweren Einkaufstaschen in den dritten Stock getragen. Dann hat sie mich zum Kaffee eingeladen. Heute korrigiert sie meine Texte für die Uni, und ich erkläre ihr, wie ihr Smartphone funktioniert. Viele Bekannte fragen mich, was wir gemeinsam haben. Ganz einfach: Ich kann mich immer auf sie verlassen – und sie sich auf mich. (Timur, 21)",
+"Vor zwei Jahren bin ich allein mit dem Zug durch Italien gereist. Zwischen Rom und Florenz saß eine Spanierin neben mir, Carmen. Sie war auch allein unterwegs, und wir haben uns sofort gut verstanden. Daher haben wir uns Florenz drei Tage lang zusammen angesehen. Eigentlich dachte ich, dass Urlaubsbekanntschaften nach der Reise enden. Aber wir schreiben uns fast jeden Tag, und jedes Jahr besuchen wir uns: einmal in Madrid, einmal bei mir in Wien. Heute gehört Carmen fest zu meinem Freundeskreis. (Mia, 26)",
+"Letzten Winter musste ich eine wichtige Entscheidung treffen: Ich wollte mein Studienfach wechseln, aber meine Eltern wussten noch nichts davon. Ich habe es nur meiner Freundin Sevara erzählt, weil ich ihr vertraut habe. Zwei Tage später hat mich eine Bekannte auf meinen Plan angesprochen. Sevara hatte alles weitererzählt, und bald wussten es alle in unserem Freundeskreis – sogar meine Eltern haben es von anderen gehört. Darum spreche ich jetzt nur noch mit meiner Schwester über persönliche Dinge. (Malika, 20)"
+],
+"heads":[
+"Allein reisen? Lieber nicht!",
+"Nach fünfzehn Jahren wieder vereint",
+"Online-Spiele machen einsam",
+"Ein Geheimnis, das keins blieb",
+"Hilfe für Senioren: Neue Gruppe sucht Freiwillige",
+"Aus einer Zugfahrt wurde eine Freundschaft",
+"Wenn Freunde wegziehen, endet die Freundschaft",
+"Jung und Alt: ein starkes Team",
+"So bewahren Sie jedes Geheimnis",
+"Vom Bildschirm ins echte Leben"
+],
+"a":[1,9,7,5,3],
+"why":[
+{"uz":"Asosiy fikr — bolalikdagi dugonalar uzoq yillardan keyin to‘yda tasodifan yana topishdi: «der Kontakt ist abgebrochen» → «Seitdem telefonieren wir jede Woche». Qopqon g): oila «weggezogen», lekin do‘stlik tugamadi — aksincha, qayta tiklandi.","ru":"Главная мысль — подруги детства случайно встретились снова через много лет на свадьбе: «der Kontakt ist abgebrochen» → «Seitdem telefonieren wir jede Woche». Ловушка g): семья действительно переехала, но дружба не закончилась, а возобновилась."},
+{"uz":"Onlayn o‘yindagi «virtuelle Freundschaft» real uchrashuvga aylandi: «zum ersten Mal in Hamburg getroffen», «Jetzt besuchen wir uns». Qopqon c): matnda o‘yin yolg‘izlik emas, aksincha do‘st olib keldi.","ru":"«Виртуальная дружба» из онлайн-игры перешла в реальную жизнь: «zum ersten Mal in Hamburg getroffen», «Jetzt besuchen wir uns». Ловушка c): игра не сделала его одиноким, а наоборот, подарила друга."},
+{"uz":"21 yoshli talaba va 82 yoshli qo‘shni bir-biriga yordam beradi: «Ich kann mich immer auf sie verlassen – und sie sich auf mich». Qopqon e): keksalarga yordam bor, lekin hech qanday «Gruppe» yoki ko‘ngillilar tashkiloti haqida gap yo‘q.","ru":"21-летний студент и 82-летняя соседка помогают друг другу: «Ich kann mich immer auf sie verlassen – und sie sich auf mich». Ловушка e): помощь пожилым есть, но ни о какой «Gruppe» или волонтёрской организации речи нет."},
+{"uz":"Poyezdda tasodifiy tanishuv doimiy do‘stlikka aylandi: «Zwischen Rom und Florenz saß eine Spanierin neben mir» → «gehört fest zu meinem Freundeskreis». Qopqon a): Mia yolg‘iz sayohat qilgan, lekin bu tajriba ijobiy — «Lieber nicht!» emas.","ru":"Случайное знакомство в поезде стало настоящей дружбой: «Zwischen Rom und Florenz saß eine Spanierin neben mir» → «gehört fest zu meinem Freundeskreis». Ловушка a): Мия путешествовала одна, но опыт был положительный — никакого «Lieber nicht!»."},
+{"uz":"Dugonasi sirni saqlay olmadi: «Sevara hatte alles weitererzählt», hamma bilib oldi — demak, sir sir bo‘lib qolmadi. Qopqon i): matn sirni qanday saqlash bo‘yicha maslahat bermaydi, balki ishonch buzilgani haqidagi hikoya.","ru":"Подруга не сохранила тайну: «Sevara hatte alles weitererzählt», и узнали все — тайна перестала быть тайной. Ловушка i): в тексте нет советов, как хранить секреты, — это история о предательстве доверия."}
+]}

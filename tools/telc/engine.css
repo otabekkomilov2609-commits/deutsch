@@ -11,7 +11,8 @@
 .tl-g.on{outline:3px solid var(--blue);outline-offset:1px;background:var(--surface)}
 .tl-g.ok{border:1.5px solid #2E9E5B;background:#E3F4EA;color:#1d6b3e}.tl-g.bad{border:1.5px solid #D64545;background:#FBE9E9;color:#a12b2b;text-decoration:line-through}
 .tl-fx{color:#1d6b3e;font-size:13.5px;margin:0 4px}
-.tl-bank{position:sticky;bottom:58px;z-index:3;display:flex;flex-wrap:wrap;gap:6px;padding:10px;margin:0 -4px 10px;background:var(--bg);border:1px solid var(--line);border-radius:16px;max-height:38vh;overflow:auto;box-shadow:0 -6px 18px rgba(0,0,0,.06)}
+.tl-bank{position:sticky;bottom:58px;z-index:3;display:flex;flex-wrap:wrap;gap:6px;padding:10px;margin:0 -4px 10px;background:var(--bg);border:1px solid var(--line);border-radius:16px;max-height:27vh;overflow:auto;box-shadow:0 -6px 18px rgba(0,0,0,.06)}
+@media (max-width:600px){.tl-bank{gap:5px;padding:8px}.tl-w{padding:6px 10px;font-size:13.5px}}
 .tl-w{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:99px;padding:8px 12px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
 .tl-w i,.tl-o i,.tl-hd i,.tl-ad i{font-style:normal;color:var(--muted);font-size:12px;margin-right:5px;font-weight:800}.tl-w.used{opacity:.35;text-decoration:line-through}
 .tl-sheet{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}

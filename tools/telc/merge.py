@@ -22,6 +22,7 @@ files = sorted(glob.glob(os.path.join(DIR, "B1-L*-T.json")), key=lambda p: int(r
 data, mats = {}, []
 for p in files:
     D = json.load(open(p, encoding="utf-8")); n = D["lek"]; tab = "b11" if n <= 12 else "b12"
+    D["title"] = {"sb1": "Sprachbausteine Teil 1", "sb2": "Sprachbausteine Teil 2", "l1": "Leseverstehen Teil 1", "l2": "Leseverstehen Teil 2", "l3": "Leseverstehen Teil 3"}[D["part"]]
     data[D["id"]] = D
     sub = {"sb1": "10 bo‘shliq · a/b/c", "sb2": "10 bo‘shliq · 15 so‘z", "l1": "5 matn · 10 sarlavha", "l2": "1 matn · 5 savol", "l3": "10 vaziyat · 12 e’lon"}[D["part"]]
     m = {"id": D["id"], "title": "Prüfungstraining · " + D["title"], "stitle": D["title"], "tlsub": sub + " · " + str(D["min"]) + " daq",

@@ -1,0 +1,71 @@
+{
+  "id": "B1-b11-3-T",
+  "lek": 3,
+  "lv": "B1.1",
+  "part": "sb1",
+  "title": "Sprachbausteine Teil 1",
+  "sub": "Grammatik im Text",
+  "min": 12,
+  "h": "Lesen Sie die E-Mail. Welches Wort (a, b oder c) passt in die Lücken 1–10?",
+  "tip": {
+    "uz": "Bo‘shliqdan keyingi so‘zga qarang: fe’l darhol kelsa — deswegen/darum; fe’l gap oxirida bo‘lsa — weil, als, wenn. Sifatda artikl, kelishik va «als» (taqqoslash) bor-yo‘qligini aniqlang.",
+    "ru": "Смотрите на слово после пропуска: если сразу идёт глагол — deswegen/darum; если глагол в конце — weil, als, wenn. У прилагательного определите артикль, падеж и есть ли сравнение с «als»."
+  },
+  "src": "Text: streber.uz · Personen und Orte erfunden",
+  "text": "Betreff: Anmeldung für die Jugendtheatergruppe\nSehr geehrte Frau Hoffmann,\nich habe Ihre Anzeige [1] Jugendzentrum gelesen und möchte mich gern für Ihre Theatergruppe anmelden. Ich heiße Sevara Karimova, bin 19 Jahre alt und studiere im ersten Semester Biologie.\n[2] ich zwölf Jahre alt war, bin ich in die Theater-AG meiner Schule gegangen. Damals war ich das [3] Mädchen in der Gruppe, aber alle waren sehr nett zu mir. Immer [4] wir ein neues Stück geprobt haben, war ich sehr aufgeregt. Doch mit der Zeit habe ich auf der Bühne viel Selbstvertrauen bekommen.\nMeine Freunde sagen, dass sie sich immer auf [5] verlassen können. Meine größte Stärke ist aber wohl meine Kreativität: Ich habe immer viele Ideen für Kostüme und Bühnenbilder.\nIn meiner neuen Stadt kenne ich noch nicht viele Leute. [6] suche ich eine Gruppe, in der ich neue Freunde finden und wieder auf der Bühne stehen kann. Ich hoffe, dass ich bei Ihnen [7] Rollen spielen kann als damals in der Schule.\nIch würde mich sehr [8], wenn ich bei Ihnen mitmachen könnte. Außerdem möchte ich gern wissen, [9] die Proben stattfinden und ob ich für das erste Treffen etwas vorbereiten muss.\nMit [10] Grüßen\nSevara Karimova",
+  "o": [
+    ["ins", "im", "in"],
+    ["Als", "Wenn", "Wann"],
+    ["jüngsten", "jüngstes", "jüngste"],
+    ["als", "wenn", "wann"],
+    ["mich", "mir", "mein"],
+    ["Weil", "Denn", "Deswegen"],
+    ["größere", "größeren", "große"],
+    ["gefreut", "freuen", "freue"],
+    ["wenn", "als", "wann"],
+    ["freundliche", "freundlichen", "freundlicher"]
+  ],
+  "a": [1, 0, 2, 1, 0, 2, 0, 1, 2, 1],
+  "why": [
+    {
+      "uz": "Joy — Wo? → Dativ: «in + dem = im Jugendzentrum». Qopqon: «ins» = in das (Wohin? — yo‘nalish); «in» esa artiklsiz bo‘lmaydi.",
+      "ru": "Место — Wo? → датив: «im» (= in dem) Jugendzentrum. Ловушка: «ins» = in das (Wohin? — направление), а «in» без артикля здесь невозможно."
+    },
+    {
+      "uz": "O‘tmishda bir marta bo‘lgan holat (12 yoshligimda) → «Als». «Wenn» — takrorlanuvchi yoki hozirgi/kelajak holat, «Wann» — faqat savol so‘zi.",
+      "ru": "Однократная ситуация в прошлом (когда мне было 12) → «Als». «Wenn» — повторяемость или настоящее/будущее, «Wann» — только вопросительное слово."
+    },
+    {
+      "uz": "«das» + Nominativ birlik → superlativ oxiri -e: «das jüngste Mädchen». «jüngsten» — ko‘plik yoki boshqa kelishik, «jüngstes» — artiklsiz/«ein» bilan.",
+      "ru": "«das» + Nom. ед. ч. → окончание -e: «das jüngste Mädchen». «jüngsten» — мн. ч. или другие падежи, «jüngstes» — без артикля или после «ein»."
+    },
+    {
+      "uz": "«Immer» — har safar takrorlangan → o‘tmishda ham «wenn». Qopqon: o‘tgan zamonni ko‘rib «als» tanlash.",
+      "ru": "«Immer» — повторялось каждый раз → даже в прошлом «wenn». Ловушка: увидеть прошедшее время и выбрать «als»."
+    },
+    {
+      "uz": "«sich verlassen auf» + Akkusativ → «auf mich» (menga ishonmoq). «auf mir» — Dativ, keng tarqalgan xato.",
+      "ru": "«sich verlassen auf» + Akk. → «auf mich». «auf mir» — датив, частая ошибка."
+    },
+    {
+      "uz": "Bo‘shliqdan keyin darhol fe’l («… suche ich») → ravish-konnektor «Deswegen» (shuning uchun). «Weil» fe’lni oxirga yuboradi, «Denn» dan keyin to‘g‘ri tartib: «Denn ich suche».",
+      "ru": "Сразу после пропуска глагол («… suche ich») → наречие-коннектор «Deswegen». После «Weil» глагол уходит в конец, после «Denn» — прямой порядок: «Denn ich suche»."
+    },
+    {
+      "uz": "«… als damals in der Schule» — taqqoslash → Komparativ. Artiklsiz Akkusativ ko‘plik: «größere Rollen». «größeren» faqat artikl bilan (die größeren Rollen), «große» — taqqoslash yo‘q.",
+      "ru": "«… als damals in der Schule» — сравнение → компаратив. Мн. ч. без артикля: «größere Rollen». «größeren» — только с артиклем, «große» — без сравнения."
+    },
+    {
+      "uz": "«würde» + infinitiv: «Ich würde mich freuen, wenn …» — xatdagi tayyor ibora. «freue» — tuslangan shakl, «gefreut» — Partizip II.",
+      "ru": "«würde» + инфинитив: «Ich würde mich freuen, wenn …» — готовая фраза для письма. «freue» — спрягаемая форма, «gefreut» — Partizip II."
+    },
+    {
+      "uz": "«wissen» dan keyin bilvosita savol: «… wissen, wann die Proben stattfinden» (qachon?). Qopqon: «wenn» — shart/takror, savol emas; «als» — o‘tmishdagi bir martalik voqea.",
+      "ru": "После «wissen» — косвенный вопрос: «wann» (когда?). Ловушка: «wenn» — условие/повтор, не вопрос; «als» — однократное прошлое."
+    },
+    {
+      "uz": "«Mit freundlichen Grüßen» — rasmiy xatning tayyor yakuni: «mit» + Dativ ko‘plik → -en.",
+      "ru": "«Mit freundlichen Grüßen» — стандартная концовка официального письма: «mit» + датив мн. ч. → -en."
+    }
+  ]
+}

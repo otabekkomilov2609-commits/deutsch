@@ -1,0 +1,60 @@
+{
+  "id": "B1-b11-1-T",
+  "lek": 1,
+  "lv": "B1.1",
+  "part": "sb2",
+  "title": "Sprachbausteine Teil 2",
+  "sub": "Wortschatz im Text",
+  "min": 12,
+  "h": "Lesen Sie die Einladung. Welches Wort aus dem Kasten passt in die Lücken 1–10? Sie können jedes Wort nur einmal verwenden. Fünf Wörter passen nicht in den Text.",
+  "tip": {
+    "uz": "Avval bo‘shliq atrofiga qarang: artikl (das, ein, unserem), fe’l shakli yoki «zu» qaysi so‘z turi kerakligini aytadi. Keyin ma’noni tekshiring — grammatik mos so‘z ham ma’noga to‘g‘ri kelmasligi mumkin.",
+    "ru": "Сначала посмотрите на окружение пропуска: артикль (das, ein, unserem), форма глагола или «zu» подсказывают, какая часть речи нужна. Затем проверьте смысл — грамматически подходящее слово может не подходить по значению."
+  },
+  "src": "Text: streber.uz · Personen und Orte erfunden",
+  "text": "Zehn Jahre nach dem Abschluss – wir sehen uns wieder!\nLiebe Mitschülerinnen und Mitschüler der Klasse 11b,\nkaum zu glauben: Vor zehn Jahren haben wir unseren Schulabschluss gefeiert! Als ich letzte Woche beim Aufräumen unser altes Klassenfoto gefunden habe, hatte ich sofort das [1], dass das alles erst gestern war. Wisst ihr noch, wie wir nach der letzten Prüfung zusammen im Regen getanzt haben? An diesen Tag [2] ich mich noch ganz genau.\nAus den Jugendlichen von damals sind längst [3] geworden: Einige von uns studieren noch, andere sind in eine andere Stadt gezogen oder haben schon eine eigene Familie. Deshalb laden Malika und ich euch herzlich zu unserem [4] ein. Es findet am Samstag, dem 13. Juni, ab 18 Uhr im Café „Lindenhof“ statt.\nAn diesem Abend möchten wir außerdem gemeinsam ein Erinnerungsbuch [5]. Bitte bringt dafür alte [6] mit und schreibt ein lustiges [7] aus unserer Schulzeit auf eine Karte. Auch [8] Geschichten sind willkommen – heute können wir sicher alle darüber lachen! Später bekommt jeder von uns ein Exemplar des Buches.\nBitte gebt uns bis zum 30. Mai [9], ob ihr kommen könnt. Wenn ihr noch Kontakt zu anderen aus unserer Klasse habt, leitet diese Einladung bitte weiter. Wir freuen uns schon sehr darauf, euch alle [10]!\nViele Grüße\nTimur und Malika",
+  "bank": ["aufgeregt", "Bescheid", "erinnere", "Erlebnis", "Erwachsene", "Fotos", "Geburt", "Gefühl", "gestalten", "kennenzulernen", "Kindheit", "Klassentreffen", "peinliche", "verbringen", "wiederzusehen"],
+  "a": [7, 2, 4, 11, 8, 5, 3, 12, 1, 14],
+  "why": [
+    {
+      "uz": "«das Gefühl, dass …» — «… degan tuyg‘u» turg‘un birikmasi. «Erlebnis» ham das-ot, lekin undan keyin «dass»-gap kelmaydi.",
+      "ru": "«das Gefühl, dass …» — устойчивое «чувство, что …». «Erlebnis» тоже среднего рода, но после него не бывает придаточного с «dass»."
+    },
+    {
+      "uz": "«sich erinnern an» + Akkusativ; «ich» uchun shakl — «erinnere». Bo‘shliqqa «ich» bilan moslashgan tuslangan fe’l kerak.",
+      "ru": "«sich erinnern an» + Akk.; форма для «ich» — «erinnere». В пропуск нужен спрягаемый глагол, согласованный с «ich»."
+    },
+    {
+      "uz": "«Aus den Jugendlichen … sind … geworden» — ega ko‘plikdagi ot: o‘smirlardan «Erwachsene» (kattalar) bo‘ldi. Qopqon: «aufgeregt» — sifat, ega bo‘la olmaydi.",
+      "ru": "«Aus den Jugendlichen … sind … geworden» — подлежащее во мн. ч.: из подростков стали «Erwachsene». Ловушка: «aufgeregt» — прилагательное, подлежащим быть не может."
+    },
+    {
+      "uz": "«zu unserem …» — das/der-ot, Dativ; keyingi gap «Es findet … statt» — bu tadbir: «Klassentreffen». «Erlebnis»ga taklif qilinmaydi.",
+      "ru": "«zu unserem …» — сущ. ср./муж. рода, датив; дальше «Es findet … statt» — это мероприятие: «Klassentreffen». На «Erlebnis» не приглашают."
+    },
+    {
+      "uz": "«möchten» + «zu»siz infinitiv gap oxirida: «ein Erinnerungsbuch gestalten» (tuzib, bezab tayyorlamoq). Qopqon: «verbringen» faqat vaqt bilan ishlatiladi (Zeit verbringen).",
+      "ru": "«möchten» + инфинитив без «zu» в конце: «ein Erinnerungsbuch gestalten» (оформить). Ловушка: «verbringen» употребляется только со временем (Zeit verbringen)."
+    },
+    {
+      "uz": "«alte … mitbringen» — olib kelinadigan narsa, ko‘plik: «Fotos». «Erwachsene» ham ko‘plik, lekin ma’noga mutlaqo to‘g‘ri kelmaydi.",
+      "ru": "«alte … mitbringen» — то, что приносят, мн. ч.: «Fotos». «Erwachsene» тоже мн. ч., но по смыслу совсем не подходит."
+    },
+    {
+      "uz": "«ein lustiges …» — das-ot; kartaga boshdan kechirgan voqea yoziladi: «Erlebnis». «Gefühl»ni yozib bo‘lmaydi, «Klassentreffen» esa maktab davrida bo‘lmagan.",
+      "ru": "«ein lustiges …» — сущ. ср. рода; на карточке описывают случай: «Erlebnis». «Gefühl» описать как событие нельзя, а «Klassentreffen» в школьные годы не было."
+    },
+    {
+      "uz": "Ot oldida oxirli sifat kerak (artiklsiz ko‘plik → -e): «peinliche Geschichten» — «darüber lachen» bilan mos: uyatli voqealar ustidan endi kulamiz. «aufgeregt»da oxir yo‘q.",
+      "ru": "Перед существительным нужно прилагательное с окончанием (мн. ч. без артикля → -e): «peinliche Geschichten» — над неловкими историями теперь можно посмеяться. У «aufgeregt» нет окончания."
+    },
+    {
+      "uz": "«jemandem Bescheid geben» — xabar bermoq: «Gebt uns Bescheid, ob …» (keladimi-yo‘qmi). Turg‘un birikma.",
+      "ru": "«jemandem Bescheid geben» — дать знать: «Gebt uns Bescheid, ob …». Устойчивое выражение."
+    },
+    {
+      "uz": "«sich freuen darauf, …» dan keyin «zu» + infinitiv. Sinfdoshlar bir-birini taniydi — shuning uchun «kennenzulernen» emas, «wiederzusehen» (qayta ko‘rishmoq).",
+      "ru": "После «sich freuen darauf, …» — инфинитив с «zu». Одноклассники уже знакомы — поэтому не «kennenzulernen», а «wiederzusehen» (снова увидеть)."
+    }
+  ]
+}
