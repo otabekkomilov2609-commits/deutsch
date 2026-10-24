@@ -1223,3 +1223,10 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Oyna yopilsa video to'xtaydi (iframe olib tashlanadi). Tahlilga actEv("vid", mashq#raqam) yoziladi; tugma bosishlar «🖱 Tugmalar»da ham ko'rinadi.
 - Kod: vidMap() (mashq id → [videoId, boshlanish soniyasi, nom]), vidOf, vidSheet. Yangi video qo'shish — vidMap'ga bitta qator.
 - Sinov (24.10): saytda hozircha faqat A2.2 Lektion 17 da ochiq — vidOnly() ro'yxati. Otabek «hammasiga» desa, vidOnly() bo'sh ro'yxat qaytarsin.
+
+## 🧭 O'quvchi yo'li — saytdan chiqishda ham yuboriladi (2026-10-24)
+- Otabek: Naima Duel o'ynadi, lekin uning kunlik yo'lida faqat «Kirish» va «Chiqib ketdi» ko'rindi.
+- Sabab: a/ (chuqur tahlil) 15 daqiqada ko'pi bilan 1 marta yuborilardi; ro'yxatdan o'tgandagi yuborishdan keyin 15 daqiqa ichida chiqib ketsa, oxirgi yo'l yetib kelmasdi.
+- Tuzatish: saytdan chiqishda / ilovani yopishda (cloudPush(true)) a/ ham yuboriladi — oldingisidan 2 daqiqa o'tgan va ma'lumot o'zgargan bo'lsa (axh — xesh). Kichik bo'lsa keepalive bilan.
+- Ustoz panelida kun yo'li ustida: «🔄 Yo'l oxirgi marta HH:MM da kelgan» — undan keyingilar keyin qo'shiladi.
+- Naimaning bugungi Duel'i: uning telefonida saqlangan — keyingi safar saytni ochib-yopganda yetib keladi (yangi versiya bilan).
