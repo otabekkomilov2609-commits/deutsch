@@ -1,0 +1,563 @@
+{
+ "id": "B1-b12-16-G",
+ "meta": {
+  "title": "Grammatik · je … desto · entweder … oder · zwar …, aber",
+  "stitle": "je … desto / umso · entweder … oder · zwar …, aber"
+ },
+ "ex": {
+  "title": "Lektion 16 · Grammatik",
+  "sub": "je … desto / umso · entweder … oder · zwar …, aber",
+  "lv": "B1.2",
+  "sec": [
+   {
+    "k": "gram",
+    "ic": "📘",
+    "t": "Grammatik",
+    "items": [
+     {
+      "t": "info",
+      "h": "<h4>Zweiteilige Konnektoren: je … desto · entweder … oder · zwar …, aber</h4>\n<table class=\"ex-tb\"><tr><th>Konnektor</th><th>Bedeutung</th><th>Beispiel</th></tr>\n<tr><td><b>je</b> + Komparativ …, <b>desto / umso</b> + Komparativ …</td><td>A wird mehr → B wird mehr</td><td><b>Je</b> mehr man spart, <b>desto</b> mehr kann man kaufen.</td></tr>\n<tr><td><b>entweder</b> … <b>oder</b></td><td>A oder B (nur eins)</td><td>Ich hebe <b>entweder</b> am Automaten <b>oder</b> am Schalter Geld ab.</td></tr>\n<tr><td><b>zwar</b> …, <b>aber</b></td><td>A stimmt, aber B ist anders</td><td>Die Bank ist <b>zwar</b> klein, <b>aber</b> der Service ist gut.</td></tr></table>\n<p class=\"ex-note\"><b>je … desto / umso</b> — «qancha …, shuncha …»; <b>entweder … oder</b> — «yo …, yo …»; <b>zwar …, aber</b> — «to‘g‘ri, …, lekin …». Vergul <b>desto / umso</b> va <b>aber</b> oldidan qo‘yiladi.</p>",
+      "ru": "<h4>Zweiteilige Konnektoren: je … desto · entweder … oder · zwar …, aber</h4>\n<table class=\"ex-tb\"><tr><th>Konnektor</th><th>Bedeutung</th><th>Beispiel</th></tr>\n<tr><td><b>je</b> + Komparativ …, <b>desto / umso</b> + Komparativ …</td><td>A wird mehr → B wird mehr</td><td><b>Je</b> mehr man spart, <b>desto</b> mehr kann man kaufen.</td></tr>\n<tr><td><b>entweder</b> … <b>oder</b></td><td>A oder B (nur eins)</td><td>Ich hebe <b>entweder</b> am Automaten <b>oder</b> am Schalter Geld ab.</td></tr>\n<tr><td><b>zwar</b> …, <b>aber</b></td><td>A stimmt, aber B ist anders</td><td>Die Bank ist <b>zwar</b> klein, <b>aber</b> der Service ist gut.</td></tr></table>\n<p class=\"ex-note\"><b>je … desto / umso</b> — «чем …, тем …»; <b>entweder … oder</b> — «или …, или …»; <b>zwar …, aber</b> — «хотя и …, но …». Запятая ставится перед <b>desto / umso</b> и <b>aber</b>.</p>"
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die zweiteiligen Konnektoren (beide Teile).",
+      "bsp": "Ich trinke entweder Tee oder Kaffee. → <b>entweder</b> … <b>oder</b>",
+      "s": "Je mehr Geld ich spare , desto mehr kann ich reisen .",
+      "a": [
+       0,
+       6
+      ],
+      "gw": {
+       "uz": "Uchala bog‘lovchi ham ikki qismdan iborat: <b>je … desto / umso</b>, <b>entweder … oder</b>, <b>zwar …, aber</b>. Ikkala qismini ham belgilang. Misol: <b>Je mehr ich lese, desto besser verstehe ich.</b>",
+       "ru": "Все три союза состоят из двух частей: <b>je … desto / umso</b>, <b>entweder … oder</b>, <b>zwar …, aber</b>. Отметьте обе части. Пример: <b>Je mehr ich lese, desto besser verstehe ich.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die zweiteiligen Konnektoren (beide Teile).",
+      "s": "Du kannst entweder bar oder mit Karte bezahlen .",
+      "a": [
+       2,
+       4
+      ],
+      "gw": {
+       "uz": "Uchala bog‘lovchi ham ikki qismdan iborat: <b>je … desto / umso</b>, <b>entweder … oder</b>, <b>zwar …, aber</b>. Ikkala qismini ham belgilang. Misol: <b>Je mehr ich lese, desto besser verstehe ich.</b>",
+       "ru": "Все три союза состоят из двух частей: <b>je … desto / umso</b>, <b>entweder … oder</b>, <b>zwar …, aber</b>. Отметьте обе части. Пример: <b>Je mehr ich lese, desto besser verstehe ich.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die zweiteiligen Konnektoren (beide Teile).",
+      "s": "Mein Onkel hat zwar viel Geld , aber er gibt nicht gern etwas aus .",
+      "a": [
+       3,
+       7
+      ],
+      "gw": {
+       "uz": "Uchala bog‘lovchi ham ikki qismdan iborat: <b>je … desto / umso</b>, <b>entweder … oder</b>, <b>zwar …, aber</b>. Ikkala qismini ham belgilang. Misol: <b>Je mehr ich lese, desto besser verstehe ich.</b>",
+       "ru": "Все три союза состоят из двух частей: <b>je … desto / umso</b>, <b>entweder … oder</b>, <b>zwar …, aber</b>. Отметьте обе части. Пример: <b>Je mehr ich lese, desto besser verstehe ich.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie die zweiteiligen Konnektoren (beide Teile).",
+      "s": "Je weniger Bargeld man hat , umso öfter bezahlt man mit Karte .",
+      "a": [
+       0,
+       6
+      ],
+      "gw": {
+       "uz": "Uchala bog‘lovchi ham ikki qismdan iborat: <b>je … desto / umso</b>, <b>entweder … oder</b>, <b>zwar …, aber</b>. Ikkala qismini ham belgilang. Misol: <b>Je mehr ich lese, desto besser verstehe ich.</b>",
+       "ru": "Все три союза состоят из двух частей: <b>je … desto / umso</b>, <b>entweder … oder</b>, <b>zwar …, aber</b>. Отметьте обе части. Пример: <b>Je mehr ich lese, desto besser verstehe ich.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "bsp": "___ wärmer es ist, desto mehr Leute gehen in den Park. → ✓ <b>Je</b>",
+      "q": "Ich habe ___ viel Geld gespart, aber für eine Reise reicht es noch nicht.",
+      "o": [
+       "zwar",
+       "entweder",
+       "je"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Ikkinchi qismga qarang: <b>desto / umso</b> → oldin <b>je</b>; <b>oder</b> → oldin <b>entweder</b>; <b>aber</b> → oldin <b>zwar</b>. <b>je</b> va <b>desto</b> dan keyin — doim Komparativ (<b>mehr, besser, günstiger</b>). Misol: <b>Je früher, desto besser.</b>",
+       "ru": "Смотрите на вторую часть: <b>desto / umso</b> → перед ним <b>je</b>; <b>oder</b> → <b>entweder</b>; <b>aber</b> → <b>zwar</b>. После <b>je</b> и <b>desto</b> — всегда сравнительная степень (<b>mehr, besser, günstiger</b>). Пример: <b>Je früher, desto besser.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Für das Konto brauchst du ___ deinen Reisepass oder deinen Personalausweis.",
+      "o": [
+       "weder",
+       "entweder",
+       "zwar"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Ikkinchi qismga qarang: <b>desto / umso</b> → oldin <b>je</b>; <b>oder</b> → oldin <b>entweder</b>; <b>aber</b> → oldin <b>zwar</b>. <b>je</b> va <b>desto</b> dan keyin — doim Komparativ (<b>mehr, besser, günstiger</b>). Misol: <b>Je früher, desto besser.</b>",
+       "ru": "Смотрите на вторую часть: <b>desto / umso</b> → перед ним <b>je</b>; <b>oder</b> → <b>entweder</b>; <b>aber</b> → <b>zwar</b>. После <b>je</b> и <b>desto</b> — всегда сравнительная степень (<b>mehr, besser, günstiger</b>). Пример: <b>Je früher, desto besser.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Je länger man Geld spart, ___ mehr Zinsen bekommt man.",
+      "o": [
+       "als",
+       "dann",
+       "desto"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "Ikkinchi qismga qarang: <b>desto / umso</b> → oldin <b>je</b>; <b>oder</b> → oldin <b>entweder</b>; <b>aber</b> → oldin <b>zwar</b>. <b>je</b> va <b>desto</b> dan keyin — doim Komparativ (<b>mehr, besser, günstiger</b>). Misol: <b>Je früher, desto besser.</b>",
+       "ru": "Смотрите на вторую часть: <b>desto / umso</b> → перед ним <b>je</b>; <b>oder</b> → <b>entweder</b>; <b>aber</b> → <b>zwar</b>. После <b>je</b> и <b>desto</b> — всегда сравнительная степень (<b>mehr, besser, günstiger</b>). Пример: <b>Je früher, desto besser.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Je ___ die Gebühren sind, desto zufriedener sind die Kunden.",
+      "o": [
+       "niedrig",
+       "niedriger",
+       "am niedrigsten"
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "Ikkinchi qismga qarang: <b>desto / umso</b> → oldin <b>je</b>; <b>oder</b> → oldin <b>entweder</b>; <b>aber</b> → oldin <b>zwar</b>. <b>je</b> va <b>desto</b> dan keyin — doim Komparativ (<b>mehr, besser, günstiger</b>). Misol: <b>Je früher, desto besser.</b>",
+       "ru": "Смотрите на вторую часть: <b>desto / umso</b> → перед ним <b>je</b>; <b>oder</b> → <b>entweder</b>; <b>aber</b> → <b>zwar</b>. После <b>je</b> и <b>desto</b> — всегда сравнительная степень (<b>mehr, besser, günstiger</b>). Пример: <b>Je früher, desto besser.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Was passt?",
+      "q": "Die Bank hat zwar hohe Zinsen, ___ die Gebühren sind auch hoch.",
+      "o": [
+       "aber",
+       "oder",
+       "sondern"
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "Ikkinchi qismga qarang: <b>desto / umso</b> → oldin <b>je</b>; <b>oder</b> → oldin <b>entweder</b>; <b>aber</b> → oldin <b>zwar</b>. <b>je</b> va <b>desto</b> dan keyin — doim Komparativ (<b>mehr, besser, günstiger</b>). Misol: <b>Je früher, desto besser.</b>",
+       "ru": "Смотрите на вторую часть: <b>desto / umso</b> → перед ним <b>je</b>; <b>oder</b> → <b>entweder</b>; <b>aber</b> → <b>zwar</b>. После <b>je</b> и <b>desto</b> — всегда сравнительная степень (<b>mehr, besser, günstiger</b>). Пример: <b>Je früher, desto besser.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *je*, *desto*, *entweder*, *oder*, *zwar*, *aber*.",
+      "bsp": "Die Wohnung ist ___ klein, ___ sie ist billig. → <b>zwar</b> … <b>aber</b>",
+      "s": "___ weiter der Geldautomat ist, ___ seltener hebe ich Geld ab.",
+      "a": [
+       [
+        "Je"
+       ],
+       [
+        "desto",
+        "umso"
+       ]
+      ],
+      "gw": {
+       "uz": "Ma’noga qarang: ikki narsa birga o‘zgarsa — <b>je … desto</b>; ikkitadan bittasi — <b>entweder … oder</b>; qarama-qarshilik — <b>zwar …, aber</b>. Gap boshida bosh harf: <b>Je</b>. Misol: <b>Ich komme entweder heute oder morgen.</b>",
+       "ru": "Смотрите на смысл: две вещи меняются вместе — <b>je … desto</b>; одно из двух — <b>entweder … oder</b>; противопоставление — <b>zwar …, aber</b>. В начале предложения — с большой буквы: <b>Je</b>. Пример: <b>Ich komme entweder heute oder morgen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *je*, *desto*, *entweder*, *oder*, *zwar*, *aber*.",
+      "s": "Wir können ___ heute ___ morgen zur Bank gehen.",
+      "a": [
+       [
+        "entweder"
+       ],
+       [
+        "oder"
+       ]
+      ],
+      "gw": {
+       "uz": "Ma’noga qarang: ikki narsa birga o‘zgarsa — <b>je … desto</b>; ikkitadan bittasi — <b>entweder … oder</b>; qarama-qarshilik — <b>zwar …, aber</b>. Gap boshida bosh harf: <b>Je</b>. Misol: <b>Ich komme entweder heute oder morgen.</b>",
+       "ru": "Смотрите на смысл: две вещи меняются вместе — <b>je … desto</b>; одно из двух — <b>entweder … oder</b>; противопоставление — <b>zwar …, aber</b>. В начале предложения — с большой буквы: <b>Je</b>. Пример: <b>Ich komme entweder heute oder morgen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *je*, *desto*, *entweder*, *oder*, *zwar*, *aber*.",
+      "s": "Online-Banking ist ___ bequem, ___ meine Oma geht lieber zum Schalter.",
+      "a": [
+       [
+        "zwar"
+       ],
+       [
+        "aber"
+       ]
+      ],
+      "gw": {
+       "uz": "Ma’noga qarang: ikki narsa birga o‘zgarsa — <b>je … desto</b>; ikkitadan bittasi — <b>entweder … oder</b>; qarama-qarshilik — <b>zwar …, aber</b>. Gap boshida bosh harf: <b>Je</b>. Misol: <b>Ich komme entweder heute oder morgen.</b>",
+       "ru": "Смотрите на смысл: две вещи меняются вместе — <b>je … desto</b>; одно из двух — <b>entweder … oder</b>; противопоставление — <b>zwar …, aber</b>. В начале предложения — с большой буквы: <b>Je</b>. Пример: <b>Ich komme entweder heute oder morgen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *je*, *desto*, *entweder*, *oder*, *zwar*, *aber*.",
+      "s": "Hallo! Ich ziehe nächsten Monat nach Graz und brauche ein Konto.\nMein Vermieter möchte die Miete ___ bar ___ per Überweisung bekommen.\nDie Bank am Bahnhof ist ___ teuer, ___ sie hat lange Öffnungszeiten.\n___ früher ich das Konto eröffne, ___ besser, oder?",
+      "a": [
+       [
+        "entweder"
+       ],
+       [
+        "oder"
+       ],
+       [
+        "zwar"
+       ],
+       [
+        "aber"
+       ],
+       [
+        "Je"
+       ],
+       [
+        "desto",
+        "umso"
+       ]
+      ],
+      "gw": {
+       "uz": "Ma’noga qarang: ikki narsa birga o‘zgarsa — <b>je … desto</b>; ikkitadan bittasi — <b>entweder … oder</b>; qarama-qarshilik — <b>zwar …, aber</b>. Gap boshida bosh harf: <b>Je</b>. Misol: <b>Ich komme entweder heute oder morgen.</b>",
+       "ru": "Смотрите на смысл: две вещи меняются вместе — <b>je … desto</b>; одно из двух — <b>entweder … oder</b>; противопоставление — <b>zwar …, aber</b>. В начале предложения — с большой буквы: <b>Je</b>. Пример: <b>Ich komme entweder heute oder morgen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *je*, *desto*, *entweder*, *oder*, *zwar*, *aber*.",
+      "s": "▪ Wie bezahlst du im Urlaub – bar oder mit Karte?\n● Meistens mit Karte. Bargeld ist ___ praktisch, ___ man kann es leicht verlieren.\n▪ Stimmt. Aber ___ mehr ich mit Karte bezahle, ___ mehr Geld gebe ich aus!",
+      "a": [
+       [
+        "zwar"
+       ],
+       [
+        "aber"
+       ],
+       [
+        "je"
+       ],
+       [
+        "desto",
+        "umso"
+       ]
+      ],
+      "gw": {
+       "uz": "Ma’noga qarang: ikki narsa birga o‘zgarsa — <b>je … desto</b>; ikkitadan bittasi — <b>entweder … oder</b>; qarama-qarshilik — <b>zwar …, aber</b>. Gap boshida bosh harf: <b>Je</b>. Misol: <b>Ich komme entweder heute oder morgen.</b>",
+       "ru": "Смотрите на смысл: две вещи меняются вместе — <b>je … desto</b>; одно из двух — <b>entweder … oder</b>; противопоставление — <b>zwar …, aber</b>. В начале предложения — с большой буквы: <b>Je</b>. Пример: <b>Ich komme entweder heute oder morgen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *je*, *desto*, *entweder*, *oder*, *zwar*, *aber*.",
+      "s": "Ich wollte mich ___ bei der Bank erkundigen, ___ der Schalter war schon geschlossen.",
+      "a": [
+       [
+        "zwar"
+       ],
+       [
+        "aber"
+       ]
+      ],
+      "gw": {
+       "uz": "Ma’noga qarang: ikki narsa birga o‘zgarsa — <b>je … desto</b>; ikkitadan bittasi — <b>entweder … oder</b>; qarama-qarshilik — <b>zwar …, aber</b>. Gap boshida bosh harf: <b>Je</b>. Misol: <b>Ich komme entweder heute oder morgen.</b>",
+       "ru": "Смотрите на смысл: две вещи меняются вместе — <b>je … desto</b>; одно из двух — <b>entweder … oder</b>; противопоставление — <b>zwar …, aber</b>. В начале предложения — с большой буквы: <b>Je</b>. Пример: <b>Ich komme entweder heute oder morgen.</b>"
+      }
+     },
+     {
+      "t": "gap",
+      "h": "Ergänzen Sie: *je*, *desto*, *entweder*, *oder*, *zwar*, *aber*.",
+      "s": "___ älter mein Bruder wird, ___ mehr Taschengeld möchte er.",
+      "a": [
+       [
+        "Je"
+       ],
+       [
+        "desto",
+        "umso"
+       ]
+      ],
+      "gw": {
+       "uz": "Ma’noga qarang: ikki narsa birga o‘zgarsa — <b>je … desto</b>; ikkitadan bittasi — <b>entweder … oder</b>; qarama-qarshilik — <b>zwar …, aber</b>. Gap boshida bosh harf: <b>Je</b>. Misol: <b>Ich komme entweder heute oder morgen.</b>",
+       "ru": "Смотрите на смысл: две вещи меняются вместе — <b>je … desto</b>; одно из двух — <b>entweder … oder</b>; противопоставление — <b>zwar …, aber</b>. В начале предложения — с большой буквы: <b>Je</b>. Пример: <b>Ich komme entweder heute oder morgen.</b>"
+      }
+     },
+     {
+      "t": "info",
+      "h": "<h4><i>je … desto / umso</i>: Satzstellung</h4>\n<div class=\"ex-sk\"><span>Je öfter</span><span>du</span><span>Geld</span><span class=\"v\">abhebst</span>,</div>\n<div class=\"ex-sk\"><span>desto mehr Gebühren</span><span class=\"v\">bezahlst</span><span>du</span>.</div>\n<table class=\"ex-tb\"><tr><th>je-Teil (Nebensatz)</th><th>desto-Teil (Hauptsatz)</th></tr>\n<tr><td><b>je</b> + Komparativ + Subjekt … + <b>Verb (Ende)</b></td><td><b>desto / umso</b> + Komparativ + <b>Verb</b> + Subjekt …</td></tr></table>\n<p class=\"ex-note\"><b>je</b>-qism — Nebensatz: fe’l oxirida. <b>desto</b>-qism — Hauptsatz: desto + Komparativ (+ ot) birinchi o‘rinda, keyin darhol fe’l, keyin ega. <b>umso</b> = desto.</p>",
+      "ru": "<h4><i>je … desto / umso</i>: Satzstellung</h4>\n<div class=\"ex-sk\"><span>Je öfter</span><span>du</span><span>Geld</span><span class=\"v\">abhebst</span>,</div>\n<div class=\"ex-sk\"><span>desto mehr Gebühren</span><span class=\"v\">bezahlst</span><span>du</span>.</div>\n<table class=\"ex-tb\"><tr><th>je-Teil (Nebensatz)</th><th>desto-Teil (Hauptsatz)</th></tr>\n<tr><td><b>je</b> + Komparativ + Subjekt … + <b>Verb (Ende)</b></td><td><b>desto / umso</b> + Komparativ + <b>Verb</b> + Subjekt …</td></tr></table>\n<p class=\"ex-note\">Часть с <b>je</b> — придаточное: глагол в конце. Часть с <b>desto</b> — главное: desto + сравнительная степень (+ существительное) на 1-м месте, затем сразу глагол, потом подлежащее. <b>umso</b> = desto.</p>"
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "bsp": "Je schneller du fährst, … → ✓ <b>desto gefährlicher ist es.</b> (nicht: desto gefährlicher es ist)",
+      "q": "Je mehr Gebühren eine Bank nimmt, …",
+      "o": [
+       "desto weniger Kunden hat sie.",
+       "desto weniger Kunden sie hat.",
+       "desto hat sie weniger Kunden."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>je</b>-qismda fe’l oxirida; <b>desto / umso</b>-qismda desto + Komparativ, keyin darhol fe’l, keyin ega. Ikkala qismda ham Komparativ shakli (<b>öfter</b>, «oft» emas). Misol: <b>Je mehr ich lese, desto mehr weiß ich.</b>",
+       "ru": "В части с <b>je</b> глагол в конце; в части с <b>desto / umso</b> — desto + сравнительная степень, сразу глагол, потом подлежащее. В обеих частях — сравнительная степень (<b>öfter</b>, не «oft»). Пример: <b>Je mehr ich lese, desto mehr weiß ich.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "q": "…, desto weniger Bargeld brauche ich.",
+      "o": [
+       "Je öfter bezahle ich mit Karte,",
+       "Je oft ich mit Karte bezahle,",
+       "Je öfter ich mit Karte bezahle,"
+      ],
+      "a": 2,
+      "gw": {
+       "uz": "<b>je</b>-qismda fe’l oxirida; <b>desto / umso</b>-qismda desto + Komparativ, keyin darhol fe’l, keyin ega. Ikkala qismda ham Komparativ shakli (<b>öfter</b>, «oft» emas). Misol: <b>Je mehr ich lese, desto mehr weiß ich.</b>",
+       "ru": "В части с <b>je</b> глагол в конце; в части с <b>desto / umso</b> — desto + сравнительная степень, сразу глагол, потом подлежащее. В обеих частях — сравнительная степень (<b>öfter</b>, не «oft»). Пример: <b>Je mehr ich lese, desto mehr weiß ich.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "q": "Je größer die Wohnung ist, …",
+      "o": [
+       "umso höher die Miete ist.",
+       "umso höher ist die Miete.",
+       "umso ist die Miete höher."
+      ],
+      "a": 1,
+      "gw": {
+       "uz": "<b>je</b>-qismda fe’l oxirida; <b>desto / umso</b>-qismda desto + Komparativ, keyin darhol fe’l, keyin ega. Ikkala qismda ham Komparativ shakli (<b>öfter</b>, «oft» emas). Misol: <b>Je mehr ich lese, desto mehr weiß ich.</b>",
+       "ru": "В части с <b>je</b> глагол в конце; в части с <b>desto / umso</b> — desto + сравнительная степень, сразу глагол, потом подлежащее. В обеих частях — сравнительная степень (<b>öfter</b>, не «oft»). Пример: <b>Je mehr ich lese, desto mehr weiß ich.</b>"
+      }
+     },
+     {
+      "t": "mc",
+      "h": "Welcher Satz ist richtig?",
+      "q": "Je früher du zur Bank gehst, …",
+      "o": [
+       "desto kürzer ist die Schlange.",
+       "desto kurz ist die Schlange.",
+       "desto ist die Schlange kürzer."
+      ],
+      "a": 0,
+      "gw": {
+       "uz": "<b>je</b>-qismda fe’l oxirida; <b>desto / umso</b>-qismda desto + Komparativ, keyin darhol fe’l, keyin ega. Ikkala qismda ham Komparativ shakli (<b>öfter</b>, «oft» emas). Misol: <b>Je mehr ich lese, desto mehr weiß ich.</b>",
+       "ru": "В части с <b>je</b> глагол в конце; в части с <b>desto / umso</b> — desto + сравнительная степень, сразу глагол, потом подлежащее. В обеих частях — сравнительная степень (<b>öfter</b>, не «oft»). Пример: <b>Je mehr ich lese, desto mehr weiß ich.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "bsp": "Es ist warm. Viele Leute gehen in den Park. (je wärmer …, desto mehr) → <b>Je wärmer es ist, desto mehr Leute gehen in den Park.</b>",
+      "q": "Lena spart viel. Sie kann schnell ein Auto kaufen. (je mehr …, desto schneller)",
+      "w": [
+       "Je mehr",
+       "Lena",
+       "spart,",
+       "desto schneller",
+       "kann",
+       "sie",
+       "ein Auto",
+       "kaufen"
+      ],
+      "a": "Je mehr Lena spart, desto schneller kann sie ein Auto kaufen.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>je … desto</b>: birinchi qismda fe’l oxirida, vergul, keyin desto + Komparativ + fe’l + ega. <b>entweder … oder</b> bog‘lanadigan so‘zlar oldida turadi. <b>zwar</b> — birinchi gapda fe’ldan keyin, <b>aber</b> — ikkinchi gap boshida, vergul bilan. Misol: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>",
+       "ru": "<b>je … desto</b>: в первой части глагол в конце, запятая, затем desto + сравнительная степень + глагол + подлежащее. <b>entweder … oder</b> стоят перед соединяемыми словами. <b>zwar</b> — в первом предложении после глагола, <b>aber</b> — в начале второго, через запятую. Пример: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Der Urlaub dauert lange. Wir brauchen viel Geld. (je länger …, desto mehr)",
+      "w": [
+       "Je länger",
+       "der Urlaub",
+       "dauert,",
+       "desto mehr Geld",
+       "brauchen",
+       "wir"
+      ],
+      "a": "Je länger der Urlaub dauert, desto mehr Geld brauchen wir.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>je … desto</b>: birinchi qismda fe’l oxirida, vergul, keyin desto + Komparativ + fe’l + ega. <b>entweder … oder</b> bog‘lanadigan so‘zlar oldida turadi. <b>zwar</b> — birinchi gapda fe’ldan keyin, <b>aber</b> — ikkinchi gap boshida, vergul bilan. Misol: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>",
+       "ru": "<b>je … desto</b>: в первой части глагол в конце, запятая, затем desto + сравнительная степень + глагол + подлежащее. <b>entweder … oder</b> стоят перед соединяемыми словами. <b>zwar</b> — в первом предложении после глагола, <b>aber</b> — в начале второго, через запятую. Пример: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Das Konto ist günstig. Viele Leute eröffnen es. (je günstiger …, umso mehr)",
+      "w": [
+       "Je günstiger",
+       "das Konto",
+       "ist,",
+       "umso mehr Leute",
+       "eröffnen",
+       "es"
+      ],
+      "a": "Je günstiger das Konto ist, umso mehr Leute eröffnen es.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>je … desto</b>: birinchi qismda fe’l oxirida, vergul, keyin desto + Komparativ + fe’l + ega. <b>entweder … oder</b> bog‘lanadigan so‘zlar oldida turadi. <b>zwar</b> — birinchi gapda fe’ldan keyin, <b>aber</b> — ikkinchi gap boshida, vergul bilan. Misol: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>",
+       "ru": "<b>je … desto</b>: в первой части глагол в конце, запятая, затем desto + сравнительная степень + глагол + подлежащее. <b>entweder … oder</b> стоят перед соединяемыми словами. <b>zwar</b> — в первом предложении после глагола, <b>aber</b> — в начале второго, через запятую. Пример: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Du kannst die Rechnung online bezahlen. Du kannst sie auch am Schalter bezahlen. (entweder … oder)",
+      "w": [
+       "Du",
+       "kannst",
+       "die Rechnung",
+       "entweder",
+       "online",
+       "oder",
+       "am Schalter",
+       "bezahlen"
+      ],
+      "a": "Du kannst die Rechnung entweder online oder am Schalter bezahlen.",
+      "alt": [
+       "Du kannst die Rechnung entweder am Schalter oder online bezahlen."
+      ],
+      "gw": {
+       "uz": "<b>je … desto</b>: birinchi qismda fe’l oxirida, vergul, keyin desto + Komparativ + fe’l + ega. <b>entweder … oder</b> bog‘lanadigan so‘zlar oldida turadi. <b>zwar</b> — birinchi gapda fe’ldan keyin, <b>aber</b> — ikkinchi gap boshida, vergul bilan. Misol: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>",
+       "ru": "<b>je … desto</b>: в первой части глагол в конце, запятая, затем desto + сравнительная степень + глагол + подлежащее. <b>entweder … oder</b> стоят перед соединяемыми словами. <b>zwar</b> — в первом предложении после глагола, <b>aber</b> — в начале второго, через запятую. Пример: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Ich eröffne heute ein Konto. Oder ich eröffne es morgen. (entweder … oder)",
+      "w": [
+       "Ich",
+       "eröffne",
+       "entweder",
+       "heute",
+       "oder",
+       "morgen",
+       "ein Konto"
+      ],
+      "a": "Ich eröffne entweder heute oder morgen ein Konto.",
+      "alt": [
+       "Ich eröffne entweder morgen oder heute ein Konto."
+      ],
+      "gw": {
+       "uz": "<b>je … desto</b>: birinchi qismda fe’l oxirida, vergul, keyin desto + Komparativ + fe’l + ega. <b>entweder … oder</b> bog‘lanadigan so‘zlar oldida turadi. <b>zwar</b> — birinchi gapda fe’ldan keyin, <b>aber</b> — ikkinchi gap boshida, vergul bilan. Misol: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>",
+       "ru": "<b>je … desto</b>: в первой части глагол в конце, запятая, затем desto + сравнительная степень + глагол + подлежащее. <b>entweder … oder</b> стоят перед соединяемыми словами. <b>zwar</b> — в первом предложении после глагола, <b>aber</b> — в начале второго, через запятую. Пример: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Das Konto ist kostenlos. Aber die Karte kostet Geld. (zwar …, aber)",
+      "w": [
+       "Das Konto",
+       "ist",
+       "zwar",
+       "kostenlos,",
+       "aber",
+       "die Karte",
+       "kostet",
+       "Geld"
+      ],
+      "a": "Das Konto ist zwar kostenlos, aber die Karte kostet Geld.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>je … desto</b>: birinchi qismda fe’l oxirida, vergul, keyin desto + Komparativ + fe’l + ega. <b>entweder … oder</b> bog‘lanadigan so‘zlar oldida turadi. <b>zwar</b> — birinchi gapda fe’ldan keyin, <b>aber</b> — ikkinchi gap boshida, vergul bilan. Misol: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>",
+       "ru": "<b>je … desto</b>: в первой части глагол в конце, запятая, затем desto + сравнительная степень + глагол + подлежащее. <b>entweder … oder</b> стоят перед соединяемыми словами. <b>zwar</b> — в первом предложении после глагола, <b>aber</b> — в начале второго, через запятую. Пример: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>"
+      }
+     },
+     {
+      "t": "order",
+      "h": "Verbinden Sie die Sätze mit dem Konnektor in Klammern.",
+      "q": "Ich habe ein Sparkonto. Aber ich spare nicht viel. (zwar …, aber)",
+      "w": [
+       "Ich",
+       "habe",
+       "zwar",
+       "ein Sparkonto,",
+       "aber",
+       "ich",
+       "spare",
+       "nicht viel"
+      ],
+      "a": "Ich habe zwar ein Sparkonto, aber ich spare nicht viel.",
+      "alt": [],
+      "gw": {
+       "uz": "<b>je … desto</b>: birinchi qismda fe’l oxirida, vergul, keyin desto + Komparativ + fe’l + ega. <b>entweder … oder</b> bog‘lanadigan so‘zlar oldida turadi. <b>zwar</b> — birinchi gapda fe’ldan keyin, <b>aber</b> — ikkinchi gap boshida, vergul bilan. Misol: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>",
+       "ru": "<b>je … desto</b>: в первой части глагол в конце, запятая, затем desto + сравнительная степень + глагол + подлежащее. <b>entweder … oder</b> стоят перед соединяемыми словами. <b>zwar</b> — в первом предложении после глагола, <b>aber</b> — в начале второго, через запятую. Пример: <b>Ich habe zwar wenig Zeit, aber ich helfe dir.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "bsp": "Ich zahle entweder bar noch mit Karte. → <b>noch</b> ✗ → entweder … <b>oder</b>",
+      "s": "Je länger spare ich , desto mehr Geld habe ich .",
+      "a": [
+       2
+      ],
+      "fix": "Je länger ich spare, desto mehr Geld habe ich.",
+      "gw": {
+       "uz": "Tekshiring: <b>je</b>-qismda fe’l oxirida; <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b>, zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
+       "ru": "Проверьте: в части с <b>je</b> глагол в конце; после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b>, zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Je mehr du sparst , desto reich wirst du .",
+      "a": [
+       6
+      ],
+      "fix": "Je mehr du sparst, desto reicher wirst du.",
+      "gw": {
+       "uz": "Tekshiring: <b>je</b>-qismda fe’l oxirida; <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b>, zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
+       "ru": "Проверьте: в части с <b>je</b> глагол в конце; после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b>, zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Wir fahren entweder mit dem Bus und mit dem Taxi zur Bank .",
+      "a": [
+       6
+      ],
+      "fix": "Wir fahren entweder mit dem Bus oder mit dem Taxi zur Bank.",
+      "gw": {
+       "uz": "Tekshiring: <b>je</b>-qismda fe’l oxirida; <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b>, zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
+       "ru": "Проверьте: в части с <b>je</b> глагол в конце; после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b>, zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
+      }
+     },
+     {
+      "t": "mark",
+      "h": "Markieren Sie den Fehler.",
+      "s": "Der Geldautomat ist zwar weit weg , sondern er ist kostenlos .",
+      "a": [
+       7
+      ],
+      "fix": "Der Geldautomat ist zwar weit weg, aber er ist kostenlos.",
+      "gw": {
+       "uz": "Tekshiring: <b>je</b>-qismda fe’l oxirida; <b>desto</b> dan keyin Komparativ (<b>reicher</b>, «reich» emas); juftlar: entweder → <b>oder</b>, zwar → <b>aber</b> («sondern» emas). Misol: <b>Die Wohnung ist zwar klein, aber hell.</b>",
+       "ru": "Проверьте: в части с <b>je</b> глагол в конце; после <b>desto</b> — сравнительная степень (<b>reicher</b>, не «reich»); пары: entweder → <b>oder</b>, zwar → <b>aber</b> (не «sondern»). Пример: <b>Die Wohnung ist zwar klein, aber hell.</b>"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}
