@@ -3848,7 +3848,7 @@ function bragDraw(o){ const story=o.story!==false, W=1080,H=story?1920:1350, cv=
   c.fillStyle="#FFD166"; c.font=`130px ${HAND}`; c.fillText(o.head||(ru?"🏆 Победа!":"🏆 G‘alaba!"),W/2,390+off);
   const cx1=W*.28, cx2=W*.72, y=700+off, fn=t=>String(t||"?").trim().split(/\s+/)[0].slice(0,14);
   if(one){ c.fillStyle="#fff"; const big=String(o.big||""); let fs=K==="dc"?230:120; c.font=`900 ${fs}px ${SANS}`; while(c.measureText(big).width>W-120&&fs>60){ fs-=8; c.font=`900 ${fs}px ${SANS}`; } c.fillText(big,W/2,y); if(o.me){ c.font=`80px ${HAND}`; c.fillText(String(o.me).slice(0,24),W/2,y+110); } }
-  else { c.fillStyle="#fff"; c.font=`900 260px ${SANS}`; c.fillText(String(o.ms),cx1,y); c.globalAlpha=.5; c.fillText(String(o.os),cx2,y); c.globalAlpha=.6; c.font=`800 120px ${SANS}`; c.fillText(":",W/2,y-50); c.globalAlpha=1;
+  else { c.fillStyle="#fff"; let fs=260; c.font=`900 ${fs}px ${SANS}`; /* 4–5 xonali ball ham sig'sin — ikki son ustma-ust chiqmasin (2026-10-24, Otabek skrinshoti: 5676 · 3878) */ while(Math.max(c.measureText(String(o.ms)).width,c.measureText(String(o.os)).width)>400&&fs>90){ fs-=10; c.font=`900 ${fs}px ${SANS}`; } c.fillText(String(o.ms),cx1,y); c.globalAlpha=.5; c.fillText(String(o.os),cx2,y); c.globalAlpha=.6; c.font=`800 ${Math.round(fs*.46)}px ${SANS}`; c.fillText(":",W/2,y-Math.round(fs*.19)); c.globalAlpha=1;
     c.font=`76px ${HAND}`; c.fillText(fn(o.me),cx1,y+100); c.globalAlpha=.6; c.fillText(fn(o.opp),cx2,y+100); c.globalAlpha=1; }
   if(o.sub){ c.fillStyle="#FFD166"; c.font=`800 46px ${SANS}`; c.fillText(String(o.sub).slice(0,48),W/2,y+210); }
   c.fillStyle="#fff"; c.font=`84px ${HAND}`; c.fillText(o.cta||(ru?"Попробуй обыграть меня 😏":"Meni yengib ko‘r 😏"),W/2,1090+off*(story?1.15:1));
