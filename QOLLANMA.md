@@ -1285,3 +1285,9 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 ## 📂 Modullar yig‘ilgan holda (2026-10-24)
 - Otabek: «har bir moduldan razvernut kk emas». Endi Lektionlar ro‘yxatida faqat **faol modul** ochiq turadi — o‘quvchining shu daraja yarmidagi (A2.1, A2.2 …) birinchi tugallanmagan Lektioni turgan modul. Qolgan modullar yig‘ilgan; modul tugmasi «▼ Ochish» bilan ochiladi.
 - O‘quvchi o‘zi ochgan/yopgan Lektionlar eslab qolinadi (lek:op / lek:cl). «Hammasini ochish / yig‘ish» ham shu ro‘yxatga yoziladi.
+
+## 💬 Live test · Kommunikation (2026-10-24, Otabek: «live testga kommunikatsiya qismini qo'sh — 1 savol nemischa, 4 javob nemischa»)
+- Ustoz panelida «Turi»: 🔤 So‘zlar (eski rejim) · 💬 Kommunikation · 🔀 Aralash (yarmi so‘z, yarmi vaziyat).
+- O‘quvchi: nemischa vaziyat + 4 ta nemischa javob, **bitta urinish** — to‘g‘ri = 1 ball, xato = 0, to‘g‘ri javob yashil ko‘rsatiladi. 💡 Yordam 2 ta noto‘g‘ri javobni yashiradi. Variantlar tartibi aralashtiriladi.
+- Kommunikation xatolari «📝 Xatolarim» (so‘zlar ro‘yxati)ga saqlanmaydi; natija oynasida «Xatolar» — vaziyat, to‘g‘ri javob, tanlangan javob.
+- Bank: `tools/ltk/{A1,A2,B1}-{a,b}.json` — har Lektionga 8 ta savol (jami 576), qoidalar `tools/ltk/SPEC.md`, tekshiruv `check.py`, saytga `merge.py` → `ltk-data`. Distraktorlar — shu/oldingi Lektionlarning haqiqiy Redemittel'i, boshqa funksiyadan; ish hayoti yo'q. Har fayl mustaqil muharrir tekshiruvidan o‘tgan.
