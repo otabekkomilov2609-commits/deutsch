@@ -55,7 +55,7 @@
    "o": [
     "Gut, danke. Und Ihnen?",
     "Gut, danke. Und dir?",
-    "Nicht so gut, danke.",
+    "Nicht so gut. Und Ihnen?",
     "Ich komme aus Taschkent."
    ],
    "a": 0
@@ -71,7 +71,7 @@
    "a": 1
   },
   {
-   "q": "Frau Kaya ist neu im Kurs. Sie fragen nach dem Land.",
+   "q": "Frau Weber ist neu im Kurs. Sie möchten wissen: Woher kommt sie?",
    "o": [
     "Woher kommst du?",
     "Wie heißen Sie?",
@@ -93,12 +93,12 @@
    "a": 0
   },
   {
-   "q": "Frau Weber arbeitet im Krankenhaus. Was ist sie von Beruf?",
+   "q": "Herr Weber ist Arzt. Frau Weber auch. Was ist sie von Beruf?",
    "o": [
-    "Er ist Arzt.",
-    "Sie ist Lehrerin.",
-    "Sie ist Ärztin.",
-    "Sie ist Studentin."
+    "Er ist auch Arzt.",
+    "Sie ist auch Lehrerin.",
+    "Sie ist auch Ärztin.",
+    "Sie ist auch Studentin."
    ],
    "a": 2
   },
@@ -123,7 +123,7 @@
    "a": 3
   },
   {
-   "q": "Paul fragt Timur: „Bist du verheiratet?“ Timur hat keine Frau.",
+   "q": "Paul fragt Timur: „Bist du verheiratet?“ Timur hat keine Frau. Was sagt Timur?",
    "o": [
     "Ja, ich bin verheiratet.",
     "Ja, wir haben zwei Kinder.",
@@ -133,7 +133,7 @@
    "a": 3
   },
   {
-   "q": "Sie sprechen mit Frau Weber. Sie möchten ihren Beruf wissen.",
+   "q": "Sie möchten wissen: Was ist Frau Weber von Beruf?",
    "o": [
     "Was bist du von Beruf?",
     "Was sind Sie von Beruf?",
@@ -143,7 +143,7 @@
    "a": 1
   },
   {
-   "q": "Laylo fragt Aziz: „Was machst du beruflich?“ Aziz hat keine Arbeit.",
+   "q": "Laylo fragt Jonas: „Was machst du beruflich?“ Jonas hat keine Arbeit.",
    "o": [
     "Ich arbeite als Kellner.",
     "Ich bin im Moment in Berlin.",
@@ -205,7 +205,7 @@
    "a": 0
   },
   {
-   "q": "Paul fragt: „Sprichst du Englisch?“ Sie sprechen nur wenig Englisch.",
+   "q": "Paul fragt: „Sprichst du Englisch?“ Sie sprechen Englisch, aber nicht gut.",
    "o": [
     "Ja, aber nur ein bisschen.",
     "Nein, gar nicht.",
@@ -217,7 +217,7 @@
   {
    "q": "Lena fragt: „Kommst du nicht aus Usbekistan?“ Sie kommen aus Usbekistan.",
    "o": [
-    "Ja, ich komme aus Usbekistan.",
+    "Nein, ich komme nicht aus Usbekistan.",
     "Nein, ich komme aus Usbekistan.",
     "Doch, ich komme aus Usbekistan.",
     "Nein, ich komme aus Kasachstan."
@@ -225,7 +225,7 @@
    "a": 2
   },
   {
-   "q": "Sie sprechen mit Herrn Braun. Sie möchten wissen: Welche Sprachen?",
+   "q": "Sie möchten wissen: Welche Sprachen spricht Herr Braun?",
    "o": [
     "Welche Sprachen sprichst du?",
     "Woher kommen Sie, Herr Braun?",
@@ -249,7 +249,7 @@
   {
    "q": "Sie sind im Möbelgeschäft. Sie möchten den Preis vom Stuhl wissen.",
    "o": [
-    "Wie finden Sie den Stuhl?",
+    "Schau mal, der Stuhl!",
     "Der Stuhl ist aber günstig!",
     "Wie viel kostet der Stuhl?",
     "Der Stuhl ist zu klein."
@@ -277,7 +277,7 @@
    "a": 3
   },
   {
-   "q": "Timur: „Die Lampe ist so schön!“ Sie finden die Lampe auch schön.",
+   "q": "Timur: „Die Lampe ist so schön!“ Sie finden die Lampe toll.",
    "o": [
     "Das finde ich nicht.",
     "Das finde ich auch.",
@@ -307,21 +307,21 @@
    "a": 3
   },
   {
-   "q": "Sie sehen ein tolles Bild. Ihr Freund Aziz soll es auch sehen.",
+   "q": "Sie sehen ein tolles Bild. Ihr Freund Aziz sieht es nicht.",
    "o": [
     "Schau mal, das Bild!",
     "Schauen Sie mal, das Bild!",
-    "Das Bild ist zu teuer.",
+    "Wie findest du das Bild?",
     "Was kostet das Bild?"
    ],
    "a": 0
   },
   {
-   "q": "Malika fragt: „Wie findest du den Schrank?“ Sie finden ihn sehr groß.",
+   "q": "Malika fragt: „Wie findest du das Bett?“ Sie finden es sehr groß.",
    "o": [
-    "Ich finde, er ist zu klein.",
-    "Er kostet nur 99 Euro.",
-    "Ich finde, er ist zu groß.",
+    "Ich finde, es ist zu klein.",
+    "Es kostet nur 99 Euro.",
+    "Ich finde, es ist zu groß.",
     "Das finde ich auch."
    ],
    "a": 2
@@ -339,7 +339,7 @@
    "a": 3
   },
   {
-   "q": "Sie sehen ein Ding. Das deutsche Wort? Sie fragen Frau Weber.",
+   "q": "Sie sehen etwas. Sie möchten das Wort auf Deutsch wissen.",
    "o": [
     "Wie schreibt man das?",
     "Wie heißt das auf Deutsch?",
@@ -349,7 +349,7 @@
    "a": 1
   },
   {
-   "q": "Frau Weber sagt: „Das ist ein Schlüssel.“ Sie möchten das Wort schreiben.",
+   "q": "Frau Weber sagt: „Das ist eine Brille.“ Sie möchten das Wort schreiben.",
    "o": [
     "Wie schreibt man das?",
     "Wie heißt das auf Deutsch?",
@@ -383,13 +383,13 @@
    "o": [
     "Sie ist groß und rot.",
     "Sie ist klein und blau.",
-    "Sie ist groß und schwarz.",
+    "Das ist meine Tasche.",
     "Ist sie groß und rot?"
    ],
    "a": 0
   },
   {
-   "q": "Frau Weber sagt ihre E-Mail-Adresse sehr schnell. Sie verstehen sie nicht.",
+   "q": "Frau Weber spricht sehr schnell. Sie verstehen die E-Mail-Adresse nicht.",
    "o": [
     "Bitte schön.",
     "Noch einmal, bitte.",
@@ -404,7 +404,7 @@
     "Wie viel kostet die Lampe?",
     "Ist das eine Lampe?",
     "Die Lampe ist aus Metall.",
-    "Ist die Lampe aus Holz oder Metall?"
+    "Ist sie aus Holz oder Metall?"
    ],
    "a": 3
   }
@@ -453,7 +453,7 @@
   {
    "q": "Malika telefoniert mit Timur. Timur sagt: „Hallo?“ Was sagt Malika?",
    "o": [
-    "Guten Tag, mein Name ist Karimova.",
+    "Guten Tag, mein Name ist Malika Karimova.",
     "Malika ist leider nicht da.",
     "Einen Moment, bitte.",
     "Hallo Timur, hier ist Malika!"
@@ -461,7 +461,7 @@
    "a": 3
   },
   {
-   "q": "Frau Weber sagt am Telefon: „Vielen Dank!“",
+   "q": "Am Telefon: Sie sagen Frau Weber die Nummer. Frau Weber: „Vielen Dank!“",
    "o": [
     "Vielen Dank, Frau Weber.",
     "Kein Problem, sehr gern.",
@@ -513,7 +513,7 @@
    "a": 3
   },
   {
-   "q": "Lena fragt: „Wie oft spielst du Fußball?“ Sie spielen nie Fußball.",
+   "q": "Lena fragt: „Wie oft spielst du Fußball?“ Fußball spielen Sie nicht.",
    "o": [
     "Ich spiele oft Fußball.",
     "Ich spiele gern Fußball.",
@@ -618,7 +618,7 @@
    "q": "Sevara: „Hast du am Sonntag Zeit?“ Am Sonntag sind Sie bei Ihrer Oma.",
    "o": [
     "Ja, klar. Da habe ich Zeit.",
-    "Nein, tut mir leid. Da kann ich nicht.",
+    "Nein, da kann ich leider nicht.",
     "Gute Idee! Bis dann!",
     "Das weiß ich noch nicht."
    ],
@@ -667,7 +667,7 @@
    "a": 3
   },
   {
-   "q": "Malika: „Ich mag Eis.“ Sie mögen Eis auch.",
+   "q": "Malika: „Ich mag Eis.“ Sie lieben Eis.",
    "o": [
     "Ich nicht!",
     "Ich auch!",
@@ -677,7 +677,7 @@
    "a": 1
   },
   {
-   "q": "Aziz: „Ich esse kein Fleisch.“ Sie essen auch kein Fleisch.",
+   "q": "Aziz: „Ich esse kein Fleisch.“ Fleisch mögen Sie gar nicht.",
    "o": [
     "Ich auch nicht!",
     "Ich auch!",
@@ -700,7 +700,7 @@
    "q": "Kellner: „Leider haben wir keine Pizza mehr.“",
    "o": [
     "Super! Dann nehme ich eine Pizza.",
-    "Guten Appetit! Danke.",
+    "Gern. Guten Appetit!",
     "Schade! Dann nehme ich eine Suppe.",
     "Ich auch nicht!"
    ],
@@ -763,7 +763,7 @@
    "o": [
     "Super! Ich freue mich auf dich!",
     "Oh nein! Wann kommst du denn an?",
-    "Was für eine Frage? Natürlich!",
+    "Was für eine Frage! Natürlich!",
     "Gute Idee! Bis dann!"
    ],
    "a": 1
@@ -804,7 +804,7 @@
     "Verstehe. Alles klar!",
     "Super! Ich freue mich!",
     "So früh? Bist du sicher?",
-    "Natürlich! Was für eine Frage?"
+    "Natürlich! Was für eine Frage!"
    ],
    "a": 2
   },
@@ -821,7 +821,7 @@
  ],
  "11": [
   {
-   "q": "Timur fragt: „Was hast du gestern gemacht?“ Sie haben Tennis gespielt.",
+   "q": "Timur fragt: „Was hast du gestern gemacht?“ (Gestern: Tennis)",
    "o": [
     "Ich spiele morgen Tennis.",
     "Ich habe Tennis gespielt.",
@@ -841,7 +841,7 @@
    "a": 3
   },
   {
-   "q": "Mia fragt: „Hast du schon gefrühstückt?“ Sie haben noch nicht gefrühstückt.",
+   "q": "Mia fragt: „Hast du schon gefrühstückt?“ Sie haben heute noch nichts gegessen.",
    "o": [
     "Ja, schon um sieben.",
     "Ich auch nicht!",
@@ -851,7 +851,7 @@
    "a": 2
   },
   {
-   "q": "Paul: „Ich habe gestern gelesen. Und du?“ Sie haben eingekauft.",
+   "q": "Paul: „Ich habe gestern gelesen. Und du?“ (Gestern: Supermarkt)",
    "o": [
     "Ich habe eingekauft.",
     "Ich auch!",
@@ -881,7 +881,7 @@
    "a": 2
   },
   {
-   "q": "Aziz: „Was hast du letzten Sonntag gemacht?“ Sie haben einen Film gesehen.",
+   "q": "Aziz: „Was hast du letzten Sonntag gemacht?“ (Sonntag: Kino)",
    "o": [
     "Ich sehe am Sonntag einen Film.",
     "Gehen wir am Sonntag ins Kino?",
@@ -903,7 +903,7 @@
  ],
  "12": [
   {
-   "q": "Lena fragt: „Wo warst du im Sommer?“ Sie waren in Samarkand.",
+   "q": "Lena fragt: „Wo warst du im Sommer?“ Sie sind nach Samarkand gefahren.",
    "o": [
     "Ich fahre nach Samarkand.",
     "Ich komme aus Samarkand.",
@@ -913,7 +913,7 @@
    "a": 2
   },
   {
-   "q": "Malika: „Wie war deine Reise nach Buchara?“ Das Wetter war schlecht.",
+   "q": "Malika: „Wie war deine Reise nach Buchara?“ Die Reise war leider nicht so schön.",
    "o": [
     "Nicht so toll. Das Wetter war schlecht.",
     "Super! Ich hatte viel Spaß.",
@@ -946,7 +946,7 @@
    "q": "Paul fragt: „Seit wann gibt es Navruz?“",
    "o": [
     "Navruz dauert drei Tage.",
-    "Es gibt Navruz seit 3000 Jahren.",
+    "Navruz gibt es seit 3000 Jahren.",
     "Navruz ist im März.",
     "Navruz hat viele Besucher."
    ],
