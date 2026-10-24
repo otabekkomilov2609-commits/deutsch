@@ -123,11 +123,11 @@
    "a": 2
   },
   {
-   "q": "Der Weg zum Museum ist klar. Aber Sie haben kein Auto. Was fragen Sie?",
+   "q": "Sie kennen jetzt den Weg zum Museum. Aber Sie haben kein Auto. Was fragen Sie?",
    "o": [
     "Gibt es hier ein Museum?",
     "Kann ich zu Fuß gehen?",
-    "Wann ist das Museum geöffnet?",
+    "Wo ist denn hier das Museum?",
     "Das ist gar nicht weit."
    ],
    "a": 1
@@ -165,7 +165,7 @@
  ],
  "15": [
   {
-   "q": "Aziz: „Wie findest du meine neue Küche?“ Sie finden sie sehr schön.",
+   "q": "Aziz: „Wie findest du meine neue Küche?“ Sie mögen die Küche sehr.",
    "o": [
     "Die Küche ist ganz hinten.",
     "Wo ist denn deine Küche?",
@@ -205,7 +205,7 @@
    "a": 1
   },
   {
-   "q": "Nodir: „Wie findest du den Teppich?“ Er gefällt Ihnen überhaupt nicht.",
+   "q": "Nodir: „Wie findest du den Teppich?“ Er gefällt Ihnen nicht.",
    "o": [
     "Den Teppich mag ich sehr gern.",
     "Der Teppich ist ganz vorne.",
@@ -247,7 +247,7 @@
  ],
  "16": [
   {
-   "q": "Ihre Nachbarin hat viele schwere Taschen und sieht müde aus.",
+   "q": "Ihre Nachbarin hat viele schwere Taschen und sieht müde aus. Was sagen Sie?",
    "o": [
     "Ich habe ein Problem.",
     "Wir brauchen Ihre Hilfe.",
@@ -267,7 +267,7 @@
    "a": 2
   },
   {
-   "q": "Sie treffen Lena am Montag. Aber am Montag haben Sie keine Zeit.",
+   "q": "Sie sind am Montag mit Lena verabredet. Jetzt haben Sie keine Zeit.",
    "o": [
     "Am Montag habe ich Zeit.",
     "Können wir das auf Dienstag verschieben?",
@@ -344,7 +344,7 @@
     "Freunde finde ich nicht so wichtig.",
     "Was ist für dich wichtig?",
     "Freunde finde ich sehr wichtig.",
-    "Freunde finde ich sehr interessant."
+    "Meine Freunde finde ich sehr nett."
    ],
    "a": 2
   },
@@ -379,7 +379,7 @@
    "a": 0
   },
   {
-   "q": "Nodir: „Ich will Lehrer werden.“ Sie verstehen das nicht. Was fragen Sie?",
+   "q": "Nodir: „Ich will Lehrer werden.“ Sie sind überrascht. Was fragen Sie?",
    "o": [
     "Was willst du werden?",
     "Ich will auch Lehrer werden.",
@@ -615,7 +615,7 @@
    "a": 2
   },
   {
-   "q": "Sie beschreiben Ihre Lehrerin. Sie lacht viel und hilft gern.",
+   "q": "Ihre Lehrerin lacht viel und hilft gern. Wie ist sie?",
    "o": [
     "Sie ist groß und schlank.",
     "Sie ist leider sehr unfreundlich.",
@@ -635,7 +635,7 @@
    "a": 1
   },
   {
-   "q": "Auf der Party sehen Sie eine Frau mit roten Haaren. Sie fragen Malika.",
+   "q": "Auf der Party sehen Sie eine Frau. Sie kennen sie nicht. Was fragen Sie Malika?",
    "o": [
     "Wer ist die Frau dort?",
     "Sie sieht sehr nett aus.",
@@ -657,7 +657,7 @@
  ],
  "21": [
   {
-   "q": "Sie sind mit dem Fahrrad im Park. Sie fragen eine Frau.",
+   "q": "Sie sind mit dem Fahrrad im Park. Ist das erlaubt? Sie fragen eine Frau.",
    "o": [
     "Darf man hier Fahrrad fahren?",
     "Hier darf man nicht Fahrrad fahren.",
@@ -702,7 +702,7 @@
     "Hm, das sehe ich nicht so.",
     "Stimmt, das sehe ich auch so.",
     "Ja, das ist hier erlaubt.",
-    "Darf man hier Hunde haben?"
+    "Darf man hier Hunde mitbringen?"
    ],
    "a": 0
   },
@@ -841,7 +841,7 @@
    "a": 3
   },
   {
-   "q": "Es regnet schon drei Tage. Sie finden Regen schrecklich.",
+   "q": "Es regnet schon seit drei Tagen. Sie finden Regen schrecklich.",
    "o": [
     "Regen mag ich gar nicht!",
     "Wir haben Glück mit dem Wetter!",
@@ -851,7 +851,7 @@
    "a": 0
   },
   {
-   "q": "Ihr Freund Aziz fliegt morgen nach Berlin.",
+   "q": "Ihr Freund Aziz fliegt morgen nach Berlin. Was sagen Sie?",
    "o": [
     "Gute Besserung!",
     "Gute Reise und viel Spaß!",
@@ -976,7 +976,7 @@
    "q": "Aziz: „Ich würde gern im Park feiern. Und du?“ Sie bleiben lieber zu Hause.",
    "o": [
     "Ich würde auch gern im Park feiern.",
-    "Herzlichen Glückwunsch zum Fest!",
+    "Ich wünsche dir ein schönes Fest!",
     "Ich würde lieber zu Hause feiern.",
     "Am Samstag feiern wir im Park."
    ],
