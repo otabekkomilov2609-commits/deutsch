@@ -1227,3 +1227,10 @@ Ustoz paneli → 📊 Tahlil → tepada «🔬 Chuqur tahlil» tugmasi → alohi
 - Oyna yopilsa video to'xtaydi (iframe olib tashlanadi). Tahlilga actEv("vid", mashq#raqam) yoziladi; tugma bosishlar «🖱 Tugmalar»da ham ko'rinadi.
 - Kod: vidMap() (mashq id → [videoId, boshlanish soniyasi, nom]), vidOf, vidSheet. Yangi video qo'shish — vidMap'ga bitta qator.
 - Sinov (24.10): saytda hozircha faqat A2.2 Lektion 17 da ochiq — vidOnly() ro'yxati. Otabek «hammasiga» desa, vidOnly() bo'sh ro'yxat qaytarsin.
+
+## 📂 Lektionlar: hammasi ochiq + yig'ish (2026-10-24)
+- Otabek: «hamma lektionlarda 1 dan pastga tushib boradigan qil, lekin yig'ishtirish funksiyasi bo'lsin — har safar scroll qilmasligi uchun». Tanlov: «Hammasi ochiq + yig'ish».
+- Tartib doim L1 dan pastga (ilgari ustoz belgilagan joriy Lektion bo'lsa, ro'yxat teskari — eng yangisi tepada — chiqardi). Joriy Lektiondan keyingilari avvalgidek «Keyingi darslar» ichida.
+- Hamma Lektion kartalari ochiq holda. Har birining pastida «▲ Yig'ish · L13» tugmasi: bosilsa karta yig'iladi va sahifa uning sarlavhasiga qaytadi (daraja paneli ostida qolmaydi). Sarlavhani bosish ham ochadi/yig'adi.
+- Ro'yxat tepasida: «▲ Hammasini yig'ish» va «▼ Hammasini ochish».
+- Yig'ilganlari eslab qolinadi (localStorage lek:cl). 21.10 dagi «hammasi yig'ilgan, bosilganda ochiladi» (lek:open) bekor.

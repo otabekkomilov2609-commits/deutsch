@@ -1549,7 +1549,7 @@ html.beta .viewer:not(.over) :is(#v-dl,#v-sol,[data-iam="page"],.iam-sw){display
 .lek.bt .lek-h{cursor:pointer;align-items:center;user-select:none}
 .lek.bt .lek-ht{flex:1;min-width:0}
 .lek.bt:not(.open)>.sx,.lek.bt:not(.open)>.lek-hw,.lek.bt:not(.open)>:not(.lek-h){display:none}
-.lek.bt:not(.open){padding-bottom:14px}
+.lek.bt:not(.open){padding-bottom:14px}.lek-fold{display:block;width:100%;margin:12px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--blue-soft);color:var(--blue);font:inherit;font-weight:800;font-size:14.5px;cursor:pointer}.lek-all{display:flex;gap:8px;justify-content:flex-end;margin:4px 0 10px}.lek-allb{border:1px solid var(--line);background:var(--surface);color:var(--blue);border-radius:99px;padding:7px 12px;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
 .lek-pc{font-weight:800;font-size:14px;color:var(--green);white-space:nowrap}.lek-pc:empty{display:none}
 .lek-chev{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:24px;line-height:1;color:var(--blue);background:var(--blue-soft);border:2px solid var(--line);transition:transform .2s;flex:none} /* kattaroq, bosish oson (2026-10-21, Otabek) */
 .lek.bt.open .lek-chev{transform:rotate(180deg)}
@@ -3148,13 +3148,21 @@ function lekCardStu(L, tab, withLvl){
     ${BP.filter(([c])=>(f==="all"||f===c)&&!((c==="l"||c==="a")&&!by[c].length)).map(([c,ic,name])=>sec(c,ic,name.toUpperCase(),subs[c],by[c])).join("")}${by.t.length&&f==="all"?sec("t","✅","TEST","",by.t):""}
     ${lekHw(tab,n)}
     ${IN_ARTIFACT||window.BLITZ?"":`<button type="button" class="lek-shl" data-shl="l" data-shv="${lvl}|${n}" data-sht="${esc(TABS[tab].lbl+" · Lektion "+n+" · "+title)}">📤 ${uz?"Shu Lektion linkini yuborish":"Отправить ссылку на этот урок"}</button>`}
+    <button type="button" class="lek-fold" data-lekfold="1">▲ ${uz?"Yig‘ish":"Свернуть"} · L${n}</button>
   </article>`;
 }
-/* Lektion kartalari yig'ilgan holda — bosilganda ochiladi (2026-10-21, Otabek: «uzun scrolling oldini olish uchun») */
-function lekOpenSet(){ try{ return new Set(JSON.parse(localStorage.getItem("lek:open")||"[]")); }catch(e){ return new Set(); } }
-function lekIsOpen(lvl,n){ return lekOpenSet().has(lvl+"|"+n); }
-document.addEventListener("click",e=>{ const h=e.target.closest(".lek.bt .lek-h"); if(!h||e.target.closest("button,a,[data-lern],[data-open]")) return; const a=h.closest(".lek"); const k=a.dataset.lek; const S=lekOpenSet();
-  if(a.classList.toggle("open")) S.add(k); else S.delete(k); try{ localStorage.setItem("lek:open",JSON.stringify([...S].slice(-40))); }catch(er){} });
+/* Lektion kartalari: hammasi OCHIQ, o'quvchi yig'ib qo'yishi mumkin — yig'ilganlari eslab qolinadi (2026-10-24, Otabek: «hammasi ochiq + yig'ish», 21.10 dagi «yig'ilgan holda» o'rniga).
+   lek:cl — yig'ilgan Lektionlar ro'yxati. Pastda «▲ Yig'ish», ro'yxat tepasida «Hammasini yig'ish / ochish». */
+function lekClSet(){ try{ return new Set(JSON.parse(localStorage.getItem("lek:cl")||"[]")); }catch(e){ return new Set(); } }
+function lekClSave(S){ try{ localStorage.setItem("lek:cl",JSON.stringify([...S].slice(-150))); }catch(e){} }
+function lekIsOpen(lvl,n){ return !lekClSet().has(lvl+"|"+n); }
+function lekOpenSet(){ return { add:k=>{ const S=lekClSet(); S.delete(k); lekClSave(S); } }; } /* eski chaqiruvlar uchun (link orqali ochish) */
+function lekAllBar(bt){ if(!bt) return ""; const ru=state.lang==="ru"; return `<div class="lek-all"><button type="button" class="lek-allb" data-lekall="fold">▲ ${ru?"Свернуть все":"Hammasini yig‘ish"}</button><button type="button" class="lek-allb" data-lekall="open">▼ ${ru?"Развернуть все":"Hammasini ochish"}</button></div>`; }
+function lekSetOpen(a,o){ const k=a.dataset.lek; if(!k) return; const S=lekClSet(); a.classList.toggle("open",o); if(o) S.delete(k); else S.add(k); lekClSave(S); }
+document.addEventListener("click",e=>{
+  const f=e.target.closest&&e.target.closest("[data-lekfold]"); if(f){ const a=f.closest(".lek"); if(!a) return; lekSetOpen(a,false); const r=a.getBoundingClientRect(); if(r.top<130) window.scrollTo({top:Math.max(0,scrollY+r.top-130),behavior:"smooth"}); /* tepadagi daraja paneli ostida qolmasin */ try{ actEv("lek","fold"); }catch(er){} return; }
+  const all=e.target.closest&&e.target.closest("[data-lekall]"); if(all){ const o=all.dataset.lekall==="open", S=lekClSet(); document.querySelectorAll("#main .lek.bt[data-lek]").forEach(a=>{ a.classList.toggle("open",o); if(o) S.delete(a.dataset.lek); else S.add(a.dataset.lek); }); lekClSave(S); try{ actEv("lek",o?"openall":"foldall"); }catch(er){} return; }
+  const h=e.target.closest(".lek.bt .lek-h"); if(!h||e.target.closest("button,a,[data-lern],[data-open]")) return; const a=h.closest(".lek"); lekSetOpen(a,!a.classList.contains("open")); });
 function lekCardOld(L, tab, withLvl){
   const [n,title,thema,kb,g,k,w] = L, lvl = TABS[tab].lvl;
   const mats = visibleMats(tab,n);
@@ -3427,11 +3435,11 @@ function render(){
     const mods = []; for(let md=Math.ceil(T0.lo/3); md<=Math.ceil(T0.hi/3); md++) mods.push(md);
     if(CUR){
       const ck=CURKEY[tab], ckMod = ck==null ? null : (/^m/.test(ck) ? +ck.slice(1) : Math.ceil(+ck/3));
-      for(const md of mods.slice().sort((a,b)=>((b===ckMod)-(a===ckMod)) || b-a)) html += modHtml(md, n=>n<=CUR);
+      html += lekAllBar(BT); for(const md of mods) html += modHtml(md, n=>n<=CUR, true); /* doim L1 dan pastga (2026-10-24, Otabek: «hamma lektionlarda 1 dan pastga tushib boradigan qil») */
       const later = mods.map(md=>modHtml(md, n=>n>CUR, true)).join("");
       if(later) html += `<details class="later" id="later"><summary>${t("later")} · L${CUR+1}–${T0.hi}</summary>${later}</details>`;
     } else {
-      for(const md of mods) html += modHtml(md, ()=>true, true);
+      html += lekAllBar(BT); for(const md of mods) html += modHtml(md, ()=>true, true);
     }
     html += ptH;
     if(!html) html = `<div class="empty-state">${t("noRes")}</div>`;
@@ -5005,7 +5013,7 @@ document.addEventListener("click",e=>{ if(e.target.closest("[data-lshl]")) lrnSh
     if(k==="y"){ if(lernData()[v]) lrnOpen(lrnTwinId(v)||v); }
     else if(k==="x"){ const [id,si]=v.split("|"); if(exData()[id]){ exOpen(id); if(si!=null&&si!==""&&exData()[id].sec[+si]) setTimeout(()=>{ try{ exStart(+si,false); }catch(e){} },60); } }
     else if(k==="d"){ if(docData()[v]) docOpen(v); }
-    else if(k==="l"){ const [lv,n0]=v.split("|"), n=+n0, tab=Object.keys(TABS).find(t=>TABS[t].lvl===lv&&n>=TABS[t].lo&&n<=TABS[t].hi); if(tab){ try{ const S=lekOpenSet(); S.add(lv+"|"+n); localStorage.setItem("lek:open",JSON.stringify([...S].slice(-40))); }catch(e){} go(tab,n); } }
+    else if(k==="l"){ const [lv,n0]=v.split("|"), n=+n0, tab=Object.keys(TABS).find(t=>TABS[t].lvl===lv&&n>=TABS[t].lo&&n<=TABS[t].hi); if(tab){ try{ lekOpenSet().add(lv+"|"+n); }catch(e){} go(tab,n); } }
     else if(k==="r"){ rankOpen(); if(/^[wgm]$/.test(v)) setTimeout(()=>{ const b=document.querySelector(`[data-rkm="${v}"]`); if(b) b.click(); },80); }
     q.delete(k); history.replaceState(null,"",location.pathname+(q.toString()?"?"+q:"")); }catch(e){} },140); })();
 /* 2026-10-23 (Otabek): Yodlash — tepada tarjima tili va daraja, Lektionlar to'liq kenglikdagi chiziqlar (surish yo'q) */
