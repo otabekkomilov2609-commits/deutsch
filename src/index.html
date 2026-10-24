@@ -4158,7 +4158,7 @@ function vidSheet(id,i){ const L=vidOf(id); if(!L) return; i=Math.min(i|0,L.leng
   hpSheet(`<h4>🎬 ${ru?"Видеоурок":"Video-dars"}</h4>
     ${L.length>1?`<div class="vid-ch">${L.map((x,k)=>`<button type="button" class="vid-c" data-vidi="${k}" data-vid="${esc(id)}" aria-pressed="${k===i}">${esc(x[2])}</button>`).join("")}</div>`:`<p class="vid-tt">${esc(v[2])}</p>`}
     <div class="vid-fr"><iframe src="${src}" title="${esc(v[2])}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-    <p class="mu vid-mu">${ru?"Easy German · медленный немецкий с немецкими субтитрами":"Easy German · sekin nemischa, nemischa subtitr bilan"}${v[1]?` · ${ru?"с":""} ${vidT(v[1])}${ru?"":" dan"}`:""}</p>
+    <p class="mu vid-mu"><a href="https://www.youtube.com/@EasyGerman" target="_blank" rel="noopener">Easy German</a> · <a href="https://www.youtube.com/watch?v=${v[0]}${v[1]?"&t="+v[1]+"s":""}" target="_blank" rel="noopener">${ru?"открыть на YouTube":"YouTube’da ochish"}</a> · ${ru?"медленный немецкий с немецкими субтитрами":"sekin nemischa, nemischa subtitr bilan"}${v[1]?` · ${ru?"с":""} ${vidT(v[1])}${ru?"":" dan"}`:""}</p>
     <div class="ch-btns"><button type="button" class="btn primary" data-hpx="1">${ru?"К упражнению":"Mashqqa qaytish"}</button></div>`);
   try{ actEv("vid",id+"#"+i); }catch(e){} }
 document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closest("[data-vid]"); if(!b) return; vidSheet(b.dataset.vid,+(b.dataset.vidi||0)); });
